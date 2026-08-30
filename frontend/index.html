@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Bilibili Banner Archive</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="title">Bilibili Banner Archive</div>
+      <div class="subtitle">按实际变化归档 · 纯水平分层交互</div>
+    </div>
+
+    <div class="filters">
+      <label>
+        <span>年份</span>
+        <select id="year">
+          <option value="">全部</option>
+        </select>
+      </label>
+
+      <label>
+        <span>月份</span>
+        <select id="month">
+          <option value="">全部</option>
+        </select>
+      </label>
+
+      <label>
+        <span>季节</span>
+        <select id="season">
+          <option value="">全部</option>
+          <option value="spring">春</option>
+          <option value="summer">夏</option>
+          <option value="autumn">秋</option>
+          <option value="winter">冬</option>
+        </select>
+      </label>
+
+      <button id="reset" type="button">重置</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div id="summary" class="summary"></div>
+  <div id="gallery" class="gallery"></div>
+  <div id="empty" class="empty" hidden>没有符合筛选条件的 Banner。</div>
+</main>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

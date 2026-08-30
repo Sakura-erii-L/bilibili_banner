@@ -1,0 +1,19 @@
+{
+  "version": 9.2,
+  "generatedAt": "2026-08-30T22:11:09+08:00",
+  "records": [
+    {
+      "id": "2026-08-30_221101_a6c4f537bffba395ff453d64",
+      "date": "2026-08-30",
+      "year": "2026",
+      "month": "08",
+      "yearMonth": "2026-08",
+      "season": "summer",
+      "capturedAt": "2026-08-30T22:11:01+08:00",
+      "mode": "split",
+      "layerCount": 28,
+      "contentHash": "a6c4f537bffba395ff453d64",
+      "manifest": "./data/archive/2026-08-30_221101_a6c4f537bffba395ff453d64/banner.json"
+    }
+  ]
+}

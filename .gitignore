@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.runtime/
+.browser-profile/
+_site/
+data/.capture_*/
+data/.current_old/
+data/diagnostic.json
+.DS_Store
+Thumbs.db
