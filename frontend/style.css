@@ -27,16 +27,20 @@ body { min-height: 100vh; }
   gap: 24px;
 }
 
-.title {
-  font-size: 18px;
-  font-weight: 650;
-  white-space: nowrap;
+.brand {
+  display: block;
+  flex: 0 0 auto;
+  width: 100px;
+  height: 42px;
+  overflow: hidden;
 }
 
-.subtitle {
-  margin-top: 2px;
-  color: #9499a0;
-  font-size: 12px;
+.brand-logo {
+  display: block;
+  width: 160px;
+  max-width: none;
+  height: auto;
+  transform: translate(-31px, -17px);
 }
 
 .filters {

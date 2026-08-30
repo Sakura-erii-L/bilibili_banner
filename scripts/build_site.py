@@ -18,6 +18,10 @@ def build(output: Path) -> None:
     for name in ("index.html", "app.js", "style.css"):
         shutil.copy2(FRONTEND / name, output / name)
 
+    assets = FRONTEND / "assets"
+    if assets.is_dir():
+        shutil.copytree(assets, output / "assets")
+
     shutil.copytree(
         DATA,
         output / "data",
