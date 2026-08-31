@@ -1,0 +1,271 @@
+{
+  "version": 11.0,
+  "capturedAt": "2022-04-01T20:09:44+08:00",
+  "date": "2022-04-01",
+  "season": "spring",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "captureMethod": "wayback-header-api",
+    "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "waybackTimestamp": "20220401120944",
+    "waybackReplay": "https://web.archive.org/web/20220402101628id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20220401120000",
+    "homepageWaybackTimestamp": "20220401120944",
+    "headerApiWaybackTimestamp": "20220402101628",
+    "headerApiTimeDeltaSeconds": 79604,
+    "headerApiWaybackReplay": "https://web.archive.org/web/20220402101628id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20220325120944&to=20220408120944&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+    "discoveredResources": [
+      {
+        "name": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": null,
+  "layers": [
+    {
+      "index": 0,
+      "apiIndex": 0,
+      "id": 0,
+      "name": "图层0",
+      "tag": "video",
+      "assetType": "video",
+      "src": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+      "file": "api_layer_00_00_ac041d792b.mp4",
+      "contentType": "video/mp4",
+      "resources": [
+        {
+          "src": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+          "requestedSrc": "https://web.archive.org/web/20220402101628id_/https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+          "normalizedIdentity": "https://web.archive.org/web/20220402101628id_/https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+          "file": "api_layer_00_00_ac041d792b.mp4",
+          "contentType": "video/mp4",
+          "tag": "video",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.865
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            0,
+            -18
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.865
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            0,
+            -18
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 0,
+        "name": "图层0"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    }
+  ],
+  "interaction": {
+    "model": "bilibili-header-api-v1",
+    "positionAxis": "horizontal-normalized-from-entry",
+    "inputMode": "relative-from-pointer-enter",
+    "displacementFormula": "(clientX-enterX)/containerWidth",
+    "containerReferenceHeight": 155,
+    "returnDurationMs": 200,
+    "effects": []
+  },
+  "sourceFiles": {
+    "json": "source/api.json"
+  },
+  "api": {
+    "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "id": null,
+    "name": "",
+    "request_id": "1648894588",
+    "isSplitLayer": true,
+    "layerCount": 1,
+    "assetCount": 1,
+    "pic": "https://i0.hdslb.com/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/ca375eb31fa90b8e23b88ed3433c2f60de1c2e6e.png",
+    "litpicAsset": null,
+    "splitVersion": "1",
+    "extensions": {}
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2022-04-01T20:09:44+08:00",
+  "type": [
+    "layered",
+    "video"
+  ],
+  "is_split_layer": true,
+  "fallback_image": null,
+  "preview_image": null,
+  "completeness": "partial",
+  "missing_assets": [
+    "fallback pic: HTTP Error 403: Forbidden"
+  ],
+  "structureEvidence": {
+    "root": {
+      "source": "bilibili-header-api",
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142"
+    },
+    "layerCount": 1,
+    "mediaCount": 1,
+    "visibleMediaCount": 1,
+    "media": [],
+    "resourceUrls": [
+      {
+        "name": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": true,
+      "hasVideo": true,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": true
+    },
+    "api": {
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+      "id": null,
+      "request_id": "1648894588",
+      "isSplitLayer": true,
+      "layerCount": 1,
+      "assetCount": 1,
+      "savedAssetCount": 1,
+      "effects": []
+    }
+  },
+  "assets": [
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+      "local_file": "api_layer_00_00_ac041d792b.mp4",
+      "content_type": "video/mp4",
+      "sha256": "818930df828740c4ce8d428a0601d552970acfeeebb562cac4351d23d9cb97ea"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "9517738064efffe6f8018250",
+  "hashes": {
+    "resourceHash": "a90ca6fdce6fb6025c36720f",
+    "structureHash": "f13a1626c03ca1e56b5e2c42",
+    "interactionHash": "dcc95641789e916cfc3d2def",
+    "contentHash": "9517738064efffe6f8018250"
+  },
+  "layoutHash": "0a6f021986f268f3acef21c9",
+  "familyId": "2022-04-01_0a6f021986f2_95177380",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2022-04-01T20:09:44+08:00",
+      "lastObservedAt": "2022-04-01T20:09:44+08:00",
+      "date": "2022-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2022-04-01_0a6f021986f2_95177380",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20220401120944",
+        "waybackReplay": "https://web.archive.org/web/20220402101628id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20220401120000",
+        "homepageWaybackTimestamp": "20220401120944",
+        "headerApiWaybackTimestamp": "20220402101628",
+        "headerApiTimeDeltaSeconds": 79604,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20220402101628id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20220325120944&to=20220408120944&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
