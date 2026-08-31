@@ -13,12 +13,13 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 from zoneinfo import ZoneInfo
 
 from playwright.sync_api import sync_playwright
@@ -26,9 +27,19 @@ from playwright.sync_api import sync_playwright
 try:
     from . import capture as core
     from .providers import bilibili_header_api as header_api
+    from .providers.history import HistoricalResult
+    from .providers.palxiao_history import (
+        PROVIDER_NAME as PALXIAO_PROVIDER_NAME,
+        PalxiaoHistoryProvider,
+    )
 except ImportError:
     import capture as core
     from providers import bilibili_header_api as header_api
+    from providers.history import HistoricalResult
+    from providers.palxiao_history import (
+        PROVIDER_NAME as PALXIAO_PROVIDER_NAME,
+        PalxiaoHistoryProvider,
+    )
 
 
 ORIGINAL_PAGE = "https://www.bilibili.com/"
@@ -44,7 +55,7 @@ CDX_API = os.environ.get(
     "WAYBACK_CDX_API",
     "https://web.archive.org/cdx/search/cdx",
 )
-REQUEST_DELAY_SECONDS = float(os.environ.get("WAYBACK_REQUEST_DELAY", "0.2"))
+REQUEST_DELAY_SECONDS = float(os.environ.get("WAYBACK_REQUEST_DELAY", "1.0"))
 RETRY_BASE_SECONDS = float(os.environ.get("WAYBACK_RETRY_BASE_SECONDS", "1.0"))
 HEADER_API_MAX_DELTA_SECONDS = int(
     os.environ.get("WAYBACK_HEADER_API_MAX_DELTA_SECONDS", str(7 * 24 * 60 * 60))
@@ -61,6 +72,20 @@ BANNER_CLASS_NAMES = {
     "banner_link",
     "banner-link",
 }
+BANNER_ID_PRIORITIES = {
+    "banner_link": 180,
+    "banner-link": 180,
+}
+BANNER_CLASS_PRIORITIES = {
+    "bili-header__banner": 165,
+    "head-banner": 155,
+    "header-banner": 145,
+    "bili-banner": 140,
+    "animated-banner": 135,
+    "banner_link": 125,
+    "banner-link": 125,
+    "banner": 75,
+}
 VOID_HTML_TAGS = {
     "area", "base", "br", "col", "embed", "hr", "img", "input",
     "link", "meta", "param", "source", "track", "wbr",
@@ -70,6 +95,31 @@ CSS_URL_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 CSS_RULE_RE = re.compile(r"(?P<selectors>[^{}]+)\{(?P<body>[^{}]*)\}", re.DOTALL)
+
+
+@dataclass(frozen=True)
+class CdxQueryStatus:
+    """Classify whether CDX returned no rows or could not be queried."""
+
+    status: str
+    candidates: tuple[dict[str, Any], ...] = ()
+    error: str = ""
+
+
+_rate_limit_lock = threading.Lock()
+_next_wayback_request_at = 0.0
+
+
+def wait_for_wayback_request() -> None:
+    """Apply one process-wide delay to every Wayback/CDN recovery request."""
+    global _next_wayback_request_at
+    interval = max(0.0, REQUEST_DELAY_SECONDS)
+    with _rate_limit_lock:
+        now = time.monotonic()
+        wait = max(0.0, _next_wayback_request_at - now)
+        _next_wayback_request_at = max(now, _next_wayback_request_at) + interval
+    if wait:
+        time.sleep(wait)
 
 
 def run_checkpoint(
@@ -173,6 +223,7 @@ def read_bytes(
     error: Exception | None = None
     for attempt in range(attempts):
         try:
+            wait_for_wayback_request()
             with urllib.request.urlopen(request, timeout=timeout) as response:
                 body = response.read()
                 content_encoding = str(
@@ -256,9 +307,6 @@ def discover_snapshots(
             "availabilityUrl": availability_url(target, api_url),
         }
         print(f"Discovered {timestamp} near {target.isoformat()}")
-        if REQUEST_DELAY_SECONDS > 0:
-            time.sleep(REQUEST_DELAY_SECONDS)
-
     return [snapshots[key] for key in sorted(snapshots)]
 
 
@@ -444,6 +492,31 @@ def _same_original_url(left: str, right: str) -> bool:
     )
 
 
+def query_cdx_snapshots_status(
+    endpoint: str,
+    homepage_timestamp: str,
+    *,
+    cdx_api: str = CDX_API,
+    max_delta_seconds: int = HEADER_API_MAX_DELTA_SECONDS,
+) -> CdxQueryStatus:
+    try:
+        candidates = query_cdx_snapshots(
+            endpoint,
+            homepage_timestamp,
+            cdx_api=cdx_api,
+            max_delta_seconds=max_delta_seconds,
+        )
+    except Exception as exc:
+        return CdxQueryStatus(
+            status="network-error",
+            error=str(exc),
+        )
+    return CdxQueryStatus(
+        status="success-with-snapshots" if candidates else "success-empty",
+        candidates=tuple(candidates),
+    )
+
+
 def query_cdx_snapshots(
     endpoint: str,
     homepage_timestamp: str,
@@ -451,6 +524,7 @@ def query_cdx_snapshots(
     cdx_api: str = CDX_API,
     max_delta_seconds: int = HEADER_API_MAX_DELTA_SECONDS,
 ) -> list[dict[str, Any]]:
+    """Return successful CDX candidates, retaining the legacy list API."""
     query_url = cdx_query_url(
         endpoint,
         homepage_timestamp,
@@ -501,18 +575,18 @@ def fetch_archived_header_api(
     """Find and read the nearest successful archived Header API response."""
     errors: list[str] = []
     candidates: list[dict[str, Any]] = []
+    cdx_statuses: list[CdxQueryStatus] = []
     for endpoint in header_api.DEFAULT_ENDPOINTS:
-        try:
-            candidates.extend(
-                query_cdx_snapshots(
-                    endpoint,
-                    timestamp,
-                    cdx_api=cdx_api,
-                    max_delta_seconds=max_delta_seconds,
-                )
-            )
-        except Exception as exc:
-            errors.append(f"CDX {endpoint}: {exc}")
+        status = query_cdx_snapshots_status(
+            endpoint,
+            timestamp,
+            cdx_api=cdx_api,
+            max_delta_seconds=max_delta_seconds,
+        )
+        cdx_statuses.append(status)
+        candidates.extend(status.candidates)
+        if status.status == "network-error":
+            errors.append(f"CDX {endpoint} network failure: {status.error}")
 
     candidates.sort(key=lambda item: (int(item["deltaSeconds"]), item["timestamp"]))
     for candidate in candidates:
@@ -548,9 +622,22 @@ def fetch_archived_header_api(
             f"{max_delta_seconds} seconds of homepage {timestamp}"
             + (f": {reason}" if reason else "")
         )
+    network_failures = [
+        status for status in cdx_statuses if status.status == "network-error"
+    ]
+    successful_queries = [
+        status
+        for status in cdx_statuses
+        if status.status in {"success-empty", "success-with-snapshots"}
+    ]
+    if network_failures and not successful_queries:
+        prefix = "CDX query network failure prevented confirming an archived Header API snapshot"
+    elif network_failures:
+        prefix = "CDX query returned no matching snapshot; some endpoint queries failed"
+    else:
+        prefix = "no archived Header API snapshot within; CDX query succeeded but returned no matching snapshot"
     raise RuntimeError(
-        "no archived Header API snapshot within "
-        f"{max_delta_seconds} seconds of homepage {timestamp}"
+        f"{prefix} within {max_delta_seconds} seconds of homepage {timestamp}"
         + (f": {'; '.join(errors)}" if errors else "")
     )
 
@@ -562,6 +649,8 @@ def capture_snapshot_api(
     force: bool,
     cdx_api: str = CDX_API,
     max_header_api_delta_seconds: int = HEADER_API_MAX_DELTA_SECONDS,
+    provenance_extra: dict[str, Any] | None = None,
+    palxiao_result: HistoricalResult | None = None,
 ) -> dict[str, Any]:
     timestamp = snapshot["timestamp"]
     moment = snapshot_moment(timestamp)
@@ -576,6 +665,17 @@ def capture_snapshot_api(
         f"split={api_data.get('is_split_layer')}, "
         f"layers={len(api_data.get('layers') or [])}"
     )
+    provenance = {
+        "primaryProvider": "wayback-header-api",
+        "supportingProviders": [],
+        "confidence": "high",
+        "agreement": {},
+        "conflicts": [],
+    }
+    if provenance_extra:
+        provenance.update(provenance_extra)
+    if palxiao_result:
+        provenance = compare_api_with_palxiao(api_data, palxiao_result)
     result = core.capture_header_api_payload(
         api_data,
         moment=moment,
@@ -587,6 +687,8 @@ def capture_snapshot_api(
             "waybackTimestamp": timestamp,
             "waybackReplay": api_replay,
             "availabilityUrl": snapshot.get("availabilityUrl"),
+            "provider": "wayback-header-api",
+            "provenance": provenance,
             **api_match,
         },
         asset_url_candidates=lambda src: archived_asset_candidates(
@@ -595,6 +697,7 @@ def capture_snapshot_api(
             replay_base,
         ),
         referer=api_replay,
+        before_request=wait_for_wayback_request,
     )
     return {
         "timestamp": timestamp,
@@ -602,8 +705,262 @@ def capture_snapshot_api(
         "contentHash": result["contentHash"],
         "archive": str(result["archive"]),
         "captureMethod": "wayback-header-api",
+        "provenance": provenance,
         **api_match,
     }
+
+
+def compare_api_with_palxiao(
+    api_data: dict[str, Any],
+    palxiao_result: HistoricalResult,
+) -> dict[str, Any]:
+    """Compare two descriptions without combining their layers."""
+    api_ids = {
+        str(
+            item.get("normalizedIdentity")
+            or header_api.normalized_identity(str(item.get("src") or ""))
+        )
+        for item in api_data.get("resources") or []
+        if isinstance(item, dict) and item.get("src")
+    }
+    palxiao_ids = {
+        header_api.normalized_identity(str(item.get("src") or ""))
+        for item in palxiao_result.layers
+        if item.get("src")
+    }
+    agreement = {
+        "apiLayerCount": len(api_data.get("layers") or []),
+        "palxiaoLayerCount": len(palxiao_result.layers),
+        "sharedResourceCount": len(api_ids & palxiao_ids),
+    }
+    conflicts: list[str] = []
+    if agreement["apiLayerCount"] != agreement["palxiaoLayerCount"]:
+        conflicts.append("layer count differs")
+    if api_ids and palxiao_ids and api_ids != palxiao_ids:
+        conflicts.append("normalized resource identities differ")
+    return {
+        "primaryProvider": "wayback-header-api",
+        "supportingProviders": [PALXIAO_PROVIDER_NAME],
+        "confidence": "high" if not conflicts else "conflict",
+        "agreement": agreement,
+        "conflicts": conflicts,
+    }
+
+
+def _write_provider_source(temp: Path, payload: Any) -> str:
+    source_dir = temp / "source"
+    source_dir.mkdir(parents=True, exist_ok=True)
+    path = source_dir / "palxiao-data.json"
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return "source/palxiao-data.json"
+
+
+def _exact_palxiao_date(
+    snapshot: dict[str, str],
+    provider: PalxiaoHistoryProvider,
+) -> str | None:
+    timestamp = snapshot["timestamp"]
+    expected = dt.datetime.strptime(timestamp, "%Y%m%d%H%M%S").date().isoformat()
+    explicit = snapshot.get("palxiaoObservedAt") or snapshot.get("palxiaoDate")
+    if explicit:
+        if explicit != expected:
+            raise ValueError(
+                f"palxiao observedAt {explicit} does not exactly match snapshot date {expected}"
+            )
+        return explicit
+    return provider.date_for_timestamp(timestamp)
+
+
+def capture_snapshot_palxiao(
+    snapshot: dict[str, str],
+    *,
+    provider: PalxiaoHistoryProvider,
+    force: bool,
+    historical: HistoricalResult | None = None,
+) -> dict[str, Any]:
+    timestamp = snapshot["timestamp"]
+    palxiao_date = _exact_palxiao_date(snapshot, provider)
+    if not palxiao_date:
+        raise LookupError(
+            f"palxiao has no Banner data for the exact observed date of {timestamp}"
+        )
+    historical = historical or provider.load(palxiao_date)
+    core.DATA_DIR.mkdir(parents=True, exist_ok=True)
+    core.ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+    temp = Path(tempfile.mkdtemp(prefix=".palxiao_history_", dir=core.DATA_DIR))
+    try:
+        source_file = _write_provider_source(temp, historical.raw_payload)
+        layers: list[dict[str, Any]] = []
+        missing_assets = list(historical.missing_assets)
+        for index, source_layer in enumerate(historical.layers):
+            try:
+                item = core._download_http_asset(
+                    str(source_layer["assetUrl"]),
+                    temp,
+                    f"palxiao_layer_{index:02d}",
+                    referer=historical.source_url,
+                )
+                item["src"] = source_layer["src"]
+                item["sourceSrc"] = source_layer.get("sourceSrc") or ""
+                item["sourceProvider"] = PALXIAO_PROVIDER_NAME
+                item["assetType"] = core.media_type(
+                    str(source_layer.get("tag") or "img"),
+                    str(source_layer["assetUrl"]),
+                    str(item.get("contentType") or ""),
+                )
+            except Exception as exc:
+                missing_assets.append(f"layer_{index:03d}: {exc}")
+                continue
+            layers.append(
+                {
+                    "index": index,
+                    "sourceProvider": PALXIAO_PROVIDER_NAME,
+                    "sourceLayer": source_layer.get("sourceLayer") or {},
+                    "palxiao": source_layer.get("palxiao") or {},
+                    "tag": item.get("tag") or source_layer.get("tag") or "img",
+                    "assetType": item.get("assetType") or "image",
+                    "src": item.get("src") or "",
+                    "file": item.get("file") or "",
+                    "contentType": item.get("contentType") or "",
+                    "resources": [{**item, "resourceIndex": 0}],
+                    "width": source_layer.get("width", 0),
+                    "height": source_layer.get("height", 0),
+                    "naturalWidth": 0,
+                    "naturalHeight": 0,
+                    "objectFit": "fill",
+                    "objectPosition": "50% 50%",
+                    "transformOrigin": "50% 50%",
+                    "transform": source_layer.get("transform") or [1, 0, 0, 1, 0, 0],
+                    "opacity": source_layer.get("opacity") or [1, 1],
+                    "position": {},
+                    "zIndex": index,
+                    "animation": {},
+                    "animationTarget": "media",
+                    "motion": None,
+                    "captureTargetTag": item.get("tag") or "img",
+                }
+            )
+            for optional_key in ("a", "g", "f", "deg", "blur"):
+                if optional_key in source_layer:
+                    layers[-1][optional_key] = source_layer[optional_key]
+
+        if not has_saved_primary_assets(
+            temp,
+            mode="split",
+            static=None,
+            layers=layers,
+        ):
+            raise RuntimeError("no downloadable palxiao Banner asset found")
+
+        captured_at = snapshot_moment(timestamp).isoformat(timespec="seconds")
+        evidence = {
+            "root": {
+                "source": PALXIAO_PROVIDER_NAME,
+                "url": historical.source_url,
+                "date": palxiao_date,
+            },
+            "layerCount": len(historical.layers),
+            "visibleMediaCount": len(historical.layers),
+            "mediaCount": len(historical.layers),
+            "media": [
+                {
+                    "tag": item.get("tag") or "img",
+                    "src": item.get("src") or "",
+                    "sourceKind": "palxiao-data.json",
+                }
+                for item in historical.layers
+            ],
+            "resourceUrls": [
+                {"name": item.get("src") or "", "initiatorType": "palxiao-data.json"}
+                for item in historical.layers
+            ],
+            "stylesheetUrls": [],
+            "scriptUrls": [],
+            "animationCss": "",
+            "signals": {
+                "isSplitLayer": False,
+                "isStructuredLayered": bool(historical.layers),
+                "hasVideo": any(item.get("tag") == "video" for item in historical.layers),
+                "hasCanvas": False,
+                "hasSvg": any(item.get("tag") == "svg" for item in historical.layers),
+                "hasSvgAnimation": False,
+                "hasCssAnimation": False,
+                "hasInteraction": True,
+                "hasDynamicSource": any(item.get("tag") == "video" for item in historical.layers),
+            },
+            "provider": PALXIAO_PROVIDER_NAME,
+        }
+        manifest: dict[str, Any] = {
+            "version": core.MANIFEST_VERSION,
+            "capturedAt": captured_at,
+            "date": palxiao_date,
+            "season": core.season_of(snapshot_moment(timestamp).month),
+            "source": {
+                "page": ORIGINAL_PAGE,
+                "resolvedUrl": historical.source_url,
+                "captureMethod": "palxiao-history",
+                "provider": PALXIAO_PROVIDER_NAME,
+                "palxiaoDate": palxiao_date,
+                "observedAt": historical.observed_at,
+                "dateSemantics": "observedAt-only; effectiveFrom is not inferred",
+                "parameterSource": (
+                    "palxiao data.json fields when present; a/g/f/deg are reproducer "
+                    "parameters and unknown fields remain in sourceLayer"
+                ),
+                "palxiaoDataUrl": historical.source_url,
+                "requestedTimestamp": timestamp,
+                "structureSemantics": "palxiao layer list; not official Bilibili split_layer",
+            },
+            "provenance": {
+                "primaryProvider": PALXIAO_PROVIDER_NAME,
+                "supportingProviders": [],
+                "confidence": historical.confidence,
+                "agreement": {},
+                "conflicts": [],
+            },
+            "viewport": core.VIEWPORT,
+            "banner": {"referenceHeight": core.HEADER_REFERENCE_HEIGHT},
+            "mode": "split",
+            "static": None,
+            "layers": layers,
+            "auxiliaryAssets": [],
+            "interaction": {
+                "model": "palxiao-reconstructed-v1",
+                "positionAxis": "horizontal-pixel",
+                "inputMode": "relative-from-pointer-enter",
+                "effects": [
+                    "translateX", "translateY", "scale", "rotate", "opacity",
+                    *(["blur"] if any("blur" in item for item in layers) else []),
+                ],
+                "parameterSource": "palxiao-reproducer; not Bilibili Header API",
+            },
+            "sourceFiles": {"json": source_file, "palxiaoData": source_file},
+            "sourceEvidence": historical.raw_metadata,
+            "timeZone": core.TIMEZONE,
+            "lastObservedAt": captured_at,
+        }
+        core.enrich_manifest_metadata(manifest, evidence, missing_assets=missing_assets)
+        result = core.archive_capture(
+            temp,
+            manifest,
+            moment=snapshot_moment(timestamp),
+            force=force,
+            update_current=False,
+            record_observation=True,
+        )
+        return {
+            "timestamp": timestamp,
+            "palxiaoDate": palxiao_date,
+            "status": result["status"],
+            "contentHash": result["contentHash"],
+            "archive": str(result["archive"]),
+            "captureMethod": "palxiao-history",
+        }
+    finally:
+        shutil.rmtree(temp, ignore_errors=True)
 
 
 @dataclass
@@ -689,8 +1046,46 @@ def _banner_roots(parser: _BannerHTMLParser) -> list[_HTMLNode]:
     return [
         node
         for node in _walk_nodes(parser.document)
-        if _is_banner_node(node) and not _has_ancestor(node, _is_banner_node)
+        if _is_banner_node(node)
     ]
+
+
+def _banner_root_score(node: _HTMLNode) -> tuple[int, list[str]]:
+    node_id = node.attrs.get("id", "").lower()
+    classes = _class_tokens(node)
+    score = 0
+    reasons: list[str] = []
+    if node_id in BANNER_ID_PRIORITIES:
+        score = max(score, BANNER_ID_PRIORITIES[node_id])
+        reasons.append(f"exact id #{node_id}")
+    for name, priority in BANNER_CLASS_PRIORITIES.items():
+        if name in classes:
+            score = max(score, priority)
+            reasons.append(f"class .{name}")
+    return score, reasons
+
+
+def _node_depth(node: _HTMLNode, root: _HTMLNode) -> int:
+    depth = 0
+    current = node
+    while current is not root and current.parent is not None:
+        depth += 1
+        current = current.parent
+    return depth
+
+
+def _node_penalty(node: _HTMLNode) -> tuple[int, list[str]]:
+    tokens = _class_tokens(node)
+    value = " ".join(
+        [node.attrs.get("id", "").lower(), node.attrs.get("class", "").lower()]
+    )
+    if any(
+        token in tokens
+        or re.search(rf"(?:^|[-_]){token}(?:$|[-_])", value)
+        for token in ("logo", "icon", "nav", "avatar", "badge")
+    ):
+        return -70, ["auxiliary UI-like node"]
+    return 0, []
 
 
 def _first_srcset(value: str) -> str:
@@ -717,7 +1112,10 @@ def _record_source(
     tag: str,
     source_kind: str,
     base_url: str,
-) -> dict[str, str] | None:
+    origin: dict[str, Any] | None = None,
+    score: int = 0,
+    reasons: Iterable[str] = (),
+) -> dict[str, Any] | None:
     src = _resolve_original_url(value, base_url)
     if not src:
         return None
@@ -725,19 +1123,53 @@ def _record_source(
         "src": src,
         "tag": tag or header_api.infer_tag(src),
         "sourceKind": source_kind,
+        "normalizedIdentity": header_api.normalized_identity(src),
+        "role": "candidate",
+        "origin": origin or {},
+        "score": score,
+        "reasons": list(dict.fromkeys(str(item) for item in reasons)),
     }
 
 
-def _dedupe_source_records(records: Iterable[dict[str, str]]) -> list[dict[str, str]]:
-    result: list[dict[str, str]] = []
-    seen: set[str] = set()
+def _dedupe_source_records(records: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+    result: list[dict[str, Any]] = []
+    seen: dict[str, dict[str, Any]] = {}
     for record in records:
         src = str(record.get("src") or "")
         identity = header_api.normalized_identity(src) if src else ""
-        if not identity or identity in seen:
+        if not identity:
             continue
-        seen.add(identity)
-        result.append(record)
+        record = dict(record)
+        record["normalizedIdentity"] = identity
+        if identity not in seen:
+            seen[identity] = record
+            result.append(record)
+            continue
+        existing = seen[identity]
+        old_score = int(existing.get("score") or 0)
+        new_score = int(record.get("score") or 0)
+        existing["score"] = max(old_score, new_score)
+        existing["reasons"] = list(dict.fromkeys(
+            [*existing.get("reasons", []), *record.get("reasons", [])]
+        ))
+        source_candidates = list(dict.fromkeys(
+            [
+                *(existing.get("sourceCandidates") or []),
+                *(record.get("sourceCandidates") or []),
+            ]
+        ))
+        if source_candidates:
+            existing["sourceCandidates"] = source_candidates
+        for key in ("poster", "posterRole", "isPoster", "videoSourceMissing"):
+            if key in record and key not in existing:
+                existing[key] = record[key]
+        if new_score > old_score:
+            for key in (
+                "src", "tag", "sourceKind", "origin", "role",
+                "poster", "posterRole", "isPoster", "videoSourceMissing",
+            ):
+                if key in record:
+                    existing[key] = record[key]
     return result
 
 
@@ -758,18 +1190,61 @@ def _selector_is_banner_related(selector: str) -> bool:
     )
 
 
+def _selector_root_score(selector: str, root: _HTMLNode) -> tuple[int, list[str]]:
+    """Return a score only when a selector explicitly relates to ``root``."""
+    node_id = root.attrs.get("id", "").lower()
+    classes = _class_tokens(root)
+    best = 0
+    best_reasons: list[str] = []
+    for part in selector.split(","):
+        part = part.strip()
+        if not part:
+            continue
+        score = 0
+        reasons: list[str] = []
+        if node_id and re.search(
+            rf"#{re.escape(node_id)}(?:$|[^\w-])", part.lower()
+        ):
+            score = BANNER_ID_PRIORITIES.get(node_id, 150)
+            reasons.append(f"exact root selector #{node_id}")
+        for class_name in classes:
+            if not re.search(
+                rf"\.{re.escape(class_name)}(?:$|[^\w-])", part.lower()
+            ):
+                continue
+            class_score = BANNER_CLASS_PRIORITIES.get(class_name, 45)
+            if class_score > score:
+                score = class_score
+                reasons = [f"exact root selector .{class_name}"]
+        if _selector_has_token(part, "layer"):
+            score = max(score, 35)
+            reasons.append("explicit .layer selector")
+        if "::before" in part.lower() or "::after" in part.lower():
+            score = max(0, score - 20)
+            reasons.append("pseudo-element")
+        if score and any(char in part for char in (" ", ">", "+", "~")):
+            score = max(0, score - 10)
+            reasons.append("descendant selector")
+        if score > best:
+            best = score
+            best_reasons = reasons
+    return best, best_reasons
+
+
 def _parse_relevant_css(
     css_text: str,
     *,
     base_url: str,
+    root: _HTMLNode,
 ) -> dict[str, Any]:
-    records: list[dict[str, str]] = []
-    layer_records: list[dict[str, str]] = []
+    records: list[dict[str, Any]] = []
+    layer_records: list[dict[str, Any]] = []
     animation = False
     for match in CSS_RULE_RE.finditer(css_text):
         selectors = match.group("selectors").strip()
         body = match.group("body")
-        if not _selector_is_banner_related(selectors):
+        relation_score, relation_reasons = _selector_root_score(selectors, root)
+        if not relation_score:
             continue
         urls = _css_urls(body)
         if not urls:
@@ -777,12 +1252,37 @@ def _parse_relevant_css(
         if re.search(r"(?:animation|transition|@keyframes)", body, re.IGNORECASE):
             animation = True
         target = layer_records if _selector_has_token(selectors, "layer") else records
-        for value in urls:
+        for index, value in enumerate(urls):
+            score = relation_score
+            reasons = [*relation_reasons]
+            if index == 0:
+                score += 10
+                reasons.append("first CSS visual resource")
+            else:
+                score -= 10
+                reasons.append("additional CSS visual resource")
+            if "::before" in selectors.lower() or "::after" in selectors.lower():
+                score = min(score, 90)
+                reasons.append("pseudo-element treated as auxiliary candidate")
             record = _record_source(
                 value,
                 tag=header_api.infer_tag(value),
                 source_kind="css",
                 base_url=base_url,
+                origin={
+                    "nodeTag": root.tag,
+                    "nodeId": root.attrs.get("id", ""),
+                    "nodeClass": root.attrs.get("class", ""),
+                    "selector": selectors,
+                    "depthFromRoot": 0,
+                    "pseudoElement": (
+                        "before" if "::before" in selectors.lower()
+                        else "after" if "::after" in selectors.lower()
+                        else ""
+                    ),
+                },
+                score=score,
+                reasons=reasons,
             )
             if record:
                 target.append(record)
@@ -793,13 +1293,30 @@ def _parse_relevant_css(
     }
 
 
-def _node_visual_sources(node: _HTMLNode, *, base_url: str) -> list[dict[str, str]]:
-    records: list[dict[str, str]] = []
+def _node_visual_sources(
+    node: _HTMLNode,
+    *,
+    base_url: str,
+    root: _HTMLNode | None = None,
+) -> list[dict[str, Any]]:
+    root = root or node
+    records: list[dict[str, Any]] = []
     nodes = [node, *_walk_nodes(node)]
-    picture_nodes: set[int] = set()
     for candidate in nodes:
+        depth = _node_depth(candidate, root)
+        penalty, penalty_reasons = _node_penalty(candidate)
+        origin = {
+            "nodeTag": candidate.tag,
+            "nodeId": candidate.attrs.get("id", ""),
+            "nodeClass": candidate.attrs.get("class", ""),
+            "selector": "",
+            "depthFromRoot": depth,
+            "pseudoElement": "",
+        }
+        base_score = max(20, 85 - depth * 10) + penalty
+        if candidate is root:
+            base_score = 100 + penalty
         if candidate.tag == "picture":
-            picture_nodes.add(id(candidate))
             picture_sources = [
                 child
                 for child in _walk_nodes(candidate)
@@ -812,12 +1329,16 @@ def _node_visual_sources(node: _HTMLNode, *, base_url: str) -> list[dict[str, st
                     tag="img",
                     source_kind="html-picture",
                     base_url=base_url,
+                    origin=origin,
+                    score=base_score + 5,
+                    reasons=["picture source", *penalty_reasons],
                 )
                 if record:
                     records.append(record)
                     break
-        if candidate.tag in {"img", "source"} and _has_ancestor(
-            candidate, lambda item: item.tag == "picture"
+        if candidate.tag in {"img", "source"} and (
+            _has_ancestor(candidate, lambda item: item.tag == "picture")
+            or _has_ancestor(candidate, lambda item: item.tag == "video")
         ):
             continue
         if candidate.tag == "img":
@@ -827,6 +1348,9 @@ def _node_visual_sources(node: _HTMLNode, *, base_url: str) -> list[dict[str, st
                 tag="img",
                 source_kind="html-img",
                 base_url=base_url,
+                origin=origin,
+                score=base_score,
+                reasons=["img inside selected root", *penalty_reasons],
             )
             if record:
                 records.append(record)
@@ -837,19 +1361,71 @@ def _node_visual_sources(node: _HTMLNode, *, base_url: str) -> list[dict[str, st
                 tag=header_api.infer_tag(value),
                 source_kind="html-source",
                 base_url=base_url,
+                origin=origin,
+                score=base_score,
+                reasons=["picture/source media", *penalty_reasons],
             )
             if record:
                 records.append(record)
         elif candidate.tag == "video":
-            value = candidate.attrs.get("poster") or candidate.attrs.get("src")
-            record = _record_source(
-                value,
-                tag="video",
-                source_kind="html-video",
-                base_url=base_url,
+            raw_sources = [candidate.attrs.get("src", "")]
+            raw_sources.extend(
+                child.attrs.get("src") or child.attrs.get("data-src", "")
+                for child in _walk_nodes(candidate)
+                if child.tag == "source"
             )
-            if record:
-                records.append(record)
+            video_sources = []
+            for value in raw_sources:
+                resolved = _resolve_original_url(value, base_url)
+                if resolved and resolved not in video_sources:
+                    video_sources.append(resolved)
+            if video_sources:
+                record = _record_source(
+                    video_sources[0],
+                    tag="video",
+                    source_kind="html-video",
+                    base_url=base_url,
+                    origin=origin,
+                    score=base_score + 10,
+                    reasons=[
+                        "video.src/source src real video resource",
+                        *penalty_reasons,
+                    ],
+                )
+                if record:
+                    record["sourceCandidates"] = video_sources
+                    poster = _resolve_original_url(
+                        candidate.attrs.get("poster", ""),
+                        base_url,
+                    )
+                    if poster:
+                        record["poster"] = poster
+                        record["posterRole"] = "preview-fallback"
+                    records.append(record)
+            else:
+                poster = _resolve_original_url(
+                    candidate.attrs.get("poster", ""),
+                    base_url,
+                )
+                if poster:
+                    record = _record_source(
+                        poster,
+                        tag="img",
+                        source_kind="html-video-poster",
+                        base_url=base_url,
+                        origin=origin,
+                        score=base_score - 20,
+                        reasons=[
+                            "poster retained as preview only",
+                            "video source unavailable",
+                            *penalty_reasons,
+                        ],
+                    )
+                    if record:
+                        record["role"] = "preview"
+                        record["isPoster"] = True
+                        record["videoSourceMissing"] = True
+                        records.append(record)
         inline = candidate.attrs.get("style", "")
         for value in _css_urls(inline):
             record = _record_source(
@@ -857,6 +1433,9 @@ def _node_visual_sources(node: _HTMLNode, *, base_url: str) -> list[dict[str, st
                 tag=header_api.infer_tag(value),
                 source_kind="html-style",
                 base_url=base_url,
+                origin=origin,
+                score=base_score + (20 if candidate is root else 5),
+                reasons=["inline background-image", *penalty_reasons],
             )
             if record:
                 records.append(record)
@@ -876,31 +1455,85 @@ def parse_banner_resources(
     if not roots:
         raise RuntimeError("no supported Banner container in archived HTML")
 
-    root = roots[0]
-    root_records = _node_visual_sources(root, base_url=page_url)
-    css_records: list[dict[str, str]] = []
-    css_layer_records: list[dict[str, str]] = []
-    css_animation = False
-    for css in parser.style_blocks:
-        parsed = _parse_relevant_css(css, base_url=page_url)
-        css_records.extend(parsed["records"])
-        css_layer_records.extend(parsed["layerRecords"])
-        css_animation = css_animation or bool(parsed["animation"])
-    for stylesheet_url, css in css_texts:
-        parsed = _parse_relevant_css(css, base_url=stylesheet_url)
-        css_records.extend(parsed["records"])
-        css_layer_records.extend(parsed["layerRecords"])
-        css_animation = css_animation or bool(parsed["animation"])
-    css_records = _dedupe_source_records(css_records)
-    css_layer_records = _dedupe_source_records(css_layer_records)
+    css_sources = [(page_url, css) for css in parser.style_blocks]
+    css_sources.extend(css_texts)
+    evaluated_roots: list[dict[str, Any]] = []
+    for candidate_root in roots:
+        node_records = _node_visual_sources(
+            candidate_root,
+            base_url=page_url,
+            root=candidate_root,
+        )
+        css_records: list[dict[str, Any]] = []
+        css_layer_records: list[dict[str, Any]] = []
+        css_animation = False
+        for css_base, css in css_sources:
+            parsed_css = _parse_relevant_css(
+                css,
+                base_url=css_base,
+                root=candidate_root,
+            )
+            css_records.extend(parsed_css["records"])
+            css_layer_records.extend(parsed_css["layerRecords"])
+            css_animation = css_animation or bool(parsed_css["animation"])
+        records = _dedupe_source_records([*node_records, *css_records])
+        root_score, root_reasons = _banner_root_score(candidate_root)
+        resource_score = max(
+            (int(item.get("score") or 0) for item in records),
+            default=0,
+        )
+        evaluated_roots.append(
+            {
+                "node": candidate_root,
+                "records": records,
+                "layerRecords": _dedupe_source_records(css_layer_records),
+                "cssAnimation": css_animation,
+                "rootScore": root_score,
+                "resourceScore": resource_score,
+                "score": root_score + resource_score,
+                "reasons": root_reasons,
+            }
+        )
 
-    layer_nodes = [
+    def root_sort_key(item: dict[str, Any]) -> tuple[int, int, int]:
+        return (
+            int(item["score"]),
+            int(item["rootScore"]),
+            int(item["resourceScore"]),
+        )
+
+    evaluated_roots.sort(key=root_sort_key, reverse=True)
+    best = max(evaluated_roots, key=root_sort_key)
+    second = max(
+        (item for item in evaluated_roots if item is not best),
+        key=root_sort_key,
+        default=None,
+    )
+    root_tie = bool(
+        second
+        and best["score"] == second["score"]
+        and {
+            item.get("normalizedIdentity") for item in best["records"]
+        } != {
+            item.get("normalizedIdentity") for item in second["records"]
+        }
+    )
+    root = None if root_tie else best["node"]
+    root_records = (
+        _dedupe_source_records([*best["records"], *second["records"]])
+        if root_tie and second
+        else list(best["records"])
+    )
+    css_layer_records = [] if root_tie else list(best["layerRecords"])
+    css_animation = any(bool(item["cssAnimation"]) for item in evaluated_roots)
+
+    layer_nodes = [] if root is None else [
         node
         for node in [root, *_walk_nodes(root)]
-        if _is_layer_node(node) and _has_ancestor(node, _is_banner_node)
+        if _is_layer_node(node)
     ]
     layer_groups = [
-        _node_visual_sources(node, base_url=page_url)
+        _node_visual_sources(node, base_url=page_url, root=root or node)
         for node in layer_nodes
     ]
     css_layer_index = 0
@@ -911,22 +1544,91 @@ def parse_banner_resources(
             group.append(css_layer_records[css_layer_index])
             css_layer_index += 1
     layer_groups = [_dedupe_source_records(group) for group in layer_groups]
-    layered = len(layer_groups) >= 2 and all(layer_groups)
+    layered_identities = {
+        str(group[0].get("normalizedIdentity") or "")
+        for group in layer_groups
+        if group
+    }
+    layered = bool(
+        len(layer_groups) >= 2
+        and all(layer_groups)
+        and len(layered_identities) >= 2
+    )
+    poster_only_video = any(
+        bool(record.get("videoSourceMissing")) for record in root_records
+    ) and not any(record.get("tag") == "video" for record in root_records)
 
-    if layered:
+    primary_record: dict[str, Any] | None = None
+    auxiliary_records: list[dict[str, Any]] = []
+    if poster_only_video:
+        mode = "ambiguous"
+        visual_records = sorted(
+            root_records,
+            key=lambda item: int(item.get("score") or 0),
+            reverse=True,
+        )
+        for record in visual_records:
+            record["role"] = "preview" if record.get("isPoster") else "unresolved-candidate"
+    elif layered:
         visual_records = _dedupe_source_records(
             record for group in layer_groups for record in group
         )
         mode = "split"
     else:
-        visual_records = _dedupe_source_records([*root_records, *css_records])
-        mode = "static" if len(visual_records) == 1 else "ambiguous"
+        ordered_records = sorted(
+            root_records,
+            key=lambda item: int(item.get("score") or 0),
+            reverse=True,
+        )
+        primary_record = ordered_records[0] if ordered_records else None
+        second_score = (
+            int(ordered_records[1].get("score") or 0)
+            if len(ordered_records) > 1
+            else -10**9
+        )
+        ambiguous_primary = bool(
+            root_tie
+            or not primary_record
+            or (
+                len(ordered_records) > 1
+                and int(primary_record.get("score") or 0) - second_score < 15
+            )
+        )
+        mode = "ambiguous" if ambiguous_primary else "static"
+        if mode == "static" and primary_record:
+            primary_record["role"] = "primary"
+            auxiliary_records = ordered_records[1:]
+            for record in auxiliary_records:
+                record["role"] = "auxiliary"
+            visual_records = [primary_record, *auxiliary_records]
+        else:
+            for record in ordered_records:
+                record["role"] = "unresolved-candidate"
+            visual_records = ordered_records
 
+    selected_root_score, selected_root_reasons = (
+        _banner_root_score(root) if root else (0, [])
+    )
     root_info = {
-        "tag": root.tag,
-        "id": root.attrs.get("id", ""),
-        "className": root.attrs.get("class", ""),
+        "tag": root.tag if root else "",
+        "id": root.attrs.get("id", "") if root else "",
+        "className": root.attrs.get("class", "") if root else "",
+        "score": selected_root_score,
+        "reasons": selected_root_reasons,
     }
+    root_diagnostics = [
+        {
+            "tag": item["node"].tag,
+            "id": item["node"].attrs.get("id", ""),
+            "className": item["node"].attrs.get("class", ""),
+            "score": item["score"],
+            "rootScore": item["rootScore"],
+            "resourceScore": item["resourceScore"],
+            "reasons": item["reasons"],
+            "candidateCount": len(item["records"]),
+        }
+        for item in evaluated_roots
+    ]
     media = [
         {
             "tag": record.get("tag") or "img",
@@ -938,6 +1640,11 @@ def parse_banner_resources(
     return {
         "mode": mode,
         "root": root_info,
+        "selectedRoot": root_info,
+        "roots": root_diagnostics,
+        "primaryRecord": primary_record if mode == "static" else None,
+        "auxiliaryRecords": auxiliary_records if mode == "static" else [],
+        "candidates": visual_records,
         "visualRecords": visual_records,
         "layerGroups": layer_groups,
         "stylesheetUrls": [
@@ -965,14 +1672,25 @@ def parse_banner_resources(
             "animationCss": "" if not css_animation else "archived CSS animation detected",
             "signals": {
                 "isSplitLayer": bool(layered),
-                "hasVideo": any(item["tag"] == "video" for item in visual_records),
+                "hasVideo": any(
+                    item["tag"] == "video" or item.get("videoSourceMissing")
+                    for item in visual_records
+                ),
                 "hasCanvas": False,
                 "hasSvg": any(item["tag"] == "svg" for item in visual_records),
                 "hasSvgAnimation": False,
                 "hasCssAnimation": css_animation,
                 "hasInteraction": False,
-                "hasDynamicSource": any(item["tag"] == "video" for item in visual_records),
+                "hasDynamicSource": any(
+                    item["tag"] == "video" or item.get("videoSourceMissing")
+                    for item in visual_records
+                ),
             },
+            "selectedRoot": root_info,
+            "roots": root_diagnostics,
+            "primary": primary_record if mode == "static" else None,
+            "auxiliaryAssets": auxiliary_records if mode == "static" else [],
+            "strongLayerEvidence": bool(layered),
         },
     }
 
@@ -1007,31 +1725,38 @@ def _download_archived_asset(
     stem: str,
     tag: str,
     referer: str,
+    source_candidates: Iterable[str] = (),
 ) -> dict[str, Any]:
-    original = _resolve_original_url(src, ORIGINAL_PAGE)
-    if not original:
+    originals: list[str] = []
+    for value in [src, *source_candidates]:
+        original = _resolve_original_url(value, ORIGINAL_PAGE)
+        if original and original not in originals:
+            originals.append(original)
+    if not originals:
         raise ValueError("empty archived asset URL")
     errors: list[str] = []
-    candidates = archived_asset_candidates(timestamp, original, replay_base)
     for attempt in range(3):
-        for candidate in candidates:
-            try:
-                item = core._download_http_asset(
-                    candidate,
-                    folder,
-                    stem,
-                    referer=referer,
-                )
-                item["src"] = original
-                item["requestedSrc"] = candidate
-                item["assetType"] = core.media_type(
-                    tag or item.get("tag") or "img",
-                    candidate,
-                    str(item.get("contentType") or ""),
-                )
-                return item
-            except Exception as exc:
-                errors.append(f"{candidate}: {exc}")
+        for original in originals:
+            candidates = archived_asset_candidates(timestamp, original, replay_base)
+            for candidate in candidates:
+                try:
+                    wait_for_wayback_request()
+                    item = core._download_http_asset(
+                        candidate,
+                        folder,
+                        stem,
+                        referer=referer,
+                    )
+                    item["src"] = original
+                    item["requestedSrc"] = candidate
+                    item["assetType"] = core.media_type(
+                        tag or item.get("tag") or "img",
+                        candidate,
+                        str(item.get("contentType") or ""),
+                    )
+                    return item
+                except Exception as exc:
+                    errors.append(f"{candidate}: {exc}")
         if attempt < 2:
             time.sleep(RETRY_BASE_SECONDS * (2**attempt))
     raise RuntimeError("; ".join(errors))
@@ -1095,7 +1820,14 @@ def capture_snapshot_http(
     )
     if parsed["mode"] == "ambiguous":
         raise RuntimeError(
-            "multiple relevant Banner visual resources without strong layered evidence"
+            "multiple relevant Banner visual resources without strong layered evidence: "
+            + json.dumps(
+                {
+                    "selectedRoot": parsed.get("selectedRoot"),
+                    "candidates": parsed.get("candidates", []),
+                },
+                ensure_ascii=False,
+            )
         )
 
     core.DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -1106,8 +1838,10 @@ def capture_snapshot_http(
         missing_assets = list(css_errors)
         layers: list[dict[str, Any]] = []
         static: dict[str, Any] | None = None
+        preview_image = ""
+        auxiliary_assets: list[dict[str, Any]] = []
         if parsed["mode"] == "static":
-            record = parsed["visualRecords"][0]
+            record = parsed.get("primaryRecord") or parsed["visualRecords"][0]
             try:
                 static = _download_archived_asset(
                     record["src"],
@@ -1117,9 +1851,52 @@ def capture_snapshot_http(
                     stem="static",
                     tag=record.get("tag") or "img",
                     referer=page_replay,
+                    source_candidates=record.get("sourceCandidates") or [],
                 )
+                if record.get("sourceCandidates"):
+                    static["sourceCandidates"] = record["sourceCandidates"]
             except Exception as exc:
                 missing_assets.append(f"static: {exc}")
+            poster = str(record.get("poster") or "")
+            if poster:
+                try:
+                    preview = _download_archived_asset(
+                        poster,
+                        temp,
+                        timestamp=timestamp,
+                        replay_base=replay_base,
+                        stem="preview",
+                        tag="img",
+                        referer=page_replay,
+                    )
+                    preview_image = str(preview.get("file") or "")
+                    if static is not None:
+                        static["poster"] = poster
+                        static["posterFile"] = preview_image
+                except Exception as exc:
+                    missing_assets.append(f"video poster preview: {exc}")
+            for auxiliary_index, auxiliary in enumerate(parsed.get("auxiliaryRecords") or []):
+                try:
+                    item = _download_archived_asset(
+                        auxiliary["src"],
+                        temp,
+                        timestamp=timestamp,
+                        replay_base=replay_base,
+                        stem=f"auxiliary_{auxiliary_index:02d}",
+                        tag=auxiliary.get("tag") or "img",
+                        referer=page_replay,
+                    )
+                    auxiliary_assets.append(
+                        {
+                            **item,
+                            "role": "auxiliary",
+                            "origin": auxiliary.get("origin") or {},
+                            "score": auxiliary.get("score", 0),
+                            "reasons": auxiliary.get("reasons") or [],
+                        }
+                    )
+                except Exception as exc:
+                    missing_assets.append(f"auxiliary_{auxiliary_index:03d}: {exc}")
         else:
             for index, group in enumerate(parsed["layerGroups"]):
                 resources: list[dict[str, Any]] = []
@@ -1187,7 +1964,7 @@ def capture_snapshot_http(
 
         captured_at = moment.isoformat(timespec="seconds")
         manifest: dict[str, Any] = {
-            "version": 10.1,
+            "version": core.MANIFEST_VERSION,
             "capturedAt": captured_at,
             "date": moment.strftime("%Y-%m-%d"),
             "season": core.season_of(moment.month),
@@ -1195,22 +1972,33 @@ def capture_snapshot_http(
                 "page": ORIGINAL_PAGE,
                 "resolvedUrl": page_replay,
                 "captureMethod": "wayback-http-html-css",
+                "provider": "wayback-html",
                 "waybackTimestamp": timestamp,
                 "homepageWaybackTimestamp": timestamp,
                 "waybackReplay": page_replay,
                 "availabilityUrl": snapshot.get("availabilityUrl"),
             },
+            "provenance": {
+                "primaryProvider": "wayback-html",
+                "supportingProviders": [],
+                "confidence": "high" if parsed.get("primaryRecord") else "medium",
+                "agreement": {},
+                "conflicts": [],
+            },
             "viewport": core.VIEWPORT,
             "banner": {},
             "mode": mode,
             "static": static,
+            "preview_image": preview_image or None,
             "layers": layers,
+            "auxiliaryAssets": auxiliary_assets,
             "interaction": {
                 "model": "none",
                 "positionAxis": "observed",
                 "effects": [],
             },
             "sourceFiles": source_files,
+            "sourceEvidence": parsed["evidence"],
             "timeZone": core.TIMEZONE,
             "lastObservedAt": captured_at,
         }
@@ -1294,6 +2082,45 @@ def verify_snapshot_dom(
     raise RuntimeError("Wayback DOM verification failed: " + "; ".join(errors))
 
 
+def imported_palxiao_dates() -> set[str]:
+    dates: set[str] = set()
+    for _, manifest in core.iter_archive_manifests():
+        for observation in core.manifest_observations(manifest):
+            source = observation.get("source") or {}
+            if str(source.get("provider") or "") != PALXIAO_PROVIDER_NAME:
+                continue
+            date = str(source.get("palxiaoDate") or "")
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+                dates.add(date)
+    return dates
+
+
+def discover_palxiao_snapshots(
+    start: dt.date,
+    end: dt.date,
+    *,
+    provider: PalxiaoHistoryProvider,
+) -> list[dict[str, str]]:
+    snapshots: list[dict[str, str]] = []
+    for date_text in provider.discover_dates():
+        try:
+            date = dt.date.fromisoformat(date_text)
+        except ValueError:
+            continue
+        if not start <= date <= end:
+            continue
+        snapshots.append(
+            {
+                "timestamp": date.strftime("%Y%m%d") + "120000",
+                "original": ORIGINAL_PAGE,
+                "availabilityUrl": "",
+                "palxiaoDate": date.isoformat(),
+                "palxiaoObservedAt": date.isoformat(),
+            }
+        )
+    return snapshots
+
+
 def capture_snapshot(
     snapshot: dict[str, str],
     *,
@@ -1302,21 +2129,62 @@ def capture_snapshot(
     cdx_api: str = CDX_API,
     max_header_api_delta_seconds: int = HEADER_API_MAX_DELTA_SECONDS,
     verify_dom: bool = False,
+    provider: str = "auto",
+    palxiao_provider: PalxiaoHistoryProvider | None = None,
 ) -> dict[str, Any]:
     timestamp = snapshot["timestamp"]
-    try:
-        result = capture_snapshot_api(
-            snapshot,
-            replay_base=replay_base,
-            force=force,
-            cdx_api=cdx_api,
-            max_header_api_delta_seconds=max_header_api_delta_seconds,
-        )
-    except Exception as api_exc:
-        print(
-            f"Archived Header API unavailable for {timestamp}: {api_exc}. "
-            "Falling back to HTTP HTML/CSS recovery."
-        )
+    if provider not in {"auto", "wayback-api", "palxiao", "wayback-html"}:
+        raise ValueError(f"unsupported historical provider: {provider}")
+    if provider == "palxiao" and palxiao_provider is None:
+        raise RuntimeError("Palxiao provider is not configured")
+
+    palxiao_result: HistoricalResult | None = None
+    if provider == "auto" and palxiao_provider:
+        palxiao_date = _exact_palxiao_date(snapshot, palxiao_provider)
+        if palxiao_date:
+            try:
+                palxiao_result = palxiao_provider.load(palxiao_date)
+            except LookupError:
+                palxiao_result = None
+            except Exception as exc:
+                print(f"Palxiao supporting lookup unavailable for {timestamp}: {exc}")
+
+    result: dict[str, Any]
+    if provider in {"auto", "wayback-api"}:
+        try:
+            result = capture_snapshot_api(
+                snapshot,
+                replay_base=replay_base,
+                force=force,
+                cdx_api=cdx_api,
+                max_header_api_delta_seconds=max_header_api_delta_seconds,
+                palxiao_result=palxiao_result,
+            )
+        except Exception as api_exc:
+            if provider == "wayback-api":
+                raise
+            print(
+                f"Archived Header API unavailable for {timestamp}: {api_exc}. "
+                "Trying Palxiao structured history before HTTP HTML/CSS recovery."
+            )
+            result = {}
+    else:
+        result = {}
+
+    if not result and provider in {"auto", "palxiao"} and palxiao_provider:
+        try:
+            result = capture_snapshot_palxiao(
+                snapshot,
+                provider=palxiao_provider,
+                force=force,
+                historical=palxiao_result,
+            )
+        except Exception as palxiao_exc:
+            if provider == "palxiao":
+                raise
+            print(f"Palxiao history unavailable for {timestamp}: {palxiao_exc}")
+
+    if not result and provider in {"auto", "wayback-html"}:
         result = capture_snapshot_http(
             snapshot,
             replay_base=replay_base,
@@ -1350,6 +2218,12 @@ def main() -> None:
         "--cadence",
         choices=("monthly", "weekly", "daily"),
         default="monthly",
+    )
+    parser.add_argument(
+        "--provider",
+        choices=("auto", "wayback-api", "palxiao", "wayback-html"),
+        default="auto",
+        help="Historical source priority. auto uses Wayback API, Palxiao, then HTML/CSS.",
     )
     parser.add_argument("--snapshot", action="append", default=[])
     parser.add_argument("--limit", type=int, default=0)
@@ -1397,6 +2271,12 @@ def main() -> None:
     except ValueError as exc:
         parser.error(str(exc))
 
+    palxiao_provider = None
+    if args.provider in {"auto", "palxiao"}:
+        palxiao_provider = PalxiaoHistoryProvider(
+            cache_path=core.DATA_DIR / "cache" / "providers" / "palxiao-index.json"
+        )
+
     if args.snapshot:
         try:
             snapshot_values = [
@@ -1409,6 +2289,12 @@ def main() -> None:
             {"timestamp": value, "original": ORIGINAL_PAGE, "availabilityUrl": ""}
             for value in snapshot_values
         ]
+    elif args.provider == "palxiao":
+        snapshots = discover_palxiao_snapshots(
+            start,
+            end,
+            provider=palxiao_provider,
+        )
     else:
         snapshots = discover_snapshots(
             start,
@@ -1416,19 +2302,47 @@ def main() -> None:
             cadence=args.cadence,
             api_url=args.availability_api,
         )
+        if args.provider == "auto" and palxiao_provider:
+            try:
+                palxiao_snapshots = discover_palxiao_snapshots(
+                    start,
+                    end,
+                    provider=palxiao_provider,
+                )
+                by_date = {
+                    item["timestamp"][:8]: item
+                    for item in palxiao_snapshots
+                }
+                existing_dates = {item["timestamp"][:8] for item in snapshots}
+                for item in snapshots:
+                    palxiao_item = by_date.get(item["timestamp"][:8])
+                    if palxiao_item:
+                        item["palxiaoDate"] = palxiao_item["palxiaoDate"]
+                snapshots.extend(
+                    item
+                    for item in palxiao_snapshots
+                    if item["timestamp"][:8] not in existing_dates
+                )
+                snapshots.sort(key=lambda item: item["timestamp"])
+            except Exception as exc:
+                print(f"Palxiao date discovery unavailable: {exc}")
 
     if args.limit > 0:
         snapshots = snapshots[: args.limit]
     skipped_known = 0
     if not args.force:
         known_timestamps = imported_wayback_timestamps()
+        known_palxiao = imported_palxiao_dates()
         skipped_known = sum(
-            snapshot["timestamp"] in known_timestamps for snapshot in snapshots
+            snapshot["timestamp"] in known_timestamps
+            or snapshot.get("palxiaoDate") in known_palxiao
+            for snapshot in snapshots
         )
         snapshots = [
             snapshot
             for snapshot in snapshots
             if snapshot["timestamp"] not in known_timestamps
+            and snapshot.get("palxiaoDate") not in known_palxiao
         ]
         if skipped_known:
             print(f"Skipped {skipped_known} already imported Wayback snapshots.")
@@ -1455,6 +2369,8 @@ def main() -> None:
                 cdx_api=args.cdx_api,
                 max_header_api_delta_seconds=args.header_api_max_delta_seconds,
                 verify_dom=args.verify_dom,
+                provider=args.provider,
+                palxiao_provider=palxiao_provider,
             )
             results.append(result)
             print(json.dumps(result, ensure_ascii=False))

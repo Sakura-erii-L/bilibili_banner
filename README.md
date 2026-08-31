@@ -2,7 +2,7 @@
 
 一个保存并重放 Bilibili 首页 Banner 原始构成的归档项目。目标是保留图片、分层、视频、动画和交互参数，而不是制作历史截图相册。
 
-新抓取生成 `v11.0` manifest/index；现有 `v9.2/v10.1` 归档仍可直接回放。当前 Banner 默认直接读取 Bilibili Header API 的 `is_split_layer + split_layer.layers[].resources[]`，按官方参数保存并重放原始图层；Playwright DOM 实测已降级为显式校验/遗留诊断模式。前端只读取仓库内的 `data/`，不会在用户浏览器中回源 Bilibili。
+新抓取生成 `v11.0` manifest/index；现有 `v9.2/v10.1` 归档仍可直接回放。当前 Banner 默认直接读取 Bilibili Header API 的 `is_split_layer + split_layer.layers[].resources[]`，按官方参数保存并重放原始图层；Playwright DOM 实测已降级为显式校验/遗留诊断模式。历史导入按 API-first 优先级支持 Wayback HTTP 和独立的 palxiao structured provider。前端只读取仓库内的 `data/`，不会在用户浏览器中回源 Bilibili。
 
 ## 当前实现
 
@@ -13,9 +13,9 @@
 - 前端 `bilibili-header-api-v1` renderer 按 BiliDynBanner/Bilibili 参数模型计算：水平位移 `(clientX-enterX)/containerWidth`，高度基准 `155`，离场约 `200ms` 线性回位，并支持 cubic-bezier `offsetCurve`。
 - `python backend/capture.py --verify-dom` 才会启动隐藏浏览器，只比较 API 与当前 DOM 资源，不再进行 9 点运动采样。
 - `python backend/capture.py --legacy-dom-capture` 保留旧 v10.1 的完整 DOM 采样路径，仅用于诊断 API 无法描述的特殊实现，不是默认抓取流程。
-- Wayback 历史导入先尝试归档的 Header API JSON；API 不存在、不可解析或无法恢复任何主图层时，才懒启动隐藏 Playwright 解析历史 DOM。
-- API、DOM fallback 都继续保存原始资源和证据；后端不生成截图，前端也不使用截图作为分层失败回退。
-- 分别计算资源、结构和交互哈希；v11 API 参数参与哈希，但 v9/v10 没有 API 字段时保持原哈希语义，避免旧归档被误判变更。
+- Wayback 历史导入优先通过 CDX 找到实际 Header API snapshot；失败后依次尝试精确日期的 palxiao structured data，再使用直接 HTTP HTML/CSS 推断。默认不启动 Playwright，只有 `--verify-dom` 才校验回放页。
+- API、palxiao、HTML fallback 都保存原始资源和证据；后端不生成截图，前端也不使用截图作为分层失败回退。`<video>` 优先保存真实视频源，poster 只作 preview fallback。
+- 继续保留兼容的 `contentHash`（manifest 字段仍是 `type`），并额外计算 provider-independent `canonicalContentHash` 与区分来源/交互模型的 `sourceFingerprint`。
 - 同日、布局结构相同但实际素材不同的抓取结果继续使用 `familyId`/时段变体机制；旧 sampled renderer 继续兼容现有历史 archive。
 
 历史数据已重置，只保留 `2026-08-30` 的真实分层 archive 作为基线；其余日期由 GitHub Actions 从 `2019-08-01` 起重新采集。回填会持续改变记录数，应以 `data/index.json` 和 `python scripts/audit_archives.py` 的结果为准。
@@ -28,7 +28,7 @@
 python -m pip install -r requirements.txt
 ```
 
-只有使用 `--verify-dom`、`--legacy-dom-capture` 或 Wayback DOM fallback 时才需要 Playwright 浏览器。机器没有可用的 Edge/Chrome 时安装 Chromium：
+只有使用 `--verify-dom`、`--legacy-dom-capture` 时才需要 Playwright 浏览器。机器没有可用的 Edge/Chrome 时安装 Chromium：
 
 ```powershell
 python -m playwright install chromium
@@ -86,8 +86,11 @@ python scripts/serve.py --directory PATH   # 服务指定静态目录
 ├─ backend/
 │  ├─ capture.py                    # API-first 抓取、归档、旧 DOM 验证/诊断
 │  ├─ providers/
-│  │  └─ bilibili_header_api.py     # Header API 获取、split_layer 解析、资源规范化
-│  └─ wayback_import.py             # Wayback API-first 历史导入 + DOM fallback
+│  │  ├─ bilibili_header_api.py     # Header API 获取、split_layer 解析、资源规范化
+│  │  ├─ history.py                 # Unified HistoricalResult
+│  │  └─ palxiao_history.py         # palxiao data.json 精确日期 provider
+│  ├─ history_import.py             # 历史导入兼容入口
+│  └─ wayback_import.py             # Wayback API/HTTP + provider fallback
 ├─ frontend/
 │  ├─ index.html                    # 页面骨架
 │  ├─ app.js                        # 数据加载、筛选、分层重建和交互
@@ -163,7 +166,7 @@ translate = value * containerScale * scale.initial
 
 `.github/workflows/pages.yml` 用于手工触发、普通 `main` push，或在 `Import Historical Banners` 成功完成后通过 `workflow_run` 构建并部署 Pages。后者用于解决默认 `GITHUB_TOKEN` 产生的自动提交不会再次触发 `push` workflow 的限制。
 
-`.github/workflows/wayback-import.yml` 直接运行 `backend/wayback_import.py` 自动下载：脚本或工作流更新推送后启动 `2019-08-01` 至今的月度回填，此后每月 2 日北京时间 `02:27` 自动补抓，也保留手工指定范围入口。后端会拒绝更早的范围和时间戳。每产生一个真正创建或更新的归档，就由 `scripts/checkpoint_wayback.py` 立即提交并推送一次 `data/`、触发一次 Pages。失败、完全重复及没有任何可播放主素材的快照不计入提交。新回填运行会取消仍占用同一数据写入并发组的旧运行。
+`.github/workflows/wayback-import.yml` 通过 `workflow_dispatch` 直接运行 `backend/history_import.py`，支持 `auto`、`wayback-api`、`palxiao`、`wayback-html` 和指定日期范围。后端会拒绝更早的范围和时间戳。每产生一个真正创建或更新的归档，就由 `scripts/checkpoint_wayback.py` 立即提交并推送一次 `data/`、触发一次 Pages。失败、完全重复及没有任何可播放主素材的快照不计入提交。它与 Daily Update 共用 `bilibili-banner-data-writes` 且 `cancel-in-progress: false`，数据写入任务会排队执行。
 
 ## Wayback 历史导入
 
@@ -179,22 +182,22 @@ python backend\wayback_import.py --from-date 2019-08-01 --to-date 2026 --cadence
 python backend\wayback_import.py --from-date 2019-08-01 --to-date 2020 --cadence monthly
 ```
 
-`monthly` 只取得每月附近的代表快照；需要更密集的历史可改为 `weekly` 或 `daily`。每个快照先请求 Wayback 保存的 Header API 原始 JSON，并复用与当前抓取相同的 `split_layer` parser；只有 API 路径失败时才启动 headless Playwright 解析历史 DOM/CSS/脚本/媒体，并兼容旧版 `.bili-banner`。可恢复部分结构时保存 `partial`；任何情况下都不会用截图伪造。详细操作见 [Wayback 历史导入](docs/Wayback历史导入.md)。
+`monthly` 只取得每月附近的代表快照；需要更密集的历史可改为 `weekly` 或 `daily`。每个快照先通过 CDX 查找实际 Header API timestamp，再尝试精确日期的 palxiao `assets/YYYY-MM-DD/data.json`，最后直接 HTTP 获取 Wayback raw replay 和 HTML/CSS。Playwright 仅在显式 `--verify-dom` 时校验，不参与默认恢复；任何情况下都不会用截图伪造。palxiao 日期只表示其记录/抓取该 Banner 的 `observedAt`，不推断 `effectiveFrom`。详细操作见 [Wayback 历史导入](docs/Wayback历史导入.md)。
 
 GitHub Runner 的出口 IP、地理位置、Cookie 和 A/B 分流可能导致它看到的 Banner 与个人电脑不同。如果必须以自己的网络环境为准，建议在 Windows/NAS 抓取后提交 `data/`，让 GitHub Pages 只负责展示。
 
 ## 明确限制
 
-- 当前默认抓取依赖 Bilibili Header API 的可用性及 `split_layer` 数据格式；接口失效时默认任务会失败，而不是悄悄切回 DOM。可用 `--legacy-dom-capture` 人工诊断。
+- 当前每日默认抓取依赖 Bilibili Header API；接口失效时默认任务会失败，而不是悄悄改变当前主流程。历史导入另有 Wayback/palxiao/HTTP fallback；可用 `--legacy-dom-capture` 人工诊断。
 - Header API 中的 `extensions` 会完整保存在原始 JSON/manifest；当前 renderer 尚未复现 snow/petals 等扩展，因此存在扩展时会标记 `partial`，不会伪装为完整。
 - 分层资源缺失时保存至少一个已恢复图层并标记 `partial/missing_assets`；完全没有可播放主素材时直接失败，不创建空 archive。
 - v11 renderer 支持 Header API 的 scale/rotate/translate/blur/opacity、offsetCurve、多帧资源和视频；API 外的 WebGL、特殊脚本/扩展仍可能只能留下证据并标记 partial。旧 DOM sampled archive 继续按原 matrix 曲线回放。
-- `contentHash` 由 `resourceHash + structureHash + interactionHash` 组合；日期、观测时段和来源 URL 不参与哈希。
+- `contentHash` 继续由 `resourceHash + structureHash + interactionHash` 组合并保持旧归档兼容；新增 `canonicalContentHash` 只比较规范化资源 bytes/结构，`sourceFingerprint` 保留 provider 与 interaction model 差异。
 - 自动 `familyId` 依据“同一日期 + 相同布局结构”归并时段变体；若网站在同一天把结构完全相同的 Banner 更换为无关主题，可能需要人工拆分 family。
 - 前端是纯静态页面，没有后台 API、用户登录、数据库或在线回源逻辑。
 - 历史素材会持续增加 Git 仓库和 Pages 体积；程序不会自动删除旧归档。
 - Wayback 并不保证每个快照都保存完整子资源或可执行脚本，因此 `2019-08-01` 至今只能导入“归档中仍可恢复”的 Banner，不代表逐日无缺口。
-- 当前自动历史发现器仍以 Wayback Availability API 为主；代码会保存其它归档/CDN 线索，但 Common Crawl、archive.today、Memento 和 GitHub 项目尚未实现统一自动导入 provider。
+- 当前历史发现以 Wayback Availability/CDX 为主，并支持 palxiao/bilibili-banner 的精确日期 structured provider；palxiao 的字段不是官方 `split_layer`，缺失参数不补造，未知字段保存在原始 source layer。Common Crawl、archive.today、Memento 和其它 GitHub 项目尚未实现统一自动导入 provider。
 - `python scripts/audit_archives.py` 可检查 flatten、缺失文件和结构化哈希。重采结果只有通过这些硬检查后才应保留；`partial` 仍表示至少有一个真实主素材，但部分图层或交互证据不可恢复。
 
 ## 文档入口

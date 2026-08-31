@@ -1,16 +1,18 @@
 name: Import Historical Banners
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "backend/wayback_import.py"
-      - "backend/capture.py"
-      - "backend/providers/**"
-      - ".github/workflows/wayback-import.yml"
   workflow_dispatch:
     inputs:
+      provider:
+        description: "Historical provider"
+        required: true
+        type: choice
+        options:
+          - auto
+          - wayback-api
+          - palxiao
+          - wayback-html
+        default: auto
       from_date:
         description: "Start date (not earlier than 2019-08-01)"
         required: true
@@ -31,18 +33,25 @@ on:
       limit:
         description: "Maximum snapshots; 0 means all discovered"
         required: true
+        type: string
         default: "0"
-  schedule:
-    - cron: "27 2 2 * *"
-      timezone: "Asia/Shanghai"
+      force:
+        description: "Reprocess already imported dates"
+        required: true
+        type: boolean
+        default: false
+      verify_dom:
+        description: "After HTTP recovery, optionally verify with Playwright"
+        required: true
+        type: boolean
+        default: false
 
 permissions:
-  actions: write
   contents: write
 
 concurrency:
   group: bilibili-banner-data-writes
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   import:
@@ -64,11 +73,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install Playwright Chromium
+      - name: Install Playwright Chromium for explicit verification
+        if: inputs.verify_dom == true
         run: |
           python -m playwright install --with-deps chromium
 
-      - name: Import real assets from Wayback snapshots
+      - name: Import historical Banner assets
         env:
           BANNER_PROFILE_MODE: "temporary"
           BANNER_TIMEZONE: "Asia/Shanghai"
@@ -83,14 +93,23 @@ jobs:
           TO_DATE="${{ inputs.to_date }}"
           CADENCE="${{ inputs.cadence }}"
           LIMIT="${{ inputs.limit }}"
+          PROVIDER="${{ inputs.provider }}"
+          FORCE="${{ inputs.force }}"
+          VERIFY_DOM="${{ inputs.verify_dom }}"
           [[ -n "$FROM_DATE" ]] || FROM_DATE="2019-08-01"
           [[ -n "$TO_DATE" ]] || TO_DATE="$(date +%F)"
           [[ -n "$CADENCE" ]] || CADENCE="monthly"
           [[ -n "$LIMIT" ]] || LIMIT="0"
-          python backend/wayback_import.py \
-            --from-date "$FROM_DATE" \
-            --to-date "$TO_DATE" \
-            --cadence "$CADENCE" \
-            --limit "$LIMIT" \
-            --checkpoint-every 1 \
+          [[ -n "$PROVIDER" ]] || PROVIDER="auto"
+          ARGS=(
+            --provider "$PROVIDER"
+            --from-date "$FROM_DATE"
+            --to-date "$TO_DATE"
+            --cadence "$CADENCE"
+            --limit "$LIMIT"
+            --checkpoint-every 1
             --checkpoint-script scripts/checkpoint_wayback.py
+          )
+          [[ "$FORCE" == "true" ]] && ARGS+=(--force)
+          [[ "$VERIFY_DOM" == "true" ]] && ARGS+=(--verify-dom)
+          python backend/history_import.py "${ARGS[@]}"

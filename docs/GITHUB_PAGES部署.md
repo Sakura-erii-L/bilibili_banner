@@ -2,7 +2,7 @@
 
 ## v11 自动化变化（2026-08-31）
 
-`Daily Banner Update` 默认只走 Header API，因此日常 workflow 不再安装 Playwright Chromium，抓取后仍按原逻辑提交 `data/` 并部署 Pages。`Import Historical Banners` 仍保留 Chromium，因为 Wayback API 缺失时需要 DOM fallback。Pages 前端只读取仓库内本地资源，不回源 Bilibili CDN/API。
+`Daily Banner Update` 默认只走 Header API，因此日常 workflow 不再安装 Playwright Chromium，抓取后仍按原逻辑提交 `data/` 并部署 Pages。`Import Historical Banners` 默认也使用 Wayback HTTP/API、palxiao structured provider，不安装 Chromium；只有手工勾选 `verify_dom` 时才安装并执行 verify-only。Pages 前端只读取仓库内本地资源，不回源 Bilibili CDN/API。
 
 本项目发布的是 `scripts/build_site.py` 生成的纯静态目录 `_site/`。GitHub Pages 只负责托管前端和仓库内的归档数据，不运行 Python 后端，也不让用户浏览器回源 Bilibili。
 
@@ -65,7 +65,7 @@ Python 3.12 + pip cache
         ↓
 安装 requirements.txt
         ↓
-安装 Playwright Chromium 及系统依赖
+不安装 Chromium（仅 `verify_dom=true` 的历史导入例外）
         ↓
 CI=true、BANNER_PROFILE_MODE=temporary 的 headless capture.py
         ↓
@@ -113,7 +113,7 @@ Actions → Daily Banner Update → Run workflow
 按以下顺序操作：
 
 1. 进入 `Actions`，左侧点击 `Daily Banner Update`，点击右侧 `Run workflow`，选择 `main`，再点击绿色的 `Run workflow`。
-2. 打开这次运行，先观察 `update-and-build` job：应依次看到 `Checkout repository`、`Set up Python`、`Install Python dependencies`、`Install Playwright Chromium`、`Capture current Bilibili banner`、`Detect data changes`、`Build static Pages site`、`Configure GitHub Pages` 和 `Upload Pages artifact`。
+2. 打开这次运行，先观察 `update-and-build` job：应依次看到 `Checkout repository`、`Set up Python`、`Install Python dependencies`、`Capture current Bilibili banner`、`Detect data changes`、`Build static Pages site`、`Configure GitHub Pages` 和 `Upload Pages artifact`。
 3. 再观察 `deploy` job：它应在 `update-and-build` 成功后运行 `Deploy GitHub Pages`。
 4. 成功表现是两个 job 都有绿色对勾。若 Banner 是新素材，仓库会多出 `data/archive/<id>/`，并更新 `data/current/` 与 `data/index.json`；若是重复素材，日志会显示 `No visual change` 或 `Visual already exists in history`，`data/` 不变，也不会产生数据 commit。
 5. 失败时点击红色 job，展开失败的 step，复制最底部的错误信息和 `data/diagnostic.json` 相关信息；不要只看 Actions 列表上的标题。
@@ -158,7 +158,7 @@ GitHub Pages 只构建和展示
 - 前端分层失败时只显示错误，不显示截图。
 - `static.*` 代表 Bilibili 原始静态资源，不是浏览器截图。
 
-每日工作流使用仓库的 `GITHUB_TOKEN` 推送数据。GitHub 官方说明，使用该 token 推送的提交不会再次触发新的 workflow，因此不会因自动提交而递归触发 `pages.yml`；人工 push 或手工运行仍可能与每日任务并行，两个 workflow 已分别设置并发组。
+每日工作流使用仓库的 `GITHUB_TOKEN` 推送数据。GitHub 官方说明，使用该 token 推送的提交不会再次触发新的 workflow，因此不会因自动提交而递归触发 `pages.yml`；Daily Update 与历史导入共用 `bilibili-banner-data-writes` 且 `cancel-in-progress: false`，两个数据写入任务会排队而不会互相取消。
 
 ## 8. 仓库容量
 
@@ -181,7 +181,6 @@ Actions → Daily Banner Update → 失败运行
 
 重点看：
 
-- `Install Playwright Chromium`
 - `Capture current Bilibili banner`
 - `Detect data changes`
 - `Build static Pages site`

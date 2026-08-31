@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 
 import {
   cubicBezierValue,
@@ -33,5 +34,10 @@ assert.equal(
   selectTimedVariant(record, new Date("2026-08-31T11:30:00Z"), "Asia/Shanghai").manifest,
   "evening.json",
 );
+
+const appSource = readFileSync(new URL("../frontend/app.js", import.meta.url), "utf8");
+assert.match(appSource, /model === "bilibili-header-api-v1"/);
+assert.match(appSource, /model === "palxiao-reconstructed-v1"/);
+assert.match(appSource, /palxiao-reconstructed-v1/);
 
 console.log("interaction.test.mjs: OK");

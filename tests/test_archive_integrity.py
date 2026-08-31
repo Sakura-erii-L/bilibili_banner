@@ -113,6 +113,33 @@ class ArchiveIntegrityTests(unittest.TestCase):
             crlf_hash = capture.calculate_manifest_hashes(root, manifest)
         self.assertEqual(lf_hash, crlf_hash)
 
+    def test_legacy_four_key_hashes_remain_auditable(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            manifest = {
+                "mode": "static",
+                "type": ["static"],
+                "static": {"file": "static.png", "tag": "img", "assetType": "image"},
+                "layers": [],
+                "interaction": {"model": "none", "effects": []},
+                "structureEvidence": {"layerCount": 0, "visibleMediaCount": 1, "signals": {}},
+            }
+            folder = self.write_archive(root, "legacy-hash", manifest, {"static.png": b"legacy"})
+            current_hashes = manifest["hashes"]
+            manifest["hashes"] = {
+                key: current_hashes[key]
+                for key in ("resourceHash", "structureHash", "interactionHash", "contentHash")
+            }
+            (folder / "banner.json").write_text(
+                json.dumps(manifest, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            result = audit(root)
+        self.assertEqual(result["issues"], [])
+        self.assertTrue(
+            any(item["reason"] == "legacy-manifest-without-canonical-hash" for item in result["warnings"])
+        )
+
     def test_layered_video_interactive_cannot_be_flattened(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

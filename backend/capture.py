@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import argparse
 import base64
+import copy
 import datetime as dt
+import gzip
 import hashlib
 import json
 import os
@@ -838,6 +840,7 @@ def _download_http_asset(
     *,
     referer: str = SITE,
     timeout: int = 45,
+    before_request: Callable[[], None] | None = None,
 ) -> dict[str, Any]:
     requested_src = header_api.absolute_asset_url(src)
     if not requested_src:
@@ -848,13 +851,19 @@ def _download_http_asset(
         requested_src,
         headers={
             "Accept": "*/*",
+            "Accept-Encoding": "identity",
             "Referer": referer,
             "User-Agent": USER_AGENT,
         },
     )
+    if before_request:
+        before_request()
     with urllib.request.urlopen(request, timeout=timeout) as response:
         body = response.read()
         content_type = str(response.headers.get("content-type") or "")
+        content_encoding = str(response.headers.get("content-encoding") or "")
+    if "gzip" in content_encoding.lower() or body.startswith(b"\x1f\x8b"):
+        body = gzip.decompress(body)
     ext = header_api.extension_for_url(requested_src, content_type)
     filename = f"{stem}{ext}"
     (folder / filename).write_bytes(body)
@@ -934,6 +943,7 @@ def _build_api_layers(
     *,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
+    before_request: Callable[[], None] | None = None,
 ) -> tuple[list[dict[str, Any]], list[str]]:
     saved: dict[str, dict[str, Any]] = {}
     layers: list[dict[str, Any]] = []
@@ -975,6 +985,7 @@ def _build_api_layers(
                         folder,
                         f"api_layer_{layer_index:02d}_{resource_index:02d}_{digest}",
                         referer=referer,
+                        before_request=before_request,
                     )
                     saved[identity] = dict(downloaded)
                     downloaded["src"] = original_src
@@ -1052,6 +1063,7 @@ def _capture_fallback_asset(
     *,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
+    before_request: Callable[[], None] | None = None,
 ) -> tuple[dict[str, Any] | None, list[str]]:
     src = str(api_data.get("pic") or "")
     if not src:
@@ -1060,7 +1072,13 @@ def _capture_fallback_asset(
     last_error: Exception | None = None
     for candidate in candidates:
         try:
-            item = _download_http_asset(candidate, folder, "static", referer=referer)
+            item = _download_http_asset(
+                candidate,
+                folder,
+                "static",
+                referer=referer,
+                before_request=before_request,
+            )
             item["src"] = src
             item["sourceKind"] = "header-api-pic"
             item["assetType"] = media_type(item["tag"], candidate, item["contentType"])
@@ -1080,6 +1098,7 @@ def _save_litpic(
     *,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
+    before_request: Callable[[], None] | None = None,
 ) -> dict[str, Any] | None:
     src = str(api_data.get("litpic") or "")
     if not src:
@@ -1087,7 +1106,13 @@ def _save_litpic(
     candidates = asset_url_candidates(src) if asset_url_candidates else [src]
     for candidate in candidates:
         try:
-            item = _download_http_asset(candidate, folder, "litpic", referer=referer)
+            item = _download_http_asset(
+                candidate,
+                folder,
+                "litpic",
+                referer=referer,
+                before_request=before_request,
+            )
             item["src"] = src
             return item
         except Exception:
@@ -1106,6 +1131,7 @@ def capture_header_api_payload(
     asset_url_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
     verify_report: dict[str, Any] | None = None,
+    before_request: Callable[[], None] | None = None,
 ) -> dict[str, Any]:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1125,12 +1151,14 @@ def capture_header_api_payload(
             temp,
             asset_url_candidates=asset_url_candidates,
             referer=referer,
+            before_request=before_request,
         )
         static, static_missing = _capture_fallback_asset(
             api_data,
             temp,
             asset_url_candidates=asset_url_candidates,
             referer=referer,
+            before_request=before_request,
         )
         missing_assets.extend(static_missing)
         litpic = _save_litpic(
@@ -1138,6 +1166,7 @@ def capture_header_api_payload(
             temp,
             asset_url_candidates=asset_url_candidates,
             referer=referer,
+            before_request=before_request,
         )
         extensions = api_data.get("extensions") or {}
         if extensions:
@@ -1164,7 +1193,13 @@ def capture_header_api_payload(
         if expected_layers and len(layers) < expected_layers:
             missing_assets.append(f"{expected_layers - len(layers)} API layer(s) unavailable")
         if mode == "split" and not layers:
-            raise RuntimeError("Header API declared a split Banner but no layer resource was recoverable")
+            missing_assets.append(
+                "Header API declared structured Banner evidence but no layer resource was recoverable"
+            )
+            if not static:
+                raise RuntimeError(
+                    "Header API declared a split Banner but no layer or fallback resource was recoverable"
+                )
         if mode == "static" and not static:
             raise RuntimeError("Header API returned no recoverable static Banner asset")
 
@@ -1182,6 +1217,13 @@ def capture_header_api_payload(
             "date": moment.strftime("%Y-%m-%d"),
             "season": season_of(moment.month),
             "source": source,
+            "provenance": {
+                "primaryProvider": str(source.get("provider") or "bilibili-header-api"),
+                "supportingProviders": [],
+                "confidence": "high",
+                "agreement": {},
+                "conflicts": [],
+            },
             "viewport": VIEWPORT,
             "banner": {"referenceHeight": HEADER_REFERENCE_HEIGHT},
             "mode": mode,
@@ -1206,6 +1248,8 @@ def capture_header_api_payload(
             "timeZone": TIMEZONE,
             "lastObservedAt": moment.isoformat(timespec="seconds"),
         }
+        if source_extra and isinstance(source_extra.get("provenance"), dict):
+            manifest["provenance"] = copy.deepcopy(source_extra["provenance"])
         enrich_manifest_metadata(manifest, evidence, missing_assets=missing_assets)
         return archive_capture(
             temp,
@@ -1576,6 +1620,162 @@ def _json_hash(value: Any) -> str:
     return hashlib.sha256(payload).hexdigest()[:24]
 
 
+def _canonical_number(value: Any, fallback: float = 0.0) -> float:
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return fallback
+    return round(number, 6)
+
+
+def _canonical_matrix(value: Any) -> list[float]:
+    if not isinstance(value, (list, tuple)) or len(value) < 6:
+        return [1.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+    return [_canonical_number(item) for item in value[:6]]
+
+
+def _canonical_opacity(value: Any) -> list[float]:
+    if isinstance(value, (list, tuple)):
+        values = list(value[:2])
+    else:
+        values = [value]
+    if not values:
+        values = [1]
+    if len(values) == 1:
+        values.append(values[0])
+    return [_canonical_number(item, 1.0) for item in values]
+
+
+def _canonical_media_kind(value: dict[str, Any], fallback: Any = "other") -> str:
+    tag = str(value.get("tag") or "").lower()
+    asset_type = str(value.get("assetType") or fallback or "").lower()
+    content_type = str(value.get("contentType") or "").lower()
+    file = str(value.get("file") or "").lower()
+    if tag == "video" or asset_type == "video" or content_type.startswith("video/"):
+        return "video"
+    if tag == "svg" or asset_type == "svg" or "image/svg" in content_type:
+        return "svg"
+    if asset_type in {"image", "animated"} or tag in {"img", "picture", "source"}:
+        return "image"
+    if re.search(r"\.(?:mp4|webm|m3u8)(?:$|[?#])", file, re.I):
+        return "video"
+    return "other"
+
+
+def _canonical_media_entries(
+    folder: Path,
+    manifest: dict[str, Any],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Build provider-independent entries from saved bytes and layer layout."""
+    resources: list[dict[str, Any]] = []
+    structure_layers: list[dict[str, Any]] = []
+    layers = manifest.get("layers") or []
+    for layer_index, layer in enumerate(
+        sorted(layers, key=lambda item: int(item.get("index", 0) or 0))
+    ):
+        layer_number = int(layer.get("index", layer_index) or layer_index)
+        layer_resources = layer.get("resources")
+        if not isinstance(layer_resources, list) or not layer_resources:
+            layer_resources = [layer]
+        layer_entries: list[dict[str, Any]] = []
+        for resource_index, resource in enumerate(layer_resources):
+            if not isinstance(resource, dict):
+                continue
+            file = str(resource.get("file") or layer.get("file") or "")
+            path = folder / file if file else None
+            if not path or not path.is_file():
+                continue
+            kind = _canonical_media_kind(
+                resource,
+                layer.get("assetType") or layer.get("tag") or "other",
+            )
+            entry = {
+                "role": "layer",
+                "index": layer_number,
+                "resourceIndex": int(
+                    resource.get("resourceIndex", resource_index) or resource_index
+                ),
+                "kind": kind,
+                "sha256": sha256_file(path),
+                "size": path.stat().st_size,
+            }
+            resources.append(entry)
+            layer_entries.append(
+                {
+                    "resourceIndex": entry["resourceIndex"],
+                    "kind": kind,
+                    "sha256": entry["sha256"],
+                }
+            )
+        structure_layers.append(
+            {
+                "index": layer_number,
+                "resources": layer_entries,
+                "width": _canonical_number(layer.get("width")),
+                "height": _canonical_number(layer.get("height")),
+                "transform": _canonical_matrix(layer.get("transform")),
+                "opacity": _canonical_opacity(layer.get("opacity")),
+                "zIndex": _canonical_number(layer.get("zIndex")),
+                "objectFit": str(layer.get("objectFit") or ""),
+                "objectPosition": str(layer.get("objectPosition") or ""),
+            }
+        )
+
+    if not layers:
+        static = manifest.get("static") or {}
+        file = str(static.get("file") or "")
+        path = folder / file if file else None
+        if path and path.is_file():
+            resources.append(
+                {
+                    "role": "primary",
+                    "kind": _canonical_media_kind(static, "image"),
+                    "sha256": sha256_file(path),
+                    "size": path.stat().st_size,
+                }
+            )
+    return resources, structure_layers
+
+
+def _canonical_content_hash(
+    folder: Path,
+    manifest: dict[str, Any],
+) -> str:
+    resources, structure_layers = _canonical_media_entries(folder, manifest)
+    layered = bool(manifest.get("layers") or manifest.get("mode") == "split")
+    static = manifest.get("static") or {}
+    structure = {
+        "mode": "layered" if layered else "static",
+        "layerCount": len(structure_layers),
+        "layers": structure_layers,
+        "staticKind": _canonical_media_kind(static, "") if not layered else "",
+    }
+    return _json_hash({"resources": resources, "structure": structure})
+
+
+def _source_fingerprint(
+    manifest: dict[str, Any],
+    source_hashes: dict[str, str],
+) -> str:
+    source = manifest.get("source") or {}
+    interaction = manifest.get("interaction") or {}
+    return _json_hash(
+        {
+            "provider": source.get("provider") or source.get("captureMethod") or "",
+            "captureMethod": source.get("captureMethod") or "",
+            "resolvedUrl": source.get("resolvedUrl") or "",
+            "endpoint": source.get("headerApi") or source.get("page") or "",
+            "waybackTimestamp": source.get("waybackTimestamp") or "",
+            "headerApiWaybackTimestamp": source.get("headerApiWaybackTimestamp") or "",
+            "palxiaoDate": source.get("palxiaoDate") or "",
+            "observedAt": source.get("observedAt") or "",
+            "interactionModel": interaction.get("model") or "none",
+            "interaction": interaction,
+            "sourceHashes": source_hashes,
+        }
+    )
+
+
 def manifest_types(manifest: dict[str, Any]) -> list[str]:
     values = manifest.get("type")
     if isinstance(values, list) and values:
@@ -1641,14 +1841,31 @@ def calculate_manifest_hashes(folder: Path, manifest: dict[str, Any]) -> dict[st
             }
         )
 
+    for auxiliary_index, auxiliary in enumerate(manifest.get("auxiliaryAssets") or []):
+        if not isinstance(auxiliary, dict):
+            continue
+        file = str(auxiliary.get("file") or auxiliary.get("local_file") or "")
+        path = folder / file if file else None
+        if not path or not path.exists():
+            continue
+        resources.append(
+            {
+                "role": "auxiliary",
+                "index": auxiliary_index,
+                "type": auxiliary.get("assetType") or auxiliary.get("tag") or "other",
+                "sha256": sha256_file(path),
+                "size": path.stat().st_size,
+            }
+        )
+
     resource_hash = _json_hash(resources)
     source_files = manifest.get("sourceFiles") or {}
     source_hashes: dict[str, str] = {}
-    for role in ("scripts", "json"):
-        relative = str(source_files.get(role) or "")
+    for role, relative_value in source_files.items():
+        relative = str(relative_value or "")
         path = folder / relative if relative else None
         if path and path.is_file():
-            source_hashes[role] = sha256_normalized_text_file(path)
+            source_hashes[str(role)] = sha256_normalized_text_file(path)
     structure = {
         "type": manifest_types(manifest),
         "mode": manifest.get("mode"),
@@ -1725,11 +1942,15 @@ def calculate_manifest_hashes(folder: Path, manifest: dict[str, Any]) -> dict[st
             "interaction": interaction_hash,
         }
     )
+    canonical_content_hash = _canonical_content_hash(folder, manifest)
+    source_fingerprint = _source_fingerprint(manifest, source_hashes)
     return {
         "resourceHash": resource_hash,
         "structureHash": structure_hash,
         "interactionHash": interaction_hash,
         "contentHash": content_hash,
+        "canonicalContentHash": canonical_content_hash,
+        "sourceFingerprint": source_fingerprint,
     }
 
 
@@ -1848,6 +2069,19 @@ def enrich_manifest_metadata(
                     "content_type": layer.get("contentType", ""),
                 }
             )
+
+    for auxiliary in manifest.get("auxiliaryAssets") or []:
+        if not isinstance(auxiliary, dict):
+            continue
+        assets.append(
+            {
+                "role": "auxiliary",
+                "type": auxiliary.get("assetType") or auxiliary.get("tag") or "other",
+                "src": auxiliary.get("src", ""),
+                "local_file": auxiliary.get("file") or auxiliary.get("local_file", ""),
+                "content_type": auxiliary.get("contentType", ""),
+            }
+        )
 
     for media in evidence.get("media") or []:
         src = str(media.get("src") or "")
@@ -2062,10 +2296,34 @@ def merge_duplicate_metadata(
     for field in (
         "type", "is_split_layer", "fallback_image", "preview_image",
         "completeness", "missing_assets", "structureEvidence", "assets", "hashes",
-        "sourceFiles", "animationCss", "api",
+        "sourceFiles", "sourceEvidence", "auxiliaryAssets", "animationCss", "api",
+        "canonicalContentHash", "sourceFingerprint",
     ):
         if field in fresh and field not in archived:
             archived[field] = fresh[field]
+    fresh_provenance = fresh.get("provenance")
+    if isinstance(fresh_provenance, dict):
+        archived_provenance = archived.setdefault("provenance", {})
+        if not isinstance(archived_provenance, dict):
+            archived_provenance = {}
+            archived["provenance"] = archived_provenance
+        supporting = {
+            str(item)
+            for item in archived_provenance.get("supportingProviders", [])
+        }
+        supporting.update(
+            str(item) for item in fresh_provenance.get("supportingProviders", [])
+        )
+        archived_provenance["supportingProviders"] = sorted(supporting)
+        conflicts = {
+            str(item) for item in archived_provenance.get("conflicts", [])
+        }
+        conflicts.update(str(item) for item in fresh_provenance.get("conflicts", []))
+        archived_provenance["conflicts"] = sorted(conflicts)
+        if fresh_provenance.get("agreement"):
+            archived_provenance["agreement"] = fresh_provenance["agreement"]
+        if fresh_provenance.get("confidence") == "conflict":
+            archived_provenance["confidence"] = "conflict"
     archived["layoutHash"] = str(archived.get("layoutHash") or layout_fingerprint(archived))
     archived["familyId"] = str(archived.get("familyId") or derived_family_id(archived))
 
@@ -2212,6 +2470,8 @@ def archive_capture(
     manifest["version"] = manifest.get("version", 10.1)
     manifest["contentHash"] = content_hash
     manifest["hashes"] = hashes
+    manifest["canonicalContentHash"] = hashes["canonicalContentHash"]
+    manifest["sourceFingerprint"] = hashes["sourceFingerprint"]
     for asset in manifest.get("assets") or []:
         file = str(asset.get("local_file") or "")
         path = temp_dir / file if file else None
@@ -2293,6 +2553,8 @@ def rebuild_index() -> None:
             )
             variant = {
                 "contentHash": content_hash,
+                "canonicalContentHash": item.get("canonicalContentHash", ""),
+                "sourceFingerprint": item.get("sourceFingerprint", ""),
                 "capturedAt": captured_at,
                 "lastObservedAt": str(
                     observation.get("lastObservedAt") or captured_at

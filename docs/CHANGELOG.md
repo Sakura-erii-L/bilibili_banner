@@ -6,16 +6,21 @@
 - 新增 `backend/providers/bilibili_header_api.py`，解析 `split_layer` 并保存所有 `resources[]`。
 - 前端新增 `bilibili-header-api-v1` renderer，支持 scale/rotate/translate/blur/opacity、cubic-bezier、多帧和视频。
 - `pic` 在分层 Banner 中仅作为 fallback，新增 API-specific audit 防 flatten。
-- Wayback 改为 archived Header API first，失败才启动 DOM fallback。
+- Wayback 通过 CDX 匹配实际 Header API timestamp，默认以 HTTP raw replay/HTML/CSS 恢复；Playwright 仅在 `--verify-dom` 时使用。
+- 新增 `palxiao_history` provider 和 `palxiao-reconstructed-v1` renderer；palxiao 不是官方 `split_layer` 源，目录日期只代表 observedAt，未知字段原样保留。
+- HTML `<video>` 优先保存 `video.src`/`<source src>` 的真实视频，poster 只作 preview/fallback。
+- 保留旧 `contentHash`，新增 provider-independent `canonicalContentHash` 与来源/交互 `sourceFingerprint`。
+- Wayback 请求共享全局约 1 秒限速、重试和 gzip/UTF-8 BOM 解码；CDX 区分成功无快照与网络失败未确认。
+- Daily Update 与历史导入共用不可取消数据写入并发组，任务排队执行。
 - manifest/index 升级 v11.0，同时保持旧 v9/v10 哈希和 renderer 兼容。
-- Daily workflow 不再安装 Chromium；Wayback workflow 继续保留浏览器 fallback。
+- Daily workflow 不再安装 Chromium；Wayback workflow 仅在显式 verify 时安装浏览器。
 
 ## 当前结构化归档更新
 
 - 历史回填下限改为 `2019-08-01`；清理其它旧 archive 后从该日期重新采集，只保留 `2026-08-30` 基线。
 - 没有任何成功保存的图片、视频、SVG 或图层时拒绝创建 archive，避免前端出现“该归档缺少素材”。
 - source 脚本/JSON 哈希统一换行符，消除 Linux Actions 与 Windows checkout 之间的伪哈希漂移。
-- 新增组合 `type[]`、`completeness`、`missing_assets`、`structureEvidence`、`assets` 和三段结构化哈希。
+- 新增组合 `type`、`completeness`、`missing_assets`、`structureEvidence`、`assets` 和兼容/规范化双层 hash。
 - 分层资源部分缺失时保存 partial，不再因为单层失败整体压成 static 或直接丢弃全部可恢复结构。
 - 交互采样和前端回放保留完整二维 matrix；下方旧版本中的“动态 Y 中止/锁定”仅是历史行为，已不再适用。
 - 新增无 `.layer` 多媒体保存、SVG/video renderer、source 证据和 `scripts/audit_archives.py` 防 flatten 审计。
@@ -28,7 +33,7 @@
 - 历史素材 URL 强制重写为 Wayback 回放地址，浏览器阻止直接访问 `bilibili.com` 和 `hdslb.com`。
 - 支持旧版 `.head-banner`、`.header-banner`、`#banner_link`、`.banner_link` 的真实图片和 CSS `background-image`；不使用截图回退。
 - 新增 `observations`：同一实际素材跨多个历史日期只保存一个物理 archive，但索引可按多个日期引用。
-- 新增 `wayback-import.yml`；脚本/工作流更新后自动启动首次回填，此后每月自动补抓，也支持手工指定范围。它与每日抓取共用数据写入并发锁，只提交 `data/`，Pages 仍由 `pages.yml` 发布。
+- `wayback-import.yml` 改为手工选择 provider、范围和 verify；它与每日抓取共用不可取消的数据写入并发锁，只提交 `data/`，Pages 仍由 `pages.yml` 发布。
 - `pages.yml` 监听历史导入的成功 `workflow_run`，确保默认 `GITHUB_TOKEN` 自动提交的数据也会发布，同时避免历史 workflow 自带第二套 Pages 部署逻辑。
 - 历史回填每新增或更新一个归档就执行一次脚本化 checkpoint commit/push，并通过 `workflow_dispatch` 增量发布 Pages；失败和重复结果不提交。
 - manifest/index 新生成版本为 `10.1`，旧 v9.2/v10 数据继续兼容。

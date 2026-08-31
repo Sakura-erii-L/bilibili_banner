@@ -20,12 +20,14 @@ Header API
 
 ```text
 Wayback snapshot
-  -> 先尝试归档 Header API JSON
-  -> 成功：复用同一个 parser/renderer
-  -> 失败：隐藏 Playwright 解析历史 DOM（fallback）
+  -> CDX 查询 Header API endpoint 的附近候选 timestamp
+  -> 读取最近的成功 Header API replay
+  -> 失败：精确 observedAt 的 palxiao data.json
+  -> 失败：HTTP raw replay + HTML/CSS 推断
+  -> unresolved
 ```
 
-DOM 不再是当前 Banner 的默认数据源。`--verify-dom` 只做轻量一致性校验；`--legacy-dom-capture` 才启用旧 v10.1 的完整 DOM 运动采样。
+DOM 不再是当前 Banner 的默认数据源。默认历史导入不启动浏览器；`--verify-dom` 只做 verify-only 校验，`--legacy-dom-capture` 才启用旧 v10.1 的完整 DOM 运动采样。各 provider 不混合未经确认属于同一 Banner 的图层。
 
 ## Header API Provider
 
@@ -81,6 +83,8 @@ Provider 负责：
 
 `source/api.json` 保存完整原始响应。未知字段不会因为当前 renderer 未使用而被删除。
 
+`palxiao/bilibili-banner` 是独立的 structured history provider，不是 Bilibili 官方 `split_layer` 数据源。其 `data.json` 主要记录 `tagName`、`src`、`transform`、`width`、`height`、`opacity`、`a` 等；`g/f/deg/blur` 只有存在时才保存到规范层，未知字段完整保留在 `sourceLayer`。`interaction.model` 使用 `palxiao-reconstructed-v1`，不会伪装成 Header API renderer。
+
 分层 Banner 中的 `pic` 仅作为 fallback；它不进入 layered Banner 的主资源哈希，也不能使 structured Banner 退化为 static。
 
 ## 前端参数模型
@@ -102,11 +106,13 @@ offsetValue = offset * curve(displace)
 
 一个 layer 中多个 resource 只有在全部 resource 都有正 `duration` 时才按毫秒循环切帧；否则按静态第一帧处理。视频始终以视频资源重放。
 
+HTML fallback 解析 `<video>` 时优先保存 `video.src` 和 `<source src>` 的真实视频资源；`poster` 只写入 preview/fallback 元数据，不会把视频归档成图片。
+
 ## 兼容性
 
 - 新 archive/index：v11.0。
 - 旧 v9/v10 archive 不迁移，继续走原 sampled renderer。
-- v11 新字段仅在实际存在时参与哈希，避免旧 archive 因空 `api` 字段产生假变更。
+- v11 新字段仅在实际存在时参与旧兼容 hash，避免旧 archive 因空 `api` 字段产生假变更。`canonicalContentHash` 独立比较规范化资源 bytes/结构，`sourceFingerprint` 保留 provider 与 interaction model 差异；两者都不替换旧 `contentHash`。
 - `extensions` 会保留，但 snow/petals 等扩展尚未实现时 archive 标记为 `partial`。
 
 ## 验证

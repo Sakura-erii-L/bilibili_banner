@@ -280,9 +280,182 @@ function createHeaderApiBanner(shell, manifest, manifestUrl) {
   if (resizeObserver) resizeObserver.observe(stage);
 }
 
+function createPalxiaoBanner(shell, manifest, manifestUrl) {
+  const stage = shell.querySelector(".stage");
+  stage.innerHTML = "";
+  stage.classList.add("animated-banner");
+
+  let compensate = window.innerWidth > 1650 ? window.innerWidth / 1650 : 1;
+  const nodes = [];
+  const number = (value, fallback = 0) => {
+    const result = Number(value);
+    return Number.isFinite(result) ? result : fallback;
+  };
+  const multiply = (left, right) => [
+    left[0] * right[0] + left[2] * right[1],
+    left[1] * right[0] + left[3] * right[1],
+    left[0] * right[2] + left[2] * right[3],
+    left[1] * right[2] + left[3] * right[3],
+    left[0] * right[4] + left[2] * right[5] + left[4],
+    left[1] * right[4] + left[3] * right[5] + left[5],
+  ];
+
+  for (const item of manifest.layers || []) {
+    if (!item.file) continue;
+    const layer = document.createElement("div");
+    layer.className = "layer palxiao-layer";
+    layer.style.zIndex = String(Number(item.zIndex ?? item.index) || 0);
+
+    const motion = document.createElement("div");
+    motion.className = "motion";
+    const isVideo = item.tag === "video"
+      || /^video\//i.test(item.contentType || "")
+      || /\.(?:webm|mp4|m3u8)(?:$|\?)/i.test(item.file || "");
+    const media = document.createElement(isVideo ? "video" : "img");
+    media.src = resolveAsset(manifestUrl, item.file);
+    media.draggable = false;
+    media.style.width = `${number(item.width) * compensate}px`;
+    media.style.height = `${number(item.height) * compensate}px`;
+    media.style.objectFit = item.objectFit || "fill";
+    media.style.objectPosition = item.objectPosition || "50% 50%";
+    if (isVideo) {
+      media.autoplay = true;
+      media.loop = true;
+      media.muted = true;
+      media.playsInline = true;
+    }
+    motion.appendChild(media);
+    layer.appendChild(motion);
+    stage.appendChild(layer);
+
+    const initial = Array.isArray(item.transform) && item.transform.length >= 6
+      ? item.transform.slice(0, 6).map(value => number(value))
+      : [1, 0, 0, 1, 0, 0];
+    initial[4] *= compensate;
+    initial[5] *= compensate;
+    const opacity = Array.isArray(item.opacity) ? item.opacity : [item.opacity, item.opacity];
+    const initialOpacity = number(opacity[0], 1);
+    const targetOpacity = number(opacity[1], initialOpacity);
+    const blur = number(item.blur, 0);
+    nodes.push({
+      layer,
+      motion,
+      media,
+      initial,
+      a: number(item.a),
+      g: number(item.g),
+      f: number(item.f),
+      deg: number(item.deg),
+      initialOpacity,
+      targetOpacity,
+      blur,
+    });
+  }
+
+  let current = 0;
+  let enterX = 0;
+  let moveRaf = 0;
+  let returnRaf = 0;
+  const returnDuration = Number(manifest.interaction?.returnDurationMs) || 300;
+
+  function apply(node, moveX) {
+    const coordinate = moveX / compensate;
+    const scale = 1 + node.f * coordinate;
+    const angle = node.deg * coordinate;
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+    const effect = [
+      scale * cos,
+      scale * sin,
+      -scale * sin,
+      scale * cos,
+      node.a * moveX,
+      node.g * moveX,
+    ];
+    node.motion.style.transform = matrixCss(multiply(node.initial, effect));
+    node.layer.style.opacity = String(
+      node.initialOpacity
+      + (node.targetOpacity - node.initialOpacity)
+        * clamp((coordinate / Math.max(window.innerWidth / compensate, 1)) * 2, 0, 1),
+    );
+    node.media.style.filter = node.blur > 0 ? `blur(${node.blur}px)` : "";
+  }
+
+  const applyAll = moveX => nodes.forEach(node => apply(node, moveX));
+  applyAll(0);
+
+  shell.addEventListener("mouseenter", event => {
+    cancelAnimationFrame(returnRaf);
+    enterX = event.clientX;
+  });
+  shell.addEventListener("mousemove", event => {
+    current = event.clientX - enterX;
+    if (moveRaf) return;
+    moveRaf = requestAnimationFrame(() => {
+      moveRaf = 0;
+      applyAll(current);
+    });
+  });
+  shell.addEventListener("mouseleave", () => {
+    cancelAnimationFrame(moveRaf);
+    cancelAnimationFrame(returnRaf);
+    const from = current;
+    const started = performance.now();
+    const home = timestamp => {
+      const progress = returnDuration <= 0
+        ? 1
+        : clamp((timestamp - started) / returnDuration, 0, 1);
+      current = from * (1 - progress);
+      applyAll(current);
+      if (progress < 1) returnRaf = requestAnimationFrame(home);
+    };
+    returnRaf = requestAnimationFrame(home);
+  });
+  window.addEventListener("resize", () => {
+    const nextCompensate = window.innerWidth > 1650 ? window.innerWidth / 1650 : 1;
+    if (Math.abs(nextCompensate - compensate) < 1e-6) return;
+    nodes.forEach(node => {
+      const width = number(node.media.style.width.replace("px", ""));
+      const height = number(node.media.style.height.replace("px", ""));
+      node.media.style.width = `${width * nextCompensate / compensate}px`;
+      node.media.style.height = `${height * nextCompensate / compensate}px`;
+      node.initial[4] *= nextCompensate / compensate;
+      node.initial[5] *= nextCompensate / compensate;
+    });
+    compensate = nextCompensate;
+    applyAll(current);
+  });
+}
+
+function showUnsupportedBanner(shell, message) {
+  const stage = shell.querySelector(".stage");
+  stage.classList.remove("animated-banner");
+  stage.innerHTML = `<div class="loading error">${message}</div>`;
+}
+
 function createInteractiveBanner(shell, manifest, manifestUrl) {
-  if (manifest.interaction?.model === "bilibili-header-api-v1" && manifest.layers?.length) {
+  const model = manifest.interaction?.model || "none";
+  if (model === "bilibili-header-api-v1" && manifest.layers?.length) {
     createHeaderApiBanner(shell, manifest, manifestUrl);
+    return;
+  }
+  if (model === "palxiao-reconstructed-v1" && manifest.layers?.length) {
+    createPalxiaoBanner(shell, manifest, manifestUrl);
+    return;
+  }
+  const supportedModels = new Set([
+    "none",
+    "bilibili-header-api-v1",
+    "palxiao-reconstructed-v1",
+    "bilibili-sampled-horizontal-v1",
+    "bilibili-moveX-times-a",
+  ]);
+  if (!supportedModels.has(model)) {
+    showUnsupportedBanner(shell, `不支持的 Banner 交互模型：${model}`);
+    return;
+  }
+  if (model === "bilibili-header-api-v1" && !manifest.layers?.length) {
+    showUnsupportedBanner(shell, "该 API 分层归档暂缺可回放图层（partial）");
     return;
   }
 

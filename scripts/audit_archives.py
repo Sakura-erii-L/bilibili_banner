@@ -36,9 +36,11 @@ def audit(data_dir: Path) -> dict[str, object]:
         api_expected_layers = int(api.get("layerCount") or 0)
         api_expected_assets = int(api.get("assetCount") or 0)
         if (manifest.get("mode") == "split" or "layered" in types) and not layers:
-            issues.append({"archive": folder.name, "reason": "layered-without-layers"})
+            target = warnings if manifest.get("completeness") == "partial" else issues
+            target.append({"archive": folder.name, "reason": "layered-without-layers"})
         if api_split and not layers:
-            issues.append({"archive": folder.name, "reason": "api-split-layer-without-saved-layers"})
+            target = warnings if manifest.get("completeness") == "partial" else issues
+            target.append({"archive": folder.name, "reason": "api-split-layer-without-saved-layers"})
         if api_split and manifest.get("mode") != "split":
             issues.append({"archive": folder.name, "reason": "api-split-layer-marked-non-split"})
         if api_split and (manifest.get("interaction") or {}).get("model") != "bilibili-header-api-v1":
@@ -56,7 +58,12 @@ def audit(data_dir: Path) -> dict[str, object]:
                 "archive": folder.name,
                 "reason": f"api-missing-layers:{api_expected_layers - len(layers)}",
             })
-        if (expected_layers > 1 or visible_media > 1) and not layers and manifest.get("static"):
+        if (
+            (expected_layers > 1 or visible_media > 1)
+            and not layers
+            and manifest.get("static")
+            and manifest.get("mode") != "split"
+        ):
             issues.append({
                 "archive": folder.name,
                 "reason": "structured-banner-flattened-to-static",
@@ -91,7 +98,13 @@ def audit(data_dir: Path) -> dict[str, object]:
             and (manifest.get("static") or {}).get("file")
         ):
             saved_video = True
-        if signals.get("hasVideo") and not saved_video and not layers and manifest.get("static"):
+        if (
+            signals.get("hasVideo")
+            and not saved_video
+            and not layers
+            and manifest.get("static")
+            and manifest.get("mode") != "split"
+        ):
             issues.append({
                 "archive": folder.name,
                 "reason": "video-banner-flattened-to-static",
@@ -132,8 +145,17 @@ def audit(data_dir: Path) -> dict[str, object]:
         if static_file and not (folder / static_file).is_file():
             issues.append({"archive": folder.name, "reason": "missing-static-file"})
         calculated = capture.calculate_manifest_hashes(folder, manifest)
-        if manifest.get("hashes") and manifest["hashes"] != calculated:
-            issues.append({"archive": folder.name, "reason": "hashes-do-not-match-resources"})
+        stored_hashes = manifest.get("hashes")
+        if stored_hashes:
+            comparable = {
+                key: calculated[key]
+                for key in stored_hashes
+                if key in calculated
+            }
+            if stored_hashes != comparable:
+                issues.append({"archive": folder.name, "reason": "hashes-do-not-match-resources"})
+            if "canonicalContentHash" not in stored_hashes:
+                warnings.append({"archive": folder.name, "reason": "legacy-manifest-without-canonical-hash"})
         elif not manifest.get("hashes"):
             warnings.append({"archive": folder.name, "reason": "legacy-manifest-without-structure-hashes"})
         if not manifest.get("type"):

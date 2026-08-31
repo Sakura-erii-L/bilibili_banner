@@ -2,20 +2,20 @@
 
 ## v11 历史导入优先级（2026-08-31）
 
-每个 Wayback 首页快照现在先尝试同时间附近归档的 Header API JSON，并复用当前 Banner 的 `split_layer` parser。只有 API 不存在、不可解析，或声明分层但无法恢复任何主 layer 时，才懒启动隐藏 Playwright 解析历史 DOM。DOM fallback 仍禁止截图/flatten；Wayback workflow 因此仍需安装 Chromium。
+每个 Wayback 首页快照按以下优先级恢复：已验证本地 archive → 通过 CDX 匹配的 Wayback Header API → palxiao structured history → Wayback raw HTTP HTML/CSS → unresolved。默认不启动 Playwright；`--verify-dom` 只允许显式浏览器校验，浏览器失败不能丢失 HTTP 已恢复的素材。不同来源没有确认属于同一 Banner 时不会混合图层。
 
 ## 1. 能导入什么
 
-`backend/wayback_import.py` 使用 Internet Archive 的 Availability API 查找 `https://www.bilibili.com/` 历史快照，再在始终 headless 的 Chromium 中打开 Wayback 回放页。
+`backend/wayback_import.py` 使用 Internet Archive 的 Availability API 查找 `https://www.bilibili.com/` 历史快照，然后通过 CDX 查询 Header API endpoint 的实际归档 timestamp。API 与 HTML replay 都由直接 HTTP reader 获取，Chromium 仅用于显式 verify。
 
 它从回放页检查以下真实来源和结构证据：
 
 - 回放 DOM 中的 `.animated-banner .layer` 图片或视频；
 - 当前及旧版 Header 中的真实 `<img>`；
 - `.bili-banner`、`.head-banner`、`.header-banner`、`#banner_link`、`.banner_link`、`.banner-link` 等旧版容器的真实 `background-image`。
-- IMG/srcset、PICTURE/SOURCE、VIDEO/SOURCE、SVG、CANVAS、data-*、computed transform/animation、performance 资源 URL、相关内联 CSS/JS/JSON。
+- IMG/srcset、PICTURE/SOURCE、VIDEO/SOURCE、SVG、CANVAS、data-*、computed transform/animation、performance 资源 URL、相关内联 CSS/JS/JSON。`<video>` 优先使用 `video.src`/`<source src>` 的真实视频；`poster` 只作 preview fallback。
 
-原始素材 URL 会优先转换为同一时间戳的 Wayback `id_` 原始响应地址。浏览器回放路由阻止对 `bilibili.com`、`hdslb.com` 和 `bilivideo.com` 的直接请求；若 Wayback 子资源缺失，后端下载器才会受控尝试从重写 URL 还原出的原始 CDN 地址。前端始终只读本地文件。程序不保存截图，也不会将截图当作缺失图层的回退。
+原始素材 URL 会优先转换为同一 snapshot 的 Wayback `id_` 原始响应地址，页面优先尝试 raw replay，再尝试普通 replay。HTTP reader 请求 `Accept-Encoding: identity`，兼容 gzip/UTF-8 BOM，并对 timeout、Connection refused、SSL EOF 等传输错误进行指数退避；CDX、API、HTML 和资源下载共用约 1 秒默认全局请求间隔。前端始终只读本地文件。程序不保存截图，也不会将截图当作缺失图层的回退。
 
 ## 2. 2019 年 8 月至今的发现范围
 
@@ -47,12 +47,13 @@ Availability API 返回目标日期附近的最近快照。脚本会去除重复
 
 ## 3. 本地导入
 
-安装依赖和 Chromium：
+安装依赖：
 
 ```powershell
 python -m pip install -r requirements.txt
-python -m playwright install chromium
 ```
+
+默认 HTTP 导入不需要 Chromium；只有显式使用 `--verify-dom` 时才安装 Playwright 浏览器。
 
 建议按年份运行：
 
@@ -84,8 +85,8 @@ python scripts\serve.py
 
 `.github/workflows/wayback-import.yml` 不需要 Codex 或人工逐个执行下载命令：
 
-- `backend/wayback_import.py` 或该 workflow 更新并推送后，自动启动一次 `2019-08-01` 至今的 `monthly` 回填，并取消同一并发组中仍在运行的旧回填；
-- 每月 2 日北京时间 `02:27` 自动再次扫描并补抓；
+- 通过 `workflow_dispatch` 选择 provider、日期范围、cadence 和是否 verify；
+- Daily Update 与历史导入共用 `bilibili-banner-data-writes`，且 `cancel-in-progress: false`，数据写入任务排队而不互相取消；
 - 已写入 observation 的 Wayback 时间戳会被脚本自动跳过；
 - 单个日期的 API/回放失败会记录后继续处理其余月份。
 
@@ -97,7 +98,7 @@ python scripts\serve.py
 4. `from_date` 和 `to_date` 填写需要复查的范围，例如 `2019-08-01`、`2019-12-31`。
 5. 第一次选择 `monthly`，`limit` 填 `0`。
 6. 点击绿色 **Run workflow**。
-7. 查看 `Import real assets from Wayback snapshots` 日志。
+7. 查看 `Import historical Banner assets` 日志。
 
 自动和手工事件都通过脚本执行历史导入及 `data/` 提交。每个 `created`/`updated` 结果完成后，`scripts/checkpoint_wayback.py` 都会立即提交、推送一次并用 `workflow_dispatch` 触发 Pages。失败和 `unchanged` 不提交。历史 workflow 成功结束后，`pages.yml` 的 `workflow_run` 仍会执行最终一致性发布。
 
@@ -105,7 +106,9 @@ python scripts\serve.py
 
 ## 5. 去重和跨日期出现
 
-`contentHash` 由真实下载素材、图层结构、动画和交互参数共同计算，不依赖 Wayback URL 或日期。
+`contentHash` 由真实下载素材、图层结构、动画和交互参数共同计算，不依赖 Wayback URL 或日期，并保持旧 archive hash 兼容。新 manifest 另外保存 provider-independent `canonicalContentHash` 和区分来源/交互模型的 `sourceFingerprint`，不能直接用 provider/API 原始 `contentHash` 判断跨 provider 同一 Banner。
+
+palxiao 的 `assets/YYYY-MM-DD` 目录日期只表示该项目记录/抓取该 Banner 的 `observedAt`。脚本只接受精确日期，不自动选择最近日期，也不由此推断 `effectiveFrom`；跨来源时间关联必须有精确日期、资源 hash、官方 API 或 Wayback 证据。
 
 如果同一素材在多个历史日期出现：
 
@@ -131,4 +134,4 @@ python scripts\serve.py
 
 Wayback 的收录本身并不完整，因此“`2019-08-01` 至今”表示查询范围，不保证每一天或每一个活动 Banner 都存在可恢复快照。
 
-当前自动发现器只实现 Wayback Availability API。Common Crawl、archive.today、Memento、GitHub 历史项目和其它 CDN 可作为人工恢复线索，`structureEvidence` 会保留可见 URL，但当前脚本尚未把这些来源实现为统一自动 provider。不要把来源规划误解为已完成回填能力。
+当前自动发现器实现 Wayback Availability/CDX 和 palxiao 精确日期 provider。Common Crawl、archive.today、Memento 和其它 GitHub 项目可作为人工恢复线索，但尚未实现统一自动 provider。不要把来源规划误解为已完成回填能力。
