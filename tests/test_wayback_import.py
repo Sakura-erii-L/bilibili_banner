@@ -1030,6 +1030,8 @@ class WaybackImportTests(unittest.TestCase):
                 ) = original
 
     def test_data_writing_workflows_share_non_canceling_concurrency(self) -> None:
+        wayback = Path(".github/workflows/wayback-import.yml").read_text(encoding="utf-8")
+        self.assertIn("actions: write", wayback)
         for filename in ("daily-update.yml", "wayback-import.yml"):
             content = Path(".github/workflows", filename).read_text(encoding="utf-8")
             self.assertIn("group: bilibili-banner-data-writes", content)

@@ -48,6 +48,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: bilibili-banner-data-writes
