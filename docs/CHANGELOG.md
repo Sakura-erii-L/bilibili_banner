@@ -1,5 +1,12 @@
 # 变更记录
 
+## 当前结构化归档更新
+
+- 新增组合 `type[]`、`completeness`、`missing_assets`、`structureEvidence`、`assets` 和三段结构化哈希。
+- 分层资源部分缺失时保存 partial，不再因为单层失败整体压成 static 或直接丢弃全部可恢复结构。
+- 交互采样和前端回放保留完整二维 matrix；下方旧版本中的“动态 Y 中止/锁定”仅是历史行为，已不再适用。
+- 新增无 `.layer` 多媒体保存、SVG/video renderer、source 证据和 `scripts/audit_archives.py` 防 flatten 审计。
+
 本文档只记录当前代码能够确认的版本特性；未从仓库历史中推断不存在的功能。
 
 ## v10.1

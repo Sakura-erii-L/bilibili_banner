@@ -57,12 +57,35 @@ class WaybackImportTests(unittest.TestCase):
             "https://i0.hdslb.com/bfs/banner/example.webp",
         )
 
+    def test_asset_candidates_try_raw_archive_then_original_cdn(self) -> None:
+        replay = (
+            "https://web.archive.org/web/20230101120000im_/"
+            "https://i0.hdslb.com/bfs/banner/example.webp"
+        )
+        self.assertEqual(
+            wayback_import.archived_asset_candidates(
+                "20230101120000",
+                replay,
+                "https://web.archive.org/web",
+            ),
+            [
+                "https://web.archive.org/web/20230101120000id_/"
+                "https://i0.hdslb.com/bfs/banner/example.webp",
+                "https://i0.hdslb.com/bfs/banner/example.webp",
+            ],
+        )
+
     def test_direct_bilibili_and_hdslb_requests_are_blocked(self) -> None:
         self.assertTrue(
             wayback_import.is_direct_bilibili_request("https://www.bilibili.com/")
         )
         self.assertTrue(
             wayback_import.is_direct_bilibili_request("https://i0.hdslb.com/a.webp")
+        )
+        self.assertTrue(
+            wayback_import.is_direct_bilibili_request(
+                "https://upos-sz-mirrorcos.bilivideo.com/a.webm"
+            )
         )
         self.assertFalse(
             wayback_import.is_direct_bilibili_request(
@@ -106,6 +129,26 @@ class WaybackImportTests(unittest.TestCase):
                 )
             finally:
                 core.DATA_DIR, core.ARCHIVE_DIR, core.CURRENT_DIR = original
+
+    def test_wayback_structured_evidence_keeps_partial_layers(self) -> None:
+        manifest = {
+            "mode": "split",
+            "layers": [{"index": 0, "tag": "img", "assetType": "image", "file": "layer.webp"}],
+            "static": {"file": "pic.webp", "tag": "img"},
+            "interaction": {"model": "none", "effects": []},
+        }
+        wayback_import.core.enrich_manifest_metadata(
+            manifest,
+            {
+                "root": {"className": "animated-banner"},
+                "layerCount": 2,
+                "signals": {"isSplitLayer": True},
+            },
+            missing_assets=["layer_001.webp"],
+        )
+        self.assertIn("layered", manifest["type"])
+        self.assertEqual(manifest["completeness"], "partial")
+        self.assertEqual(manifest["fallback_image"], "pic.webp")
 
 
 if __name__ == "__main__":

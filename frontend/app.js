@@ -33,20 +33,57 @@ function resolveAsset(manifestUrl, file) {
   return new URL(file, new URL(manifestUrl, location.href)).href;
 }
 
+function applyAnimation(element, animation) {
+  if (!animation?.name || animation.name === "none") return;
+  element.style.animationName = animation.name;
+  element.style.animationDuration = animation.duration || "initial";
+  element.style.animationDelay = animation.delay || "0s";
+  element.style.animationIterationCount = animation.iterationCount || "1";
+  element.style.animationTimingFunction = animation.timingFunction || "ease";
+  element.style.animationDirection = animation.direction || "normal";
+  element.style.animationFillMode = animation.fillMode || "none";
+  element.style.animationPlayState = animation.playState || "running";
+  element.style.transitionProperty = animation.transitionProperty || "";
+  element.style.transitionDuration = animation.transitionDuration || "";
+  element.style.transitionTimingFunction = animation.transitionTimingFunction || "";
+}
+
 function createInteractiveBanner(shell, manifest, manifestUrl) {
   const stage = shell.querySelector(".stage");
   stage.innerHTML = "";
+  stage.classList.add("animated-banner");
 
-  if (manifest.mode !== "split" || !manifest.layers?.length) {
-    const file = manifest.static?.file;
+  if (manifest.animationCss) {
+    const style = document.createElement("style");
+    style.dataset.bannerAnimation = "1";
+    style.textContent = manifest.animationCss;
+    stage.appendChild(style);
+  }
+
+  const types = Array.isArray(manifest.type) ? manifest.type : [];
+  const isLayered = types.includes("layered") || manifest.mode === "split";
+  if (!isLayered || !manifest.layers?.length) {
+    const staticAsset = manifest.static || {};
+    const file = staticAsset.file;
     if (file) {
-      const img = document.createElement("img");
-      img.className = "static-image";
-      img.src = resolveAsset(manifestUrl, file);
-      img.alt = "";
-      img.style.objectFit = manifest.static?.objectFit || "cover";
-      img.style.objectPosition = manifest.static?.objectPosition || "50% 50%";
-      stage.appendChild(img);
+      const isVideo = staticAsset.assetType === "video"
+        || staticAsset.tag === "video"
+        || /^video\//i.test(staticAsset.contentType || "")
+        || /\.(?:mp4|webm|m3u8)(?:$|\?)/i.test(file);
+      const media = document.createElement(isVideo ? "video" : "img");
+      media.className = isVideo ? "static-video" : "static-image";
+      media.src = resolveAsset(manifestUrl, file);
+      media.alt = "";
+      media.style.objectFit = staticAsset.objectFit || "cover";
+      media.style.objectPosition = staticAsset.objectPosition || "50% 50%";
+      applyAnimation(media, staticAsset.animation);
+      if (isVideo) {
+        media.autoplay = true;
+        media.loop = true;
+        media.muted = true;
+        media.playsInline = true;
+      }
+      stage.appendChild(media);
     } else {
       stage.innerHTML = '<div class="loading error">该归档缺少可显示素材</div>';
     }
@@ -89,14 +126,18 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
   });
 
   const scaleEffect = (effect, scale) => ({
-    matrix: effect.matrix.map((value, index) => index === 5 ? 0 : value * scale),
+    matrix: effect.matrix.map(value => value * scale),
     layerOpacity: effect.layerOpacity * scale,
     mediaOpacity: effect.mediaOpacity * scale,
   });
 
   for (const item of manifest.layers) {
+    if (!item.file) continue;
     const layer = document.createElement("div");
     layer.className = "layer";
+    layer.style.zIndex = String(Number(item.zIndex) || 0);
+    const motion = document.createElement("div");
+    motion.className = "motion";
 
     const isVideo =
       item.tag === "video"
@@ -110,6 +151,9 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
     media.style.objectFit = item.objectFit || "fill";
     media.style.objectPosition = item.objectPosition || "50% 50%";
     media.draggable = false;
+
+    const animation = item.animation || {};
+    applyAnimation(item.animationTarget === "target" ? motion : media, animation);
 
     if (media.tagName === "VIDEO") {
       media.autoplay = true;
@@ -125,18 +169,30 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
       initial[4] *= compensate;
       initial[5] *= compensate;
     }
-    layer.style.transform = matrixCss(initial);
+    motion.style.transform = matrixCss(initial);
+    motion.style.transformOrigin = item.transformOrigin || "50% 50%";
+    const position = item.position || {};
+    if (position.type && position.type !== "static") {
+      motion.style.position = position.type;
+      for (const side of ["left", "top", "right", "bottom"]) {
+        if (position[side] && position[side] !== "auto") {
+          motion.style[side] = position[side];
+        }
+      }
+    }
 
     const initialLayerOpacity = Number(item.opacity?.[0] ?? 1);
     const initialMediaOpacity = Number(item.opacity?.[1] ?? 1);
     layer.style.opacity = String(initialLayerOpacity);
     media.style.opacity = String(initialMediaOpacity);
 
-    layer.appendChild(media);
+    motion.appendChild(media);
+    layer.appendChild(motion);
     stage.appendChild(layer);
 
     nodes.push({
       layer,
+      transformElement: motion,
       media,
       initial,
       initialLayerOpacity,
@@ -163,12 +219,11 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
     }
 
     const effect = zeroEffect();
-    for (let component = 0; component < 5; component += 1) {
+    for (let component = 0; component < 6; component += 1) {
       const outputs = node.motion.matrixDelta.map(sample => Number(sample?.[component]) || 0);
       const scale = component === 4 ? compensate : 1;
       effect.matrix[component] = sampleCurve(inputSamples, outputs.map(x => x * scale), currentMoveX);
     }
-    effect.matrix[5] = 0;
     effect.layerOpacity = sampleCurve(
       inputSamples,
       node.motion.layerOpacityDelta || [],
@@ -184,14 +239,11 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
 
   function applyEffect(node, effect) {
     const matrix = [...node.initial];
-    for (let component = 0; component < 5; component += 1) {
+    for (let component = 0; component < 6; component += 1) {
       matrix[component] = node.initial[component] + effect.matrix[component];
     }
 
-    // The archived interaction is driven by horizontal pointer input only.
-    // Dynamic Y translation is never replayed.
-    matrix[5] = node.initial[5];
-    layerSetTransform(node.layer, matrix);
+    layerSetTransform(node.transformElement, matrix);
     node.layer.style.opacity = String(clamp(
       node.initialLayerOpacity + effect.layerOpacity,
       0,
@@ -317,11 +369,26 @@ function selectedVariant(record) {
 function recordMeta(record, variant) {
   const mode = variant?.mode || record.mode;
   const layerCount = variant?.layerCount ?? record.layerCount;
+  const types = Array.isArray(variant?.type)
+    ? variant.type
+    : Array.isArray(record.type) ? record.type : [];
+  const typeLabels = types
+    .filter(type => type !== "static")
+    .map(type => ({
+      layered: "分层",
+      video: "视频",
+      animated: "动画",
+      interactive: "交互",
+    }[type] || type));
+  const typeText = typeLabels.length
+    ? typeLabels.join(" · ")
+    : (mode === "split" ? `${layerCount} 个图层` : "静态 Banner");
   const variantText = Number(record.variantCount || record.variants?.length || 0) > 1
     ? ` · ${record.variantCount || record.variants.length} 个时段变体`
     : "";
   return `${seasonNames[record.season] || ""} · `
-    + (mode === "split" ? `${layerCount} 个图层` : "静态 Banner")
+    + typeText
+    + (typeLabels.includes("分层") ? ` (${layerCount} 个图层)` : "")
     + variantText;
 }
 

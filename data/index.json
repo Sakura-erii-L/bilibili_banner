@@ -1,11 +1,11 @@
 {
   "version": 10.1,
-  "generatedAt": "2026-08-31T14:34:11+08:00",
+  "generatedAt": "2026-08-31T16:45:52+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
     {
-      "id": "2026-08-30_603b0e5176c3_a6c4f537",
+      "id": "2026-08-30_fc9488e7b2f1_a6c4f537",
       "date": "2026-08-30",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -14,7 +14,12 @@
       "yearMonth": "2026-08",
       "capturedAt": "2026-08-30T22:11:01+08:00",
       "mode": "split",
+      "type": [
+        "layered"
+      ],
       "layerCount": 28,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "a6c4f537bffba395ff453d64",
       "manifest": "./data/archive/2026-08-30_221101_a6c4f537bffba395ff453d64/banner.json",
       "variantCount": 1,
@@ -24,7 +29,12 @@
           "capturedAt": "2026-08-30T22:11:01+08:00",
           "lastObservedAt": "2026-08-30T22:11:01+08:00",
           "mode": "split",
+          "type": [
+            "layered"
+          ],
           "layerCount": 28,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1260
           ],
@@ -42,7 +52,12 @@
       "yearMonth": "2023-08",
       "capturedAt": "2023-08-01T20:07:22+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "778a043cb838c6bf45178c29",
       "manifest": "./data/archive/2023-08-01_200722_778a043cb838c6bf45178c29/banner.json",
       "variantCount": 1,
@@ -52,7 +67,12 @@
           "capturedAt": "2023-08-01T20:07:22+08:00",
           "lastObservedAt": "2023-08-01T20:07:22+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -70,7 +90,12 @@
       "yearMonth": "2023-07",
       "capturedAt": "2023-07-01T20:09:06+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "31f871412a35c609e2fa78e9",
       "manifest": "./data/archive/2023-07-01_200906_31f871412a35c609e2fa78e9/banner.json",
       "variantCount": 1,
@@ -80,7 +105,12 @@
           "capturedAt": "2023-07-01T20:09:06+08:00",
           "lastObservedAt": "2023-07-01T20:09:06+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -98,7 +128,12 @@
       "yearMonth": "2023-06",
       "capturedAt": "2023-06-01T18:22:05+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "40c04f48a65d387f0f1523e4",
       "manifest": "./data/archive/2023-06-01_182205_40c04f48a65d387f0f1523e4/banner.json",
       "variantCount": 1,
@@ -108,7 +143,12 @@
           "capturedAt": "2023-06-01T18:22:05+08:00",
           "lastObservedAt": "2023-06-01T18:22:05+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -126,7 +166,12 @@
       "yearMonth": "2023-05",
       "capturedAt": "2023-05-01T19:48:11+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "11c601a5dcc1d5af15093f37",
       "manifest": "./data/archive/2023-05-01_194811_11c601a5dcc1d5af15093f37/banner.json",
       "variantCount": 1,
@@ -136,7 +181,12 @@
           "capturedAt": "2023-05-01T19:48:11+08:00",
           "lastObservedAt": "2023-05-01T19:48:11+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -154,7 +204,12 @@
       "yearMonth": "2023-04",
       "capturedAt": "2023-04-01T20:50:29+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "e6a8746ef378de448b9cf9ba",
       "manifest": "./data/archive/2023-04-01_205029_e6a8746ef378de448b9cf9ba/banner.json",
       "variantCount": 1,
@@ -164,7 +219,12 @@
           "capturedAt": "2023-04-01T20:50:29+08:00",
           "lastObservedAt": "2023-04-01T20:50:29+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -182,7 +242,12 @@
       "yearMonth": "2023-03",
       "capturedAt": "2023-03-01T20:25:46+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "b5400cef147c297de92902f8",
       "manifest": "./data/archive/2023-03-01_202546_b5400cef147c297de92902f8/banner.json",
       "variantCount": 1,
@@ -192,7 +257,12 @@
           "capturedAt": "2023-03-01T20:25:46+08:00",
           "lastObservedAt": "2023-03-01T20:25:46+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -210,7 +280,12 @@
       "yearMonth": "2023-02",
       "capturedAt": "2023-02-01T21:14:48+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "0de94dfd9f4371bbdae1326d",
       "manifest": "./data/archive/2023-02-01_211448_0de94dfd9f4371bbdae1326d/banner.json",
       "variantCount": 1,
@@ -220,7 +295,12 @@
           "capturedAt": "2023-02-01T21:14:48+08:00",
           "lastObservedAt": "2023-02-01T21:14:48+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1260
           ],
@@ -238,7 +318,12 @@
       "yearMonth": "2023-01",
       "capturedAt": "2023-01-01T20:07:38+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "523753b9963875c7948f1dea",
       "manifest": "./data/archive/2023-01-01_200738_523753b9963875c7948f1dea/banner.json",
       "variantCount": 1,
@@ -248,7 +333,12 @@
           "capturedAt": "2023-01-01T20:07:38+08:00",
           "lastObservedAt": "2023-01-01T20:07:38+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -266,7 +356,12 @@
       "yearMonth": "2022-12",
       "capturedAt": "2022-12-01T20:02:44+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "939330b80403fd9a824e3790",
       "manifest": "./data/archive/2022-12-01_200244_939330b80403fd9a824e3790/banner.json",
       "variantCount": 1,
@@ -276,7 +371,12 @@
           "capturedAt": "2022-12-01T20:02:44+08:00",
           "lastObservedAt": "2022-12-01T20:02:44+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -294,7 +394,12 @@
       "yearMonth": "2022-11",
       "capturedAt": "2022-11-01T19:21:10+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "65948da19844ae1ab9302218",
       "manifest": "./data/archive/2022-11-01_192110_65948da19844ae1ab9302218/banner.json",
       "variantCount": 1,
@@ -304,7 +409,12 @@
           "capturedAt": "2022-11-01T19:21:10+08:00",
           "lastObservedAt": "2022-11-01T19:21:10+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -322,7 +432,12 @@
       "yearMonth": "2022-10",
       "capturedAt": "2022-10-01T17:43:47+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "3f8e663a74b379bc23da0ba5",
       "manifest": "./data/archive/2022-10-01_174347_3f8e663a74b379bc23da0ba5/banner.json",
       "variantCount": 1,
@@ -332,7 +447,12 @@
           "capturedAt": "2022-10-01T17:43:47+08:00",
           "lastObservedAt": "2022-10-01T17:43:47+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             900
           ],
@@ -350,7 +470,12 @@
       "yearMonth": "2022-07",
       "capturedAt": "2022-07-01T19:59:29+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "abdf189a451f1b805a734ced",
       "manifest": "./data/archive/2022-07-01_195929_abdf189a451f1b805a734ced/banner.json",
       "variantCount": 1,
@@ -360,7 +485,12 @@
           "capturedAt": "2022-07-01T19:59:29+08:00",
           "lastObservedAt": "2022-07-01T19:59:29+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -378,7 +508,12 @@
       "yearMonth": "2022-01",
       "capturedAt": "2022-01-01T20:13:48+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "e2db8b4dbfc0d9aa83ec8cdd",
       "manifest": "./data/archive/2022-01-01_201348_e2db8b4dbfc0d9aa83ec8cdd/banner.json",
       "variantCount": 1,
@@ -388,7 +523,12 @@
           "capturedAt": "2022-01-01T20:13:48+08:00",
           "lastObservedAt": "2022-01-01T20:13:48+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -406,7 +546,12 @@
       "yearMonth": "2021-12",
       "capturedAt": "2021-12-01T20:12:10+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "9e67555d3b9ba2fbe3064ffa",
       "manifest": "./data/archive/2021-12-01_201210_9e67555d3b9ba2fbe3064ffa/banner.json",
       "variantCount": 1,
@@ -416,7 +561,12 @@
           "capturedAt": "2021-12-01T20:12:10+08:00",
           "lastObservedAt": "2021-12-01T20:12:10+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -434,7 +584,12 @@
       "yearMonth": "2021-11",
       "capturedAt": "2021-11-01T20:01:47+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "92f56fe99690a5891ce3be3a",
       "manifest": "./data/archive/2021-11-01_200147_92f56fe99690a5891ce3be3a/banner.json",
       "variantCount": 1,
@@ -444,7 +599,12 @@
           "capturedAt": "2021-11-01T20:01:47+08:00",
           "lastObservedAt": "2021-11-01T20:01:47+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -462,7 +622,12 @@
       "yearMonth": "2021-10",
       "capturedAt": "2021-10-01T19:56:14+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "eb016ab8a745ce412ff0e64b",
       "manifest": "./data/archive/2021-10-01_195614_eb016ab8a745ce412ff0e64b/banner.json",
       "variantCount": 1,
@@ -472,7 +637,12 @@
           "capturedAt": "2021-10-01T19:56:14+08:00",
           "lastObservedAt": "2021-10-01T19:56:14+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -490,7 +660,12 @@
       "yearMonth": "2020-12",
       "capturedAt": "2020-12-01T19:54:50+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "99e7eb87fe8ce0f6f841092e",
       "manifest": "./data/archive/2020-12-01_195450_99e7eb87fe8ce0f6f841092e/banner.json",
       "variantCount": 1,
@@ -500,7 +675,12 @@
           "capturedAt": "2020-12-01T19:54:50+08:00",
           "lastObservedAt": "2020-12-01T19:54:50+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -518,7 +698,12 @@
       "yearMonth": "2020-09",
       "capturedAt": "2020-09-01T15:20:37+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "a74b3b5bd4aa8283847a8249",
       "manifest": "./data/archive/2020-09-01_152037_a74b3b5bd4aa8283847a8249/banner.json",
       "variantCount": 1,
@@ -528,7 +713,12 @@
           "capturedAt": "2020-09-01T15:20:37+08:00",
           "lastObservedAt": "2020-09-01T15:20:37+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             900
           ],
@@ -546,7 +736,12 @@
       "yearMonth": "2020-06",
       "capturedAt": "2020-06-01T20:43:38+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "9463d0db9b6169f599af744d",
       "manifest": "./data/archive/2020-06-01_204338_9463d0db9b6169f599af744d/banner.json",
       "variantCount": 1,
@@ -556,7 +751,12 @@
           "capturedAt": "2020-06-01T20:43:38+08:00",
           "lastObservedAt": "2020-06-01T20:43:38+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -574,7 +774,12 @@
       "yearMonth": "2020-05",
       "capturedAt": "2020-05-01T19:32:44+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "f3cc9a591191284c5f0d0a56",
       "manifest": "./data/archive/2020-04-01_181300_f3cc9a591191284c5f0d0a56/banner.json",
       "variantCount": 1,
@@ -584,7 +789,12 @@
           "capturedAt": "2020-05-01T19:32:44+08:00",
           "lastObservedAt": "2020-05-01T19:32:44+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -602,7 +812,12 @@
       "yearMonth": "2020-04",
       "capturedAt": "2020-04-01T18:13:00+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "f3cc9a591191284c5f0d0a56",
       "manifest": "./data/archive/2020-04-01_181300_f3cc9a591191284c5f0d0a56/banner.json",
       "variantCount": 1,
@@ -612,7 +827,12 @@
           "capturedAt": "2020-04-01T18:13:00+08:00",
           "lastObservedAt": "2020-04-01T18:13:00+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -630,7 +850,12 @@
       "yearMonth": "2019-12",
       "capturedAt": "2019-12-01T23:53:13+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "4c91632a0bf69ae28d3c8374",
       "manifest": "./data/archive/2019-12-01_235313_4c91632a0bf69ae28d3c8374/banner.json",
       "variantCount": 1,
@@ -640,7 +865,12 @@
           "capturedAt": "2019-12-01T23:53:13+08:00",
           "lastObservedAt": "2019-12-01T23:53:13+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1260
           ],
@@ -658,7 +888,12 @@
       "yearMonth": "2019-11",
       "capturedAt": "2019-11-01T19:15:46+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "cd5cd67377f8c96455e31fee",
       "manifest": "./data/archive/2019-11-01_191546_cd5cd67377f8c96455e31fee/banner.json",
       "variantCount": 1,
@@ -668,7 +903,12 @@
           "capturedAt": "2019-11-01T19:15:46+08:00",
           "lastObservedAt": "2019-11-01T19:15:46+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -686,7 +926,12 @@
       "yearMonth": "2019-10",
       "capturedAt": "2019-10-01T14:07:32+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "e968bd68daa7a6806a699366",
       "manifest": "./data/archive/2019-10-01_140732_e968bd68daa7a6806a699366/banner.json",
       "variantCount": 1,
@@ -696,7 +941,12 @@
           "capturedAt": "2019-10-01T14:07:32+08:00",
           "lastObservedAt": "2019-10-01T14:07:32+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             720
           ],
@@ -714,7 +964,12 @@
       "yearMonth": "2019-09",
       "capturedAt": "2019-09-02T16:41:53+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "39dac658b1494459d08fc0ab",
       "manifest": "./data/archive/2019-02-03_063059_39dac658b1494459d08fc0ab/banner.json",
       "variantCount": 1,
@@ -724,7 +979,12 @@
           "capturedAt": "2019-09-02T16:41:53+08:00",
           "lastObservedAt": "2019-09-02T16:41:53+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             900
           ],
@@ -742,7 +1002,12 @@
       "yearMonth": "2019-08",
       "capturedAt": "2019-08-01T21:25:28+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "39dac658b1494459d08fc0ab",
       "manifest": "./data/archive/2019-02-03_063059_39dac658b1494459d08fc0ab/banner.json",
       "variantCount": 1,
@@ -752,7 +1017,12 @@
           "capturedAt": "2019-08-01T21:25:28+08:00",
           "lastObservedAt": "2019-08-01T21:25:28+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1260
           ],
@@ -770,7 +1040,12 @@
       "yearMonth": "2019-07",
       "capturedAt": "2019-07-01T20:10:53+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "39dac658b1494459d08fc0ab",
       "manifest": "./data/archive/2019-02-03_063059_39dac658b1494459d08fc0ab/banner.json",
       "variantCount": 1,
@@ -780,7 +1055,12 @@
           "capturedAt": "2019-07-01T20:10:53+08:00",
           "lastObservedAt": "2019-07-01T20:10:53+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -798,7 +1078,12 @@
       "yearMonth": "2019-06",
       "capturedAt": "2019-06-01T23:41:06+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "39dac658b1494459d08fc0ab",
       "manifest": "./data/archive/2019-02-03_063059_39dac658b1494459d08fc0ab/banner.json",
       "variantCount": 1,
@@ -808,7 +1093,12 @@
           "capturedAt": "2019-06-01T23:41:06+08:00",
           "lastObservedAt": "2019-06-01T23:41:06+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1260
           ],
@@ -826,7 +1116,12 @@
       "yearMonth": "2019-05",
       "capturedAt": "2019-05-01T20:15:26+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "39dac658b1494459d08fc0ab",
       "manifest": "./data/archive/2019-02-03_063059_39dac658b1494459d08fc0ab/banner.json",
       "variantCount": 1,
@@ -836,7 +1131,12 @@
           "capturedAt": "2019-05-01T20:15:26+08:00",
           "lastObservedAt": "2019-05-01T20:15:26+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             1080
           ],
@@ -854,7 +1154,12 @@
       "yearMonth": "2019-03",
       "capturedAt": "2019-03-31T07:24:44+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "39dac658b1494459d08fc0ab",
       "manifest": "./data/archive/2019-02-03_063059_39dac658b1494459d08fc0ab/banner.json",
       "variantCount": 1,
@@ -864,7 +1169,12 @@
           "capturedAt": "2019-03-31T07:24:44+08:00",
           "lastObservedAt": "2019-03-31T07:24:44+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             360
           ],
@@ -882,7 +1192,12 @@
       "yearMonth": "2019-03",
       "capturedAt": "2019-03-01T02:58:25+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "39dac658b1494459d08fc0ab",
       "manifest": "./data/archive/2019-02-03_063059_39dac658b1494459d08fc0ab/banner.json",
       "variantCount": 1,
@@ -892,7 +1207,12 @@
           "capturedAt": "2019-03-01T02:58:25+08:00",
           "lastObservedAt": "2019-03-01T02:58:25+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             0
           ],
@@ -910,7 +1230,12 @@
       "yearMonth": "2019-02",
       "capturedAt": "2019-02-03T06:30:59+08:00",
       "mode": "static",
+      "type": [
+        "static"
+      ],
       "layerCount": 0,
+      "completeness": "unverified",
+      "missing_assets": [],
       "contentHash": "39dac658b1494459d08fc0ab",
       "manifest": "./data/archive/2019-02-03_063059_39dac658b1494459d08fc0ab/banner.json",
       "variantCount": 1,
@@ -920,7 +1245,12 @@
           "capturedAt": "2019-02-03T06:30:59+08:00",
           "lastObservedAt": "2019-02-03T06:30:59+08:00",
           "mode": "static",
+          "type": [
+            "static"
+          ],
           "layerCount": 0,
+          "completeness": "unverified",
+          "missing_assets": [],
           "observedSlots": [
             360
           ],

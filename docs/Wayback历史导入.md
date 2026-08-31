@@ -4,13 +4,14 @@
 
 `backend/wayback_import.py` 使用 Internet Archive 的 Availability API 查找 `https://www.bilibili.com/` 历史快照，再在始终 headless 的 Chromium 中打开 Wayback 回放页。
 
-它只接受以下真实来源：
+它从回放页检查以下真实来源和结构证据：
 
 - 回放 DOM 中的 `.animated-banner .layer` 图片或视频；
 - 当前及旧版 Header 中的真实 `<img>`；
 - `.bili-banner`、`.head-banner`、`.header-banner`、`#banner_link`、`.banner_link`、`.banner-link` 等旧版容器的真实 `background-image`。
+- IMG/srcset、PICTURE/SOURCE、VIDEO/SOURCE、SVG、CANVAS、data-*、computed transform/animation、performance 资源 URL、相关内联 CSS/JS/JSON。
 
-原始素材 URL 会转换为同一时间戳的 Wayback `id_` 原始响应地址。浏览器路由会阻止对 `bilibili.com` 和 `hdslb.com` 的直接请求。程序不保存截图，也不会将截图当作缺失图层的回退。
+原始素材 URL 会优先转换为同一时间戳的 Wayback `id_` 原始响应地址。浏览器回放路由阻止对 `bilibili.com`、`hdslb.com` 和 `bilivideo.com` 的直接请求；若 Wayback 子资源缺失，后端下载器才会受控尝试从重写 URL 还原出的原始 CDN 地址。前端始终只读本地文件。程序不保存截图，也不会将截图当作缺失图层的回退。
 
 ## 2. 2018 年至今的发现范围
 
@@ -100,7 +101,7 @@ python scripts\serve.py
 
 ## 5. 去重和跨日期出现
 
-`contentHash` 仍然由真实下载素材计算，不依赖 Wayback URL、日期或页面 transform。
+`contentHash` 由真实下载素材、图层结构、动画和交互参数共同计算，不依赖 Wayback URL 或日期。
 
 如果同一素材在多个历史日期出现：
 
@@ -117,11 +118,13 @@ python scripts\serve.py
 
 - Wayback 只保存了首页 HTML，没有保存 Banner 图片或视频；
 - 页面依赖的历史 JS bundle 缺失，分层 DOM 没有生成；
-- 分层 DOM 存在，但原互动脚本未运行，所有测量结果为零；
+- 分层 DOM 存在，但原互动脚本未运行；此时会保留素材并将交互标为 partial，而不是伪造运动参数；
 - 回放页返回限流、重定向错误或 Wayback 服务暂时不可用；
 - 历史版本使用尚未覆盖的 Header DOM 结构；
-- 原效果包含动态 Y，违反本项目只允许水平交互的规则。
+- 原效果依赖未归档的外部脚本、3D/CSS filter 或 Canvas/WebGL shader，无法完整序列化。
 
-这些情况会在批处理汇总的 `failures` 中报告。失败快照不会生成截图归档或不完整 split 归档。
+有可恢复资源时会生成 `completeness: partial` 并列出 `missing_assets`；完全没有支持容器或可判断证据时才进入批处理 `failures`。两种情况都不会生成截图或把 fallback 图片冒充完整 split。
 
 Wayback 的收录本身并不完整，因此“2018 年至今”表示查询范围，不保证每一天或每一个活动 Banner 都存在可恢复快照。
+
+当前自动发现器只实现 Wayback Availability API。Common Crawl、archive.today、Memento、GitHub 历史项目和其它 CDN 可作为人工恢复线索，`structureEvidence` 会保留可见 URL，但当前脚本尚未把这些来源实现为统一自动 provider。不要把来源规划误解为已完成回填能力。

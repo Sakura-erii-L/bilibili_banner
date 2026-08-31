@@ -11,6 +11,51 @@ import backend.capture as capture
 
 
 class CaptureInteractionTests(unittest.TestCase):
+    def test_multi_media_dom_is_saved_without_static_flattening(self) -> None:
+        html = """
+        <style>
+          .bili-header__banner { position: relative; width: 1000px; height: 160px; }
+          .bili-header__banner > * { position: absolute; inset: 0; width: 1000px; height: 160px; }
+        </style>
+        <div class="bili-header__banner">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='160'/%3E">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='160'/%3E">
+          <video src="data:video/webm;base64,AA=="></video>
+        </div>
+        """
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp)
+            with sync_playwright() as playwright:
+                launch_kwargs = {"headless": True}
+                browser_path = capture.find_system_browser()
+                if browser_path:
+                    launch_kwargs["executable_path"] = browser_path
+                browser = playwright.chromium.launch(**launch_kwargs)
+                context = browser.new_context(viewport={"width": 1200, "height": 500})
+                page = context.new_page()
+                page.set_content(html)
+                evidence = capture.inspect_banner_structure(page)
+                flattened = capture.capture_static(
+                    page,
+                    context,
+                    folder,
+                    structured=True,
+                )
+                layers, missing = capture.capture_structured_media(
+                    page,
+                    context,
+                    folder,
+                    evidence,
+                )
+                browser.close()
+
+            self.assertIsNone(flattened)
+            self.assertEqual(evidence["visibleMediaCount"], 3)
+            self.assertEqual(len(layers), 3)
+            self.assertEqual(missing, [])
+            self.assertEqual([item["tag"] for item in layers], ["img", "img", "video"])
+            self.assertTrue(all((folder / item["file"]).is_file() for item in layers))
+
     def test_legacy_bili_banner_is_detected_even_when_archived_css_is_partial(self) -> None:
         with sync_playwright() as playwright:
             launch_kwargs = {"headless": True}
@@ -120,7 +165,7 @@ class CaptureInteractionTests(unittest.TestCase):
             for name, value in original.items():
                 setattr(capture, name, value)
 
-    def test_vertical_motion_is_rejected(self) -> None:
+    def test_real_matrix_motion_is_preserved(self) -> None:
         baseline = {
             "index": 0,
             "transform": [1, 0, 0, 1, 0, 0],
@@ -128,9 +173,44 @@ class CaptureInteractionTests(unittest.TestCase):
             "mediaOpacity": 1,
         }
         moved = {**baseline, "transform": [1, 0, 0, 1, 10, 2]}
-        with self.assertRaises(capture.InteractionProbeError) as raised:
-            capture._layer_effect_delta(baseline, moved)
-        self.assertEqual(raised.exception.reason, "vertical-motion-detected")
+        effect = capture._layer_effect_delta(baseline, moved)
+        self.assertEqual(effect["matrix"], [0, 0, 0, 0, 10, 2])
+
+    def test_layered_video_metadata_is_not_flattened_to_static(self) -> None:
+        manifest = {
+            "mode": "split",
+            "layers": [
+                {"index": 0, "tag": "img", "assetType": "image", "file": "layer_0.webp"},
+                {"index": 1, "tag": "video", "assetType": "video", "file": "effect.webm"},
+            ],
+            "static": {"file": "fallback.webp", "tag": "img"},
+            "interaction": {"model": "bilibili-sampled-horizontal-v1", "effects": ["matrix"]},
+        }
+        evidence = {
+            "root": {"className": "animated-banner"},
+            "layerCount": 2,
+            "signals": {"hasVideo": True, "hasInteraction": True, "isSplitLayer": True},
+        }
+        capture.enrich_manifest_metadata(manifest, evidence)
+        self.assertEqual(manifest["type"], ["layered", "video", "interactive"])
+        self.assertEqual(manifest["fallback_image"], "fallback.webp")
+        self.assertEqual(len(manifest["layers"]), 2)
+        self.assertNotEqual(manifest["type"], ["static"])
+
+    def test_static_metadata_has_only_original_primary_asset(self) -> None:
+        manifest = {
+            "mode": "static",
+            "static": {"file": "banner.png", "tag": "img", "assetType": "image"},
+            "layers": [],
+            "interaction": {"model": "none", "effects": []},
+        }
+        capture.enrich_manifest_metadata(
+            manifest,
+            {"root": {"className": "bili-banner"}, "layerCount": 0, "signals": {}},
+        )
+        self.assertEqual(manifest["type"], ["static"])
+        self.assertEqual(manifest["completeness"], "complete")
+        self.assertIsNone(manifest["fallback_image"])
 
 
 class TimedVariantIndexTests(unittest.TestCase):

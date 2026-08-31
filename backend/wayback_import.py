@@ -4,6 +4,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -191,6 +192,23 @@ def archived_asset_url(timestamp: str, src: str, replay_base: str) -> str:
     return f"{replay_base.rstrip('/')}/{timestamp}id_/{absolute}"
 
 
+def original_url_from_replay(src: str) -> str:
+    parsed = urllib.parse.urlparse(src)
+    if (parsed.hostname or "").lower() not in {"web.archive.org", "wayback.archive-it.org"}:
+        return src
+    match = re.search(r"/web/\d+(?:[a-z_]+)?/(https?://.+)$", src, re.I)
+    return urllib.parse.unquote(match.group(1)) if match else src
+
+
+def archived_asset_candidates(timestamp: str, src: str, replay_base: str) -> list[str]:
+    original = original_url_from_replay(src)
+    candidates = [archived_asset_url(timestamp, original, replay_base)]
+    host = (urllib.parse.urlparse(original).hostname or "").lower()
+    if host.endswith((".hdslb.com", ".bilibili.com", ".bilivideo.com")):
+        candidates.append(original)
+    return list(dict.fromkeys(candidates))
+
+
 def is_direct_bilibili_request(url: str) -> bool:
     host = (urllib.parse.urlparse(url).hostname or "").lower()
     return (
@@ -198,6 +216,8 @@ def is_direct_bilibili_request(url: str) -> bool:
         or host.endswith(".bilibili.com")
         or host == "hdslb.com"
         or host.endswith(".hdslb.com")
+        or host == "bilivideo.com"
+        or host.endswith(".bilivideo.com")
     )
 
 
@@ -300,45 +320,69 @@ def capture_snapshot(
     core.DATA_DIR.mkdir(parents=True, exist_ok=True)
     core.ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     temp = Path(tempfile.mkdtemp(prefix=".wayback_", dir=core.DATA_DIR))
-    rewrite = lambda src: archived_asset_url(timestamp, src, replay_base)
-
     try:
+        evidence = core.inspect_banner_structure(page)
+        source_files = core.save_source_evidence(page, temp)
+        detected_layers = core.read_layers(page)
+        layers: list[dict[str, Any]] = []
+        structure_expected = bool(
+            detected_layers
+            or int(evidence.get("layerCount") or 0) > 0
+            or int(evidence.get("visibleMediaCount") or 0) > 1
+            or (evidence.get("signals") or {}).get("isSplitLayer")
+        )
+        mode = "split" if structure_expected else "static"
         static = core.capture_static(
             page,
             context,
             temp,
             referer=url,
-            url_rewriter=rewrite,
+            url_candidates=lambda src: archived_asset_candidates(
+                timestamp, src, replay_base
+            ),
+            structured=structure_expected,
         )
-        detected_layers = core.read_layers(page)
-        layers: list[dict[str, Any]] = []
-        mode = "split" if detected_layers else "static"
         interaction: dict[str, Any] = {
             "model": "none",
-            "positionAxis": "x-only",
+            "positionAxis": "observed",
             "effects": [],
         }
+        missing_assets: list[str] = []
 
         if detected_layers:
             initial_layers, interaction, motions = core.sample_interaction(page, geometry)
             for index, (item, motion) in enumerate(zip(initial_layers, motions)):
                 src = str(item.get("src") or "")
                 if not src:
-                    raise RuntimeError(f"layer {index} has no archived asset URL")
-                src = rewrite(src)
-                local_file, content_type = core.download_asset(
-                    context,
-                    page,
-                    src,
-                    temp,
-                    index,
-                    item["tag"],
-                    referer=url,
-                )
+                    missing_assets.append(f"layer_{index:03d}: original asset URL missing")
+                    continue
+                last_error: Exception | None = None
+                for candidate in archived_asset_candidates(timestamp, src, replay_base):
+                    try:
+                        local_file, content_type = core.download_asset(
+                            context,
+                            page,
+                            candidate,
+                            temp,
+                            index,
+                            item["tag"],
+                            referer=url,
+                        )
+                        src = candidate
+                        break
+                    except Exception as exc:
+                        last_error = exc
+                else:
+                    missing_assets.append(f"layer_{index:03d}: {last_error}")
+                    continue
                 layers.append(
                     {
                         "index": index,
                         "tag": item["tag"],
+                        "assetType": core.media_type(
+                            item["tag"], src, content_type,
+                            animated=bool((item.get("animation") or {}).get("name") not in {None, "", "none"}),
+                        ),
                         "src": src,
                         "file": local_file,
                         "contentType": content_type,
@@ -351,6 +395,10 @@ def capture_snapshot(
                         "transformOrigin": item["transformOrigin"],
                         "transform": item["transform"],
                         "opacity": [item["layerOpacity"], item["mediaOpacity"]],
+                        "position": item.get("position", {}),
+                        "zIndex": item.get("zIndex", 0),
+                        "animation": item.get("animation", {}),
+                        "animationTarget": item.get("animationTarget", "media"),
                         "motion": motion,
                         "a": core._legacy_slope(
                             interaction["inputSamplesPx"],
@@ -360,13 +408,44 @@ def capture_snapshot(
                     }
                 )
 
-            if layers and not interaction.get("effects"):
-                raise RuntimeError(
-                    "all archived layer interaction effects are zero; "
-                    "refusing to create a fake split archive"
+            expected_layer_count = int(evidence.get("layerCount") or len(initial_layers))
+            if len(layers) < expected_layer_count:
+                missing_assets.append(
+                    f"{expected_layer_count - len(layers)} layer asset(s)"
                 )
+        elif structure_expected:
+            layers, structured_missing = core.capture_structured_media(
+                page,
+                context,
+                temp,
+                evidence,
+                referer=url,
+                url_candidates=lambda src: archived_asset_candidates(
+                    timestamp, src, replay_base
+                ),
+            )
+            missing_assets.extend(structured_missing)
+            missing_assets.append(
+                "interaction behavior unverified without a sampleable .layer model"
+            )
 
-        if mode == "static" and not static:
+        signals = evidence.get("signals") or {}
+        complex_evidence = bool(
+            signals.get("hasVideo")
+            or signals.get("hasCanvas")
+            or signals.get("hasSvg")
+            or any(
+                re.search(
+                    r"\.(?:m3u8|mp4|webm|gif|apng|svg)(?:$|[?#])",
+                    str(item.get("name") or ""),
+                    re.I,
+                )
+                for item in evidence.get("resourceUrls") or []
+            )
+        )
+        if signals.get("hasCanvas"):
+            missing_assets.append("canvas/WebGL rendering cannot be serialized as an original asset")
+        if mode == "static" and not static and not complex_evidence:
             print(
                 json.dumps(
                     {
@@ -379,6 +458,8 @@ def capture_snapshot(
                 )
             )
             raise RuntimeError("no downloadable archived Banner asset found")
+        if structure_expected and not layers and not static:
+            missing_assets.append("all structured Banner assets unavailable")
 
         captured_at = moment.isoformat(timespec="seconds")
         manifest: dict[str, Any] = {
@@ -400,9 +481,15 @@ def capture_snapshot(
             "static": static,
             "layers": layers,
             "interaction": interaction,
+            "sourceFiles": source_files,
             "timeZone": core.TIMEZONE,
             "lastObservedAt": captured_at,
         }
+        core.enrich_manifest_metadata(
+            manifest,
+            evidence,
+            missing_assets=missing_assets,
+        )
         result = core.archive_capture(
             temp,
             manifest,
