@@ -1,0 +1,69 @@
+{
+  "version": 10.1,
+  "capturedAt": "2019-02-03T06:30:59+08:00",
+  "date": "2019-02-03",
+  "season": "winter",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://web.archive.org/web/20190202223059/https://www.bilibili.com/",
+    "captureMethod": "wayback-hidden-rendered-dom-sampled",
+    "waybackTimestamp": "20190202223059",
+    "waybackReplay": "https://web.archive.org/web/20190202223059/https://www.bilibili.com/",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190201120000"
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "x": 0,
+    "y": 284,
+    "width": 1650,
+    "height": 170
+  },
+  "mode": "static",
+  "static": {
+    "src": "https://web.archive.org/web/20190202223059id_/https://i0.hdslb.com/bfs/activity-plat/static/20171220/68a052f664e8414bb594f9b00b176599/images/90w1lpp6ry.png",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "objectFit": "cover",
+    "objectPosition": "50% -10px",
+    "sourceKind": "background-image",
+    "file": "static.png"
+  },
+  "layers": [],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "x-only",
+    "effects": []
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2019-02-03T06:30:59+08:00",
+  "contentHash": "39dac658b1494459d08fc0ab",
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2019-02-03_3f4544a6cbd4_39dac658",
+  "observedSlots": [
+    360
+  ],
+  "observations": [
+    {
+      "capturedAt": "2019-02-03T06:30:59+08:00",
+      "lastObservedAt": "2019-02-03T06:30:59+08:00",
+      "date": "2019-02-03",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        360
+      ],
+      "familyId": "2019-02-03_3f4544a6cbd4_39dac658",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190202223059/https://www.bilibili.com/",
+        "captureMethod": "wayback-hidden-rendered-dom-sampled",
+        "waybackTimestamp": "20190202223059",
+        "waybackReplay": "https://web.archive.org/web/20190202223059/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190201120000"
+      }
+    }
+  ]
+}
