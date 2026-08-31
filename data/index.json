@@ -1,9 +1,71 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T01:16:08+08:00",
+  "generatedAt": "2026-09-01T01:20:40+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2021-09-01_c67914dc19b6_54ae21ca",
+      "date": "2021-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "09",
+      "yearMonth": "2021-09",
+      "capturedAt": "2021-09-01T19:21:51+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "2 API layer(s) unavailable",
+        "Header API declared structured Banner evidence but no layer resource was recoverable",
+        "Header API extensions preserved but not replayed: time",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "video source detected but no original video asset was saved"
+      ],
+      "contentHash": "54ae21ca2cdf1501fe2c9174",
+      "manifest": "./data/archive/2021-09-01_192151_54ae21ca2cdf1501fe2c9174/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "54ae21ca2cdf1501fe2c9174",
+          "canonicalContentHash": "b82244ad379bd0aa308deaf1",
+          "sourceFingerprint": "c6f34db5560d788b9e0bef8d",
+          "capturedAt": "2021-09-01T19:21:51+08:00",
+          "lastObservedAt": "2021-09-01T19:21:51+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "2 API layer(s) unavailable",
+            "Header API declared structured Banner evidence but no layer resource was recoverable",
+            "Header API extensions preserved but not replayed: time",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "video source detected but no original video asset was saved"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-09-01_192151_54ae21ca2cdf1501fe2c9174/banner.json"
+        }
+      ]
+    },
     {
       "id": "2021-08-01_3f4544a6cbd4_7947bafa",
       "date": "2021-08-01",
