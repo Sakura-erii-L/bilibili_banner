@@ -1,0 +1,14 @@
+{
+  "code": 0,
+  "message": "0",
+  "ttl": 1,
+  "data": {
+    "name": "点击乘坐时光机！",
+    "pic": "http://i0.hdslb.com/bfs/archive/867d87bbe0f359e95a23b09842c9f529d2aa10ed.png",
+    "litpic": "http://i0.hdslb.com/bfs/archive/1ebd88bca98180b1789ab478a7a633cdf6aa03e0.png",
+    "url": "https://live.bilibili.com/2233",
+    "is_split_layer": 1,
+    "split_layer": "{\"version\":\"1\",\"layers\":[{\"resources\":[{\"src\":\"https://i0.hdslb.com/bfs/vc/a10c34ba0e4faabf2c4efd62cec54cacbf98282a.webm\",\"id\":0}],\"scale\":{\"initial\":0.8612},\"rotate\":{},\"translate\":{},\"blur\":{},\"opacity\":{\"wrap\":\"clamp\"},\"id\":2,\"name\":\"图层2\"}]}",
+    "request_id": "1654081671"
+  }
+}
