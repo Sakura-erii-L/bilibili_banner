@@ -1,9 +1,51 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T01:39:42+08:00",
+  "generatedAt": "2026-09-01T01:41:44+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2022-06-01_0a6f021986f2_9719710a",
+      "date": "2022-06-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "06",
+      "yearMonth": "2022-06",
+      "capturedAt": "2022-06-01T19:43:44+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "9719710ae48ff99e0942fe23",
+      "manifest": "./data/archive/2022-06-01_194344_9719710ae48ff99e0942fe23/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "9719710ae48ff99e0942fe23",
+          "canonicalContentHash": "4989966f6e1076c3752aa78e",
+          "sourceFingerprint": "d5e14a69cb38a174b7030753",
+          "capturedAt": "2022-06-01T19:43:44+08:00",
+          "lastObservedAt": "2022-06-01T19:43:44+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-06-01_194344_9719710ae48ff99e0942fe23/banner.json"
+        }
+      ]
+    },
     {
       "id": "2022-05-01_0a6f021986f2_83501924",
       "date": "2022-05-01",
