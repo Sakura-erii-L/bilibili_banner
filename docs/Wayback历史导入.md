@@ -94,7 +94,7 @@ python scripts\serve.py
 6. 点击绿色 **Run workflow**。
 7. 查看 `Import real assets from Wayback snapshots` 日志。
 
-自动和手工事件都通过脚本执行历史导入及 `data/` 提交。每累计 10 个 `created`/`updated` 结果，`scripts/checkpoint_wayback.py` 就提交、推送一次并用 `workflow_dispatch` 触发 Pages；末尾不足 10 个也会保存。失败和 `unchanged` 不计入批次，因此长任务中途失败时最多损失当前未满 10 个的批次。历史 workflow 成功结束后，`pages.yml` 的 `workflow_run` 仍会执行最终一致性发布。
+自动和手工事件都通过脚本执行历史导入及 `data/` 提交。每个 `created`/`updated` 结果完成后，`scripts/checkpoint_wayback.py` 都会立即提交、推送一次并用 `workflow_dispatch` 触发 Pages。失败和 `unchanged` 不提交。历史 workflow 成功结束后，`pages.yml` 的 `workflow_run` 仍会执行最终一致性发布。
 
 每日抓取和历史导入共用 `bilibili-banner-data-writes` 并发组，因此两者不会同时执行 `git push`。
 

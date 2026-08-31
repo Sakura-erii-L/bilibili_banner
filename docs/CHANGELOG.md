@@ -10,7 +10,7 @@
 - 新增 `observations`：同一实际素材跨多个历史日期只保存一个物理 archive，但索引可按多个日期引用。
 - 新增 `wayback-import.yml`；脚本/工作流更新后自动启动首次回填，此后每月自动补抓，也支持手工指定范围。它与每日抓取共用数据写入并发锁，只提交 `data/`，Pages 仍由 `pages.yml` 发布。
 - `pages.yml` 监听历史导入的成功 `workflow_run`，确保默认 `GITHUB_TOKEN` 自动提交的数据也会发布，同时避免历史 workflow 自带第二套 Pages 部署逻辑。
-- 历史回填每累计 10 个新增或更新归档执行一次脚本化 checkpoint commit/push，并通过 `workflow_dispatch` 增量发布 Pages；末尾不足 10 个也会保存。
+- 历史回填每新增或更新一个归档就执行一次脚本化 checkpoint commit/push，并通过 `workflow_dispatch` 增量发布 Pages；失败和重复结果不提交。
 - manifest/index 新生成版本为 `10.1`，旧 v9.2/v10 数据继续兼容。
 
 ## v10

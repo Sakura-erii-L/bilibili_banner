@@ -90,5 +90,5 @@ jobs:
             --to-date "$TO_DATE" \
             --cadence "$CADENCE" \
             --limit "$LIMIT" \
-            --checkpoint-every 10 \
+            --checkpoint-every 1 \
             --checkpoint-script scripts/checkpoint_wayback.py
