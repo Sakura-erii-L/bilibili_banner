@@ -1,6 +1,6 @@
 {
   "version": 10.1,
-  "generatedAt": "2026-08-31T18:08:19+08:00",
+  "generatedAt": "2026-08-31T18:09:27+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -39,6 +39,58 @@
             1260
           ],
           "manifest": "./data/archive/2026-08-30_221101_a6c4f537bffba395ff453d64/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-09-01_0f02bc89f3e7_9af89c97",
+      "date": "2021-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "09",
+      "yearMonth": "2021-09",
+      "capturedAt": "2021-09-01T19:21:51+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "animated",
+        "interactive"
+      ],
+      "layerCount": 1,
+      "completeness": "partial",
+      "missing_assets": [
+        "1 layer asset(s)",
+        "interaction detected but no replay parameters were captured",
+        "layer_001: asset HTTP 403: https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png"
+      ],
+      "contentHash": "9af89c97f790e4e5828a3d61",
+      "manifest": "./data/archive/2021-09-01_192151_9af89c97f790e4e5828a3d61/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "9af89c97f790e4e5828a3d61",
+          "capturedAt": "2021-09-01T19:21:51+08:00",
+          "lastObservedAt": "2021-09-01T19:21:51+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "animated",
+            "interactive"
+          ],
+          "layerCount": 1,
+          "completeness": "partial",
+          "missing_assets": [
+            "1 layer asset(s)",
+            "interaction detected but no replay parameters were captured",
+            "layer_001: asset HTTP 403: https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-09-01_192151_9af89c97f790e4e5828a3d61/banner.json"
         }
       ]
     },
