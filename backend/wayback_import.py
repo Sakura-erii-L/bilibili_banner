@@ -166,7 +166,9 @@ def describe_banner_dom(page) -> list[dict[str, Any]]:
             const roots = [
                 ...document.querySelectorAll(
                     ".animated-banner, .bili-header__banner, .head-banner, "
-                    + ".header-banner, #banner_link, .banner_link"
+                    + ".header-banner, #banner_link, .banner_link, "
+                    + "[id*='banner' i], [class*='banner' i], "
+                    + "[id*='header' i], [class*='header' i]"
                 )
             ];
             const candidates = [];
@@ -232,6 +234,17 @@ def capture_snapshot(
 
     geometry = core.get_banner_geometry(page)
     if not geometry:
+        print(
+            json.dumps(
+                {
+                    "timestamp": timestamp,
+                    "pageUrl": page.url,
+                    "title": page.title(),
+                    "bannerDom": describe_banner_dom(page),
+                },
+                ensure_ascii=False,
+            )
+        )
         raise RuntimeError("no supported Banner container in archived DOM")
 
     core.DATA_DIR.mkdir(parents=True, exist_ok=True)
