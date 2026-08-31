@@ -1,0 +1,169 @@
+{
+  "version": 11.0,
+  "capturedAt": "2022-12-01T20:02:44+08:00",
+  "date": "2022-12-01",
+  "season": "winter",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "captureMethod": "wayback-header-api",
+    "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "waybackTimestamp": "20221201120244",
+    "waybackReplay": "https://web.archive.org/web/20221130011220id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20221201120000",
+    "homepageWaybackTimestamp": "20221201120244",
+    "headerApiWaybackTimestamp": "20221130011220",
+    "headerApiTimeDeltaSeconds": 125424,
+    "headerApiWaybackReplay": "https://web.archive.org/web/20221130011220id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20221124120244&to=20221208120244&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "static",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/802565b1022c79715457ae96075ef3bfe4c89004.png",
+    "requestedSrc": "https://web.archive.org/web/20221130011220id_/https://i0.hdslb.com/bfs/archive/802565b1022c79715457ae96075ef3bfe4c89004.png",
+    "normalizedIdentity": "https://web.archive.org/web/20221130011220id_/https://i0.hdslb.com/bfs/archive/802565b1022c79715457ae96075ef3bfe4c89004.png",
+    "file": "static.png",
+    "contentType": "image/png",
+    "tag": "img",
+    "sourceKind": "header-api-pic",
+    "assetType": "image",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  "layers": [],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "horizontal-normalized-from-entry",
+    "inputMode": "relative-from-pointer-enter",
+    "displacementFormula": "(clientX-enterX)/containerWidth",
+    "containerReferenceHeight": 155,
+    "returnDurationMs": 200,
+    "effects": []
+  },
+  "sourceFiles": {
+    "json": "source/api.json"
+  },
+  "api": {
+    "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "id": null,
+    "name": "通向超级文明的钥匙>>",
+    "request_id": "1669770740",
+    "isSplitLayer": false,
+    "layerCount": 0,
+    "assetCount": 0,
+    "pic": "https://i0.hdslb.com/bfs/archive/802565b1022c79715457ae96075ef3bfe4c89004.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/7b5e430c58b9f2d0dd7835f151d2465c7df4d3cf.png",
+    "litpicAsset": null,
+    "splitVersion": "1",
+    "extensions": {}
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2022-12-01T20:02:44+08:00",
+  "type": [
+    "static"
+  ],
+  "is_split_layer": false,
+  "fallback_image": null,
+  "preview_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "bilibili-header-api",
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142"
+    },
+    "layerCount": 0,
+    "mediaCount": 0,
+    "visibleMediaCount": 0,
+    "media": [],
+    "resourceUrls": [],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "api": {
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+      "id": null,
+      "request_id": "1669770740",
+      "isSplitLayer": false,
+      "layerCount": 0,
+      "assetCount": 0,
+      "savedAssetCount": 0,
+      "effects": []
+    }
+  },
+  "assets": [
+    {
+      "role": "primary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/802565b1022c79715457ae96075ef3bfe4c89004.png",
+      "local_file": "static.png",
+      "content_type": "image/png",
+      "sha256": "ed8a3b24f62d80ba3dd5143894e159015c5941e9c2cd8d3abef9e79549bfd6c6"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "851e4699f53b17cbda6c2228",
+  "hashes": {
+    "resourceHash": "de8a32189ec3c8bfde287c5a",
+    "structureHash": "4275cc174277d51bd315eb91",
+    "interactionHash": "b2e542b0322f4bad46ea7f04",
+    "contentHash": "851e4699f53b17cbda6c2228"
+  },
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2022-12-01_3f4544a6cbd4_851e4699",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2022-12-01T20:02:44+08:00",
+      "lastObservedAt": "2022-12-01T20:02:44+08:00",
+      "date": "2022-12-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2022-12-01_3f4544a6cbd4_851e4699",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20221201120244",
+        "waybackReplay": "https://web.archive.org/web/20221130011220id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20221201120000",
+        "homepageWaybackTimestamp": "20221201120244",
+        "headerApiWaybackTimestamp": "20221130011220",
+        "headerApiTimeDeltaSeconds": 125424,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20221130011220id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20221124120244&to=20221208120244&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
