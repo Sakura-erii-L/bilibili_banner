@@ -2,6 +2,9 @@
 
 ## 当前结构化归档更新
 
+- 历史回填下限改为 `2019-08-01`；清理其它旧 archive 后从该日期重新采集，只保留 `2026-08-30` 基线。
+- 没有任何成功保存的图片、视频、SVG 或图层时拒绝创建 archive，避免前端出现“该归档缺少素材”。
+- source 脚本/JSON 哈希统一换行符，消除 Linux Actions 与 Windows checkout 之间的伪哈希漂移。
 - 新增组合 `type[]`、`completeness`、`missing_assets`、`structureEvidence`、`assets` 和三段结构化哈希。
 - 分层资源部分缺失时保存 partial，不再因为单层失败整体压成 static 或直接丢弃全部可恢复结构。
 - 交互采样和前端回放保留完整二维 matrix；下方旧版本中的“动态 Y 中止/锁定”仅是历史行为，已不再适用。

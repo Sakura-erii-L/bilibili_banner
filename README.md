@@ -14,14 +14,14 @@
 - 前端按每个 Banner 自己的曲线插值完整二维 matrix 和透明度；输入来自水平指针差值，但原网页真实产生的 scale、rotate、X/Y 位移会按采样结果回放。旧 v9.2 manifest 自动回退到 `moveX * a`。
 - 分别计算资源、结构和交互哈希；仅当三者都一致才复用 archive。
 - 同日、布局结构相同但实际素材不同的抓取结果使用同一 `familyId`，前端按 `Asia/Shanghai` 当前时刻选择最近观测的真实时段变体。
-- 可通过独立的 `wayback_import.py` 从 Wayback 快照导入 2018 年至今仍可恢复的真实图片、视频和分层 DOM；不会下载回放页截图，也会阻止直接回源 Bilibili。
+- 可通过独立的 `wayback_import.py` 从 Wayback 快照导入 `2019-08-01` 至今仍可恢复的真实图片、视频和分层 DOM；不会下载回放页截图，也会阻止直接回源 Bilibili。
 - 同一素材跨多个历史日期出现时只保留一个物理 archive，并通过 `observations` 在多个日期记录中复用。
 - 多媒体但没有标准 `.layer` 时，逐项保存可恢复的 IMG/VIDEO/SVG；缺少资源或交互逻辑时标记 `completeness: partial`，不合成图片。
 - 每个新 archive 可保存与 Banner 有关的 `source/page.html`、`styles.css`、`script.js` 和 `api.json` 证据；前端不会执行归档脚本。
 - 后端不生成截图，前端也不使用 `preview.png` 作为分层失败回退；分层载入失败会明确显示错误。
 - 历史记录按抓取时间倒序排列，支持年份、月份、春夏秋冬筛选，并使用 `IntersectionObserver` 延迟加载较远记录。
 
-当前 `data/index.json` 有 33 条历史记录：1 条 `split` 和 32 条旧 `static`；`data/archive/` 中有 25 个物理 archive。索引记录数可高于物理 archive 数，因为同一素材可通过 `observations` 对应多个历史日期。全部现有数据均缺少完整的新 `type/hashes/structureEvidence`，只能视为 legacy/unverified；当前审计无硬错误，后续数量以索引和审计结果为准。
+历史数据已重置，只保留 `2026-08-30` 的真实分层 archive 作为基线；其余日期由 GitHub Actions 从 `2019-08-01` 起重新采集。回填会持续改变记录数，应以 `data/index.json` 和 `python scripts/audit_archives.py` 的结果为准。
 
 ## 快速开始
 
@@ -70,8 +70,8 @@ bash scripts/update_linux.sh
 python backend/capture.py                  # 抓取当前 Banner
 python backend/capture.py --force          # 重复素材时刷新交互元数据，不复制素材目录
 python backend/capture.py --rebuild-index  # 只根据已有 archive 重建 data/index.json
-python backend/wayback_import.py --from-date 2018 --to-date 2018 --cadence monthly
-python backend/wayback_import.py --from-date 2018 --to-date 2026 --discovery-only
+python backend/wayback_import.py --from-date 2019-08-01 --to-date 2020 --cadence monthly
+python backend/wayback_import.py --from-date 2019-08-01 --to-date 2026 --discovery-only
 python scripts/build_site.py               # 构建到 _site/
 python scripts/build_site.py --output PATH # 构建到指定目录
 python scripts/serve.py --port 8765        # 服务 _site/
@@ -159,20 +159,20 @@ matrix = initialMatrix + sampledMatrixDelta
 
 `.github/workflows/pages.yml` 用于手工触发、普通 `main` push，或在 `Import Historical Banners` 成功完成后通过 `workflow_run` 构建并部署 Pages。后者用于解决默认 `GITHUB_TOKEN` 产生的自动提交不会再次触发 `push` workflow 的限制。
 
-`.github/workflows/wayback-import.yml` 直接运行 `backend/wayback_import.py` 自动下载：脚本或工作流更新推送后启动首次 `2018-01-01` 至今的月度回填，此后每月 2 日北京时间 `02:27` 自动补抓，也保留手工指定范围入口。每产生一个真正创建或更新的归档，就由 `scripts/checkpoint_wayback.py` 立即提交并推送一次 `data/`、触发一次 Pages。失败和完全重复记录不计入提交。它与每日抓取共用数据写入锁，核心抓取逻辑仍位于 Python 后端，可迁移到 NAS。
+`.github/workflows/wayback-import.yml` 直接运行 `backend/wayback_import.py` 自动下载：脚本或工作流更新推送后启动 `2019-08-01` 至今的月度回填，此后每月 2 日北京时间 `02:27` 自动补抓，也保留手工指定范围入口。后端会拒绝更早的范围和时间戳。每产生一个真正创建或更新的归档，就由 `scripts/checkpoint_wayback.py` 立即提交并推送一次 `data/`、触发一次 Pages。失败、完全重复及没有任何可播放主素材的快照不计入提交。新回填运行会取消仍占用同一数据写入并发组的旧运行。
 
 ## Wayback 历史导入
 
 先只查询快照、不写入数据：
 
 ```powershell
-python backend\wayback_import.py --from-date 2018 --to-date 2026 --cadence monthly --discovery-only
+python backend\wayback_import.py --from-date 2019-08-01 --to-date 2026 --cadence monthly --discovery-only
 ```
 
 本地也可按年份运行同一个批处理脚本，降低网络失败和超时的影响：
 
 ```powershell
-python backend\wayback_import.py --from-date 2018 --to-date 2018 --cadence monthly
+python backend\wayback_import.py --from-date 2019-08-01 --to-date 2020 --cadence monthly
 ```
 
 `monthly` 只取得每月附近的代表快照；需要更密集的历史可改为 `weekly` 或 `daily`。导入器全程 headless，解析 Wayback 回放 DOM、CSS、脚本、JSON 和媒体引用，并兼容旧版 `.bili-banner`。可恢复部分结构时保存 `partial`；任何情况下都不会用截图伪造。详细操作见 [Wayback 历史导入](docs/Wayback历史导入.md)。
@@ -183,15 +183,15 @@ GitHub Runner 的出口 IP、地理位置、Cookie 和 A/B 分流可能导致它
 
 - 抓取依赖 Bilibili 当前的 `.animated-banner`、`.layer` 和静态图片选择器；网站 DOM 改版、验证码或网络拦截可能导致失败。
 - `.animated-banner` 不存在但页面提供原始 `.bili-header__banner` 图片时会生成 `static` 记录；两者都没有才写诊断并退出。
-- 分层资源缺失时保存已恢复图层并标记 `partial/missing_assets`；只有完全没有 Banner 容器或没有任何可判断证据时才失败。
+- 分层资源缺失时保存至少一个已恢复图层并标记 `partial/missing_assets`；完全没有可播放主素材时直接失败，不创建空 archive。
 - 指针采样保留完整二维 matrix 和透明度。CSS filter、3D perspective matrix、WebGL shader 与无法恢复的远程脚本仍可能只能留下证据并标记 partial。
 - `contentHash` 由 `resourceHash + structureHash + interactionHash` 组合；日期、观测时段和来源 URL 不参与哈希。
 - 自动 `familyId` 依据“同一日期 + 相同布局结构”归并时段变体；若网站在同一天把结构完全相同的 Banner 更换为无关主题，可能需要人工拆分 family。
 - 前端是纯静态页面，没有后台 API、用户登录、数据库或在线回源逻辑。
 - 历史素材会持续增加 Git 仓库和 Pages 体积；程序不会自动删除旧归档。
-- Wayback 并不保证每个快照都保存完整子资源或可执行脚本，因此 2018 年至今只能导入“归档中仍可恢复”的 Banner，不代表逐日无缺口。
+- Wayback 并不保证每个快照都保存完整子资源或可执行脚本，因此 `2019-08-01` 至今只能导入“归档中仍可恢复”的 Banner，不代表逐日无缺口。
 - 当前自动历史发现器仍以 Wayback Availability API 为主；代码会保存其它归档/CDN 线索，但 Common Crawl、archive.today、Memento 和 GitHub 项目尚未实现统一自动导入 provider。
-- `python scripts/audit_archives.py` 可检查 flatten、缺失文件和新哈希。仓库现有 25 个物理 archive 无硬错误，但均是缺少新 `type/hashes/structureEvidence` 的 legacy 数据，不能仅凭旧 `static` 标签证明历史原 Banner 确实只有一张图。
+- `python scripts/audit_archives.py` 可检查 flatten、缺失文件和结构化哈希。重采结果只有通过这些硬检查后才应保留；`partial` 仍表示至少有一个真实主素材，但部分图层或交互证据不可恢复。
 
 ## 文档入口
 

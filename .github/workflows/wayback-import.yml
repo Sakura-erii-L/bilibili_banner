@@ -10,13 +10,13 @@ on:
   workflow_dispatch:
     inputs:
       from_date:
-        description: "Start date (YYYY-MM-DD or year)"
+        description: "Start date (not earlier than 2019-08-01)"
         required: true
-        default: "2018-01-01"
+        default: "2019-08-01"
       to_date:
-        description: "End date (YYYY-MM-DD or year)"
-        required: true
-        default: "2018-12-31"
+        description: "End date; leave empty for today"
+        required: false
+        default: ""
       cadence:
         description: "Wayback sampling cadence"
         required: true
@@ -40,7 +40,7 @@ permissions:
 
 concurrency:
   group: bilibili-banner-data-writes
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   import:
@@ -81,7 +81,7 @@ jobs:
           TO_DATE="${{ inputs.to_date }}"
           CADENCE="${{ inputs.cadence }}"
           LIMIT="${{ inputs.limit }}"
-          [[ -n "$FROM_DATE" ]] || FROM_DATE="2018-01-01"
+          [[ -n "$FROM_DATE" ]] || FROM_DATE="2019-08-01"
           [[ -n "$TO_DATE" ]] || TO_DATE="$(date +%F)"
           [[ -n "$CADENCE" ]] || CADENCE="monthly"
           [[ -n "$LIMIT" ]] || LIMIT="0"

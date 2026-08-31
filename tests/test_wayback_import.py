@@ -11,6 +11,46 @@ from backend import wayback_import
 
 
 class WaybackImportTests(unittest.TestCase):
+    def test_backfill_range_rejects_dates_before_august_2019(self) -> None:
+        with self.assertRaisesRegex(ValueError, "2019-08-01"):
+            wayback_import.validate_backfill_range(
+                dt.date(2019, 7, 31),
+                dt.date(2020, 1, 1),
+            )
+        wayback_import.validate_backfill_range(
+            dt.date(2019, 8, 1),
+            dt.date(2020, 1, 1),
+        )
+
+    def test_snapshot_rejects_dates_before_august_2019(self) -> None:
+        with self.assertRaisesRegex(ValueError, "2019-08-01"):
+            wayback_import.validate_snapshot_timestamp("20190731235959")
+        self.assertEqual(
+            wayback_import.validate_snapshot_timestamp("20190801000000"),
+            "20190801000000",
+        )
+
+    def test_archive_requires_a_saved_primary_asset(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertFalse(
+                wayback_import.has_saved_primary_assets(
+                    root,
+                    mode="split",
+                    static=None,
+                    layers=[{"file": "missing.webp"}],
+                )
+            )
+            (root / "layer.webp").write_bytes(b"layer")
+            self.assertTrue(
+                wayback_import.has_saved_primary_assets(
+                    root,
+                    mode="split",
+                    static=None,
+                    layers=[{"file": "layer.webp"}],
+                )
+            )
+
     def test_checkpoint_script_receives_progress_environment(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             script = Path(temp) / "checkpoint.py"
@@ -35,14 +75,14 @@ class WaybackImportTests(unittest.TestCase):
     def test_monthly_targets_stay_in_range(self) -> None:
         targets = list(
             wayback_import.target_dates(
-                dt.date(2018, 1, 1),
-                dt.date(2018, 3, 31),
+                dt.date(2019, 8, 1),
+                dt.date(2019, 10, 31),
                 "monthly",
             )
         )
         self.assertEqual(
             targets,
-            [dt.date(2018, 1, 1), dt.date(2018, 2, 1), dt.date(2018, 3, 1)],
+            [dt.date(2019, 8, 1), dt.date(2019, 9, 1), dt.date(2019, 10, 1)],
         )
 
     def test_original_asset_is_rewritten_to_wayback_raw_capture(self) -> None:

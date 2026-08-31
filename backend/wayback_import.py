@@ -35,6 +35,7 @@ REPLAY_BASE = os.environ.get(
     "https://web.archive.org/web",
 )
 REQUEST_DELAY_SECONDS = float(os.environ.get("WAYBACK_REQUEST_DELAY", "0.2"))
+MIN_BACKFILL_DATE = dt.date(2019, 8, 1)
 
 
 def run_checkpoint(
@@ -67,6 +68,30 @@ def parse_date(value: str, *, end: bool = False) -> dt.date:
         year = int(value)
         return dt.date(year, 12 if end else 1, 31 if end else 1)
     return dt.date.fromisoformat(value)
+
+
+def validate_backfill_range(start: dt.date, end: dt.date) -> None:
+    if start < MIN_BACKFILL_DATE:
+        raise ValueError(
+            f"--from-date must be on or after {MIN_BACKFILL_DATE.isoformat()}"
+        )
+    if end < MIN_BACKFILL_DATE:
+        raise ValueError(
+            f"--to-date must be on or after {MIN_BACKFILL_DATE.isoformat()}"
+        )
+    if start > end:
+        raise ValueError("--from-date must not be after --to-date")
+
+
+def validate_snapshot_timestamp(value: str) -> str:
+    if len(value) != 14 or not value.isdigit():
+        raise ValueError("--snapshot must use YYYYMMDDhhmmss")
+    captured_date = dt.datetime.strptime(value, "%Y%m%d%H%M%S").date()
+    if captured_date < MIN_BACKFILL_DATE:
+        raise ValueError(
+            f"--snapshot must be on or after {MIN_BACKFILL_DATE.isoformat()}"
+        )
+    return value
 
 
 def target_dates(start: dt.date, end: dt.date, cadence: str) -> Iterable[dt.date]:
@@ -176,6 +201,22 @@ def snapshot_moment(timestamp: str) -> dt.datetime:
         tzinfo=dt.timezone.utc
     )
     return utc.astimezone(ZoneInfo(core.TIMEZONE))
+
+
+def has_saved_primary_assets(
+    folder: Path,
+    *,
+    mode: str,
+    static: dict[str, Any] | None,
+    layers: list[dict[str, Any]],
+) -> bool:
+    entries = layers if mode == "split" else [static or {}]
+    for entry in entries:
+        relative = str(entry.get("file") or "")
+        path = folder / relative if relative else None
+        if path and path.is_file() and path.stat().st_size > 0:
+            return True
+    return False
 
 
 def replay_url(timestamp: str, original: str, replay_base: str) -> str:
@@ -460,6 +501,17 @@ def capture_snapshot(
             raise RuntimeError("no downloadable archived Banner asset found")
         if structure_expected and not layers and not static:
             missing_assets.append("all structured Banner assets unavailable")
+        if not has_saved_primary_assets(
+            temp,
+            mode=mode,
+            static=static,
+            layers=layers,
+        ):
+            raise RuntimeError(
+                "no downloadable structured Banner asset found"
+                if structure_expected or complex_evidence
+                else "no downloadable archived Banner asset found"
+            )
 
         captured_at = moment.isoformat(timespec="seconds")
         manifest: dict[str, Any] = {
@@ -516,7 +568,7 @@ def main() -> None:
             "No screenshots are created and direct Bilibili requests are blocked."
         )
     )
-    parser.add_argument("--from-date", default="2018-01-01")
+    parser.add_argument("--from-date", default=MIN_BACKFILL_DATE.isoformat())
     parser.add_argument("--to-date", default=today.isoformat())
     parser.add_argument(
         "--cadence",
@@ -550,13 +602,22 @@ def main() -> None:
 
     start = parse_date(args.from_date)
     end = parse_date(args.to_date, end=True)
-    if start > end:
-        parser.error("--from-date must not be after --to-date")
+    try:
+        validate_backfill_range(start, end)
+    except ValueError as exc:
+        parser.error(str(exc))
 
     if args.snapshot:
+        try:
+            snapshot_values = [
+                validate_snapshot_timestamp(value)
+                for value in sorted(set(args.snapshot))
+            ]
+        except ValueError as exc:
+            parser.error(str(exc))
         snapshots = [
             {"timestamp": value, "original": ORIGINAL_PAGE, "availabilityUrl": ""}
-            for value in sorted(set(args.snapshot))
+            for value in snapshot_values
         ]
     else:
         snapshots = discover_snapshots(

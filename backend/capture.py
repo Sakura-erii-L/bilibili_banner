@@ -1164,6 +1164,11 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
+def sha256_normalized_text_file(path: Path) -> str:
+    content = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(content).hexdigest()
+
+
 def _json_hash(value: Any) -> str:
     payload = json.dumps(
         value,
@@ -1225,7 +1230,7 @@ def calculate_manifest_hashes(folder: Path, manifest: dict[str, Any]) -> dict[st
         relative = str(source_files.get(role) or "")
         path = folder / relative if relative else None
         if path and path.is_file():
-            source_hashes[role] = sha256_file(path)
+            source_hashes[role] = sha256_normalized_text_file(path)
     structure = {
         "type": manifest_types(manifest),
         "mode": manifest.get("mode"),

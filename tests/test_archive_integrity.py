@@ -94,6 +94,25 @@ class ArchiveIntegrityTests(unittest.TestCase):
             self.assertNotEqual(first["interactionHash"], second["interactionHash"])
             self.assertNotEqual(first["contentHash"], second["contentHash"])
 
+    def test_source_script_hash_is_stable_across_line_endings(self) -> None:
+        manifest = {
+            "mode": "split",
+            "type": ["layered", "interactive"],
+            "layers": [],
+            "interaction": {"model": "unknown", "effects": []},
+            "structureEvidence": {"signals": {"hasInteraction": True}},
+            "sourceFiles": {"scripts": "source/script.js"},
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "source" / "script.js"
+            source.parent.mkdir()
+            source.write_bytes(b"line1\nline2\n")
+            lf_hash = capture.calculate_manifest_hashes(root, manifest)
+            source.write_bytes(b"line1\r\nline2\r\n")
+            crlf_hash = capture.calculate_manifest_hashes(root, manifest)
+        self.assertEqual(lf_hash, crlf_hash)
+
     def test_layered_video_interactive_cannot_be_flattened(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

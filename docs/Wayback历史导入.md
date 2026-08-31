@@ -13,9 +13,9 @@
 
 原始素材 URL 会优先转换为同一时间戳的 Wayback `id_` 原始响应地址。浏览器回放路由阻止对 `bilibili.com`、`hdslb.com` 和 `bilivideo.com` 的直接请求；若 Wayback 子资源缺失，后端下载器才会受控尝试从重写 URL 还原出的原始 CDN 地址。前端始终只读本地文件。程序不保存截图，也不会将截图当作缺失图层的回退。
 
-## 2. 2018 年至今的发现范围
+## 2. 2019 年 8 月至今的发现范围
 
-默认范围就是 `2018-01-01` 至当前上海日期，默认每月查询一次接近月初的可用快照：
+默认范围是 `2019-08-01` 至当前上海日期，默认每月查询一次接近月初的可用快照。后端会拒绝任何更早的范围或 `--snapshot` 时间戳：
 
 ```powershell
 python backend\wayback_import.py --discovery-only
@@ -25,13 +25,13 @@ python backend\wayback_import.py --discovery-only
 
 ```powershell
 python backend\wayback_import.py `
-  --from-date 2018-01-01 `
+  --from-date 2019-08-01 `
   --to-date 2026-08-31 `
   --cadence monthly `
   --discovery-only
 ```
 
-`--from-date` 和 `--to-date` 也接受单独年份。`--to-date 2018` 会解释为 `2018-12-31`。
+`--from-date` 和 `--to-date` 也接受单独年份，但年份形式的 `--from-date 2019` 会解释为 `2019-01-01`，因早于下限而被拒绝；2019 年必须写为 `2019-08-01`。
 
 可用采样密度：
 
@@ -53,20 +53,20 @@ python -m playwright install chromium
 建议按年份运行：
 
 ```powershell
-python backend\wayback_import.py --from-date 2018 --to-date 2018 --cadence monthly
-python backend\wayback_import.py --from-date 2019 --to-date 2019 --cadence monthly
+python backend\wayback_import.py --from-date 2019-08-01 --to-date 2019-12-31 --cadence monthly
+python backend\wayback_import.py --from-date 2020 --to-date 2020 --cadence monthly
 ```
 
 只测试一个已知时间戳：
 
 ```powershell
-python backend\wayback_import.py --snapshot 20180201082457
+python backend\wayback_import.py --snapshot 20191001140732
 ```
 
 限制本次处理数量：
 
 ```powershell
-python backend\wayback_import.py --from-date 2018 --to-date 2018 --limit 2
+python backend\wayback_import.py --from-date 2019-08-01 --to-date 2019-12-31 --limit 2
 ```
 
 完成后运行：
@@ -80,7 +80,7 @@ python scripts\serve.py
 
 `.github/workflows/wayback-import.yml` 不需要 Codex 或人工逐个执行下载命令：
 
-- `backend/wayback_import.py` 或该 workflow 更新并推送后，自动启动一次 2018 年至今的 `monthly` 回填；
+- `backend/wayback_import.py` 或该 workflow 更新并推送后，自动启动一次 `2019-08-01` 至今的 `monthly` 回填，并取消同一并发组中仍在运行的旧回填；
 - 每月 2 日北京时间 `02:27` 自动再次扫描并补抓；
 - 已写入 observation 的 Wayback 时间戳会被脚本自动跳过；
 - 单个日期的 API/回放失败会记录后继续处理其余月份。
@@ -90,7 +90,7 @@ python scripts\serve.py
 1. 打开仓库的 **Actions**。
 2. 左侧选择 **Import Historical Banners**。
 3. 点击 **Run workflow**。
-4. `from_date` 和 `to_date` 填写需要复查的范围，例如 `2018`、`2018`。
+4. `from_date` 和 `to_date` 填写需要复查的范围，例如 `2019-08-01`、`2019-12-31`。
 5. 第一次选择 `monthly`，`limit` 填 `0`。
 6. 点击绿色 **Run workflow**。
 7. 查看 `Import real assets from Wayback snapshots` 日志。
@@ -123,8 +123,8 @@ python scripts\serve.py
 - 历史版本使用尚未覆盖的 Header DOM 结构；
 - 原效果依赖未归档的外部脚本、3D/CSS filter 或 Canvas/WebGL shader，无法完整序列化。
 
-有可恢复资源时会生成 `completeness: partial` 并列出 `missing_assets`；完全没有支持容器或可判断证据时才进入批处理 `failures`。两种情况都不会生成截图或把 fallback 图片冒充完整 split。
+至少恢复一个可播放主素材时可以生成 `completeness: partial` 并列出 `missing_assets`；若只有 DOM/脚本证据而没有任何成功下载的图片、视频或 SVG，则进入批处理 `failures`，不会创建最终只显示“该归档缺少素材”的空 archive。两种情况都不会生成截图或把 fallback 图片冒充完整 split。
 
-Wayback 的收录本身并不完整，因此“2018 年至今”表示查询范围，不保证每一天或每一个活动 Banner 都存在可恢复快照。
+Wayback 的收录本身并不完整，因此“`2019-08-01` 至今”表示查询范围，不保证每一天或每一个活动 Banner 都存在可恢复快照。
 
 当前自动发现器只实现 Wayback Availability API。Common Crawl、archive.today、Memento、GitHub 历史项目和其它 CDN 可作为人工恢复线索，`structureEvidence` 会保留可见 URL，但当前脚本尚未把这些来源实现为统一自动 provider。不要把来源规划误解为已完成回填能力。
