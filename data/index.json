@@ -1,9 +1,53 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T00:07:35+08:00",
+  "generatedAt": "2026-09-01T00:11:53+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2019-11-01_3f4544a6cbd4_b03e8e41",
+      "date": "2019-11-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "11",
+      "yearMonth": "2019-11",
+      "capturedAt": "2019-11-01T19:15:46+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "auxiliary_000: https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "b03e8e414e447d70050f7b91",
+      "manifest": "./data/archive/2019-11-01_191546_b03e8e414e447d70050f7b91/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "b03e8e414e447d70050f7b91",
+          "canonicalContentHash": "3229d81f6cde719efe382467",
+          "sourceFingerprint": "69e8a39823d56dd360c73196",
+          "capturedAt": "2019-11-01T19:15:46+08:00",
+          "lastObservedAt": "2019-11-01T19:15:46+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2019-11-01_191546_b03e8e414e447d70050f7b91/banner.json"
+        }
+      ]
+    },
     {
       "id": "2019-10-01_3f4544a6cbd4_1fcf4caf",
       "date": "2019-10-01",
