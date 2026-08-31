@@ -8,7 +8,7 @@
 
 - 回放 DOM 中的 `.animated-banner .layer` 图片或视频；
 - 当前及旧版 Header 中的真实 `<img>`；
-- `.head-banner`、`.header-banner`、`#banner_link`、`.banner_link` 等旧版容器的真实 `background-image`。
+- `.bili-banner`、`.head-banner`、`.header-banner`、`#banner_link`、`.banner_link`、`.banner-link` 等旧版容器的真实 `background-image`。
 
 原始素材 URL 会转换为同一时间戳的 Wayback `id_` 原始响应地址。浏览器路由会阻止对 `bilibili.com` 和 `hdslb.com` 的直接请求。程序不保存截图，也不会将截图当作缺失图层的回退。
 

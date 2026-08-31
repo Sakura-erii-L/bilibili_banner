@@ -269,15 +269,19 @@ def get_banner_geometry(page) -> dict[str, float] | None:
                 ".bili-header__banner",
                 ".head-banner",
                 ".header-banner",
+                ".bili-banner",
                 "#banner_link",
-                ".banner_link"
+                ".banner_link",
+                ".banner-link"
             ];
             const el = selectors
                 .map(selector => document.querySelector(selector))
                 .find(candidate => {
                     if (!candidate) return false;
                     const r = candidate.getBoundingClientRect();
-                    return r.width > 100 && r.height > 40;
+                    return r.width > 100 && (
+                        r.height > 40 || candidate.matches(".bili-banner")
+                    );
                 });
             if (!el) return null;
             const r = el.getBoundingClientRect();
@@ -568,7 +572,8 @@ def capture_static(
                 || document.querySelector(".head-banner img")
                 || document.querySelector(".header-banner img")
                 || document.querySelector("#banner_link img")
-                || document.querySelector(".banner_link img");
+                || document.querySelector(".banner_link img")
+                || document.querySelector(".banner-link img");
             if (img) {
                 const cs = getComputedStyle(img);
                 return {
@@ -585,8 +590,10 @@ def capture_static(
                 ".bili-header__banner",
                 ".head-banner",
                 ".header-banner",
+                ".bili-banner",
                 "#banner_link",
-                ".banner_link"
+                ".banner_link",
+                ".banner-link"
             ];
             const urlFrom = value => {
                 const match = /url\(["']?(.+?)["']?\)/.exec(value || "");

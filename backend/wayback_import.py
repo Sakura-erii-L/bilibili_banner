@@ -166,7 +166,8 @@ def describe_banner_dom(page) -> list[dict[str, Any]]:
             const roots = [
                 ...document.querySelectorAll(
                     ".animated-banner, .bili-header__banner, .head-banner, "
-                    + ".header-banner, #banner_link, .banner_link, "
+                    + ".header-banner, .bili-banner, #banner_link, "
+                    + ".banner_link, .banner-link, "
                     + "[id*='banner' i], [class*='banner' i], "
                     + "[id*='header' i], [class*='header' i]"
                 )
@@ -229,8 +230,10 @@ def capture_snapshot(
                 || document.querySelector(".bili-header__banner")
                 || document.querySelector(".head-banner")
                 || document.querySelector(".header-banner")
+                || document.querySelector(".bili-banner")
                 || document.querySelector("#banner_link")
                 || document.querySelector(".banner_link")
+                || document.querySelector(".banner-link")
             """,
             timeout=core.BANNER_WAIT_MS,
         )

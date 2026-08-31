@@ -44,6 +44,8 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
       img.className = "static-image";
       img.src = resolveAsset(manifestUrl, file);
       img.alt = "";
+      img.style.objectFit = manifest.static?.objectFit || "cover";
+      img.style.objectPosition = manifest.static?.objectPosition || "50% 50%";
       stage.appendChild(img);
     } else {
       stage.innerHTML = '<div class="loading error">该归档缺少可显示素材</div>';

@@ -11,6 +11,25 @@ import backend.capture as capture
 
 
 class CaptureInteractionTests(unittest.TestCase):
+    def test_legacy_bili_banner_is_detected_even_when_archived_css_is_partial(self) -> None:
+        with sync_playwright() as playwright:
+            launch_kwargs = {"headless": True}
+            browser_path = capture.find_system_browser()
+            if browser_path:
+                launch_kwargs["executable_path"] = browser_path
+            browser = playwright.chromium.launch(**launch_kwargs)
+            page = browser.new_page(viewport={"width": 1200, "height": 500})
+            page.set_content(
+                '<div class="bili-banner" '
+                'style="width:1000px;height:22px;background-image:url(example.png)"></div>'
+            )
+            geometry = capture.get_banner_geometry(page)
+            browser.close()
+
+        self.assertIsNotNone(geometry)
+        self.assertEqual(geometry["width"], 1000)
+        self.assertEqual(geometry["height"], 22)
+
     def test_sampled_nonlinear_interaction_and_return(self) -> None:
         original = {
             "VIEWPORT_WIDTH": capture.VIEWPORT_WIDTH,

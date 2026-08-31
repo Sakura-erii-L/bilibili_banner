@@ -172,7 +172,7 @@ python backend\wayback_import.py --from-date 2018 --to-date 2026 --cadence month
 python backend\wayback_import.py --from-date 2018 --to-date 2018 --cadence monthly
 ```
 
-`monthly` 只取得每月附近的代表快照；需要更密集的历史可改为 `weekly` 或 `daily`。导入器全程 headless，页面和素材均从 Wayback 回放地址获取；如果归档没有保存素材、原脚本无法运行、分层互动全为零或检测到动态 Y，该快照会失败并跳过，不会用截图伪造。详细操作见 [Wayback 历史导入](docs/Wayback历史导入.md)。
+`monthly` 只取得每月附近的代表快照；需要更密集的历史可改为 `weekly` 或 `daily`。导入器全程 headless，页面和素材均从 Wayback 回放地址获取，并兼容旧版 `.bili-banner`；如果归档没有保存素材、原脚本无法运行、分层互动全为零或检测到动态 Y，该快照会失败并跳过，不会用截图伪造。详细操作见 [Wayback 历史导入](docs/Wayback历史导入.md)。
 
 GitHub Runner 的出口 IP、地理位置、Cookie 和 A/B 分流可能导致它看到的 Banner 与个人电脑不同。如果必须以自己的网络环境为准，建议在 Windows/NAS 抓取后提交 `data/`，让 GitHub Pages 只负责展示。
 
