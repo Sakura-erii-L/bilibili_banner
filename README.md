@@ -154,7 +154,7 @@ matrixY = initialMatrixY
 
 `.github/workflows/daily-update.yml` 默认在北京时间每 3 小时的第 `17` 分钟运行（每天 8 次），也支持 `workflow_dispatch` 手工触发。它会安装 Python 3.12、Playwright Chromium，使用临时 profile 抓取；只有新素材、新时段槽或旧交互模型升级导致 `data/` 变化时才提交，然后构建并部署 GitHub Pages。
 
-`.github/workflows/pages.yml` 用于手工触发，或在 `main` 分支的 `frontend/**`、`data/**`、`scripts/build_site.py`、工作流文件发生变化时构建并部署 Pages。
+`.github/workflows/pages.yml` 用于手工触发、普通 `main` push，或在 `Import Historical Banners` 成功完成后通过 `workflow_run` 构建并部署 Pages。后者用于解决默认 `GITHUB_TOKEN` 产生的自动提交不会再次触发 `push` workflow 的限制。
 
 `.github/workflows/wayback-import.yml` 直接运行 `backend/wayback_import.py` 自动下载：脚本或工作流更新推送后启动首次 `2018-01-01` 至今的月度回填，此后每月 2 日北京时间 `02:27` 自动补抓，也保留手工指定范围入口。它只提交变化后的 `data/`，随后由 `pages.yml` 发布，并与每日抓取共用数据写入锁。
 

@@ -94,7 +94,7 @@ python scripts\serve.py
 6. 点击绿色 **Run workflow**。
 7. 查看 `Import real assets from Wayback snapshots` 日志。
 
-自动和手工事件都只执行历史导入及 `data/` 提交。提交完成后，现有 `pages.yml` 会自动构建并发布，历史导入工作流不会再次部署 Pages。
+自动和手工事件都只执行历史导入及 `data/` 提交。历史 workflow 成功结束后，`pages.yml` 通过 `workflow_run` 检出最新 `main` 并发布；失败任务不会部署。这样不用依赖 `GITHUB_TOKEN` 自动提交再次触发 `push` workflow，也不用把 Pages 发布步骤复制到历史脚本中。
 
 每日抓取和历史导入共用 `bilibili-banner-data-writes` 并发组，因此两者不会同时执行 `git push`。
 
