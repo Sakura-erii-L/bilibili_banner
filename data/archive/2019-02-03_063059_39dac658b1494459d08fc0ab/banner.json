@@ -38,7 +38,7 @@
     "effects": []
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-03-01T02:58:25+08:00",
+  "lastObservedAt": "2019-03-31T07:24:44+08:00",
   "contentHash": "39dac658b1494459d08fc0ab",
   "layoutHash": "3f4544a6cbd458b81c5e471b",
   "familyId": "2019-02-03_3f4544a6cbd4_39dac658",
@@ -83,6 +83,25 @@
         "waybackTimestamp": "20190228185825",
         "waybackReplay": "https://web.archive.org/web/20190228185825/https://www.bilibili.com/",
         "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190301120000"
+      }
+    },
+    {
+      "capturedAt": "2019-03-31T07:24:44+08:00",
+      "lastObservedAt": "2019-03-31T07:24:44+08:00",
+      "date": "2019-03-31",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        360
+      ],
+      "familyId": "2019-03-31_3f4544a6cbd4_39dac658",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190330232444/https://www.bilibili.com/",
+        "captureMethod": "wayback-hidden-rendered-dom-sampled",
+        "waybackTimestamp": "20190330232444",
+        "waybackReplay": "https://web.archive.org/web/20190330232444/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190401120000"
       }
     }
   ]
