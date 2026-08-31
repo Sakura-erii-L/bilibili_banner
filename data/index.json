@@ -1,6 +1,6 @@
 {
   "version": 10.1,
-  "generatedAt": "2026-08-31T17:21:51+08:00",
+  "generatedAt": "2026-08-31T17:23:49+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -495,6 +495,54 @@
             1080
           ],
           "manifest": "./data/archive/2022-07-01_195929_abdf189a451f1b805a734ced/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-04-01_882c8d2504f9_a1a54e45",
+      "date": "2022-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "04",
+      "yearMonth": "2022-04",
+      "capturedAt": "2022-04-01T20:09:44+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "animated",
+        "interactive"
+      ],
+      "layerCount": 1,
+      "completeness": "partial",
+      "missing_assets": [
+        "interaction detected but no replay parameters were captured"
+      ],
+      "contentHash": "a1a54e45cee459fa357fb8c9",
+      "manifest": "./data/archive/2022-04-01_200944_a1a54e45cee459fa357fb8c9/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "a1a54e45cee459fa357fb8c9",
+          "capturedAt": "2022-04-01T20:09:44+08:00",
+          "lastObservedAt": "2022-04-01T20:09:44+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "animated",
+            "interactive"
+          ],
+          "layerCount": 1,
+          "completeness": "partial",
+          "missing_assets": [
+            "interaction detected but no replay parameters were captured"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-04-01_200944_a1a54e45cee459fa357fb8c9/banner.json"
         }
       ]
     },
