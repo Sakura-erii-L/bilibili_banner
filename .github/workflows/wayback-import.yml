@@ -35,6 +35,7 @@ on:
       timezone: "Asia/Shanghai"
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
@@ -69,7 +70,13 @@ jobs:
         env:
           BANNER_PROFILE_MODE: "temporary"
           BANNER_TIMEZONE: "Asia/Shanghai"
+          GH_TOKEN: ${{ github.token }}
+          PYTHONUNBUFFERED: "1"
+          WAYBACK_CHECKPOINT_PAGES: "1"
+          WAYBACK_CHECKPOINT_PUSH: "1"
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           FROM_DATE="${{ inputs.from_date }}"
           TO_DATE="${{ inputs.to_date }}"
           CADENCE="${{ inputs.cadence }}"
@@ -82,25 +89,6 @@ jobs:
             --from-date "$FROM_DATE" \
             --to-date "$TO_DATE" \
             --cadence "$CADENCE" \
-            --limit "$LIMIT"
-
-      - name: Detect data changes
-        id: changes
-        shell: bash
-        run: |
-          if [[ -n "$(git status --porcelain=v1 --untracked-files=all -- data)" ]]; then
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "Historical data changed."
-          else
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No historical data change."
-          fi
-
-      - name: Commit imported historical banners
-        if: steps.changes.outputs.changed == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
-          git commit -m "archive: import historical Bilibili banners"
-          git push
+            --limit "$LIMIT" \
+            --checkpoint-every 10 \
+            --checkpoint-script scripts/checkpoint_wayback.py

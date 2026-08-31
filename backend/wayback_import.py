@@ -5,6 +5,8 @@ import datetime as dt
 import json
 import os
 import shutil
+import subprocess
+import sys
 import tempfile
 import time
 import urllib.error
@@ -32,6 +34,30 @@ REPLAY_BASE = os.environ.get(
     "https://web.archive.org/web",
 )
 REQUEST_DELAY_SECONDS = float(os.environ.get("WAYBACK_REQUEST_DELAY", "0.2"))
+
+
+def run_checkpoint(
+    script: str,
+    *,
+    processed: int,
+    succeeded: int,
+    changed: int,
+    final: bool,
+) -> None:
+    script_path = Path(script).resolve()
+    if not script_path.is_file():
+        raise RuntimeError(f"checkpoint script does not exist: {script_path}")
+
+    env = os.environ.copy()
+    env.update(
+        {
+            "WAYBACK_CHECKPOINT_PROCESSED": str(processed),
+            "WAYBACK_CHECKPOINT_SUCCEEDED": str(succeeded),
+            "WAYBACK_CHECKPOINT_CHANGED": str(changed),
+            "WAYBACK_CHECKPOINT_FINAL": "1" if final else "0",
+        }
+    )
+    subprocess.run([sys.executable, str(script_path)], check=True, env=env)
 
 
 def parse_date(value: str, *, end: bool = False) -> dt.date:
@@ -412,11 +438,28 @@ def main() -> None:
     )
     parser.add_argument("--snapshot", action="append", default=[])
     parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument(
+        "--checkpoint-every",
+        type=int,
+        default=0,
+        help="Run --checkpoint-script after this many created/updated records.",
+    )
+    parser.add_argument(
+        "--checkpoint-script",
+        help="Python script called at each checkpoint and once at the end.",
+    )
     parser.add_argument("--discovery-only", action="store_true")
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--availability-api", default=AVAILABILITY_API)
     parser.add_argument("--replay-base", default=REPLAY_BASE)
     args = parser.parse_args()
+
+    if args.checkpoint_every < 0:
+        parser.error("--checkpoint-every must not be negative")
+    if bool(args.checkpoint_every) != bool(args.checkpoint_script):
+        parser.error(
+            "--checkpoint-every and --checkpoint-script must be used together"
+        )
 
     start = parse_date(args.from_date)
     end = parse_date(args.to_date, end=True)
@@ -463,6 +506,8 @@ def main() -> None:
 
     results: list[dict[str, Any]] = []
     failures: list[dict[str, str]] = []
+    changed_since_checkpoint = 0
+    processed = 0
     system_browser = core.find_system_browser()
     with sync_playwright() as playwright:
         launch_kwargs: dict[str, Any] = {
@@ -491,7 +536,7 @@ def main() -> None:
         context.route("**/*", route_request)
         page = context.new_page()
         try:
-            for snapshot in snapshots:
+            for processed, snapshot in enumerate(snapshots, start=1):
                 try:
                     result = capture_snapshot(
                         context,
@@ -502,6 +547,8 @@ def main() -> None:
                     )
                     results.append(result)
                     print(json.dumps(result, ensure_ascii=False))
+                    if result["status"] in {"created", "updated"}:
+                        changed_since_checkpoint += 1
                 except Exception as exc:
                     failure = {
                         "timestamp": snapshot["timestamp"],
@@ -509,9 +556,33 @@ def main() -> None:
                     }
                     failures.append(failure)
                     print(json.dumps(failure, ensure_ascii=False))
+                    continue
+
+                if (
+                    args.checkpoint_script
+                    and changed_since_checkpoint >= args.checkpoint_every
+                    and processed < len(snapshots)
+                ):
+                    run_checkpoint(
+                        args.checkpoint_script,
+                        processed=processed,
+                        succeeded=len(results),
+                        changed=changed_since_checkpoint,
+                        final=False,
+                    )
+                    changed_since_checkpoint = 0
         finally:
             context.close()
             browser.close()
+
+    if args.checkpoint_script:
+        run_checkpoint(
+            args.checkpoint_script,
+            processed=processed,
+            succeeded=len(results),
+            changed=changed_since_checkpoint,
+            final=True,
+        )
 
     summary = {
         "requested": len(snapshots),

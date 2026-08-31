@@ -5,11 +5,33 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from backend import wayback_import
 
 
 class WaybackImportTests(unittest.TestCase):
+    def test_checkpoint_script_receives_progress_environment(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            script = Path(temp) / "checkpoint.py"
+            script.write_text("# test hook\n", encoding="utf-8")
+            with mock.patch("backend.wayback_import.subprocess.run") as run:
+                wayback_import.run_checkpoint(
+                    str(script),
+                    processed=17,
+                    succeeded=12,
+                    changed=10,
+                    final=False,
+                )
+
+            command = run.call_args.args[0]
+            env = run.call_args.kwargs["env"]
+            self.assertEqual(command[1], str(script.resolve()))
+            self.assertEqual(env["WAYBACK_CHECKPOINT_PROCESSED"], "17")
+            self.assertEqual(env["WAYBACK_CHECKPOINT_SUCCEEDED"], "12")
+            self.assertEqual(env["WAYBACK_CHECKPOINT_CHANGED"], "10")
+            self.assertEqual(env["WAYBACK_CHECKPOINT_FINAL"], "0")
+
     def test_monthly_targets_stay_in_range(self) -> None:
         targets = list(
             wayback_import.target_dates(

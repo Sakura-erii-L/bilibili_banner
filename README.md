@@ -156,7 +156,7 @@ matrixY = initialMatrixY
 
 `.github/workflows/pages.yml` 用于手工触发、普通 `main` push，或在 `Import Historical Banners` 成功完成后通过 `workflow_run` 构建并部署 Pages。后者用于解决默认 `GITHUB_TOKEN` 产生的自动提交不会再次触发 `push` workflow 的限制。
 
-`.github/workflows/wayback-import.yml` 直接运行 `backend/wayback_import.py` 自动下载：脚本或工作流更新推送后启动首次 `2018-01-01` 至今的月度回填，此后每月 2 日北京时间 `02:27` 自动补抓，也保留手工指定范围入口。它只提交变化后的 `data/`，随后由 `pages.yml` 发布，并与每日抓取共用数据写入锁。
+`.github/workflows/wayback-import.yml` 直接运行 `backend/wayback_import.py` 自动下载：脚本或工作流更新推送后启动首次 `2018-01-01` 至今的月度回填，此后每月 2 日北京时间 `02:27` 自动补抓，也保留手工指定范围入口。每累计 10 个真正创建或更新的归档，就由 `scripts/checkpoint_wayback.py` 提交并推送一次 `data/`、触发一次 Pages；末尾不足 10 个也会提交。失败和完全重复记录不计入批次。它与每日抓取共用数据写入锁，核心抓取逻辑仍位于 Python 后端，可迁移到 NAS。
 
 ## Wayback 历史导入
 
