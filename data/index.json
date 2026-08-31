@@ -1,6 +1,6 @@
 {
   "version": 10.1,
-  "generatedAt": "2026-08-31T17:17:48+08:00",
+  "generatedAt": "2026-08-31T17:21:51+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -647,6 +647,72 @@
             1080
           ],
           "manifest": "./data/archive/2021-10-01_195614_eb016ab8a745ce412ff0e64b/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-04-01_e3026f6654f3_ca1347e7",
+      "date": "2021-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "04",
+      "yearMonth": "2021-04",
+      "capturedAt": "2021-04-01T21:05:07+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "animated",
+        "interactive"
+      ],
+      "layerCount": 2,
+      "completeness": "partial",
+      "missing_assets": [
+        "6 layer asset(s)",
+        "canvas/WebGL rendering cannot be serialized as an original asset",
+        "canvas/WebGL source logic unavailable",
+        "interaction detected but no replay parameters were captured",
+        "layer_000: asset HTTP 403: https://i0.hdslb.com/bfs/vc/da55fab2e559b4458ece1f92b9060d6e1bccaac7.jpg",
+        "layer_001: asset HTTP 403: https://i0.hdslb.com/bfs/vc/c60fe2b9198b5e5bff2a95984e6e4713d437850a.jpg",
+        "layer_002: asset HTTP 403: https://i0.hdslb.com/bfs/vc/fde1b66498105fb1e578229eb0f8467ffb2af8a8.png",
+        "layer_004: asset HTTP 403: https://i0.hdslb.com/bfs/vc/988b9d12af48795d74f329aefcbc95e017ac21e4.png",
+        "layer_005: asset HTTP 403: https://i0.hdslb.com/bfs/vc/d158e27e6472ef1d9c867ae0a0b04a9ce477493f.png",
+        "layer_006: asset HTTP 403: https://i0.hdslb.com/bfs/vc/c73c48819e0437acbe706243766dcab2d306382c.png"
+      ],
+      "contentHash": "ca1347e72b61ef9199b9294d",
+      "manifest": "./data/archive/2021-04-01_210507_ca1347e72b61ef9199b9294d/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "ca1347e72b61ef9199b9294d",
+          "capturedAt": "2021-04-01T21:05:07+08:00",
+          "lastObservedAt": "2021-04-01T21:05:07+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "animated",
+            "interactive"
+          ],
+          "layerCount": 2,
+          "completeness": "partial",
+          "missing_assets": [
+            "6 layer asset(s)",
+            "canvas/WebGL rendering cannot be serialized as an original asset",
+            "canvas/WebGL source logic unavailable",
+            "interaction detected but no replay parameters were captured",
+            "layer_000: asset HTTP 403: https://i0.hdslb.com/bfs/vc/da55fab2e559b4458ece1f92b9060d6e1bccaac7.jpg",
+            "layer_001: asset HTTP 403: https://i0.hdslb.com/bfs/vc/c60fe2b9198b5e5bff2a95984e6e4713d437850a.jpg",
+            "layer_002: asset HTTP 403: https://i0.hdslb.com/bfs/vc/fde1b66498105fb1e578229eb0f8467ffb2af8a8.png",
+            "layer_004: asset HTTP 403: https://i0.hdslb.com/bfs/vc/988b9d12af48795d74f329aefcbc95e017ac21e4.png",
+            "layer_005: asset HTTP 403: https://i0.hdslb.com/bfs/vc/d158e27e6472ef1d9c867ae0a0b04a9ce477493f.png",
+            "layer_006: asset HTTP 403: https://i0.hdslb.com/bfs/vc/c73c48819e0437acbe706243766dcab2d306382c.png"
+          ],
+          "observedSlots": [
+            1260
+          ],
+          "manifest": "./data/archive/2021-04-01_210507_ca1347e72b61ef9199b9294d/banner.json"
         }
       ]
     },
