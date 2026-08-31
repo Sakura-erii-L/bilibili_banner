@@ -218,7 +218,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-08-01T21:25:28+08:00",
+  "lastObservedAt": "2019-09-02T16:41:53+08:00",
   "type": [
     "static"
   ],
@@ -391,6 +391,7 @@
   "layoutHash": "3f4544a6cbd458b81c5e471b",
   "familyId": "2019-08-01_3f4544a6cbd4_031e1fac",
   "observedSlots": [
+    900,
     1260
   ],
   "observations": [
@@ -425,6 +426,41 @@
         ],
         "stylesheetUrls": [
           "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.cdcf4c36129bdc001fec3a4fb245e5d1e490e759.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-09-02T16:41:53+08:00",
+      "lastObservedAt": "2019-09-02T16:41:53+08:00",
+      "date": "2019-09-02",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        900
+      ],
+      "familyId": "2019-09-02_3f4544a6cbd4_031e1fac",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190902084153id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190902084153",
+        "homepageWaybackTimestamp": "20190902084153",
+        "waybackReplay": "https://web.archive.org/web/20190902084153id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190901120000",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/3329c9f0abfb925ae30441f24d924ad3c19775df.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.1498c2348a643727c43fc7c979da395a130373e2.css"
         ],
         "scriptUrls": []
       }
