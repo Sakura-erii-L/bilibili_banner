@@ -1,6 +1,6 @@
 {
   "version": 10.1,
-  "generatedAt": "2026-08-31T14:32:09+08:00",
+  "generatedAt": "2026-08-31T14:32:38+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -533,6 +533,34 @@
             1080
           ],
           "manifest": "./data/archive/2020-06-01_204338_9463d0db9b6169f599af744d/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-05-01_3f4544a6cbd4_f3cc9a59",
+      "date": "2020-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "05",
+      "yearMonth": "2020-05",
+      "capturedAt": "2020-05-01T19:32:44+08:00",
+      "mode": "static",
+      "layerCount": 0,
+      "contentHash": "f3cc9a591191284c5f0d0a56",
+      "manifest": "./data/archive/2020-04-01_181300_f3cc9a591191284c5f0d0a56/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "f3cc9a591191284c5f0d0a56",
+          "capturedAt": "2020-05-01T19:32:44+08:00",
+          "lastObservedAt": "2020-05-01T19:32:44+08:00",
+          "mode": "static",
+          "layerCount": 0,
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-04-01_181300_f3cc9a591191284c5f0d0a56/banner.json"
         }
       ]
     },
