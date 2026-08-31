@@ -1,9 +1,87 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T04:03:53+08:00",
+  "generatedAt": "2026-09-01T04:12:56+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2024-03-01_ea6877c55907_7d307ba1",
+      "date": "2024-03-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "03",
+      "yearMonth": "2024-03",
+      "capturedAt": "2024-03-01T19:30:02+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 13,
+      "completeness": "partial",
+      "missing_assets": [
+        "7 API layer(s) unavailable",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "7d307ba14ac5186c21e9fc71",
+      "manifest": "./data/archive/2024-03-01_193002_7d307ba14ac5186c21e9fc71/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "7d307ba14ac5186c21e9fc71",
+          "canonicalContentHash": "70fd550b47fbf1b920144f72",
+          "sourceFingerprint": "3438e30c40d05dab91f3618b",
+          "capturedAt": "2024-03-01T19:30:02+08:00",
+          "lastObservedAt": "2024-03-01T19:30:02+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 13,
+          "completeness": "partial",
+          "missing_assets": [
+            "7 API layer(s) unavailable",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-03-01_193002_7d307ba14ac5186c21e9fc71/banner.json"
+        }
+      ]
+    },
     {
       "id": "2024-02-01_cf0d76342096_9a3b728d",
       "date": "2024-02-01",
