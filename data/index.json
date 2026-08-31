@@ -1,9 +1,49 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T00:05:31+08:00",
+  "generatedAt": "2026-09-01T00:07:35+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2019-10-01_3f4544a6cbd4_1fcf4caf",
+      "date": "2019-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "10",
+      "yearMonth": "2019-10",
+      "capturedAt": "2019-10-01T14:07:32+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "1fcf4caf73e522694147c030",
+      "manifest": "./data/archive/2019-10-01_140732_1fcf4caf73e522694147c030/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "1fcf4caf73e522694147c030",
+          "canonicalContentHash": "785be81c45a71395c0b0fe66",
+          "sourceFingerprint": "e7f720e4e886be239af98f23",
+          "capturedAt": "2019-10-01T14:07:32+08:00",
+          "lastObservedAt": "2019-10-01T14:07:32+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            720
+          ],
+          "manifest": "./data/archive/2019-10-01_140732_1fcf4caf73e522694147c030/banner.json"
+        }
+      ]
+    },
     {
       "id": "2019-09-02_3f4544a6cbd4_031e1fac",
       "date": "2019-09-02",
