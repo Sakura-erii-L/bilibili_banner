@@ -157,7 +157,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2022-05-01T20:25:02+08:00",
+  "lastObservedAt": "2022-08-01T19:17:56+08:00",
   "type": [
     "layered",
     "video"
@@ -290,6 +290,39 @@
         "headerApiTimeDeltaSeconds": 99557,
         "headerApiWaybackReplay": "https://web.archive.org/web/20220430084545id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
         "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20220424122502&to=20220508122502&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-08-01T19:17:56+08:00",
+      "lastObservedAt": "2022-08-01T19:17:56+08:00",
+      "date": "2022-08-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2022-08-01_0a6f021986f2_95177380",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20220801111756",
+        "waybackReplay": "https://web.archive.org/web/20220803142928id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20220801120000",
+        "homepageWaybackTimestamp": "20220801111756",
+        "headerApiWaybackTimestamp": "20220803142928",
+        "headerApiTimeDeltaSeconds": 184292,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20220803142928id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20220725111756&to=20220808111756&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
         "discoveredResources": [
           {
             "name": "https://activity.hdslb.com/blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
