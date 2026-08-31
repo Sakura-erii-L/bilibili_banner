@@ -1,0 +1,69 @@
+{
+  "version": 10.1,
+  "capturedAt": "2022-01-01T20:13:48+08:00",
+  "date": "2022-01-01",
+  "season": "winter",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://web.archive.org/web/20220101121348/https://www.bilibili.com/",
+    "captureMethod": "wayback-hidden-rendered-dom-sampled",
+    "waybackTimestamp": "20220101121348",
+    "waybackReplay": "https://web.archive.org/web/20220101121348/https://www.bilibili.com/",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20220101120000"
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "x": 0,
+    "y": 284,
+    "width": 1650,
+    "height": 155
+  },
+  "mode": "static",
+  "static": {
+    "src": "https://web.archive.org/web/20220101121348id_/http://i0.hdslb.com/bfs/archive/0a2ce09415fa1bd8309c7ff46c147cac1d5e8fb4.png",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "objectFit": "cover",
+    "objectPosition": "50% 0px",
+    "sourceKind": "background-image",
+    "file": "static.png"
+  },
+  "layers": [],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "x-only",
+    "effects": []
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2022-01-01T20:13:48+08:00",
+  "contentHash": "e2db8b4dbfc0d9aa83ec8cdd",
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2022-01-01_3f4544a6cbd4_e2db8b4d",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2022-01-01T20:13:48+08:00",
+      "lastObservedAt": "2022-01-01T20:13:48+08:00",
+      "date": "2022-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2022-01-01_3f4544a6cbd4_e2db8b4d",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20220101121348/https://www.bilibili.com/",
+        "captureMethod": "wayback-hidden-rendered-dom-sampled",
+        "waybackTimestamp": "20220101121348",
+        "waybackReplay": "https://web.archive.org/web/20220101121348/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20220101120000"
+      }
+    }
+  ]
+}
