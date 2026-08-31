@@ -1,0 +1,69 @@
+{
+  "version": 10.1,
+  "capturedAt": "2023-04-01T20:50:29+08:00",
+  "date": "2023-04-01",
+  "season": "spring",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://web.archive.org/web/20230401125029/https://www.bilibili.com/",
+    "captureMethod": "wayback-hidden-rendered-dom-sampled",
+    "waybackTimestamp": "20230401125029",
+    "waybackReplay": "https://web.archive.org/web/20230401125029/https://www.bilibili.com/",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20230401120000"
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "x": 8,
+    "y": 558,
+    "width": 1634,
+    "height": 266
+  },
+  "mode": "static",
+  "static": {
+    "src": "https://web.archive.org/web/20230401125029im_/https://i0.hdslb.com/bfs/archive/5d624c842e091447cf9b679d4cc6ae70d731ea06.png@3840w_360h_1c_90q.avif",
+    "naturalWidth": 1920,
+    "naturalHeight": 180,
+    "objectFit": "fill",
+    "objectPosition": "50% 50%",
+    "sourceKind": "img",
+    "file": "static.avif"
+  },
+  "layers": [],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "x-only",
+    "effects": []
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2023-04-01T20:50:29+08:00",
+  "contentHash": "e6a8746ef378de448b9cf9ba",
+  "layoutHash": "b7018db259f5ab6d50992ed9",
+  "familyId": "2023-04-01_b7018db259f5_e6a8746e",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2023-04-01T20:50:29+08:00",
+      "lastObservedAt": "2023-04-01T20:50:29+08:00",
+      "date": "2023-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2023-04-01_b7018db259f5_e6a8746e",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20230401125029/https://www.bilibili.com/",
+        "captureMethod": "wayback-hidden-rendered-dom-sampled",
+        "waybackTimestamp": "20230401125029",
+        "waybackReplay": "https://web.archive.org/web/20230401125029/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20230401120000"
+      }
+    }
+  ]
+}
