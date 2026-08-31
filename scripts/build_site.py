@@ -15,7 +15,7 @@ def build(output: Path) -> None:
     shutil.rmtree(output, ignore_errors=True)
     output.mkdir(parents=True, exist_ok=True)
 
-    for name in ("index.html", "app.js", "style.css"):
+    for name in ("index.html", "app.js", "interaction.js", "style.css"):
         shutil.copy2(FRONTEND / name, output / name)
 
     assets = FRONTEND / "assets"

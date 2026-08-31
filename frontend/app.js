@@ -1,3 +1,5 @@
+import { sampleCurve, selectTimedVariant } from "./interaction.js";
+
 const gallery = document.getElementById("gallery");
 const yearSelect = document.getElementById("year");
 const monthSelect = document.getElementById("month");
@@ -17,7 +19,6 @@ const seasonNames = {
 };
 
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
-const lerp = (a, b, t) => a + (b - a) * t;
 
 function matrixCss(m) {
   return `matrix(${m.map(v => Number(v).toFixed(8)).join(",")})`;
@@ -26,11 +27,6 @@ function matrixCss(m) {
 function formatDate(iso) {
   const [y, m, d] = iso.split("-");
   return `${y}年${m}月${d}日`;
-}
-
-function maxAbs(list) {
-  const n = Math.max(...list.map(v => Math.abs(Number(v) || 0)), 0);
-  return n || 1;
 }
 
 function resolveAsset(manifestUrl, file) {
@@ -61,7 +57,40 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
     : 1;
 
   const returnDuration = manifest.interaction?.returnDurationMs ?? 300;
+  const inputSamples = Array.isArray(manifest.interaction?.inputSamplesPx)
+    ? manifest.interaction.inputSamplesPx.map(value => Number(value) * compensate)
+    : [];
+  const returnSamples = Array.isArray(manifest.interaction?.returnSamplesMs)
+    ? manifest.interaction.returnSamplesMs.map(Number)
+    : [];
+  const sampledModel =
+    manifest.interaction?.model === "bilibili-sampled-horizontal-v1"
+    && inputSamples.length > 1;
   const nodes = [];
+
+  const zeroEffect = () => ({
+    matrix: [0, 0, 0, 0, 0, 0],
+    layerOpacity: 0,
+    mediaOpacity: 0,
+  });
+
+  const copyEffect = effect => ({
+    matrix: [...effect.matrix],
+    layerOpacity: effect.layerOpacity,
+    mediaOpacity: effect.mediaOpacity,
+  });
+
+  const addEffects = (left, right) => ({
+    matrix: left.matrix.map((value, index) => value + right.matrix[index]),
+    layerOpacity: left.layerOpacity + right.layerOpacity,
+    mediaOpacity: left.mediaOpacity + right.mediaOpacity,
+  });
+
+  const scaleEffect = (effect, scale) => ({
+    matrix: effect.matrix.map((value, index) => index === 5 ? 0 : value * scale),
+    layerOpacity: effect.layerOpacity * scale,
+    mediaOpacity: effect.mediaOpacity * scale,
+  });
 
   for (const item of manifest.layers) {
     const layer = document.createElement("div");
@@ -96,40 +125,127 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
     }
     layer.style.transform = matrixCss(initial);
 
-    if (Array.isArray(item.opacity)) {
-      layer.style.opacity = String(item.opacity[0] ?? 1);
-      media.style.opacity = String(item.opacity[1] ?? 1);
-    }
+    const initialLayerOpacity = Number(item.opacity?.[0] ?? 1);
+    const initialMediaOpacity = Number(item.opacity?.[1] ?? 1);
+    layer.style.opacity = String(initialLayerOpacity);
+    media.style.opacity = String(initialMediaOpacity);
 
     layer.appendChild(media);
     stage.appendChild(layer);
 
     nodes.push({
       layer,
+      media,
       initial,
+      initialLayerOpacity,
+      initialMediaOpacity,
+      motion: item.motion || null,
       a: Number(item.a) || 0,
+      currentEffect: zeroEffect(),
     });
   }
 
   let initX = 0;
   let moveX = 0;
-  let startTime = 0;
+  let startTime = null;
   let homeRaf = 0;
+  let moveRaf = 0;
+  let enterBaseEffects = nodes.map(() => zeroEffect());
+  let homeStartEffects = nodes.map(() => zeroEffect());
 
-  function applyMove(currentMoveX, homingProgress = null) {
-    const isHoming = typeof homingProgress === "number";
+  function sampledEffect(node, currentMoveX) {
+    if (!sampledModel || !Array.isArray(node.motion?.matrixDelta)) {
+      const effect = zeroEffect();
+      effect.matrix[4] = currentMoveX * node.a;
+      return effect;
+    }
 
-    for (const node of nodes) {
-      const m = [...node.initial];
+    const effect = zeroEffect();
+    for (let component = 0; component < 5; component += 1) {
+      const outputs = node.motion.matrixDelta.map(sample => Number(sample?.[component]) || 0);
+      const scale = component === 4 ? compensate : 1;
+      effect.matrix[component] = sampleCurve(inputSamples, outputs.map(x => x * scale), currentMoveX);
+    }
+    effect.matrix[5] = 0;
+    effect.layerOpacity = sampleCurve(
+      inputSamples,
+      node.motion.layerOpacityDelta || [],
+      currentMoveX,
+    );
+    effect.mediaOpacity = sampleCurve(
+      inputSamples,
+      node.motion.mediaOpacityDelta || [],
+      currentMoveX,
+    );
+    return effect;
+  }
 
-      const movedX = currentMoveX * node.a;
-      m[4] = isHoming
-        ? lerp(node.initial[4] + movedX, node.initial[4], homingProgress)
-        : node.initial[4] + movedX;
+  function applyEffect(node, effect) {
+    const matrix = [...node.initial];
+    for (let component = 0; component < 5; component += 1) {
+      matrix[component] = node.initial[component] + effect.matrix[component];
+    }
 
-      // Strictly horizontal interaction:
-      // m[5] is always the original Y component.
-      layerSetTransform(node.layer, m);
+    // The archived interaction is driven by horizontal pointer input only.
+    // Dynamic Y translation is never replayed.
+    matrix[5] = node.initial[5];
+    layerSetTransform(node.layer, matrix);
+    node.layer.style.opacity = String(clamp(
+      node.initialLayerOpacity + effect.layerOpacity,
+      0,
+      1,
+    ));
+    node.media.style.opacity = String(clamp(
+      node.initialMediaOpacity + effect.mediaOpacity,
+      0,
+      1,
+    ));
+    node.currentEffect = copyEffect(effect);
+  }
+
+  function applyPointerMove(currentMoveX) {
+    nodes.forEach((node, index) => {
+      const effect = addEffects(
+        enterBaseEffects[index],
+        sampledEffect(node, currentMoveX),
+      );
+      applyEffect(node, effect);
+    });
+  }
+
+  function returnRemaining(node, elapsed) {
+    const values = node.motion?.returnRemaining;
+    if (sampledModel && returnSamples.length > 1 && Array.isArray(values)) {
+      return sampleCurve(returnSamples, values, elapsed, 0);
+    }
+    if (returnDuration <= 0) return 0;
+    return clamp(1 - elapsed / returnDuration, 0, 1);
+  }
+
+  function resetAllEffects() {
+    nodes.forEach(node => applyEffect(node, zeroEffect()));
+  }
+
+  function homing(timestamp) {
+    if (startTime === null) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const duration = Math.max(
+      Number(returnDuration) || 0,
+      returnSamples.at(-1) || 0,
+    );
+
+    nodes.forEach((node, index) => {
+      applyEffect(
+        node,
+        scaleEffect(homeStartEffects[index], returnRemaining(node, elapsed)),
+      );
+    });
+
+    if (elapsed < duration) {
+      homeRaf = requestAnimationFrame(homing);
+    } else {
+      moveX = 0;
+      resetAllEffects();
     }
   }
 
@@ -137,36 +253,33 @@ function createInteractiveBanner(shell, manifest, manifestUrl) {
     layer.style.transform = matrixCss(matrix);
   }
 
-  function homing(timestamp) {
-    if (!startTime) startTime = timestamp;
-
-    const elapsed = timestamp - startTime;
-    const progress = Math.min(elapsed / returnDuration, 1);
-
-    applyMove(moveX, progress);
-
-    if (progress < 1) {
-      homeRaf = requestAnimationFrame(homing);
-    } else {
-      moveX = 0;
-      applyMove(0);
-    }
-  }
-
   shell.addEventListener("mouseenter", e => {
     cancelAnimationFrame(homeRaf);
-    initX = e.pageX;
+    cancelAnimationFrame(moveRaf);
+    initX = e.clientX;
+    enterBaseEffects = nodes.map(node => copyEffect(node.currentEffect));
   });
 
   shell.addEventListener("mousemove", e => {
-    moveX = e.pageX - initX;
-    requestAnimationFrame(() => applyMove(moveX));
+    moveX = e.clientX - initX;
+    if (moveRaf) return;
+    moveRaf = requestAnimationFrame(() => {
+      moveRaf = 0;
+      applyPointerMove(moveX);
+    });
   });
 
   shell.addEventListener("mouseleave", () => {
     cancelAnimationFrame(homeRaf);
-    startTime = 0;
-    homeRaf = requestAnimationFrame(homing);
+    cancelAnimationFrame(moveRaf);
+    moveRaf = 0;
+    startTime = null;
+    homeStartEffects = nodes.map(node => copyEffect(node.currentEffect));
+    if (returnDuration <= 0 && returnSamples.length === 0) {
+      resetAllEffects();
+    } else {
+      homeRaf = requestAnimationFrame(homing);
+    }
   });
 }
 async function loadEntry(entryEl) {
@@ -191,10 +304,31 @@ async function loadEntry(entryEl) {
   }
 }
 
+function selectedVariant(record) {
+  return selectTimedVariant(
+    record,
+    new Date(),
+    record.timeZone || indexData?.timeZone || "Asia/Shanghai",
+  );
+}
+
+function recordMeta(record, variant) {
+  const mode = variant?.mode || record.mode;
+  const layerCount = variant?.layerCount ?? record.layerCount;
+  const variantText = Number(record.variantCount || record.variants?.length || 0) > 1
+    ? ` · ${record.variantCount || record.variants.length} 个时段变体`
+    : "";
+  return `${seasonNames[record.season] || ""} · `
+    + (mode === "split" ? `${layerCount} 个图层` : "静态 Banner")
+    + variantText;
+}
+
 function createEntry(record) {
   const article = document.createElement("article");
+  const variant = selectedVariant(record);
   article.className = "entry";
-  article.dataset.manifest = record.manifest;
+  article.dataset.recordId = record.id;
+  article.dataset.manifest = variant?.manifest || record.manifest;
   const head = document.createElement("div");
   head.className = "entry-head";
 
@@ -204,9 +338,7 @@ function createEntry(record) {
 
   const meta = document.createElement("div");
   meta.className = "entry-meta";
-  meta.textContent =
-    `${seasonNames[record.season] || ""} · ` +
-    (record.mode === "split" ? `${record.layerCount} 个图层` : "静态 Banner");
+  meta.textContent = recordMeta(record, variant);
 
   const banner = document.createElement("div");
   banner.className = "banner";
@@ -215,6 +347,31 @@ function createEntry(record) {
   head.append(date, meta);
   article.append(head, banner);
   return article;
+}
+
+function refreshTimedVariants() {
+  if (!indexData?.records?.length) return;
+  const recordsById = new Map(indexData.records.map(record => [record.id, record]));
+
+  for (const article of gallery.querySelectorAll(".entry")) {
+    const record = recordsById.get(article.dataset.recordId);
+    if (!record) continue;
+    const variant = selectedVariant(record);
+    const manifest = variant?.manifest || record.manifest;
+    if (!manifest || manifest === article.dataset.manifest) continue;
+
+    article.dataset.manifest = manifest;
+    article.dataset.loaded = "0";
+    article.querySelector(".entry-meta").textContent = recordMeta(record, variant);
+    article.querySelector(".stage").innerHTML = '<div class="loading">切换时段素材……</div>';
+
+    const bounds = article.getBoundingClientRect();
+    if (bounds.bottom >= -900 && bounds.top <= window.innerHeight + 900) {
+      loadEntry(article);
+    } else {
+      observer?.observe(article);
+    }
+  }
 }
 
 function setupObserver() {
@@ -308,6 +465,7 @@ try {
   indexData = await response.json();
   populateFilters(indexData.records || []);
   render();
+  window.setInterval(refreshTimedVariants, 60_000);
 } catch (error) {
   summary.innerHTML = `<span class="error">${error.message}</span>`;
 }

@@ -2,9 +2,29 @@
 
 本文档只记录当前代码能够确认的版本特性；未从仓库历史中推断不存在的功能。
 
+## v10.1
+
+- 新增 `backend/wayback_import.py`，可从 2018 年开始按月、周或日发现 Wayback 首页快照并在 headless Chromium 中导入。
+- 历史素材 URL 强制重写为 Wayback 回放地址，浏览器阻止直接访问 `bilibili.com` 和 `hdslb.com`。
+- 支持旧版 `.head-banner`、`.header-banner`、`#banner_link`、`.banner_link` 的真实图片和 CSS `background-image`；不使用截图回退。
+- 新增 `observations`：同一实际素材跨多个历史日期只保存一个物理 archive，但索引可按多个日期引用。
+- 新增手动工作流 `wayback-import.yml`；它与每日抓取共用数据写入并发锁，只提交 `data/`，Pages 仍由 `pages.yml` 发布。
+- manifest/index 新生成版本为 `10.1`，旧 v9.2/v10 数据继续兼容。
+
+## v10
+
+- 新 Banner 使用 9 个正负水平输入点采样真实 computed matrix/opacity，不再把所有时期简化为单点线性 `a`。
+- 采样鼠标离场后的时间曲线，每个 Banner 保存自己的回位节奏；旧 v9.2 manifest 继续兼容。
+- 动态 Y 位移会以 `vertical-motion-detected` 中止，前端回放始终锁定初始 Y。
+- 同一套实际素材仍只归档一次；新的时段槽只更新已有 manifest/index。
+- 同日且布局结构相同的不同素材通过 `familyId` 归为一个 Banner，前端按 `Asia/Shanghai` 当前时刻选择最近观测变体。
+- GitHub Actions 从每天一次提高为每 3 小时采样一次。
+- `.animated-banner` 缺失但存在原始 `.bili-header__banner` 图片时可生成非截图的 `static` 记录。
+- 新增 `frontend/interaction.js` 和无依赖测试，manifest/index 新生成版本为 `10.0`。
+
 ## v9.2
 
-当前版本，重点是禁止截图掩盖分层失败：
+该版本重点是禁止截图掩盖分层失败：
 
 - `backend/capture.py` 不再生成 Banner 截图。
 - `data/index.json` 的记录不再包含 `preview` 字段。

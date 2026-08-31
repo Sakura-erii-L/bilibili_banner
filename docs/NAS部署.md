@@ -91,10 +91,10 @@ cd /volume1/bilibili-banner/app
 
 ## 4. 定时任务
 
-示例 cron（假设 NAS 本地时区为 `Asia/Shanghai`，即北京时间每天 06:17）：
+示例 cron（假设 NAS 本地时区为 `Asia/Shanghai`，即北京时间每 3 小时的第 17 分钟）：
 
 ```cron
-17 6 * * * cd /volume1/bilibili-banner/app && /volume1/bilibili-banner/app/.venv/bin/python backend/capture.py >> /volume1/bilibili-banner/logs/capture.log 2>&1 && /volume1/bilibili-banner/app/.venv/bin/python scripts/build_site.py --output /volume1/bilibili-banner/site >> /volume1/bilibili-banner/logs/build.log 2>&1
+17 */3 * * * cd /volume1/bilibili-banner/app && BANNER_TIME_SLOT_MINUTES=180 /volume1/bilibili-banner/app/.venv/bin/python backend/capture.py >> /volume1/bilibili-banner/logs/capture.log 2>&1 && /volume1/bilibili-banner/app/.venv/bin/python scripts/build_site.py --output /volume1/bilibili-banner/site >> /volume1/bilibili-banner/logs/build.log 2>&1
 ```
 
 更推荐使用小脚本或 NAS 任务计划分别记录抓取和构建日志，确保构建只在抓取成功后执行。当前程序没有跨进程任务锁，同一 `BANNER_DATA_DIR` 不应同时运行多个抓取任务。

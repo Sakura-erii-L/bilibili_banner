@@ -1,19 +1,36 @@
 {
-  "version": 9.2,
-  "generatedAt": "2026-08-30T22:11:09+08:00",
+  "version": 10.1,
+  "generatedAt": "2026-08-31T12:55:00+08:00",
+  "timeZone": "Asia/Shanghai",
+  "timeSlotMinutes": 180,
   "records": [
     {
-      "id": "2026-08-30_221101_a6c4f537bffba395ff453d64",
+      "id": "2026-08-30_603b0e5176c3_a6c4f537",
       "date": "2026-08-30",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
       "year": "2026",
       "month": "08",
       "yearMonth": "2026-08",
-      "season": "summer",
       "capturedAt": "2026-08-30T22:11:01+08:00",
       "mode": "split",
       "layerCount": 28,
       "contentHash": "a6c4f537bffba395ff453d64",
-      "manifest": "./data/archive/2026-08-30_221101_a6c4f537bffba395ff453d64/banner.json"
+      "manifest": "./data/archive/2026-08-30_221101_a6c4f537bffba395ff453d64/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "a6c4f537bffba395ff453d64",
+          "capturedAt": "2026-08-30T22:11:01+08:00",
+          "lastObservedAt": "2026-08-30T22:11:01+08:00",
+          "mode": "split",
+          "layerCount": 28,
+          "observedSlots": [
+            1260
+          ],
+          "manifest": "./data/archive/2026-08-30_221101_a6c4f537bffba395ff453d64/banner.json"
+        }
+      ]
     }
   ]
 }

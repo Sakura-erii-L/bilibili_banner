@@ -53,7 +53,7 @@ Repository → Settings → Actions → General
 `.github/workflows/daily-update.yml` 当前流程：
 
 ```text
-北京时间每天 06:17，或手工 workflow_dispatch
+北京时间每 3 小时的第 17 分钟（每天 8 次），或手工 workflow_dispatch
         ↓
 Checkout
         ↓
@@ -115,7 +115,7 @@ Actions → Daily Banner Update → Run workflow
 5. 失败时点击红色 job，展开失败的 step，复制最底部的错误信息和 `data/diagnostic.json` 相关信息；不要只看 Actions 列表上的标题。
 6. 在 `Settings → Pages` 的部署记录或成功的 `Deploy GitHub Pages` job 中点击 `page_url`；也可打开仓库的 `Settings → Pages → Visit site`。
 7. 公网首页打开后，按 `Ctrl+F5` 强制刷新。开发者工具的 Network 中应只看到当前 Pages 域名下的 `data/index.json`、manifest 和本地图片/视频，不应看到 `bilibili.com` 请求。
-8. 点击年份、月份、季节筛选，确认历史条目可加载；将鼠标在 Banner 内左右移动，确认各层只发生水平位移，离开后约 `300ms` 回位，没有上下漂移。
+8. 点击年份、月份、季节筛选，确认历史条目可加载；将鼠标在 Banner 内左右移动，确认使用该归档自己的采样效果和回位节奏，且没有动态上下漂移。
 9. 第二天若首页 Banner 实际素材相同，检查 Actions 日志的 no-op 文本，并确认没有新增 archive、`data/index.json` 没有新增 record、仓库没有新的数据 commit。
 
 Pages URL 通常为：
