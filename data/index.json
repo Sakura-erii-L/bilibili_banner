@@ -1,6 +1,6 @@
 {
   "version": 10.1,
-  "generatedAt": "2026-08-31T17:33:08+08:00",
+  "generatedAt": "2026-08-31T17:34:14+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -39,6 +39,58 @@
             1260
           ],
           "manifest": "./data/archive/2026-08-30_221101_a6c4f537bffba395ff453d64/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2025-09-01_c67914dc19b6_0927cd9a",
+      "date": "2025-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2025",
+      "month": "09",
+      "yearMonth": "2025-09",
+      "capturedAt": "2025-09-01T18:53:15+08:00",
+      "mode": "split",
+      "type": [
+        "video",
+        "animated"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "all structured Banner assets unavailable",
+        "interaction behavior unverified without a sampleable .layer model",
+        "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/a694f013976f0eaecbed692e8ef4557e1f6290ff.png",
+        "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/d726b7483307d8d8dfa38653fe415ffc78e6e2cd.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "video source detected but no original video asset was saved"
+      ],
+      "contentHash": "0927cd9a1e69bb4fede8c7d3",
+      "manifest": "./data/archive/2025-09-01_185315_0927cd9a1e69bb4fede8c7d3/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "0927cd9a1e69bb4fede8c7d3",
+          "capturedAt": "2025-09-01T18:53:15+08:00",
+          "lastObservedAt": "2025-09-01T18:53:15+08:00",
+          "mode": "split",
+          "type": [
+            "video",
+            "animated"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "all structured Banner assets unavailable",
+            "interaction behavior unverified without a sampleable .layer model",
+            "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/a694f013976f0eaecbed692e8ef4557e1f6290ff.png",
+            "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/d726b7483307d8d8dfa38653fe415ffc78e6e2cd.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "video source detected but no original video asset was saved"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2025-09-01_185315_0927cd9a1e69bb4fede8c7d3/banner.json"
         }
       ]
     },
