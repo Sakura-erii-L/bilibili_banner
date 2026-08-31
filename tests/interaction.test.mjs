@@ -1,15 +1,22 @@
 import assert from "node:assert/strict";
 
 import {
+  cubicBezierValue,
   cyclicMinuteDistance,
   sampleCurve,
   selectTimedVariant,
+  signedCubicBezier,
+  wrapDynamicValue,
 } from "../frontend/interaction.js";
 
 assert.equal(sampleCurve([0, 100], [0, 50], 50), 25);
 assert.equal(sampleCurve([0, 100], [0, 50], -10), 0);
 assert.equal(sampleCurve([0, 100], [0, 50], 120), 50);
 assert.equal(cyclicMinuteDistance(1430, 10), 20);
+assert.ok(Math.abs(cubicBezierValue([0, 0, 1, 1], 0.25) - 0.25) < 1e-5);
+assert.ok(Math.abs(signedCubicBezier([0, 0, 1, 1], -0.25) + 0.25) < 1e-5);
+assert.equal(wrapDynamicValue(1.2, "clamp"), 1);
+assert.ok(Math.abs(wrapDynamicValue(1.2, "alternate") - 0.8) < 1e-9);
 
 const record = {
   variants: [

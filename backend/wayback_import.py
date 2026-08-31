@@ -21,8 +21,10 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 
 try:
     from . import capture as core
+    from .providers import bilibili_header_api as header_api
 except ImportError:
     import capture as core
+    from providers import bilibili_header_api as header_api
 
 
 ORIGINAL_PAGE = "https://www.bilibili.com/"
@@ -260,6 +262,70 @@ def is_direct_bilibili_request(url: str) -> bool:
         or host == "bilivideo.com"
         or host.endswith(".bilivideo.com")
     )
+
+
+def fetch_archived_header_api(
+    timestamp: str,
+    replay_base: str,
+) -> tuple[dict[str, Any], str]:
+    errors: list[str] = []
+    for endpoint in header_api.DEFAULT_ENDPOINTS:
+        replay = archived_asset_url(timestamp, endpoint, replay_base)
+        try:
+            payload = read_json(replay, attempts=2)
+            if not isinstance(payload, dict):
+                raise RuntimeError("archived Header API payload is not an object")
+            if payload.get("code") not in (None, 0):
+                raise RuntimeError(
+                    f"archived Header API returned code={payload.get('code')}"
+                )
+            if not isinstance(payload.get("data"), dict):
+                raise RuntimeError("archived Header API payload has no data object")
+            parsed = header_api.parse_header_api(payload, endpoint)
+            return parsed, replay
+        except Exception as exc:
+            errors.append(f"{endpoint}: {exc}")
+    raise RuntimeError("; ".join(errors) or "no archived Header API endpoint available")
+
+
+def capture_snapshot_api(
+    snapshot: dict[str, str],
+    *,
+    replay_base: str,
+    force: bool,
+) -> dict[str, Any]:
+    timestamp = snapshot["timestamp"]
+    moment = snapshot_moment(timestamp)
+    api_data, api_replay = fetch_archived_header_api(timestamp, replay_base)
+    print(
+        f"Wayback Header API {timestamp}: "
+        f"split={api_data.get('is_split_layer')}, "
+        f"layers={len(api_data.get('layers') or [])}"
+    )
+    result = core.capture_header_api_payload(
+        api_data,
+        moment=moment,
+        force=force,
+        update_current=False,
+        record_observation=True,
+        source_extra={
+            "captureMethod": "wayback-header-api",
+            "waybackTimestamp": timestamp,
+            "waybackReplay": api_replay,
+            "availabilityUrl": snapshot.get("availabilityUrl"),
+        },
+        asset_url_candidates=lambda src: archived_asset_candidates(
+            timestamp, src, replay_base
+        ),
+        referer=api_replay,
+    )
+    return {
+        "timestamp": timestamp,
+        "status": result["status"],
+        "contentHash": result["contentHash"],
+        "archive": str(result["archive"]),
+        "captureMethod": "wayback-header-api",
+    }
 
 
 def describe_banner_dom(page) -> list[dict[str, Any]]:
@@ -522,7 +588,7 @@ def capture_snapshot(
             "source": {
                 "page": ORIGINAL_PAGE,
                 "resolvedUrl": page.url,
-                "captureMethod": "wayback-hidden-rendered-dom-sampled",
+                "captureMethod": "wayback-dom-fallback",
                 "waybackTimestamp": timestamp,
                 "waybackReplay": url,
                 "availabilityUrl": snapshot.get("availabilityUrl"),
@@ -564,8 +630,8 @@ def main() -> None:
     today = dt.datetime.now(ZoneInfo(core.TIMEZONE)).date()
     parser = argparse.ArgumentParser(
         description=(
-            "Headlessly import real Bilibili Banner assets from Wayback snapshots. "
-            "No screenshots are created and direct Bilibili requests are blocked."
+            "Import Bilibili Banner assets from Wayback. Archived Header API JSON "
+            "is tried first; hidden DOM recovery is only a fallback. No screenshots are created."
         )
     )
     parser.add_argument("--from-date", default=MIN_BACKFILL_DATE.isoformat())
@@ -656,8 +722,17 @@ def main() -> None:
     failures: list[dict[str, str]] = []
     changed_since_checkpoint = 0
     processed = 0
-    system_browser = core.find_system_browser()
-    with sync_playwright() as playwright:
+    playwright = None
+    browser = None
+    context = None
+    page = None
+
+    def ensure_dom_browser():
+        nonlocal playwright, browser, context, page
+        if context is not None and page is not None:
+            return context, page
+        system_browser = core.find_system_browser()
+        playwright = sync_playwright().start()
         launch_kwargs: dict[str, Any] = {
             "headless": True,
             "args": [
@@ -683,45 +758,64 @@ def main() -> None:
 
         context.route("**/*", route_request)
         page = context.new_page()
-        try:
-            for processed, snapshot in enumerate(snapshots, start=1):
+        return context, page
+
+    try:
+        for processed, snapshot in enumerate(snapshots, start=1):
+            try:
                 try:
-                    result = capture_snapshot(
-                        context,
-                        page,
+                    result = capture_snapshot_api(
                         snapshot,
                         replay_base=args.replay_base,
                         force=args.force,
                     )
-                    results.append(result)
-                    print(json.dumps(result, ensure_ascii=False))
-                    if result["status"] in {"created", "updated"}:
-                        changed_since_checkpoint += 1
-                except Exception as exc:
-                    failure = {
-                        "timestamp": snapshot["timestamp"],
-                        "error": str(exc),
-                    }
-                    failures.append(failure)
-                    print(json.dumps(failure, ensure_ascii=False))
-                    continue
-
-                if (
-                    args.checkpoint_script
-                    and changed_since_checkpoint >= args.checkpoint_every
-                    and processed < len(snapshots)
-                ):
-                    run_checkpoint(
-                        args.checkpoint_script,
-                        processed=processed,
-                        succeeded=len(results),
-                        changed=changed_since_checkpoint,
-                        final=False,
+                except Exception as api_exc:
+                    print(
+                        f"Archived Header API unavailable for {snapshot['timestamp']}: "
+                        f"{api_exc}. Falling back to archived DOM."
                     )
-                    changed_since_checkpoint = 0
-        finally:
+                    dom_context, dom_page = ensure_dom_browser()
+                    result = capture_snapshot(
+                        dom_context,
+                        dom_page,
+                        snapshot,
+                        replay_base=args.replay_base,
+                        force=args.force,
+                    )
+                    result["captureMethod"] = "wayback-dom-fallback"
+                results.append(result)
+                print(json.dumps(result, ensure_ascii=False))
+                if result["status"] in {"created", "updated"}:
+                    changed_since_checkpoint += 1
+            except Exception as exc:
+                failure = {
+                    "timestamp": snapshot["timestamp"],
+                    "error": str(exc),
+                }
+                failures.append(failure)
+                print(json.dumps(failure, ensure_ascii=False))
+                continue
+
+            if (
+                args.checkpoint_script
+                and changed_since_checkpoint >= args.checkpoint_every
+                and processed < len(snapshots)
+            ):
+                run_checkpoint(
+                    args.checkpoint_script,
+                    processed=processed,
+                    succeeded=len(results),
+                    changed=changed_since_checkpoint,
+                    final=False,
+                )
+                changed_since_checkpoint = 0
+    finally:
+        if context is not None:
             context.close()
+        if browser is not None:
             browser.close()
+        if playwright is not None:
+            playwright.stop()
 
     if args.checkpoint_script:
         run_checkpoint(

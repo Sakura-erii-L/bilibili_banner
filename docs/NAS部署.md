@@ -1,5 +1,9 @@
 # NAS 部署
 
+## v11 NAS 运行变化（2026-08-31）
+
+仅运行当前 Banner 自动抓取时，`python backend/capture.py` 不需要本地浏览器，可直接作为定时任务运行。只有 `--verify-dom`、`--legacy-dom-capture` 或 Wayback DOM fallback 才需要 Edge/Chrome/Playwright Chromium。现有 `scripts/update_linux.sh` 无需改变入口。
+
 NAS 版本与 GitHub Pages 共用 `backend/`、`frontend/`、`data/` 和 `scripts/`。NAS 负责抓取和构建，Nginx/Caddy 只提供 `_site/` 静态文件。
 
 ## 1. 推荐目录

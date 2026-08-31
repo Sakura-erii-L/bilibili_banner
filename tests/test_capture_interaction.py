@@ -251,7 +251,7 @@ class TimedVariantIndexTests(unittest.TestCase):
 
         capture.rebuild_index()
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
-        self.assertEqual(index["version"], 10.1)
+        self.assertEqual(index["version"], 11.0)
         self.assertEqual(len(index["records"]), 1)
         self.assertEqual(index["records"][0]["variantCount"], 2)
         self.assertEqual(

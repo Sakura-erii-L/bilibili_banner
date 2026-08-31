@@ -1,6 +1,6 @@
 @echo off
 cd /d "%~dp0\.."
-title Bilibili Banner v9.2
+title Bilibili Banner v11.0
 
 python --version >nul 2>&1
 if not errorlevel 1 (
@@ -26,7 +26,7 @@ if errorlevel 1 (
   if errorlevel 1 goto fail
 )
 
-echo [1/3] Fetching current banner in hidden mode...
+echo [1/3] Fetching current banner from Header API...
 %PY% backend\capture.py
 if errorlevel 1 goto fail
 

@@ -1,5 +1,9 @@
 # Wayback 历史 Banner 导入
 
+## v11 历史导入优先级（2026-08-31）
+
+每个 Wayback 首页快照现在先尝试同时间附近归档的 Header API JSON，并复用当前 Banner 的 `split_layer` parser。只有 API 不存在、不可解析，或声明分层但无法恢复任何主 layer 时，才懒启动隐藏 Playwright 解析历史 DOM。DOM fallback 仍禁止截图/flatten；Wayback workflow 因此仍需安装 Chromium。
+
 ## 1. 能导入什么
 
 `backend/wayback_import.py` 使用 Internet Archive 的 Availability API 查找 `https://www.bilibili.com/` 历史快照，再在始终 headless 的 Chromium 中打开 Wayback 回放页。

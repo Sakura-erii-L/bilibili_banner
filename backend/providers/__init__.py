@@ -1,0 +1,1 @@
+"""External Banner metadata providers."""

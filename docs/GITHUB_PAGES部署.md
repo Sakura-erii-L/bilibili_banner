@@ -1,5 +1,9 @@
 # GitHub Pages 部署
 
+## v11 自动化变化（2026-08-31）
+
+`Daily Banner Update` 默认只走 Header API，因此日常 workflow 不再安装 Playwright Chromium，抓取后仍按原逻辑提交 `data/` 并部署 Pages。`Import Historical Banners` 仍保留 Chromium，因为 Wayback API 缺失时需要 DOM fallback。Pages 前端只读取仓库内本地资源，不回源 Bilibili CDN/API。
+
 本项目发布的是 `scripts/build_site.py` 生成的纯静态目录 `_site/`。GitHub Pages 只负责托管前端和仓库内的归档数据，不运行 Python 后端，也不让用户浏览器回源 Bilibili。
 
 ## 1. 仓库准备

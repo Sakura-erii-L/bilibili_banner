@@ -9,12 +9,19 @@ import os
 import re
 import shutil
 import tempfile
+import urllib.error
 import urllib.parse
+import urllib.request
 from pathlib import Path
 from typing import Any, Callable
 from zoneinfo import ZoneInfo
 
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+
+try:
+    from .providers import bilibili_header_api as header_api
+except ImportError:
+    from providers import bilibili_header_api as header_api
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -39,6 +46,8 @@ USER_AGENT = (
 )
 
 BANNER_WAIT_MS = 18000
+MANIFEST_VERSION = 11.0
+HEADER_REFERENCE_HEIGHT = 155
 MOTION_PROBE_PX = 1600
 MOTION_SAMPLE_FRACTIONS = (-1.0, -0.75, -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0)
 MOTION_ENTER_SETTLE_MS = 80
@@ -821,6 +830,394 @@ def sample_interaction(page, geometry: dict[str, float]) -> tuple[list[dict[str,
     return initial_layers, interaction, motions
 
 
+
+def _download_http_asset(
+    src: str,
+    folder: Path,
+    stem: str,
+    *,
+    referer: str = SITE,
+    timeout: int = 45,
+) -> dict[str, Any]:
+    requested_src = header_api.absolute_asset_url(src)
+    if not requested_src:
+        raise ValueError("empty asset URL")
+    if requested_src.startswith(("blob:", "data:")):
+        raise ValueError(f"Header API asset is not directly downloadable: {requested_src[:32]}")
+    request = urllib.request.Request(
+        requested_src,
+        headers={
+            "Accept": "*/*",
+            "Referer": referer,
+            "User-Agent": USER_AGENT,
+        },
+    )
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        body = response.read()
+        content_type = str(response.headers.get("content-type") or "")
+    ext = header_api.extension_for_url(requested_src, content_type)
+    filename = f"{stem}{ext}"
+    (folder / filename).write_bytes(body)
+    return {
+        "src": src,
+        "requestedSrc": requested_src,
+        "normalizedIdentity": header_api.normalized_identity(src),
+        "file": filename,
+        "contentType": content_type,
+        "tag": header_api.infer_tag(requested_src, content_type),
+    }
+
+
+def _save_api_source(folder: Path, payload: dict[str, Any]) -> str:
+    source_dir = folder / "source"
+    source_dir.mkdir(parents=True, exist_ok=True)
+    path = source_dir / "api.json"
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return "source/api.json"
+
+
+def _api_evidence(api_data: dict[str, Any], layers: list[dict[str, Any]]) -> dict[str, Any]:
+    saved_resources = [
+        resource
+        for layer in layers
+        for resource in (layer.get("resources") or [])
+        if isinstance(resource, dict)
+    ]
+    declared_resources = [
+        resource for resource in (api_data.get("resources") or [])
+        if isinstance(resource, dict)
+    ]
+    effects = header_api.interaction_effects(api_data.get("layers") or [])
+    declared_urls = [str(resource.get("src") or "") for resource in declared_resources]
+    return {
+        "root": {"source": "bilibili-header-api", "endpoint": api_data.get("endpoint", "")},
+        "layerCount": len(api_data.get("layers") or []),
+        "mediaCount": len(declared_resources),
+        "visibleMediaCount": len(declared_resources),
+        "media": [],
+        "resourceUrls": [
+            {"name": src, "initiatorType": "header-api"}
+            for src in declared_urls
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": [],
+        "animationCss": "",
+        "signals": {
+            "isSplitLayer": bool(api_data.get("is_split_layer")),
+            "hasVideo": any(header_api.infer_tag(src) == "video" for src in declared_urls),
+            "hasCanvas": False,
+            "hasSvg": any(header_api.infer_tag(src) == "svg" for src in declared_urls),
+            "hasSvgAnimation": False,
+            "hasCssAnimation": False,
+            "hasInteraction": bool(effects),
+            "hasDynamicSource": any(header_api.infer_tag(src) == "video" for src in declared_urls),
+        },
+        "api": {
+            "endpoint": api_data.get("endpoint", ""),
+            "id": api_data.get("id"),
+            "request_id": api_data.get("request_id"),
+            "isSplitLayer": bool(api_data.get("is_split_layer")),
+            "layerCount": len(api_data.get("layers") or []),
+            "assetCount": len(declared_resources),
+            "savedAssetCount": len(saved_resources),
+            "effects": effects,
+        },
+    }
+
+
+def _build_api_layers(
+    api_data: dict[str, Any],
+    folder: Path,
+    *,
+    asset_url_candidates: Callable[[str], list[str]] | None = None,
+    referer: str = SITE,
+) -> tuple[list[dict[str, Any]], list[str]]:
+    saved: dict[str, dict[str, Any]] = {}
+    layers: list[dict[str, Any]] = []
+    missing: list[str] = []
+    api_layers = api_data.get("layers") or []
+
+    for layer_index, api_layer in enumerate(api_layers):
+        if not isinstance(api_layer, dict):
+            missing.append(f"api_layer_{layer_index:03d}: invalid layer object")
+            continue
+        manifest_resources: list[dict[str, Any]] = []
+        resources = api_layer.get("resources") or []
+        if not isinstance(resources, list):
+            resources = []
+
+        for resource_index, resource in enumerate(resources):
+            if not isinstance(resource, dict):
+                continue
+            original_src = header_api.absolute_asset_url(str(resource.get("src") or ""))
+            if not original_src:
+                missing.append(
+                    f"api_layer_{layer_index:03d}_resource_{resource_index:03d}: source missing"
+                )
+                continue
+            candidates = asset_url_candidates(original_src) if asset_url_candidates else [original_src]
+            downloaded: dict[str, Any] | None = None
+            last_error: Exception | None = None
+            for candidate in candidates:
+                identity = header_api.normalized_identity(candidate)
+                if identity in saved:
+                    downloaded = dict(saved[identity])
+                    downloaded["src"] = original_src
+                    downloaded["requestedSrc"] = candidate
+                    break
+                try:
+                    digest = hashlib.sha1(candidate.encode("utf-8")).hexdigest()[:10]
+                    downloaded = _download_http_asset(
+                        candidate,
+                        folder,
+                        f"api_layer_{layer_index:02d}_{resource_index:02d}_{digest}",
+                        referer=referer,
+                    )
+                    saved[identity] = dict(downloaded)
+                    downloaded["src"] = original_src
+                    break
+                except Exception as exc:
+                    last_error = exc
+            if not downloaded:
+                missing.append(
+                    f"api_layer_{layer_index:03d}_resource_{resource_index:03d}: {last_error}"
+                )
+                continue
+            manifest_resources.append(
+                {
+                    **downloaded,
+                    "resourceIndex": resource_index,
+                    "id": resource.get("id"),
+                    "duration": resource.get("duration"),
+                    "apiResource": resource,
+                }
+            )
+
+        if not manifest_resources:
+            missing.append(f"api_layer_{layer_index:03d}: no resource saved")
+            continue
+
+        first = manifest_resources[0]
+        api_config = {
+            key: api_layer.get(key) or {}
+            for key in ("scale", "rotate", "translate", "blur", "opacity")
+        }
+        layers.append(
+            {
+                "index": layer_index,
+                "apiIndex": layer_index,
+                "id": api_layer.get("id"),
+                "name": api_layer.get("name") or "",
+                "tag": first.get("tag") or "img",
+                "assetType": media_type(
+                    str(first.get("tag") or "img"),
+                    str(first.get("requestedSrc") or first.get("src") or ""),
+                    str(first.get("contentType") or ""),
+                ),
+                "src": first.get("src") or "",
+                "file": first.get("file") or "",
+                "contentType": first.get("contentType") or "",
+                "resources": manifest_resources,
+                "apiConfig": api_config,
+                "apiLayer": api_layer,
+                # Legacy renderer fields remain neutral; the v11 API renderer
+                # consumes apiConfig directly.
+                "width": 0,
+                "height": 0,
+                "naturalWidth": 0,
+                "naturalHeight": 0,
+                "objectFit": "fill",
+                "objectPosition": "50% 50%",
+                "transformOrigin": "50% 50%",
+                "transform": [1, 0, 0, 1, 0, 0],
+                "opacity": [1, float((api_config.get("opacity") or {}).get("initial", 1) or 0)],
+                "position": {},
+                "zIndex": layer_index,
+                "animation": {},
+                "animationTarget": "media",
+                "motion": None,
+                "a": 0,
+                "captureTargetTag": first.get("tag") or "img",
+            }
+        )
+    return layers, sorted(set(missing))
+
+
+def _capture_fallback_asset(
+    api_data: dict[str, Any],
+    folder: Path,
+    *,
+    asset_url_candidates: Callable[[str], list[str]] | None = None,
+    referer: str = SITE,
+) -> tuple[dict[str, Any] | None, list[str]]:
+    src = str(api_data.get("pic") or "")
+    if not src:
+        return None, []
+    candidates = asset_url_candidates(src) if asset_url_candidates else [src]
+    last_error: Exception | None = None
+    for candidate in candidates:
+        try:
+            item = _download_http_asset(candidate, folder, "static", referer=referer)
+            item["src"] = src
+            item["sourceKind"] = "header-api-pic"
+            item["assetType"] = media_type(item["tag"], candidate, item["contentType"])
+            item["naturalWidth"] = 0
+            item["naturalHeight"] = 0
+            item["objectFit"] = "cover"
+            item["objectPosition"] = "50% 50%"
+            return item, []
+        except Exception as exc:
+            last_error = exc
+    return None, [f"fallback pic: {last_error}"]
+
+
+def _save_litpic(
+    api_data: dict[str, Any],
+    folder: Path,
+    *,
+    asset_url_candidates: Callable[[str], list[str]] | None = None,
+    referer: str = SITE,
+) -> dict[str, Any] | None:
+    src = str(api_data.get("litpic") or "")
+    if not src:
+        return None
+    candidates = asset_url_candidates(src) if asset_url_candidates else [src]
+    for candidate in candidates:
+        try:
+            item = _download_http_asset(candidate, folder, "litpic", referer=referer)
+            item["src"] = src
+            return item
+        except Exception:
+            continue
+    return None
+
+
+def capture_header_api_payload(
+    api_data: dict[str, Any],
+    *,
+    moment: dt.datetime,
+    force: bool,
+    update_current: bool,
+    record_observation: bool = False,
+    source_extra: dict[str, Any] | None = None,
+    asset_url_candidates: Callable[[str], list[str]] | None = None,
+    referer: str = SITE,
+    verify_report: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+    temp = Path(tempfile.mkdtemp(prefix=".capture_api_", dir=DATA_DIR))
+    try:
+        source_files = {"json": _save_api_source(temp, api_data["raw"])}
+        if verify_report:
+            verify_path = temp / "source" / "dom-verification.json"
+            verify_path.write_text(
+                json.dumps(verify_report, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            source_files["domVerification"] = "source/dom-verification.json"
+
+        layers, missing_assets = _build_api_layers(
+            api_data,
+            temp,
+            asset_url_candidates=asset_url_candidates,
+            referer=referer,
+        )
+        static, static_missing = _capture_fallback_asset(
+            api_data,
+            temp,
+            asset_url_candidates=asset_url_candidates,
+            referer=referer,
+        )
+        missing_assets.extend(static_missing)
+        litpic = _save_litpic(
+            api_data,
+            temp,
+            asset_url_candidates=asset_url_candidates,
+            referer=referer,
+        )
+        extensions = api_data.get("extensions") or {}
+        if extensions:
+            missing_assets.append(
+                "Header API extensions preserved but not replayed: "
+                + ", ".join(sorted(str(key) for key in extensions))
+            )
+
+        is_split = bool(api_data.get("is_split_layer"))
+        expected_layers = len(api_data.get("layers") or [])
+        mode = "split" if is_split or expected_layers else "static"
+        effects = header_api.interaction_effects(api_data.get("layers") or [])
+        interaction = {
+            "model": "bilibili-header-api-v1" if mode == "split" else "none",
+            "positionAxis": "horizontal-normalized-from-entry",
+            "inputMode": "relative-from-pointer-enter",
+            "displacementFormula": "(clientX-enterX)/containerWidth",
+            "containerReferenceHeight": HEADER_REFERENCE_HEIGHT,
+            "returnDurationMs": 200,
+            "effects": effects,
+        }
+
+        evidence = _api_evidence(api_data, layers)
+        if expected_layers and len(layers) < expected_layers:
+            missing_assets.append(f"{expected_layers - len(layers)} API layer(s) unavailable")
+        if mode == "split" and not layers:
+            raise RuntimeError("Header API declared a split Banner but no layer resource was recoverable")
+        if mode == "static" and not static:
+            raise RuntimeError("Header API returned no recoverable static Banner asset")
+
+        source = {
+            "page": SITE,
+            "resolvedUrl": api_data.get("endpoint") or "",
+            "captureMethod": "bilibili-header-api",
+            "headerApi": api_data.get("endpoint") or "",
+        }
+        if source_extra:
+            source.update(source_extra)
+        manifest: dict[str, Any] = {
+            "version": MANIFEST_VERSION,
+            "capturedAt": moment.isoformat(timespec="seconds"),
+            "date": moment.strftime("%Y-%m-%d"),
+            "season": season_of(moment.month),
+            "source": source,
+            "viewport": VIEWPORT,
+            "banner": {"referenceHeight": HEADER_REFERENCE_HEIGHT},
+            "mode": mode,
+            "static": static,
+            "layers": layers,
+            "interaction": interaction,
+            "sourceFiles": source_files,
+            "api": {
+                "endpoint": api_data.get("endpoint") or "",
+                "id": api_data.get("id"),
+                "name": api_data.get("name") or "",
+                "request_id": api_data.get("request_id"),
+                "isSplitLayer": is_split,
+                "layerCount": expected_layers,
+                "assetCount": len(api_data.get("resources") or []),
+                "pic": api_data.get("pic") or "",
+                "litpic": api_data.get("litpic") or "",
+                "litpicAsset": litpic,
+                "splitVersion": (api_data.get("split_layer") or {}).get("version"),
+                "extensions": extensions,
+            },
+            "timeZone": TIMEZONE,
+            "lastObservedAt": moment.isoformat(timespec="seconds"),
+        }
+        enrich_manifest_metadata(manifest, evidence, missing_assets=missing_assets)
+        return archive_capture(
+            temp,
+            manifest,
+            moment=moment,
+            force=force,
+            update_current=update_current,
+            record_observation=record_observation,
+        )
+    finally:
+        shutil.rmtree(temp, ignore_errors=True)
+
 def capture_static(
     page,
     context,
@@ -1195,6 +1592,27 @@ def calculate_manifest_hashes(folder: Path, manifest: dict[str, Any]) -> dict[st
     resources: list[dict[str, Any]] = []
     layers = manifest.get("layers") or []
     for layer in sorted(layers, key=lambda item: int(item.get("index", 0))):
+        layer_resources = layer.get("resources")
+        if isinstance(layer_resources, list) and layer_resources:
+            for resource_index, resource in enumerate(layer_resources):
+                if not isinstance(resource, dict):
+                    continue
+                file = str(resource.get("file") or "")
+                path = folder / file if file else None
+                if not path or not path.exists():
+                    continue
+                resources.append(
+                    {
+                        "role": "layer-resource",
+                        "index": int(layer.get("index", 0)),
+                        "resourceIndex": int(resource.get("resourceIndex", resource_index) or 0),
+                        "type": resource.get("tag") or layer.get("assetType") or "other",
+                        "sha256": sha256_file(path),
+                        "size": path.stat().st_size,
+                        "duration": resource.get("duration"),
+                    }
+                )
+            continue
         file = str(layer.get("file") or "")
         path = folder / file if file else None
         if not path or not path.exists():
@@ -1237,12 +1655,25 @@ def calculate_manifest_hashes(folder: Path, manifest: dict[str, Any]) -> dict[st
         "banner": manifest.get("banner") or {},
         "layers": [
             {
-                key: layer.get(key)
+                key: (
+                    [
+                        {
+                            "resourceIndex": resource.get("resourceIndex", resource_index),
+                            "id": resource.get("id"),
+                            "duration": resource.get("duration"),
+                            "tag": resource.get("tag"),
+                        }
+                        for resource_index, resource in enumerate(layer.get("resources") or [])
+                        if isinstance(resource, dict)
+                    ]
+                    if key == "resources" else layer.get(key)
+                )
                 for key in (
-                    "index", "assetType", "tag", "width", "height",
+                    "index", "id", "name", "assetType", "tag", "width", "height",
                     "naturalWidth", "naturalHeight", "position", "transform",
                     "transformOrigin", "opacity", "zIndex", "objectFit",
-                    "objectPosition", "animation", "animationTarget",
+                    "objectPosition", "animation", "animationTarget", "apiConfig",
+                    "resources",
                 )
                 if key in layer
             }
@@ -1260,6 +1691,13 @@ def calculate_manifest_hashes(folder: Path, manifest: dict[str, Any]) -> dict[st
             "signals": (manifest.get("structureEvidence") or {}).get("signals") or {},
         },
     }
+    api_summary = manifest.get("api") or {}
+    if api_summary:
+        structure["api"] = {
+            key: api_summary.get(key)
+            for key in ("id", "name", "isSplitLayer", "layerCount", "assetCount", "splitVersion")
+            if key in api_summary
+        }
     structure_hash = _json_hash(structure)
     unknown_interaction = bool(
         ((manifest.get("structureEvidence") or {}).get("signals") or {}).get("hasInteraction")
@@ -1274,6 +1712,7 @@ def calculate_manifest_hashes(folder: Path, manifest: dict[str, Any]) -> dict[st
                 "index": layer.get("index"),
                 "motion": layer.get("motion"),
                 "animation": layer.get("animation"),
+                **({"apiConfig": layer.get("apiConfig")} if "apiConfig" in layer else {}),
             }
             for layer in sorted(layers, key=lambda item: int(item.get("index", 0)))
         ],
@@ -1338,7 +1777,15 @@ def enrich_manifest_metadata(
 
     missing_values = [str(item) for item in (missing_assets or [])]
     saved_video = static.get("assetType") == "video" and static.get("file") or any(
-        layer.get("assetType") == "video" and layer.get("file") for layer in layers
+        (
+            layer.get("assetType") == "video" and layer.get("file")
+        ) or any(
+            isinstance(resource, dict)
+            and resource.get("tag") == "video"
+            and resource.get("file")
+            for resource in (layer.get("resources") or [])
+        )
+        for layer in layers
     )
     if has_video and not saved_video:
         missing_values.append("video source detected but no original video asset was saved")
@@ -1374,16 +1821,33 @@ def enrich_manifest_metadata(
             }
         )
     for layer in layers:
-        assets.append(
-            {
-                "role": "layer",
-                "index": layer.get("index"),
-                "type": layer.get("assetType") or layer.get("tag") or "other",
-                "src": layer.get("src", ""),
-                "local_file": layer.get("file", ""),
-                "content_type": layer.get("contentType", ""),
-            }
-        )
+        layer_resources = layer.get("resources")
+        if isinstance(layer_resources, list) and layer_resources:
+            for resource_index, resource in enumerate(layer_resources):
+                if not isinstance(resource, dict):
+                    continue
+                assets.append(
+                    {
+                        "role": "layer",
+                        "index": layer.get("index"),
+                        "resourceIndex": resource.get("resourceIndex", resource_index),
+                        "type": resource.get("tag") or layer.get("assetType") or "other",
+                        "src": resource.get("src", ""),
+                        "local_file": resource.get("file", ""),
+                        "content_type": resource.get("contentType", ""),
+                    }
+                )
+        else:
+            assets.append(
+                {
+                    "role": "layer",
+                    "index": layer.get("index"),
+                    "type": layer.get("assetType") or layer.get("tag") or "other",
+                    "src": layer.get("src", ""),
+                    "local_file": layer.get("file", ""),
+                    "content_type": layer.get("contentType", ""),
+                }
+            )
 
     for media in evidence.get("media") or []:
         src = str(media.get("src") or "")
@@ -1598,7 +2062,7 @@ def merge_duplicate_metadata(
     for field in (
         "type", "is_split_layer", "fallback_image", "preview_image",
         "completeness", "missing_assets", "structureEvidence", "assets", "hashes",
-        "sourceFiles", "animationCss",
+        "sourceFiles", "animationCss", "api",
     ):
         if field in fresh and field not in archived:
             archived[field] = fresh[field]
@@ -1636,12 +2100,12 @@ def merge_duplicate_metadata(
     archived_model = (archived.get("interaction") or {}).get("model")
     fresh_model = (fresh.get("interaction") or {}).get("model")
     should_refresh_effect = force or (
-        fresh_model == "bilibili-sampled-horizontal-v1"
-        and archived_model != "bilibili-sampled-horizontal-v1"
+        fresh_model in {"bilibili-sampled-horizontal-v1", "bilibili-header-api-v1"}
+        and archived_model != fresh_model
     )
 
     if should_refresh_effect and len(archived.get("layers", [])) == len(fresh.get("layers", [])):
-        archived["version"] = 10.1
+        archived["version"] = fresh.get("version", archived.get("version", 10.1))
         archived["interaction"] = fresh.get("interaction")
         archived["banner"] = fresh.get("banner")
         archived["viewport"] = fresh.get("viewport")
@@ -1656,6 +2120,12 @@ def merge_duplicate_metadata(
             "motion",
             "a",
             "captureTargetTag",
+            "resources",
+            "apiConfig",
+            "apiLayer",
+            "apiIndex",
+            "id",
+            "name",
         )
         for old_layer, new_layer in zip(archived["layers"], fresh["layers"]):
             for field in layer_fields:
@@ -1739,7 +2209,7 @@ def archive_capture(
 ) -> dict[str, Any]:
     hashes = calculate_manifest_hashes(temp_dir, manifest)
     content_hash = hashes["contentHash"]
-    manifest["version"] = 10.1
+    manifest["version"] = manifest.get("version", 10.1)
     manifest["contentHash"] = content_hash
     manifest["hashes"] = hashes
     for asset in manifest.get("assets") or []:
@@ -1892,7 +2362,7 @@ def rebuild_index() -> None:
     records.sort(key=lambda item: item["capturedAt"], reverse=True)
 
     payload = {
-        "version": 10.1,
+        "version": MANIFEST_VERSION,
         "generatedAt": now_local().isoformat(timespec="seconds"),
         "timeZone": TIMEZONE,
         "timeSlotMinutes": TIME_SLOT_MINUTES,
@@ -1923,7 +2393,7 @@ def save_diagnostic(page, *, reason: str, before=None, after=None) -> None:
     )
 
 
-def capture(*, force: bool) -> int:
+def _capture_dom_sampled(*, force: bool) -> int:
     """
     Always headless.
     No local/GitHub/NAS mode is allowed to pop open a visible Bilibili page.
@@ -2180,22 +2650,157 @@ def capture(*, force: bool) -> int:
                 shutil.rmtree(profile_dir, ignore_errors=True)
 
 
+
+def verify_header_api_against_dom(api_data: dict[str, Any]) -> dict[str, Any]:
+    """Optional hidden DOM verification. It never drives the archive renderer model."""
+    system_browser = find_system_browser()
+    profile_dir = Path(tempfile.mkdtemp(prefix="bilibili-banner-verify-"))
+    report: dict[str, Any] = {
+        "status": "unverified",
+        "apiLayerCount": len(api_data.get("layers") or []),
+        "apiResources": [item.get("normalizedIdentity") for item in api_data.get("resources") or []],
+    }
+    try:
+        with sync_playwright() as p:
+            launch_kwargs: dict[str, Any] = {
+                "user_data_dir": str(profile_dir),
+                "headless": True,
+                "viewport": VIEWPORT,
+                "user_agent": USER_AGENT,
+                "locale": "zh-CN",
+                "args": [
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-first-run",
+                    "--no-default-browser-check",
+                ],
+            }
+            if system_browser:
+                launch_kwargs["executable_path"] = system_browser
+            context = p.chromium.launch_persistent_context(**launch_kwargs)
+            page = context.pages[0] if context.pages else context.new_page()
+            try:
+                page.goto(SITE, wait_until="domcontentloaded", timeout=60000)
+                try:
+                    page.wait_for_function(
+                        """() => document.querySelectorAll('.animated-banner .layer').length > 0
+                            || document.querySelector('.bili-header__banner img')""",
+                        timeout=BANNER_WAIT_MS,
+                    )
+                except PlaywrightTimeoutError:
+                    pass
+                page.wait_for_timeout(800)
+                dom_layers = read_layers(page)
+                evidence = inspect_banner_structure(page)
+                dom_identities = sorted(
+                    {
+                        header_api.normalized_identity(str(item.get("src") or ""))
+                        for item in dom_layers
+                        if item.get("src")
+                    }
+                )
+                api_identities = sorted(
+                    {
+                        str(item.get("normalizedIdentity") or "")
+                        for item in api_data.get("resources") or []
+                        if item.get("normalizedIdentity")
+                    }
+                )
+                common = sorted(set(dom_identities) & set(api_identities))
+                report.update(
+                    {
+                        "status": "matched" if (
+                            (not api_data.get("is_split_layer") and not dom_layers)
+                            or bool(common)
+                            or len(dom_layers) == len(api_data.get("layers") or [])
+                        ) else "mismatch",
+                        "resolvedUrl": page.url,
+                        "domLayerCount": len(dom_layers),
+                        "domEvidenceLayerCount": int(evidence.get("layerCount") or 0),
+                        "domResources": dom_identities,
+                        "matchedResources": common,
+                        "apiOnlyResources": sorted(set(api_identities) - set(dom_identities)),
+                        "domOnlyResources": sorted(set(dom_identities) - set(api_identities)),
+                    }
+                )
+            finally:
+                context.close()
+    except Exception as exc:
+        report.update({"status": "error", "error": str(exc)})
+    finally:
+        shutil.rmtree(profile_dir, ignore_errors=True)
+    return report
+
+
+def capture(*, force: bool, verify_dom: bool = False) -> int:
+    """API-first capture path.
+
+    Header API metadata is authoritative for current Banner composition. Playwright
+    is used only when ``verify_dom`` is explicitly requested.
+    """
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+    now = now_local()
+    print("Fetching current Bilibili banner from Header API...")
+    endpoint, payload = header_api.fetch_header_api(
+        user_agent=USER_AGENT,
+        referer=SITE,
+    )
+    api_data = header_api.parse_header_api(payload, endpoint)
+    print(
+        "Header API metadata: "
+        f"split={api_data['is_split_layer']}, "
+        f"layers={len(api_data.get('layers') or [])}, "
+        f"assets={len(api_data.get('resources') or [])}"
+    )
+    verify_report = None
+    if verify_dom:
+        print("Running optional hidden DOM verification (no motion sampling)...")
+        verify_report = verify_header_api_against_dom(api_data)
+        print(json.dumps({"domVerification": verify_report.get("status")}, ensure_ascii=False))
+
+    result = capture_header_api_payload(
+        api_data,
+        moment=now,
+        force=force,
+        update_current=True,
+        verify_report=verify_report,
+    )
+    content_hash = result["contentHash"]
+    if result["status"] == "updated":
+        print(f"Updated existing API Banner metadata: {content_hash}")
+    elif result["status"] == "unchanged":
+        print(f"No Banner content change: {content_hash}")
+    else:
+        print(f"Captured new API Banner: {content_hash}")
+        print(f"Archive: {result['archive']}")
+    return 0
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "Headlessly capture and archive the current Bilibili homepage banner. "
-            "This program never opens a visible Bilibili browser window."
+            "Capture the current Bilibili homepage Banner from the official Header API. "
+            "A hidden browser is used only with --verify-dom or --legacy-dom-capture."
         )
     )
     parser.add_argument(
         "--force",
         action="store_true",
-        help="refresh interaction metadata without duplicating identical assets",
+        help="refresh matching archive metadata without duplicating identical assets",
     )
     parser.add_argument(
         "--rebuild-index",
         action="store_true",
         help="rebuild data/index.json from existing archive only",
+    )
+    parser.add_argument(
+        "--verify-dom",
+        action="store_true",
+        help="optionally compare Header API resources with the hidden homepage DOM",
+    )
+    parser.add_argument(
+        "--legacy-dom-capture",
+        action="store_true",
+        help="use the pre-v11 full DOM sampling capture path for diagnostics only",
     )
     args = parser.parse_args()
 
@@ -2204,7 +2809,10 @@ def main() -> None:
         print("Rebuilt data/index.json")
         return
 
-    capture(force=args.force)
+    if args.legacy_dom_capture:
+        _capture_dom_sampled(force=args.force)
+    else:
+        capture(force=args.force, verify_dom=args.verify_dom)
 
 
 if __name__ == "__main__":

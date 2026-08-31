@@ -84,3 +84,60 @@ export function selectTimedVariant(
 
   return selected;
 }
+
+function cubicBezierCoordinate(t, p1, p2) {
+  const inv = 1 - t;
+  return 3 * inv * inv * t * p1 + 3 * inv * t * t * p2 + t * t * t;
+}
+
+function cubicBezierDerivative(t, p1, p2) {
+  const inv = 1 - t;
+  return 3 * inv * inv * p1 + 6 * inv * t * (p2 - p1) + 3 * t * t * (1 - p2);
+}
+
+export function cubicBezierValue(curve, input) {
+  if (!Array.isArray(curve) || curve.length < 4) return Number(input) || 0;
+  const [x1, y1, x2, y2] = curve.map(Number);
+  if (![x1, y1, x2, y2].every(Number.isFinite)) return Number(input) || 0;
+
+  const x = Math.max(0, Math.min(1, Number(input) || 0));
+  let t = x;
+  for (let i = 0; i < 8; i += 1) {
+    const currentX = cubicBezierCoordinate(t, x1, x2) - x;
+    if (Math.abs(currentX) < 1e-7) break;
+    const derivative = cubicBezierDerivative(t, x1, x2);
+    if (Math.abs(derivative) < 1e-7) break;
+    t = Math.max(0, Math.min(1, t - currentX / derivative));
+  }
+
+  let low = 0;
+  let high = 1;
+  for (let i = 0; i < 12; i += 1) {
+    const currentX = cubicBezierCoordinate(t, x1, x2);
+    if (Math.abs(currentX - x) < 1e-7) break;
+    if (currentX < x) low = t;
+    else high = t;
+    t = (low + high) / 2;
+  }
+  return cubicBezierCoordinate(t, y1, y2);
+}
+
+export function signedCubicBezier(curve, input) {
+  const value = Number(input) || 0;
+  if (!Array.isArray(curve) || curve.length < 4) return value;
+  return Math.sign(value) * cubicBezierValue(curve, Math.abs(value));
+}
+
+export function wrapDynamicValue(value, wrap = "clamp", min = 0, max = 1) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return min;
+  if (wrap === "alternate") {
+    const width = max - min;
+    if (width <= 0) return min;
+    const normalized = (number - min) / width;
+    const cycle = ((normalized % 2) + 2) % 2;
+    const folded = cycle <= 1 ? cycle : 2 - cycle;
+    return min + folded * width;
+  }
+  return Math.max(min, Math.min(max, number));
+}

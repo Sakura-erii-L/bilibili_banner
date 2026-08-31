@@ -31,14 +31,30 @@ def audit(data_dir: Path) -> dict[str, object]:
         signals = evidence.get("signals") or {}
         expected_layers = int(evidence.get("layerCount") or 0)
         visible_media = int(evidence.get("visibleMediaCount") or 0)
+        api = manifest.get("api") or {}
+        api_split = bool(api.get("isSplitLayer"))
+        api_expected_layers = int(api.get("layerCount") or 0)
+        api_expected_assets = int(api.get("assetCount") or 0)
         if (manifest.get("mode") == "split" or "layered" in types) and not layers:
             issues.append({"archive": folder.name, "reason": "layered-without-layers"})
+        if api_split and not layers:
+            issues.append({"archive": folder.name, "reason": "api-split-layer-without-saved-layers"})
+        if api_split and manifest.get("mode") != "split":
+            issues.append({"archive": folder.name, "reason": "api-split-layer-marked-non-split"})
+        if api_split and (manifest.get("interaction") or {}).get("model") != "bilibili-header-api-v1":
+            issues.append({"archive": folder.name, "reason": "api-split-layer-without-api-renderer"})
         if "static" in types and ("layered" in types or "video" in types):
             issues.append({"archive": folder.name, "reason": "structured-content-marked-static"})
         if expected_layers > len(layers):
             warnings.append({
                 "archive": folder.name,
                 "reason": f"missing-layers:{expected_layers - len(layers)}",
+            })
+        if api_expected_layers > len(layers):
+            target = issues if manifest.get("completeness") == "complete" else warnings
+            target.append({
+                "archive": folder.name,
+                "reason": f"api-missing-layers:{api_expected_layers - len(layers)}",
             })
         if (expected_layers > 1 or visible_media > 1) and not layers and manifest.get("static"):
             issues.append({
@@ -47,20 +63,50 @@ def audit(data_dir: Path) -> dict[str, object]:
             })
         if signals.get("hasVideo") and "video" not in types:
             issues.append({"archive": folder.name, "reason": "video-evidence-without-video-type"})
-        saved_video = any(
-            (layer.get("assetType") == "video" or layer.get("tag") == "video")
-            and layer.get("file")
-            for layer in layers
-        ) or bool(
+        saved_video = False
+        saved_api_assets = 0
+        for layer in layers:
+            resources = layer.get("resources") or []
+            if isinstance(resources, list) and resources:
+                for resource in resources:
+                    if not isinstance(resource, dict):
+                        continue
+                    file = str(resource.get("file") or "")
+                    if file and (folder / file).is_file():
+                        saved_api_assets += 1
+                        if (
+                            resource.get("tag") == "video"
+                            or str(resource.get("contentType") or "").lower().startswith("video/")
+                            or str(file).lower().endswith((".webm", ".mp4", ".m3u8"))
+                        ):
+                            saved_video = True
+            elif (
+                (layer.get("assetType") == "video" or layer.get("tag") == "video")
+                and layer.get("file")
+            ):
+                saved_video = True
+        if (
             ((manifest.get("static") or {}).get("assetType") == "video"
              or (manifest.get("static") or {}).get("tag") == "video")
             and (manifest.get("static") or {}).get("file")
-        )
-        if signals.get("hasVideo") and not saved_video and manifest.get("static"):
+        ):
+            saved_video = True
+        if signals.get("hasVideo") and not saved_video and not layers and manifest.get("static"):
             issues.append({
                 "archive": folder.name,
                 "reason": "video-banner-flattened-to-static",
             })
+        if api_expected_assets > saved_api_assets:
+            target = issues if manifest.get("completeness") == "complete" else warnings
+            target.append({
+                "archive": folder.name,
+                "reason": f"api-missing-assets:{api_expected_assets - saved_api_assets}",
+            })
+        if api_split:
+            for asset in manifest.get("assets") or []:
+                if asset.get("role") == "primary" and asset.get("local_file") == (manifest.get("static") or {}).get("file"):
+                    issues.append({"archive": folder.name, "reason": "api-pic-used-as-primary"})
+                    break
         for layer in layers:
             file = str(layer.get("file") or "")
             if not file or not (folder / file).is_file():
@@ -68,6 +114,20 @@ def audit(data_dir: Path) -> dict[str, object]:
                     "archive": folder.name,
                     "reason": f"missing-layer-file:{layer.get('index', '?')}",
                 })
+            resources = layer.get("resources") or []
+            if isinstance(resources, list):
+                for resource_index, resource in enumerate(resources):
+                    if not isinstance(resource, dict):
+                        continue
+                    resource_file = str(resource.get("file") or "")
+                    if not resource_file or not (folder / resource_file).is_file():
+                        issues.append({
+                            "archive": folder.name,
+                            "reason": (
+                                f"missing-layer-resource:{layer.get('index', '?')}:"
+                                f"{resource.get('resourceIndex', resource_index)}"
+                            ),
+                        })
         static_file = str((manifest.get("static") or {}).get("file") or "")
         if static_file and not (folder / static_file).is_file():
             issues.append({"archive": folder.name, "reason": "missing-static-file"})

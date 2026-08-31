@@ -1,4 +1,4 @@
-import { sampleCurve, selectTimedVariant } from "./interaction.js";
+import { sampleCurve, selectTimedVariant, signedCubicBezier, wrapDynamicValue } from "./interaction.js";
 
 const gallery = document.getElementById("gallery");
 const yearSelect = document.getElementById("year");
@@ -48,7 +48,244 @@ function applyAnimation(element, animation) {
   element.style.transitionTimingFunction = animation.transitionTimingFunction || "";
 }
 
+
+function createHeaderApiBanner(shell, manifest, manifestUrl) {
+  const stage = shell.querySelector(".stage");
+  stage.innerHTML = "";
+  stage.classList.add("animated-banner");
+
+  const referenceHeight = Number(manifest.interaction?.containerReferenceHeight) || 155;
+  const returnDuration = Number(manifest.interaction?.returnDurationMs) || 200;
+  const nodes = [];
+
+  const configNumber = (config, key, fallback = 0) => {
+    const value = Number(config?.[key]);
+    return Number.isFinite(value) ? value : fallback;
+  };
+
+  const curveValue = (config, displacement) => {
+    const curve = config?.offsetCurve;
+    return Array.isArray(curve) && curve.length >= 4
+      ? signedCubicBezier(curve, displacement)
+      : displacement;
+  };
+
+  function mediaElement(resource) {
+    const isVideo = resource.tag === "video"
+      || /^video\//i.test(resource.contentType || "")
+      || /\.(?:webm|mp4|m3u8)(?:$|\?)/i.test(resource.file || "");
+    const element = document.createElement(isVideo ? "video" : "img");
+    element.src = resolveAsset(manifestUrl, resource.file);
+    element.draggable = false;
+    element.alt = "";
+    element.style.display = "block";
+    element.style.maxWidth = "none";
+    element.style.maxHeight = "none";
+    if (isVideo) {
+      element.autoplay = true;
+      element.loop = true;
+      element.muted = true;
+      element.playsInline = true;
+    }
+    return element;
+  }
+
+  for (const item of manifest.layers || []) {
+    const resources = Array.isArray(item.resources) && item.resources.length
+      ? item.resources.filter(resource => resource?.file)
+      : (item.file ? [{
+          file: item.file,
+          tag: item.tag,
+          contentType: item.contentType,
+          duration: 0,
+        }] : []);
+    if (!resources.length) continue;
+
+    const layer = document.createElement("div");
+    layer.className = "layer api-layer";
+    layer.style.zIndex = String(Number(item.zIndex ?? item.index) || 0);
+
+    const mediaHost = document.createElement("div");
+    mediaHost.className = "api-layer-media";
+    mediaHost.style.display = "flex";
+    mediaHost.style.alignItems = "center";
+    mediaHost.style.justifyContent = "center";
+    mediaHost.style.willChange = "transform, filter, opacity";
+    mediaHost.style.transformOrigin = "50% 50%";
+
+    const mediaItems = resources.map(resource => {
+      const element = mediaElement(resource);
+      element.style.display = "none";
+      mediaHost.appendChild(element);
+      return {
+        resource,
+        element,
+        naturalWidth: 0,
+        naturalHeight: 0,
+      };
+    });
+    mediaItems[0].element.style.display = "block";
+
+    const config = item.apiConfig || {};
+    const initialOpacity = configNumber(config.opacity, "initial", 1);
+    mediaHost.style.opacity = String(initialOpacity);
+    layer.appendChild(mediaHost);
+    stage.appendChild(layer);
+
+    const durations = mediaItems.map(entry => Math.max(0, Number(entry.resource.duration) || 0));
+    const frameAnimation = mediaItems.length > 1 && durations.every(duration => duration > 0);
+    const loopDuration = durations.reduce((sum, value) => sum + value, 0);
+
+    const node = {
+      layer,
+      mediaHost,
+      mediaItems,
+      config,
+      currentDisplacement: 0,
+      frameAnimation,
+      durations,
+      loopDuration,
+      frameRaf: 0,
+    };
+    nodes.push(node);
+
+    const rememberNaturalSize = entry => {
+      const target = entry.element;
+      entry.naturalWidth = Number(target.naturalWidth || target.videoWidth || 0);
+      entry.naturalHeight = Number(target.naturalHeight || target.videoHeight || 0);
+      updateNodeSize(node);
+    };
+    mediaItems.forEach(entry => {
+      entry.element.addEventListener("load", () => rememberNaturalSize(entry));
+      entry.element.addEventListener("loadedmetadata", () => rememberNaturalSize(entry));
+      if (entry.element.complete || entry.element.readyState >= 1) rememberNaturalSize(entry);
+    });
+  }
+
+  function updateNodeSize(node) {
+    const containerScale = Math.max(stage.clientHeight, 1) / referenceHeight;
+    const rawInitialScale = node.config.scale?.initial;
+    const initialScale = rawInitialScale === undefined ? 1 : Number(rawInitialScale);
+    for (const entry of node.mediaItems) {
+      if (entry.naturalWidth > 0) {
+        entry.element.style.width = `${entry.naturalWidth * containerScale * initialScale}px`;
+      }
+      if (entry.naturalHeight > 0) {
+        entry.element.style.height = `${entry.naturalHeight * containerScale * initialScale}px`;
+      }
+    }
+    applyApiDisplacement(node, node.currentDisplacement);
+  }
+
+  function applyApiDisplacement(node, displacement) {
+    node.currentDisplacement = displacement;
+    const config = node.config;
+    const containerScale = Math.max(stage.clientHeight, 1) / referenceHeight;
+    const rawInitialScale = config.scale?.initial;
+    const initialScale = rawInitialScale === undefined ? 1 : Number(rawInitialScale);
+    const translateScale = Number(rawInitialScale) || 1;
+
+    const scale = 1 + configNumber(config.scale, "offset", 0)
+      * curveValue(config.scale, displacement);
+    const rotate = configNumber(config.rotate, "initial", 0)
+      + configNumber(config.rotate, "offset", 0) * curveValue(config.rotate, displacement);
+
+    const translateInitial = Array.isArray(config.translate?.initial)
+      ? config.translate.initial.map(Number)
+      : [0, 0];
+    const translateOffset = Array.isArray(config.translate?.offset)
+      ? config.translate.offset.map(Number)
+      : [0, 0];
+    const translateCurve = curveValue(config.translate, displacement);
+    const translateX = ((translateInitial[0] || 0) + (translateOffset[0] || 0) * translateCurve)
+      * containerScale * translateScale;
+    const translateY = ((translateInitial[1] || 0) + (translateOffset[1] || 0) * translateCurve)
+      * containerScale * translateScale;
+
+    const blurRaw = configNumber(config.blur, "initial", 0)
+      + configNumber(config.blur, "offset", 0) * curveValue(config.blur, displacement);
+    const blur = config.blur?.wrap === "alternate" ? Math.abs(blurRaw) : Math.max(0, blurRaw);
+    const opacityRaw = configNumber(config.opacity, "initial", 1)
+      + configNumber(config.opacity, "offset", 0) * curveValue(config.opacity, displacement);
+    const opacity = wrapDynamicValue(opacityRaw, config.opacity?.wrap || "clamp", 0, 1);
+
+    node.mediaHost.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px) rotate(${rotate}deg)`;
+    node.mediaHost.style.filter = blur < 1e-4 ? "" : `blur(${blur}px)`;
+    node.mediaHost.style.opacity = String(opacity);
+  }
+
+  function animateFrames(node, timestamp) {
+    if (!node.frameAnimation || node.loopDuration <= 0) return;
+    const elapsed = timestamp % node.loopDuration;
+    let cursor = 0;
+    let index = node.mediaItems.length - 1;
+    for (let i = 0; i < node.durations.length; i += 1) {
+      cursor += node.durations[i];
+      if (elapsed < cursor) {
+        index = i;
+        break;
+      }
+    }
+    node.mediaItems.forEach((entry, itemIndex) => {
+      entry.element.style.display = itemIndex === index ? "block" : "none";
+    });
+    node.frameRaf = requestAnimationFrame(next => animateFrames(node, next));
+  }
+
+  nodes.forEach(node => {
+    updateNodeSize(node);
+    if (node.frameAnimation) node.frameRaf = requestAnimationFrame(ts => animateFrames(node, ts));
+  });
+
+  let enterX = 0;
+  let current = 0;
+  let moveRaf = 0;
+  let returnRaf = 0;
+
+  shell.addEventListener("mouseenter", event => {
+    cancelAnimationFrame(returnRaf);
+    enterX = event.clientX;
+  });
+
+  shell.addEventListener("mousemove", event => {
+    const width = Math.max(stage.clientWidth, 1);
+    current = (event.clientX - enterX) / width;
+    if (moveRaf) return;
+    moveRaf = requestAnimationFrame(() => {
+      moveRaf = 0;
+      nodes.forEach(node => applyApiDisplacement(node, current));
+    });
+  });
+
+  shell.addEventListener("mouseleave", () => {
+    cancelAnimationFrame(moveRaf);
+    cancelAnimationFrame(returnRaf);
+    moveRaf = 0;
+    const start = performance.now();
+    const from = current;
+    const returnHome = timestamp => {
+      const progress = returnDuration <= 0
+        ? 1
+        : clamp((timestamp - start) / returnDuration, 0, 1);
+      current = from * (1 - progress);
+      nodes.forEach(node => applyApiDisplacement(node, current));
+      if (progress < 1) returnRaf = requestAnimationFrame(returnHome);
+    };
+    returnRaf = requestAnimationFrame(returnHome);
+  });
+
+  const resizeObserver = typeof ResizeObserver === "function"
+    ? new ResizeObserver(() => nodes.forEach(updateNodeSize))
+    : null;
+  if (resizeObserver) resizeObserver.observe(stage);
+}
+
 function createInteractiveBanner(shell, manifest, manifestUrl) {
+  if (manifest.interaction?.model === "bilibili-header-api-v1" && manifest.layers?.length) {
+    createHeaderApiBanner(shell, manifest, manifestUrl);
+    return;
+  }
+
   const stage = shell.querySelector(".stage");
   stage.innerHTML = "";
   stage.classList.add("animated-banner");

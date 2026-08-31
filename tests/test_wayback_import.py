@@ -115,6 +115,28 @@ class WaybackImportTests(unittest.TestCase):
             ],
         )
 
+
+    def test_archived_header_api_is_requested_through_wayback_raw_replay(self) -> None:
+        payload = {
+            "code": 0,
+            "data": {
+                "is_split_layer": 1,
+                "split_layer": json.dumps({"version": "1", "layers": []}),
+            },
+        }
+        with mock.patch("backend.wayback_import.read_json", return_value=payload) as read_json:
+            parsed, replay = wayback_import.fetch_archived_header_api(
+                "20230101120000",
+                "https://web.archive.org/web",
+            )
+        expected = (
+            "https://web.archive.org/web/20230101120000id_/"
+            "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142"
+        )
+        self.assertEqual(read_json.call_args.args[0], expected)
+        self.assertEqual(replay, expected)
+        self.assertTrue(parsed["is_split_layer"])
+
     def test_direct_bilibili_and_hdslb_requests_are_blocked(self) -> None:
         self.assertTrue(
             wayback_import.is_direct_bilibili_request("https://www.bilibili.com/")

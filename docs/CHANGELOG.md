@@ -1,5 +1,15 @@
 # 变更记录
 
+## v11.0 - 2026-08-31
+
+- 当前 Banner 改为 Header API-first；默认抓取不启动浏览器。
+- 新增 `backend/providers/bilibili_header_api.py`，解析 `split_layer` 并保存所有 `resources[]`。
+- 前端新增 `bilibili-header-api-v1` renderer，支持 scale/rotate/translate/blur/opacity、cubic-bezier、多帧和视频。
+- `pic` 在分层 Banner 中仅作为 fallback，新增 API-specific audit 防 flatten。
+- Wayback 改为 archived Header API first，失败才启动 DOM fallback。
+- manifest/index 升级 v11.0，同时保持旧 v9/v10 哈希和 renderer 兼容。
+- Daily workflow 不再安装 Chromium；Wayback workflow 继续保留浏览器 fallback。
+
 ## 当前结构化归档更新
 
 - 历史回填下限改为 `2019-08-01`；清理其它旧 archive 后从该日期重新采集，只保留 `2026-08-30` 基线。
