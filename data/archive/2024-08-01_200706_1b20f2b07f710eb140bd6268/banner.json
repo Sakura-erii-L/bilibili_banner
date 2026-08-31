@@ -1,0 +1,1951 @@
+{
+  "version": 11.0,
+  "capturedAt": "2024-08-01T20:07:06+08:00",
+  "date": "2024-08-01",
+  "season": "summer",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "captureMethod": "wayback-header-api",
+    "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "waybackTimestamp": "20240801120706",
+    "waybackReplay": "https://web.archive.org/web/20240801120941id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20240801120000",
+    "provider": "wayback-header-api",
+    "provenance": {
+      "primaryProvider": "wayback-header-api",
+      "supportingProviders": [],
+      "confidence": "high",
+      "agreement": {},
+      "conflicts": []
+    },
+    "homepageWaybackTimestamp": "20240801120706",
+    "headerApiWaybackTimestamp": "20240801120941",
+    "headerApiTimeDeltaSeconds": 155,
+    "headerApiWaybackReplay": "https://web.archive.org/web/20240801120941id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20240725120706&to=20240808120706&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+    "discoveredResources": [
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/09d0855b6b6d6965e8f02404777986237848c6c9.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/40878bbef514e2d4bf5d660fe1145c869567bec2.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/c13ca9c6405c71bf864ed2bc421680cb437f45ef.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/a43c6833d262301373234ffbd6934559d2ce7fb2.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/ce8c5e45230a6d3805baf60f5916f1cd441aac8e.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/cd68251cde11936871237ca94360acb451bf7ed2.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/426073f920477b718b8aee5ec141aca3889500f7.webm",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "wayback-header-api",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/e5b7fca0c001cbe0b77a2956e4c861d9f19c4575.png",
+    "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/archive/e5b7fca0c001cbe0b77a2956e4c861d9f19c4575.png",
+    "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/archive/e5b7fca0c001cbe0b77a2956e4c861d9f19c4575.png",
+    "file": "static.png",
+    "contentType": "image/png",
+    "tag": "img",
+    "sourceKind": "header-api-pic",
+    "assetType": "image",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  "layers": [
+    {
+      "index": 0,
+      "apiIndex": 0,
+      "id": 0,
+      "name": "19-背景水",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+      "file": "api_layer_00_00_5638ea01a8.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+          "file": "api_layer_00_00_5638ea01a8.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.54
+        },
+        "rotate": {},
+        "translate": {},
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.54
+        },
+        "rotate": {},
+        "translate": {},
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 0,
+        "name": "19-背景水"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 1,
+      "apiIndex": 1,
+      "id": 1,
+      "name": "18-再远景",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+      "file": "api_layer_01_00_97ed6137f6.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+          "file": "api_layer_01_00_97ed6137f6.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.53
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            10,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.53
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            10,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 1,
+        "name": "18-再远景"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 1,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 2,
+      "apiIndex": 2,
+      "id": 3,
+      "name": "16-远景房子1",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+      "file": "api_layer_02_00_ab4294a920.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+          "file": "api_layer_02_00_ab4294a920.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.55
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            10,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.55
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            10,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 3,
+        "name": "16-远景房子1"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 2,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 3,
+      "apiIndex": 3,
+      "id": 4,
+      "name": "15-两侧房子",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+      "file": "api_layer_03_00_bab21264a4.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+          "file": "api_layer_03_00_bab21264a4.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            30,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            30,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 4,
+        "name": "15-两侧房子"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 3,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 4,
+      "apiIndex": 4,
+      "id": 2,
+      "name": "17-远景鲸鱼机",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+      "file": "api_layer_04_00_4182ed70a4.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+          "file": "api_layer_04_00_4182ed70a4.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.55,
+          "offset": 0.2
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            30,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.55,
+          "offset": 0.2
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            30,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 2,
+        "name": "17-远景鲸鱼机"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 4,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 7,
+      "apiIndex": 7,
+      "id": 7,
+      "name": "12-机场",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+      "file": "api_layer_07_00_4d6503610e.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+          "file": "api_layer_07_00_4d6503610e.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.54
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            80,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.54
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            80,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 7,
+        "name": "12-机场"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 7,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 8,
+      "apiIndex": 8,
+      "id": 8,
+      "name": "11-空姐",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+      "file": "api_layer_08_00_7dcc12afdd.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+          "file": "api_layer_08_00_7dcc12afdd.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            120,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            120,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 8,
+        "name": "11-空姐"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 8,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 12,
+      "apiIndex": 12,
+      "id": 12,
+      "name": "07-近路人",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+      "file": "api_layer_12_00_ec44f444f1.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+          "file": "api_layer_12_00_ec44f444f1.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            200,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            200,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 12,
+        "name": "07-近路人"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 12,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 13,
+      "apiIndex": 13,
+      "id": 21,
+      "name": "右气泡",
+      "tag": "video",
+      "assetType": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+      "file": "api_layer_13_00_ec545b5104.webm",
+      "contentType": "video/webm",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+          "file": "api_layer_13_00_ec545b5104.webm",
+          "contentType": "video/webm",
+          "tag": "video",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.5
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1000,
+            0
+          ],
+          "offset": [
+            20,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.5
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1000,
+            0
+          ],
+          "offset": [
+            20,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 21,
+        "name": "右气泡"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 13,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    },
+    {
+      "index": 14,
+      "apiIndex": 14,
+      "id": 13,
+      "name": "06-两侧前景植物",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+      "file": "api_layer_14_00_dee96597e1.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+          "file": "api_layer_14_00_dee96597e1.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            300,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            300,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 13,
+        "name": "06-两侧前景植物"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 14,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 15,
+      "apiIndex": 15,
+      "id": 15,
+      "name": "04-顶部摸鱼牌子",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+      "file": "api_layer_15_00_552fb0ed5a.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+          "file": "api_layer_15_00_552fb0ed5a.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            280,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            280,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 15,
+        "name": "04-顶部摸鱼牌子"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 15,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 16,
+      "apiIndex": 16,
+      "id": 16,
+      "name": "03-泡泡02",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+      "file": "api_layer_16_00_7afbafd47b.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+          "file": "api_layer_16_00_7afbafd47b.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            300,
+            130
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            300,
+            130
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 16,
+        "name": "03-泡泡02"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 16,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 17,
+      "apiIndex": 17,
+      "id": 17,
+      "name": "02-泡泡01",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+      "file": "api_layer_17_00_cc95a82a3a.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+          "file": "api_layer_17_00_cc95a82a3a.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            200,
+            0
+          ],
+          "offset": [
+            350,
+            20
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.52
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            200,
+            0
+          ],
+          "offset": [
+            350,
+            20
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 17,
+        "name": "02-泡泡01"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 17,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 20,
+      "apiIndex": 20,
+      "id": 20,
+      "name": "左气泡",
+      "tag": "video",
+      "assetType": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+      "file": "api_layer_20_00_83b548082c.webm",
+      "contentType": "video/webm",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+          "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+          "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+          "file": "api_layer_20_00_83b548082c.webm",
+          "contentType": "video/webm",
+          "tag": "video",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {},
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -700,
+            0
+          ],
+          "offset": [
+            30,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+            "id": 0
+          }
+        ],
+        "scale": {},
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -700,
+            0
+          ],
+          "offset": [
+            30,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 20,
+        "name": "左气泡"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 20,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    }
+  ],
+  "interaction": {
+    "model": "bilibili-header-api-v1",
+    "positionAxis": "horizontal-normalized-from-entry",
+    "inputMode": "relative-from-pointer-enter",
+    "displacementFormula": "(clientX-enterX)/containerWidth",
+    "containerReferenceHeight": 155,
+    "returnDurationMs": 200,
+    "effects": [
+      "scale",
+      "translate"
+    ]
+  },
+  "sourceFiles": {
+    "json": "source/api.json"
+  },
+  "api": {
+    "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "id": null,
+    "name": "",
+    "request_id": "1722514181",
+    "isSplitLayer": true,
+    "layerCount": 21,
+    "assetCount": 21,
+    "pic": "https://i0.hdslb.com/bfs/archive/e5b7fca0c001cbe0b77a2956e4c861d9f19c4575.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+    "litpicAsset": {
+      "src": "https://i0.hdslb.com/bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "requestedSrc": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "normalizedIdentity": "https://web.archive.org/web/20240801120941id_/https://i0.hdslb.com/bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "file": "litpic.png",
+      "contentType": "image/png",
+      "tag": "img"
+    },
+    "splitVersion": "1",
+    "extensions": {}
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2024-08-01T20:07:06+08:00",
+  "type": [
+    "layered",
+    "video",
+    "interactive"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "static.png",
+  "preview_image": null,
+  "completeness": "partial",
+  "missing_assets": [
+    "7 API layer(s) unavailable",
+    "api_layer_005: no resource saved",
+    "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_006: no resource saved",
+    "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_009: no resource saved",
+    "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_010: no resource saved",
+    "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_011: no resource saved",
+    "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_018: no resource saved",
+    "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_019: no resource saved",
+    "api_layer_019_resource_000: HTTP Error 403: Forbidden"
+  ],
+  "structureEvidence": {
+    "root": {
+      "source": "bilibili-header-api",
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142"
+    },
+    "layerCount": 21,
+    "mediaCount": 21,
+    "visibleMediaCount": 21,
+    "media": [],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/09d0855b6b6d6965e8f02404777986237848c6c9.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/40878bbef514e2d4bf5d660fe1145c869567bec2.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/c13ca9c6405c71bf864ed2bc421680cb437f45ef.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/a43c6833d262301373234ffbd6934559d2ce7fb2.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/ce8c5e45230a6d3805baf60f5916f1cd441aac8e.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/cd68251cde11936871237ca94360acb451bf7ed2.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/426073f920477b718b8aee5ec141aca3889500f7.webm",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": true,
+      "hasVideo": true,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": true,
+      "hasDynamicSource": true
+    },
+    "api": {
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+      "id": null,
+      "request_id": "1722514181",
+      "isSplitLayer": true,
+      "layerCount": 21,
+      "assetCount": 21,
+      "savedAssetCount": 14,
+      "effects": [
+        "scale",
+        "translate"
+      ]
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/e5b7fca0c001cbe0b77a2956e4c861d9f19c4575.png",
+      "local_file": "static.png",
+      "content_type": "image/png",
+      "sha256": "ac2977da378da5205be793b4a0c302216d03db8d01afdf854caa241909c00dd4"
+    },
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+      "local_file": "api_layer_00_00_5638ea01a8.png",
+      "content_type": "image/png",
+      "sha256": "4b62a36045e7e18525b783102ecd85471924a657ebda6074ac41abc63457bc1b"
+    },
+    {
+      "role": "layer",
+      "index": 1,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+      "local_file": "api_layer_01_00_97ed6137f6.png",
+      "content_type": "image/png",
+      "sha256": "86cfaf29cc4d252870017faf4c175f094338aae7dd7f6b3ef36645450115442a"
+    },
+    {
+      "role": "layer",
+      "index": 2,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+      "local_file": "api_layer_02_00_ab4294a920.png",
+      "content_type": "image/png",
+      "sha256": "619feebb39f42fd7dba53c00fa58cca21d1640d668e693df23104ef3b6dae1b8"
+    },
+    {
+      "role": "layer",
+      "index": 3,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+      "local_file": "api_layer_03_00_bab21264a4.png",
+      "content_type": "image/png",
+      "sha256": "a6d9ddd16057befd9bc910e52bb8c18e0cb43530936d78d72235b619f2820986"
+    },
+    {
+      "role": "layer",
+      "index": 4,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+      "local_file": "api_layer_04_00_4182ed70a4.png",
+      "content_type": "image/png",
+      "sha256": "4bf21426527dd434b9e67ee14070792b75837022a08c998b9454610136c05046"
+    },
+    {
+      "role": "layer",
+      "index": 7,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+      "local_file": "api_layer_07_00_4d6503610e.png",
+      "content_type": "image/png",
+      "sha256": "a9a719b82e0039f08494d3834f522ff126a3f850c48eb54ca9c6421249c1376b"
+    },
+    {
+      "role": "layer",
+      "index": 8,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+      "local_file": "api_layer_08_00_7dcc12afdd.png",
+      "content_type": "image/png",
+      "sha256": "39b56baf9ed9c47f0a23f9eb0e9c21a51c9234e558bd6375d0d89d3208bcf9d6"
+    },
+    {
+      "role": "layer",
+      "index": 12,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+      "local_file": "api_layer_12_00_ec44f444f1.png",
+      "content_type": "image/png",
+      "sha256": "f827ba4b1bd162d80f4b9aa11ffc297082a4cf36a8a2d0491cfb30b9e94f5fbb"
+    },
+    {
+      "role": "layer",
+      "index": 13,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+      "local_file": "api_layer_13_00_ec545b5104.webm",
+      "content_type": "video/webm",
+      "sha256": "95dde0a83461d578dffe30269e527ef74e3182c98b61c7a52960cf15384e0f00"
+    },
+    {
+      "role": "layer",
+      "index": 14,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+      "local_file": "api_layer_14_00_dee96597e1.png",
+      "content_type": "image/png",
+      "sha256": "287a9ba0aa33c9a47be0b52cf40a10f9f7a1340a82a26a506472209b044dd569"
+    },
+    {
+      "role": "layer",
+      "index": 15,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+      "local_file": "api_layer_15_00_552fb0ed5a.png",
+      "content_type": "image/png",
+      "sha256": "e178f6fa7544597d67f2e29432c6b7eb48356d94709ec7d2abfbcd6b646c4bbc"
+    },
+    {
+      "role": "layer",
+      "index": 16,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+      "local_file": "api_layer_16_00_7afbafd47b.png",
+      "content_type": "image/png",
+      "sha256": "3c2f5366c2e397d16129ea7b3ec7a069f628cae3b9876111af32ede6c468e914"
+    },
+    {
+      "role": "layer",
+      "index": 17,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+      "local_file": "api_layer_17_00_cc95a82a3a.png",
+      "content_type": "image/png",
+      "sha256": "4d1cb3386c304ae3f00b0f79c1747531841cf527b7cce2d3515a807a9510223d"
+    },
+    {
+      "role": "layer",
+      "index": 20,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+      "local_file": "api_layer_20_00_83b548082c.webm",
+      "content_type": "video/webm",
+      "sha256": "0625a6d3ab56c6be9ce01d6bda38158092b3a13ad199b1e658bd7cc1f9da6a38"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "1b20f2b07f710eb140bd6268",
+  "hashes": {
+    "resourceHash": "edc0d0bef5fde66c46187b1a",
+    "structureHash": "abfbac9a79b7715f95ea5833",
+    "interactionHash": "44c66dcb0acc982d7305c49f",
+    "contentHash": "1b20f2b07f710eb140bd6268",
+    "canonicalContentHash": "c04f835fc4af713abeef1f7a",
+    "sourceFingerprint": "2c2569e2913b2a63ffd50a86"
+  },
+  "canonicalContentHash": "c04f835fc4af713abeef1f7a",
+  "sourceFingerprint": "2c2569e2913b2a63ffd50a86",
+  "layoutHash": "ceb966cad120f1381ca8b5f0",
+  "familyId": "2024-08-01_ceb966cad120_1b20f2b0",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2024-08-01T20:07:06+08:00",
+      "lastObservedAt": "2024-08-01T20:07:06+08:00",
+      "date": "2024-08-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2024-08-01_ceb966cad120_1b20f2b0",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20240801120706",
+        "waybackReplay": "https://web.archive.org/web/20240801120941id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20240801120000",
+        "provider": "wayback-header-api",
+        "provenance": {
+          "primaryProvider": "wayback-header-api",
+          "supportingProviders": [],
+          "confidence": "high",
+          "agreement": {},
+          "conflicts": []
+        },
+        "homepageWaybackTimestamp": "20240801120706",
+        "headerApiWaybackTimestamp": "20240801120941",
+        "headerApiTimeDeltaSeconds": 155,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20240801120941id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20240725120706&to=20240808120706&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/75ec2d45ce8c942a1f7379d4641171da4d90ab0d.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/286eb259a60a0eabfcde96d7ea92d239fe68b3fe.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/782d55aeca6cc75f51d2d630005f514a61a0ddfa.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/d6c941cf2d5fc6c717173f7e3f166dbc444aa15b.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/27e411d92729604aa594858beb5130ed60aad76d.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/09d0855b6b6d6965e8f02404777986237848c6c9.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/40878bbef514e2d4bf5d660fe1145c869567bec2.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/42485baddbca05d2c4c7710a0b76b74d303e06d7.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/8ea0e95a8e5fc85ae227810925dba1ace1e9fcba.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/c13ca9c6405c71bf864ed2bc421680cb437f45ef.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/a43c6833d262301373234ffbd6934559d2ce7fb2.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/ce8c5e45230a6d3805baf60f5916f1cd441aac8e.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/cbf19f3682dfb02e62557d07fefaf241a80296a1.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/4a4c1f6b2977478c73e41f39a2910c3b3c33167e.webm",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/7998ca9f0bc267375fb7b45f75626d96806f94d7.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/198efffbc58493300854c04ab0ea8d979a6f9223.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/142a486b8dd500a626a60b68ad993af8dabc8b55.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/bb6266e1525a51f7920fc8881e47cadeee271b0c.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/cd68251cde11936871237ca94360acb451bf7ed2.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/426073f920477b718b8aee5ec141aca3889500f7.webm",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/0de9fb9822d2d00500abc8bdb143907eb1802ddb.webm",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
