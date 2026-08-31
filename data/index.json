@@ -1,6 +1,6 @@
 {
   "version": 10.1,
-  "generatedAt": "2026-08-31T17:25:16+08:00",
+  "generatedAt": "2026-08-31T17:30:14+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -39,6 +39,54 @@
             1260
           ],
           "manifest": "./data/archive/2026-08-30_221101_a6c4f537bffba395ff453d64/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-07-01_c67914dc19b6_62971df8",
+      "date": "2024-07-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "07",
+      "yearMonth": "2024-07",
+      "capturedAt": "2024-07-01T20:23:35+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "animated"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "all structured Banner assets unavailable",
+        "interaction behavior unverified without a sampleable .layer model",
+        "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png"
+      ],
+      "contentHash": "62971df89d6ef54eac3db950",
+      "manifest": "./data/archive/2024-07-01_202335_62971df89d6ef54eac3db950/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "62971df89d6ef54eac3db950",
+          "capturedAt": "2024-07-01T20:23:35+08:00",
+          "lastObservedAt": "2024-07-01T20:23:35+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "animated"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "all structured Banner assets unavailable",
+            "interaction behavior unverified without a sampleable .layer model",
+            "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-07-01_202335_62971df89d6ef54eac3db950/banner.json"
         }
       ]
     },
