@@ -1,0 +1,2216 @@
+{
+  "version": 11.0,
+  "capturedAt": "2024-05-01T19:15:43+08:00",
+  "date": "2024-05-01",
+  "season": "spring",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "captureMethod": "wayback-header-api",
+    "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "waybackTimestamp": "20240501111543",
+    "waybackReplay": "https://web.archive.org/web/20240501105737id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20240501120000",
+    "provider": "wayback-header-api",
+    "provenance": {
+      "primaryProvider": "wayback-header-api",
+      "supportingProviders": [],
+      "confidence": "high",
+      "agreement": {},
+      "conflicts": []
+    },
+    "homepageWaybackTimestamp": "20240501111543",
+    "headerApiWaybackTimestamp": "20240501105737",
+    "headerApiTimeDeltaSeconds": 1086,
+    "headerApiWaybackReplay": "https://web.archive.org/web/20240501105737id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20240424111543&to=20240508111543&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+    "discoveredResources": [
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/9e092f8f1b435daaf2c9fae0e9ddaf6c48e92332.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/634d8932c8a5c10a9dbfef81492430e7972e52be.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/226d3502c640a637e5b6ca95e6da24846504289e.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/d84afe572475b8efe87c52fe97b718ddb689b52b.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "wayback-header-api",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": null,
+  "layers": [
+    {
+      "index": 0,
+      "apiIndex": 0,
+      "id": 28,
+      "name": "最远景",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+      "file": "api_layer_00_00_7be0b6aedc.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+          "file": "api_layer_00_00_7be0b6aedc.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.4
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -150,
+            0
+          ]
+        },
+        "blur": {
+          "initial": 2
+        },
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.4
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -150,
+            0
+          ]
+        },
+        "blur": {
+          "initial": 2
+        },
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 28,
+        "name": "最远景"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 1,
+      "apiIndex": 1,
+      "id": 30,
+      "name": "远景小风车",
+      "tag": "video",
+      "assetType": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "file": "api_layer_01_00_963f7eb974.webm",
+      "contentType": "video/webm",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "file": "api_layer_01_00_963f7eb974.webm",
+          "contentType": "video/webm",
+          "tag": "video",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.35
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            630,
+            15
+          ]
+        },
+        "blur": {
+          "initial": 2
+        },
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.35
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            630,
+            15
+          ]
+        },
+        "blur": {
+          "initial": 2
+        },
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 30,
+        "name": "远景小风车"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 1,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    },
+    {
+      "index": 4,
+      "apiIndex": 4,
+      "id": 16,
+      "name": "大叶子",
+      "tag": "video",
+      "assetType": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "file": "api_layer_01_00_963f7eb974.webm",
+      "contentType": "video/webm",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "file": "api_layer_01_00_963f7eb974.webm",
+          "contentType": "video/webm",
+          "tag": "video",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {},
+        "rotate": {
+          "offset": -90
+        },
+        "translate": {
+          "initial": [
+            -50,
+            -20
+          ],
+          "offset": [
+            10,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+            "id": 0
+          }
+        ],
+        "scale": {},
+        "rotate": {
+          "offset": -90
+        },
+        "translate": {
+          "initial": [
+            -50,
+            -20
+          ],
+          "offset": [
+            10,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 16,
+        "name": "大叶子"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 4,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    },
+    {
+      "index": 5,
+      "apiIndex": 5,
+      "id": 3,
+      "name": "远景树干",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "file": "api_layer_05_00_441ecf0de3.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+          "file": "api_layer_05_00_441ecf0de3.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.25
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            80,
+            -100
+          ],
+          "offset": [
+            50,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp",
+          "offsetCurve": [
+            0.28550000000000003,
+            0.8674999999999999,
+            1,
+            1
+          ]
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.25
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            80,
+            -100
+          ],
+          "offset": [
+            50,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp",
+          "offsetCurve": [
+            0.28550000000000003,
+            0.8674999999999999,
+            1,
+            1
+          ]
+        },
+        "id": 3,
+        "name": "远景树干"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 5,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 6,
+      "apiIndex": 6,
+      "id": 20,
+      "name": "搬运瓢虫",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "file": "api_layer_06_00_338f0ec137.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+          "file": "api_layer_06_00_338f0ec137.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.16
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1700,
+            249
+          ],
+          "offset": [
+            400,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.16
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1700,
+            249
+          ],
+          "offset": [
+            400,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 20,
+        "name": "搬运瓢虫"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 6,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 7,
+      "apiIndex": 7,
+      "id": 27,
+      "name": "鸟",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "file": "api_layer_07_00_5f5581911d.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+          "file": "api_layer_07_00_5f5581911d.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.28
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -1800,
+            80
+          ],
+          "offset": [
+            500,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.28
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -1800,
+            80
+          ],
+          "offset": [
+            500,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 27,
+        "name": "鸟"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 7,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 8,
+      "apiIndex": 8,
+      "id": 13,
+      "name": "甲虫车",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+      "file": "api_layer_08_00_148cbbed1c.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+          "file": "api_layer_08_00_148cbbed1c.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.3
+        },
+        "rotate": {
+          "initial": -3
+        },
+        "translate": {
+          "initial": [
+            -1030,
+            120
+          ],
+          "offset": [
+            200,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.3
+        },
+        "rotate": {
+          "initial": -3
+        },
+        "translate": {
+          "initial": [
+            -1030,
+            120
+          ],
+          "offset": [
+            200,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 13,
+        "name": "甲虫车"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 8,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 11,
+      "apiIndex": 11,
+      "id": 24,
+      "name": "树叶",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "file": "api_layer_11_00_d38d5e8871.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+          "file": "api_layer_11_00_d38d5e8871.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.26
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1500,
+            -400
+          ],
+          "offset": [
+            500,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.26
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1500,
+            -400
+          ],
+          "offset": [
+            500,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 24,
+        "name": "树叶"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 11,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 12,
+      "apiIndex": 12,
+      "id": 25,
+      "name": "楼梯",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "file": "api_layer_12_00_b6c86d08d6.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+          "file": "api_layer_12_00_b6c86d08d6.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.3
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1200,
+            0
+          ],
+          "offset": [
+            300,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.3
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1200,
+            0
+          ],
+          "offset": [
+            300,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 25,
+        "name": "楼梯"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 12,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 16,
+      "apiIndex": 16,
+      "id": 12,
+      "name": "22发力了",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "file": "api_layer_16_00_b077c0097c.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+          "file": "api_layer_16_00_b077c0097c.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.3
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            300,
+            -40
+          ],
+          "offset": [
+            400,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "initial": 0,
+          "offset": -1,
+          "wrap": "alternate",
+          "offsetCurve": [
+            0.4395,
+            0.0040000000000000036,
+            0.038000000000000006,
+            0.9994999999999999
+          ]
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.3
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            300,
+            -40
+          ],
+          "offset": [
+            400,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "initial": 0,
+          "offset": -1,
+          "wrap": "alternate",
+          "offsetCurve": [
+            0.4395,
+            0.0040000000000000036,
+            0.038000000000000006,
+            0.9994999999999999
+          ]
+        },
+        "id": 12,
+        "name": "22发力了"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        0.0
+      ],
+      "position": {},
+      "zIndex": 16,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 17,
+      "apiIndex": 17,
+      "id": 14,
+      "name": "垂直搬运",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+      "file": "api_layer_17_00_eacc628539.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+          "file": "api_layer_17_00_eacc628539.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.35
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -300,
+            -200
+          ],
+          "offset": [
+            400,
+            100
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.35
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -300,
+            -200
+          ],
+          "offset": [
+            400,
+            100
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 14,
+        "name": "垂直搬运"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 17,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 18,
+      "apiIndex": 18,
+      "id": 5,
+      "name": "33",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+      "file": "api_layer_18_00_8c4b8885ad.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+          "file": "api_layer_18_00_8c4b8885ad.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.3
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            50,
+            130
+          ],
+          "offset": [
+            600,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.3
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            50,
+            130
+          ],
+          "offset": [
+            600,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 5,
+        "name": "33"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 18,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 19,
+      "apiIndex": 19,
+      "id": 22,
+      "name": "左侧手树",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "file": "api_layer_19_00_e5328575e2.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+          "file": "api_layer_19_00_e5328575e2.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.2
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -4000,
+            0
+          ],
+          "offset": [
+            900,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.2
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            -4000,
+            0
+          ],
+          "offset": [
+            900,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 22,
+        "name": "左侧手树"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 19,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 22,
+      "apiIndex": 22,
+      "id": 19,
+      "name": "斧子树桩",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "file": "api_layer_22_00_f927f2c696.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+          "file": "api_layer_22_00_f927f2c696.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.25
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1600,
+            200
+          ],
+          "offset": [
+            800,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.25
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1600,
+            200
+          ],
+          "offset": [
+            800,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 19,
+        "name": "斧子树桩"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 22,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "index": 23,
+      "apiIndex": 23,
+      "id": 23,
+      "name": "藤曼",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "file": "api_layer_23_00_77657b2b8a.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+          "requestedSrc": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+          "normalizedIdentity": "https://web.archive.org/web/20240501105737id_/https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+          "file": "api_layer_23_00_77657b2b8a.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.35
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1500,
+            0
+          ],
+          "offset": [
+            800,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.35
+        },
+        "rotate": {},
+        "translate": {
+          "initial": [
+            1500,
+            0
+          ],
+          "offset": [
+            800,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 23,
+        "name": "藤曼"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 23,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    }
+  ],
+  "interaction": {
+    "model": "bilibili-header-api-v1",
+    "positionAxis": "horizontal-normalized-from-entry",
+    "inputMode": "relative-from-pointer-enter",
+    "displacementFormula": "(clientX-enterX)/containerWidth",
+    "containerReferenceHeight": 155,
+    "returnDurationMs": 200,
+    "effects": [
+      "rotate",
+      "translate",
+      "opacity"
+    ]
+  },
+  "sourceFiles": {
+    "json": "source/api.json"
+  },
+  "api": {
+    "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "id": null,
+    "name": "",
+    "request_id": "1714561057",
+    "isSplitLayer": true,
+    "layerCount": 25,
+    "assetCount": 25,
+    "pic": "https://i0.hdslb.com/bfs/archive/ab61ab76a225646e3bcb162b0f8fb2aa47f1f66c.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+    "litpicAsset": null,
+    "splitVersion": "1",
+    "extensions": {}
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2024-05-01T19:15:43+08:00",
+  "type": [
+    "layered",
+    "video",
+    "interactive"
+  ],
+  "is_split_layer": true,
+  "fallback_image": null,
+  "preview_image": null,
+  "completeness": "partial",
+  "missing_assets": [
+    "10 API layer(s) unavailable",
+    "api_layer_002: no resource saved",
+    "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_003: no resource saved",
+    "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_009: no resource saved",
+    "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_010: no resource saved",
+    "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_013: no resource saved",
+    "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_014: no resource saved",
+    "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_015: no resource saved",
+    "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_020: no resource saved",
+    "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_021: no resource saved",
+    "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+    "api_layer_024: no resource saved",
+    "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+    "fallback pic: HTTP Error 403: Forbidden"
+  ],
+  "structureEvidence": {
+    "root": {
+      "source": "bilibili-header-api",
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142"
+    },
+    "layerCount": 25,
+    "mediaCount": 25,
+    "visibleMediaCount": 25,
+    "media": [],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/9e092f8f1b435daaf2c9fae0e9ddaf6c48e92332.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/634d8932c8a5c10a9dbfef81492430e7972e52be.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/226d3502c640a637e5b6ca95e6da24846504289e.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/d84afe572475b8efe87c52fe97b718ddb689b52b.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": true,
+      "hasVideo": true,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": true,
+      "hasDynamicSource": true
+    },
+    "api": {
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+      "id": null,
+      "request_id": "1714561057",
+      "isSplitLayer": true,
+      "layerCount": 25,
+      "assetCount": 25,
+      "savedAssetCount": 15,
+      "effects": [
+        "rotate",
+        "translate",
+        "opacity"
+      ]
+    }
+  },
+  "assets": [
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+      "local_file": "api_layer_00_00_7be0b6aedc.png",
+      "content_type": "image/png",
+      "sha256": "7c629fd3a1c9f89066ece465da883261fe8f7d54b11bd43acfecdd2985792d52"
+    },
+    {
+      "role": "layer",
+      "index": 1,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "local_file": "api_layer_01_00_963f7eb974.webm",
+      "content_type": "video/webm",
+      "sha256": "c2797682dff6022ce15e3b6e680737b86f0f5bc5a673e36f762c824b250c9f4b"
+    },
+    {
+      "role": "layer",
+      "index": 4,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "local_file": "api_layer_01_00_963f7eb974.webm",
+      "content_type": "video/webm",
+      "sha256": "c2797682dff6022ce15e3b6e680737b86f0f5bc5a673e36f762c824b250c9f4b"
+    },
+    {
+      "role": "layer",
+      "index": 5,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "local_file": "api_layer_05_00_441ecf0de3.png",
+      "content_type": "image/png",
+      "sha256": "4ca4c73db935efa8d9abbecf11fdddebaf6ce7154f7976ec8f09e116fc684153"
+    },
+    {
+      "role": "layer",
+      "index": 6,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "local_file": "api_layer_06_00_338f0ec137.png",
+      "content_type": "image/png",
+      "sha256": "98be2fea547f909e6173113dc0e309af998b247470449b1348cf0153d716c28d"
+    },
+    {
+      "role": "layer",
+      "index": 7,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "local_file": "api_layer_07_00_5f5581911d.png",
+      "content_type": "image/png",
+      "sha256": "bb90d1cdcd3ac847129714be008faf8cbc65c5513b185997f9aed5030ef07f0d"
+    },
+    {
+      "role": "layer",
+      "index": 8,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+      "local_file": "api_layer_08_00_148cbbed1c.png",
+      "content_type": "image/png",
+      "sha256": "f48cd5c0d0061402ed90538527459bce36257a590c88a88122e861fc35002766"
+    },
+    {
+      "role": "layer",
+      "index": 11,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "local_file": "api_layer_11_00_d38d5e8871.png",
+      "content_type": "image/png",
+      "sha256": "af841884943e5c8bfe7580ea35713e509dd5382bf298603ea093b95d38588b2c"
+    },
+    {
+      "role": "layer",
+      "index": 12,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "local_file": "api_layer_12_00_b6c86d08d6.png",
+      "content_type": "image/png",
+      "sha256": "2c00785b874330e1ceb3003ac7da58fffc01b1707738d03702739cad23fbfd1a"
+    },
+    {
+      "role": "layer",
+      "index": 16,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "local_file": "api_layer_16_00_b077c0097c.png",
+      "content_type": "image/png",
+      "sha256": "fca23e3aec7687e124997fc50c0fb91c3ad1918d29a4695b3e4fe3259a01fd0a"
+    },
+    {
+      "role": "layer",
+      "index": 17,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+      "local_file": "api_layer_17_00_eacc628539.png",
+      "content_type": "image/png",
+      "sha256": "44194edf6b4819835ccd64d75e4c00858b1ef03722ffcdd79c13905c92e85ce2"
+    },
+    {
+      "role": "layer",
+      "index": 18,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+      "local_file": "api_layer_18_00_8c4b8885ad.png",
+      "content_type": "image/png",
+      "sha256": "28b04a92f7ee05e26e4e9455e6d4f1a3ddfd30e6d269929edd80d87a63967e4c"
+    },
+    {
+      "role": "layer",
+      "index": 19,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "local_file": "api_layer_19_00_e5328575e2.png",
+      "content_type": "image/png",
+      "sha256": "ee98f68778154b960154b751e8bc13eca81302bcd1bd826edf86161d32bc29b6"
+    },
+    {
+      "role": "layer",
+      "index": 22,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "local_file": "api_layer_22_00_f927f2c696.png",
+      "content_type": "image/png",
+      "sha256": "1e531da36c198bbcd413aed834a62da13e418e9378200eef0853b0bfcb73642e"
+    },
+    {
+      "role": "layer",
+      "index": 23,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "local_file": "api_layer_23_00_77657b2b8a.png",
+      "content_type": "image/png",
+      "sha256": "09a3c936244904e177e55024a2ec26106cc6299fe891b10ba5f4d54c81c83a21"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "c168b8f142c7890ad9a6d86e",
+  "hashes": {
+    "resourceHash": "3d34ec56602769da008220ef",
+    "structureHash": "6dc14da464895af5bca7854d",
+    "interactionHash": "b31ab7adb2e696940be0f640",
+    "contentHash": "c168b8f142c7890ad9a6d86e",
+    "canonicalContentHash": "707a93694a469bf321c9b679",
+    "sourceFingerprint": "8ad4b78560bfa929182c7758"
+  },
+  "canonicalContentHash": "707a93694a469bf321c9b679",
+  "sourceFingerprint": "8ad4b78560bfa929182c7758",
+  "layoutHash": "9ecaa500639f926a269c28c8",
+  "familyId": "2024-05-01_9ecaa500639f_c168b8f1",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2024-05-01T19:15:43+08:00",
+      "lastObservedAt": "2024-05-01T19:15:43+08:00",
+      "date": "2024-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2024-05-01_9ecaa500639f_c168b8f1",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20240501111543",
+        "waybackReplay": "https://web.archive.org/web/20240501105737id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20240501120000",
+        "provider": "wayback-header-api",
+        "provenance": {
+          "primaryProvider": "wayback-header-api",
+          "supportingProviders": [],
+          "confidence": "high",
+          "agreement": {},
+          "conflicts": []
+        },
+        "homepageWaybackTimestamp": "20240501111543",
+        "headerApiWaybackTimestamp": "20240501105737",
+        "headerApiTimeDeltaSeconds": 1086,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20240501105737id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20240424111543&to=20240508111543&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/0d079990d8784192ed4d07cb9b6af5df6e49dadd.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/9e092f8f1b435daaf2c9fae0e9ddaf6c48e92332.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/1cf5ccbdc2930bf0c3a57807fe249bff1d15a4b0.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/634d8932c8a5c10a9dbfef81492430e7972e52be.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/226d3502c640a637e5b6ca95e6da24846504289e.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/4b6c85d5ac04e7016e692e576f2e83d00cb5ff86.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/9131efa4854a089fad9061cfe07f21887ced078c.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/d84afe572475b8efe87c52fe97b718ddb689b52b.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

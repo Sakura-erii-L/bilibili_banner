@@ -1,9 +1,99 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T04:27:44+08:00",
+  "generatedAt": "2026-09-01T04:38:53+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2024-05-01_9ecaa500639f_c168b8f1",
+      "date": "2024-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "05",
+      "yearMonth": "2024-05",
+      "capturedAt": "2024-05-01T19:15:43+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 15,
+      "completeness": "partial",
+      "missing_assets": [
+        "10 API layer(s) unavailable",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_013: no resource saved",
+        "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_014: no resource saved",
+        "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_020: no resource saved",
+        "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_021: no resource saved",
+        "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_024: no resource saved",
+        "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "c168b8f142c7890ad9a6d86e",
+      "manifest": "./data/archive/2024-05-01_191543_c168b8f142c7890ad9a6d86e/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "c168b8f142c7890ad9a6d86e",
+          "canonicalContentHash": "707a93694a469bf321c9b679",
+          "sourceFingerprint": "8ad4b78560bfa929182c7758",
+          "capturedAt": "2024-05-01T19:15:43+08:00",
+          "lastObservedAt": "2024-05-01T19:15:43+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 15,
+          "completeness": "partial",
+          "missing_assets": [
+            "10 API layer(s) unavailable",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_013: no resource saved",
+            "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_014: no resource saved",
+            "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_020: no resource saved",
+            "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_021: no resource saved",
+            "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_024: no resource saved",
+            "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-05-01_191543_c168b8f142c7890ad9a6d86e/banner.json"
+        }
+      ]
+    },
     {
       "id": "2024-04-01_74e752e501e0_4c15e091",
       "date": "2024-04-01",
