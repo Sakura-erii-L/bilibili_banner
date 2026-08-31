@@ -204,7 +204,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2020-08-01T20:55:09+08:00",
+  "lastObservedAt": "2020-09-01T15:20:37+08:00",
   "type": [
     "static"
   ],
@@ -362,6 +362,7 @@
   "layoutHash": "3f4544a6cbd458b81c5e471b",
   "familyId": "2020-08-01_3f4544a6cbd4_d5a97080",
   "observedSlots": [
+    900,
     1080
   ],
   "observations": [
@@ -397,6 +398,42 @@
         "stylesheetUrls": [
           "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.1.5df53f298fcc518c459e41a4b5d1548a569a78ec.css",
           "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.0.5df53f298fcc518c459e41a4b5d1548a569a78ec.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2020-09-01T15:20:37+08:00",
+      "lastObservedAt": "2020-09-01T15:20:37+08:00",
+      "date": "2020-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        900
+      ],
+      "familyId": "2020-09-01_3f4544a6cbd4_d5a97080",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20200901072037id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20200901072037",
+        "homepageWaybackTimestamp": "20200901072037",
+        "waybackReplay": "https://web.archive.org/web/20200901072037id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20200901120000",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/22650682fd25a4a5aa96dd9ef53190c6b8d54912.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/e62b6b095ef38dfb742687f11e4b570dde420b5d.png",
+            "initiatorType": "html-img"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.1.a178be58492145cd41c7a84bf6e259193e8605d5.css",
+          "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.0.a178be58492145cd41c7a84bf6e259193e8605d5.css"
         ],
         "scriptUrls": []
       }
