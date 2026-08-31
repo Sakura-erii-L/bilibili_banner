@@ -1,9 +1,49 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T00:11:53+08:00",
+  "generatedAt": "2026-09-01T00:13:48+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2020-01-01_3f4544a6cbd4_57865abd",
+      "date": "2020-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "01",
+      "yearMonth": "2020-01",
+      "capturedAt": "2020-01-01T18:48:18+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "57865abda2cede34cf98e3e9",
+      "manifest": "./data/archive/2020-01-01_184818_57865abda2cede34cf98e3e9/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "57865abda2cede34cf98e3e9",
+          "canonicalContentHash": "0348ba6cff87d363ee027771",
+          "sourceFingerprint": "306f88e0de915e521abb8c13",
+          "capturedAt": "2020-01-01T18:48:18+08:00",
+          "lastObservedAt": "2020-01-01T18:48:18+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-01-01_184818_57865abda2cede34cf98e3e9/banner.json"
+        }
+      ]
+    },
     {
       "id": "2019-11-01_3f4544a6cbd4_b03e8e41",
       "date": "2019-11-01",
