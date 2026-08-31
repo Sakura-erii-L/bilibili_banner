@@ -213,7 +213,13 @@ def capture_snapshot(
     moment = snapshot_moment(timestamp)
     url = replay_url(timestamp, snapshot["original"], replay_base)
     print(f"Opening Wayback snapshot {timestamp} in headless mode...")
-    page.goto(url, wait_until="domcontentloaded", timeout=90000)
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=60000)
+    except PlaywrightTimeoutError:
+        print(
+            f"Wayback navigation timed out for {timestamp}; "
+            "continuing with the DOM already received."
+        )
 
     try:
         page.wait_for_function(
