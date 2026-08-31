@@ -1034,6 +1034,9 @@ class WaybackImportTests(unittest.TestCase):
             content = Path(".github/workflows", filename).read_text(encoding="utf-8")
             self.assertIn("group: bilibili-banner-data-writes", content)
             self.assertIn("cancel-in-progress: false", content)
+        pages = Path(".github/workflows/pages.yml").read_text(encoding="utf-8")
+        self.assertIn("group: bilibili-banner-pages", pages)
+        self.assertIn("cancel-in-progress: false", pages)
 
 
 if __name__ == "__main__":
