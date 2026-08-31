@@ -1,9 +1,101 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T02:49:07+08:00",
+  "generatedAt": "2026-09-01T03:03:49+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2023-10-01_3a3d85c6c098_2d649552",
+      "date": "2023-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "10",
+      "yearMonth": "2023-10",
+      "capturedAt": "2023-10-01T19:09:39+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 8,
+      "completeness": "partial",
+      "missing_assets": [
+        "10 API layer(s) unavailable",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_014: no resource saved",
+        "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden",
+        "video source detected but no original video asset was saved"
+      ],
+      "contentHash": "2d64955293abc0d267eb8fe2",
+      "manifest": "./data/archive/2023-10-01_190939_2d64955293abc0d267eb8fe2/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "2d64955293abc0d267eb8fe2",
+          "canonicalContentHash": "48bfa9fa26b1a7c66caeef38",
+          "sourceFingerprint": "b4f788a9dac6471970a035c9",
+          "capturedAt": "2023-10-01T19:09:39+08:00",
+          "lastObservedAt": "2023-10-01T19:09:39+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 8,
+          "completeness": "partial",
+          "missing_assets": [
+            "10 API layer(s) unavailable",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_014: no resource saved",
+            "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden",
+            "video source detected but no original video asset was saved"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-10-01_190939_2d64955293abc0d267eb8fe2/banner.json"
+        }
+      ]
+    },
     {
       "id": "2023-07-01_207e4a0167a3_a0c11417",
       "date": "2023-07-01",
