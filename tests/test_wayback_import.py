@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 import datetime as dt
+import json
+import tempfile
 import unittest
+from pathlib import Path
 
 from backend import wayback_import
 
@@ -44,6 +47,43 @@ class WaybackImportTests(unittest.TestCase):
                 "https://web.archive.org/web/20200101/https://www.bilibili.com/"
             )
         )
+
+    def test_imported_wayback_timestamps_reads_observation_sources(self) -> None:
+        core = wayback_import.core
+        original = (core.DATA_DIR, core.ARCHIVE_DIR, core.CURRENT_DIR)
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                core.DATA_DIR = Path(temp)
+                core.ARCHIVE_DIR = core.DATA_DIR / "archive"
+                core.CURRENT_DIR = core.DATA_DIR / "current"
+                folder = core.ARCHIVE_DIR / "one"
+                folder.mkdir(parents=True)
+                manifest = {
+                    "capturedAt": "2022-07-01T19:59:29+08:00",
+                    "date": "2022-07-01",
+                    "season": "summer",
+                    "mode": "static",
+                    "layers": [],
+                    "contentHash": "hash",
+                    "familyId": "family",
+                    "observations": [
+                        {
+                            "capturedAt": "2022-07-01T19:59:29+08:00",
+                            "familyId": "family",
+                            "source": {"waybackTimestamp": "20220701115929"},
+                        }
+                    ],
+                }
+                (folder / "banner.json").write_text(
+                    json.dumps(manifest),
+                    encoding="utf-8",
+                )
+                self.assertEqual(
+                    wayback_import.imported_wayback_timestamps(),
+                    {"20220701115929"},
+                )
+            finally:
+                core.DATA_DIR, core.ARCHIVE_DIR, core.CURRENT_DIR = original
 
 
 if __name__ == "__main__":

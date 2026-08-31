@@ -1,6 +1,12 @@
 name: Import Historical Banners
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/wayback_import.py"
+      - ".github/workflows/wayback-import.yml"
   workflow_dispatch:
     inputs:
       from_date:
@@ -24,6 +30,9 @@ on:
         description: "Maximum snapshots; 0 means all discovered"
         required: true
         default: "0"
+  schedule:
+    - cron: "27 2 2 * *"
+      timezone: "Asia/Shanghai"
 
 permissions:
   contents: write
@@ -61,11 +70,19 @@ jobs:
           BANNER_PROFILE_MODE: "temporary"
           BANNER_TIMEZONE: "Asia/Shanghai"
         run: |
+          FROM_DATE="${{ inputs.from_date }}"
+          TO_DATE="${{ inputs.to_date }}"
+          CADENCE="${{ inputs.cadence }}"
+          LIMIT="${{ inputs.limit }}"
+          [[ -n "$FROM_DATE" ]] || FROM_DATE="2018-01-01"
+          [[ -n "$TO_DATE" ]] || TO_DATE="$(date +%F)"
+          [[ -n "$CADENCE" ]] || CADENCE="monthly"
+          [[ -n "$LIMIT" ]] || LIMIT="0"
           python backend/wayback_import.py \
-            --from-date "${{ inputs.from_date }}" \
-            --to-date "${{ inputs.to_date }}" \
-            --cadence "${{ inputs.cadence }}" \
-            --limit "${{ inputs.limit }}"
+            --from-date "$FROM_DATE" \
+            --to-date "$TO_DATE" \
+            --cadence "$CADENCE" \
+            --limit "$LIMIT"
 
       - name: Detect data changes
         id: changes

@@ -102,7 +102,11 @@ def discover_snapshots(
 ) -> list[dict[str, str]]:
     snapshots: dict[str, dict[str, str]] = {}
     for target in target_dates(start, end, cadence):
-        payload = read_json(availability_url(target, api_url))
+        try:
+            payload = read_json(availability_url(target, api_url))
+        except Exception as exc:
+            print(f"Wayback discovery failed near {target.isoformat()}: {exc}")
+            continue
         closest = (payload.get("archived_snapshots") or {}).get("closest") or {}
         timestamp = str(closest.get("timestamp") or "")
         if not closest.get("available") or len(timestamp) != 14:
@@ -127,6 +131,17 @@ def discover_snapshots(
             time.sleep(REQUEST_DELAY_SECONDS)
 
     return [snapshots[key] for key in sorted(snapshots)]
+
+
+def imported_wayback_timestamps() -> set[str]:
+    timestamps: set[str] = set()
+    for _, manifest in core.iter_archive_manifests():
+        for observation in core.manifest_observations(manifest):
+            source = observation.get("source") or {}
+            timestamp = str(source.get("waybackTimestamp") or "")
+            if len(timestamp) == 14 and timestamp.isdigit():
+                timestamps.add(timestamp)
+    return timestamps
 
 
 def snapshot_moment(timestamp: str) -> dt.datetime:
@@ -423,11 +438,27 @@ def main() -> None:
 
     if args.limit > 0:
         snapshots = snapshots[: args.limit]
+    skipped_known = 0
+    if not args.force:
+        known_timestamps = imported_wayback_timestamps()
+        skipped_known = sum(
+            snapshot["timestamp"] in known_timestamps for snapshot in snapshots
+        )
+        snapshots = [
+            snapshot
+            for snapshot in snapshots
+            if snapshot["timestamp"] not in known_timestamps
+        ]
+        if skipped_known:
+            print(f"Skipped {skipped_known} already imported Wayback snapshots.")
     print(json.dumps({"snapshotCount": len(snapshots)}, ensure_ascii=False))
     if args.discovery_only:
         print(json.dumps(snapshots, ensure_ascii=False, indent=2))
         return
     if not snapshots:
+        if skipped_known:
+            print("All discovered Wayback snapshots were already imported.")
+            return
         raise SystemExit("No Wayback snapshots were discovered in the requested range.")
 
     results: list[dict[str, Any]] = []

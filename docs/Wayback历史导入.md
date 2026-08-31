@@ -75,19 +75,26 @@ python scripts\build_site.py
 python scripts\serve.py
 ```
 
-## 4. 在 GitHub Actions 中导入
+## 4. GitHub Actions 自动导入
 
-由于部分网络环境无法访问 `web.archive.org` 回放正文，可以使用 GitHub Runner：
+`.github/workflows/wayback-import.yml` 不需要 Codex 或人工逐个执行下载命令：
+
+- `backend/wayback_import.py` 或该 workflow 更新并推送后，自动启动一次 2018 年至今的 `monthly` 回填；
+- 每月 2 日北京时间 `02:27` 自动再次扫描并补抓；
+- 已写入 observation 的 Wayback 时间戳会被脚本自动跳过；
+- 单个日期的 API/回放失败会记录后继续处理其余月份。
+
+部分网络环境无法访问 `web.archive.org` 回放正文，因此自动任务默认运行在 GitHub Runner。需要人工缩小范围复查时仍可：
 
 1. 打开仓库的 **Actions**。
 2. 左侧选择 **Import Historical Banners**。
 3. 点击 **Run workflow**。
-4. `from_date` 和 `to_date` 先填写同一年，例如 `2018`、`2018`。
+4. `from_date` 和 `to_date` 填写需要复查的范围，例如 `2018`、`2018`。
 5. 第一次选择 `monthly`，`limit` 填 `0`。
 6. 点击绿色 **Run workflow**。
 7. 查看 `Import real assets from Wayback snapshots` 日志。
 
-工作流只执行历史导入和 `data/` 提交。提交完成后，现有 `pages.yml` 会自动构建并发布，历史导入工作流不会再次部署 Pages。
+自动和手工事件都只执行历史导入及 `data/` 提交。提交完成后，现有 `pages.yml` 会自动构建并发布，历史导入工作流不会再次部署 Pages。
 
 每日抓取和历史导入共用 `bilibili-banner-data-writes` 并发组，因此两者不会同时执行 `git push`。
 

@@ -8,7 +8,7 @@
 - 历史素材 URL 强制重写为 Wayback 回放地址，浏览器阻止直接访问 `bilibili.com` 和 `hdslb.com`。
 - 支持旧版 `.head-banner`、`.header-banner`、`#banner_link`、`.banner_link` 的真实图片和 CSS `background-image`；不使用截图回退。
 - 新增 `observations`：同一实际素材跨多个历史日期只保存一个物理 archive，但索引可按多个日期引用。
-- 新增手动工作流 `wayback-import.yml`；它与每日抓取共用数据写入并发锁，只提交 `data/`，Pages 仍由 `pages.yml` 发布。
+- 新增 `wayback-import.yml`；脚本/工作流更新后自动启动首次回填，此后每月自动补抓，也支持手工指定范围。它与每日抓取共用数据写入并发锁，只提交 `data/`，Pages 仍由 `pages.yml` 发布。
 - manifest/index 新生成版本为 `10.1`，旧 v9.2/v10 数据继续兼容。
 
 ## v10

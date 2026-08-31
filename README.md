@@ -156,7 +156,7 @@ matrixY = initialMatrixY
 
 `.github/workflows/pages.yml` 用于手工触发，或在 `main` 分支的 `frontend/**`、`data/**`、`scripts/build_site.py`、工作流文件发生变化时构建并部署 Pages。
 
-`.github/workflows/wayback-import.yml` 只允许手工触发。建议从 2018 年开始按一年一个任务、`monthly` 采样导入；它只提交变化后的 `data/`，随后由 `pages.yml` 发布，不会与每日抓取同时写数据。
+`.github/workflows/wayback-import.yml` 直接运行 `backend/wayback_import.py` 自动下载：脚本或工作流更新推送后启动首次 `2018-01-01` 至今的月度回填，此后每月 2 日北京时间 `02:27` 自动补抓，也保留手工指定范围入口。它只提交变化后的 `data/`，随后由 `pages.yml` 发布，并与每日抓取共用数据写入锁。
 
 ## Wayback 历史导入
 
@@ -166,7 +166,7 @@ matrixY = initialMatrixY
 python backend\wayback_import.py --from-date 2018 --to-date 2026 --cadence monthly --discovery-only
 ```
 
-再按年份分批导入，降低网络失败和 Actions 超时的影响：
+本地也可按年份运行同一个批处理脚本，降低网络失败和超时的影响：
 
 ```powershell
 python backend\wayback_import.py --from-date 2018 --to-date 2018 --cadence monthly
