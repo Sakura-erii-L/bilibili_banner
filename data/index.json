@@ -1,6 +1,6 @@
 {
   "version": 10.1,
-  "generatedAt": "2026-08-31T17:23:49+08:00",
+  "generatedAt": "2026-08-31T17:25:16+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -457,6 +457,58 @@
             900
           ],
           "manifest": "./data/archive/2022-10-01_174347_3f8e663a74b379bc23da0ba5/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-09-01_c67914dc19b6_54b42bd1",
+      "date": "2022-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "09",
+      "yearMonth": "2022-09",
+      "capturedAt": "2022-09-01T19:32:08+08:00",
+      "mode": "split",
+      "type": [
+        "video",
+        "animated"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "all structured Banner assets unavailable",
+        "interaction behavior unverified without a sampleable .layer model",
+        "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/5bbe4375eae39c8045447115c8573b4e20c1546a.png@3840w_360h_1c_90q.webp",
+        "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/7a2a097d57ce0d7c2c46585ff98c45368e7386eb.png",
+        "video source detected but no original video asset was saved"
+      ],
+      "contentHash": "54b42bd186da08d19c13a767",
+      "manifest": "./data/archive/2022-09-01_193208_54b42bd186da08d19c13a767/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "54b42bd186da08d19c13a767",
+          "capturedAt": "2022-09-01T19:32:08+08:00",
+          "lastObservedAt": "2022-09-01T19:32:08+08:00",
+          "mode": "split",
+          "type": [
+            "video",
+            "animated"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "all structured Banner assets unavailable",
+            "interaction behavior unverified without a sampleable .layer model",
+            "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/5bbe4375eae39c8045447115c8573b4e20c1546a.png@3840w_360h_1c_90q.webp",
+            "structured_media_000: asset HTTP 403: https://i0.hdslb.com/bfs/archive/7a2a097d57ce0d7c2c46585ff98c45368e7386eb.png",
+            "video source detected but no original video asset was saved"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-09-01_193208_54b42bd186da08d19c13a767/banner.json"
         }
       ]
     },
