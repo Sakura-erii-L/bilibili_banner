@@ -1,0 +1,176 @@
+{
+  "version": 11.0,
+  "capturedAt": "2021-10-01T19:56:14+08:00",
+  "date": "2021-10-01",
+  "season": "autumn",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "captureMethod": "wayback-header-api",
+    "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "waybackTimestamp": "20211001115614",
+    "waybackReplay": "https://web.archive.org/web/20211007015321id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20211001120000",
+    "homepageWaybackTimestamp": "20211001115614",
+    "headerApiWaybackTimestamp": "20211007015321",
+    "headerApiTimeDeltaSeconds": 482227,
+    "headerApiWaybackReplay": "https://web.archive.org/web/20211007015321id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20210924115614&to=20211008115614&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "static",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/fb8675210b6d6b79cf0b698d5b04623a4e5f33b3.jpg",
+    "requestedSrc": "https://web.archive.org/web/20211007015321id_/https://i0.hdslb.com/bfs/archive/fb8675210b6d6b79cf0b698d5b04623a4e5f33b3.jpg",
+    "normalizedIdentity": "https://web.archive.org/web/20211007015321id_/https://i0.hdslb.com/bfs/archive/fb8675210b6d6b79cf0b698d5b04623a4e5f33b3.jpg",
+    "file": "static.jpg",
+    "contentType": "image/jpeg",
+    "tag": "img",
+    "sourceKind": "header-api-pic",
+    "assetType": "image",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  "layers": [],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "horizontal-normalized-from-entry",
+    "inputMode": "relative-from-pointer-enter",
+    "displacementFormula": "(clientX-enterX)/containerWidth",
+    "containerReferenceHeight": 155,
+    "returnDurationMs": 200,
+    "effects": []
+  },
+  "sourceFiles": {
+    "json": "source/api.json"
+  },
+  "api": {
+    "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "id": null,
+    "name": "换种方式打开英雄联盟宣传片",
+    "request_id": "1633571601",
+    "isSplitLayer": false,
+    "layerCount": 0,
+    "assetCount": 0,
+    "pic": "https://i0.hdslb.com/bfs/archive/fb8675210b6d6b79cf0b698d5b04623a4e5f33b3.jpg",
+    "litpic": "https://i0.hdslb.com/bfs/archive/2a9e191b3e161585166a5f9c17134a75d3f90acd.png",
+    "litpicAsset": {
+      "src": "https://i0.hdslb.com/bfs/archive/2a9e191b3e161585166a5f9c17134a75d3f90acd.png",
+      "requestedSrc": "https://web.archive.org/web/20211007015321id_/https://i0.hdslb.com/bfs/archive/2a9e191b3e161585166a5f9c17134a75d3f90acd.png",
+      "normalizedIdentity": "https://web.archive.org/web/20211007015321id_/https://i0.hdslb.com/bfs/archive/2a9e191b3e161585166a5f9c17134a75d3f90acd.png",
+      "file": "litpic.png",
+      "contentType": "image/png",
+      "tag": "img"
+    },
+    "splitVersion": "1",
+    "extensions": {}
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2021-10-01T19:56:14+08:00",
+  "type": [
+    "static"
+  ],
+  "is_split_layer": false,
+  "fallback_image": null,
+  "preview_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "bilibili-header-api",
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142"
+    },
+    "layerCount": 0,
+    "mediaCount": 0,
+    "visibleMediaCount": 0,
+    "media": [],
+    "resourceUrls": [],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "api": {
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+      "id": null,
+      "request_id": "1633571601",
+      "isSplitLayer": false,
+      "layerCount": 0,
+      "assetCount": 0,
+      "savedAssetCount": 0,
+      "effects": []
+    }
+  },
+  "assets": [
+    {
+      "role": "primary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/fb8675210b6d6b79cf0b698d5b04623a4e5f33b3.jpg",
+      "local_file": "static.jpg",
+      "content_type": "image/jpeg",
+      "sha256": "e1e761e338906eee8e206cd2c19690b66d57f2b8db7a20f21d26828e49823f67"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "67aa171f944b65ff97bf3bfa",
+  "hashes": {
+    "resourceHash": "f843da242bfa4c750fbc95ad",
+    "structureHash": "de4fc3dbabf616f1c5c05910",
+    "interactionHash": "b2e542b0322f4bad46ea7f04",
+    "contentHash": "67aa171f944b65ff97bf3bfa"
+  },
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2021-10-01_3f4544a6cbd4_67aa171f",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2021-10-01T19:56:14+08:00",
+      "lastObservedAt": "2021-10-01T19:56:14+08:00",
+      "date": "2021-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2021-10-01_3f4544a6cbd4_67aa171f",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20211001115614",
+        "waybackReplay": "https://web.archive.org/web/20211007015321id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20211001120000",
+        "homepageWaybackTimestamp": "20211001115614",
+        "headerApiWaybackTimestamp": "20211007015321",
+        "headerApiTimeDeltaSeconds": 482227,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20211007015321id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20210924115614&to=20211008115614&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
