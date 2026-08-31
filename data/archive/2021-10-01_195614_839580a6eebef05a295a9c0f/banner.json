@@ -430,7 +430,7 @@
     }
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2021-10-01T19:56:14+08:00",
+  "lastObservedAt": "2021-11-01T20:01:47+08:00",
   "type": [
     "layered",
     "video",
@@ -567,6 +567,51 @@
         "headerApiTimeDeltaSeconds": 98229,
         "headerApiWaybackReplay": "https://web.archive.org/web/20210930083905id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
         "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20210924115614&to=20211008115614&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-11-01T20:01:47+08:00",
+      "lastObservedAt": "2021-11-01T20:01:47+08:00",
+      "date": "2021-11-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2021-11-01_5fa976dad48a_839580a6",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20211101120147",
+        "waybackReplay": "https://web.archive.org/web/20211102023217id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20211101120000",
+        "provider": "wayback-header-api",
+        "provenance": {
+          "primaryProvider": "wayback-header-api",
+          "supportingProviders": [],
+          "confidence": "high",
+          "agreement": {},
+          "conflicts": []
+        },
+        "homepageWaybackTimestamp": "20211101120147",
+        "headerApiWaybackTimestamp": "20211102023217",
+        "headerApiTimeDeltaSeconds": 52230,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20211102023217id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20211025120147&to=20211108120147&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
         "discoveredResources": [
           {
             "name": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
