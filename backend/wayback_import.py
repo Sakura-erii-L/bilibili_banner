@@ -160,6 +160,45 @@ def is_direct_bilibili_request(url: str) -> bool:
     )
 
 
+def describe_banner_dom(page) -> list[dict[str, Any]]:
+    return page.evaluate(
+        r"""() => {
+            const roots = [
+                ...document.querySelectorAll(
+                    ".animated-banner, .bili-header__banner, .head-banner, "
+                    + ".header-banner, #banner_link, .banner_link"
+                )
+            ];
+            const candidates = [];
+            for (const root of roots) {
+                let current = root;
+                for (let depth = 0; current && depth < 4; depth += 1) {
+                    if (!candidates.includes(current)) candidates.push(current);
+                    current = current.parentElement;
+                }
+            }
+            return candidates.slice(0, 24).map(element => {
+                const cs = getComputedStyle(element);
+                const rect = element.getBoundingClientRect();
+                const images = [...element.querySelectorAll("img")]
+                    .slice(0, 5)
+                    .map(img => img.currentSrc || img.src || "");
+                return {
+                    tag: element.tagName.toLowerCase(),
+                    id: element.id || "",
+                    className: String(element.className || "").slice(0, 300),
+                    width: rect.width,
+                    height: rect.height,
+                    backgroundImage: cs.backgroundImage,
+                    beforeBackgroundImage: getComputedStyle(element, "::before").backgroundImage,
+                    afterBackgroundImage: getComputedStyle(element, "::after").backgroundImage,
+                    images
+                };
+            });
+        }"""
+    )
+
+
 def capture_snapshot(
     context,
     page,
@@ -265,6 +304,17 @@ def capture_snapshot(
                 )
 
         if mode == "static" and not static:
+            print(
+                json.dumps(
+                    {
+                        "timestamp": timestamp,
+                        "pageUrl": page.url,
+                        "title": page.title(),
+                        "bannerDom": describe_banner_dom(page),
+                    },
+                    ensure_ascii=False,
+                )
+            )
             raise RuntimeError("no downloadable archived Banner asset found")
 
         captured_at = moment.isoformat(timespec="seconds")
