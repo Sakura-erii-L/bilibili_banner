@@ -1,9 +1,63 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-01T14:15:59+08:00",
+  "generatedAt": "2026-09-01T20:35:22+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2026-09-01_862cf6b60fd7_7b7f2cff",
+      "date": "2026-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2026",
+      "month": "09",
+      "yearMonth": "2026-09",
+      "capturedAt": "2026-09-01T20:33:26+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 26,
+      "completeness": "partial",
+      "missing_assets": [
+        "2 API layer(s) unavailable",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: The read operation timed out",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: IncompleteRead(15104 bytes read, 50448 more expected)"
+      ],
+      "contentHash": "7b7f2cff233dbd06c441c2f7",
+      "manifest": "./data/archive/2026-09-01_203326_7b7f2cff233dbd06c441c2f7/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "7b7f2cff233dbd06c441c2f7",
+          "canonicalContentHash": "06e688a9f0dd2c8d75e51c86",
+          "sourceFingerprint": "c6e4be3c9bf9bc2aa2719aac",
+          "capturedAt": "2026-09-01T20:33:26+08:00",
+          "lastObservedAt": "2026-09-01T20:33:26+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 26,
+          "completeness": "partial",
+          "missing_assets": [
+            "2 API layer(s) unavailable",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: The read operation timed out",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: IncompleteRead(15104 bytes read, 50448 more expected)"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2026-09-01_203326_7b7f2cff233dbd06c441c2f7/banner.json"
+        }
+      ]
+    },
     {
       "id": "2026-09-01_8d15a05ed0f2_8fab6330",
       "date": "2026-09-01",
