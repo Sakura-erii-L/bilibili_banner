@@ -1,0 +1,3738 @@
+{
+  "version": 11.0,
+  "capturedAt": "2023-03-31T00:00:00+08:00",
+  "date": "2023-03-31",
+  "season": "spring",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "captureMethod": "mikufan039-reference",
+    "provider": "mikufan039-reference",
+    "referenceId": "2023springV2",
+    "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "referenceTitle": "2023 春（第二版）",
+    "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+    "referenceCategory": "seasonal",
+    "coverageStartDate": "2023-03-31",
+    "coverageEndDate": "2023-05-07",
+    "originalStartDate": "2023-03-31",
+    "originalEndDate": "2023-05-07",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "reference": {
+    "id": "2023springV2",
+    "commit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "manifest": "reference-manifest.json",
+    "cover": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png"
+  },
+  "provenance": {
+    "primaryProvider": "mikufan039-reference",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+    "file": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+    "tag": "img",
+    "assetType": "image",
+    "sourceKind": "reference"
+  },
+  "layers": [
+    {
+      "scale": {
+        "initial": 4
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -150,
+          0
+        ]
+      },
+      "blur": {
+        "initial": 2
+      },
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 28,
+      "name": "最远景",
+      "index": 28,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+      "file": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+      "resources": [
+        {
+          "src": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+          "id": 0,
+          "file": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.35
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          630,
+          15
+        ]
+      },
+      "blur": {
+        "initial": 2
+      },
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 30,
+      "name": "远景小风车",
+      "index": 30,
+      "tag": "video",
+      "assetType": "video",
+      "src": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "file": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "resources": [
+        {
+          "src": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "id": 0,
+          "file": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "resourceIndex": 0,
+          "tag": "video",
+          "assetType": "video"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 1,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    },
+    {
+      "scale": {
+        "initial": 3
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          2,
+          0
+        ]
+      },
+      "blur": {
+        "initial": 1
+      },
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 29,
+      "name": "远树",
+      "index": 29,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+      "file": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+      "resources": [
+        {
+          "src": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+          "id": 0,
+          "file": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 2,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.25
+      },
+      "rotate": {
+        "offset": 30,
+        "offsetCurve": [
+          0.1535,
+          0.972,
+          1,
+          1
+        ]
+      },
+      "translate": {
+        "initial": [
+          -1250,
+          -200
+        ]
+      },
+      "blur": {
+        "initial": 1
+      },
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 17,
+      "name": "小风车",
+      "index": 17,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+      "file": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+      "resources": [
+        {
+          "src": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+          "id": 0,
+          "file": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 3,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {
+        "offset": -90
+      },
+      "translate": {
+        "initial": [
+          -50,
+          -20
+        ],
+        "offset": [
+          10,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 16,
+      "name": "大叶子",
+      "index": 16,
+      "tag": "video",
+      "assetType": "video",
+      "src": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "file": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "resources": [
+        {
+          "src": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "id": 0,
+          "file": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+          "resourceIndex": 0,
+          "tag": "video",
+          "assetType": "video"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 4,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    },
+    {
+      "scale": {
+        "initial": 0.25
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          80,
+          -100
+        ],
+        "offset": [
+          50,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 3,
+      "name": "远景树干",
+      "index": 3,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "file": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "resources": [
+        {
+          "src": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+          "id": 0,
+          "file": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 5,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.16
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          1700,
+          249
+        ],
+        "offset": [
+          400,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 20,
+      "name": "搬运瓢虫",
+      "index": 20,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "file": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "resources": [
+        {
+          "src": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+          "id": 0,
+          "file": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 6,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.28
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -1800,
+          80
+        ],
+        "offset": [
+          500,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 27,
+      "name": "鸟",
+      "index": 27,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "file": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "resources": [
+        {
+          "src": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+          "id": 0,
+          "file": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 7,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.27
+      },
+      "rotate": {
+        "initial": -3
+      },
+      "translate": {
+        "initial": [
+          -1200,
+          150
+        ],
+        "offset": [
+          200,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 13,
+      "name": "球迷鸟",
+      "index": 13,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+      "file": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+      "resources": [
+        {
+          "src": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+          "id": 0,
+          "file": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 8,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.5
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          850,
+          6
+        ],
+        "offset": [
+          150,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 26,
+      "name": "远景楼梯",
+      "index": 26,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "file": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "resources": [
+        {
+          "src": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+          "id": 0,
+          "file": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 9,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.22
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          1350,
+          -150
+        ],
+        "offset": [
+          200,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 8,
+      "name": "小蜜蜂",
+      "index": 8,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+      "file": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+      "resources": [
+        {
+          "src": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+          "id": 0,
+          "file": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 10,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.26
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          1500,
+          -400
+        ],
+        "offset": [
+          500,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 24,
+      "name": "树叶",
+      "index": 24,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "file": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "resources": [
+        {
+          "src": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+          "id": 0,
+          "file": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 11,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.3
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          1200,
+          0
+        ],
+        "offset": [
+          300,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 25,
+      "name": "楼梯",
+      "index": 25,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "file": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "resources": [
+        {
+          "src": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+          "id": 0,
+          "file": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 12,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.3
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          600,
+          20
+        ],
+        "offset": [
+          300,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 2,
+      "name": "右侧中景",
+      "index": 2,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+      "file": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+      "resources": [
+        {
+          "src": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+          "id": 0,
+          "file": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 13,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.3
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          300,
+          -40
+        ],
+        "offset": [
+          400,
+          0
+        ],
+        "offsetCurve": [
+          0,
+          -0.007,
+          1,
+          1
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 4,
+      "name": "22没发力",
+      "index": 4,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+      "file": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+      "resources": [
+        {
+          "src": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+          "id": 0,
+          "file": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 14,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.3
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          300,
+          -40
+        ],
+        "offset": [
+          400,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 12,
+      "name": "22发力了",
+      "index": 12,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "file": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "resources": [
+        {
+          "src": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+          "id": 0,
+          "file": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 15,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.35
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -300,
+          50
+        ],
+        "offset": [
+          400,
+          100
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 14,
+      "name": "垂直搬运",
+      "index": 14,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+      "file": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+      "resources": [
+        {
+          "src": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+          "id": 0,
+          "file": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 16,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.26
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          245,
+          130
+        ],
+        "offset": [
+          600,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 5,
+      "name": "33",
+      "index": 5,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+      "file": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+      "resources": [
+        {
+          "src": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+          "id": 0,
+          "file": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 17,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.2
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -4000,
+          0
+        ],
+        "offset": [
+          900,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 22,
+      "name": "左侧手树",
+      "index": 22,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "file": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "resources": [
+        {
+          "src": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+          "id": 0,
+          "file": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 18,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.31
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -1900,
+          0
+        ],
+        "offset": [
+          500,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 21,
+      "name": "左近树",
+      "index": 21,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+      "file": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+      "resources": [
+        {
+          "src": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+          "id": 0,
+          "file": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 19,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.2
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -1050,
+          -150
+        ],
+        "offset": [
+          800,
+          100
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 34,
+      "name": "球",
+      "index": 34,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+      "file": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+      "resources": [
+        {
+          "src": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+          "id": 0,
+          "file": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 20,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.23
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -800,
+          100
+        ],
+        "offset": [
+          800,
+          100
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 32,
+      "name": "山王瓢虫",
+      "index": 32,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+      "file": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+      "resources": [
+        {
+          "src": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+          "id": 0,
+          "file": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 21,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.23
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -1000,
+          80
+        ],
+        "offset": [
+          800,
+          150
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 33,
+      "name": "湘北瓢虫",
+      "index": 33,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+      "file": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+      "resources": [
+        {
+          "src": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+          "id": 0,
+          "file": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 22,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.32
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -1600,
+          90
+        ],
+        "offset": [
+          1000,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 1,
+      "name": "左侧近树干",
+      "index": 1,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+      "file": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+      "resources": [
+        {
+          "src": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+          "id": 0,
+          "file": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 23,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.25
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          1600,
+          200
+        ],
+        "offset": [
+          800,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 19,
+      "name": "斧子树桩",
+      "index": 19,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "file": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "resources": [
+        {
+          "src": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+          "id": 0,
+          "file": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 24,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.35
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          1500,
+          0
+        ],
+        "offset": [
+          800,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 23,
+      "name": "藤曼",
+      "index": 23,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "file": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "resources": [
+        {
+          "src": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+          "id": 0,
+          "file": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 25,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.28
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          2500,
+          100
+        ],
+        "offset": [
+          900,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 18,
+      "name": "近树桩",
+      "index": 18,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+      "file": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+      "resources": [
+        {
+          "src": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+          "id": 0,
+          "file": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 26,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    }
+  ],
+  "auxiliaryAssets": [
+    {
+      "role": "reference",
+      "file": "bfs/archive/38a9518784220f7f3c894bc9ba1ee799b2f1644b.png",
+      "src": "bfs/archive/38a9518784220f7f3c894bc9ba1ee799b2f1644b.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+      "src": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "src": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+      "src": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "src": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+      "src": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "src": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+      "src": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "src": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "src": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "src": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "src": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+      "src": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+      "src": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "src": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+      "src": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+      "src": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "src": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "src": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+      "src": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+      "src": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+      "src": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+      "src": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+      "src": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+      "src": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+      "src": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+      "src": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+      "assetType": "other"
+    }
+  ],
+  "interaction": {
+    "model": "mikufan-reference-v1",
+    "effects": []
+  },
+  "referenceMode": "normal",
+  "preview_image": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+  "sourceFiles": {
+    "json": "reference-manifest.json"
+  },
+  "api": {
+    "id": null,
+    "name": "",
+    "isSplitLayer": true,
+    "extensions": {}
+  },
+  "extensions": {},
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2023-05-07T00:00:00+08:00",
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "type": [
+    "layered",
+    "video"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "mikufan039",
+      "referenceId": "2023springV2"
+    },
+    "layerCount": 27,
+    "visibleMediaCount": 27,
+    "resourceUrls": [],
+    "media": [],
+    "signals": {
+      "isSplitLayer": true,
+      "hasInteraction": false,
+      "hasVideo": true
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+      "local_file": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+      "content_type": "",
+      "sha256": "7432c565ee83acf00b11ef3bcd92c9211a644d72ef35da6274bf220863b0e176"
+    },
+    {
+      "role": "layer",
+      "index": 28,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+      "local_file": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+      "content_type": "",
+      "sha256": "3b1b8f9efac53537852d4c77e40b6dff8072fe6e5761dfb0634d2992144f3f05"
+    },
+    {
+      "role": "layer",
+      "index": 30,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "local_file": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "content_type": "",
+      "sha256": "c2797682dff6022ce15e3b6e680737b86f0f5bc5a673e36f762c824b250c9f4b"
+    },
+    {
+      "role": "layer",
+      "index": 29,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+      "local_file": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+      "content_type": "",
+      "sha256": "402819b4cf0ea1b192884d710ca01b445bb3c85126422cb042c37ec1d2cd05bb"
+    },
+    {
+      "role": "layer",
+      "index": 17,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+      "local_file": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+      "content_type": "",
+      "sha256": "4ff94fe9a0bd91d9b70fcd1418dbc19e27b8fe038f044f143ee4204a80a4d9d3"
+    },
+    {
+      "role": "layer",
+      "index": 16,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "local_file": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "content_type": "",
+      "sha256": "c2797682dff6022ce15e3b6e680737b86f0f5bc5a673e36f762c824b250c9f4b"
+    },
+    {
+      "role": "layer",
+      "index": 3,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "local_file": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "content_type": "",
+      "sha256": "4ca4c73db935efa8d9abbecf11fdddebaf6ce7154f7976ec8f09e116fc684153"
+    },
+    {
+      "role": "layer",
+      "index": 20,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "local_file": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "content_type": "",
+      "sha256": "98be2fea547f909e6173113dc0e309af998b247470449b1348cf0153d716c28d"
+    },
+    {
+      "role": "layer",
+      "index": 27,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "local_file": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "content_type": "",
+      "sha256": "bb90d1cdcd3ac847129714be008faf8cbc65c5513b185997f9aed5030ef07f0d"
+    },
+    {
+      "role": "layer",
+      "index": 13,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+      "local_file": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+      "content_type": "",
+      "sha256": "3e01ae239b21e3276c29b778fc39185b5eec1504b1bf2ac53a92ac30720f688a"
+    },
+    {
+      "role": "layer",
+      "index": 26,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "local_file": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "content_type": "",
+      "sha256": "2c00785b874330e1ceb3003ac7da58fffc01b1707738d03702739cad23fbfd1a"
+    },
+    {
+      "role": "layer",
+      "index": 8,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+      "local_file": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+      "content_type": "",
+      "sha256": "65ec823129b60388465ddbac26521d6f91c4f4abc6c2d0ecf834373bd041ede5"
+    },
+    {
+      "role": "layer",
+      "index": 24,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "local_file": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "content_type": "",
+      "sha256": "af841884943e5c8bfe7580ea35713e509dd5382bf298603ea093b95d38588b2c"
+    },
+    {
+      "role": "layer",
+      "index": 25,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "local_file": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "content_type": "",
+      "sha256": "2c00785b874330e1ceb3003ac7da58fffc01b1707738d03702739cad23fbfd1a"
+    },
+    {
+      "role": "layer",
+      "index": 2,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+      "local_file": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+      "content_type": "",
+      "sha256": "397b5af611a885da30c558ccc4d9f3074b07bd2b44b2d72b4706d40859de057a"
+    },
+    {
+      "role": "layer",
+      "index": 4,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+      "local_file": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+      "content_type": "",
+      "sha256": "f7be6062bd41eba007455adc6911d931eb31130616dd43a2e0439577dfa40007"
+    },
+    {
+      "role": "layer",
+      "index": 12,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "local_file": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "content_type": "",
+      "sha256": "fca23e3aec7687e124997fc50c0fb91c3ad1918d29a4695b3e4fe3259a01fd0a"
+    },
+    {
+      "role": "layer",
+      "index": 14,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+      "local_file": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+      "content_type": "",
+      "sha256": "e4929667bc0e3e8fb8f5ff0af7e2ff45a46f76a3fc327f8cf1b47c9573cf3247"
+    },
+    {
+      "role": "layer",
+      "index": 5,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+      "local_file": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+      "content_type": "",
+      "sha256": "e9c85a2a2a4657eb822242e65e1eb0a250b774cb47d529d212d1239465a5b68d"
+    },
+    {
+      "role": "layer",
+      "index": 22,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "local_file": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "content_type": "",
+      "sha256": "ee98f68778154b960154b751e8bc13eca81302bcd1bd826edf86161d32bc29b6"
+    },
+    {
+      "role": "layer",
+      "index": 21,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+      "local_file": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+      "content_type": "",
+      "sha256": "a08d734a035de0dec10a2b4f90433c17502c89115f5465f31643e98c618e8ead"
+    },
+    {
+      "role": "layer",
+      "index": 34,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+      "local_file": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+      "content_type": "",
+      "sha256": "90d66401e418c565f74a957ba0ba16bacee08cb1f025624da00d37521598a038"
+    },
+    {
+      "role": "layer",
+      "index": 32,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+      "local_file": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+      "content_type": "",
+      "sha256": "3fa20eec4a08ce955219bc609f60b5376f58097bb2842a541d9dbbf1bebc22a2"
+    },
+    {
+      "role": "layer",
+      "index": 33,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+      "local_file": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+      "content_type": "",
+      "sha256": "4f527e7f848d299bfdbad987f94d38409433eea28ffa64fcbf852c5045a3129a"
+    },
+    {
+      "role": "layer",
+      "index": 1,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+      "local_file": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+      "content_type": "",
+      "sha256": "2da4b92a60c639a171f63831e745957cdf9a5c805c86050cbf25a0e30fb96730"
+    },
+    {
+      "role": "layer",
+      "index": 19,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "local_file": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "content_type": "",
+      "sha256": "1e531da36c198bbcd413aed834a62da13e418e9378200eef0853b0bfcb73642e"
+    },
+    {
+      "role": "layer",
+      "index": 23,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "local_file": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "content_type": "",
+      "sha256": "09a3c936244904e177e55024a2ec26106cc6299fe891b10ba5f4d54c81c83a21"
+    },
+    {
+      "role": "layer",
+      "index": 18,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+      "local_file": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+      "content_type": "",
+      "sha256": "e36a9b9a18387232da587d581b26459600ef20c4841dad354c34680dd159a491"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/38a9518784220f7f3c894bc9ba1ee799b2f1644b.png",
+      "local_file": "bfs/archive/38a9518784220f7f3c894bc9ba1ee799b2f1644b.png",
+      "content_type": "",
+      "sha256": "c26547bd693201a2b2eb249e8b6f9ea1449a26d787617a1158f6b98551f5b5dd"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+      "local_file": "bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+      "content_type": "",
+      "sha256": "7432c565ee83acf00b11ef3bcd92c9211a644d72ef35da6274bf220863b0e176"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "local_file": "bfs/vc/028ef6e821838374a7f359fc94b25880c2ea240b.png",
+      "content_type": "",
+      "sha256": "bb90d1cdcd3ac847129714be008faf8cbc65c5513b185997f9aed5030ef07f0d"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+      "local_file": "bfs/vc/03b2a678f16661de741c499f729590ce86e9a25f.png",
+      "content_type": "",
+      "sha256": "90d66401e418c565f74a957ba0ba16bacee08cb1f025624da00d37521598a038"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "local_file": "bfs/vc/09d3644f210dfb4a8972a3c88a23af817c194957.png",
+      "content_type": "",
+      "sha256": "ee98f68778154b960154b751e8bc13eca81302bcd1bd826edf86161d32bc29b6"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+      "local_file": "bfs/vc/1045c564a1d99f00360d9f423b76f06ad09d2948.png",
+      "content_type": "",
+      "sha256": "397b5af611a885da30c558ccc4d9f3074b07bd2b44b2d72b4706d40859de057a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "local_file": "bfs/vc/12af9b13bce57155d995eaff06e58a0c564ddd42.png",
+      "content_type": "",
+      "sha256": "af841884943e5c8bfe7580ea35713e509dd5382bf298603ea093b95d38588b2c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+      "local_file": "bfs/vc/19b86a226430b9d0df1a094aba11195ee8927c10.png",
+      "content_type": "",
+      "sha256": "3b1b8f9efac53537852d4c77e40b6dff8072fe6e5761dfb0634d2992144f3f05"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "local_file": "bfs/vc/1b7364fdd41c5eab9241b0ebe1d8e7d6e0426037.png",
+      "content_type": "",
+      "sha256": "2c00785b874330e1ceb3003ac7da58fffc01b1707738d03702739cad23fbfd1a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "local_file": "bfs/vc/224da8789a22bcfca7e4a0f45f2e590c6ed34c8e.png",
+      "content_type": "",
+      "sha256": "fca23e3aec7687e124997fc50c0fb91c3ad1918d29a4695b3e4fe3259a01fd0a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "local_file": "bfs/vc/2358ca61c912cac1f83393dffe4fbd56534b0434.png",
+      "content_type": "",
+      "sha256": "98be2fea547f909e6173113dc0e309af998b247470449b1348cf0153d716c28d"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "local_file": "bfs/vc/27d516ef11408fd3a65a6ba0c3dad76dcca76573.webm",
+      "content_type": "",
+      "sha256": "c2797682dff6022ce15e3b6e680737b86f0f5bc5a673e36f762c824b250c9f4b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+      "local_file": "bfs/vc/2c9b8dc6c1453a175959cc6b98ca8404382b51ea.png",
+      "content_type": "",
+      "sha256": "4ff94fe9a0bd91d9b70fcd1418dbc19e27b8fe038f044f143ee4204a80a4d9d3"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+      "local_file": "bfs/vc/3a443b3b53ae6fc2995a91c34fb6c9de1c34b218.png",
+      "content_type": "",
+      "sha256": "402819b4cf0ea1b192884d710ca01b445bb3c85126422cb042c37ec1d2cd05bb"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "local_file": "bfs/vc/537bda6d44c1c8a14ee96d644ff44772dcea9dd5.png",
+      "content_type": "",
+      "sha256": "1e531da36c198bbcd413aed834a62da13e418e9378200eef0853b0bfcb73642e"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+      "local_file": "bfs/vc/5b571ae7845e28ca7a9619ac76c61762e6c73589.png",
+      "content_type": "",
+      "sha256": "3e01ae239b21e3276c29b778fc39185b5eec1504b1bf2ac53a92ac30720f688a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+      "local_file": "bfs/vc/61b61ab97b33299afdcc8b9fa620fc60f6343396.png",
+      "content_type": "",
+      "sha256": "2da4b92a60c639a171f63831e745957cdf9a5c805c86050cbf25a0e30fb96730"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "local_file": "bfs/vc/76f670872690db4a6b31d03cb51526b484ad88a4.png",
+      "content_type": "",
+      "sha256": "09a3c936244904e177e55024a2ec26106cc6299fe891b10ba5f4d54c81c83a21"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "local_file": "bfs/vc/8d4405b6111256948fe5173f11ff05177432993b.png",
+      "content_type": "",
+      "sha256": "4ca4c73db935efa8d9abbecf11fdddebaf6ce7154f7976ec8f09e116fc684153"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+      "local_file": "bfs/vc/a532a95f2a4e9394c2fe8b87347497cd155614be.png",
+      "content_type": "",
+      "sha256": "65ec823129b60388465ddbac26521d6f91c4f4abc6c2d0ecf834373bd041ede5"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+      "local_file": "bfs/vc/a7c3dcc7f2f545e077bc2e734d6f2ede2051d34c.png",
+      "content_type": "",
+      "sha256": "a08d734a035de0dec10a2b4f90433c17502c89115f5465f31643e98c618e8ead"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+      "local_file": "bfs/vc/c21a3c29aaf80955b19fec131fd5b1aecf06a1c8.png",
+      "content_type": "",
+      "sha256": "f7be6062bd41eba007455adc6911d931eb31130616dd43a2e0439577dfa40007"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+      "local_file": "bfs/vc/d51f66bb9884f0b96ecfd21ec18d5cbbbba17e3e.png",
+      "content_type": "",
+      "sha256": "e9c85a2a2a4657eb822242e65e1eb0a250b774cb47d529d212d1239465a5b68d"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+      "local_file": "bfs/vc/d85596fbd861c7bb6994e9f09359bb491fe4f27d.png",
+      "content_type": "",
+      "sha256": "3fa20eec4a08ce955219bc609f60b5376f58097bb2842a541d9dbbf1bebc22a2"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+      "local_file": "bfs/vc/dcd7210ccfbdead1c327a6745925268828158a7c.png",
+      "content_type": "",
+      "sha256": "e4929667bc0e3e8fb8f5ff0af7e2ff45a46f76a3fc327f8cf1b47c9573cf3247"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+      "local_file": "bfs/vc/ea01845490a00778ed112ef7d6ae01015fcb6ab6.png",
+      "content_type": "",
+      "sha256": "4f527e7f848d299bfdbad987f94d38409433eea28ffa64fcbf852c5045a3129a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+      "local_file": "bfs/vc/fe7d5e9223e7772a88378e25e9a82076d4fc6f62.png",
+      "content_type": "",
+      "sha256": "e36a9b9a18387232da587d581b26459600ef20c4841dad354c34680dd159a491"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "1125761eb78991c24d882432",
+  "hashes": {
+    "resourceHash": "de465fa7166fd23b347bf7a5",
+    "structureHash": "f04e6ff62377cde1f89880e9",
+    "interactionHash": "a8eca8441c30cb8144c2eb4b",
+    "contentHash": "1125761eb78991c24d882432",
+    "canonicalContentHash": "6cd9c5a0de975eade255dd39",
+    "sourceFingerprint": "535892a932946d45bc215e0d"
+  },
+  "canonicalContentHash": "6cd9c5a0de975eade255dd39",
+  "sourceFingerprint": "535892a932946d45bc215e0d",
+  "layoutHash": "7109da938f1918f1f7724547",
+  "familyId": "2023-03-31_2023-03-31_2023-05-07_spring",
+  "observations": [
+    {
+      "capturedAt": "2023-03-31T00:00:00+08:00",
+      "lastObservedAt": "2023-03-31T00:00:00+08:00",
+      "date": "2023-03-31",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-03-31_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-01T00:00:00+08:00",
+      "lastObservedAt": "2023-04-01T00:00:00+08:00",
+      "date": "2023-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-01_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-02T00:00:00+08:00",
+      "lastObservedAt": "2023-04-02T00:00:00+08:00",
+      "date": "2023-04-02",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-02_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-03T00:00:00+08:00",
+      "lastObservedAt": "2023-04-03T00:00:00+08:00",
+      "date": "2023-04-03",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-03_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-04T00:00:00+08:00",
+      "lastObservedAt": "2023-04-04T00:00:00+08:00",
+      "date": "2023-04-04",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-04_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-05T00:00:00+08:00",
+      "lastObservedAt": "2023-04-05T00:00:00+08:00",
+      "date": "2023-04-05",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-05_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-06T00:00:00+08:00",
+      "lastObservedAt": "2023-04-06T00:00:00+08:00",
+      "date": "2023-04-06",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-06_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-07T00:00:00+08:00",
+      "lastObservedAt": "2023-04-07T00:00:00+08:00",
+      "date": "2023-04-07",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-07_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-08T00:00:00+08:00",
+      "lastObservedAt": "2023-04-08T00:00:00+08:00",
+      "date": "2023-04-08",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-08_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-09T00:00:00+08:00",
+      "lastObservedAt": "2023-04-09T00:00:00+08:00",
+      "date": "2023-04-09",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-09_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-10T00:00:00+08:00",
+      "lastObservedAt": "2023-04-10T00:00:00+08:00",
+      "date": "2023-04-10",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-10_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-11T00:00:00+08:00",
+      "lastObservedAt": "2023-04-11T00:00:00+08:00",
+      "date": "2023-04-11",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-11_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-12T00:00:00+08:00",
+      "lastObservedAt": "2023-04-12T00:00:00+08:00",
+      "date": "2023-04-12",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-12_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-13T00:00:00+08:00",
+      "lastObservedAt": "2023-04-13T00:00:00+08:00",
+      "date": "2023-04-13",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-13_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-14T00:00:00+08:00",
+      "lastObservedAt": "2023-04-14T00:00:00+08:00",
+      "date": "2023-04-14",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-14_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-15T00:00:00+08:00",
+      "lastObservedAt": "2023-04-15T00:00:00+08:00",
+      "date": "2023-04-15",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-15_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-16T00:00:00+08:00",
+      "lastObservedAt": "2023-04-16T00:00:00+08:00",
+      "date": "2023-04-16",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-16_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-17T00:00:00+08:00",
+      "lastObservedAt": "2023-04-17T00:00:00+08:00",
+      "date": "2023-04-17",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-17_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-18T00:00:00+08:00",
+      "lastObservedAt": "2023-04-18T00:00:00+08:00",
+      "date": "2023-04-18",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-18_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-19T00:00:00+08:00",
+      "lastObservedAt": "2023-04-19T00:00:00+08:00",
+      "date": "2023-04-19",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-19_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-20T00:00:00+08:00",
+      "lastObservedAt": "2023-04-20T00:00:00+08:00",
+      "date": "2023-04-20",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-20_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-21T00:00:00+08:00",
+      "lastObservedAt": "2023-04-21T00:00:00+08:00",
+      "date": "2023-04-21",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-21_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-22T00:00:00+08:00",
+      "lastObservedAt": "2023-04-22T00:00:00+08:00",
+      "date": "2023-04-22",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-22_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-23T00:00:00+08:00",
+      "lastObservedAt": "2023-04-23T00:00:00+08:00",
+      "date": "2023-04-23",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-23_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-24T00:00:00+08:00",
+      "lastObservedAt": "2023-04-24T00:00:00+08:00",
+      "date": "2023-04-24",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-24_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-25T00:00:00+08:00",
+      "lastObservedAt": "2023-04-25T00:00:00+08:00",
+      "date": "2023-04-25",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-25_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-26T00:00:00+08:00",
+      "lastObservedAt": "2023-04-26T00:00:00+08:00",
+      "date": "2023-04-26",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-26_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-27T00:00:00+08:00",
+      "lastObservedAt": "2023-04-27T00:00:00+08:00",
+      "date": "2023-04-27",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-27_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-28T00:00:00+08:00",
+      "lastObservedAt": "2023-04-28T00:00:00+08:00",
+      "date": "2023-04-28",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-28_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-29T00:00:00+08:00",
+      "lastObservedAt": "2023-04-29T00:00:00+08:00",
+      "date": "2023-04-29",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-29_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-04-30T00:00:00+08:00",
+      "lastObservedAt": "2023-04-30T00:00:00+08:00",
+      "date": "2023-04-30",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-04-30_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-05-01T00:00:00+08:00",
+      "lastObservedAt": "2023-05-01T00:00:00+08:00",
+      "date": "2023-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-05-01_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-05-02T00:00:00+08:00",
+      "lastObservedAt": "2023-05-02T00:00:00+08:00",
+      "date": "2023-05-02",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-05-02_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-05-03T00:00:00+08:00",
+      "lastObservedAt": "2023-05-03T00:00:00+08:00",
+      "date": "2023-05-03",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-05-03_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-05-04T00:00:00+08:00",
+      "lastObservedAt": "2023-05-04T00:00:00+08:00",
+      "date": "2023-05-04",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-05-04_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-05-05T00:00:00+08:00",
+      "lastObservedAt": "2023-05-05T00:00:00+08:00",
+      "date": "2023-05-05",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-05-05_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-05-06T00:00:00+08:00",
+      "lastObservedAt": "2023-05-06T00:00:00+08:00",
+      "date": "2023-05-06",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-05-06_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-05-07T00:00:00+08:00",
+      "lastObservedAt": "2023-05-07T00:00:00+08:00",
+      "date": "2023-05-07",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-05-07_2023-03-31_2023-05-07_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023springV2",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 春（第二版）",
+        "referenceCover": "res/bilibanner/2023springV2/bfs/archive/c3c807eb2f5bcc333a3bf3189634e3f9867c6a85.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-03-31",
+        "coverageEndDate": "2023-05-07",
+        "originalStartDate": "2023-03-31",
+        "originalEndDate": "2023-05-07",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

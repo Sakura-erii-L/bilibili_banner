@@ -1,0 +1,5115 @@
+{
+  "version": 11.0,
+  "capturedAt": "2024-09-26T00:00:00+08:00",
+  "date": "2024-09-26",
+  "season": "autumn",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "captureMethod": "mikufan039-reference",
+    "provider": "mikufan039-reference",
+    "referenceId": "2024autumn",
+    "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "referenceTitle": "2024 秋",
+    "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+    "referenceCategory": "seasonal",
+    "coverageStartDate": "2024-09-26",
+    "coverageEndDate": "2024-12-24",
+    "originalStartDate": "2024-09-26",
+    "originalEndDate": "2024-12-24",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "reference": {
+    "id": "2024autumn",
+    "commit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "manifest": "reference-manifest.json",
+    "cover": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png"
+  },
+  "provenance": {
+    "primaryProvider": "mikufan039-reference",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+    "file": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+    "tag": "img",
+    "assetType": "image",
+    "sourceKind": "reference"
+  },
+  "layers": [
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {},
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 0,
+      "name": "=天空",
+      "index": 0,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+      "file": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+      "resources": [
+        {
+          "src": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+          "id": 0,
+          "file": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          10,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 1,
+      "name": "-云层",
+      "index": 1,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+      "file": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+      "resources": [
+        {
+          "src": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+          "id": 0,
+          "file": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 1,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          20,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 2,
+      "name": "-城市",
+      "index": 2,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+      "file": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+      "resources": [
+        {
+          "src": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+          "id": 0,
+          "file": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 2,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.53
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          40,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 3,
+      "name": "-地表",
+      "index": 3,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+      "file": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+      "resources": [
+        {
+          "src": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+          "id": 0,
+          "file": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 3,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          40,
+          2
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 8,
+      "name": "-远鸟群",
+      "index": 8,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+      "file": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+      "resources": [
+        {
+          "src": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+          "id": 0,
+          "file": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 4,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          45,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 4,
+      "name": "+左侧桥后",
+      "index": 4,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+      "file": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+      "resources": [
+        {
+          "src": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+          "id": 0,
+          "file": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 5,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          200,
+          0
+        ],
+        "offset": [
+          500,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 7,
+      "name": "+火车",
+      "index": 7,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+      "file": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+      "resources": [
+        {
+          "src": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+          "id": 0,
+          "file": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 6,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          50,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 6,
+      "name": "+火车铁路桥",
+      "index": 6,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+      "file": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+      "resources": [
+        {
+          "src": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+          "id": 0,
+          "file": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 7,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          60,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 5,
+      "name": "+左侧桥前",
+      "index": 5,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+      "file": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+      "resources": [
+        {
+          "src": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+          "id": 0,
+          "file": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 8,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          20,
+          0
+        ],
+        "offset": [
+          45,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 9,
+      "name": "-右远高架桥",
+      "index": 9,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+      "file": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+      "resources": [
+        {
+          "src": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+          "id": 0,
+          "file": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 9,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          70,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 10,
+      "name": "-右近桥",
+      "index": 10,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+      "file": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+      "resources": [
+        {
+          "src": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+          "id": 0,
+          "file": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 10,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.53
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          50,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 11,
+      "name": "-中景滩涂",
+      "index": 11,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+      "file": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+      "resources": [
+        {
+          "src": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+          "id": 0,
+          "file": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 11,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.54
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          0,
+          2
+        ],
+        "offset": [
+          75,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 12,
+      "name": "-前景滩涂",
+      "index": 12,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+      "file": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+      "resources": [
+        {
+          "src": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+          "id": 0,
+          "file": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 12,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          100,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 13,
+      "name": "-前景右大柱子",
+      "index": 13,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+      "file": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+      "resources": [
+        {
+          "src": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+          "id": 0,
+          "file": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 13,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          80,
+          5
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 14,
+      "name": "-中远鸟",
+      "index": 14,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+      "file": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+      "resources": [
+        {
+          "src": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+          "id": 0,
+          "file": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 14,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          0,
+          -20
+        ],
+        "offset": [
+          400,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 15,
+      "name": "-近鸟",
+      "index": 15,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+      "file": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+      "resources": [
+        {
+          "src": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+          "id": 0,
+          "file": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 15,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {
+        "offset": 20,
+        "offsetCurve": [
+          0.115,
+          1.4889999999999999,
+          0.9455,
+          -0.49650000000000016
+        ]
+      },
+      "translate": {
+        "initial": [
+          500,
+          20
+        ],
+        "offset": [
+          400,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 21,
+      "name": "=33",
+      "index": 21,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+      "file": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+      "resources": [
+        {
+          "src": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+          "id": 0,
+          "file": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 16,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52,
+        "offset": -0.5,
+        "offsetCurve": [
+          1,
+          0.36149999999999993,
+          1,
+          0.42200000000000004
+        ]
+      },
+      "rotate": {
+        "offsetCurve": [
+          0.489,
+          1.3955,
+          0.6705,
+          -0.4195000000000002
+        ]
+      },
+      "translate": {
+        "initial": [
+          200,
+          20
+        ],
+        "offset": [
+          300,
+          -5
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 20,
+      "name": "=22",
+      "index": 20,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+      "file": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+      "resources": [
+        {
+          "src": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+          "id": 0,
+          "file": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 17,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          600,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 16,
+      "name": "-树叶",
+      "index": 16,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+      "file": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+      "resources": [
+        {
+          "src": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+          "id": 0,
+          "file": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 18,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          0,
+          20
+        ],
+        "offset": [
+          200,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 17,
+      "name": "-左边植物",
+      "index": 17,
+      "tag": "video",
+      "assetType": "video",
+      "src": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+      "file": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+      "resources": [
+        {
+          "src": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+          "id": 0,
+          "file": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+          "resourceIndex": 0,
+          "tag": "video",
+          "assetType": "video"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 19,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          300,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 18,
+      "name": "-左近桥",
+      "index": 18,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+      "file": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+      "resources": [
+        {
+          "src": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+          "id": 0,
+          "file": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 20,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.52
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          500,
+          10
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 19,
+      "name": "-近翅膀",
+      "index": 19,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+      "file": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+      "resources": [
+        {
+          "src": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+          "id": 0,
+          "file": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 21,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    }
+  ],
+  "auxiliaryAssets": [
+    {
+      "role": "reference",
+      "file": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "src": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+      "src": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+      "src": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+      "src": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+      "src": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+      "src": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+      "src": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+      "src": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+      "src": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+      "src": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+      "src": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+      "src": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+      "src": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+      "src": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+      "src": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+      "src": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+      "src": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+      "src": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+      "src": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+      "src": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+      "src": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+      "src": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+      "src": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+      "src": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+      "assetType": "other"
+    }
+  ],
+  "interaction": {
+    "model": "mikufan-reference-v1",
+    "effects": []
+  },
+  "referenceMode": "normal",
+  "preview_image": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+  "sourceFiles": {
+    "json": "reference-manifest.json"
+  },
+  "api": {
+    "id": null,
+    "name": "",
+    "isSplitLayer": true,
+    "extensions": {}
+  },
+  "extensions": {},
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2024-12-24T00:00:00+08:00",
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "type": [
+    "layered",
+    "video"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "mikufan039",
+      "referenceId": "2024autumn"
+    },
+    "layerCount": 22,
+    "visibleMediaCount": 22,
+    "resourceUrls": [],
+    "media": [],
+    "signals": {
+      "isSplitLayer": true,
+      "hasInteraction": false,
+      "hasVideo": true
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+      "local_file": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+      "content_type": "",
+      "sha256": "435802a5fda2fceea63e7eb7f3b1b7639f2b50b32b2d5d499e5a45ea78d95e16"
+    },
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+      "local_file": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+      "content_type": "",
+      "sha256": "a9aa3b0d6926bd7b0b599d20cf62c3b84fa68e1911ac562bc72fd5c5f086e1bb"
+    },
+    {
+      "role": "layer",
+      "index": 1,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+      "local_file": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+      "content_type": "",
+      "sha256": "2ecde401c32ecacf011c5f504c9369ba10c4f7389f111192cab1e75a0c86adb9"
+    },
+    {
+      "role": "layer",
+      "index": 2,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+      "local_file": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+      "content_type": "",
+      "sha256": "b5c6e17f821d8d896484d9a49b69d0ad70c68d3be988cf45c3ed4bf58d11a40d"
+    },
+    {
+      "role": "layer",
+      "index": 3,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+      "local_file": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+      "content_type": "",
+      "sha256": "23d60fe805eadeb19358e759ccf451b13b7ac3890b4da4266f9ea8fe5fa72b38"
+    },
+    {
+      "role": "layer",
+      "index": 8,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+      "local_file": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+      "content_type": "",
+      "sha256": "421ce309a266fc839b5a141c687bd9442533c3e362038666f188c83067b9eeca"
+    },
+    {
+      "role": "layer",
+      "index": 4,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+      "local_file": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+      "content_type": "",
+      "sha256": "77c2a946eb49b7f04f09982899c55dfff50fc3548ba0b23d77d70e679103e3a8"
+    },
+    {
+      "role": "layer",
+      "index": 7,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+      "local_file": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+      "content_type": "",
+      "sha256": "e88b0a6d86803ed13728564c16c342b281268ac64bbe68faa9d7da703e197dda"
+    },
+    {
+      "role": "layer",
+      "index": 6,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+      "local_file": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+      "content_type": "",
+      "sha256": "016f6f4f8162975ecdd81271e50232987e72856ca0ff5d193aedd88c89e332f4"
+    },
+    {
+      "role": "layer",
+      "index": 5,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+      "local_file": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+      "content_type": "",
+      "sha256": "f12094f47e96a42763822b6966e5bb0c31a16dd0453ed28734bc1fc799a50d8f"
+    },
+    {
+      "role": "layer",
+      "index": 9,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+      "local_file": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+      "content_type": "",
+      "sha256": "0d5accc17ecac8cad835fa97ecf470db820f5a3798f558ab5096acd5f2e2b94b"
+    },
+    {
+      "role": "layer",
+      "index": 10,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+      "local_file": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+      "content_type": "",
+      "sha256": "bc09b77ab901e189b095334fd61812f307838aa303cc5552123f20fa98fdc4aa"
+    },
+    {
+      "role": "layer",
+      "index": 11,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+      "local_file": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+      "content_type": "",
+      "sha256": "72735c28b41be587d80feaf01935d347857f74d0a088f872b1122543366876f5"
+    },
+    {
+      "role": "layer",
+      "index": 12,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+      "local_file": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+      "content_type": "",
+      "sha256": "be89f99c4d6de9d1544f12e71521223ae52099fa6947477dcbf619250297e636"
+    },
+    {
+      "role": "layer",
+      "index": 13,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+      "local_file": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+      "content_type": "",
+      "sha256": "0428a1a34feb29ccacee1b1090ffa73bd883de4b8f8a349d533830d4402af1bc"
+    },
+    {
+      "role": "layer",
+      "index": 14,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+      "local_file": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+      "content_type": "",
+      "sha256": "82ecb2f3a81654e040ca2617af9b548ba27d2de139b2a98b922971abd23c2680"
+    },
+    {
+      "role": "layer",
+      "index": 15,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+      "local_file": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+      "content_type": "",
+      "sha256": "e5e34e9a96804d542be5d72738862c0a71acbb65ed63ae3a12e96199c6b88ebe"
+    },
+    {
+      "role": "layer",
+      "index": 21,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+      "local_file": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+      "content_type": "",
+      "sha256": "20f07d88f9580cac8accb6e68efb2da31e4e35af16fed0e974fadad468e53e81"
+    },
+    {
+      "role": "layer",
+      "index": 20,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+      "local_file": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+      "content_type": "",
+      "sha256": "acea1d7b9bd23ea6a0c41ec5f6cfa645563536ab8f26231bfbc31a367e0b3044"
+    },
+    {
+      "role": "layer",
+      "index": 16,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+      "local_file": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+      "content_type": "",
+      "sha256": "55f27c5cbffdb0be0a034d38d93a06382631e30258c5c2c5d48671c9d2a07c11"
+    },
+    {
+      "role": "layer",
+      "index": 17,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+      "local_file": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+      "content_type": "",
+      "sha256": "fc76c0fee13bc45ce39f697bb003e7fa66349064ed2b62038f19123f1cf9ae6f"
+    },
+    {
+      "role": "layer",
+      "index": 18,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+      "local_file": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+      "content_type": "",
+      "sha256": "4b0c74277d08c3dceae6b2dad2ae661663e9913d1ba93c1b114cede627fa45f3"
+    },
+    {
+      "role": "layer",
+      "index": 19,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+      "local_file": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+      "content_type": "",
+      "sha256": "670c7c0bc0b0c4375242c08235431364793d9fadc3ee600ef0bdabc2a88c315b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "local_file": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "content_type": "",
+      "sha256": "bcaebad4f207236dc9e316491eadc26142ee5bbf4a4c7a396d35aeef38ef2006"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+      "local_file": "bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+      "content_type": "",
+      "sha256": "435802a5fda2fceea63e7eb7f3b1b7639f2b50b32b2d5d499e5a45ea78d95e16"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+      "local_file": "bfs/vc/064a75156c568aa6a9982e2c983d2a30cb86ea94.png",
+      "content_type": "",
+      "sha256": "bc09b77ab901e189b095334fd61812f307838aa303cc5552123f20fa98fdc4aa"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+      "local_file": "bfs/vc/0ebcccd16a9fe9bb551e213de4eaf3cd5a24c8ff.png",
+      "content_type": "",
+      "sha256": "77c2a946eb49b7f04f09982899c55dfff50fc3548ba0b23d77d70e679103e3a8"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+      "local_file": "bfs/vc/18e14b236c8c0478b9f126b53dc149718c8277d6.png",
+      "content_type": "",
+      "sha256": "a9aa3b0d6926bd7b0b599d20cf62c3b84fa68e1911ac562bc72fd5c5f086e1bb"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+      "local_file": "bfs/vc/1b6718fe3996574889da7ef1b9c29a566fe963f4.png",
+      "content_type": "",
+      "sha256": "be89f99c4d6de9d1544f12e71521223ae52099fa6947477dcbf619250297e636"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+      "local_file": "bfs/vc/20ccfde3e5606d223ab230a78234e4f9ac140371.png",
+      "content_type": "",
+      "sha256": "20f07d88f9580cac8accb6e68efb2da31e4e35af16fed0e974fadad468e53e81"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+      "local_file": "bfs/vc/21a613a7457891ed7daa559b03191df7bf551362.png",
+      "content_type": "",
+      "sha256": "e88b0a6d86803ed13728564c16c342b281268ac64bbe68faa9d7da703e197dda"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+      "local_file": "bfs/vc/2c048730ce3449400cd657650f5f2e68e2fa5ef5.png",
+      "content_type": "",
+      "sha256": "2ecde401c32ecacf011c5f504c9369ba10c4f7389f111192cab1e75a0c86adb9"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+      "local_file": "bfs/vc/30ccbdfe561bcd18a7ee457bd151b55da7a3dd3c.png",
+      "content_type": "",
+      "sha256": "e5e34e9a96804d542be5d72738862c0a71acbb65ed63ae3a12e96199c6b88ebe"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+      "local_file": "bfs/vc/4367bada261c826302101afa18fe41e86f545099.png",
+      "content_type": "",
+      "sha256": "421ce309a266fc839b5a141c687bd9442533c3e362038666f188c83067b9eeca"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+      "local_file": "bfs/vc/4a66f79212d4c6182a8e10a1eb0424f3d7c79120.png",
+      "content_type": "",
+      "sha256": "82ecb2f3a81654e040ca2617af9b548ba27d2de139b2a98b922971abd23c2680"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+      "local_file": "bfs/vc/57f20e919517fc784f1e03900140274cfea2cb85.png",
+      "content_type": "",
+      "sha256": "4b0c74277d08c3dceae6b2dad2ae661663e9913d1ba93c1b114cede627fa45f3"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+      "local_file": "bfs/vc/582b9609daf669327c460af63776f5f0c14b5c26.png",
+      "content_type": "",
+      "sha256": "b5c6e17f821d8d896484d9a49b69d0ad70c68d3be988cf45c3ed4bf58d11a40d"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+      "local_file": "bfs/vc/6683112849dadee65749c4f7f72b83c9a9f8f537.png",
+      "content_type": "",
+      "sha256": "f12094f47e96a42763822b6966e5bb0c31a16dd0453ed28734bc1fc799a50d8f"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+      "local_file": "bfs/vc/670d70b0351582e5b53855ddbf50600c03425062.png",
+      "content_type": "",
+      "sha256": "670c7c0bc0b0c4375242c08235431364793d9fadc3ee600ef0bdabc2a88c315b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+      "local_file": "bfs/vc/7bb79a88a5c61724c7fd2ab009f462b744ba5b29.png",
+      "content_type": "",
+      "sha256": "72735c28b41be587d80feaf01935d347857f74d0a088f872b1122543366876f5"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+      "local_file": "bfs/vc/83b58af34fc683e529962449078a3ded7f1d2e80.png",
+      "content_type": "",
+      "sha256": "016f6f4f8162975ecdd81271e50232987e72856ca0ff5d193aedd88c89e332f4"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+      "local_file": "bfs/vc/93ab310ca3e2a24489aa1873865501adb3f81393.png",
+      "content_type": "",
+      "sha256": "0d5accc17ecac8cad835fa97ecf470db820f5a3798f558ab5096acd5f2e2b94b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+      "local_file": "bfs/vc/ab4fbaed481d880a618e52f97e7e1f6e5c8b7f7c.png",
+      "content_type": "",
+      "sha256": "55f27c5cbffdb0be0a034d38d93a06382631e30258c5c2c5d48671c9d2a07c11"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+      "local_file": "bfs/vc/b399696aa4f7ebb732eae96368b35644359a1922.webm",
+      "content_type": "",
+      "sha256": "fc76c0fee13bc45ce39f697bb003e7fa66349064ed2b62038f19123f1cf9ae6f"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+      "local_file": "bfs/vc/c31995a7a80e459e165ae4ef60e323e27f497420.png",
+      "content_type": "",
+      "sha256": "0428a1a34feb29ccacee1b1090ffa73bd883de4b8f8a349d533830d4402af1bc"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+      "local_file": "bfs/vc/d562864113a6e6cce54b41745132a974b4576c3c.png",
+      "content_type": "",
+      "sha256": "acea1d7b9bd23ea6a0c41ec5f6cfa645563536ab8f26231bfbc31a367e0b3044"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+      "local_file": "bfs/vc/f5fcc108b811577571e3f54d6d46df58a9f553ed.png",
+      "content_type": "",
+      "sha256": "23d60fe805eadeb19358e759ccf451b13b7ac3890b4da4266f9ea8fe5fa72b38"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "6614438a5031fd90d6bf3e3f",
+  "hashes": {
+    "resourceHash": "f8361643a6e85e392c3503be",
+    "structureHash": "7a2c5df0b30d68da4edeb4fb",
+    "interactionHash": "c9dbe2f39a6c9a0ad2e2860f",
+    "contentHash": "6614438a5031fd90d6bf3e3f",
+    "canonicalContentHash": "55db129e30785bf8311f8c4b",
+    "sourceFingerprint": "ca49e27a9d95a08690cc17c5"
+  },
+  "canonicalContentHash": "55db129e30785bf8311f8c4b",
+  "sourceFingerprint": "ca49e27a9d95a08690cc17c5",
+  "layoutHash": "81cb9b00d27b51a0771ef48d",
+  "familyId": "2024-09-26_2024-09-26_2024-12-24_autumn",
+  "observations": [
+    {
+      "capturedAt": "2024-09-26T00:00:00+08:00",
+      "lastObservedAt": "2024-09-26T00:00:00+08:00",
+      "date": "2024-09-26",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-09-26_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-09-27T00:00:00+08:00",
+      "lastObservedAt": "2024-09-27T00:00:00+08:00",
+      "date": "2024-09-27",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-09-27_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-09-28T00:00:00+08:00",
+      "lastObservedAt": "2024-09-28T00:00:00+08:00",
+      "date": "2024-09-28",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-09-28_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-09-29T00:00:00+08:00",
+      "lastObservedAt": "2024-09-29T00:00:00+08:00",
+      "date": "2024-09-29",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-09-29_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-09-30T00:00:00+08:00",
+      "lastObservedAt": "2024-09-30T00:00:00+08:00",
+      "date": "2024-09-30",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-09-30_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-01T00:00:00+08:00",
+      "lastObservedAt": "2024-10-01T00:00:00+08:00",
+      "date": "2024-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-01_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-02T00:00:00+08:00",
+      "lastObservedAt": "2024-10-02T00:00:00+08:00",
+      "date": "2024-10-02",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-02_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-03T00:00:00+08:00",
+      "lastObservedAt": "2024-10-03T00:00:00+08:00",
+      "date": "2024-10-03",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-03_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-04T00:00:00+08:00",
+      "lastObservedAt": "2024-10-04T00:00:00+08:00",
+      "date": "2024-10-04",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-04_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-05T00:00:00+08:00",
+      "lastObservedAt": "2024-10-05T00:00:00+08:00",
+      "date": "2024-10-05",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-05_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-06T00:00:00+08:00",
+      "lastObservedAt": "2024-10-06T00:00:00+08:00",
+      "date": "2024-10-06",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-06_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-07T00:00:00+08:00",
+      "lastObservedAt": "2024-10-07T00:00:00+08:00",
+      "date": "2024-10-07",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-07_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-08T00:00:00+08:00",
+      "lastObservedAt": "2024-10-08T00:00:00+08:00",
+      "date": "2024-10-08",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-08_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-09T00:00:00+08:00",
+      "lastObservedAt": "2024-10-09T00:00:00+08:00",
+      "date": "2024-10-09",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-09_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-10T00:00:00+08:00",
+      "lastObservedAt": "2024-10-10T00:00:00+08:00",
+      "date": "2024-10-10",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-10_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-11T00:00:00+08:00",
+      "lastObservedAt": "2024-10-11T00:00:00+08:00",
+      "date": "2024-10-11",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-11_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-12T00:00:00+08:00",
+      "lastObservedAt": "2024-10-12T00:00:00+08:00",
+      "date": "2024-10-12",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-12_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-13T00:00:00+08:00",
+      "lastObservedAt": "2024-10-13T00:00:00+08:00",
+      "date": "2024-10-13",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-13_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-14T00:00:00+08:00",
+      "lastObservedAt": "2024-10-14T00:00:00+08:00",
+      "date": "2024-10-14",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-14_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-15T00:00:00+08:00",
+      "lastObservedAt": "2024-10-15T00:00:00+08:00",
+      "date": "2024-10-15",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-15_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-16T00:00:00+08:00",
+      "lastObservedAt": "2024-10-16T00:00:00+08:00",
+      "date": "2024-10-16",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-16_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-17T00:00:00+08:00",
+      "lastObservedAt": "2024-10-17T00:00:00+08:00",
+      "date": "2024-10-17",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-17_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-18T00:00:00+08:00",
+      "lastObservedAt": "2024-10-18T00:00:00+08:00",
+      "date": "2024-10-18",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-18_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-19T00:00:00+08:00",
+      "lastObservedAt": "2024-10-19T00:00:00+08:00",
+      "date": "2024-10-19",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-19_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-20T00:00:00+08:00",
+      "lastObservedAt": "2024-10-20T00:00:00+08:00",
+      "date": "2024-10-20",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-20_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-21T00:00:00+08:00",
+      "lastObservedAt": "2024-10-21T00:00:00+08:00",
+      "date": "2024-10-21",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-21_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-22T00:00:00+08:00",
+      "lastObservedAt": "2024-10-22T00:00:00+08:00",
+      "date": "2024-10-22",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-22_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-23T00:00:00+08:00",
+      "lastObservedAt": "2024-10-23T00:00:00+08:00",
+      "date": "2024-10-23",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-23_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-24T00:00:00+08:00",
+      "lastObservedAt": "2024-10-24T00:00:00+08:00",
+      "date": "2024-10-24",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-24_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-25T00:00:00+08:00",
+      "lastObservedAt": "2024-10-25T00:00:00+08:00",
+      "date": "2024-10-25",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-25_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-26T00:00:00+08:00",
+      "lastObservedAt": "2024-10-26T00:00:00+08:00",
+      "date": "2024-10-26",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-26_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-27T00:00:00+08:00",
+      "lastObservedAt": "2024-10-27T00:00:00+08:00",
+      "date": "2024-10-27",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-27_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-28T00:00:00+08:00",
+      "lastObservedAt": "2024-10-28T00:00:00+08:00",
+      "date": "2024-10-28",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-28_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-29T00:00:00+08:00",
+      "lastObservedAt": "2024-10-29T00:00:00+08:00",
+      "date": "2024-10-29",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-29_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-30T00:00:00+08:00",
+      "lastObservedAt": "2024-10-30T00:00:00+08:00",
+      "date": "2024-10-30",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-30_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-10-31T00:00:00+08:00",
+      "lastObservedAt": "2024-10-31T00:00:00+08:00",
+      "date": "2024-10-31",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-10-31_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-01T00:00:00+08:00",
+      "lastObservedAt": "2024-11-01T00:00:00+08:00",
+      "date": "2024-11-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-01_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-02T00:00:00+08:00",
+      "lastObservedAt": "2024-11-02T00:00:00+08:00",
+      "date": "2024-11-02",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-02_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-03T00:00:00+08:00",
+      "lastObservedAt": "2024-11-03T00:00:00+08:00",
+      "date": "2024-11-03",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-03_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-04T00:00:00+08:00",
+      "lastObservedAt": "2024-11-04T00:00:00+08:00",
+      "date": "2024-11-04",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-04_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-05T00:00:00+08:00",
+      "lastObservedAt": "2024-11-05T00:00:00+08:00",
+      "date": "2024-11-05",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-05_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-06T00:00:00+08:00",
+      "lastObservedAt": "2024-11-06T00:00:00+08:00",
+      "date": "2024-11-06",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-06_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-07T00:00:00+08:00",
+      "lastObservedAt": "2024-11-07T00:00:00+08:00",
+      "date": "2024-11-07",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-07_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-08T00:00:00+08:00",
+      "lastObservedAt": "2024-11-08T00:00:00+08:00",
+      "date": "2024-11-08",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-08_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-09T00:00:00+08:00",
+      "lastObservedAt": "2024-11-09T00:00:00+08:00",
+      "date": "2024-11-09",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-09_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-10T00:00:00+08:00",
+      "lastObservedAt": "2024-11-10T00:00:00+08:00",
+      "date": "2024-11-10",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-10_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-11T00:00:00+08:00",
+      "lastObservedAt": "2024-11-11T00:00:00+08:00",
+      "date": "2024-11-11",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-11_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-12T00:00:00+08:00",
+      "lastObservedAt": "2024-11-12T00:00:00+08:00",
+      "date": "2024-11-12",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-12_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-13T00:00:00+08:00",
+      "lastObservedAt": "2024-11-13T00:00:00+08:00",
+      "date": "2024-11-13",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-13_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-14T00:00:00+08:00",
+      "lastObservedAt": "2024-11-14T00:00:00+08:00",
+      "date": "2024-11-14",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-14_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-15T00:00:00+08:00",
+      "lastObservedAt": "2024-11-15T00:00:00+08:00",
+      "date": "2024-11-15",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-15_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-16T00:00:00+08:00",
+      "lastObservedAt": "2024-11-16T00:00:00+08:00",
+      "date": "2024-11-16",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-16_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-17T00:00:00+08:00",
+      "lastObservedAt": "2024-11-17T00:00:00+08:00",
+      "date": "2024-11-17",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-17_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-18T00:00:00+08:00",
+      "lastObservedAt": "2024-11-18T00:00:00+08:00",
+      "date": "2024-11-18",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-18_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-19T00:00:00+08:00",
+      "lastObservedAt": "2024-11-19T00:00:00+08:00",
+      "date": "2024-11-19",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-19_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-20T00:00:00+08:00",
+      "lastObservedAt": "2024-11-20T00:00:00+08:00",
+      "date": "2024-11-20",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-20_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-21T00:00:00+08:00",
+      "lastObservedAt": "2024-11-21T00:00:00+08:00",
+      "date": "2024-11-21",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-21_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-22T00:00:00+08:00",
+      "lastObservedAt": "2024-11-22T00:00:00+08:00",
+      "date": "2024-11-22",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-22_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-23T00:00:00+08:00",
+      "lastObservedAt": "2024-11-23T00:00:00+08:00",
+      "date": "2024-11-23",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-23_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-24T00:00:00+08:00",
+      "lastObservedAt": "2024-11-24T00:00:00+08:00",
+      "date": "2024-11-24",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-24_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-25T00:00:00+08:00",
+      "lastObservedAt": "2024-11-25T00:00:00+08:00",
+      "date": "2024-11-25",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-25_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-26T00:00:00+08:00",
+      "lastObservedAt": "2024-11-26T00:00:00+08:00",
+      "date": "2024-11-26",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-26_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-27T00:00:00+08:00",
+      "lastObservedAt": "2024-11-27T00:00:00+08:00",
+      "date": "2024-11-27",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-27_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-28T00:00:00+08:00",
+      "lastObservedAt": "2024-11-28T00:00:00+08:00",
+      "date": "2024-11-28",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-28_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-29T00:00:00+08:00",
+      "lastObservedAt": "2024-11-29T00:00:00+08:00",
+      "date": "2024-11-29",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-29_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-11-30T00:00:00+08:00",
+      "lastObservedAt": "2024-11-30T00:00:00+08:00",
+      "date": "2024-11-30",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-11-30_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-01T00:00:00+08:00",
+      "lastObservedAt": "2024-12-01T00:00:00+08:00",
+      "date": "2024-12-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-01_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-02T00:00:00+08:00",
+      "lastObservedAt": "2024-12-02T00:00:00+08:00",
+      "date": "2024-12-02",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-02_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-03T00:00:00+08:00",
+      "lastObservedAt": "2024-12-03T00:00:00+08:00",
+      "date": "2024-12-03",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-03_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-04T00:00:00+08:00",
+      "lastObservedAt": "2024-12-04T00:00:00+08:00",
+      "date": "2024-12-04",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-04_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-05T00:00:00+08:00",
+      "lastObservedAt": "2024-12-05T00:00:00+08:00",
+      "date": "2024-12-05",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-05_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-06T00:00:00+08:00",
+      "lastObservedAt": "2024-12-06T00:00:00+08:00",
+      "date": "2024-12-06",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-06_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-07T00:00:00+08:00",
+      "lastObservedAt": "2024-12-07T00:00:00+08:00",
+      "date": "2024-12-07",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-07_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-08T00:00:00+08:00",
+      "lastObservedAt": "2024-12-08T00:00:00+08:00",
+      "date": "2024-12-08",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-08_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-09T00:00:00+08:00",
+      "lastObservedAt": "2024-12-09T00:00:00+08:00",
+      "date": "2024-12-09",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-09_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-10T00:00:00+08:00",
+      "lastObservedAt": "2024-12-10T00:00:00+08:00",
+      "date": "2024-12-10",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-10_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-11T00:00:00+08:00",
+      "lastObservedAt": "2024-12-11T00:00:00+08:00",
+      "date": "2024-12-11",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-11_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-12T00:00:00+08:00",
+      "lastObservedAt": "2024-12-12T00:00:00+08:00",
+      "date": "2024-12-12",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-12_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-13T00:00:00+08:00",
+      "lastObservedAt": "2024-12-13T00:00:00+08:00",
+      "date": "2024-12-13",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-13_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-14T00:00:00+08:00",
+      "lastObservedAt": "2024-12-14T00:00:00+08:00",
+      "date": "2024-12-14",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-14_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-15T00:00:00+08:00",
+      "lastObservedAt": "2024-12-15T00:00:00+08:00",
+      "date": "2024-12-15",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-15_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-16T00:00:00+08:00",
+      "lastObservedAt": "2024-12-16T00:00:00+08:00",
+      "date": "2024-12-16",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-16_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-17T00:00:00+08:00",
+      "lastObservedAt": "2024-12-17T00:00:00+08:00",
+      "date": "2024-12-17",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-17_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-18T00:00:00+08:00",
+      "lastObservedAt": "2024-12-18T00:00:00+08:00",
+      "date": "2024-12-18",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-18_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-19T00:00:00+08:00",
+      "lastObservedAt": "2024-12-19T00:00:00+08:00",
+      "date": "2024-12-19",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-19_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-20T00:00:00+08:00",
+      "lastObservedAt": "2024-12-20T00:00:00+08:00",
+      "date": "2024-12-20",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-20_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-21T00:00:00+08:00",
+      "lastObservedAt": "2024-12-21T00:00:00+08:00",
+      "date": "2024-12-21",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-21_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-22T00:00:00+08:00",
+      "lastObservedAt": "2024-12-22T00:00:00+08:00",
+      "date": "2024-12-22",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-22_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-23T00:00:00+08:00",
+      "lastObservedAt": "2024-12-23T00:00:00+08:00",
+      "date": "2024-12-23",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-23_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-12-24T00:00:00+08:00",
+      "lastObservedAt": "2024-12-24T00:00:00+08:00",
+      "date": "2024-12-24",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-12-24_2024-09-26_2024-12-24_autumn",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2024autumn",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2024 秋",
+        "referenceCover": "res/bilibanner/2024autumn/bfs/archive/ea2a1ec9381189610ca78549ec3362951211bd94.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2024-09-26",
+        "coverageEndDate": "2024-12-24",
+        "originalStartDate": "2024-09-26",
+        "originalEndDate": "2024-12-24",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
