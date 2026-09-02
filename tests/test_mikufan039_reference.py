@@ -11,6 +11,7 @@ from backend import capture, wayback_import
 from backend.providers.mikufan039_reference import (
     DEFAULT_COMMIT,
     ReferenceRepository,
+    _parse_reference_split_layer,
 )
 
 
@@ -121,6 +122,19 @@ class MikuFan039ReferenceTests(unittest.TestCase):
         self.assertEqual(manifest["source"]["referenceCommit"], DEFAULT_COMMIT)
         self.assertEqual(manifest["source"]["originalDate"], "2021-09-31")
         self.assertEqual(manifest["source"]["correctedDate"], "2021-09-30")
+
+    def test_legacy_array_split_layer_is_converted_to_layers(self) -> None:
+        split_layer = _parse_reference_split_layer(
+            json.dumps([
+                {
+                    "images": [{"src": "bfs/one.png", "duration": 5000}],
+                    "initial": {"blur": 4},
+                }
+            ])
+        )
+        self.assertEqual(split_layer["version"], "legacy-array")
+        self.assertEqual(split_layer["layers"][0]["resources"][0]["src"], "bfs/one.png")
+        self.assertEqual(split_layer["layers"][0]["initial"], {"blur": 4})
 
     def test_same_group_normal_and_interactive_entries_share_daily_record(self) -> None:
         root = self.make_repository()

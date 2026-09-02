@@ -113,6 +113,27 @@ def _rewrite_src_fields(node: Any, root: Path) -> None:
             _rewrite_src_fields(value, root)
 
 
+def _parse_reference_split_layer(value: Any) -> dict[str, Any]:
+    if isinstance(value, str) and value.strip():
+        value = json.loads(value)
+    if isinstance(value, list):
+        layers = []
+        for index, item in enumerate(value):
+            if not isinstance(item, dict):
+                continue
+            layer = {
+                key: copy.deepcopy(item_value)
+                for key, item_value in item.items()
+                if key != "images"
+            }
+            images = item.get("images")
+            layer["id"] = index
+            layer["resources"] = copy.deepcopy(images) if isinstance(images, list) else []
+            layers.append(layer)
+        return {"version": "legacy-array", "layers": layers}
+    return header_api.parse_split_layer(value)
+
+
 def _time_slots(extensions: dict[str, Any]) -> list[int]:
     time_map = extensions.get("time")
     if not isinstance(time_map, dict) or not time_map:
@@ -295,7 +316,7 @@ class ReferenceRepository:
         data = payload.get("data") if isinstance(payload, dict) else None
         if not isinstance(data, dict):
             raise ValueError(f"reference manifest has no data: {manifest_path}")
-        split_layer = header_api.parse_split_layer(data.get("split_layer"))
+        split_layer = _parse_reference_split_layer(data.get("split_layer"))
         _rewrite_src_fields(split_layer, entry_root)
         extensions = copy.deepcopy(split_layer.get("extensions") or {})
         layers, missing = _reference_layers(split_layer, entry_root)
