@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-02T23:47:43+08:00",
+  "generatedAt": "2026-09-02T23:54:33+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2466,11 +2466,11 @@
       "layerCount": 0,
       "completeness": "partial",
       "missing_assets": [
-        "auxiliary_000: https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
+        "auxiliary_000: https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
       ],
-      "contentHash": "7512c89a401eafae85b6f611",
-      "manifest": "./data/archive/2019-01-02_224508_7512c89a401eafae85b6f611/banner.json",
-      "variantCount": 3,
+      "contentHash": "a0dc3a7701a637a4fb1f6056",
+      "manifest": "./data/archive/2019-01-02_224508_a0dc3a7701a637a4fb1f6056/banner.json",
+      "variantCount": 4,
       "variants": [
         {
           "contentHash": "10eccf3f27612ea9180ee66a",
@@ -2516,6 +2516,26 @@
             1
           ],
           "manifest": "./data/archive/2019-01-02_011625_d7b62ab4644e0816a9fafb97/banner.json"
+        },
+        {
+          "contentHash": "a0dc3a7701a637a4fb1f6056",
+          "canonicalContentHash": "990dc372396dc267b51699b0",
+          "sourceFingerprint": "49c18ea9144200959c698c9f",
+          "capturedAt": "2019-01-02T22:45:08+08:00",
+          "lastObservedAt": "2019-01-02T22:45:08+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            7
+          ],
+          "manifest": "./data/archive/2019-01-02_224508_a0dc3a7701a637a4fb1f6056/banner.json"
         },
         {
           "contentHash": "7512c89a401eafae85b6f611",
