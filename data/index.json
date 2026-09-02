@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-02T19:27:20+08:00",
+  "generatedAt": "2026-09-02T19:30:31+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -1738,7 +1738,7 @@
       "yearMonth": "2019-01",
       "dateStart": "2019-01-05",
       "dateEnd": "2019-01-05",
-      "capturedAt": "2019-01-05T11:42:29+08:00",
+      "capturedAt": "2019-01-05T23:10:25+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -1746,9 +1746,9 @@
       "layerCount": 0,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "10eccf3f27612ea9180ee66a",
-      "manifest": "./data/archive/2019-01-02_002349_10eccf3f27612ea9180ee66a/banner.json",
-      "variantCount": 1,
+      "contentHash": "9e9177ba7cb252ac73689da2",
+      "manifest": "./data/archive/2019-01-05_231025_9e9177ba7cb252ac73689da2/banner.json",
+      "variantCount": 2,
       "variants": [
         {
           "contentHash": "10eccf3f27612ea9180ee66a",
@@ -1769,6 +1769,26 @@
             5
           ],
           "manifest": "./data/archive/2019-01-02_002349_10eccf3f27612ea9180ee66a/banner.json"
+        },
+        {
+          "contentHash": "9e9177ba7cb252ac73689da2",
+          "canonicalContentHash": "938e98591090d6a3bf31ec07",
+          "sourceFingerprint": "1faafc82c284491185425235",
+          "capturedAt": "2019-01-05T23:10:25+08:00",
+          "lastObservedAt": "2019-01-05T23:10:25+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-05_231025_9e9177ba7cb252ac73689da2/banner.json"
         }
       ]
     },
