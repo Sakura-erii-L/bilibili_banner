@@ -200,8 +200,57 @@ class MikuFan039ReferenceTests(unittest.TestCase):
                     manifest = json.loads(path.read_text(encoding="utf-8"))
                     self.assertIn("referenceId", manifest["source"])
                     self.assertEqual(manifest["source"]["referenceCommit"], DEFAULT_COMMIT)
+                    if manifest["referenceMode"] == "interactive" and (
+                        manifest["source"]["referenceId"] in {"2022summer", "2022autumn"}
+                    ):
+                        split = json.loads(
+                            (path.parent / "reference-manifest.json")
+                            .read_text(encoding="utf-8")
+                        )
+                        self.assertTrue(
+                            split["data"]["split_layer"].find(
+                                '"skipGpuCheck":true'
+                            ) >= 0
+                        )
             finally:
                 capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR = original
+
+    def test_summer_and_autumn_skip_gpu_benchmark(self) -> None:
+        root = self.make_repository()
+        seasonal_path = root / "res" / "bilibanner" / "gallery" / "seasonal.json"
+        seasonal = json.loads(seasonal_path.read_text(encoding="utf-8"))
+        for reference_id, extension in (
+            ("2022summer", "summer2022"),
+            ("2022autumn", "autumn2022"),
+        ):
+            seasonal.append({
+                "id": reference_id,
+                "title": reference_id,
+                "startDate": "2022-01-01",
+                "endDate": "2022-01-02",
+                "group": reference_id,
+            })
+            write_reference_manifest(root, reference_id, {extension: {}})
+        seasonal_path.write_text(
+            json.dumps(seasonal, ensure_ascii=False),
+            encoding="utf-8",
+        )
+
+        repository = ReferenceRepository(root, commit=DEFAULT_COMMIT)
+        for reference_id, extension in (
+            ("2022summer", "summer2022"),
+            ("2022autumn", "autumn2022"),
+        ):
+            entry = next(item for item in repository.entries()
+                         if item.reference_id == reference_id)
+            with tempfile.TemporaryDirectory() as target:
+                repository.build_manifest(entry, dt.date(2022, 1, 1), Path(target))
+                source_manifest = json.loads(
+                    (Path(target) / "reference-manifest.json")
+                    .read_text(encoding="utf-8")
+                )
+                split = json.loads(source_manifest["data"]["split_layer"])
+                self.assertTrue(split["extensions"][extension]["skipGpuCheck"])
 
     def test_winter_disabled_split_layer_remains_static(self) -> None:
         root = self.make_repository()

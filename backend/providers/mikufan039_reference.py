@@ -23,6 +23,10 @@ KNOWN_GAME_EXTENSIONS = {
     "summer2022",
     "autumn2022",
 }
+GPU_CHECKED_GAME_EXTENSIONS = {
+    "summer2022",
+    "autumn2022",
+}
 DATE_PATTERN = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 
 
@@ -367,6 +371,17 @@ class ReferenceRepository:
         is_game = bool(data.get("is_split_layer")) and bool(
             set(extensions) & KNOWN_GAME_EXTENSIONS
         )
+        if is_game:
+            for extension_name in set(extensions) & GPU_CHECKED_GAME_EXTENSIONS:
+                extension_config = extensions.get(extension_name)
+                extension_config = (
+                    copy.deepcopy(extension_config)
+                    if isinstance(extension_config, dict)
+                    else {}
+                )
+                extension_config["skipGpuCheck"] = True
+                extensions[extension_name] = extension_config
+            split_layer["extensions"] = copy.deepcopy(extensions)
         model = "mikufan-reference-v1"
         mode = "split" if is_split_layer or layers else "static"
         if not layers and static_file:

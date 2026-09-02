@@ -529,6 +529,9 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
   const stage = shell.querySelector(".stage");
   stage.innerHTML = "";
   stage.classList.add("animated-banner");
+  if (shell._referenceBannerMessageHandler) {
+    window.removeEventListener("message", shell._referenceBannerMessageHandler);
+  }
   const frame = document.createElement("iframe");
   frame.title = "参考 Banner 本地回放";
   frame.loading = "lazy";
@@ -537,13 +540,32 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
   frame.style.width = "100%";
   frame.style.height = "100%";
   frame.style.border = "0";
+  frame.style.maxWidth = "100%";
+  const onMessage = event => {
+    if (event.source !== frame.contentWindow) return;
+    if (event.data?.type !== "bilibili-banner-expand") return;
+    if (event.data.expanded) {
+      const width = Math.max(shell.clientWidth, 1);
+      const height = Math.max(155, width * 3 / 16);
+      shell.style.aspectRatio = "auto";
+      shell.style.height = `${height}px`;
+      shell.style.maxHeight = "none";
+    } else {
+      shell.style.removeProperty("aspect-ratio");
+      shell.style.removeProperty("height");
+      shell.style.removeProperty("max-height");
+    }
+  };
+  shell._referenceBannerMessageHandler = onMessage;
+  window.addEventListener("message", onMessage);
   const localManifestUrl = resolveAsset(manifestUrl, referenceManifest);
   const bundleUrl = new URL("./assets/mikufan-bilibanner.js", location.href).href;
   frame.srcdoc = `<!doctype html><html><head><meta charset="utf-8"><style>
     html,body,#bili-banner{margin:0;width:100%;height:100%;overflow:hidden;background:transparent}
+    #bili-banner,.bili-banner,.summer-banner,.autumn-banner{box-sizing:border-box;width:100% !important;max-width:100% !important;min-width:0 !important}
   </style></head><body><div id="bili-banner"></div>
   <script src="${bundleUrl}"></script>
-  <script>BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
+  <script>document.addEventListener("banner-expand",event=>window.parent.postMessage({type:"bilibili-banner-expand",expanded:Boolean(event.detail)},"*"),true);BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
   </body></html>`;
   stage.appendChild(frame);
 }
