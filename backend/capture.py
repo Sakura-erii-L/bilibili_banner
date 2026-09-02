@@ -2972,6 +2972,20 @@ def rebuild_index() -> bool:
         for date_text, slots in slots_by_date.items()
         if date_text and slots != complete_slots
     }
+    observed_dates = []
+    for date_text in slots_by_date:
+        try:
+            observed_dates.append(dt.date.fromisoformat(date_text))
+        except ValueError:
+            continue
+    if observed_dates:
+        current = min(observed_dates)
+        last = max(observed_dates)
+        while current <= last:
+            date_text = current.isoformat()
+            if date_text not in slots_by_date:
+                omitted_dates.add(date_text)
+            current += dt.timedelta(days=1)
     records = [
         record
         for record in records

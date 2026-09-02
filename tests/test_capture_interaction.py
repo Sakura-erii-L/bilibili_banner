@@ -410,7 +410,7 @@ class TimedVariantIndexTests(unittest.TestCase):
             all(record["contentHash"] == "same-physical-asset" for record in index["records"])
         )
 
-    def test_same_asset_on_nonconsecutive_dates_stays_separate(self) -> None:
+    def test_same_asset_bridges_a_completely_missing_date(self) -> None:
         folder = capture.ARCHIVE_DIR / "nonconsecutive"
         folder.mkdir()
         manifest = {
@@ -448,7 +448,9 @@ class TimedVariantIndexTests(unittest.TestCase):
 
         capture.rebuild_index()
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(index["records"]), 2)
+        self.assertEqual(len(index["records"]), 1)
+        self.assertEqual(index["records"][0]["dateStart"], "2020-01-01")
+        self.assertEqual(index["records"][0]["dateEnd"], "2020-01-03")
 
     def test_incomplete_day_is_omitted_and_same_banner_bridges_it(self) -> None:
         for index, (date, slots) in enumerate(
