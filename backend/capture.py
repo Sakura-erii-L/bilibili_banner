@@ -2621,7 +2621,10 @@ def merge_duplicate_metadata(
         "sourceFiles", "sourceEvidence", "auxiliaryAssets", "animationCss", "api",
         "canonicalContentHash", "sourceFingerprint", "reference", "referenceMode",
     ):
-        if field in fresh and field not in archived:
+        if field in fresh and (
+            field not in archived
+            or field == "referenceMode" and archived.get(field) != fresh[field]
+        ):
             archived[field] = fresh[field]
     fresh_provenance = fresh.get("provenance")
     if isinstance(fresh_provenance, dict):

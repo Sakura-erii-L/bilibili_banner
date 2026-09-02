@@ -326,6 +326,37 @@ class TimedVariantIndexTests(unittest.TestCase):
         )
         self.assertFalse(changed_again)
 
+    def test_duplicate_asset_refreshes_reference_mode(self) -> None:
+        folder = capture.ARCHIVE_DIR / "reference-mode"
+        folder.mkdir()
+        archived = {
+            "version": 11.0,
+            "date": "2022-06-21",
+            "capturedAt": "2022-06-21T00:00:00+08:00",
+            "lastObservedAt": "2022-06-21T00:00:00+08:00",
+            "mode": "static",
+            "static": {"file": "banner.png"},
+            "layers": [],
+            "contentHash": "reference-mode-hash",
+            "familyId": "reference-mode-family",
+            "slots": list(range(capture.SLOT_COUNT)),
+            "referenceMode": "interactive",
+        }
+        fresh = {**archived, "referenceMode": "normal"}
+        (folder / "banner.json").write_text(json.dumps(archived), encoding="utf-8")
+
+        changed = capture.merge_duplicate_metadata(
+            folder,
+            archived,
+            fresh,
+            moment=capture.dt.datetime.fromisoformat("2022-06-21T00:00:00+08:00"),
+            force=False,
+        )
+
+        self.assertTrue(changed)
+        merged = json.loads((folder / "banner.json").read_text(encoding="utf-8"))
+        self.assertEqual(merged["referenceMode"], "normal")
+
     def test_same_asset_can_appear_on_two_dates_without_duplicate_archive(self) -> None:
         folder = capture.ARCHIVE_DIR / "one-physical-archive"
         folder.mkdir()
