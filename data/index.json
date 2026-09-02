@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-02T21:53:12+08:00",
+  "generatedAt": "2026-09-02T21:56:57+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -1094,7 +1094,7 @@
       "missing_assets": [],
       "contentHash": "9c8414d22c563c8ad4959984",
       "manifest": "./data/archive/2022-12-22_000000_9c8414d22c563c8ad4959984/banner.json",
-      "variantCount": 2,
+      "variantCount": 3,
       "variants": [
         {
           "contentHash": "9c8414d22c563c8ad4959984",
@@ -1122,6 +1122,32 @@
             7
           ],
           "manifest": "./data/archive/2022-12-22_000000_9c8414d22c563c8ad4959984/banner.json",
+          "referenceMode": "normal"
+        },
+        {
+          "contentHash": "1a47bd8533df0561f2b5d0d6",
+          "canonicalContentHash": "2577505b5d31cd1cc54f07f7",
+          "sourceFingerprint": "dde4cf160ec363a2fed4936a",
+          "capturedAt": "2023-03-19T00:00:00+08:00",
+          "lastObservedAt": "2023-03-19T00:00:00+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2022-12-22_000000_1a47bd8533df0561f2b5d0d6/banner.json",
           "referenceMode": "normal"
         },
         {
