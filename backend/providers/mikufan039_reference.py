@@ -7,7 +7,7 @@ import re
 import shutil
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
@@ -22,11 +22,6 @@ KNOWN_GAME_EXTENSIONS = {
     "springGame2022",
     "summer2022",
     "autumn2022",
-}
-SHARED_REFERENCE_DIRECTORIES = {
-    # The winter Banner reuses the video stored by the fixed reference commit
-    # under the spring game directory.
-    "2022winter": ("2022spring",),
 }
 DATE_PATTERN = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 
@@ -98,15 +93,10 @@ def _source_path_candidates(source: str) -> list[str]:
     return candidates
 
 
-def _local_reference_file(
-    root: Path,
-    source: str,
-    fallback_roots: Iterable[Path] = (),
-) -> str | None:
+def _local_reference_file(root: Path, source: str) -> str | None:
     for candidate in _source_path_candidates(source):
-        for base in (root, *fallback_roots):
-            if (base / candidate).is_file():
-                return candidate
+        if (root / candidate).is_file():
+            return candidate
     return None
 
 
@@ -125,19 +115,18 @@ def _entry_reference_file(root: Path, reference_id: str, source: str) -> str | N
 def _rewrite_src_fields(
     node: Any,
     root: Path,
-    fallback_roots: Iterable[Path] = (),
 ) -> None:
     if isinstance(node, dict):
         for key, value in list(node.items()):
             if key == "src" and isinstance(value, str):
-                local = _local_reference_file(root, value, fallback_roots)
+                local = _local_reference_file(root, value)
                 if local:
                     node[key] = local
             else:
-                _rewrite_src_fields(value, root, fallback_roots)
+                _rewrite_src_fields(value, root)
     elif isinstance(node, list):
         for value in node:
-            _rewrite_src_fields(value, root, fallback_roots)
+            _rewrite_src_fields(value, root)
 
 
 def _parse_reference_split_layer(value: Any) -> dict[str, Any]:
@@ -193,7 +182,6 @@ def _season_for_date(date: dt.date) -> str:
 def _reference_layers(
     split_layer: dict[str, Any],
     root: Path,
-    fallback_roots: Iterable[Path] = (),
 ) -> tuple[list[dict[str, Any]], list[str]]:
     layers: list[dict[str, Any]] = []
     missing: list[str] = []
@@ -205,7 +193,7 @@ def _reference_layers(
             if not isinstance(resource, dict):
                 continue
             source = str(resource.get("src") or "")
-            local = _local_reference_file(root, source, fallback_roots)
+            local = _local_reference_file(root, source)
             if not local:
                 missing.append(f"layer_{index:03d}_resource_{resource_index:03d}: {source}")
                 continue
@@ -254,18 +242,6 @@ def _reference_layers(
             }
         )
     return layers, missing
-
-
-def _iter_src_values(node: Any) -> Iterable[str]:
-    if isinstance(node, dict):
-        for key, value in node.items():
-            if key == "src" and isinstance(value, str):
-                yield value
-            else:
-                yield from _iter_src_values(value)
-    elif isinstance(node, list):
-        for value in node:
-            yield from _iter_src_values(value)
 
 
 class ReferenceRepository:
@@ -365,29 +341,17 @@ class ReferenceRepository:
         if not isinstance(data, dict):
             raise ValueError(f"reference manifest has no data: {manifest_path}")
         split_layer = _parse_reference_split_layer(data.get("split_layer"))
-        shared_roots = tuple(
-            self.banner_root / directory
-            for directory in SHARED_REFERENCE_DIRECTORIES.get(
-                entry.reference_id,
-                (),
-            )
-        )
-        _rewrite_src_fields(split_layer, entry_root, shared_roots)
-        extensions = copy.deepcopy(split_layer.get("extensions") or {})
-        layers, missing = _reference_layers(
-            split_layer,
-            entry_root,
-            shared_roots,
-        )
+        is_split_layer = bool(data.get("is_split_layer"))
+        if is_split_layer:
+            _rewrite_src_fields(split_layer, entry_root)
+            extensions = copy.deepcopy(split_layer.get("extensions") or {})
+            layers, missing = _reference_layers(split_layer, entry_root)
+        else:
+            # Some manifests retain an old split_layer payload as metadata,
+            # while is_split_layer=0 explicitly disables that layer.
+            extensions = {}
+            layers, missing = [], []
         shared_files: list[tuple[Path, str]] = []
-        for source in _iter_src_values(split_layer):
-            if _local_reference_file(entry_root, source):
-                continue
-            for shared_root in shared_roots:
-                local = _local_reference_file(shared_root, source)
-                if local:
-                    shared_files.append((shared_root / local, local))
-                    break
         pic = str(data.get("pic") or "")
         litpic = str(data.get("litpic") or "")
         static_source = pic or litpic
@@ -404,20 +368,18 @@ class ReferenceRepository:
             set(extensions) & KNOWN_GAME_EXTENSIONS
         )
         model = "mikufan-reference-v1"
-        mode = "split" if bool(data.get("is_split_layer")) or layers else "static"
+        mode = "split" if is_split_layer or layers else "static"
         if not layers and static_file:
             mode = "static"
         source_manifest = copy.deepcopy(payload)
         source_data = source_manifest.get("data")
-        if isinstance(source_data, dict):
+        if isinstance(source_data, dict) and is_split_layer:
             source_data["split_layer"] = json.dumps(
                 split_layer,
                 ensure_ascii=False,
                 separators=(",", ":"),
             )
-            if entry.reference_id == "2022winter" and layers:
-                source_data["is_split_layer"] = 1
-        _rewrite_src_fields(source_manifest, entry_root, shared_roots)
+        _rewrite_src_fields(source_manifest, entry_root)
         return {
             "sourcePayload": source_manifest,
             "data": data,
