@@ -1,0 +1,4343 @@
+{
+  "version": 11.0,
+  "capturedAt": "2021-06-21T00:00:00+08:00",
+  "date": "2021-06-21",
+  "season": "summer",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "captureMethod": "mikufan039-reference",
+    "provider": "mikufan039-reference",
+    "referenceId": "2021summer",
+    "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "referenceTitle": "2021 夏",
+    "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+    "referenceCategory": "seasonal",
+    "coverageStartDate": "2021-06-21",
+    "coverageEndDate": "2021-09-22",
+    "originalStartDate": "2021-06-21",
+    "originalEndDate": "2021-09-22",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "reference": {
+    "id": "2021summer",
+    "commit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "manifest": "reference-manifest.json",
+    "cover": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png"
+  },
+  "provenance": {
+    "primaryProvider": "mikufan039-reference",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+    "file": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+    "tag": "img",
+    "assetType": "image",
+    "sourceKind": "reference"
+  },
+  "layers": [
+    {
+      "scale": {
+        "initial": 0.88
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          50,
+          0
+        ],
+        "offset": [
+          20,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 7,
+      "name": "图层7",
+      "index": 7,
+      "tag": "video",
+      "assetType": "video",
+      "src": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+      "file": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+      "resources": [
+        {
+          "src": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+          "id": 0,
+          "file": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+          "resourceIndex": 0,
+          "tag": "video",
+          "assetType": "video"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    }
+  ],
+  "auxiliaryAssets": [
+    {
+      "role": "reference",
+      "file": "bfs/feed-admin/10641bbc5189591221c00958f3458f33798c7caa.png",
+      "src": "bfs/feed-admin/10641bbc5189591221c00958f3458f33798c7caa.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+      "src": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/1258aab563f4de23b2d2ad1962a13d19f8e5589d.webm",
+      "src": "bfs/vc/1258aab563f4de23b2d2ad1962a13d19f8e5589d.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/4e58dda186b3404fa13b8e3436bd3ae4b952907b.webm",
+      "src": "bfs/vc/4e58dda186b3404fa13b8e3436bd3ae4b952907b.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/98cdbd72eced9e04c7e2cb99037dae7b99545dd1.webm",
+      "src": "bfs/vc/98cdbd72eced9e04c7e2cb99037dae7b99545dd1.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/aab5e4df5b18e9a3d6990989e723d8e381c5783f.webm",
+      "src": "bfs/vc/aab5e4df5b18e9a3d6990989e723d8e381c5783f.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/c5ed8caf2d0184ffade7d039f20d0c4c41b6a9f1.webm",
+      "src": "bfs/vc/c5ed8caf2d0184ffade7d039f20d0c4c41b6a9f1.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/ce2f8aa3a72282413af4b6433ed855e2221b032c.webm",
+      "src": "bfs/vc/ce2f8aa3a72282413af4b6433ed855e2221b032c.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/e3447d733e4cd06485d493439031ac7031953e7a.webm",
+      "src": "bfs/vc/e3447d733e4cd06485d493439031ac7031953e7a.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+      "src": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/fdab2e375ef41ddca5723b569912ca9479d9dea6.webm",
+      "src": "bfs/vc/fdab2e375ef41ddca5723b569912ca9479d9dea6.webm",
+      "assetType": "other"
+    }
+  ],
+  "interaction": {
+    "model": "mikufan-reference-v1",
+    "effects": [
+      "reference"
+    ]
+  },
+  "referenceMode": "normal",
+  "preview_image": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+  "sourceFiles": {
+    "json": "reference-manifest.json"
+  },
+  "api": {
+    "id": 1,
+    "name": "",
+    "isSplitLayer": true,
+    "extensions": {
+      "time": {
+        "0": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 0,
+                "name": "图层0",
+                "resources": [
+                  {
+                    "src": "bfs/vc/fdab2e375ef41ddca5723b569912ca9479d9dea6.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 2,
+                "name": "图层2",
+                "resources": [
+                  {
+                    "src": "bfs/vc/c5ed8caf2d0184ffade7d039f20d0c4c41b6a9f1.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 3,
+                "name": "图层3",
+                "resources": [
+                  {
+                    "src": "bfs/vc/e3447d733e4cd06485d493439031ac7031953e7a.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "21600": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 7,
+                "name": "图层7",
+                "resources": [
+                  {
+                    "src": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 0,
+                "name": "图层0",
+                "resources": [
+                  {
+                    "src": "bfs/vc/aab5e4df5b18e9a3d6990989e723d8e381c5783f.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 1,
+                "name": "图层1",
+                "resources": [
+                  {
+                    "src": "bfs/vc/ce2f8aa3a72282413af4b6433ed855e2221b032c.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "57600": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 5,
+                "name": "图层5",
+                "resources": [
+                  {
+                    "src": "bfs/vc/4e58dda186b3404fa13b8e3436bd3ae4b952907b.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 0,
+                "name": "图层0",
+                "resources": [
+                  {
+                    "src": "bfs/vc/98cdbd72eced9e04c7e2cb99037dae7b99545dd1.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 1,
+                "name": "图层1",
+                "resources": [
+                  {
+                    "src": "bfs/vc/1258aab563f4de23b2d2ad1962a13d19f8e5589d.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "68400": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 0,
+                "name": "图层0",
+                "resources": [
+                  {
+                    "src": "bfs/vc/fdab2e375ef41ddca5723b569912ca9479d9dea6.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 2,
+                "name": "图层2",
+                "resources": [
+                  {
+                    "src": "bfs/vc/c5ed8caf2d0184ffade7d039f20d0c4c41b6a9f1.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 3,
+                "name": "图层3",
+                "resources": [
+                  {
+                    "src": "bfs/vc/e3447d733e4cd06485d493439031ac7031953e7a.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "initial": [
+                    50,
+                    0
+                  ],
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "extensions": {
+    "time": {
+      "0": [
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "bfs/vc/fdab2e375ef41ddca5723b569912ca9479d9dea6.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 2,
+              "name": "图层2",
+              "resources": [
+                {
+                  "src": "bfs/vc/c5ed8caf2d0184ffade7d039f20d0c4c41b6a9f1.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 3,
+              "name": "图层3",
+              "resources": [
+                {
+                  "src": "bfs/vc/e3447d733e4cd06485d493439031ac7031953e7a.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "21600": [
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 7,
+              "name": "图层7",
+              "resources": [
+                {
+                  "src": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "bfs/vc/aab5e4df5b18e9a3d6990989e723d8e381c5783f.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 1,
+              "name": "图层1",
+              "resources": [
+                {
+                  "src": "bfs/vc/ce2f8aa3a72282413af4b6433ed855e2221b032c.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "57600": [
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 5,
+              "name": "图层5",
+              "resources": [
+                {
+                  "src": "bfs/vc/4e58dda186b3404fa13b8e3436bd3ae4b952907b.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "bfs/vc/98cdbd72eced9e04c7e2cb99037dae7b99545dd1.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 1,
+              "name": "图层1",
+              "resources": [
+                {
+                  "src": "bfs/vc/1258aab563f4de23b2d2ad1962a13d19f8e5589d.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "68400": [
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "bfs/vc/fdab2e375ef41ddca5723b569912ca9479d9dea6.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 2,
+              "name": "图层2",
+              "resources": [
+                {
+                  "src": "bfs/vc/c5ed8caf2d0184ffade7d039f20d0c4c41b6a9f1.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 3,
+              "name": "图层3",
+              "resources": [
+                {
+                  "src": "bfs/vc/e3447d733e4cd06485d493439031ac7031953e7a.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.88
+              },
+              "translate": {
+                "initial": [
+                  50,
+                  0
+                ],
+                "offset": [
+                  20,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2021-09-22T00:00:00+08:00",
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "type": [
+    "layered",
+    "video",
+    "interactive"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "mikufan039",
+      "referenceId": "2021summer"
+    },
+    "layerCount": 1,
+    "visibleMediaCount": 1,
+    "resourceUrls": [],
+    "media": [],
+    "signals": {
+      "isSplitLayer": true,
+      "hasInteraction": false,
+      "hasVideo": true
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+      "local_file": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+      "content_type": "",
+      "sha256": "1bfb42998a1d299d32b71410317f4cf3b7d57770ee911886f1a0e2f2565d5e71"
+    },
+    {
+      "role": "layer",
+      "index": 7,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+      "local_file": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+      "content_type": "",
+      "sha256": "3e9c9577f9bda0ad47df0c97322986080312a895fddba110b00c60313770b315"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/feed-admin/10641bbc5189591221c00958f3458f33798c7caa.png",
+      "local_file": "bfs/feed-admin/10641bbc5189591221c00958f3458f33798c7caa.png",
+      "content_type": "",
+      "sha256": "3b42700db92e8fb980d5de6a1622f807778bd7f4783451be44a96760bad61ff6"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+      "local_file": "bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+      "content_type": "",
+      "sha256": "1bfb42998a1d299d32b71410317f4cf3b7d57770ee911886f1a0e2f2565d5e71"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/1258aab563f4de23b2d2ad1962a13d19f8e5589d.webm",
+      "local_file": "bfs/vc/1258aab563f4de23b2d2ad1962a13d19f8e5589d.webm",
+      "content_type": "",
+      "sha256": "c1520b50e0e1e300f9ba426dc69de15738337e16d24ff6cff36241b0dd8954b0"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/4e58dda186b3404fa13b8e3436bd3ae4b952907b.webm",
+      "local_file": "bfs/vc/4e58dda186b3404fa13b8e3436bd3ae4b952907b.webm",
+      "content_type": "",
+      "sha256": "418b2c79a38417b9ea6d69feea810ed165e2309b1d2c5beaa3d890508f2633cc"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/98cdbd72eced9e04c7e2cb99037dae7b99545dd1.webm",
+      "local_file": "bfs/vc/98cdbd72eced9e04c7e2cb99037dae7b99545dd1.webm",
+      "content_type": "",
+      "sha256": "9ce9f1a873a6597d64dbceb7fde408e1c53806807160326b31e0e9f6c9da810d"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/aab5e4df5b18e9a3d6990989e723d8e381c5783f.webm",
+      "local_file": "bfs/vc/aab5e4df5b18e9a3d6990989e723d8e381c5783f.webm",
+      "content_type": "",
+      "sha256": "aa6fd56ff2b16d4577e2289fb30278c968efa342f6779277b0b60e87ebdd05ed"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/c5ed8caf2d0184ffade7d039f20d0c4c41b6a9f1.webm",
+      "local_file": "bfs/vc/c5ed8caf2d0184ffade7d039f20d0c4c41b6a9f1.webm",
+      "content_type": "",
+      "sha256": "d0ecc78f70650ea3ba4118ba21642e4f4bc025a20eec0a5bf0fe6b361e630788"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/ce2f8aa3a72282413af4b6433ed855e2221b032c.webm",
+      "local_file": "bfs/vc/ce2f8aa3a72282413af4b6433ed855e2221b032c.webm",
+      "content_type": "",
+      "sha256": "2242350a5c09b2d1081e7a4c3703bb9f933ad11f8994560dbbda14b6b9d8031c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/e3447d733e4cd06485d493439031ac7031953e7a.webm",
+      "local_file": "bfs/vc/e3447d733e4cd06485d493439031ac7031953e7a.webm",
+      "content_type": "",
+      "sha256": "96953b25bb1c761b08cac8aaaf5e2bb61054ce41c33b10c064cf7aeab73991ac"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+      "local_file": "bfs/vc/f07c92face572d60a980798b18f6a01216bd726c.webm",
+      "content_type": "",
+      "sha256": "3e9c9577f9bda0ad47df0c97322986080312a895fddba110b00c60313770b315"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/fdab2e375ef41ddca5723b569912ca9479d9dea6.webm",
+      "local_file": "bfs/vc/fdab2e375ef41ddca5723b569912ca9479d9dea6.webm",
+      "content_type": "",
+      "sha256": "9971c2fa842b725b0e3c0ad9fd9e8fd2c22da986f9e3ecec7bbdf3d6e2375d50"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "f0610311e04cc92ab8f659d8",
+  "hashes": {
+    "resourceHash": "c7ce5bdea56ed4b412a9c959",
+    "structureHash": "0029446b62a16cd979173aa8",
+    "interactionHash": "71a12c46a2ff71f6a644c2be",
+    "contentHash": "f0610311e04cc92ab8f659d8",
+    "canonicalContentHash": "8997c6f35b2709db1cd9f020",
+    "sourceFingerprint": "606f861c6308c686ecce69d2"
+  },
+  "canonicalContentHash": "8997c6f35b2709db1cd9f020",
+  "sourceFingerprint": "606f861c6308c686ecce69d2",
+  "layoutHash": "26b9c7ce3d9a3b84e7320282",
+  "familyId": "2021-06-21_2021-06-21_2021-09-22_summer",
+  "observations": [
+    {
+      "capturedAt": "2021-06-21T00:00:00+08:00",
+      "lastObservedAt": "2021-06-21T00:00:00+08:00",
+      "date": "2021-06-21",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-21_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-22T00:00:00+08:00",
+      "lastObservedAt": "2021-06-22T00:00:00+08:00",
+      "date": "2021-06-22",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-22_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-23T00:00:00+08:00",
+      "lastObservedAt": "2021-06-23T00:00:00+08:00",
+      "date": "2021-06-23",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-23_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-24T00:00:00+08:00",
+      "lastObservedAt": "2021-06-24T00:00:00+08:00",
+      "date": "2021-06-24",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-24_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-25T00:00:00+08:00",
+      "lastObservedAt": "2021-06-25T00:00:00+08:00",
+      "date": "2021-06-25",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-25_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-26T00:00:00+08:00",
+      "lastObservedAt": "2021-06-26T00:00:00+08:00",
+      "date": "2021-06-26",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-26_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-27T00:00:00+08:00",
+      "lastObservedAt": "2021-06-27T00:00:00+08:00",
+      "date": "2021-06-27",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-27_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-28T00:00:00+08:00",
+      "lastObservedAt": "2021-06-28T00:00:00+08:00",
+      "date": "2021-06-28",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-28_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-29T00:00:00+08:00",
+      "lastObservedAt": "2021-06-29T00:00:00+08:00",
+      "date": "2021-06-29",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-29_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-06-30T00:00:00+08:00",
+      "lastObservedAt": "2021-06-30T00:00:00+08:00",
+      "date": "2021-06-30",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-06-30_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-01T00:00:00+08:00",
+      "lastObservedAt": "2021-07-01T00:00:00+08:00",
+      "date": "2021-07-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-01_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-02T00:00:00+08:00",
+      "lastObservedAt": "2021-07-02T00:00:00+08:00",
+      "date": "2021-07-02",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-02_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-03T00:00:00+08:00",
+      "lastObservedAt": "2021-07-03T00:00:00+08:00",
+      "date": "2021-07-03",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-03_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-04T00:00:00+08:00",
+      "lastObservedAt": "2021-07-04T00:00:00+08:00",
+      "date": "2021-07-04",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-04_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-05T00:00:00+08:00",
+      "lastObservedAt": "2021-07-05T00:00:00+08:00",
+      "date": "2021-07-05",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-05_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-06T00:00:00+08:00",
+      "lastObservedAt": "2021-07-06T00:00:00+08:00",
+      "date": "2021-07-06",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-06_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-07T00:00:00+08:00",
+      "lastObservedAt": "2021-07-07T00:00:00+08:00",
+      "date": "2021-07-07",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-07_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-08T00:00:00+08:00",
+      "lastObservedAt": "2021-07-08T00:00:00+08:00",
+      "date": "2021-07-08",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-08_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-09T00:00:00+08:00",
+      "lastObservedAt": "2021-07-09T00:00:00+08:00",
+      "date": "2021-07-09",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-09_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-10T00:00:00+08:00",
+      "lastObservedAt": "2021-07-10T00:00:00+08:00",
+      "date": "2021-07-10",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-10_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-11T00:00:00+08:00",
+      "lastObservedAt": "2021-07-11T00:00:00+08:00",
+      "date": "2021-07-11",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-11_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-12T00:00:00+08:00",
+      "lastObservedAt": "2021-07-12T00:00:00+08:00",
+      "date": "2021-07-12",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-12_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-13T00:00:00+08:00",
+      "lastObservedAt": "2021-07-13T00:00:00+08:00",
+      "date": "2021-07-13",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-13_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-14T00:00:00+08:00",
+      "lastObservedAt": "2021-07-14T00:00:00+08:00",
+      "date": "2021-07-14",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-14_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-15T00:00:00+08:00",
+      "lastObservedAt": "2021-07-15T00:00:00+08:00",
+      "date": "2021-07-15",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-15_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-16T00:00:00+08:00",
+      "lastObservedAt": "2021-07-16T00:00:00+08:00",
+      "date": "2021-07-16",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-16_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-17T00:00:00+08:00",
+      "lastObservedAt": "2021-07-17T00:00:00+08:00",
+      "date": "2021-07-17",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-17_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-18T00:00:00+08:00",
+      "lastObservedAt": "2021-07-18T00:00:00+08:00",
+      "date": "2021-07-18",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-18_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-19T00:00:00+08:00",
+      "lastObservedAt": "2021-07-19T00:00:00+08:00",
+      "date": "2021-07-19",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-19_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-20T00:00:00+08:00",
+      "lastObservedAt": "2021-07-20T00:00:00+08:00",
+      "date": "2021-07-20",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-20_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-21T00:00:00+08:00",
+      "lastObservedAt": "2021-07-21T00:00:00+08:00",
+      "date": "2021-07-21",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-21_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-22T00:00:00+08:00",
+      "lastObservedAt": "2021-07-22T00:00:00+08:00",
+      "date": "2021-07-22",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-22_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-23T00:00:00+08:00",
+      "lastObservedAt": "2021-07-23T00:00:00+08:00",
+      "date": "2021-07-23",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-23_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-24T00:00:00+08:00",
+      "lastObservedAt": "2021-07-24T00:00:00+08:00",
+      "date": "2021-07-24",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-24_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-25T00:00:00+08:00",
+      "lastObservedAt": "2021-07-25T00:00:00+08:00",
+      "date": "2021-07-25",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-25_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-26T00:00:00+08:00",
+      "lastObservedAt": "2021-07-26T00:00:00+08:00",
+      "date": "2021-07-26",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-26_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-27T00:00:00+08:00",
+      "lastObservedAt": "2021-07-27T00:00:00+08:00",
+      "date": "2021-07-27",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-27_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-28T00:00:00+08:00",
+      "lastObservedAt": "2021-07-28T00:00:00+08:00",
+      "date": "2021-07-28",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-28_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-29T00:00:00+08:00",
+      "lastObservedAt": "2021-07-29T00:00:00+08:00",
+      "date": "2021-07-29",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-29_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-30T00:00:00+08:00",
+      "lastObservedAt": "2021-07-30T00:00:00+08:00",
+      "date": "2021-07-30",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-30_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-07-31T00:00:00+08:00",
+      "lastObservedAt": "2021-07-31T00:00:00+08:00",
+      "date": "2021-07-31",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-07-31_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-01T00:00:00+08:00",
+      "lastObservedAt": "2021-08-01T00:00:00+08:00",
+      "date": "2021-08-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-01_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-02T00:00:00+08:00",
+      "lastObservedAt": "2021-08-02T00:00:00+08:00",
+      "date": "2021-08-02",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-02_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-03T00:00:00+08:00",
+      "lastObservedAt": "2021-08-03T00:00:00+08:00",
+      "date": "2021-08-03",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-03_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-04T00:00:00+08:00",
+      "lastObservedAt": "2021-08-04T00:00:00+08:00",
+      "date": "2021-08-04",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-04_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-05T00:00:00+08:00",
+      "lastObservedAt": "2021-08-05T00:00:00+08:00",
+      "date": "2021-08-05",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-05_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-06T00:00:00+08:00",
+      "lastObservedAt": "2021-08-06T00:00:00+08:00",
+      "date": "2021-08-06",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-06_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-07T00:00:00+08:00",
+      "lastObservedAt": "2021-08-07T00:00:00+08:00",
+      "date": "2021-08-07",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-07_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-08T00:00:00+08:00",
+      "lastObservedAt": "2021-08-08T00:00:00+08:00",
+      "date": "2021-08-08",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-08_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-09T00:00:00+08:00",
+      "lastObservedAt": "2021-08-09T00:00:00+08:00",
+      "date": "2021-08-09",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-09_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-10T00:00:00+08:00",
+      "lastObservedAt": "2021-08-10T00:00:00+08:00",
+      "date": "2021-08-10",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-10_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-11T00:00:00+08:00",
+      "lastObservedAt": "2021-08-11T00:00:00+08:00",
+      "date": "2021-08-11",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-11_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-12T00:00:00+08:00",
+      "lastObservedAt": "2021-08-12T00:00:00+08:00",
+      "date": "2021-08-12",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-12_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-13T00:00:00+08:00",
+      "lastObservedAt": "2021-08-13T00:00:00+08:00",
+      "date": "2021-08-13",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-13_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-14T00:00:00+08:00",
+      "lastObservedAt": "2021-08-14T00:00:00+08:00",
+      "date": "2021-08-14",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-14_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-15T00:00:00+08:00",
+      "lastObservedAt": "2021-08-15T00:00:00+08:00",
+      "date": "2021-08-15",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-15_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-16T00:00:00+08:00",
+      "lastObservedAt": "2021-08-16T00:00:00+08:00",
+      "date": "2021-08-16",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-16_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-17T00:00:00+08:00",
+      "lastObservedAt": "2021-08-17T00:00:00+08:00",
+      "date": "2021-08-17",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-17_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-18T00:00:00+08:00",
+      "lastObservedAt": "2021-08-18T00:00:00+08:00",
+      "date": "2021-08-18",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-18_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-19T00:00:00+08:00",
+      "lastObservedAt": "2021-08-19T00:00:00+08:00",
+      "date": "2021-08-19",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-19_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-20T00:00:00+08:00",
+      "lastObservedAt": "2021-08-20T00:00:00+08:00",
+      "date": "2021-08-20",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-20_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-21T00:00:00+08:00",
+      "lastObservedAt": "2021-08-21T00:00:00+08:00",
+      "date": "2021-08-21",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-21_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-22T00:00:00+08:00",
+      "lastObservedAt": "2021-08-22T00:00:00+08:00",
+      "date": "2021-08-22",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-22_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-23T00:00:00+08:00",
+      "lastObservedAt": "2021-08-23T00:00:00+08:00",
+      "date": "2021-08-23",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-23_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-24T00:00:00+08:00",
+      "lastObservedAt": "2021-08-24T00:00:00+08:00",
+      "date": "2021-08-24",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-24_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-25T00:00:00+08:00",
+      "lastObservedAt": "2021-08-25T00:00:00+08:00",
+      "date": "2021-08-25",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-25_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-26T00:00:00+08:00",
+      "lastObservedAt": "2021-08-26T00:00:00+08:00",
+      "date": "2021-08-26",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-26_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-27T00:00:00+08:00",
+      "lastObservedAt": "2021-08-27T00:00:00+08:00",
+      "date": "2021-08-27",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-27_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-28T00:00:00+08:00",
+      "lastObservedAt": "2021-08-28T00:00:00+08:00",
+      "date": "2021-08-28",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-28_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-29T00:00:00+08:00",
+      "lastObservedAt": "2021-08-29T00:00:00+08:00",
+      "date": "2021-08-29",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-29_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-30T00:00:00+08:00",
+      "lastObservedAt": "2021-08-30T00:00:00+08:00",
+      "date": "2021-08-30",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-30_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-08-31T00:00:00+08:00",
+      "lastObservedAt": "2021-08-31T00:00:00+08:00",
+      "date": "2021-08-31",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-08-31_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-01T00:00:00+08:00",
+      "lastObservedAt": "2021-09-01T00:00:00+08:00",
+      "date": "2021-09-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-01_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-02T00:00:00+08:00",
+      "lastObservedAt": "2021-09-02T00:00:00+08:00",
+      "date": "2021-09-02",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-02_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-03T00:00:00+08:00",
+      "lastObservedAt": "2021-09-03T00:00:00+08:00",
+      "date": "2021-09-03",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-03_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-04T00:00:00+08:00",
+      "lastObservedAt": "2021-09-04T00:00:00+08:00",
+      "date": "2021-09-04",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-04_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-05T00:00:00+08:00",
+      "lastObservedAt": "2021-09-05T00:00:00+08:00",
+      "date": "2021-09-05",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-05_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-06T00:00:00+08:00",
+      "lastObservedAt": "2021-09-06T00:00:00+08:00",
+      "date": "2021-09-06",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-06_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-07T00:00:00+08:00",
+      "lastObservedAt": "2021-09-07T00:00:00+08:00",
+      "date": "2021-09-07",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-07_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-08T00:00:00+08:00",
+      "lastObservedAt": "2021-09-08T00:00:00+08:00",
+      "date": "2021-09-08",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-08_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-09T00:00:00+08:00",
+      "lastObservedAt": "2021-09-09T00:00:00+08:00",
+      "date": "2021-09-09",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-09_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-10T00:00:00+08:00",
+      "lastObservedAt": "2021-09-10T00:00:00+08:00",
+      "date": "2021-09-10",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-10_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-11T00:00:00+08:00",
+      "lastObservedAt": "2021-09-11T00:00:00+08:00",
+      "date": "2021-09-11",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-11_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-12T00:00:00+08:00",
+      "lastObservedAt": "2021-09-12T00:00:00+08:00",
+      "date": "2021-09-12",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-12_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-13T00:00:00+08:00",
+      "lastObservedAt": "2021-09-13T00:00:00+08:00",
+      "date": "2021-09-13",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-13_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-14T00:00:00+08:00",
+      "lastObservedAt": "2021-09-14T00:00:00+08:00",
+      "date": "2021-09-14",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-14_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-15T00:00:00+08:00",
+      "lastObservedAt": "2021-09-15T00:00:00+08:00",
+      "date": "2021-09-15",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-15_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-16T00:00:00+08:00",
+      "lastObservedAt": "2021-09-16T00:00:00+08:00",
+      "date": "2021-09-16",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-16_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-17T00:00:00+08:00",
+      "lastObservedAt": "2021-09-17T00:00:00+08:00",
+      "date": "2021-09-17",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-17_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-18T00:00:00+08:00",
+      "lastObservedAt": "2021-09-18T00:00:00+08:00",
+      "date": "2021-09-18",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-18_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-19T00:00:00+08:00",
+      "lastObservedAt": "2021-09-19T00:00:00+08:00",
+      "date": "2021-09-19",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-19_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-20T00:00:00+08:00",
+      "lastObservedAt": "2021-09-20T00:00:00+08:00",
+      "date": "2021-09-20",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-20_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-21T00:00:00+08:00",
+      "lastObservedAt": "2021-09-21T00:00:00+08:00",
+      "date": "2021-09-21",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-21_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-09-22T00:00:00+08:00",
+      "lastObservedAt": "2021-09-22T00:00:00+08:00",
+      "date": "2021-09-22",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-09-22_2021-06-21_2021-09-22_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021summer",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 夏",
+        "referenceCover": "res/bilibanner/2021summer/bfs/feed-admin/d7a4aeac90cbbefffc8ce5b9290b8c06bb05b900.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-06-21",
+        "coverageEndDate": "2021-09-22",
+        "originalStartDate": "2021-06-21",
+        "originalEndDate": "2021-09-22",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

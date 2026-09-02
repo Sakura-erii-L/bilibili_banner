@@ -1,0 +1,2936 @@
+{
+  "version": 11.0,
+  "capturedAt": "2023-08-21T00:00:00+08:00",
+  "date": "2023-08-21",
+  "season": "summer",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "captureMethod": "mikufan039-reference",
+    "provider": "mikufan039-reference",
+    "referenceId": "2023summerV5",
+    "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "referenceTitle": "2023 夏（第五版）",
+    "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+    "referenceCategory": "seasonal",
+    "coverageStartDate": "2023-08-21",
+    "coverageEndDate": "2023-09-30",
+    "originalStartDate": "2023-08-21",
+    "originalEndDate": "2023-09-31",
+    "originalDate": "2023-09-31",
+    "correctedDate": "2023-09-30",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "reference": {
+    "id": "2023summerV5",
+    "commit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "manifest": "reference-manifest.json",
+    "cover": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png"
+  },
+  "provenance": {
+    "primaryProvider": "mikufan039-reference",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+    "file": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+    "tag": "img",
+    "assetType": "image",
+    "sourceKind": "reference"
+  },
+  "layers": [
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {},
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 0,
+      "name": "01 bg",
+      "index": 0,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+      "file": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+      "resources": [
+        {
+          "src": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+          "id": 0,
+          "file": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          150,
+          -30
+        ],
+        "offset": [
+          20,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 13,
+      "name": "13 远鸟",
+      "index": 13,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+      "file": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+      "resources": [
+        {
+          "src": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+          "id": 0,
+          "file": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 1,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          350,
+          15
+        ],
+        "offset": [
+          20,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 1,
+      "name": "02 灯塔丛林",
+      "index": 1,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+      "file": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+      "resources": [
+        {
+          "src": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+          "id": 0,
+          "file": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 2,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -160,
+          10
+        ],
+        "offset": [
+          50,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 2,
+      "name": "03 底部海水",
+      "index": 2,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+      "file": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+      "resources": [
+        {
+          "src": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+          "id": 0,
+          "file": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 3,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -200,
+          40
+        ],
+        "offset": [
+          100,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 3,
+      "name": "04 鳄鱼a",
+      "index": 3,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+      "file": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+      "resources": [
+        {
+          "src": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+          "id": 0,
+          "file": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 4,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -200,
+          40
+        ],
+        "offset": [
+          100,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 4,
+      "name": "04 鳄鱼b",
+      "index": 4,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+      "file": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+      "resources": [
+        {
+          "src": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+          "id": 0,
+          "file": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 5,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.7
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -750,
+          50
+        ],
+        "offset": [
+          50,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 5,
+      "name": "05 左边鱼影",
+      "index": 5,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+      "file": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+      "resources": [
+        {
+          "src": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+          "id": 0,
+          "file": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 6,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -950,
+          70
+        ],
+        "offset": [
+          300,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 6,
+      "name": "06 左边鱼群",
+      "index": 6,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+      "file": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+      "resources": [
+        {
+          "src": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+          "id": 0,
+          "file": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 7,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.55
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          650,
+          130
+        ],
+        "offset": [
+          200,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 7,
+      "name": "07 右边鱼",
+      "index": 7,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+      "file": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+      "resources": [
+        {
+          "src": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+          "id": 0,
+          "file": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 8,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.5
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          120,
+          0
+        ],
+        "offset": [
+          250,
+          -20
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 8,
+      "name": "08 右边鸟",
+      "index": 8,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+      "file": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+      "resources": [
+        {
+          "src": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+          "id": 0,
+          "file": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 9,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -200,
+          20
+        ],
+        "offset": [
+          90,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 9,
+      "name": "09 中间",
+      "index": 9,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+      "file": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+      "resources": [
+        {
+          "src": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+          "id": 0,
+          "file": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 10,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.65
+      },
+      "rotate": {
+        "offset": 5
+      },
+      "translate": {
+        "initial": [
+          -280,
+          60
+        ],
+        "offset": [
+          90,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 11,
+      "name": "11 33",
+      "index": 11,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+      "file": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+      "resources": [
+        {
+          "src": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+          "id": 0,
+          "file": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 11,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.75
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -30,
+          -5
+        ],
+        "offset": [
+          130,
+          2
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 10,
+      "name": "10 水面",
+      "index": 10,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+      "file": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+      "resources": [
+        {
+          "src": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+          "id": 0,
+          "file": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 12,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.6
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -420,
+          -80
+        ],
+        "offset": [
+          400,
+          10
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 12,
+      "name": "12 近鸟",
+      "index": 12,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+      "file": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+      "resources": [
+        {
+          "src": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+          "id": 0,
+          "file": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 13,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.7
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          0,
+          -20
+        ],
+        "offset": [
+          300,
+          0
+        ]
+      },
+      "blur": {
+        "initial": 3
+      },
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 14,
+      "name": "14 两侧",
+      "index": 14,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+      "file": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+      "resources": [
+        {
+          "src": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+          "id": 0,
+          "file": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 14,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    }
+  ],
+  "auxiliaryAssets": [
+    {
+      "role": "reference",
+      "file": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+      "src": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "src": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+      "src": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+      "src": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+      "src": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+      "src": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+      "src": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+      "src": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+      "src": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+      "src": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+      "src": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+      "src": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+      "src": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+      "src": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+      "src": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+      "src": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+      "src": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+      "assetType": "other"
+    }
+  ],
+  "interaction": {
+    "model": "mikufan-reference-v1",
+    "effects": [
+      "reference"
+    ]
+  },
+  "referenceMode": "normal",
+  "preview_image": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+  "sourceFiles": {
+    "json": "reference-manifest.json"
+  },
+  "api": {
+    "id": null,
+    "name": "",
+    "isSplitLayer": true,
+    "extensions": {}
+  },
+  "extensions": {},
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2023-09-30T00:00:00+08:00",
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "type": [
+    "layered",
+    "interactive"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "mikufan039",
+      "referenceId": "2023summerV5"
+    },
+    "layerCount": 15,
+    "visibleMediaCount": 15,
+    "resourceUrls": [],
+    "media": [],
+    "signals": {
+      "isSplitLayer": true,
+      "hasInteraction": false,
+      "hasVideo": false
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+      "local_file": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+      "content_type": "",
+      "sha256": "edf495fdc67254f04fc0c840efbcbaef9390ae5c4692a812261d685336a15fbe"
+    },
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+      "local_file": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+      "content_type": "",
+      "sha256": "68935d751804e51ea200f62d8cb17764837ad322e1e4988168609bb83b33444e"
+    },
+    {
+      "role": "layer",
+      "index": 13,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+      "local_file": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+      "content_type": "",
+      "sha256": "67879d1c442d509667e98fcf292569cb10bd6cf2028b2ddc80bc8e4d442a3e8e"
+    },
+    {
+      "role": "layer",
+      "index": 1,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+      "local_file": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+      "content_type": "",
+      "sha256": "4826be44055943334d55d3519e334f61d31705023263b43c442f4422799d11cf"
+    },
+    {
+      "role": "layer",
+      "index": 2,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+      "local_file": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+      "content_type": "",
+      "sha256": "bf5f24b2435597b2b9352f0924f14d5c2a589f803596deab2a01c7e9261e3b22"
+    },
+    {
+      "role": "layer",
+      "index": 3,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+      "local_file": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+      "content_type": "",
+      "sha256": "3b3ed494a3f5057891fff47d7fc1aad4789a7397a30cf2fef5db2d59bba3b225"
+    },
+    {
+      "role": "layer",
+      "index": 4,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+      "local_file": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+      "content_type": "",
+      "sha256": "9c94639d8ca8027c3233a299e302d4fe0000a9b4d4d58a804f138d5a5fb46252"
+    },
+    {
+      "role": "layer",
+      "index": 5,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+      "local_file": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+      "content_type": "",
+      "sha256": "8e59c73127ee304fe98b2da3d6dac2c494cc09606a5ce70b25e21765a9583765"
+    },
+    {
+      "role": "layer",
+      "index": 6,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+      "local_file": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+      "content_type": "",
+      "sha256": "56dcc77f59b6e62ddb476f6084b05c4d38be7cfc5b41df48bb32a5d4687c78f7"
+    },
+    {
+      "role": "layer",
+      "index": 7,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+      "local_file": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+      "content_type": "",
+      "sha256": "8e5f474e48ef62cb94c2b25a8808a283e5743f710969d72fd984a479ef6c0f8e"
+    },
+    {
+      "role": "layer",
+      "index": 8,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+      "local_file": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+      "content_type": "",
+      "sha256": "31ff002cd32d9e394552bd568265f432a64cdb59ffd53c053410c7fc82fe2777"
+    },
+    {
+      "role": "layer",
+      "index": 9,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+      "local_file": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+      "content_type": "",
+      "sha256": "d83dd9f0ad0c7410d9efafadc393dc0ffb4d94b2b4a954691bed75b9213b63a5"
+    },
+    {
+      "role": "layer",
+      "index": 11,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+      "local_file": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+      "content_type": "",
+      "sha256": "0ea55f44fccf071e239a555d8cd07b34cdc364ad4993d09a59560a99337a4b32"
+    },
+    {
+      "role": "layer",
+      "index": 10,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+      "local_file": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+      "content_type": "",
+      "sha256": "388195ad30b8808905d561a2a377219b4e885304f6282cc550ef771d42e1249d"
+    },
+    {
+      "role": "layer",
+      "index": 12,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+      "local_file": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+      "content_type": "",
+      "sha256": "a0c010abdb05bd8ce0d473f725ce95398b0fe5b75273dee8d5a4dfe59f0317ae"
+    },
+    {
+      "role": "layer",
+      "index": 14,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+      "local_file": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+      "content_type": "",
+      "sha256": "e9629fbbd7f2f41a056ba4d29816235089c5a2832e0cc13e0d027f017bae2cfc"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+      "local_file": "bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+      "content_type": "",
+      "sha256": "edf495fdc67254f04fc0c840efbcbaef9390ae5c4692a812261d685336a15fbe"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "local_file": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "content_type": "",
+      "sha256": "bcaebad4f207236dc9e316491eadc26142ee5bbf4a4c7a396d35aeef38ef2006"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+      "local_file": "bfs/vc/0725acc8fac5c8164726240de477fbd0ce18e6dd.png",
+      "content_type": "",
+      "sha256": "8e5f474e48ef62cb94c2b25a8808a283e5743f710969d72fd984a479ef6c0f8e"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+      "local_file": "bfs/vc/149e5beb3ef989ee01a28c0412ece9842c026e74.png",
+      "content_type": "",
+      "sha256": "9c94639d8ca8027c3233a299e302d4fe0000a9b4d4d58a804f138d5a5fb46252"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+      "local_file": "bfs/vc/1a77fc745eb5b65b976506bc3a8ce1c8fe876991.png",
+      "content_type": "",
+      "sha256": "0ea55f44fccf071e239a555d8cd07b34cdc364ad4993d09a59560a99337a4b32"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+      "local_file": "bfs/vc/24c57a58af481117640928798419341bc6fd32d3.png",
+      "content_type": "",
+      "sha256": "d83dd9f0ad0c7410d9efafadc393dc0ffb4d94b2b4a954691bed75b9213b63a5"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+      "local_file": "bfs/vc/339abbc0d089a1ddbe3265b238e750173ce56de4.png",
+      "content_type": "",
+      "sha256": "e9629fbbd7f2f41a056ba4d29816235089c5a2832e0cc13e0d027f017bae2cfc"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+      "local_file": "bfs/vc/4e7edb416c34eccc40f34d2b297524652685a9bb.png",
+      "content_type": "",
+      "sha256": "68935d751804e51ea200f62d8cb17764837ad322e1e4988168609bb83b33444e"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+      "local_file": "bfs/vc/78e8b2abe1bc5715719e847a4e3654e3d11bcbf7.png",
+      "content_type": "",
+      "sha256": "67879d1c442d509667e98fcf292569cb10bd6cf2028b2ddc80bc8e4d442a3e8e"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+      "local_file": "bfs/vc/7b96b0044345b5c2e3ddb8ea487daed8761c57f7.png",
+      "content_type": "",
+      "sha256": "31ff002cd32d9e394552bd568265f432a64cdb59ffd53c053410c7fc82fe2777"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+      "local_file": "bfs/vc/8198227e8abb7c75a94ddbc1209a9bf5ba067a68.png",
+      "content_type": "",
+      "sha256": "8e59c73127ee304fe98b2da3d6dac2c494cc09606a5ce70b25e21765a9583765"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+      "local_file": "bfs/vc/9af5dad13028d419618e86399eb8fc009700d74c.png",
+      "content_type": "",
+      "sha256": "a0c010abdb05bd8ce0d473f725ce95398b0fe5b75273dee8d5a4dfe59f0317ae"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+      "local_file": "bfs/vc/9f86739c3b0ff5ddc99122aa506dee041aab4ec4.png",
+      "content_type": "",
+      "sha256": "bf5f24b2435597b2b9352f0924f14d5c2a589f803596deab2a01c7e9261e3b22"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+      "local_file": "bfs/vc/a679239d0399412dd75e4e0eb30702b0818ef26d.png",
+      "content_type": "",
+      "sha256": "4826be44055943334d55d3519e334f61d31705023263b43c442f4422799d11cf"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+      "local_file": "bfs/vc/af9d07a3e29858d742cf2f0dd22c70d5553641f3.png",
+      "content_type": "",
+      "sha256": "56dcc77f59b6e62ddb476f6084b05c4d38be7cfc5b41df48bb32a5d4687c78f7"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+      "local_file": "bfs/vc/ce1377aa701c7704b5f0984959512120ac57c586.png",
+      "content_type": "",
+      "sha256": "3b3ed494a3f5057891fff47d7fc1aad4789a7397a30cf2fef5db2d59bba3b225"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+      "local_file": "bfs/vc/dc29b8093f5d97a41d48ca24b4d7d00f78920d54.png",
+      "content_type": "",
+      "sha256": "388195ad30b8808905d561a2a377219b4e885304f6282cc550ef771d42e1249d"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "3c0635db9735e032dec42712",
+  "hashes": {
+    "resourceHash": "71dc21d94b7e43dcd76ec0e6",
+    "structureHash": "fac9230e04c5c04880e79fba",
+    "interactionHash": "90bed642c6c8cc5b81ed3561",
+    "contentHash": "3c0635db9735e032dec42712",
+    "canonicalContentHash": "7fde8be7a83b824d2977f492",
+    "sourceFingerprint": "422a7508265563e2a1473f1c"
+  },
+  "canonicalContentHash": "7fde8be7a83b824d2977f492",
+  "sourceFingerprint": "422a7508265563e2a1473f1c",
+  "layoutHash": "3d73453f49d49e20d1a8ee80",
+  "familyId": "2023-08-21_2023-08-21_2023-09-30_summer",
+  "observations": [
+    {
+      "capturedAt": "2023-08-21T00:00:00+08:00",
+      "lastObservedAt": "2023-08-21T00:00:00+08:00",
+      "date": "2023-08-21",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-21_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-22T00:00:00+08:00",
+      "lastObservedAt": "2023-08-22T00:00:00+08:00",
+      "date": "2023-08-22",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-22_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-23T00:00:00+08:00",
+      "lastObservedAt": "2023-08-23T00:00:00+08:00",
+      "date": "2023-08-23",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-23_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-24T00:00:00+08:00",
+      "lastObservedAt": "2023-08-24T00:00:00+08:00",
+      "date": "2023-08-24",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-24_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-25T00:00:00+08:00",
+      "lastObservedAt": "2023-08-25T00:00:00+08:00",
+      "date": "2023-08-25",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-25_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-26T00:00:00+08:00",
+      "lastObservedAt": "2023-08-26T00:00:00+08:00",
+      "date": "2023-08-26",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-26_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-27T00:00:00+08:00",
+      "lastObservedAt": "2023-08-27T00:00:00+08:00",
+      "date": "2023-08-27",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-27_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-28T00:00:00+08:00",
+      "lastObservedAt": "2023-08-28T00:00:00+08:00",
+      "date": "2023-08-28",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-28_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-29T00:00:00+08:00",
+      "lastObservedAt": "2023-08-29T00:00:00+08:00",
+      "date": "2023-08-29",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-29_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-30T00:00:00+08:00",
+      "lastObservedAt": "2023-08-30T00:00:00+08:00",
+      "date": "2023-08-30",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-30_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-08-31T00:00:00+08:00",
+      "lastObservedAt": "2023-08-31T00:00:00+08:00",
+      "date": "2023-08-31",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-08-31_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-01T00:00:00+08:00",
+      "lastObservedAt": "2023-09-01T00:00:00+08:00",
+      "date": "2023-09-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-01_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-02T00:00:00+08:00",
+      "lastObservedAt": "2023-09-02T00:00:00+08:00",
+      "date": "2023-09-02",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-02_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-03T00:00:00+08:00",
+      "lastObservedAt": "2023-09-03T00:00:00+08:00",
+      "date": "2023-09-03",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-03_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-04T00:00:00+08:00",
+      "lastObservedAt": "2023-09-04T00:00:00+08:00",
+      "date": "2023-09-04",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-04_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-05T00:00:00+08:00",
+      "lastObservedAt": "2023-09-05T00:00:00+08:00",
+      "date": "2023-09-05",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-05_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-06T00:00:00+08:00",
+      "lastObservedAt": "2023-09-06T00:00:00+08:00",
+      "date": "2023-09-06",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-06_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-07T00:00:00+08:00",
+      "lastObservedAt": "2023-09-07T00:00:00+08:00",
+      "date": "2023-09-07",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-07_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-08T00:00:00+08:00",
+      "lastObservedAt": "2023-09-08T00:00:00+08:00",
+      "date": "2023-09-08",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-08_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-09T00:00:00+08:00",
+      "lastObservedAt": "2023-09-09T00:00:00+08:00",
+      "date": "2023-09-09",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-09_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-10T00:00:00+08:00",
+      "lastObservedAt": "2023-09-10T00:00:00+08:00",
+      "date": "2023-09-10",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-10_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-11T00:00:00+08:00",
+      "lastObservedAt": "2023-09-11T00:00:00+08:00",
+      "date": "2023-09-11",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-11_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-12T00:00:00+08:00",
+      "lastObservedAt": "2023-09-12T00:00:00+08:00",
+      "date": "2023-09-12",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-12_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-13T00:00:00+08:00",
+      "lastObservedAt": "2023-09-13T00:00:00+08:00",
+      "date": "2023-09-13",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-13_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-14T00:00:00+08:00",
+      "lastObservedAt": "2023-09-14T00:00:00+08:00",
+      "date": "2023-09-14",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-14_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-15T00:00:00+08:00",
+      "lastObservedAt": "2023-09-15T00:00:00+08:00",
+      "date": "2023-09-15",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-15_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-16T00:00:00+08:00",
+      "lastObservedAt": "2023-09-16T00:00:00+08:00",
+      "date": "2023-09-16",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-16_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-17T00:00:00+08:00",
+      "lastObservedAt": "2023-09-17T00:00:00+08:00",
+      "date": "2023-09-17",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-17_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-18T00:00:00+08:00",
+      "lastObservedAt": "2023-09-18T00:00:00+08:00",
+      "date": "2023-09-18",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-18_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-19T00:00:00+08:00",
+      "lastObservedAt": "2023-09-19T00:00:00+08:00",
+      "date": "2023-09-19",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-19_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-20T00:00:00+08:00",
+      "lastObservedAt": "2023-09-20T00:00:00+08:00",
+      "date": "2023-09-20",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-20_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-21T00:00:00+08:00",
+      "lastObservedAt": "2023-09-21T00:00:00+08:00",
+      "date": "2023-09-21",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-21_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-22T00:00:00+08:00",
+      "lastObservedAt": "2023-09-22T00:00:00+08:00",
+      "date": "2023-09-22",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-22_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-23T00:00:00+08:00",
+      "lastObservedAt": "2023-09-23T00:00:00+08:00",
+      "date": "2023-09-23",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-23_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-24T00:00:00+08:00",
+      "lastObservedAt": "2023-09-24T00:00:00+08:00",
+      "date": "2023-09-24",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-24_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-25T00:00:00+08:00",
+      "lastObservedAt": "2023-09-25T00:00:00+08:00",
+      "date": "2023-09-25",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-25_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-26T00:00:00+08:00",
+      "lastObservedAt": "2023-09-26T00:00:00+08:00",
+      "date": "2023-09-26",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-26_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-27T00:00:00+08:00",
+      "lastObservedAt": "2023-09-27T00:00:00+08:00",
+      "date": "2023-09-27",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-27_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-28T00:00:00+08:00",
+      "lastObservedAt": "2023-09-28T00:00:00+08:00",
+      "date": "2023-09-28",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-28_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-29T00:00:00+08:00",
+      "lastObservedAt": "2023-09-29T00:00:00+08:00",
+      "date": "2023-09-29",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-29_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-09-30T00:00:00+08:00",
+      "lastObservedAt": "2023-09-30T00:00:00+08:00",
+      "date": "2023-09-30",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-09-30_2023-08-21_2023-09-30_summer",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023summerV5",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 夏（第五版）",
+        "referenceCover": "res/bilibanner/2023summerV5/bfs/archive/34319439f88f5c0794ee6985cd535fcb40ed28e0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-08-21",
+        "coverageEndDate": "2023-09-30",
+        "originalStartDate": "2023-08-21",
+        "originalEndDate": "2023-09-31",
+        "originalDate": "2023-09-31",
+        "correctedDate": "2023-09-30",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

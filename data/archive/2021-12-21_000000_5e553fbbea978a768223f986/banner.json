@@ -1,0 +1,3547 @@
+{
+  "version": 11.0,
+  "capturedAt": "2021-12-21T00:00:00+08:00",
+  "date": "2021-12-21",
+  "season": "winter",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "captureMethod": "mikufan039-reference",
+    "provider": "mikufan039-reference",
+    "referenceId": "2021winter",
+    "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "referenceTitle": "2021 冬",
+    "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+    "referenceCategory": "seasonal",
+    "coverageStartDate": "2021-12-21",
+    "coverageEndDate": "2022-03-19",
+    "originalStartDate": "2021-12-21",
+    "originalEndDate": "2022-03-19",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "reference": {
+    "id": "2021winter",
+    "commit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "manifest": "reference-manifest.json",
+    "cover": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png"
+  },
+  "provenance": {
+    "primaryProvider": "mikufan039-reference",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+    "file": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+    "tag": "img",
+    "assetType": "image",
+    "sourceKind": "reference"
+  },
+  "layers": [
+    {
+      "scale": {
+        "initial": 0.9
+      },
+      "rotate": {},
+      "translate": {},
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 0,
+      "name": "图层0",
+      "index": 0,
+      "tag": "video",
+      "assetType": "video",
+      "src": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+      "file": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+      "resources": [
+        {
+          "src": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+          "id": 0,
+          "file": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+          "resourceIndex": 0,
+          "tag": "video",
+          "assetType": "video"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    }
+  ],
+  "auxiliaryAssets": [
+    {
+      "role": "reference",
+      "file": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+      "src": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/archive/f7099702f9903c279197ae3948ced7e1b64eefc0.png",
+      "src": "bfs/archive/f7099702f9903c279197ae3948ced7e1b64eefc0.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/021028ec922b2527fff2e15ebe5a62da5ed87849.webm",
+      "src": "bfs/vc/021028ec922b2527fff2e15ebe5a62da5ed87849.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+      "src": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/5a1ef20ac57d795101d7e426883bb6a06ecdf566.webm",
+      "src": "bfs/vc/5a1ef20ac57d795101d7e426883bb6a06ecdf566.webm",
+      "assetType": "other"
+    }
+  ],
+  "interaction": {
+    "model": "mikufan-reference-v1",
+    "effects": [
+      "reference"
+    ]
+  },
+  "referenceMode": "normal",
+  "preview_image": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+  "sourceFiles": {
+    "json": "reference-manifest.json"
+  },
+  "api": {
+    "id": null,
+    "name": "",
+    "isSplitLayer": true,
+    "extensions": {
+      "time": {
+        "0": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 0,
+                "name": "图层0",
+                "resources": [
+                  {
+                    "src": "bfs/vc/5a1ef20ac57d795101d7e426883bb6a06ecdf566.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.9
+                }
+              }
+            ]
+          }
+        ],
+        "21600": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 2,
+                "name": "图层2",
+                "resources": [
+                  {
+                    "src": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.9
+                }
+              }
+            ]
+          }
+        ],
+        "54000": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 1,
+                "name": "图层1",
+                "resources": [
+                  {
+                    "src": "bfs/vc/021028ec922b2527fff2e15ebe5a62da5ed87849.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.9
+                }
+              }
+            ]
+          }
+        ],
+        "64800": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 0,
+                "name": "图层0",
+                "resources": [
+                  {
+                    "src": "bfs/vc/5a1ef20ac57d795101d7e426883bb6a06ecdf566.webm",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.9
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "extensions": {
+    "time": {
+      "0": [
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "bfs/vc/5a1ef20ac57d795101d7e426883bb6a06ecdf566.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.9
+              }
+            }
+          ]
+        }
+      ],
+      "21600": [
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 2,
+              "name": "图层2",
+              "resources": [
+                {
+                  "src": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.9
+              }
+            }
+          ]
+        }
+      ],
+      "54000": [
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 1,
+              "name": "图层1",
+              "resources": [
+                {
+                  "src": "bfs/vc/021028ec922b2527fff2e15ebe5a62da5ed87849.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.9
+              }
+            }
+          ]
+        }
+      ],
+      "64800": [
+        {
+          "version": "1",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "bfs/vc/5a1ef20ac57d795101d7e426883bb6a06ecdf566.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.9
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2022-03-19T00:00:00+08:00",
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "type": [
+    "layered",
+    "video",
+    "interactive"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "mikufan039",
+      "referenceId": "2021winter"
+    },
+    "layerCount": 1,
+    "visibleMediaCount": 1,
+    "resourceUrls": [],
+    "media": [],
+    "signals": {
+      "isSplitLayer": true,
+      "hasInteraction": false,
+      "hasVideo": true
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+      "local_file": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+      "content_type": "",
+      "sha256": "347ebf688541bb50139f13cca901800366c4e792756a4dabf234b54ccfcc06a4"
+    },
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+      "local_file": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+      "content_type": "",
+      "sha256": "402eaa869019e30f3524f44e50aa151f158d8a5fdb9c50272a8934bfe706fc5f"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+      "local_file": "bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+      "content_type": "",
+      "sha256": "347ebf688541bb50139f13cca901800366c4e792756a4dabf234b54ccfcc06a4"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/f7099702f9903c279197ae3948ced7e1b64eefc0.png",
+      "local_file": "bfs/archive/f7099702f9903c279197ae3948ced7e1b64eefc0.png",
+      "content_type": "",
+      "sha256": "1ef75ddf062f5ae5257c3ce75427744d39a12b426100c99ea972bf40d5c28842"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/021028ec922b2527fff2e15ebe5a62da5ed87849.webm",
+      "local_file": "bfs/vc/021028ec922b2527fff2e15ebe5a62da5ed87849.webm",
+      "content_type": "",
+      "sha256": "ed73704be2f772d3e8286ffba0e3af225f8c3819c59eb67bdf2e3d5a2a4e7c15"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+      "local_file": "bfs/vc/46a8ec74a874b0249e0b20ac6e7fca8eaed1e82e.webm",
+      "content_type": "",
+      "sha256": "402eaa869019e30f3524f44e50aa151f158d8a5fdb9c50272a8934bfe706fc5f"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/5a1ef20ac57d795101d7e426883bb6a06ecdf566.webm",
+      "local_file": "bfs/vc/5a1ef20ac57d795101d7e426883bb6a06ecdf566.webm",
+      "content_type": "",
+      "sha256": "2713c84e557ba803f17dfb86bd9de347fecbedcecde8f2afed9827e1cb552637"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "5e553fbbea978a768223f986",
+  "hashes": {
+    "resourceHash": "d77f1a743c3d7398390f39b8",
+    "structureHash": "85da0a07e94b8330fb3f68fa",
+    "interactionHash": "46ace96a6c2d85cecbd40a32",
+    "contentHash": "5e553fbbea978a768223f986",
+    "canonicalContentHash": "9e760ecbd1603382dd3bf8e8",
+    "sourceFingerprint": "458693f6fc75149b4da1f0b5"
+  },
+  "canonicalContentHash": "9e760ecbd1603382dd3bf8e8",
+  "sourceFingerprint": "458693f6fc75149b4da1f0b5",
+  "layoutHash": "258451ab5952ae5dd31c686b",
+  "familyId": "2021-12-21_2021-12-21_2022-03-19_winter",
+  "observations": [
+    {
+      "capturedAt": "2021-12-21T00:00:00+08:00",
+      "lastObservedAt": "2021-12-21T00:00:00+08:00",
+      "date": "2021-12-21",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-21_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-22T00:00:00+08:00",
+      "lastObservedAt": "2021-12-22T00:00:00+08:00",
+      "date": "2021-12-22",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-22_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-23T00:00:00+08:00",
+      "lastObservedAt": "2021-12-23T00:00:00+08:00",
+      "date": "2021-12-23",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-23_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-24T00:00:00+08:00",
+      "lastObservedAt": "2021-12-24T00:00:00+08:00",
+      "date": "2021-12-24",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-24_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-25T00:00:00+08:00",
+      "lastObservedAt": "2021-12-25T00:00:00+08:00",
+      "date": "2021-12-25",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-25_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-26T00:00:00+08:00",
+      "lastObservedAt": "2021-12-26T00:00:00+08:00",
+      "date": "2021-12-26",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-26_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-27T00:00:00+08:00",
+      "lastObservedAt": "2021-12-27T00:00:00+08:00",
+      "date": "2021-12-27",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-27_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-28T00:00:00+08:00",
+      "lastObservedAt": "2021-12-28T00:00:00+08:00",
+      "date": "2021-12-28",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-28_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-29T00:00:00+08:00",
+      "lastObservedAt": "2021-12-29T00:00:00+08:00",
+      "date": "2021-12-29",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-29_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-30T00:00:00+08:00",
+      "lastObservedAt": "2021-12-30T00:00:00+08:00",
+      "date": "2021-12-30",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-30_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-12-31T00:00:00+08:00",
+      "lastObservedAt": "2021-12-31T00:00:00+08:00",
+      "date": "2021-12-31",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2021-12-31_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-01T00:00:00+08:00",
+      "lastObservedAt": "2022-01-01T00:00:00+08:00",
+      "date": "2022-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-01_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-02T00:00:00+08:00",
+      "lastObservedAt": "2022-01-02T00:00:00+08:00",
+      "date": "2022-01-02",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-02_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-03T00:00:00+08:00",
+      "lastObservedAt": "2022-01-03T00:00:00+08:00",
+      "date": "2022-01-03",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-03_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-04T00:00:00+08:00",
+      "lastObservedAt": "2022-01-04T00:00:00+08:00",
+      "date": "2022-01-04",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-04_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-05T00:00:00+08:00",
+      "lastObservedAt": "2022-01-05T00:00:00+08:00",
+      "date": "2022-01-05",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-05_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-06T00:00:00+08:00",
+      "lastObservedAt": "2022-01-06T00:00:00+08:00",
+      "date": "2022-01-06",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-06_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-07T00:00:00+08:00",
+      "lastObservedAt": "2022-01-07T00:00:00+08:00",
+      "date": "2022-01-07",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-07_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-08T00:00:00+08:00",
+      "lastObservedAt": "2022-01-08T00:00:00+08:00",
+      "date": "2022-01-08",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-08_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-09T00:00:00+08:00",
+      "lastObservedAt": "2022-01-09T00:00:00+08:00",
+      "date": "2022-01-09",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-09_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-10T00:00:00+08:00",
+      "lastObservedAt": "2022-01-10T00:00:00+08:00",
+      "date": "2022-01-10",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-10_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-11T00:00:00+08:00",
+      "lastObservedAt": "2022-01-11T00:00:00+08:00",
+      "date": "2022-01-11",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-11_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-12T00:00:00+08:00",
+      "lastObservedAt": "2022-01-12T00:00:00+08:00",
+      "date": "2022-01-12",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-12_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-13T00:00:00+08:00",
+      "lastObservedAt": "2022-01-13T00:00:00+08:00",
+      "date": "2022-01-13",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-13_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-14T00:00:00+08:00",
+      "lastObservedAt": "2022-01-14T00:00:00+08:00",
+      "date": "2022-01-14",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-14_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-15T00:00:00+08:00",
+      "lastObservedAt": "2022-01-15T00:00:00+08:00",
+      "date": "2022-01-15",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-15_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-16T00:00:00+08:00",
+      "lastObservedAt": "2022-01-16T00:00:00+08:00",
+      "date": "2022-01-16",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-16_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-17T00:00:00+08:00",
+      "lastObservedAt": "2022-01-17T00:00:00+08:00",
+      "date": "2022-01-17",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-17_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-18T00:00:00+08:00",
+      "lastObservedAt": "2022-01-18T00:00:00+08:00",
+      "date": "2022-01-18",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-18_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-19T00:00:00+08:00",
+      "lastObservedAt": "2022-01-19T00:00:00+08:00",
+      "date": "2022-01-19",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-19_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-20T00:00:00+08:00",
+      "lastObservedAt": "2022-01-20T00:00:00+08:00",
+      "date": "2022-01-20",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-20_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-21T00:00:00+08:00",
+      "lastObservedAt": "2022-01-21T00:00:00+08:00",
+      "date": "2022-01-21",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-21_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-22T00:00:00+08:00",
+      "lastObservedAt": "2022-01-22T00:00:00+08:00",
+      "date": "2022-01-22",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-22_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-23T00:00:00+08:00",
+      "lastObservedAt": "2022-01-23T00:00:00+08:00",
+      "date": "2022-01-23",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-23_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-24T00:00:00+08:00",
+      "lastObservedAt": "2022-01-24T00:00:00+08:00",
+      "date": "2022-01-24",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-24_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-25T00:00:00+08:00",
+      "lastObservedAt": "2022-01-25T00:00:00+08:00",
+      "date": "2022-01-25",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-25_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-26T00:00:00+08:00",
+      "lastObservedAt": "2022-01-26T00:00:00+08:00",
+      "date": "2022-01-26",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-26_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-27T00:00:00+08:00",
+      "lastObservedAt": "2022-01-27T00:00:00+08:00",
+      "date": "2022-01-27",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-27_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-28T00:00:00+08:00",
+      "lastObservedAt": "2022-01-28T00:00:00+08:00",
+      "date": "2022-01-28",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-28_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-29T00:00:00+08:00",
+      "lastObservedAt": "2022-01-29T00:00:00+08:00",
+      "date": "2022-01-29",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-29_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-30T00:00:00+08:00",
+      "lastObservedAt": "2022-01-30T00:00:00+08:00",
+      "date": "2022-01-30",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-30_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-01-31T00:00:00+08:00",
+      "lastObservedAt": "2022-01-31T00:00:00+08:00",
+      "date": "2022-01-31",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-01-31_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-01T00:00:00+08:00",
+      "lastObservedAt": "2022-02-01T00:00:00+08:00",
+      "date": "2022-02-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-01_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-02T00:00:00+08:00",
+      "lastObservedAt": "2022-02-02T00:00:00+08:00",
+      "date": "2022-02-02",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-02_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-03T00:00:00+08:00",
+      "lastObservedAt": "2022-02-03T00:00:00+08:00",
+      "date": "2022-02-03",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-03_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-04T00:00:00+08:00",
+      "lastObservedAt": "2022-02-04T00:00:00+08:00",
+      "date": "2022-02-04",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-04_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-05T00:00:00+08:00",
+      "lastObservedAt": "2022-02-05T00:00:00+08:00",
+      "date": "2022-02-05",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-05_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-06T00:00:00+08:00",
+      "lastObservedAt": "2022-02-06T00:00:00+08:00",
+      "date": "2022-02-06",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-06_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-07T00:00:00+08:00",
+      "lastObservedAt": "2022-02-07T00:00:00+08:00",
+      "date": "2022-02-07",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-07_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-08T00:00:00+08:00",
+      "lastObservedAt": "2022-02-08T00:00:00+08:00",
+      "date": "2022-02-08",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-08_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-09T00:00:00+08:00",
+      "lastObservedAt": "2022-02-09T00:00:00+08:00",
+      "date": "2022-02-09",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-09_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-10T00:00:00+08:00",
+      "lastObservedAt": "2022-02-10T00:00:00+08:00",
+      "date": "2022-02-10",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-10_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-11T00:00:00+08:00",
+      "lastObservedAt": "2022-02-11T00:00:00+08:00",
+      "date": "2022-02-11",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-11_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-12T00:00:00+08:00",
+      "lastObservedAt": "2022-02-12T00:00:00+08:00",
+      "date": "2022-02-12",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-12_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-13T00:00:00+08:00",
+      "lastObservedAt": "2022-02-13T00:00:00+08:00",
+      "date": "2022-02-13",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-13_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-14T00:00:00+08:00",
+      "lastObservedAt": "2022-02-14T00:00:00+08:00",
+      "date": "2022-02-14",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-14_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-15T00:00:00+08:00",
+      "lastObservedAt": "2022-02-15T00:00:00+08:00",
+      "date": "2022-02-15",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-15_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-16T00:00:00+08:00",
+      "lastObservedAt": "2022-02-16T00:00:00+08:00",
+      "date": "2022-02-16",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-16_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-17T00:00:00+08:00",
+      "lastObservedAt": "2022-02-17T00:00:00+08:00",
+      "date": "2022-02-17",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-17_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-18T00:00:00+08:00",
+      "lastObservedAt": "2022-02-18T00:00:00+08:00",
+      "date": "2022-02-18",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-18_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-19T00:00:00+08:00",
+      "lastObservedAt": "2022-02-19T00:00:00+08:00",
+      "date": "2022-02-19",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-19_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-20T00:00:00+08:00",
+      "lastObservedAt": "2022-02-20T00:00:00+08:00",
+      "date": "2022-02-20",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-20_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-21T00:00:00+08:00",
+      "lastObservedAt": "2022-02-21T00:00:00+08:00",
+      "date": "2022-02-21",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-21_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-22T00:00:00+08:00",
+      "lastObservedAt": "2022-02-22T00:00:00+08:00",
+      "date": "2022-02-22",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-22_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-23T00:00:00+08:00",
+      "lastObservedAt": "2022-02-23T00:00:00+08:00",
+      "date": "2022-02-23",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-23_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-24T00:00:00+08:00",
+      "lastObservedAt": "2022-02-24T00:00:00+08:00",
+      "date": "2022-02-24",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-24_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-25T00:00:00+08:00",
+      "lastObservedAt": "2022-02-25T00:00:00+08:00",
+      "date": "2022-02-25",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-25_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-26T00:00:00+08:00",
+      "lastObservedAt": "2022-02-26T00:00:00+08:00",
+      "date": "2022-02-26",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-26_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-27T00:00:00+08:00",
+      "lastObservedAt": "2022-02-27T00:00:00+08:00",
+      "date": "2022-02-27",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-27_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-02-28T00:00:00+08:00",
+      "lastObservedAt": "2022-02-28T00:00:00+08:00",
+      "date": "2022-02-28",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-02-28_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-01T00:00:00+08:00",
+      "lastObservedAt": "2022-03-01T00:00:00+08:00",
+      "date": "2022-03-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-01_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-02T00:00:00+08:00",
+      "lastObservedAt": "2022-03-02T00:00:00+08:00",
+      "date": "2022-03-02",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-02_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-03T00:00:00+08:00",
+      "lastObservedAt": "2022-03-03T00:00:00+08:00",
+      "date": "2022-03-03",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-03_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-04T00:00:00+08:00",
+      "lastObservedAt": "2022-03-04T00:00:00+08:00",
+      "date": "2022-03-04",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-04_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-05T00:00:00+08:00",
+      "lastObservedAt": "2022-03-05T00:00:00+08:00",
+      "date": "2022-03-05",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-05_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-06T00:00:00+08:00",
+      "lastObservedAt": "2022-03-06T00:00:00+08:00",
+      "date": "2022-03-06",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-06_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-07T00:00:00+08:00",
+      "lastObservedAt": "2022-03-07T00:00:00+08:00",
+      "date": "2022-03-07",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-07_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-08T00:00:00+08:00",
+      "lastObservedAt": "2022-03-08T00:00:00+08:00",
+      "date": "2022-03-08",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-08_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-09T00:00:00+08:00",
+      "lastObservedAt": "2022-03-09T00:00:00+08:00",
+      "date": "2022-03-09",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-09_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-10T00:00:00+08:00",
+      "lastObservedAt": "2022-03-10T00:00:00+08:00",
+      "date": "2022-03-10",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-10_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-11T00:00:00+08:00",
+      "lastObservedAt": "2022-03-11T00:00:00+08:00",
+      "date": "2022-03-11",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-11_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-12T00:00:00+08:00",
+      "lastObservedAt": "2022-03-12T00:00:00+08:00",
+      "date": "2022-03-12",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-12_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-13T00:00:00+08:00",
+      "lastObservedAt": "2022-03-13T00:00:00+08:00",
+      "date": "2022-03-13",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-13_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-14T00:00:00+08:00",
+      "lastObservedAt": "2022-03-14T00:00:00+08:00",
+      "date": "2022-03-14",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-14_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-15T00:00:00+08:00",
+      "lastObservedAt": "2022-03-15T00:00:00+08:00",
+      "date": "2022-03-15",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-15_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-16T00:00:00+08:00",
+      "lastObservedAt": "2022-03-16T00:00:00+08:00",
+      "date": "2022-03-16",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-16_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-17T00:00:00+08:00",
+      "lastObservedAt": "2022-03-17T00:00:00+08:00",
+      "date": "2022-03-17",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-17_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-18T00:00:00+08:00",
+      "lastObservedAt": "2022-03-18T00:00:00+08:00",
+      "date": "2022-03-18",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-18_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-19T00:00:00+08:00",
+      "lastObservedAt": "2022-03-19T00:00:00+08:00",
+      "date": "2022-03-19",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-19_2021-12-21_2022-03-19_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2021winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2021 冬",
+        "referenceCover": "res/bilibanner/2021winter/bfs/archive/839190887e48acd3960a850723f0e82e877946f0.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2021-12-21",
+        "coverageEndDate": "2022-03-19",
+        "originalStartDate": "2021-12-21",
+        "originalEndDate": "2022-03-19",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

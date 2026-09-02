@@ -1,0 +1,3643 @@
+{
+  "version": 11.0,
+  "capturedAt": "2023-12-12T00:00:00+08:00",
+  "date": "2023-12-12",
+  "season": "winter",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "captureMethod": "mikufan039-reference",
+    "provider": "mikufan039-reference",
+    "referenceId": "2023winter",
+    "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "referenceTitle": "2023 冬（第一版）",
+    "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+    "referenceCategory": "seasonal",
+    "coverageStartDate": "2023-12-12",
+    "coverageEndDate": "2024-01-31",
+    "originalStartDate": "2023-12-12",
+    "originalEndDate": "2024-01-31",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "reference": {
+    "id": "2023winter",
+    "commit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "manifest": "reference-manifest.json",
+    "cover": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png"
+  },
+  "provenance": {
+    "primaryProvider": "mikufan039-reference",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+    "file": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+    "tag": "img",
+    "assetType": "image",
+    "sourceKind": "reference"
+  },
+  "layers": [
+    {
+      "scale": {
+        "initial": 1.2
+      },
+      "rotate": {},
+      "translate": {},
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 0,
+      "name": "19天空",
+      "index": 0,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+      "file": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+      "resources": [
+        {
+          "src": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+          "id": 0,
+          "file": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 1.2
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          2,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 1,
+      "name": "19天空",
+      "index": 1,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+      "file": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+      "resources": [
+        {
+          "src": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+          "id": 0,
+          "file": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 1,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "offset": [
+          12,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 2,
+      "name": "17极光",
+      "index": 2,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+      "file": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+      "resources": [
+        {
+          "src": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+          "id": 0,
+          "file": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 2,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          0,
+          10
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 3,
+      "name": "16背景山",
+      "index": 3,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+      "file": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+      "resources": [
+        {
+          "src": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+          "id": 0,
+          "file": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 3,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          0,
+          55
+        ],
+        "offset": [
+          100,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 4,
+      "name": "15冰面",
+      "index": 4,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+      "file": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+      "resources": [
+        {
+          "src": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+          "id": 0,
+          "file": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 4,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          0,
+          40
+        ],
+        "offset": [
+          20,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 5,
+      "name": "14中景",
+      "index": 5,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+      "file": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+      "resources": [
+        {
+          "src": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+          "id": 0,
+          "file": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 5,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -250,
+          -10
+        ],
+        "offset": [
+          60,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 6,
+      "name": "13树",
+      "index": 6,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+      "file": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+      "resources": [
+        {
+          "src": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+          "id": 0,
+          "file": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 6,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.5
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          600,
+          50
+        ],
+        "offset": [
+          -150,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 11,
+      "name": "08狐狸",
+      "index": 11,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+      "file": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+      "resources": [
+        {
+          "src": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+          "id": 0,
+          "file": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 7,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          130,
+          20
+        ],
+        "offset": [
+          70,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 7,
+      "name": "12中间房子+雪人",
+      "index": 7,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+      "file": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+      "resources": [
+        {
+          "src": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+          "id": 0,
+          "file": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 8,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -320,
+          20
+        ],
+        "offset": [
+          100,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 10,
+      "name": "10大鹅",
+      "index": 10,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+      "file": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+      "resources": [
+        {
+          "src": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+          "id": 0,
+          "file": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 9,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 0.9
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -200,
+          20
+        ],
+        "offset": [
+          120,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 9,
+      "name": "0933",
+      "index": 9,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+      "file": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+      "resources": [
+        {
+          "src": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+          "id": 0,
+          "file": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 10,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          75,
+          19
+        ],
+        "offset": [
+          150,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 8,
+      "name": "1122",
+      "index": 8,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+      "file": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+      "resources": [
+        {
+          "src": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+          "id": 0,
+          "file": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 11,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 1.2
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -600,
+          40
+        ],
+        "offset": [
+          200,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 12,
+      "name": "07左地面",
+      "index": 12,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+      "file": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+      "resources": [
+        {
+          "src": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+          "id": 0,
+          "file": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 12,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -600,
+          -5
+        ],
+        "offset": [
+          400,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 13,
+      "name": "04冰屋",
+      "index": 13,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+      "file": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+      "resources": [
+        {
+          "src": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+          "id": 0,
+          "file": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 13,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -850,
+          0
+        ],
+        "offset": [
+          500,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 14,
+      "name": "02左树",
+      "index": 14,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+      "file": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+      "resources": [
+        {
+          "src": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+          "id": 0,
+          "file": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 14,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          -1200,
+          55
+        ],
+        "offset": [
+          700,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 15,
+      "name": "01左前植物",
+      "index": 15,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "file": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "resources": [
+        {
+          "src": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+          "id": 0,
+          "file": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 15,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          450,
+          20
+        ],
+        "offset": [
+          500,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 17,
+      "name": "06右边雪人",
+      "index": 17,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+      "file": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+      "resources": [
+        {
+          "src": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+          "id": 0,
+          "file": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 16,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          350,
+          50
+        ],
+        "offset": [
+          600,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 18,
+      "name": "05萝卜兔子",
+      "index": 18,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+      "file": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+      "resources": [
+        {
+          "src": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+          "id": 0,
+          "file": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 17,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          700,
+          0
+        ],
+        "offset": [
+          800,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 16,
+      "name": "03右树",
+      "index": 16,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+      "file": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+      "resources": [
+        {
+          "src": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+          "id": 0,
+          "file": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 18,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {},
+      "rotate": {},
+      "translate": {
+        "initial": [
+          1200,
+          55
+        ],
+        "offset": [
+          850,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 20,
+      "name": "前树",
+      "index": 20,
+      "tag": "img",
+      "assetType": "image",
+      "src": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "file": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "resources": [
+        {
+          "src": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+          "id": 0,
+          "file": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+          "resourceIndex": 0,
+          "tag": "img",
+          "assetType": "image"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 19,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    },
+    {
+      "scale": {
+        "initial": 1.1
+      },
+      "rotate": {},
+      "translate": {
+        "offset": [
+          50,
+          0
+        ]
+      },
+      "blur": {},
+      "opacity": [
+        1,
+        1
+      ],
+      "id": 19,
+      "name": "下雪",
+      "index": 19,
+      "tag": "video",
+      "assetType": "video",
+      "src": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+      "file": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+      "resources": [
+        {
+          "src": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+          "id": 0,
+          "file": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+          "resourceIndex": 0,
+          "tag": "video",
+          "assetType": "video"
+        }
+      ],
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "position": {},
+      "zIndex": 20,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    }
+  ],
+  "auxiliaryAssets": [
+    {
+      "role": "reference",
+      "file": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+      "src": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "src": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+      "src": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+      "src": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+      "src": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+      "src": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+      "src": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+      "src": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+      "src": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+      "src": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+      "src": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+      "src": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+      "src": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+      "src": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+      "src": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+      "src": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "src": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+      "src": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+      "src": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+      "src": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+      "src": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+      "src": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+      "assetType": "other"
+    }
+  ],
+  "interaction": {
+    "model": "mikufan-reference-v1",
+    "effects": [
+      "reference"
+    ]
+  },
+  "referenceMode": "normal",
+  "preview_image": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+  "sourceFiles": {
+    "json": "reference-manifest.json"
+  },
+  "api": {
+    "id": null,
+    "name": "",
+    "isSplitLayer": true,
+    "extensions": {}
+  },
+  "extensions": {},
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2024-01-31T00:00:00+08:00",
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "type": [
+    "layered",
+    "video",
+    "interactive"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "mikufan039",
+      "referenceId": "2023winter"
+    },
+    "layerCount": 21,
+    "visibleMediaCount": 21,
+    "resourceUrls": [],
+    "media": [],
+    "signals": {
+      "isSplitLayer": true,
+      "hasInteraction": false,
+      "hasVideo": true
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+      "local_file": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+      "content_type": "",
+      "sha256": "f0bfbb9b6488a4e4c9927686bfa7185bd2b4168ca5ef262bea9e52b534ca3d95"
+    },
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+      "local_file": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+      "content_type": "",
+      "sha256": "549f129db7bf520d3f9cd0fa52062157d302013a2af6296de464944415e2a6bc"
+    },
+    {
+      "role": "layer",
+      "index": 1,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+      "local_file": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+      "content_type": "",
+      "sha256": "905e1990d2ad70967c03c96ef49de1eb57a15ea1ada02ffd5d98ed066f0bd80f"
+    },
+    {
+      "role": "layer",
+      "index": 2,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+      "local_file": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+      "content_type": "",
+      "sha256": "72c7bfd16e24293371a7df4f4a5eaed669706c3be0e2c7fc554d77f16b503e4d"
+    },
+    {
+      "role": "layer",
+      "index": 3,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+      "local_file": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+      "content_type": "",
+      "sha256": "4173a3098496c82e59543e2257592b3f3d6d77c9f5f68593195cfa9cfb67c82e"
+    },
+    {
+      "role": "layer",
+      "index": 4,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+      "local_file": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+      "content_type": "",
+      "sha256": "c2d8c961695c2cd23c6c4c289ec365acc81c737370aa26dcc78fb26e08d3930c"
+    },
+    {
+      "role": "layer",
+      "index": 5,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+      "local_file": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+      "content_type": "",
+      "sha256": "6acbe89b464b79706f1992f5ce2a260c1b7d14fbbb3873fa4cefd997a0b05057"
+    },
+    {
+      "role": "layer",
+      "index": 6,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+      "local_file": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+      "content_type": "",
+      "sha256": "061687f3ec386b40d4ba01d2e29ab8dd79c7375732f1569eb98d243222b31ded"
+    },
+    {
+      "role": "layer",
+      "index": 11,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+      "local_file": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+      "content_type": "",
+      "sha256": "f9e56cf23a738d617b31aa58ba9f1a0096a54e02a9fef0bbece7807effe3aecf"
+    },
+    {
+      "role": "layer",
+      "index": 7,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+      "local_file": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+      "content_type": "",
+      "sha256": "0792247268ba5be186c4c899f834b5cd63b3f0a473affa234b14dabefc8347b6"
+    },
+    {
+      "role": "layer",
+      "index": 10,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+      "local_file": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+      "content_type": "",
+      "sha256": "933e8e523e57fa7e4bf8e804a931c9bbed82367a7b2a2cbe18d6397dd4e16e79"
+    },
+    {
+      "role": "layer",
+      "index": 9,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+      "local_file": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+      "content_type": "",
+      "sha256": "b40bc7cd28a555a716c0b9420c4a4c2eaabf42049fd5dc3123652f4775f95395"
+    },
+    {
+      "role": "layer",
+      "index": 8,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+      "local_file": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+      "content_type": "",
+      "sha256": "9da9ba31f684302240875fed183670efc9837387b6d706f06120e4604f8f9a18"
+    },
+    {
+      "role": "layer",
+      "index": 12,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+      "local_file": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+      "content_type": "",
+      "sha256": "0a6214d712367dcb104dd75031506ccc7812f83d5e970e4a131774f29a5cb098"
+    },
+    {
+      "role": "layer",
+      "index": 13,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+      "local_file": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+      "content_type": "",
+      "sha256": "91c06e6d0b877f94b0c822a5da35ef7ba0423b483c4afcbef8fc19c6399edf4e"
+    },
+    {
+      "role": "layer",
+      "index": 14,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+      "local_file": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+      "content_type": "",
+      "sha256": "1074567605bc71319bef88df444f0d49eb614214021b14a937c6a34a8d4da2a0"
+    },
+    {
+      "role": "layer",
+      "index": 15,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "local_file": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "content_type": "",
+      "sha256": "4b1d49f5fc4e4717791d392ac583cf298ec5965deff2caadd7817903f2f863f7"
+    },
+    {
+      "role": "layer",
+      "index": 17,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+      "local_file": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+      "content_type": "",
+      "sha256": "36e6a729e17cf849e9fb5393868df26aace4676702fd329394a7c227ddc7d403"
+    },
+    {
+      "role": "layer",
+      "index": 18,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+      "local_file": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+      "content_type": "",
+      "sha256": "ab139b47b0ea96368f15ea90102bf3896d81aca292f1d18c93f6ba7b0ef4ba34"
+    },
+    {
+      "role": "layer",
+      "index": 16,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+      "local_file": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+      "content_type": "",
+      "sha256": "ade839c8de228ebba63ee9cf96cfea1abe3c2818d911306cc89740568b0c781c"
+    },
+    {
+      "role": "layer",
+      "index": 20,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "local_file": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "content_type": "",
+      "sha256": "4b1d49f5fc4e4717791d392ac583cf298ec5965deff2caadd7817903f2f863f7"
+    },
+    {
+      "role": "layer",
+      "index": 19,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+      "local_file": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+      "content_type": "",
+      "sha256": "f6f64fe5308007737ab859f64c7ecdc2a3bf553f5c4c7a63d55ab9059f85cd5c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+      "local_file": "bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+      "content_type": "",
+      "sha256": "f0bfbb9b6488a4e4c9927686bfa7185bd2b4168ca5ef262bea9e52b534ca3d95"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "local_file": "bfs/archive/c8fd97a40bf79f03e7b76cbc87236f612caef7b2.png",
+      "content_type": "",
+      "sha256": "bcaebad4f207236dc9e316491eadc26142ee5bbf4a4c7a396d35aeef38ef2006"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+      "local_file": "bfs/vc/09fa68c0c716596cebf6b1f81ed69a2a7a0a8c89.png",
+      "content_type": "",
+      "sha256": "b40bc7cd28a555a716c0b9420c4a4c2eaabf42049fd5dc3123652f4775f95395"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+      "local_file": "bfs/vc/0cea6143cb8fce3ac55c0e1888a889c906a976aa.png",
+      "content_type": "",
+      "sha256": "0a6214d712367dcb104dd75031506ccc7812f83d5e970e4a131774f29a5cb098"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+      "local_file": "bfs/vc/31ff321fe1c2b003ab5c42beebb07f6c1652f66e.png",
+      "content_type": "",
+      "sha256": "f9e56cf23a738d617b31aa58ba9f1a0096a54e02a9fef0bbece7807effe3aecf"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+      "local_file": "bfs/vc/3b226df45a1d6af2cdfeb20b9963849e13356f3d.webm",
+      "content_type": "",
+      "sha256": "f6f64fe5308007737ab859f64c7ecdc2a3bf553f5c4c7a63d55ab9059f85cd5c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+      "local_file": "bfs/vc/459fbeaaff1fbeced05ac36f1cb0c0c70df3ff01.png",
+      "content_type": "",
+      "sha256": "1074567605bc71319bef88df444f0d49eb614214021b14a937c6a34a8d4da2a0"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+      "local_file": "bfs/vc/4cbfd5b2c00e1abb157e9ca3e79380bfa40d2b26.png",
+      "content_type": "",
+      "sha256": "c2d8c961695c2cd23c6c4c289ec365acc81c737370aa26dcc78fb26e08d3930c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+      "local_file": "bfs/vc/5103762686dc9627619b028354c15ba2a72b0886.png",
+      "content_type": "",
+      "sha256": "933e8e523e57fa7e4bf8e804a931c9bbed82367a7b2a2cbe18d6397dd4e16e79"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+      "local_file": "bfs/vc/596c782fe6636269c65a50a9188fd4d16d12a83e.png",
+      "content_type": "",
+      "sha256": "4173a3098496c82e59543e2257592b3f3d6d77c9f5f68593195cfa9cfb67c82e"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+      "local_file": "bfs/vc/6b8bf544dec0088423136771f01696c68112a145.png",
+      "content_type": "",
+      "sha256": "6acbe89b464b79706f1992f5ce2a260c1b7d14fbbb3873fa4cefd997a0b05057"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+      "local_file": "bfs/vc/7c2d36bba37320de03c417ed7d86111f7b05347e.png",
+      "content_type": "",
+      "sha256": "36e6a729e17cf849e9fb5393868df26aace4676702fd329394a7c227ddc7d403"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+      "local_file": "bfs/vc/89d1c8fb55797a064a4d4aca51be2ebb8d86643a.png",
+      "content_type": "",
+      "sha256": "ade839c8de228ebba63ee9cf96cfea1abe3c2818d911306cc89740568b0c781c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+      "local_file": "bfs/vc/aa01bb2357ea84d7cc6cf3030769f2581a3ac98f.png",
+      "content_type": "",
+      "sha256": "ab139b47b0ea96368f15ea90102bf3896d81aca292f1d18c93f6ba7b0ef4ba34"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+      "local_file": "bfs/vc/b28b35a71a658e8bc449cd570337d7d9662d07d7.png",
+      "content_type": "",
+      "sha256": "72c7bfd16e24293371a7df4f4a5eaed669706c3be0e2c7fc554d77f16b503e4d"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+      "local_file": "bfs/vc/bad95b1085650b58108b3491c9c13e1ef4e6b41f.png",
+      "content_type": "",
+      "sha256": "905e1990d2ad70967c03c96ef49de1eb57a15ea1ada02ffd5d98ed066f0bd80f"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "local_file": "bfs/vc/bba2f3520bedef31ef33a816f11a9d22487b80aa.png",
+      "content_type": "",
+      "sha256": "4b1d49f5fc4e4717791d392ac583cf298ec5965deff2caadd7817903f2f863f7"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+      "local_file": "bfs/vc/c2914ea86a54203e59b9b9fb1b8ab3461a5976ed.png",
+      "content_type": "",
+      "sha256": "9da9ba31f684302240875fed183670efc9837387b6d706f06120e4604f8f9a18"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+      "local_file": "bfs/vc/c7cb3d67462676f79b3e702db60f4d4b038f3f28.png",
+      "content_type": "",
+      "sha256": "91c06e6d0b877f94b0c822a5da35ef7ba0423b483c4afcbef8fc19c6399edf4e"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+      "local_file": "bfs/vc/cb5b4ca963e3a1a6d3917182561844b24a05fc20.png",
+      "content_type": "",
+      "sha256": "549f129db7bf520d3f9cd0fa52062157d302013a2af6296de464944415e2a6bc"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+      "local_file": "bfs/vc/cd6dadba219330bf44d3f8bcb584aede77d37f79.png",
+      "content_type": "",
+      "sha256": "061687f3ec386b40d4ba01d2e29ab8dd79c7375732f1569eb98d243222b31ded"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+      "local_file": "bfs/vc/cfb54458ad3e2101d245f3434222e33453825f4e.png",
+      "content_type": "",
+      "sha256": "0792247268ba5be186c4c899f834b5cd63b3f0a473affa234b14dabefc8347b6"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "aba7684724ff1bec4cf00b9a",
+  "hashes": {
+    "resourceHash": "26a8ac80e1b113b1a2f4eb21",
+    "structureHash": "af8221ec69b3bda77a169f33",
+    "interactionHash": "44c90f0b085aa20fafaa8530",
+    "contentHash": "aba7684724ff1bec4cf00b9a",
+    "canonicalContentHash": "498798406b5d58a4ecabda6b",
+    "sourceFingerprint": "0af0b8d1832fd09c6548749d"
+  },
+  "canonicalContentHash": "498798406b5d58a4ecabda6b",
+  "sourceFingerprint": "0af0b8d1832fd09c6548749d",
+  "layoutHash": "9081d06edb1eefe6c46deecd",
+  "familyId": "2023-12-12_2023-12-12_2024-01-31_winter",
+  "observations": [
+    {
+      "capturedAt": "2023-12-12T00:00:00+08:00",
+      "lastObservedAt": "2023-12-12T00:00:00+08:00",
+      "date": "2023-12-12",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-12_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-13T00:00:00+08:00",
+      "lastObservedAt": "2023-12-13T00:00:00+08:00",
+      "date": "2023-12-13",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-13_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-14T00:00:00+08:00",
+      "lastObservedAt": "2023-12-14T00:00:00+08:00",
+      "date": "2023-12-14",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-14_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-15T00:00:00+08:00",
+      "lastObservedAt": "2023-12-15T00:00:00+08:00",
+      "date": "2023-12-15",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-15_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-16T00:00:00+08:00",
+      "lastObservedAt": "2023-12-16T00:00:00+08:00",
+      "date": "2023-12-16",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-16_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-17T00:00:00+08:00",
+      "lastObservedAt": "2023-12-17T00:00:00+08:00",
+      "date": "2023-12-17",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-17_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-18T00:00:00+08:00",
+      "lastObservedAt": "2023-12-18T00:00:00+08:00",
+      "date": "2023-12-18",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-18_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-19T00:00:00+08:00",
+      "lastObservedAt": "2023-12-19T00:00:00+08:00",
+      "date": "2023-12-19",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-19_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-20T00:00:00+08:00",
+      "lastObservedAt": "2023-12-20T00:00:00+08:00",
+      "date": "2023-12-20",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-20_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-21T00:00:00+08:00",
+      "lastObservedAt": "2023-12-21T00:00:00+08:00",
+      "date": "2023-12-21",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-21_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-22T00:00:00+08:00",
+      "lastObservedAt": "2023-12-22T00:00:00+08:00",
+      "date": "2023-12-22",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-22_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-23T00:00:00+08:00",
+      "lastObservedAt": "2023-12-23T00:00:00+08:00",
+      "date": "2023-12-23",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-23_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-24T00:00:00+08:00",
+      "lastObservedAt": "2023-12-24T00:00:00+08:00",
+      "date": "2023-12-24",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-24_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-25T00:00:00+08:00",
+      "lastObservedAt": "2023-12-25T00:00:00+08:00",
+      "date": "2023-12-25",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-25_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-26T00:00:00+08:00",
+      "lastObservedAt": "2023-12-26T00:00:00+08:00",
+      "date": "2023-12-26",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-26_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-27T00:00:00+08:00",
+      "lastObservedAt": "2023-12-27T00:00:00+08:00",
+      "date": "2023-12-27",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-27_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-28T00:00:00+08:00",
+      "lastObservedAt": "2023-12-28T00:00:00+08:00",
+      "date": "2023-12-28",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-28_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-29T00:00:00+08:00",
+      "lastObservedAt": "2023-12-29T00:00:00+08:00",
+      "date": "2023-12-29",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-29_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-30T00:00:00+08:00",
+      "lastObservedAt": "2023-12-30T00:00:00+08:00",
+      "date": "2023-12-30",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-30_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2023-12-31T00:00:00+08:00",
+      "lastObservedAt": "2023-12-31T00:00:00+08:00",
+      "date": "2023-12-31",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2023-12-31_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-01T00:00:00+08:00",
+      "lastObservedAt": "2024-01-01T00:00:00+08:00",
+      "date": "2024-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-01_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-02T00:00:00+08:00",
+      "lastObservedAt": "2024-01-02T00:00:00+08:00",
+      "date": "2024-01-02",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-02_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-03T00:00:00+08:00",
+      "lastObservedAt": "2024-01-03T00:00:00+08:00",
+      "date": "2024-01-03",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-03_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-04T00:00:00+08:00",
+      "lastObservedAt": "2024-01-04T00:00:00+08:00",
+      "date": "2024-01-04",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-04_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-05T00:00:00+08:00",
+      "lastObservedAt": "2024-01-05T00:00:00+08:00",
+      "date": "2024-01-05",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-05_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-06T00:00:00+08:00",
+      "lastObservedAt": "2024-01-06T00:00:00+08:00",
+      "date": "2024-01-06",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-06_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-07T00:00:00+08:00",
+      "lastObservedAt": "2024-01-07T00:00:00+08:00",
+      "date": "2024-01-07",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-07_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-08T00:00:00+08:00",
+      "lastObservedAt": "2024-01-08T00:00:00+08:00",
+      "date": "2024-01-08",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-08_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-09T00:00:00+08:00",
+      "lastObservedAt": "2024-01-09T00:00:00+08:00",
+      "date": "2024-01-09",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-09_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-10T00:00:00+08:00",
+      "lastObservedAt": "2024-01-10T00:00:00+08:00",
+      "date": "2024-01-10",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-10_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-11T00:00:00+08:00",
+      "lastObservedAt": "2024-01-11T00:00:00+08:00",
+      "date": "2024-01-11",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-11_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-12T00:00:00+08:00",
+      "lastObservedAt": "2024-01-12T00:00:00+08:00",
+      "date": "2024-01-12",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-12_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-13T00:00:00+08:00",
+      "lastObservedAt": "2024-01-13T00:00:00+08:00",
+      "date": "2024-01-13",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-13_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-14T00:00:00+08:00",
+      "lastObservedAt": "2024-01-14T00:00:00+08:00",
+      "date": "2024-01-14",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-14_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-15T00:00:00+08:00",
+      "lastObservedAt": "2024-01-15T00:00:00+08:00",
+      "date": "2024-01-15",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-15_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-16T00:00:00+08:00",
+      "lastObservedAt": "2024-01-16T00:00:00+08:00",
+      "date": "2024-01-16",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-16_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-17T00:00:00+08:00",
+      "lastObservedAt": "2024-01-17T00:00:00+08:00",
+      "date": "2024-01-17",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-17_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-18T00:00:00+08:00",
+      "lastObservedAt": "2024-01-18T00:00:00+08:00",
+      "date": "2024-01-18",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-18_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-19T00:00:00+08:00",
+      "lastObservedAt": "2024-01-19T00:00:00+08:00",
+      "date": "2024-01-19",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-19_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-20T00:00:00+08:00",
+      "lastObservedAt": "2024-01-20T00:00:00+08:00",
+      "date": "2024-01-20",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-20_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-21T00:00:00+08:00",
+      "lastObservedAt": "2024-01-21T00:00:00+08:00",
+      "date": "2024-01-21",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-21_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-22T00:00:00+08:00",
+      "lastObservedAt": "2024-01-22T00:00:00+08:00",
+      "date": "2024-01-22",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-22_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-23T00:00:00+08:00",
+      "lastObservedAt": "2024-01-23T00:00:00+08:00",
+      "date": "2024-01-23",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-23_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-24T00:00:00+08:00",
+      "lastObservedAt": "2024-01-24T00:00:00+08:00",
+      "date": "2024-01-24",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-24_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-25T00:00:00+08:00",
+      "lastObservedAt": "2024-01-25T00:00:00+08:00",
+      "date": "2024-01-25",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-25_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-26T00:00:00+08:00",
+      "lastObservedAt": "2024-01-26T00:00:00+08:00",
+      "date": "2024-01-26",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-26_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-27T00:00:00+08:00",
+      "lastObservedAt": "2024-01-27T00:00:00+08:00",
+      "date": "2024-01-27",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-27_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-28T00:00:00+08:00",
+      "lastObservedAt": "2024-01-28T00:00:00+08:00",
+      "date": "2024-01-28",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-28_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-29T00:00:00+08:00",
+      "lastObservedAt": "2024-01-29T00:00:00+08:00",
+      "date": "2024-01-29",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-29_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-30T00:00:00+08:00",
+      "lastObservedAt": "2024-01-30T00:00:00+08:00",
+      "date": "2024-01-30",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-30_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2024-01-31T00:00:00+08:00",
+      "lastObservedAt": "2024-01-31T00:00:00+08:00",
+      "date": "2024-01-31",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2024-01-31_2023-12-12_2024-01-31_winter",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2023winter",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2023 冬（第一版）",
+        "referenceCover": "res/bilibanner/2023winter/bfs/archive/721ecf6ed5ef7cf406e801216513f7f318353704.png",
+        "referenceCategory": "seasonal",
+        "coverageStartDate": "2023-12-12",
+        "coverageEndDate": "2024-01-31",
+        "originalStartDate": "2023-12-12",
+        "originalEndDate": "2024-01-31",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
