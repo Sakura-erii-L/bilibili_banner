@@ -234,7 +234,9 @@ class TimedVariantIndexTests(unittest.TestCase):
 
     def test_rebuild_index_groups_time_variants(self) -> None:
         family_id = "2026-08-31_layout_family"
-        for index, (content_hash, slot) in enumerate((("hash-day", 360), ("hash-night", 1080))):
+        for index, (content_hash, slots) in enumerate(
+            (("hash-day", list(range(4))), ("hash-night", list(range(4, 8))))
+        ):
             folder = capture.ARCHIVE_DIR / f"variant-{index}"
             folder.mkdir()
             manifest = {
@@ -247,7 +249,7 @@ class TimedVariantIndexTests(unittest.TestCase):
                 "layers": [{"index": 0}],
                 "contentHash": content_hash,
                 "familyId": family_id,
-                "observedSlots": [slot],
+                "slots": slots,
                 "timeZone": "Asia/Shanghai",
             }
             (folder / "banner.json").write_text(
@@ -262,7 +264,7 @@ class TimedVariantIndexTests(unittest.TestCase):
         self.assertEqual(index["records"][0]["variantCount"], 2)
         self.assertEqual(
             [variant["slots"] for variant in index["records"][0]["variants"]],
-            [[2], [6]],
+            [[0, 1, 2, 3], [4, 5, 6, 7]],
         )
         self.assertNotIn("observedSlots", index["records"][0]["variants"][0])
         self.assertFalse(capture.rebuild_index())
@@ -340,7 +342,7 @@ class TimedVariantIndexTests(unittest.TestCase):
             "contentHash": "same-physical-asset",
             "layoutHash": "same-layout",
             "familyId": "family-2020-01-01",
-            "observedSlots": [480],
+            "slots": list(range(capture.SLOT_COUNT)),
             "timeZone": "Asia/Shanghai",
         }
         (folder / "banner.json").write_text(json.dumps(archived), encoding="utf-8")
@@ -350,7 +352,7 @@ class TimedVariantIndexTests(unittest.TestCase):
             "capturedAt": "2020-01-02T20:00:00+08:00",
             "lastObservedAt": "2020-01-02T20:00:00+08:00",
             "familyId": "family-2020-01-02",
-            "observedSlots": [1200],
+            "slots": list(range(capture.SLOT_COUNT)),
         }
         moment = capture.dt.datetime.fromisoformat("2020-01-02T20:00:00+08:00")
 
@@ -392,7 +394,7 @@ class TimedVariantIndexTests(unittest.TestCase):
             "interaction": {"model": "none"},
             "contentHash": "same-nonconsecutive-asset",
             "familyId": "family-2020-01-01",
-            "slots": [2],
+            "slots": list(range(capture.SLOT_COUNT)),
             "timeZone": "Asia/Shanghai",
             "observations": [
                 {
@@ -400,14 +402,14 @@ class TimedVariantIndexTests(unittest.TestCase):
                     "capturedAt": "2020-01-01T08:00:00+08:00",
                     "lastObservedAt": "2020-01-01T08:00:00+08:00",
                     "familyId": "family-2020-01-01",
-                    "slots": [2],
+                    "slots": list(range(capture.SLOT_COUNT)),
                 },
                 {
                     "date": "2020-01-03",
                     "capturedAt": "2020-01-03T08:00:00+08:00",
                     "lastObservedAt": "2020-01-03T08:00:00+08:00",
                     "familyId": "family-2020-01-03",
-                    "slots": [2],
+                    "slots": list(range(capture.SLOT_COUNT)),
                 },
             ],
         }
@@ -417,16 +419,57 @@ class TimedVariantIndexTests(unittest.TestCase):
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
         self.assertEqual(len(index["records"]), 2)
 
+    def test_incomplete_day_is_omitted_and_same_banner_bridges_it(self) -> None:
+        for index, (date, slots) in enumerate(
+            (
+                ("2020-01-01", list(range(capture.SLOT_COUNT))),
+                ("2020-01-02", list(range(capture.SLOT_COUNT - 1))),
+                ("2020-01-03", list(range(capture.SLOT_COUNT))),
+            )
+        ):
+            folder = capture.ARCHIVE_DIR / f"bridge-{index}"
+            folder.mkdir()
+            manifest = {
+                "version": 11.0,
+                "date": date,
+                "season": "winter",
+                "capturedAt": f"{date}T08:00:00+08:00",
+                "lastObservedAt": f"{date}T08:00:00+08:00",
+                "mode": "static",
+                "static": {"file": "static.webp"},
+                "layers": [],
+                "interaction": {"model": "none"},
+                "contentHash": "same-bridge-asset",
+                "familyId": f"family-{date}",
+                "slots": slots,
+                "timeZone": "Asia/Shanghai",
+            }
+            (folder / "banner.json").write_text(
+                json.dumps(manifest),
+                encoding="utf-8",
+            )
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 1)
+        self.assertEqual(index["records"][0]["dateStart"], "2020-01-01")
+        self.assertEqual(index["records"][0]["dateEnd"], "2020-01-03")
+        self.assertEqual(index["records"][0]["variants"][0]["slots"], list(range(8)))
+
     def test_same_day_layout_merges_but_different_content_stays_as_variants(self) -> None:
-        first = self.temp_path_manifest("first", "layout-a", "content-a", 0)
-        second = self.temp_path_manifest("second", "layout-a", "content-b", 1)
+        first = self.temp_path_manifest(
+            "first", "layout-a", "content-a", list(range(4))
+        )
+        second = self.temp_path_manifest(
+            "second", "layout-a", "content-b", list(range(4, 8))
+        )
         capture.rebuild_index()
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
         self.assertEqual(len(index["records"]), 1)
         self.assertEqual(index["records"][0]["variantCount"], 2)
         self.assertEqual(
             sorted(variant["slots"] for variant in index["records"][0]["variants"]),
-            [[0], [1]],
+            [[0, 1, 2, 3], [4, 5, 6, 7]],
         )
 
     def temp_path_manifest(
@@ -434,7 +477,7 @@ class TimedVariantIndexTests(unittest.TestCase):
         name: str,
         layout_hash: str,
         content_hash: str,
-        slot: int,
+        slot: int | list[int],
     ) -> Path:
         folder = capture.ARCHIVE_DIR / name
         folder.mkdir()
@@ -442,14 +485,14 @@ class TimedVariantIndexTests(unittest.TestCase):
             "version": 11.0,
             "date": "2026-08-31",
             "season": "summer",
-            "capturedAt": f"2026-08-31T{slot * 3:02d}:00:00+08:00",
-            "lastObservedAt": f"2026-08-31T{slot * 3:02d}:00:00+08:00",
+            "capturedAt": f"2026-08-31T{(slot[0] if isinstance(slot, list) else slot) * 3:02d}:00:00+08:00",
+            "lastObservedAt": f"2026-08-31T{(slot[0] if isinstance(slot, list) else slot) * 3:02d}:00:00+08:00",
             "mode": "split",
             "layers": [{"index": 0}],
             "contentHash": content_hash,
             "layoutHash": layout_hash,
             "familyId": "2026-08-31_layout-a",
-            "slots": [slot],
+            "slots": slot if isinstance(slot, list) else [slot],
             "timeZone": "Asia/Shanghai",
         }
         (folder / "banner.json").write_text(json.dumps(manifest), encoding="utf-8")

@@ -2528,7 +2528,12 @@ def _refresh_index_record_summary(record: dict[str, Any]) -> None:
     )
 
 
-def _merge_consecutive_index_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _merge_consecutive_index_records(
+    records: list[dict[str, Any]],
+    *,
+    omitted_dates: set[str] | None = None,
+) -> list[dict[str, Any]]:
+    omitted_dates = omitted_dates or set()
     ordered = sorted(
         records,
         key=lambda item: (
@@ -2556,7 +2561,18 @@ def _merge_consecutive_index_records(records: list[dict[str, Any]]) -> list[dict
                 )
             except ValueError:
                 previous_end = None
-            if previous_end is not None and start <= previous_end + dt.timedelta(days=1):
+            can_merge_dates = False
+            if previous_end is not None:
+                can_merge_dates = start <= previous_end + dt.timedelta(days=1)
+                if not can_merge_dates:
+                    cursor = previous_end + dt.timedelta(days=1)
+                    can_merge_dates = True
+                    while cursor < start:
+                        if cursor.isoformat() not in omitted_dates:
+                            can_merge_dates = False
+                            break
+                        cursor += dt.timedelta(days=1)
+            if can_merge_dates:
                 previous["dateEnd"] = max(previous_end, end).isoformat()
                 previous["variants"] = _merge_index_variants(
                     previous.get("variants") or [],
@@ -2938,7 +2954,31 @@ def rebuild_index() -> bool:
             }
         )
 
-    records = _merge_consecutive_index_records(records)
+    complete_slots = set(range(SLOT_COUNT))
+    slots_by_date: dict[str, set[int]] = {}
+    for record in records:
+        date_text = str(record.get("dateStart") or record.get("date") or "")
+        slots_by_date.setdefault(date_text, set()).update(
+            slot
+            for variant in record.get("variants") or []
+            if isinstance(variant, dict)
+            for slot in normalize_slots(variant.get("slots"))
+        )
+    omitted_dates = {
+        date_text
+        for date_text, slots in slots_by_date.items()
+        if date_text and slots != complete_slots
+    }
+    records = [
+        record
+        for record in records
+        if str(record.get("dateStart") or record.get("date") or "")
+        not in omitted_dates
+    ]
+    records = _merge_consecutive_index_records(
+        records,
+        omitted_dates=omitted_dates,
+    )
     records.sort(
         key=lambda item: (
             str(item.get("dateEnd") or item.get("date") or ""),
