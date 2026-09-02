@@ -8,6 +8,7 @@ import shutil
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 try:
@@ -21,6 +22,11 @@ KNOWN_GAME_EXTENSIONS = {
     "springGame2022",
     "summer2022",
     "autumn2022",
+}
+SHARED_REFERENCE_DIRECTORIES = {
+    # The winter Banner reuses the video stored by the fixed reference commit
+    # under the spring game directory.
+    "2022winter": ("2022spring",),
 }
 DATE_PATTERN = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 
@@ -79,12 +85,29 @@ def _copy_reference_tree(source: Path, target: Path) -> list[str]:
     return sorted(copied)
 
 
-def _local_reference_file(root: Path, source: str) -> str | None:
+def _source_path_candidates(source: str) -> list[str]:
     value = str(source or "")
-    if not value or value.startswith(("http://", "https://", "//")):
-        return None
-    path = root / value.lstrip("/")
-    return value.lstrip("/") if path.is_file() else None
+    if not value:
+        return []
+    candidates = [value.lstrip("/")]
+    parsed = urlsplit(value)
+    if parsed.scheme or parsed.netloc:
+        path = parsed.path.lstrip("/")
+        if path and path not in candidates:
+            candidates.append(path)
+    return candidates
+
+
+def _local_reference_file(
+    root: Path,
+    source: str,
+    fallback_roots: Iterable[Path] = (),
+) -> str | None:
+    for candidate in _source_path_candidates(source):
+        for base in (root, *fallback_roots):
+            if (base / candidate).is_file():
+                return candidate
+    return None
 
 
 def _entry_reference_file(root: Path, reference_id: str, source: str) -> str | None:
@@ -99,18 +122,22 @@ def _entry_reference_file(root: Path, reference_id: str, source: str) -> str | N
     return None
 
 
-def _rewrite_src_fields(node: Any, root: Path) -> None:
+def _rewrite_src_fields(
+    node: Any,
+    root: Path,
+    fallback_roots: Iterable[Path] = (),
+) -> None:
     if isinstance(node, dict):
         for key, value in list(node.items()):
             if key == "src" and isinstance(value, str):
-                local = _local_reference_file(root, value)
+                local = _local_reference_file(root, value, fallback_roots)
                 if local:
                     node[key] = local
             else:
-                _rewrite_src_fields(value, root)
+                _rewrite_src_fields(value, root, fallback_roots)
     elif isinstance(node, list):
         for value in node:
-            _rewrite_src_fields(value, root)
+            _rewrite_src_fields(value, root, fallback_roots)
 
 
 def _parse_reference_split_layer(value: Any) -> dict[str, Any]:
@@ -166,6 +193,7 @@ def _season_for_date(date: dt.date) -> str:
 def _reference_layers(
     split_layer: dict[str, Any],
     root: Path,
+    fallback_roots: Iterable[Path] = (),
 ) -> tuple[list[dict[str, Any]], list[str]]:
     layers: list[dict[str, Any]] = []
     missing: list[str] = []
@@ -177,7 +205,7 @@ def _reference_layers(
             if not isinstance(resource, dict):
                 continue
             source = str(resource.get("src") or "")
-            local = _local_reference_file(root, source)
+            local = _local_reference_file(root, source, fallback_roots)
             if not local:
                 missing.append(f"layer_{index:03d}_resource_{resource_index:03d}: {source}")
                 continue
@@ -226,6 +254,18 @@ def _reference_layers(
             }
         )
     return layers, missing
+
+
+def _iter_src_values(node: Any) -> Iterable[str]:
+    if isinstance(node, dict):
+        for key, value in node.items():
+            if key == "src" and isinstance(value, str):
+                yield value
+            else:
+                yield from _iter_src_values(value)
+    elif isinstance(node, list):
+        for value in node:
+            yield from _iter_src_values(value)
 
 
 class ReferenceRepository:
@@ -325,9 +365,29 @@ class ReferenceRepository:
         if not isinstance(data, dict):
             raise ValueError(f"reference manifest has no data: {manifest_path}")
         split_layer = _parse_reference_split_layer(data.get("split_layer"))
-        _rewrite_src_fields(split_layer, entry_root)
+        shared_roots = tuple(
+            self.banner_root / directory
+            for directory in SHARED_REFERENCE_DIRECTORIES.get(
+                entry.reference_id,
+                (),
+            )
+        )
+        _rewrite_src_fields(split_layer, entry_root, shared_roots)
         extensions = copy.deepcopy(split_layer.get("extensions") or {})
-        layers, missing = _reference_layers(split_layer, entry_root)
+        layers, missing = _reference_layers(
+            split_layer,
+            entry_root,
+            shared_roots,
+        )
+        shared_files: list[tuple[Path, str]] = []
+        for source in _iter_src_values(split_layer):
+            if _local_reference_file(entry_root, source):
+                continue
+            for shared_root in shared_roots:
+                local = _local_reference_file(shared_root, source)
+                if local:
+                    shared_files.append((shared_root / local, local))
+                    break
         pic = str(data.get("pic") or "")
         litpic = str(data.get("litpic") or "")
         static_source = pic or litpic
@@ -346,7 +406,16 @@ class ReferenceRepository:
         if not layers and static_file:
             mode = "static"
         source_manifest = copy.deepcopy(payload)
-        _rewrite_src_fields(source_manifest, entry_root)
+        source_data = source_manifest.get("data")
+        if isinstance(source_data, dict):
+            source_data["split_layer"] = json.dumps(
+                split_layer,
+                ensure_ascii=False,
+                separators=(",", ":"),
+            )
+            if entry.reference_id == "2022winter" and layers:
+                source_data["is_split_layer"] = 1
+        _rewrite_src_fields(source_manifest, entry_root, shared_roots)
         return {
             "sourcePayload": source_manifest,
             "data": data,
@@ -362,6 +431,7 @@ class ReferenceRepository:
             "model": model,
             "referenceMode": "interactive" if is_game else "normal",
             "slots": _time_slots(extensions),
+            "sharedFiles": shared_files,
         }, entry_root
 
     def build_manifest(
@@ -372,6 +442,13 @@ class ReferenceRepository:
     ) -> dict[str, Any]:
         payload, entry_root = self._manifest_payload(entry)
         copied_files = _copy_reference_tree(entry_root, temp)
+        for source, relative in payload["sharedFiles"]:
+            destination = temp / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, destination)
+            if relative not in copied_files:
+                copied_files.append(relative)
+        copied_files.sort()
         source_file = temp / "reference-manifest.json"
         source_file.write_text(
             json.dumps(payload["sourcePayload"], ensure_ascii=False, indent=2),

@@ -197,6 +197,89 @@ class MikuFan039ReferenceTests(unittest.TestCase):
             finally:
                 capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR = original
 
+    def test_winter_shared_video_is_copied_and_enabled_as_split_layer(self) -> None:
+        root = self.make_repository()
+        banner_root = root / "res" / "bilibanner"
+        winter_root = banner_root / "2022winter"
+        winter_root.mkdir(parents=True)
+        (winter_root / "bfs").mkdir(parents=True)
+        (winter_root / "bfs" / "winter.png").write_bytes(b"winter")
+        shared_video = (
+            banner_root
+            / "2022spring"
+            / "blackboard"
+            / "static"
+            / "20220314"
+            / "00979505aec5edd6e5c2f8c096fa0f62"
+            / "ZlmaPe9AZv.mp4"
+        )
+        shared_video.parent.mkdir(parents=True)
+        shared_video.write_bytes(b"video")
+        split_layer = {
+            "version": "1",
+            "layers": [{
+                "id": 0,
+                "resources": [{
+                    "src": (
+                        "https://activity.hdslb.com/blackboard/static/"
+                        "20220314/00979505aec5edd6e5c2f8c096fa0f62/"
+                        "ZlmaPe9AZv.mp4"
+                    ),
+                    "id": 0,
+                }],
+            }],
+        }
+        (winter_root / "manifest.json").write_text(
+            json.dumps({
+                "code": 0,
+                "data": {
+                    "pic": "bfs/winter.png",
+                    "litpic": "bfs/winter.png",
+                    "is_split_layer": 0,
+                    "split_layer": json.dumps(split_layer),
+                },
+            }),
+            encoding="utf-8",
+        )
+        seasonal_path = banner_root / "gallery" / "seasonal.json"
+        seasonal = json.loads(seasonal_path.read_text(encoding="utf-8"))
+        seasonal.append({
+            "id": "2022winter",
+            "title": "2022 冬",
+            "startDate": "2022-12-22",
+            "endDate": "2023-03-19",
+            "group": "winter",
+        })
+        seasonal_path.write_text(
+            json.dumps(seasonal, ensure_ascii=False),
+            encoding="utf-8",
+        )
+
+        repository = ReferenceRepository(root, commit=DEFAULT_COMMIT)
+        entry = next(item for item in repository.entries()
+                     if item.reference_id == "2022winter")
+        with tempfile.TemporaryDirectory() as target:
+            manifest = repository.build_manifest(
+                entry,
+                dt.date(2023, 1, 1),
+                Path(target),
+            )
+            self.assertEqual(manifest["mode"], "split")
+            self.assertEqual(manifest["layers"][0]["assetType"], "video")
+            copied = Path(target) / "blackboard" / "static" / "20220314" / "00979505aec5edd6e5c2f8c096fa0f62" / "ZlmaPe9AZv.mp4"
+            self.assertTrue(copied.is_file())
+            source_manifest = json.loads(
+                (Path(target) / "reference-manifest.json").read_text(
+                    encoding="utf-8",
+                )
+            )
+            self.assertEqual(source_manifest["data"]["is_split_layer"], 1)
+            source_split = json.loads(source_manifest["data"]["split_layer"])
+            self.assertEqual(
+                source_split["layers"][0]["resources"][0]["src"],
+                "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
