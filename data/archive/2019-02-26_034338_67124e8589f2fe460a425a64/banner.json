@@ -219,7 +219,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-03-10T22:47:49+08:00",
+  "lastObservedAt": "2019-03-13T12:31:00+08:00",
   "type": [
     "static"
   ],
@@ -878,6 +878,45 @@
         "waybackTimestamp": "20190310144749",
         "homepageWaybackTimestamp": "20190310144749",
         "waybackReplay": "https://web.archive.org/web/20190310144749id_/https://www.bilibili.com/",
+        "availabilityUrl": "",
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190303160000&to=20190403155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.4dde3b234789f73d4da93dae9653b8ddd94aabc6.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-03-13T12:31:00+08:00",
+      "lastObservedAt": "2019-03-13T12:31:00+08:00",
+      "date": "2019-03-13",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "familyId": "2019-03-13_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190313043100id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190313043100",
+        "homepageWaybackTimestamp": "20190313043100",
+        "waybackReplay": "https://web.archive.org/web/20190313043100id_/https://www.bilibili.com/",
         "availabilityUrl": "",
         "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190303160000&to=20190403155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
         "discoveredResources": [
