@@ -653,6 +653,34 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
     html,body,#bili-banner{margin:0;width:100%;height:100%;min-width:0 !important;overflow:hidden;background:transparent}
     #bili-banner,.bili-banner,.summer-banner,.autumn-banner{box-sizing:border-box;width:100% !important;max-width:100% !important;min-width:0 !important}
   </style></head><body><div id="bili-banner"></div>
+  <script>
+    (() => {
+      const isBannerImage = target => target instanceof HTMLImageElement;
+      window.addEventListener("error", event => {
+        const image = event.target;
+        if (!isBannerImage(image)) return;
+        image.style.visibility = "hidden";
+        if (image.dataset.bannerRetry === "1") {
+          image.style.display = "none";
+          image.style.visibility = "";
+          return;
+        }
+        image.dataset.bannerRetry = "1";
+        const source = image.currentSrc || image.src;
+        if (!source) {
+          image.style.display = "none";
+          image.style.visibility = "";
+          return;
+        }
+        image.removeAttribute("src");
+        window.setTimeout(() => { image.src = source; }, 0);
+      }, true);
+      window.addEventListener("load", event => {
+        const image = event.target;
+        if (isBannerImage(image)) image.style.visibility = "";
+      }, true);
+    })();
+  </script>
   <script src="${bundleUrl}"></script>
   <script>const originalDispatchEvent=EventTarget.prototype.dispatchEvent;EventTarget.prototype.dispatchEvent=function(event){if(event?.type==="banner-expand")window.parent.postMessage({type:"bilibili-banner-expand",expanded:Boolean(event.detail)},"*");return originalDispatchEvent.call(this,event)};BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
   </body></html>`;
