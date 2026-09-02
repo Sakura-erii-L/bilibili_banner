@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-02T18:05:08+08:00",
+  "generatedAt": "2026-09-02T19:16:43+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -1725,6 +1725,54 @@
           ],
           "manifest": "./data/archive/2020-09-22_000000_545bbfa9fd340a6e80109f61/banner.json",
           "referenceMode": "normal"
+        }
+      ]
+    },
+    {
+      "id": "2019-01-04_3f4544a6cbd4",
+      "date": "2019-01-04",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "01",
+      "yearMonth": "2019-01",
+      "dateStart": "2019-01-04",
+      "dateEnd": "2019-01-04",
+      "capturedAt": "2019-01-04T02:48:52+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "auxiliary_000: https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "bd4433b0fdf4d2de41fd1675",
+      "manifest": "./data/archive/2019-01-04_024852_bd4433b0fdf4d2de41fd1675/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "bd4433b0fdf4d2de41fd1675",
+          "canonicalContentHash": "990dc372396dc267b51699b0",
+          "sourceFingerprint": "cae10cc40800807a123dc34d",
+          "capturedAt": "2019-01-04T02:48:52+08:00",
+          "lastObservedAt": "2019-01-04T02:48:52+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            1,
+            2,
+            3
+          ],
+          "manifest": "./data/archive/2019-01-04_024852_bd4433b0fdf4d2de41fd1675/banner.json"
         }
       ]
     },
