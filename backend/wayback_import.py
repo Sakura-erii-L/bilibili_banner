@@ -2708,6 +2708,26 @@ def import_reference_repository(
     return covered_dates
 
 
+def checkpoint_reference_import(
+    covered_dates: set[dt.date],
+    checkpoint_script: str | None,
+) -> bool:
+    if not covered_dates:
+        return False
+    changed = core.rebuild_index()
+    if changed:
+        print("Rebuilt index after reference repository import.")
+        if checkpoint_script:
+            run_checkpoint(
+                checkpoint_script,
+                processed=0,
+                succeeded=0,
+                changed=1,
+                final=False,
+            )
+    return changed
+
+
 def capture_snapshot(
     snapshot: dict[str, str],
     *,
@@ -2889,6 +2909,10 @@ def main() -> None:
             subprocess.SubprocessError,
         ) as exc:
             parser.error(str(exc))
+    checkpoint_reference_import(
+        reference_covered_dates,
+        args.checkpoint_script,
+    )
 
     match_cache = load_wayback_match_cache() if args.cadence == "3h" else None
     if match_cache is not None:
