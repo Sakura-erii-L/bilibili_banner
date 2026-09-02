@@ -1,0 +1,4385 @@
+{
+  "version": 11.0,
+  "capturedAt": "2022-03-20T00:00:00+08:00",
+  "date": "2022-03-20",
+  "season": "spring",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "captureMethod": "mikufan039-reference",
+    "provider": "mikufan039-reference",
+    "referenceId": "2022springAdv",
+    "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "referenceTitle": "2022 春（游戏）",
+    "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+    "referenceCategory": "game",
+    "coverageStartDate": "2022-03-20",
+    "coverageEndDate": "2022-06-20",
+    "originalStartDate": "2022-03-20",
+    "originalEndDate": "2022-06-20",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "reference": {
+    "id": "2022springAdv",
+    "commit": "45b760bfa52166727123d775925dea887ac7d71a",
+    "manifest": "reference-manifest.json",
+    "cover": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png"
+  },
+  "provenance": {
+    "primaryProvider": "mikufan039-reference",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "static",
+  "static": {
+    "src": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+    "file": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+    "tag": "img",
+    "assetType": "image",
+    "sourceKind": "reference"
+  },
+  "layers": [],
+  "auxiliaryAssets": [
+    {
+      "role": "reference",
+      "file": "XRG02U9wAU.js",
+      "src": "XRG02U9wAU.js",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/1Pf3J23kur.png",
+      "src": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/1Pf3J23kur.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/AkmiDNoNFy.png",
+      "src": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/AkmiDNoNFy.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/LuWoq27X7W.png",
+      "src": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/LuWoq27X7W.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/rvRI0G1BmS.png",
+      "src": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/rvRI0G1BmS.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/IA21PIMRvD.png",
+      "src": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/IA21PIMRvD.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/V90uva9Va2.png",
+      "src": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/V90uva9Va2.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/w66W8qKtsi.png",
+      "src": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/w66W8qKtsi.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/we0s57YZSN.png",
+      "src": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/we0s57YZSN.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/1r6uJBboeZ.png",
+      "src": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/1r6uJBboeZ.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/56CwjhVTVg.png",
+      "src": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/56CwjhVTVg.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/XSPA4yDs52.png",
+      "src": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/XSPA4yDs52.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/ahwB6bVcGw.png",
+      "src": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/ahwB6bVcGw.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/A29O65miDc.png",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/A29O65miDc.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/KFDYJVlhgT.png",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/KFDYJVlhgT.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/h90zWlIavR.png",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/h90zWlIavR.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/hffVhQpxwA.png",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/hffVhQpxwA.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/mjTIdrD1yz.png",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/mjTIdrD1yz.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/oUz5oLVDl0.png",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/oUz5oLVDl0.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220304/00979505aec5edd6e5c2f8c096fa0f62/SNPes6slpr.png",
+      "src": "bfs/activity-plat/static/20220304/00979505aec5edd6e5c2f8c096fa0f62/SNPes6slpr.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/hXJaoTXC37.png",
+      "src": "bfs/activity-plat/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/hXJaoTXC37.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/hllMZ39mFV.png",
+      "src": "bfs/activity-plat/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/hllMZ39mFV.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/3xqAauWyWp.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/3xqAauWyWp.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/IjRnuJVAMU.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/IjRnuJVAMU.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/KWGhLKKHic.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/KWGhLKKHic.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/L64vnF6vEL.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/L64vnF6vEL.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/NtXwfLTm8r.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/NtXwfLTm8r.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/ODZkSkGrlS.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/ODZkSkGrlS.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/OfPa9ZyIUb.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/OfPa9ZyIUb.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/QpEVse7WKu.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/QpEVse7WKu.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/ZWZ5JWBR7W.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/ZWZ5JWBR7W.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/bZ4QGDKRXu.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/bZ4QGDKRXu.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/fqC498nGEQ.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/fqC498nGEQ.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/pDRaxEfL5S.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/pDRaxEfL5S.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/sKIvMZvfqJ.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/sKIvMZvfqJ.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/vBuQkSZx0C.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/vBuQkSZx0C.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/x0KtnfZvTq.png",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/x0KtnfZvTq.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220315/00979505aec5edd6e5c2f8c096fa0f62/g0JJ6atToR.woff2",
+      "src": "bfs/activity-plat/static/20220315/00979505aec5edd6e5c2f8c096fa0f62/g0JJ6atToR.woff2",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/ZP51pxsKWj.png",
+      "src": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/ZP51pxsKWj.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/lxv3u3Y9ev.png",
+      "src": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/lxv3u3Y9ev.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/oMP50YCuMA.png",
+      "src": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/oMP50YCuMA.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220317/00979505aec5edd6e5c2f8c096fa0f62/e0y0URDBAU.png",
+      "src": "bfs/activity-plat/static/20220317/00979505aec5edd6e5c2f8c096fa0f62/e0y0URDBAU.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/H6ysLDyYzc.png",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/H6ysLDyYzc.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/SFB0E2Z4gz.png",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/SFB0E2Z4gz.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/mMUeW2fhs3.png",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/mMUeW2fhs3.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/n2Pw2iT2r1.png",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/n2Pw2iT2r1.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/pYaSYzhqWz.png",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/pYaSYzhqWz.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+      "src": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png@3840w_360h_1c_90q.webp",
+      "src": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png@3840w_360h_1c_90q.webp",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "bfs/archive/ca375eb31fa90b8e23b88ed3433c2f60de1c2e6e.png",
+      "src": "bfs/archive/ca375eb31fa90b8e23b88ed3433c2f60de1c2e6e.png",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/ECCbC7xZCf.json",
+      "src": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/ECCbC7xZCf.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/KKLdKJ60Tm.json",
+      "src": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/KKLdKJ60Tm.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/jHhlzBK8lT.json",
+      "src": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/jHhlzBK8lT.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/vQOKaRcQiQ.json",
+      "src": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/vQOKaRcQiQ.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/2pqUgkNUXm.json",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/2pqUgkNUXm.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/IHWo3trIPV.json",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/IHWo3trIPV.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/RIfIuimWkU.json",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/RIfIuimWkU.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/ekSXHfFK0Q.json",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/ekSXHfFK0Q.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/jNCwVQWxuT.json",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/jNCwVQWxuT.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/ro0B1H3Ov8.json",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/ro0B1H3Ov8.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220304/00979505aec5edd6e5c2f8c096fa0f62/bZ70VoHTmH.json",
+      "src": "blackboard/static/20220304/00979505aec5edd6e5c2f8c096fa0f62/bZ70VoHTmH.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/mhFnJ3WgCI.json",
+      "src": "blackboard/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/mhFnJ3WgCI.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220310/00979505aec5edd6e5c2f8c096fa0f62/cKILLYSZ6K.ttf",
+      "src": "blackboard/static/20220310/00979505aec5edd6e5c2f8c096fa0f62/cKILLYSZ6K.ttf",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220310/00979505aec5edd6e5c2f8c096fa0f62/eg3s0Wl9p3.ttf",
+      "src": "blackboard/static/20220310/00979505aec5edd6e5c2f8c096fa0f62/eg3s0Wl9p3.ttf",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/CmamSTNOdq.mp4",
+      "src": "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/CmamSTNOdq.mp4",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+      "src": "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220315/00979505aec5edd6e5c2f8c096fa0f62/kPbkWcX74M.mp4",
+      "src": "blackboard/static/20220315/00979505aec5edd6e5c2f8c096fa0f62/kPbkWcX74M.mp4",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/VKYQz9AWcj.json",
+      "src": "blackboard/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/VKYQz9AWcj.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/QUgV5pcBul.json",
+      "src": "blackboard/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/QUgV5pcBul.json",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220324/00979505aec5edd6e5c2f8c096fa0f62/XRG02U9wAU.js",
+      "src": "blackboard/static/20220324/00979505aec5edd6e5c2f8c096fa0f62/XRG02U9wAU.js",
+      "assetType": "other"
+    },
+    {
+      "role": "reference",
+      "file": "blackboard/static/20220615/00979505aec5edd6e5c2f8c096fa0f62/rVEgVEpnDV.js",
+      "src": "blackboard/static/20220615/00979505aec5edd6e5c2f8c096fa0f62/rVEgVEpnDV.js",
+      "assetType": "other"
+    }
+  ],
+  "interaction": {
+    "model": "mikufan-reference-v1",
+    "effects": [
+      "reference"
+    ]
+  },
+  "referenceMode": "interactive",
+  "preview_image": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+  "sourceFiles": {
+    "json": "reference-manifest.json"
+  },
+  "api": {
+    "id": null,
+    "name": "",
+    "isSplitLayer": true,
+    "extensions": {
+      "springGame2022": {}
+    }
+  },
+  "extensions": {
+    "springGame2022": {}
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2022-06-20T00:00:00+08:00",
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "type": [
+    "interactive"
+  ],
+  "is_split_layer": false,
+  "fallback_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "mikufan039",
+      "referenceId": "2022springAdv"
+    },
+    "layerCount": 0,
+    "visibleMediaCount": 0,
+    "resourceUrls": [],
+    "media": [],
+    "signals": {
+      "isSplitLayer": false,
+      "hasInteraction": true,
+      "hasVideo": false
+    }
+  },
+  "assets": [
+    {
+      "role": "primary",
+      "type": "image",
+      "src": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+      "local_file": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+      "content_type": "",
+      "sha256": "04b693b23dec35803b90b142ff9eacfc340cb4ee0b70485e8eb20a3c15ef8e0a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "XRG02U9wAU.js",
+      "local_file": "XRG02U9wAU.js",
+      "content_type": "",
+      "sha256": "ccf56f8b6f2deb9d8d56891b65260c3c912bc5b2265d6674eb50c6fb64e33ef0"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/1Pf3J23kur.png",
+      "local_file": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/1Pf3J23kur.png",
+      "content_type": "",
+      "sha256": "4e046739a9403d349592f90e7020ca06f894bf9e92d92eb55e8c35e8b0345693"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/AkmiDNoNFy.png",
+      "local_file": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/AkmiDNoNFy.png",
+      "content_type": "",
+      "sha256": "9e7c35683aa83e6c485d08af9a06fa93714a858a2c3b14c880a907eb446540e4"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/LuWoq27X7W.png",
+      "local_file": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/LuWoq27X7W.png",
+      "content_type": "",
+      "sha256": "2235a5eeeb1f3092d74f20325c7e6c62e32a0cf3581b64fe05728f4c120c4a4a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/rvRI0G1BmS.png",
+      "local_file": "bfs/activity-plat/static/20220217/00979505aec5edd6e5c2f8c096fa0f62/rvRI0G1BmS.png",
+      "content_type": "",
+      "sha256": "31ce2e48603885b39bc63282c848b8acaf4ea96a2e64369fb89438b07e4ca2b4"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/IA21PIMRvD.png",
+      "local_file": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/IA21PIMRvD.png",
+      "content_type": "",
+      "sha256": "9eac088e2085edb3e03399e9cc182c99f31fe993414ae92c50645fb2d44f1b3a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/V90uva9Va2.png",
+      "local_file": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/V90uva9Va2.png",
+      "content_type": "",
+      "sha256": "c4124e9d77092d68f8e690c8b5953330a87c32bf189b338e8036e1fc85b9acf2"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/w66W8qKtsi.png",
+      "local_file": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/w66W8qKtsi.png",
+      "content_type": "",
+      "sha256": "ccc4a7fa61ccb21c7c29d5d7102c754b54ae1682b02d3408d6437351bfc1544a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/we0s57YZSN.png",
+      "local_file": "bfs/activity-plat/static/20220224/00979505aec5edd6e5c2f8c096fa0f62/we0s57YZSN.png",
+      "content_type": "",
+      "sha256": "fd9ce2c15b5fce28021dcbecee7f32be10c6bceab40864fe02e6ae8bf5b60c04"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/1r6uJBboeZ.png",
+      "local_file": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/1r6uJBboeZ.png",
+      "content_type": "",
+      "sha256": "0f14b63247fca6b57cf89dc613b4adefe53d42ff4de0e6cdb4ad25e28efde4f9"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/56CwjhVTVg.png",
+      "local_file": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/56CwjhVTVg.png",
+      "content_type": "",
+      "sha256": "7cc01014e9d71b9fa67da4a872ff25fcc8dfc52376a8e317b70984f4239c7f3a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/XSPA4yDs52.png",
+      "local_file": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/XSPA4yDs52.png",
+      "content_type": "",
+      "sha256": "5673554454abd0b9b522b3abf23804491edec9d2dbcf3afdec95fb391a5b490d"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/ahwB6bVcGw.png",
+      "local_file": "bfs/activity-plat/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/ahwB6bVcGw.png",
+      "content_type": "",
+      "sha256": "7a293e8bd3522b6f93f382c097467acb63a8f0e9b8fd3db0b5d724d1310186ee"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/A29O65miDc.png",
+      "local_file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/A29O65miDc.png",
+      "content_type": "",
+      "sha256": "1f2e9c5046a0069d592622276e90dae5364611845a20472a929463934c7a1c7b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/KFDYJVlhgT.png",
+      "local_file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/KFDYJVlhgT.png",
+      "content_type": "",
+      "sha256": "d9634bce1fe4d223e65aa2f98c546762b5c0dc46f5c98b4b58b3be5360809ae4"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/h90zWlIavR.png",
+      "local_file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/h90zWlIavR.png",
+      "content_type": "",
+      "sha256": "e6ed3b9cd5968b363a579a52dfcc678a80bcf8f2b72e792745ec762e7f2e952c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/hffVhQpxwA.png",
+      "local_file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/hffVhQpxwA.png",
+      "content_type": "",
+      "sha256": "e503c14f9b976519b0822882f65d829a28e16eba55e7de4fa2b5fe46b29ce8ec"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/mjTIdrD1yz.png",
+      "local_file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/mjTIdrD1yz.png",
+      "content_type": "",
+      "sha256": "d28c68dd6bcec7ea9f35ffe6e54b6f20313b0174f420098a63590d6e545935be"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/oUz5oLVDl0.png",
+      "local_file": "bfs/activity-plat/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/oUz5oLVDl0.png",
+      "content_type": "",
+      "sha256": "bf90fd50e26afcd2fe7a1a32510907924ab07f6b5a8d243455b76182e0faeda9"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220304/00979505aec5edd6e5c2f8c096fa0f62/SNPes6slpr.png",
+      "local_file": "bfs/activity-plat/static/20220304/00979505aec5edd6e5c2f8c096fa0f62/SNPes6slpr.png",
+      "content_type": "",
+      "sha256": "79479dc9155993d2e596393157322647af5ba7b3397cd2685038f28e60fbf2e8"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/hXJaoTXC37.png",
+      "local_file": "bfs/activity-plat/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/hXJaoTXC37.png",
+      "content_type": "",
+      "sha256": "ef6d483b4b5b6c6d878edf1007978198ca718d74730d37d4b9fb5d0786761b74"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/hllMZ39mFV.png",
+      "local_file": "bfs/activity-plat/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/hllMZ39mFV.png",
+      "content_type": "",
+      "sha256": "3502cccfa3ed538067272e7d7209d2cca3a5f093d1103765531e33c5318c4017"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/3xqAauWyWp.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/3xqAauWyWp.png",
+      "content_type": "",
+      "sha256": "ef0f40904b9a5544f2fbfbe12c39c02dea022a9530a4a43ad02527f433f1247f"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/IjRnuJVAMU.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/IjRnuJVAMU.png",
+      "content_type": "",
+      "sha256": "f3bfc718e015ad5e2297c2dddc63db43eea31f827164e798a9900d2eb43b73fe"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/KWGhLKKHic.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/KWGhLKKHic.png",
+      "content_type": "",
+      "sha256": "b65ef3e660a1e01a6511fc656e19ffa2bf2e1e4e6d89a3f7ddb72981733f9e33"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/L64vnF6vEL.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/L64vnF6vEL.png",
+      "content_type": "",
+      "sha256": "46fc7ec1b852a3a8630e31a1b617343639c1d0402c92275322c18b69d663b12c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/NtXwfLTm8r.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/NtXwfLTm8r.png",
+      "content_type": "",
+      "sha256": "09c24e8c78e942d28139598335ecafb7c86c665758a54243967a591a855d2a6c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/ODZkSkGrlS.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/ODZkSkGrlS.png",
+      "content_type": "",
+      "sha256": "881a75777b1b3cf26252935064bc2f3db3f4b90c1b3cb9e189b79f3086e4dbf2"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/OfPa9ZyIUb.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/OfPa9ZyIUb.png",
+      "content_type": "",
+      "sha256": "44ad6ff03adb804eb4d0bace443fe418c9ed2f337067aaaa04e2ed660296c974"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/QpEVse7WKu.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/QpEVse7WKu.png",
+      "content_type": "",
+      "sha256": "5c8cfe6dc235e6af368721dbe424e8eb19b0fd5c6904739a899a0afc96c7d0c7"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/ZWZ5JWBR7W.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/ZWZ5JWBR7W.png",
+      "content_type": "",
+      "sha256": "42566ca38ce385e74423b4d9ffaf41e27de15eb1993bb52fe44a291549caf2ee"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/bZ4QGDKRXu.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/bZ4QGDKRXu.png",
+      "content_type": "",
+      "sha256": "75d1a586c0bfaecf0aaf08f2718a1744259bd4e52fea1ee71a199cf9b238919a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/fqC498nGEQ.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/fqC498nGEQ.png",
+      "content_type": "",
+      "sha256": "f0a31ad9d5c51adc57b57662ec7a61b53ddfe2141c8bcd601f1932479c692fe2"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/pDRaxEfL5S.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/pDRaxEfL5S.png",
+      "content_type": "",
+      "sha256": "3d523e81f49bfa53b1b2869ba399458ad659682969cd883152deb620957894b1"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/sKIvMZvfqJ.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/sKIvMZvfqJ.png",
+      "content_type": "",
+      "sha256": "7cbf3f6177cdeb5c49364dd5146849799e4abd3d907c8056c7f79ee3753ae9c4"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/vBuQkSZx0C.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/vBuQkSZx0C.png",
+      "content_type": "",
+      "sha256": "f0215ae87c7b1da039ec203cc5c5fb5c8dc226e52daa81f4d30e1f336890bf9e"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/x0KtnfZvTq.png",
+      "local_file": "bfs/activity-plat/static/20220309/00979505aec5edd6e5c2f8c096fa0f62/x0KtnfZvTq.png",
+      "content_type": "",
+      "sha256": "9b74efd05eba1a6cbd6fe078b0fb15b3ab3f4260cb2fc99ae86041831515f8f6"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220315/00979505aec5edd6e5c2f8c096fa0f62/g0JJ6atToR.woff2",
+      "local_file": "bfs/activity-plat/static/20220315/00979505aec5edd6e5c2f8c096fa0f62/g0JJ6atToR.woff2",
+      "content_type": "",
+      "sha256": "ab9368b59abcb3291dbb95bfb6a719971d92569d63edb641715b8a6e2a5f7a4d"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/ZP51pxsKWj.png",
+      "local_file": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/ZP51pxsKWj.png",
+      "content_type": "",
+      "sha256": "8b04c74140bd0079807ae4161921a97bfb4aa85d385a42a8ce1a9afd1a5c12b0"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/lxv3u3Y9ev.png",
+      "local_file": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/lxv3u3Y9ev.png",
+      "content_type": "",
+      "sha256": "adef36ec58e7b3618bb6d486331a3af55eb6b8df1e79426cb488d27c01c3de6b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/oMP50YCuMA.png",
+      "local_file": "bfs/activity-plat/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/oMP50YCuMA.png",
+      "content_type": "",
+      "sha256": "93232593e22fef1786d56681a3ab37fe714584192bfca6742c0413e6bc74acfa"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220317/00979505aec5edd6e5c2f8c096fa0f62/e0y0URDBAU.png",
+      "local_file": "bfs/activity-plat/static/20220317/00979505aec5edd6e5c2f8c096fa0f62/e0y0URDBAU.png",
+      "content_type": "",
+      "sha256": "987df73bf300a57556ec07111b98f2c81b7b93a20cf9a2d4c4870df104ada95f"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/H6ysLDyYzc.png",
+      "local_file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/H6ysLDyYzc.png",
+      "content_type": "",
+      "sha256": "0ad3ea23159f44411971510c5626efa926675ebf2092e5470d80d4b92846b5e2"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/SFB0E2Z4gz.png",
+      "local_file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/SFB0E2Z4gz.png",
+      "content_type": "",
+      "sha256": "aa6083d1310ac62a15646aee69133fd1afed646789feb0f8a1db5a551c098652"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/mMUeW2fhs3.png",
+      "local_file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/mMUeW2fhs3.png",
+      "content_type": "",
+      "sha256": "db89fca6e4ac0c8fd0a90255244a1b18dff29839bc3d1fb19b5ac36276c5473b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/n2Pw2iT2r1.png",
+      "local_file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/n2Pw2iT2r1.png",
+      "content_type": "",
+      "sha256": "4fd4c40e631e34deef8d56ab198f612f3728724ea24a6c9edeb1bf59ec7d243e"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/pYaSYzhqWz.png",
+      "local_file": "bfs/activity-plat/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/pYaSYzhqWz.png",
+      "content_type": "",
+      "sha256": "423286deb871c3c9f0f3fee5da232c043d14c7a94031170814d84e7ac7930682"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+      "local_file": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+      "content_type": "",
+      "sha256": "04b693b23dec35803b90b142ff9eacfc340cb4ee0b70485e8eb20a3c15ef8e0a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png@3840w_360h_1c_90q.webp",
+      "local_file": "bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png@3840w_360h_1c_90q.webp",
+      "content_type": "",
+      "sha256": "04b693b23dec35803b90b142ff9eacfc340cb4ee0b70485e8eb20a3c15ef8e0a"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "bfs/archive/ca375eb31fa90b8e23b88ed3433c2f60de1c2e6e.png",
+      "local_file": "bfs/archive/ca375eb31fa90b8e23b88ed3433c2f60de1c2e6e.png",
+      "content_type": "",
+      "sha256": "891c321a72122558d87f8d51a8b06d9f48b77bab74cc508d335bb561d74fa4fe"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/ECCbC7xZCf.json",
+      "local_file": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/ECCbC7xZCf.json",
+      "content_type": "",
+      "sha256": "95507b4bad413dac248b8193747b74be8d5b17798a1d30b40d08959a525a14ac"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/KKLdKJ60Tm.json",
+      "local_file": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/KKLdKJ60Tm.json",
+      "content_type": "",
+      "sha256": "3061e1d2740420aea059d63580c17ff863f02121ef2ccc19590b5d25c3e900ef"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/jHhlzBK8lT.json",
+      "local_file": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/jHhlzBK8lT.json",
+      "content_type": "",
+      "sha256": "d5585fac268a9753f6af5a9ff9152b47a6f725b4c64fd3c9c559f3cd665bddbd"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/vQOKaRcQiQ.json",
+      "local_file": "blackboard/static/20220225/00979505aec5edd6e5c2f8c096fa0f62/vQOKaRcQiQ.json",
+      "content_type": "",
+      "sha256": "79a4480aa654383924769ee4e10554fe3c164ea7b7ab2ce1517af88933efd4ed"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/2pqUgkNUXm.json",
+      "local_file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/2pqUgkNUXm.json",
+      "content_type": "",
+      "sha256": "9da434074188b0c6a7a5633282397003221687e5a20a093779b52f758d6a6a33"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/IHWo3trIPV.json",
+      "local_file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/IHWo3trIPV.json",
+      "content_type": "",
+      "sha256": "0d17d3ef4dddd0001c2ac5bca49879add772ee77b53cd4391739c30b0f542315"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/RIfIuimWkU.json",
+      "local_file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/RIfIuimWkU.json",
+      "content_type": "",
+      "sha256": "626ff77146644ef91765482e02792c687b43d9de82bb9ebe9fab3fd2b5d208e3"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/ekSXHfFK0Q.json",
+      "local_file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/ekSXHfFK0Q.json",
+      "content_type": "",
+      "sha256": "09b696cec49befc6ab39972cf89e950b2cff67b34b76aa560e7961e262745dcd"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/jNCwVQWxuT.json",
+      "local_file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/jNCwVQWxuT.json",
+      "content_type": "",
+      "sha256": "6b157f0c71d17ce89279a34c3c6df4e91b933bcb11011f5c2698b27ec4f19e61"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/ro0B1H3Ov8.json",
+      "local_file": "blackboard/static/20220303/00979505aec5edd6e5c2f8c096fa0f62/ro0B1H3Ov8.json",
+      "content_type": "",
+      "sha256": "30e285ce4fe93b078bc8032d36d1a785d1961e3ef829d53b5adb6b1205309f55"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220304/00979505aec5edd6e5c2f8c096fa0f62/bZ70VoHTmH.json",
+      "local_file": "blackboard/static/20220304/00979505aec5edd6e5c2f8c096fa0f62/bZ70VoHTmH.json",
+      "content_type": "",
+      "sha256": "c2c2a2bce2916877e6c1ebfe3c087140b408003649728f046d2d44e9b1f0094b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/mhFnJ3WgCI.json",
+      "local_file": "blackboard/static/20220308/00979505aec5edd6e5c2f8c096fa0f62/mhFnJ3WgCI.json",
+      "content_type": "",
+      "sha256": "7accc015acc3b5139de44c982f245fb320cc8366b6e5ffc1dd73ef134cb507da"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220310/00979505aec5edd6e5c2f8c096fa0f62/cKILLYSZ6K.ttf",
+      "local_file": "blackboard/static/20220310/00979505aec5edd6e5c2f8c096fa0f62/cKILLYSZ6K.ttf",
+      "content_type": "",
+      "sha256": "d4638f9cfd57520a6eaff7a36603c44b729a3d17951bcbaf9381ab462d478379"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220310/00979505aec5edd6e5c2f8c096fa0f62/eg3s0Wl9p3.ttf",
+      "local_file": "blackboard/static/20220310/00979505aec5edd6e5c2f8c096fa0f62/eg3s0Wl9p3.ttf",
+      "content_type": "",
+      "sha256": "cbf83a21900d2c97282443fd324e7d84212ab0a4826e8985455570dc29decccd"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/CmamSTNOdq.mp4",
+      "local_file": "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/CmamSTNOdq.mp4",
+      "content_type": "",
+      "sha256": "d02bba7d8a809113eece184a638076022eb6d3d35e2e5a86f3707554400c14db"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+      "local_file": "blackboard/static/20220314/00979505aec5edd6e5c2f8c096fa0f62/ZlmaPe9AZv.mp4",
+      "content_type": "",
+      "sha256": "818930df828740c4ce8d428a0601d552970acfeeebb562cac4351d23d9cb97ea"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220315/00979505aec5edd6e5c2f8c096fa0f62/kPbkWcX74M.mp4",
+      "local_file": "blackboard/static/20220315/00979505aec5edd6e5c2f8c096fa0f62/kPbkWcX74M.mp4",
+      "content_type": "",
+      "sha256": "665d3d3893ed6a7b204afc981b57a780abdca0acf434068288ac7a7d9f626f03"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/VKYQz9AWcj.json",
+      "local_file": "blackboard/static/20220316/00979505aec5edd6e5c2f8c096fa0f62/VKYQz9AWcj.json",
+      "content_type": "",
+      "sha256": "6818a71582706008a08337c06c6ed406aee0bf83bb0855a78a2f08eb2bb9df6b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/QUgV5pcBul.json",
+      "local_file": "blackboard/static/20220323/00979505aec5edd6e5c2f8c096fa0f62/QUgV5pcBul.json",
+      "content_type": "",
+      "sha256": "a7eb6ab8202bf4678b4ae5ddae553f88cbfd2be579defe82c93419cbc32c368c"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220324/00979505aec5edd6e5c2f8c096fa0f62/XRG02U9wAU.js",
+      "local_file": "blackboard/static/20220324/00979505aec5edd6e5c2f8c096fa0f62/XRG02U9wAU.js",
+      "content_type": "",
+      "sha256": "f461c96a0a18413105606bbd9d509413cc8a0ea58782226215ba95dcf50b3f27"
+    },
+    {
+      "role": "auxiliary",
+      "type": "other",
+      "src": "blackboard/static/20220615/00979505aec5edd6e5c2f8c096fa0f62/rVEgVEpnDV.js",
+      "local_file": "blackboard/static/20220615/00979505aec5edd6e5c2f8c096fa0f62/rVEgVEpnDV.js",
+      "content_type": "",
+      "sha256": "907b3cd4717908db1f82e368d5e4670dd0974198ed515e9777dcbe78281bfbf9"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "c6a4b38dc1edf804e81611ac",
+  "hashes": {
+    "resourceHash": "9372383258b2bfd1bdbf994e",
+    "structureHash": "60b4a814a178e33ed204e614",
+    "interactionHash": "0c31552156fb404a8a634404",
+    "contentHash": "c6a4b38dc1edf804e81611ac",
+    "canonicalContentHash": "a358b4ed983a6ea7d26250aa",
+    "sourceFingerprint": "32f60b3e2a7fb2b2048923e1"
+  },
+  "canonicalContentHash": "a358b4ed983a6ea7d26250aa",
+  "sourceFingerprint": "32f60b3e2a7fb2b2048923e1",
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2022-03-20_2022-03-20_2022-06-20_spring",
+  "observations": [
+    {
+      "capturedAt": "2022-03-20T00:00:00+08:00",
+      "lastObservedAt": "2022-03-20T00:00:00+08:00",
+      "date": "2022-03-20",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-20_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-21T00:00:00+08:00",
+      "lastObservedAt": "2022-03-21T00:00:00+08:00",
+      "date": "2022-03-21",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-21_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-22T00:00:00+08:00",
+      "lastObservedAt": "2022-03-22T00:00:00+08:00",
+      "date": "2022-03-22",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-22_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-23T00:00:00+08:00",
+      "lastObservedAt": "2022-03-23T00:00:00+08:00",
+      "date": "2022-03-23",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-23_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-24T00:00:00+08:00",
+      "lastObservedAt": "2022-03-24T00:00:00+08:00",
+      "date": "2022-03-24",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-24_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-25T00:00:00+08:00",
+      "lastObservedAt": "2022-03-25T00:00:00+08:00",
+      "date": "2022-03-25",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-25_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-26T00:00:00+08:00",
+      "lastObservedAt": "2022-03-26T00:00:00+08:00",
+      "date": "2022-03-26",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-26_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-27T00:00:00+08:00",
+      "lastObservedAt": "2022-03-27T00:00:00+08:00",
+      "date": "2022-03-27",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-27_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-28T00:00:00+08:00",
+      "lastObservedAt": "2022-03-28T00:00:00+08:00",
+      "date": "2022-03-28",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-28_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-29T00:00:00+08:00",
+      "lastObservedAt": "2022-03-29T00:00:00+08:00",
+      "date": "2022-03-29",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-29_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-30T00:00:00+08:00",
+      "lastObservedAt": "2022-03-30T00:00:00+08:00",
+      "date": "2022-03-30",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-30_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-03-31T00:00:00+08:00",
+      "lastObservedAt": "2022-03-31T00:00:00+08:00",
+      "date": "2022-03-31",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-03-31_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-01T00:00:00+08:00",
+      "lastObservedAt": "2022-04-01T00:00:00+08:00",
+      "date": "2022-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-01_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-02T00:00:00+08:00",
+      "lastObservedAt": "2022-04-02T00:00:00+08:00",
+      "date": "2022-04-02",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-02_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-03T00:00:00+08:00",
+      "lastObservedAt": "2022-04-03T00:00:00+08:00",
+      "date": "2022-04-03",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-03_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-04T00:00:00+08:00",
+      "lastObservedAt": "2022-04-04T00:00:00+08:00",
+      "date": "2022-04-04",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-04_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-05T00:00:00+08:00",
+      "lastObservedAt": "2022-04-05T00:00:00+08:00",
+      "date": "2022-04-05",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-05_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-06T00:00:00+08:00",
+      "lastObservedAt": "2022-04-06T00:00:00+08:00",
+      "date": "2022-04-06",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-06_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-07T00:00:00+08:00",
+      "lastObservedAt": "2022-04-07T00:00:00+08:00",
+      "date": "2022-04-07",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-07_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-08T00:00:00+08:00",
+      "lastObservedAt": "2022-04-08T00:00:00+08:00",
+      "date": "2022-04-08",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-08_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-09T00:00:00+08:00",
+      "lastObservedAt": "2022-04-09T00:00:00+08:00",
+      "date": "2022-04-09",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-09_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-10T00:00:00+08:00",
+      "lastObservedAt": "2022-04-10T00:00:00+08:00",
+      "date": "2022-04-10",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-10_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-11T00:00:00+08:00",
+      "lastObservedAt": "2022-04-11T00:00:00+08:00",
+      "date": "2022-04-11",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-11_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-12T00:00:00+08:00",
+      "lastObservedAt": "2022-04-12T00:00:00+08:00",
+      "date": "2022-04-12",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-12_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-13T00:00:00+08:00",
+      "lastObservedAt": "2022-04-13T00:00:00+08:00",
+      "date": "2022-04-13",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-13_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-14T00:00:00+08:00",
+      "lastObservedAt": "2022-04-14T00:00:00+08:00",
+      "date": "2022-04-14",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-14_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-15T00:00:00+08:00",
+      "lastObservedAt": "2022-04-15T00:00:00+08:00",
+      "date": "2022-04-15",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-15_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-16T00:00:00+08:00",
+      "lastObservedAt": "2022-04-16T00:00:00+08:00",
+      "date": "2022-04-16",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-16_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-17T00:00:00+08:00",
+      "lastObservedAt": "2022-04-17T00:00:00+08:00",
+      "date": "2022-04-17",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-17_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-18T00:00:00+08:00",
+      "lastObservedAt": "2022-04-18T00:00:00+08:00",
+      "date": "2022-04-18",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-18_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-19T00:00:00+08:00",
+      "lastObservedAt": "2022-04-19T00:00:00+08:00",
+      "date": "2022-04-19",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-19_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-20T00:00:00+08:00",
+      "lastObservedAt": "2022-04-20T00:00:00+08:00",
+      "date": "2022-04-20",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-20_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-21T00:00:00+08:00",
+      "lastObservedAt": "2022-04-21T00:00:00+08:00",
+      "date": "2022-04-21",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-21_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-22T00:00:00+08:00",
+      "lastObservedAt": "2022-04-22T00:00:00+08:00",
+      "date": "2022-04-22",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-22_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-23T00:00:00+08:00",
+      "lastObservedAt": "2022-04-23T00:00:00+08:00",
+      "date": "2022-04-23",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-23_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-24T00:00:00+08:00",
+      "lastObservedAt": "2022-04-24T00:00:00+08:00",
+      "date": "2022-04-24",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-24_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-25T00:00:00+08:00",
+      "lastObservedAt": "2022-04-25T00:00:00+08:00",
+      "date": "2022-04-25",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-25_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-26T00:00:00+08:00",
+      "lastObservedAt": "2022-04-26T00:00:00+08:00",
+      "date": "2022-04-26",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-26_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-27T00:00:00+08:00",
+      "lastObservedAt": "2022-04-27T00:00:00+08:00",
+      "date": "2022-04-27",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-27_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-28T00:00:00+08:00",
+      "lastObservedAt": "2022-04-28T00:00:00+08:00",
+      "date": "2022-04-28",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-28_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-29T00:00:00+08:00",
+      "lastObservedAt": "2022-04-29T00:00:00+08:00",
+      "date": "2022-04-29",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-29_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-04-30T00:00:00+08:00",
+      "lastObservedAt": "2022-04-30T00:00:00+08:00",
+      "date": "2022-04-30",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-04-30_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-01T00:00:00+08:00",
+      "lastObservedAt": "2022-05-01T00:00:00+08:00",
+      "date": "2022-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-01_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-02T00:00:00+08:00",
+      "lastObservedAt": "2022-05-02T00:00:00+08:00",
+      "date": "2022-05-02",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-02_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-03T00:00:00+08:00",
+      "lastObservedAt": "2022-05-03T00:00:00+08:00",
+      "date": "2022-05-03",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-03_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-04T00:00:00+08:00",
+      "lastObservedAt": "2022-05-04T00:00:00+08:00",
+      "date": "2022-05-04",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-04_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-05T00:00:00+08:00",
+      "lastObservedAt": "2022-05-05T00:00:00+08:00",
+      "date": "2022-05-05",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-05_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-06T00:00:00+08:00",
+      "lastObservedAt": "2022-05-06T00:00:00+08:00",
+      "date": "2022-05-06",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-06_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-07T00:00:00+08:00",
+      "lastObservedAt": "2022-05-07T00:00:00+08:00",
+      "date": "2022-05-07",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-07_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-08T00:00:00+08:00",
+      "lastObservedAt": "2022-05-08T00:00:00+08:00",
+      "date": "2022-05-08",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-08_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-09T00:00:00+08:00",
+      "lastObservedAt": "2022-05-09T00:00:00+08:00",
+      "date": "2022-05-09",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-09_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-10T00:00:00+08:00",
+      "lastObservedAt": "2022-05-10T00:00:00+08:00",
+      "date": "2022-05-10",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-10_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-11T00:00:00+08:00",
+      "lastObservedAt": "2022-05-11T00:00:00+08:00",
+      "date": "2022-05-11",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-11_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-12T00:00:00+08:00",
+      "lastObservedAt": "2022-05-12T00:00:00+08:00",
+      "date": "2022-05-12",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-12_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-13T00:00:00+08:00",
+      "lastObservedAt": "2022-05-13T00:00:00+08:00",
+      "date": "2022-05-13",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-13_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-14T00:00:00+08:00",
+      "lastObservedAt": "2022-05-14T00:00:00+08:00",
+      "date": "2022-05-14",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-14_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-15T00:00:00+08:00",
+      "lastObservedAt": "2022-05-15T00:00:00+08:00",
+      "date": "2022-05-15",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-15_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-16T00:00:00+08:00",
+      "lastObservedAt": "2022-05-16T00:00:00+08:00",
+      "date": "2022-05-16",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-16_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-17T00:00:00+08:00",
+      "lastObservedAt": "2022-05-17T00:00:00+08:00",
+      "date": "2022-05-17",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-17_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-18T00:00:00+08:00",
+      "lastObservedAt": "2022-05-18T00:00:00+08:00",
+      "date": "2022-05-18",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-18_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-19T00:00:00+08:00",
+      "lastObservedAt": "2022-05-19T00:00:00+08:00",
+      "date": "2022-05-19",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-19_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-20T00:00:00+08:00",
+      "lastObservedAt": "2022-05-20T00:00:00+08:00",
+      "date": "2022-05-20",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-20_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-21T00:00:00+08:00",
+      "lastObservedAt": "2022-05-21T00:00:00+08:00",
+      "date": "2022-05-21",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-21_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-22T00:00:00+08:00",
+      "lastObservedAt": "2022-05-22T00:00:00+08:00",
+      "date": "2022-05-22",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-22_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-23T00:00:00+08:00",
+      "lastObservedAt": "2022-05-23T00:00:00+08:00",
+      "date": "2022-05-23",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-23_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-24T00:00:00+08:00",
+      "lastObservedAt": "2022-05-24T00:00:00+08:00",
+      "date": "2022-05-24",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-24_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-25T00:00:00+08:00",
+      "lastObservedAt": "2022-05-25T00:00:00+08:00",
+      "date": "2022-05-25",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-25_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-26T00:00:00+08:00",
+      "lastObservedAt": "2022-05-26T00:00:00+08:00",
+      "date": "2022-05-26",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-26_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-27T00:00:00+08:00",
+      "lastObservedAt": "2022-05-27T00:00:00+08:00",
+      "date": "2022-05-27",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-27_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-28T00:00:00+08:00",
+      "lastObservedAt": "2022-05-28T00:00:00+08:00",
+      "date": "2022-05-28",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-28_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-29T00:00:00+08:00",
+      "lastObservedAt": "2022-05-29T00:00:00+08:00",
+      "date": "2022-05-29",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-29_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-30T00:00:00+08:00",
+      "lastObservedAt": "2022-05-30T00:00:00+08:00",
+      "date": "2022-05-30",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-30_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-05-31T00:00:00+08:00",
+      "lastObservedAt": "2022-05-31T00:00:00+08:00",
+      "date": "2022-05-31",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-05-31_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-01T00:00:00+08:00",
+      "lastObservedAt": "2022-06-01T00:00:00+08:00",
+      "date": "2022-06-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-01_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-02T00:00:00+08:00",
+      "lastObservedAt": "2022-06-02T00:00:00+08:00",
+      "date": "2022-06-02",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-02_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-03T00:00:00+08:00",
+      "lastObservedAt": "2022-06-03T00:00:00+08:00",
+      "date": "2022-06-03",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-03_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-04T00:00:00+08:00",
+      "lastObservedAt": "2022-06-04T00:00:00+08:00",
+      "date": "2022-06-04",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-04_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-05T00:00:00+08:00",
+      "lastObservedAt": "2022-06-05T00:00:00+08:00",
+      "date": "2022-06-05",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-05_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-06T00:00:00+08:00",
+      "lastObservedAt": "2022-06-06T00:00:00+08:00",
+      "date": "2022-06-06",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-06_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-07T00:00:00+08:00",
+      "lastObservedAt": "2022-06-07T00:00:00+08:00",
+      "date": "2022-06-07",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-07_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-08T00:00:00+08:00",
+      "lastObservedAt": "2022-06-08T00:00:00+08:00",
+      "date": "2022-06-08",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-08_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-09T00:00:00+08:00",
+      "lastObservedAt": "2022-06-09T00:00:00+08:00",
+      "date": "2022-06-09",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-09_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-10T00:00:00+08:00",
+      "lastObservedAt": "2022-06-10T00:00:00+08:00",
+      "date": "2022-06-10",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-10_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-11T00:00:00+08:00",
+      "lastObservedAt": "2022-06-11T00:00:00+08:00",
+      "date": "2022-06-11",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-11_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-12T00:00:00+08:00",
+      "lastObservedAt": "2022-06-12T00:00:00+08:00",
+      "date": "2022-06-12",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-12_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-13T00:00:00+08:00",
+      "lastObservedAt": "2022-06-13T00:00:00+08:00",
+      "date": "2022-06-13",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-13_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-14T00:00:00+08:00",
+      "lastObservedAt": "2022-06-14T00:00:00+08:00",
+      "date": "2022-06-14",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-14_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-15T00:00:00+08:00",
+      "lastObservedAt": "2022-06-15T00:00:00+08:00",
+      "date": "2022-06-15",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-15_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-16T00:00:00+08:00",
+      "lastObservedAt": "2022-06-16T00:00:00+08:00",
+      "date": "2022-06-16",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-16_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-17T00:00:00+08:00",
+      "lastObservedAt": "2022-06-17T00:00:00+08:00",
+      "date": "2022-06-17",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-17_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-18T00:00:00+08:00",
+      "lastObservedAt": "2022-06-18T00:00:00+08:00",
+      "date": "2022-06-18",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-18_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-19T00:00:00+08:00",
+      "lastObservedAt": "2022-06-19T00:00:00+08:00",
+      "date": "2022-06-19",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-19_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2022-06-20T00:00:00+08:00",
+      "lastObservedAt": "2022-06-20T00:00:00+08:00",
+      "date": "2022-06-20",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2022-06-20_2022-03-20_2022-06-20_spring",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "captureMethod": "mikufan039-reference",
+        "provider": "mikufan039-reference",
+        "referenceId": "2022springAdv",
+        "referenceCommit": "45b760bfa52166727123d775925dea887ac7d71a",
+        "referenceTitle": "2022 春（游戏）",
+        "referenceCover": "res/bilibanner/2022spring/bfs/archive/ba85138129ecbd9d8b59f7fc19f1d47bf0c8b5c8.png",
+        "referenceCategory": "game",
+        "coverageStartDate": "2022-03-20",
+        "coverageEndDate": "2022-06-20",
+        "originalStartDate": "2022-03-20",
+        "originalEndDate": "2022-06-20",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
