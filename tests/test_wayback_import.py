@@ -140,6 +140,27 @@ class WaybackImportTests(unittest.TestCase):
             final=False,
         )
 
+    def test_reference_import_runs_checkpoint_when_index_is_already_current(self) -> None:
+        with mock.patch(
+            "backend.wayback_import.core.rebuild_index",
+            return_value=False,
+        ) as rebuild, mock.patch(
+            "backend.wayback_import.run_checkpoint",
+        ) as checkpoint:
+            changed = wayback_import.checkpoint_reference_import(
+                {dt.date(2022, 12, 22)},
+                "checkpoint.py",
+            )
+        self.assertFalse(changed)
+        rebuild.assert_called_once_with()
+        checkpoint.assert_called_once_with(
+            "checkpoint.py",
+            processed=0,
+            succeeded=0,
+            changed=0,
+            final=False,
+        )
+
     def test_three_hour_availability_uses_utc_timestamp(self) -> None:
         local_target = dt.datetime(
             2019, 1, 1, 3, 0, tzinfo=dt.timezone(dt.timedelta(hours=8))

@@ -2717,14 +2717,15 @@ def checkpoint_reference_import(
     changed = core.rebuild_index()
     if changed:
         print("Rebuilt index after reference repository import.")
-        if checkpoint_script:
-            run_checkpoint(
-                checkpoint_script,
-                processed=0,
-                succeeded=0,
-                changed=1,
-                final=False,
-            )
+    if checkpoint_script:
+        print("Reference repository import completed; running checkpoint.")
+        run_checkpoint(
+            checkpoint_script,
+            processed=0,
+            succeeded=0,
+            changed=int(changed),
+            final=False,
+        )
     return changed
 
 
