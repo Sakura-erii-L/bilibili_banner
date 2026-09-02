@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-02T20:33:03+08:00",
+  "generatedAt": "2026-09-02T20:51:02+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -1783,6 +1783,7 @@
           "missing_assets": [],
           "slots": [
             0,
+            1,
             2,
             3,
             4,

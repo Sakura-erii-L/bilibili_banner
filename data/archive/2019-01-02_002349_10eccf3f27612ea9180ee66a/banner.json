@@ -392,6 +392,7 @@
   "familyId": "2019-01-02_3f4544a6cbd4",
   "slots": [
     0,
+    1,
     2,
     3,
     4,
@@ -408,6 +409,7 @@
       "timeZone": "Asia/Shanghai",
       "slots": [
         0,
+        1,
         2,
         3,
         4,
