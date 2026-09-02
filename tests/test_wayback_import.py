@@ -188,6 +188,38 @@ class WaybackImportTests(unittest.TestCase):
         self.assertEqual(snapshots[0]["availabilityUrl"], "")
         self.assertEqual(snapshots[0]["cdxUrl"], "https://example.test/cdx")
 
+    def test_cdx_discovery_uses_cached_matches_without_querying_cdx(self) -> None:
+        cached = {
+            "2019-01-01": {
+                str(slot): {
+                    "timestamp": "20190101120000",
+                    "source": "archive",
+                }
+                for slot in range(wayback_import.core.SLOT_COUNT)
+            }
+        }
+        with mock.patch(
+            "backend.wayback_import.query_cdx_homepage_range",
+        ) as query:
+            snapshots = wayback_import.discover_snapshots(
+                dt.date(2019, 1, 1),
+                dt.date(2019, 1, 1),
+                cadence="3h",
+                api_url="https://example.test/available",
+                match_cache=cached,
+            )
+        query.assert_not_called()
+        self.assertEqual(len(snapshots), 1)
+        self.assertEqual(snapshots[0]["timestamp"], "20190101120000")
+        self.assertEqual(snapshots[0]["targetSlots"], list(range(8)))
+        self.assertEqual(
+            snapshots[0]["targetMappings"],
+            [
+                {"date": "2019-01-01", "slot": slot}
+                for slot in range(wayback_import.core.SLOT_COUNT)
+            ],
+        )
+
     def test_reference_covered_dates_are_not_queried(self) -> None:
         with mock.patch(
             "backend.wayback_import.read_json",

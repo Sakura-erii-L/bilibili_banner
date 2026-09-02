@@ -73,6 +73,8 @@ HEADER_API_MAX_DELTA_SECONDS = int(
     os.environ.get("WAYBACK_HEADER_API_MAX_DELTA_SECONDS", str(7 * 24 * 60 * 60))
 )
 MIN_BACKFILL_DATE = dt.date(2019, 1, 1)
+WAYBACK_MATCH_CACHE_VERSION = 1
+WAYBACK_MATCH_CACHE_NAME = "wayback-slot-matches.json"
 
 BANNER_CLASS_NAMES = {
     "animated-banner",
@@ -217,6 +219,100 @@ def target_slots(start: dt.date, end: dt.date) -> Iterable[tuple[dt.date, int]]:
         for slot in range(core.SLOT_COUNT):
             yield current, slot
         current += dt.timedelta(days=1)
+
+
+def _empty_wayback_match_cache() -> dict[str, Any]:
+    return {
+        "version": WAYBACK_MATCH_CACHE_VERSION,
+        "page": ORIGINAL_PAGE,
+        "timeZone": core.TIMEZONE,
+        "slotMinutes": core.SLOT_MINUTES,
+        "cadence": "3h",
+        "matches": {},
+    }
+
+
+def _wayback_match_cache_path() -> Path:
+    return core.DATA_DIR / "cache" / WAYBACK_MATCH_CACHE_NAME
+
+
+def _valid_wayback_timestamp(value: Any) -> str | None:
+    timestamp = str(value or "")
+    if len(timestamp) != 14 or not timestamp.isdigit():
+        return None
+    try:
+        snapshot_moment(timestamp)
+    except ValueError:
+        return None
+    return timestamp
+
+
+def load_wayback_match_cache() -> dict[str, Any]:
+    path = _wayback_match_cache_path()
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return _empty_wayback_match_cache()
+    if not isinstance(payload, dict):
+        return _empty_wayback_match_cache()
+    if (
+        payload.get("version") != WAYBACK_MATCH_CACHE_VERSION
+        or payload.get("page") != ORIGINAL_PAGE
+        or payload.get("timeZone") != core.TIMEZONE
+        or int(payload.get("slotMinutes") or 0) != core.SLOT_MINUTES
+        or payload.get("cadence") != "3h"
+    ):
+        return _empty_wayback_match_cache()
+
+    normalized = _empty_wayback_match_cache()
+    matches = payload.get("matches")
+    if not isinstance(matches, dict):
+        return normalized
+    for date_text, slots in matches.items():
+        try:
+            dt.date.fromisoformat(str(date_text))
+        except ValueError:
+            continue
+        if not isinstance(slots, dict):
+            continue
+        for slot_text, value in slots.items():
+            try:
+                slot = int(slot_text)
+            except (TypeError, ValueError):
+                continue
+            if not 0 <= slot < core.SLOT_COUNT or not isinstance(value, dict):
+                continue
+            timestamp = _valid_wayback_timestamp(value.get("timestamp"))
+            if not timestamp:
+                continue
+            entry = {
+                "timestamp": timestamp,
+                "source": str(value.get("source") or "cache"),
+            }
+            for field in ("distanceSeconds", "cdxUrl"):
+                if field in value:
+                    entry[field] = value[field]
+            normalized["matches"].setdefault(str(date_text), {})[str(slot)] = entry
+    return normalized
+
+
+def save_wayback_match_cache(cache: dict[str, Any]) -> bool:
+    payload = _empty_wayback_match_cache()
+    matches = cache.get("matches") if isinstance(cache, dict) else None
+    if isinstance(matches, dict):
+        payload["matches"] = matches
+    serialized = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    path = _wayback_match_cache_path()
+    try:
+        if path.read_text(encoding="utf-8") == serialized:
+            return False
+    except OSError:
+        pass
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(serialized, encoding="utf-8")
+    temporary.replace(path)
+    return True
 
 
 def date_range_fully_covered(
@@ -389,6 +485,49 @@ def slot_center(local_date: dt.date, slot: int) -> dt.datetime:
     )
 
 
+def _cached_match(
+    matches: dict[str, Any],
+    local_date: dt.date,
+    slot: int,
+    *,
+    start: dt.date,
+    end: dt.date,
+) -> dict[str, Any] | None:
+    date_matches = matches.get(local_date.isoformat())
+    if not isinstance(date_matches, dict):
+        return None
+    value = date_matches.get(str(slot))
+    if not isinstance(value, dict):
+        return None
+    timestamp = _valid_wayback_timestamp(value.get("timestamp"))
+    if not timestamp:
+        return None
+    if not start <= snapshot_moment(timestamp).date() <= end:
+        return None
+    return {**value, "timestamp": timestamp}
+
+
+def _cache_match(
+    matches: dict[str, Any],
+    local_date: dt.date,
+    slot: int,
+    *,
+    timestamp: str,
+    distance_seconds: int | None,
+    cdx_url: str,
+    source: str,
+) -> None:
+    value: dict[str, Any] = {
+        "timestamp": timestamp,
+        "source": source,
+    }
+    if distance_seconds is not None:
+        value["distanceSeconds"] = distance_seconds
+    if cdx_url:
+        value["cdxUrl"] = cdx_url
+    matches.setdefault(local_date.isoformat(), {})[str(slot)] = value
+
+
 def discover_snapshots(
     start: dt.date,
     end: dt.date,
@@ -397,8 +536,10 @@ def discover_snapshots(
     api_url: str,
     cdx_api: str = CDX_API,
     excluded_dates: set[dt.date] | None = None,
+    match_cache: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     snapshots: dict[str, dict[str, Any]] = {}
+    cached_matches = match_cache if isinstance(match_cache, dict) else {}
     if cadence == "3h":
         chunk_start = start
         while chunk_start <= end:
@@ -411,7 +552,20 @@ def discover_snapshots(
                 for local_date in target_dates(chunk_start, chunk_end, "daily")
                 if local_date not in (excluded_dates or set())
             ]
-            if active_dates:
+            missing_targets = [
+                (local_date, slot)
+                for local_date in active_dates
+                for slot in range(core.SLOT_COUNT)
+                if _cached_match(
+                    cached_matches,
+                    local_date,
+                    slot,
+                    start=start,
+                    end=end,
+                )
+                is None
+            ]
+            if missing_targets:
                 try:
                     candidates = query_cdx_homepage_range(
                         chunk_start,
@@ -424,20 +578,47 @@ def discover_snapshots(
                         f"{chunk_start.isoformat()}..{chunk_end.isoformat()}: {exc}"
                     )
                     candidates = []
+            else:
+                candidates = []
+            if active_dates:
                 for local_date in active_dates:
                     for slot in range(core.SLOT_COUNT):
-                        if not candidates:
-                            print(
-                                f"No snapshot near {local_date.isoformat()} "
-                                f"slot={slot}"
-                            )
-                            continue
-                        center = slot_center(local_date, slot)
-                        candidate = min(
-                            candidates,
-                            key=lambda item: abs(item["moment"] - center),
+                        cached = _cached_match(
+                            cached_matches,
+                            local_date,
+                            slot,
+                            start=start,
+                            end=end,
                         )
-                        timestamp = str(candidate["timestamp"])
+                        candidate = None
+                        if cached:
+                            timestamp = str(cached["timestamp"])
+                            cdx_url = str(cached.get("cdxUrl") or "")
+                        else:
+                            if not candidates:
+                                print(
+                                    f"No snapshot near {local_date.isoformat()} "
+                                    f"slot={slot}"
+                                )
+                                continue
+                            center = slot_center(local_date, slot)
+                            candidate = min(
+                                candidates,
+                                key=lambda item: abs(item["moment"] - center),
+                            )
+                            timestamp = str(candidate["timestamp"])
+                            cdx_url = str(candidate.get("cdxUrl") or "")
+                            _cache_match(
+                                cached_matches,
+                                local_date,
+                                slot,
+                                timestamp=timestamp,
+                                distance_seconds=int(
+                                    abs(candidate["moment"] - center).total_seconds()
+                                ),
+                                cdx_url=cdx_url,
+                                source="cdx",
+                            )
                         captured_date = snapshot_moment(timestamp).date()
                         if not start <= captured_date <= end:
                             print(
@@ -451,21 +632,38 @@ def discover_snapshots(
                                 "timestamp": timestamp,
                                 "original": ORIGINAL_PAGE,
                                 "availabilityUrl": "",
-                                "cdxUrl": candidate["cdxUrl"],
+                                "cdxUrl": cdx_url,
                                 "targetDate": local_date.isoformat(),
                                 "targetSlot": slot,
                                 "targetSlots": [],
+                                "targetMappings": [],
                             },
                         )
                         snapshot.setdefault("targetSlots", []).append(slot)
+                        snapshot.setdefault("targetMappings", []).append(
+                            {"date": local_date.isoformat(), "slot": slot}
+                        )
                         if snapshot["targetSlot"] == slot:
+                            source = "cache" if cached else "cdx"
                             print(
-                                f"Discovered {timestamp} near "
-                                f"{local_date.isoformat()} slot={slot}"
+                                f"Matched {timestamp} near "
+                                f"{local_date.isoformat()} slot={slot} "
+                                f"source={source}"
                             )
             chunk_start = chunk_end + dt.timedelta(days=1)
         for snapshot in snapshots.values():
             snapshot["targetSlots"] = sorted(set(snapshot.get("targetSlots") or []))
+            snapshot["targetMappings"] = sorted(
+                {
+                    (str(item.get("date") or ""), int(item.get("slot")))
+                    for item in snapshot.get("targetMappings") or []
+                    if isinstance(item, dict) and str(item.get("date") or "")
+                }
+            )
+            snapshot["targetMappings"] = [
+                {"date": date_text, "slot": slot}
+                for date_text, slot in snapshot["targetMappings"]
+            ]
         return [snapshots[key] for key in sorted(snapshots)]
     else:
         targets = (
@@ -506,19 +704,70 @@ def discover_snapshots(
                 "targetDate": target.isoformat(),
                 "targetSlot": slot,
                 "targetSlots": [],
+                "targetMappings": [],
             },
         )
         if slot is not None:
             snapshot.setdefault("targetSlots", []).append(slot)
+            snapshot.setdefault("targetMappings", []).append(
+                {"date": target.isoformat(), "slot": slot}
+            )
         print(f"Discovered {timestamp} near {target.isoformat()}")
     for snapshot in snapshots.values():
         snapshot["targetSlots"] = sorted(set(snapshot.get("targetSlots") or []))
     return [snapshots[key] for key in sorted(snapshots)]
 
 
-def imported_wayback_slots() -> dict[str, set[int]]:
+def archive_is_reusable(folder: Path, manifest: dict[str, Any]) -> bool:
+    if manifest.get("completeness") == "partial":
+        return False
+    if manifest.get("missing_assets"):
+        return False
+    assets = manifest.get("assets")
+    if isinstance(assets, list):
+        for asset in assets:
+            if not isinstance(asset, dict):
+                continue
+            local_file = str(asset.get("local_file") or "")
+            if local_file and not (folder / local_file).is_file():
+                return False
+    return True
+
+
+def imported_wayback_matches(
+    *,
+    reusable_only: bool = False,
+) -> dict[tuple[str, int], set[str]]:
+    matches: dict[tuple[str, int], set[str]] = {}
+    for folder, manifest in core.iter_archive_manifests():
+        if reusable_only and not archive_is_reusable(folder, manifest):
+            continue
+        for observation in core.manifest_observations(manifest):
+            date_text = str(observation.get("date") or "")
+            try:
+                dt.date.fromisoformat(date_text)
+            except ValueError:
+                continue
+            source = observation.get("source") or {}
+            timestamp = _valid_wayback_timestamp(
+                source.get("waybackTimestamp")
+                or source.get("homepageWaybackTimestamp")
+            )
+            if not timestamp:
+                continue
+            for slot in core.manifest_slots(observation):
+                matches.setdefault((date_text, slot), set()).add(timestamp)
+    return matches
+
+
+def imported_wayback_slots(
+    *,
+    reusable_only: bool = False,
+) -> dict[str, set[int]]:
     timestamps: dict[str, set[int]] = {}
-    for _, manifest in core.iter_archive_manifests():
+    for folder, manifest in core.iter_archive_manifests():
+        if reusable_only and not archive_is_reusable(folder, manifest):
+            continue
         for observation in core.manifest_observations(manifest):
             source = observation.get("source") or {}
             timestamp = str(source.get("waybackTimestamp") or "")
@@ -543,6 +792,31 @@ def snapshot_target_slots(snapshot: dict[str, Any]) -> list[int]:
     if single:
         return single
     return [core.slot_index(snapshot_moment(snapshot["timestamp"]))]
+
+
+def snapshot_target_mappings(snapshot: dict[str, Any]) -> list[tuple[str, int]]:
+    mappings: list[tuple[str, int]] = []
+    raw_mappings = snapshot.get("targetMappings")
+    if isinstance(raw_mappings, list):
+        for item in raw_mappings:
+            if not isinstance(item, dict):
+                continue
+            date_text = str(item.get("date") or "")
+            try:
+                dt.date.fromisoformat(date_text)
+                slot = core.normalize_slots([item.get("slot")])
+            except ValueError:
+                continue
+            if slot:
+                mappings.append((date_text, slot[0]))
+    if mappings:
+        return sorted(set(mappings))
+    date_text = snapshot_target_date(snapshot)
+    if date_text:
+        return [(date_text, slot) for slot in snapshot_target_slots(snapshot)]
+    timestamp = str(snapshot.get("timestamp") or "")
+    return [(snapshot_moment(timestamp).date().isoformat(), slot)
+            for slot in snapshot_target_slots(snapshot)]
 
 
 def snapshot_target_date(snapshot: dict[str, Any]) -> str | None:
@@ -2544,7 +2818,7 @@ def main() -> None:
         "--checkpoint-every",
         type=int,
         default=0,
-        help="Run --checkpoint-script after this many created/updated records.",
+        help="Run --checkpoint-script after this many completed capture actions.",
     )
     parser.add_argument(
         "--checkpoint-script",
@@ -2616,6 +2890,20 @@ def main() -> None:
         ) as exc:
             parser.error(str(exc))
 
+    match_cache = load_wayback_match_cache() if args.cadence == "3h" else None
+    if match_cache is not None:
+        archive_matches = imported_wayback_matches(reusable_only=True)
+        cached_matches = match_cache.setdefault("matches", {})
+        for (date_text, slot), timestamps in archive_matches.items():
+            if not timestamps:
+                continue
+            date_matches = cached_matches.setdefault(date_text, {})
+            if str(slot) not in date_matches:
+                date_matches[str(slot)] = {
+                    "timestamp": max(timestamps),
+                    "source": "archive",
+                }
+
     if args.snapshot:
         try:
             snapshot_values = [
@@ -2648,6 +2936,9 @@ def main() -> None:
             api_url=args.availability_api,
             cdx_api=args.cdx_api,
             excluded_dates=reference_covered_dates,
+            match_cache=(match_cache or {}).get("matches")
+            if match_cache is not None
+            else None,
         )
         if (
             args.provider == "auto"
@@ -2678,6 +2969,10 @@ def main() -> None:
             except Exception as exc:
                 print(f"Palxiao date discovery unavailable: {exc}")
 
+    match_cache_changed = False
+    if match_cache is not None:
+        match_cache_changed = save_wayback_match_cache(match_cache)
+
     if reference_covered_dates:
         before_reference_filter = len(snapshots)
         snapshots = [
@@ -2702,11 +2997,18 @@ def main() -> None:
         snapshots = snapshots[: args.limit]
     skipped_known = 0
     if not args.force:
-        known_slots = imported_wayback_slots()
+        known_slots = imported_wayback_slots(reusable_only=True)
+        known_matches = imported_wayback_matches(reusable_only=True)
         known_palxiao = imported_palxiao_dates()
         def is_known(snapshot: dict[str, Any]) -> bool:
             if snapshot.get("palxiaoDate") in known_palxiao:
                 return True
+            mappings = snapshot_target_mappings(snapshot)
+            if mappings:
+                return all(
+                    snapshot["timestamp"] in known_matches.get(mapping, set())
+                    for mapping in mappings
+                )
             existing_slots = known_slots.get(snapshot["timestamp"], set())
             target = set(snapshot_target_slots(snapshot))
             return bool(existing_slots) and target.issubset(existing_slots)
@@ -2723,12 +3025,32 @@ def main() -> None:
     if args.discovery_only:
         print(json.dumps(snapshots, ensure_ascii=False, indent=2))
         return
+
+    existing_index_changed = core.rebuild_index()
+    if existing_index_changed:
+        print("Rebuilt index from existing archives before historical capture.")
+        if args.checkpoint_script:
+            run_checkpoint(
+                args.checkpoint_script,
+                processed=0,
+                succeeded=0,
+                changed=1,
+                final=False,
+            )
     if not snapshots:
         if skipped_known:
+            if args.checkpoint_script and match_cache_changed:
+                run_checkpoint(
+                    args.checkpoint_script,
+                    processed=0,
+                    succeeded=0,
+                    changed=1,
+                    final=True,
+                )
             print("All discovered Wayback snapshots were already imported.")
             return
         if reference_covered_dates:
-            if args.checkpoint_script:
+            if args.checkpoint_script and match_cache_changed:
                 run_checkpoint(
                     args.checkpoint_script,
                     processed=0,
@@ -2742,6 +3064,7 @@ def main() -> None:
 
     results: list[dict[str, Any]] = []
     failures: list[dict[str, str]] = []
+    actions_since_checkpoint = 0
     changed_since_checkpoint = 0
     processed = 0
     for processed, snapshot in enumerate(snapshots, start=1):
@@ -2758,6 +3081,7 @@ def main() -> None:
             )
             results.append(result)
             print(json.dumps(result, ensure_ascii=False))
+            actions_since_checkpoint += 1
             if result["status"] in {"created", "updated"}:
                 changed_since_checkpoint += 1
         except Exception as exc:
@@ -2771,7 +3095,7 @@ def main() -> None:
 
         if (
             args.checkpoint_script
-            and changed_since_checkpoint >= args.checkpoint_every
+            and actions_since_checkpoint >= args.checkpoint_every
             and processed < len(snapshots)
         ):
             run_checkpoint(
@@ -2781,6 +3105,7 @@ def main() -> None:
                 changed=changed_since_checkpoint,
                 final=False,
             )
+            actions_since_checkpoint = 0
             changed_since_checkpoint = 0
 
     if args.checkpoint_script:

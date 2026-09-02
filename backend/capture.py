@@ -2846,7 +2846,7 @@ def archive_capture(
     }
 
 
-def rebuild_index() -> None:
+def rebuild_index() -> bool:
     families: dict[str, dict[str, Any]] = {}
 
     for folder, item in iter_archive_manifests():
@@ -2955,11 +2955,25 @@ def rebuild_index() -> None:
         "records": records,
     }
 
+    index_path = DATA_DIR / "index.json"
+    try:
+        previous = json.loads(index_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        previous = None
+    if isinstance(previous, dict):
+        comparable_previous = dict(previous)
+        comparable_payload = dict(payload)
+        comparable_previous["generatedAt"] = ""
+        comparable_payload["generatedAt"] = ""
+        if comparable_previous == comparable_payload:
+            return False
+
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    (DATA_DIR / "index.json").write_text(
+    index_path.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    return True
 
 
 def save_diagnostic(page, *, reason: str, before=None, after=None) -> None:

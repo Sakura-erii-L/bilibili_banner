@@ -255,7 +255,7 @@ class TimedVariantIndexTests(unittest.TestCase):
                 encoding="utf-8",
             )
 
-        capture.rebuild_index()
+        self.assertTrue(capture.rebuild_index())
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
         self.assertEqual(index["version"], 11.0)
         self.assertEqual(len(index["records"]), 1)
@@ -265,6 +265,7 @@ class TimedVariantIndexTests(unittest.TestCase):
             [[2], [6]],
         )
         self.assertNotIn("observedSlots", index["records"][0]["variants"][0])
+        self.assertFalse(capture.rebuild_index())
 
     def test_duplicate_asset_adds_slot_once_and_upgrades_effect(self) -> None:
         folder = capture.ARCHIVE_DIR / "existing"

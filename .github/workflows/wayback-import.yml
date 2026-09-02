@@ -46,6 +46,11 @@ on:
         required: true
         type: boolean
         default: false
+      clear_archive:
+        description: "Clear existing historical archives before importing"
+        required: true
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -89,6 +94,7 @@ jobs:
           git -C "$REFERENCE_REPO" checkout --detach "$REFERENCE_COMMIT"
 
       - name: Clear historical archive and index
+        if: inputs.clear_archive == true
         run: |
           rm -rf data/archive
           mkdir -p data/archive
@@ -126,7 +132,7 @@ jobs:
             --to-date "$TO_DATE"
             --cadence "$CADENCE"
             --limit "$LIMIT"
-            --checkpoint-every 100
+            --checkpoint-every 1
             --checkpoint-script scripts/checkpoint_wayback.py
             --reference-repo "$REFERENCE_REPO"
             --reference-commit "45b760bfa52166727123d775925dea887ac7d71a"
