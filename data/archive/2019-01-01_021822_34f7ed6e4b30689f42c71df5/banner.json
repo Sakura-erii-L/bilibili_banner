@@ -218,7 +218,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-01-01T02:18:22+08:00",
+  "lastObservedAt": "2019-01-01T16:36:48+08:00",
   "type": [
     "static"
   ],
@@ -391,7 +391,8 @@
   "layoutHash": "3f4544a6cbd458b81c5e471b",
   "familyId": "2019-01-01_3f4544a6cbd4",
   "slots": [
-    1
+    1,
+    6
   ],
   "observations": [
     {
@@ -401,7 +402,8 @@
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "slots": [
-        1
+        1,
+        6
       ],
       "familyId": "2019-01-01_3f4544a6cbd4",
       "source": {
