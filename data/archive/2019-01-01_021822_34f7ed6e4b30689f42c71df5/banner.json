@@ -218,7 +218,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-01-01T22:53:35+08:00",
+  "lastObservedAt": "2019-01-03T08:51:14+08:00",
   "type": [
     "static"
   ],
@@ -392,6 +392,8 @@
   "familyId": "2019-01-01_3f4544a6cbd4",
   "slots": [
     1,
+    3,
+    4,
     6,
     7
   ],
@@ -429,6 +431,42 @@
         ],
         "stylesheetUrls": [
           "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.413834f599ef9d5bcef0a91fa504b36911b3ffcf.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-01-03T08:51:14+08:00",
+      "lastObservedAt": "2019-01-03T08:51:14+08:00",
+      "date": "2019-01-03",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        3,
+        4
+      ],
+      "familyId": "2019-01-03_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190103005114id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190103005114",
+        "homepageWaybackTimestamp": "20190103005114",
+        "waybackReplay": "https://web.archive.org/web/20190103005114id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190103010000",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/6c42c40ed54f4bb5ea491894aff693878afa6580.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.406cee7878545872b8dfbe73071d665dfb287c67.css"
         ],
         "scriptUrls": []
       }
