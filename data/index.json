@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-02T21:21:33+08:00",
+  "generatedAt": "2026-09-02T21:33:00+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -1146,7 +1146,7 @@
       "missing_assets": [],
       "contentHash": "64f11927995c068e170b5ec1",
       "manifest": "./data/archive/2022-09-23_000000_64f11927995c068e170b5ec1/banner.json",
-      "variantCount": 2,
+      "variantCount": 3,
       "variants": [
         {
           "contentHash": "64f11927995c068e170b5ec1",
@@ -1199,6 +1199,32 @@
           ],
           "manifest": "./data/archive/2022-09-23_000000_170bb261968007a8ee71ede5/banner.json",
           "referenceMode": "interactive"
+        },
+        {
+          "contentHash": "376edd32ec5f9139bf4fb047",
+          "canonicalContentHash": "c3500e4dc5d5fc4a15f9ec71",
+          "sourceFingerprint": "f31789f717a21e2a82a11321",
+          "capturedAt": "2022-12-21T00:00:00+08:00",
+          "lastObservedAt": "2022-12-21T00:00:00+08:00",
+          "mode": "static",
+          "type": [
+            "interactive"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2022-09-23_000000_376edd32ec5f9139bf4fb047/banner.json",
+          "referenceMode": "normal"
         }
       ]
     },
@@ -1222,7 +1248,7 @@
       "missing_assets": [],
       "contentHash": "06bebfb05ba0a03188f49e8f",
       "manifest": "./data/archive/2022-06-21_000000_06bebfb05ba0a03188f49e8f/banner.json",
-      "variantCount": 2,
+      "variantCount": 3,
       "variants": [
         {
           "contentHash": "06bebfb05ba0a03188f49e8f",
@@ -1249,6 +1275,32 @@
           ],
           "manifest": "./data/archive/2022-06-21_000000_06bebfb05ba0a03188f49e8f/banner.json",
           "referenceMode": "interactive"
+        },
+        {
+          "contentHash": "79c3cff50d7e16483a8b48f5",
+          "canonicalContentHash": "b7df8565766ba48788a5870f",
+          "sourceFingerprint": "cf06e719688939bc2e2a7e0b",
+          "capturedAt": "2022-09-22T00:00:00+08:00",
+          "lastObservedAt": "2022-09-22T00:00:00+08:00",
+          "mode": "static",
+          "type": [
+            "interactive"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2022-06-21_000000_79c3cff50d7e16483a8b48f5/banner.json",
+          "referenceMode": "normal"
         },
         {
           "contentHash": "bf216c50c79d27ae193b9343",
