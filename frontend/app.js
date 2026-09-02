@@ -521,6 +521,7 @@ function showUnsupportedBanner(shell, message) {
 }
 
 function createReferenceBanner(shell, manifest, manifestUrl) {
+  shell._referenceBannerSpringCleanup?.();
   const referenceManifest = manifest.reference?.manifest;
   if (!referenceManifest) {
     showUnsupportedBanner(shell, "参考 Banner 缺少本地 manifest");
@@ -543,6 +544,12 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
   frame.style.border = "0";
   frame.style.maxWidth = "100%";
   frame.style.minWidth = "0";
+  const isSpringGame = Boolean(manifest.extensions?.springGame2022);
+  let springDocument = null;
+  let springBanner = null;
+  let springDocumentObserver = null;
+  let springClickHandler = null;
+  let springCollapsedHeight = null;
   let expanded = false;
   const updateExpandedSize = heightOverride => {
     if (!expanded) return;
@@ -556,6 +563,12 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
     shell.style.maxHeight = "none";
     frame.style.width = `${width}px`;
     frame.style.height = `${height}px`;
+    if (isSpringGame && springBanner) {
+      const innerWidth = springBanner.clientWidth;
+      if (innerWidth > 0) {
+        springBanner.style.height = `${innerWidth / (16 / 3)}px`;
+      }
+    }
     try {
       frame.contentWindow?.dispatchEvent(new Event("resize"));
     } catch (_error) {
@@ -570,14 +583,60 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
     frame.style.width = "100%";
     frame.style.height = "100%";
   };
+  const syncSpringBannerSize = () => {
+    if (!isSpringGame || !springBanner) return;
+    const width = springBanner.clientWidth;
+    const inlineHeight = Number.parseFloat(springBanner.style.height);
+    const collapsedHeight = Number(springCollapsedHeight);
+    const springExpanded = width > 0
+      && Number.isFinite(inlineHeight)
+      && Number.isFinite(collapsedHeight)
+      && Math.abs(inlineHeight - collapsedHeight) > 1;
+    if (springExpanded) {
+      expanded = true;
+      updateExpandedSize(inlineHeight);
+    } else if (expanded) {
+      collapseReferenceBanner();
+    }
+  };
+  const setupSpringObservers = () => {
+    if (!isSpringGame || !frame.contentDocument) return;
+    springDocument = frame.contentDocument;
+    springClickHandler = () => window.setTimeout(syncSpringBannerSize, 0);
+    springDocument.addEventListener("click", springClickHandler, true);
+    springDocumentObserver = new MutationObserver(() => {
+      const nextBanner = springDocument.querySelector("#bili-banner > .bili-banner");
+      if (nextBanner !== springBanner) {
+        springBanner = nextBanner;
+        springCollapsedHeight = springBanner?.getBoundingClientRect().height ?? null;
+      }
+      syncSpringBannerSize();
+    });
+    springDocumentObserver.observe(springDocument.documentElement, {
+      attributes: true,
+      attributeFilter: ["style"],
+      childList: true,
+      subtree: true,
+    });
+    springBanner = springDocument.querySelector("#bili-banner > .bili-banner");
+    springCollapsedHeight = springBanner?.getBoundingClientRect().height ?? null;
+    syncSpringBannerSize();
+  };
+  shell._referenceBannerSpringCleanup = () => {
+    springDocumentObserver?.disconnect();
+    springDocument?.removeEventListener("click", springClickHandler, true);
+    springDocumentObserver = null;
+    springDocument = null;
+    springBanner = null;
+    springCollapsedHeight = null;
+  };
+  frame.addEventListener("load", setupSpringObservers);
   const onMessage = event => {
     if (event.source !== frame.contentWindow) return;
-    const message = event.data;
-    if (message?.type !== "bilibili-banner-expand"
-      && message?.type !== "bilibili-banner-size") return;
-    expanded = Boolean(message.expanded);
+    if (event.data?.type !== "bilibili-banner-expand") return;
+    expanded = Boolean(event.data.expanded);
     if (expanded) {
-      updateExpandedSize(message.height);
+      updateExpandedSize();
     } else {
       collapseReferenceBanner();
     }
@@ -595,7 +654,7 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
     #bili-banner,.bili-banner,.summer-banner,.autumn-banner{box-sizing:border-box;width:100% !important;max-width:100% !important;min-width:0 !important}
   </style></head><body><div id="bili-banner"></div>
   <script src="${bundleUrl}"></script>
-  <script>const originalDispatchEvent=EventTarget.prototype.dispatchEvent;EventTarget.prototype.dispatchEvent=function(event){if(event?.type==="banner-expand")window.parent.postMessage({type:"bilibili-banner-expand",expanded:Boolean(event.detail)},"*");return originalDispatchEvent.call(this,event)};const springGame=${JSON.stringify(Boolean(manifest.extensions?.springGame2022))};if(springGame){let observedBanner=null,lastExpanded=!1;const notifySpringSize=()=>{const banner=document.querySelector("#bili-banner > .bili-banner");if(!banner)return;if(banner!==observedBanner){observedBanner=banner;lastExpanded=!1;springObserver?.observe(banner)}const width=banner.clientWidth,height=banner.getBoundingClientRect().height,target=width/(16/3),expanded=width>0&&height>target*.75;if(expanded===lastExpanded)return;lastExpanded=expanded;window.parent.postMessage({type:"bilibili-banner-size",expanded,height},"*")};const springObserver=typeof ResizeObserver==="function"?new ResizeObserver(()=>requestAnimationFrame(notifySpringSize)):null;new MutationObserver(notifySpringSize).observe(document.documentElement,{attributes:!0,attributeFilter:["style"],childList:!0,subtree:!0});requestAnimationFrame(notifySpringSize)}BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
+  <script>const originalDispatchEvent=EventTarget.prototype.dispatchEvent;EventTarget.prototype.dispatchEvent=function(event){if(event?.type==="banner-expand")window.parent.postMessage({type:"bilibili-banner-expand",expanded:Boolean(event.detail)},"*");return originalDispatchEvent.call(this,event)};BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
   </body></html>`;
   stage.appendChild(frame);
 }
