@@ -47,8 +47,7 @@ def main() -> None:
         if first_push.returncode != 0:
             run(["git", "pull", "--rebase", "origin", "main"])
             run(["git", "push", "origin", "HEAD:main"])
-        if not final:
-            dispatch_pages()
+        dispatch_pages()
 
 
 if __name__ == "__main__":

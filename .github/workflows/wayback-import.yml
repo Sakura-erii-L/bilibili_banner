@@ -108,7 +108,7 @@ jobs:
           BANNER_TIME_SLOT_MINUTES: "180"
           GH_TOKEN: ${{ github.token }}
           PYTHONUNBUFFERED: "1"
-          WAYBACK_CHECKPOINT_PAGES: "0"
+          WAYBACK_CHECKPOINT_PAGES: "1"
           WAYBACK_CHECKPOINT_PUSH: "1"
         run: |
           git config user.name "github-actions[bot]"
