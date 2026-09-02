@@ -15,7 +15,13 @@ from backend.providers.mikufan039_reference import (
 )
 
 
-def write_reference_manifest(root: Path, reference_id: str, extension: dict | None = None) -> None:
+def write_reference_manifest(
+    root: Path,
+    reference_id: str,
+    extension: dict | None = None,
+    *,
+    is_split_layer: int = 1,
+) -> None:
     folder = root / "res" / "bilibanner" / reference_id
     (folder / "bfs").mkdir(parents=True, exist_ok=True)
     (folder / "bfs" / "layer.png").write_bytes(reference_id.encode("utf-8"))
@@ -35,7 +41,7 @@ def write_reference_manifest(root: Path, reference_id: str, extension: dict | No
             "id": 1,
             "title": reference_id,
             "litpic": "bfs/layer.png",
-            "is_split_layer": 1,
+            "is_split_layer": is_split_layer,
             "split_layer": json.dumps(split, ensure_ascii=False),
         },
     }
@@ -105,7 +111,7 @@ class MikuFan039ReferenceTests(unittest.TestCase):
                 "57600": [{"layers": [{"resources": [{"src": "bfs/layer.png"}]}]}],
             }},
         )
-        write_reference_manifest(root, "2022spring")
+        write_reference_manifest(root, "2022spring", is_split_layer=0)
         write_reference_manifest(root, "2022springAdv", {"springGame2022": {}})
         return root
 
@@ -184,10 +190,10 @@ class MikuFan039ReferenceTests(unittest.TestCase):
                 self.assertEqual(index["records"][0]["dateStart"], "2022-03-01")
                 self.assertEqual(index["records"][0]["dateEnd"], "2022-03-02")
                 self.assertEqual(index["records"][0]["variantCount"], 2)
-                self.assertTrue(all(
-                    variant.get("referenceMode") in {"normal", "interactive"}
-                    for variant in index["records"][0]["variants"]
-                ))
+                self.assertEqual(
+                    {variant.get("referenceMode") for variant in index["records"][0]["variants"]},
+                    {"normal", "interactive"},
+                )
                 manifests = list(data.joinpath("archive").glob("*/banner.json"))
                 self.assertEqual(len(manifests), 2)
                 for path in manifests:

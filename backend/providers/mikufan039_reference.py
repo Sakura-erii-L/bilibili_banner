@@ -400,7 +400,9 @@ class ReferenceRepository:
                 cover_file = static_file
             else:
                 missing.append(f"cover: {entry.cover}")
-        is_game = bool(set(extensions) & KNOWN_GAME_EXTENSIONS)
+        is_game = bool(data.get("is_split_layer")) and bool(
+            set(extensions) & KNOWN_GAME_EXTENSIONS
+        )
         model = "mikufan-reference-v1"
         mode = "split" if bool(data.get("is_split_layer")) or layers else "static"
         if not layers and static_file:
