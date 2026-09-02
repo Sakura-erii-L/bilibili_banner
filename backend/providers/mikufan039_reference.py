@@ -492,7 +492,12 @@ class ReferenceRepository:
             "static": static,
             "layers": payload["layers"],
             "auxiliaryAssets": auxiliary,
-            "interaction": {"model": payload["model"], "effects": ["reference"]},
+            "interaction": {
+                "model": payload["model"],
+                "effects": ["reference"]
+                if payload["referenceMode"] == "interactive"
+                else [],
+            },
             "referenceMode": payload["referenceMode"],
             "preview_image": payload["coverFile"],
             "sourceFiles": source_files,

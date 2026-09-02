@@ -260,6 +260,7 @@ class MikuFan039ReferenceTests(unittest.TestCase):
                 Path(target),
             )
             self.assertEqual(manifest["mode"], "static")
+            self.assertEqual(manifest["type"], ["static"])
             self.assertEqual(manifest["referenceMode"], "normal")
             self.assertEqual(manifest["layers"], [])
             copied = Path(target) / "blackboard" / "static" / "20220314" / "00979505aec5edd6e5c2f8c096fa0f62" / "ZlmaPe9AZv.mp4"
