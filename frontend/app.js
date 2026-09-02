@@ -1,4 +1,11 @@
-import { sampleCurve, selectTimedVariant, signedCubicBezier, wrapDynamicValue } from "./interaction.js";
+import {
+  formatSlotRanges,
+  minutesInTimeZone,
+  sampleCurve,
+  selectTimedVariant,
+  signedCubicBezier,
+  wrapDynamicValue,
+} from "./interaction.js";
 
 const gallery = document.getElementById("gallery");
 const yearSelect = document.getElementById("year");
@@ -33,6 +40,77 @@ function resolveAsset(manifestUrl, file) {
   return new URL(file, new URL(manifestUrl, location.href)).href;
 }
 
+function supportsReferenceInteractive() {
+  try {
+    const canvas = document.createElement("canvas");
+    const hasWebgl2 = Boolean(canvas.getContext("webgl2"));
+    const hasPixelated = typeof CSS === "undefined"
+      || typeof CSS.supports !== "function"
+      || CSS.supports("image-rendering", "pixelated");
+    const hasShadowDom = typeof document.createElement("div").attachShadow === "function";
+    const enoughMemory = !navigator.deviceMemory || navigator.deviceMemory >= 4;
+    const connection = navigator.connection;
+    const usableNetwork = !connection || !["slow-2g", "2g"].includes(connection.effectiveType);
+    return hasWebgl2 && hasPixelated && hasShadowDom && enoughMemory && usableNetwork;
+  } catch (_error) {
+    return false;
+  }
+}
+
+function timeExtension(manifest) {
+  return manifest?.extensions?.time || manifest?.api?.extensions?.time || null;
+}
+
+function currentTimeConfiguration(manifest) {
+  const timeMap = timeExtension(manifest);
+  if (!timeMap || typeof timeMap !== "object") return null;
+  const now = new Date();
+  const seconds = minutesInTimeZone(
+    now,
+    manifest.timeZone || "Asia/Shanghai",
+  ) * 60 + now.getSeconds();
+  const keys = Object.keys(timeMap)
+    .map(Number)
+    .filter(Number.isFinite)
+    .sort((left, right) => left - right);
+  const key = keys.filter(value => value <= seconds).pop();
+  const candidates = key === undefined ? [] : timeMap[String(key)];
+  if (!Array.isArray(candidates) || !candidates.length) return null;
+  return candidates[Math.floor(Math.random() * candidates.length)] || null;
+}
+
+function manifestWithCurrentTimeConfiguration(manifest) {
+  const configuration = currentTimeConfiguration(manifest);
+  if (!configuration || !Array.isArray(configuration.layers)) return manifest;
+  const layers = configuration.layers.map((layer, layerIndex) => {
+    const resources = Array.isArray(layer.resources)
+      ? layer.resources.map((resource, resourceIndex) => ({
+        ...resource,
+        resourceIndex,
+        file: resource.file || resource.src || "",
+      }))
+      : [];
+    const first = resources[0] || {};
+    return {
+      ...layer,
+      index: layer.index ?? layer.id ?? layerIndex,
+      file: layer.file || first.file || layer.src || "",
+      resources,
+      tag: layer.tag || first.tag || "img",
+      assetType: layer.assetType || first.assetType || "image",
+      width: Number(layer.width || 0),
+      height: Number(layer.height || 0),
+      naturalWidth: Number(layer.naturalWidth || 0),
+      naturalHeight: Number(layer.naturalHeight || 0),
+      objectFit: layer.objectFit || "fill",
+      objectPosition: layer.objectPosition || "50% 50%",
+      transform: layer.transform || [1, 0, 0, 1, 0, 0],
+      opacity: layer.opacity || [1, 1],
+    };
+  }).filter(layer => layer.file || layer.resources.length);
+  return { ...manifest, mode: "split", layers };
+}
+
 function applyAnimation(element, animation) {
   if (!animation?.name || animation.name === "none") return;
   element.style.animationName = animation.name;
@@ -50,6 +128,7 @@ function applyAnimation(element, animation) {
 
 
 function createHeaderApiBanner(shell, manifest, manifestUrl) {
+  manifest = manifestWithCurrentTimeConfiguration(manifest);
   const stage = shell.querySelector(".stage");
   stage.innerHTML = "";
   stage.classList.add("animated-banner");
@@ -433,8 +512,39 @@ function showUnsupportedBanner(shell, message) {
   stage.innerHTML = `<div class="loading error">${message}</div>`;
 }
 
+function createReferenceBanner(shell, manifest, manifestUrl) {
+  const referenceManifest = manifest.reference?.manifest;
+  if (!referenceManifest) {
+    showUnsupportedBanner(shell, "参考 Banner 缺少本地 manifest");
+    return;
+  }
+  const stage = shell.querySelector(".stage");
+  stage.innerHTML = "";
+  stage.classList.add("animated-banner");
+  const frame = document.createElement("iframe");
+  frame.title = "参考 Banner 本地回放";
+  frame.loading = "lazy";
+  frame.referrerPolicy = "no-referrer";
+  frame.style.width = "100%";
+  frame.style.height = "240px";
+  frame.style.border = "0";
+  const localManifestUrl = resolveAsset(manifestUrl, referenceManifest);
+  const bundleUrl = new URL("./assets/mikufan-bilibanner.js", location.href).href;
+  frame.srcdoc = `<!doctype html><html><head><meta charset="utf-8"><style>
+    html,body,#bili-banner{margin:0;width:100%;height:100%;overflow:hidden;background:#000}
+  </style></head><body><div id="bili-banner"></div>
+  <script src="${bundleUrl}"></script>
+  <script>BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
+  </body></html>`;
+  stage.appendChild(frame);
+}
+
 function createInteractiveBanner(shell, manifest, manifestUrl) {
   const model = manifest.interaction?.model || "none";
+  if (model === "mikufan-reference-v1") {
+    createReferenceBanner(shell, manifest, manifestUrl);
+    return;
+  }
   if (model === "bilibili-header-api-v1" && manifest.layers?.length) {
     createHeaderApiBanner(shell, manifest, manifestUrl);
     return;
@@ -753,6 +863,11 @@ async function loadEntry(entryEl) {
   const manifestUrl = entryEl.dataset.manifest;
   const shell = entryEl.querySelector(".banner");
 
+  if (!manifestUrl) {
+    showUnsupportedBanner(shell, "当前时段未观测");
+    return;
+  }
+
   try {
     const response = await fetch(`${manifestUrl}?t=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -773,6 +888,7 @@ function selectedVariant(record) {
     record,
     new Date(),
     record.timeZone || indexData?.timeZone || "Asia/Shanghai",
+    { supportsInteractive: supportsReferenceInteractive() },
   );
 }
 
@@ -807,13 +923,17 @@ function createEntry(record) {
   const variant = selectedVariant(record);
   article.className = "entry";
   article.dataset.recordId = record.id;
-  article.dataset.manifest = variant?.manifest || record.manifest;
+  article.dataset.manifest = variant?.manifest || "";
   const head = document.createElement("div");
   head.className = "entry-head";
 
   const date = document.createElement("div");
   date.className = "entry-date";
   date.textContent = formatDate(record.date);
+  const slots = document.createElement("div");
+  slots.className = "entry-slots";
+  slots.textContent = `时段：${formatSlotRanges(variant?.slots || []) || "未观测"}`;
+  date.appendChild(slots);
 
   const meta = document.createElement("div");
   meta.className = "entry-meta";
@@ -836,12 +956,14 @@ function refreshTimedVariants() {
     const record = recordsById.get(article.dataset.recordId);
     if (!record) continue;
     const variant = selectedVariant(record);
-    const manifest = variant?.manifest || record.manifest;
+    const manifest = variant?.manifest || "";
     if (!manifest || manifest === article.dataset.manifest) continue;
 
     article.dataset.manifest = manifest;
     article.dataset.loaded = "0";
     article.querySelector(".entry-meta").textContent = recordMeta(record, variant);
+    article.querySelector(".entry-slots").textContent =
+      `时段：${formatSlotRanges(variant?.slots || []) || "未观测"}`;
     article.querySelector(".stage").innerHTML = '<div class="loading">切换时段素材……</div>';
 
     const bounds = article.getBoundingClientRect();

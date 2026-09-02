@@ -4,8 +4,10 @@ import { readFileSync } from "node:fs";
 import {
   cubicBezierValue,
   cyclicMinuteDistance,
+  formatSlotRanges,
   sampleCurve,
   selectTimedVariant,
+  slotIndexInTimeZone,
   signedCubicBezier,
   wrapDynamicValue,
 } from "../frontend/interaction.js";
@@ -21,10 +23,12 @@ assert.ok(Math.abs(wrapDynamicValue(1.2, "alternate") - 0.8) < 1e-9);
 
 const record = {
   variants: [
-    { manifest: "morning.json", observedSlots: [360], capturedAt: "2026-08-31T06:17:00+08:00" },
-    { manifest: "evening.json", observedSlots: [1080], capturedAt: "2026-08-31T18:17:00+08:00" },
+    { manifest: "morning.json", slots: [2], capturedAt: "2026-08-31T06:17:00+08:00" },
+    { manifest: "evening.json", slots: [6], capturedAt: "2026-08-31T18:17:00+08:00" },
   ],
 };
+
+assert.equal(slotIndexInTimeZone(new Date("2026-08-30T22:30:00Z")), 2);
 
 assert.equal(
   selectTimedVariant(record, new Date("2026-08-30T22:30:00Z"), "Asia/Shanghai").manifest,
@@ -34,10 +38,36 @@ assert.equal(
   selectTimedVariant(record, new Date("2026-08-31T11:30:00Z"), "Asia/Shanghai").manifest,
   "evening.json",
 );
+assert.equal(
+  selectTimedVariant(record, new Date("2026-08-31T01:30:00Z"), "Asia/Shanghai"),
+  null,
+);
+assert.equal(formatSlotRanges([0, 1]), "00:00–06:00");
+assert.equal(formatSlotRanges([0, 2, 3]), "00:00–03:00、06:00–12:00");
+
+const modes = {
+  variants: [
+    { manifest: "normal.json", slots: [0], referenceMode: "normal", capturedAt: "1" },
+    { manifest: "interactive.json", slots: [0], referenceMode: "interactive", capturedAt: "2" },
+  ],
+};
+assert.equal(
+  selectTimedVariant(modes, new Date("2026-08-31T16:00:00Z"), "Asia/Shanghai", { supportsInteractive: true }).manifest,
+  "interactive.json",
+);
+assert.equal(
+  selectTimedVariant(modes, new Date("2026-08-31T16:00:00Z"), "Asia/Shanghai", { supportsInteractive: false }).manifest,
+  "normal.json",
+);
 
 const appSource = readFileSync(new URL("../frontend/app.js", import.meta.url), "utf8");
+const referenceBundle = readFileSync(new URL("../frontend/assets/mikufan-bilibanner.js", import.meta.url), "utf8");
 assert.match(appSource, /model === "bilibili-header-api-v1"/);
 assert.match(appSource, /model === "palxiao-reconstructed-v1"/);
 assert.match(appSource, /palxiao-reconstructed-v1/);
+assert.match(appSource, /mikufan-reference-v1/);
+assert.match(appSource, /article\.dataset\.manifest = variant\?\.manifest \|\| ""/);
+assert.doesNotMatch(referenceBundle, /mikufan039\.github\.io/);
+assert.doesNotMatch(referenceBundle, /unpkg\.com\/detect-gpu/);
 
 console.log("interaction.test.mjs: OK");

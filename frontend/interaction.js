@@ -46,6 +46,56 @@ export function minutesInTimeZone(date = new Date(), timeZone = "Asia/Shanghai")
   return hour * 60 + minute;
 }
 
+export const SLOT_MINUTES = 180;
+
+export function slotIndexInTimeZone(
+  date = new Date(),
+  timeZone = "Asia/Shanghai",
+) {
+  return Math.min(7, Math.floor(minutesInTimeZone(date, timeZone) / SLOT_MINUTES));
+}
+
+function normalizeSlots(values) {
+  if (!Array.isArray(values)) return [];
+  return [...new Set(values.map(value => {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return -1;
+    return number >= 8 ? Math.floor(number / SLOT_MINUTES) : Math.floor(number);
+  }).filter(value => value >= 0 && value < 8))].sort((a, b) => a - b);
+}
+
+function variantSlots(variant) {
+  if (Array.isArray(variant?.slots)) return normalizeSlots(variant.slots);
+  return normalizeSlots(variant?.observedSlots);
+}
+
+export function formatSlotRanges(values) {
+  const slots = normalizeSlots(values);
+  const ranges = [];
+  let start = null;
+  let end = null;
+  const append = () => {
+    if (start === null || end === null) return;
+    const begin = String(start * 3).padStart(2, "0") + ":00";
+    const finish = String((end + 1) * 3).padStart(2, "0") + ":00";
+    ranges.push(`${begin}–${finish}`);
+  };
+  for (const slot of slots) {
+    if (start === null) {
+      start = slot;
+      end = slot;
+    } else if (slot === end + 1) {
+      end = slot;
+    } else {
+      append();
+      start = slot;
+      end = slot;
+    }
+  }
+  append();
+  return ranges.join("、");
+}
+
 export function cyclicMinuteDistance(a, b) {
   const distance = Math.abs(Number(a) - Number(b)) % 1440;
   return Math.min(distance, 1440 - distance);
@@ -55,34 +105,26 @@ export function selectTimedVariant(
   record,
   date = new Date(),
   timeZone = "Asia/Shanghai",
+  options = {},
 ) {
   const variants = Array.isArray(record?.variants) ? record.variants : [];
   if (!variants.length) return null;
-  if (variants.length === 1) return variants[0];
+  const currentSlot = slotIndexInTimeZone(date, timeZone);
+  const matching = variants.filter(variant => variantSlots(variant).includes(currentSlot));
+  if (!matching.length) return null;
 
-  const currentMinute = minutesInTimeZone(date, timeZone);
-  let selected = variants[0];
-  let selectedDistance = Number.POSITIVE_INFINITY;
-
-  for (const variant of variants) {
-    const slots = Array.isArray(variant.observedSlots) ? variant.observedSlots : [];
-    const distance = slots.length
-      ? Math.min(...slots.map(slot => cyclicMinuteDistance(currentMinute, slot)))
-      : Number.POSITIVE_INFINITY;
-
-    if (
-      distance < selectedDistance
-      || (
-        distance === selectedDistance
-        && String(variant.capturedAt || "") > String(selected.capturedAt || "")
-      )
-    ) {
-      selected = variant;
-      selectedDistance = distance;
-    }
+  const supportsInteractive = options.supportsInteractive === true;
+  const preferred = supportsInteractive
+    ? matching.filter(variant => variant.referenceMode === "interactive")
+    : matching.filter(variant => variant.referenceMode !== "interactive");
+  if (!supportsInteractive && !preferred.length
+      && matching.some(variant => variant.referenceMode === "interactive")) {
+    return null;
   }
-
-  return selected;
+  const candidates = preferred.length ? preferred : matching;
+  return candidates.sort((left, right) =>
+    String(right.capturedAt || "").localeCompare(String(left.capturedAt || ""))
+  )[0];
 }
 
 function cubicBezierCoordinate(t, p1, p2) {

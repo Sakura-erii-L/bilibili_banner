@@ -14,9 +14,9 @@ on:
           - wayback-html
         default: auto
       from_date:
-        description: "Start date (not earlier than 2019-08-01)"
+        description: "Start date (not earlier than 2019-01-01)"
         required: true
-        default: "2019-08-01"
+        default: "2019-01-01"
       to_date:
         description: "End date; leave empty for today"
         required: false
@@ -29,7 +29,8 @@ on:
           - monthly
           - weekly
           - daily
-        default: monthly
+          - 3h
+        default: 3h
       limit:
         description: "Maximum snapshots; 0 means all discovered"
         required: true
@@ -79,10 +80,26 @@ jobs:
         run: |
           python -m playwright install --with-deps chromium
 
+      - name: Checkout MikuFan039 reference repository
+        env:
+          REFERENCE_COMMIT: "45b760bfa52166727123d775925dea887ac7d71a"
+          REFERENCE_REPO: "${{ runner.temp }}/MikuFan039.github.io"
+        run: |
+          git clone https://github.com/MikuFan039/MikuFan039.github.io.git "$REFERENCE_REPO"
+          git -C "$REFERENCE_REPO" checkout --detach "$REFERENCE_COMMIT"
+
+      - name: Clear historical archive and index
+        run: |
+          rm -rf data/archive
+          mkdir -p data/archive
+          touch data/archive/.gitkeep
+          python -c 'import json; from pathlib import Path; Path("data/index.json").write_text(json.dumps({"version": 11, "generatedAt": "", "timeZone": "Asia/Shanghai", "timeSlotMinutes": 180, "records": []}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")'
+
       - name: Import historical Banner assets
         env:
           BANNER_PROFILE_MODE: "temporary"
           BANNER_TIMEZONE: "Asia/Shanghai"
+          BANNER_TIME_SLOT_MINUTES: "180"
           GH_TOKEN: ${{ github.token }}
           PYTHONUNBUFFERED: "1"
           WAYBACK_CHECKPOINT_PAGES: "1"
@@ -97,9 +114,10 @@ jobs:
           PROVIDER="${{ inputs.provider }}"
           FORCE="${{ inputs.force }}"
           VERIFY_DOM="${{ inputs.verify_dom }}"
-          [[ -n "$FROM_DATE" ]] || FROM_DATE="2019-08-01"
+          REFERENCE_REPO="${{ runner.temp }}/MikuFan039.github.io"
+          [[ -n "$FROM_DATE" ]] || FROM_DATE="2019-01-01"
           [[ -n "$TO_DATE" ]] || TO_DATE="$(date +%F)"
-          [[ -n "$CADENCE" ]] || CADENCE="monthly"
+          [[ -n "$CADENCE" ]] || CADENCE="3h"
           [[ -n "$LIMIT" ]] || LIMIT="0"
           [[ -n "$PROVIDER" ]] || PROVIDER="auto"
           ARGS=(
@@ -110,6 +128,8 @@ jobs:
             --limit "$LIMIT"
             --checkpoint-every 1
             --checkpoint-script scripts/checkpoint_wayback.py
+            --reference-repo "$REFERENCE_REPO"
+            --reference-commit "45b760bfa52166727123d775925dea887ac7d71a"
           )
           [[ "$FORCE" == "true" ]] && ARGS+=(--force)
           [[ "$VERIFY_DOM" == "true" ]] && ARGS+=(--verify-dom)

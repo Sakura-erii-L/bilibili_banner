@@ -32,6 +32,10 @@ try:
         PROVIDER_NAME as PALXIAO_PROVIDER_NAME,
         PalxiaoHistoryProvider,
     )
+    from .providers.mikufan039_reference import (
+        DEFAULT_COMMIT as MIKUFAN039_REFERENCE_COMMIT,
+        ReferenceRepository,
+    )
 except ImportError:
     import capture as core
     from providers import bilibili_header_api as header_api
@@ -39,6 +43,10 @@ except ImportError:
     from providers.palxiao_history import (
         PROVIDER_NAME as PALXIAO_PROVIDER_NAME,
         PalxiaoHistoryProvider,
+    )
+    from providers.mikufan039_reference import (
+        DEFAULT_COMMIT as MIKUFAN039_REFERENCE_COMMIT,
+        ReferenceRepository,
     )
 
 
@@ -60,7 +68,7 @@ RETRY_BASE_SECONDS = float(os.environ.get("WAYBACK_RETRY_BASE_SECONDS", "1.0"))
 HEADER_API_MAX_DELTA_SECONDS = int(
     os.environ.get("WAYBACK_HEADER_API_MAX_DELTA_SECONDS", str(7 * 24 * 60 * 60))
 )
-MIN_BACKFILL_DATE = dt.date(2019, 8, 1)
+MIN_BACKFILL_DATE = dt.date(2019, 1, 1)
 
 BANNER_CLASS_NAMES = {
     "animated-banner",
@@ -199,6 +207,27 @@ def target_dates(start: dt.date, end: dt.date, cadence: str) -> Iterable[dt.date
         current += step
 
 
+def target_slots(start: dt.date, end: dt.date) -> Iterable[tuple[dt.date, int]]:
+    current = start
+    while current <= end:
+        for slot in range(core.SLOT_COUNT):
+            yield current, slot
+        current += dt.timedelta(days=1)
+
+
+def date_range_fully_covered(
+    start: dt.date,
+    end: dt.date,
+    covered_dates: set[dt.date],
+) -> bool:
+    current = start
+    while current <= end:
+        if current not in covered_dates:
+            return False
+        current += dt.timedelta(days=1)
+    return True
+
+
 def _decode_http_body(body: bytes, content_encoding: str = "") -> bytes:
     if "gzip" in content_encoding.lower() or body.startswith(b"\x1f\x8b"):
         return gzip.decompress(body)
@@ -263,11 +292,15 @@ def read_json(url: str, *, timeout: int = 45, attempts: int = 3) -> Any:
     )
 
 
-def availability_url(target: dt.date, api_url: str) -> str:
+def availability_url(target: dt.date | dt.datetime, api_url: str) -> str:
+    if isinstance(target, dt.datetime):
+        timestamp = target.astimezone(dt.timezone.utc).strftime("%Y%m%d%H%M%S")
+    else:
+        timestamp = target.strftime("%Y%m%d120000")
     query = urllib.parse.urlencode(
         {
             "url": ORIGINAL_PAGE,
-            "timestamp": target.strftime("%Y%m%d120000"),
+            "timestamp": timestamp,
         }
     )
     return f"{api_url}?{query}"
@@ -279,11 +312,34 @@ def discover_snapshots(
     *,
     cadence: str,
     api_url: str,
-) -> list[dict[str, str]]:
-    snapshots: dict[str, dict[str, str]] = {}
-    for target in target_dates(start, end, cadence):
+    excluded_dates: set[dt.date] | None = None,
+) -> list[dict[str, Any]]:
+    snapshots: dict[str, dict[str, Any]] = {}
+    if cadence == "3h":
+        targets = (
+            (
+                local_date,
+                slot,
+                dt.datetime.combine(
+                    local_date,
+                    dt.time(hour=slot * 3),
+                    tzinfo=ZoneInfo(core.TIMEZONE),
+                ),
+            )
+            for local_date, slot in target_slots(start, end)
+        )
+    else:
+        targets = (
+            (target, None, None)
+            for target in target_dates(start, end, cadence)
+        )
+    for target, slot, target_datetime in targets:
+        if target in (excluded_dates or set()):
+            continue
+        lookup = target_datetime or target
         try:
-            payload = read_json(availability_url(target, api_url))
+            lookup_url = availability_url(lookup, api_url)
+            payload = read_json(lookup_url)
         except Exception as exc:
             print(f"Wayback discovery failed near {target.isoformat()}: {exc}")
             continue
@@ -293,7 +349,7 @@ def discover_snapshots(
             print(f"No snapshot near {target.isoformat()}")
             continue
 
-        captured_date = dt.datetime.strptime(timestamp, "%Y%m%d%H%M%S").date()
+        captured_date = snapshot_moment(timestamp).date()
         if not start <= captured_date <= end:
             print(
                 f"Skipped out-of-range snapshot {timestamp} "
@@ -301,24 +357,57 @@ def discover_snapshots(
             )
             continue
 
-        snapshots[timestamp] = {
-            "timestamp": timestamp,
-            "original": ORIGINAL_PAGE,
-            "availabilityUrl": availability_url(target, api_url),
-        }
+        snapshot = snapshots.setdefault(
+            timestamp,
+            {
+                "timestamp": timestamp,
+                "original": ORIGINAL_PAGE,
+                "availabilityUrl": lookup_url,
+                "targetDate": target.isoformat(),
+                "targetSlot": slot,
+                "targetSlots": [],
+            },
+        )
+        if slot is not None:
+            snapshot.setdefault("targetSlots", []).append(slot)
         print(f"Discovered {timestamp} near {target.isoformat()}")
+    for snapshot in snapshots.values():
+        snapshot["targetSlots"] = sorted(set(snapshot.get("targetSlots") or []))
     return [snapshots[key] for key in sorted(snapshots)]
 
 
-def imported_wayback_timestamps() -> set[str]:
-    timestamps: set[str] = set()
+def imported_wayback_slots() -> dict[str, set[int]]:
+    timestamps: dict[str, set[int]] = {}
     for _, manifest in core.iter_archive_manifests():
         for observation in core.manifest_observations(manifest):
             source = observation.get("source") or {}
             timestamp = str(source.get("waybackTimestamp") or "")
             if len(timestamp) == 14 and timestamp.isdigit():
-                timestamps.add(timestamp)
+                timestamps.setdefault(timestamp, set()).update(
+                    core.manifest_slots(observation)
+                )
     return timestamps
+
+
+def imported_wayback_timestamps() -> set[str]:
+    return set(imported_wayback_slots())
+
+
+def snapshot_target_slots(snapshot: dict[str, Any]) -> list[int]:
+    values = snapshot.get("targetSlots")
+    if isinstance(values, list):
+        normalized = core.normalize_slots(values)
+        if normalized:
+            return normalized
+    single = core.normalize_slots([snapshot.get("targetSlot")])
+    if single:
+        return single
+    return [core.slot_index(snapshot_moment(snapshot["timestamp"]))]
+
+
+def snapshot_target_date(snapshot: dict[str, Any]) -> str | None:
+    value = str(snapshot.get("targetDate") or "")
+    return value if re.fullmatch(r"\d{4}-\d{2}-\d{2}", value) else None
 
 
 def snapshot_moment(timestamp: str) -> dt.datetime:
@@ -643,7 +732,7 @@ def fetch_archived_header_api(
 
 
 def capture_snapshot_api(
-    snapshot: dict[str, str],
+    snapshot: dict[str, Any],
     *,
     replay_base: str,
     force: bool,
@@ -682,6 +771,8 @@ def capture_snapshot_api(
         force=force,
         update_current=False,
         record_observation=True,
+        slots=snapshot_target_slots(snapshot),
+        observation_date=snapshot_target_date(snapshot),
         source_extra={
             "captureMethod": "wayback-header-api",
             "waybackTimestamp": timestamp,
@@ -775,7 +866,7 @@ def _exact_palxiao_date(
 
 
 def capture_snapshot_palxiao(
-    snapshot: dict[str, str],
+    snapshot: dict[str, Any],
     *,
     provider: PalxiaoHistoryProvider,
     force: bool,
@@ -950,6 +1041,12 @@ def capture_snapshot_palxiao(
             force=force,
             update_current=False,
             record_observation=True,
+            slots=(
+                snapshot_target_slots(snapshot)
+                if snapshot.get("targetSlots") is not None
+                else list(range(core.SLOT_COUNT))
+            ),
+            observation_date=snapshot_target_date(snapshot) or palxiao_date,
         )
         return {
             "timestamp": timestamp,
@@ -1781,7 +1878,7 @@ def _write_http_sources(
 
 
 def capture_snapshot_http(
-    snapshot: dict[str, str],
+    snapshot: dict[str, Any],
     *,
     replay_base: str,
     force: bool,
@@ -2014,6 +2111,8 @@ def capture_snapshot_http(
             force=force,
             update_current=False,
             record_observation=True,
+            slots=snapshot_target_slots(snapshot),
+            observation_date=snapshot_target_date(snapshot),
         )
         return {
             "timestamp": timestamp,
@@ -2100,8 +2199,8 @@ def discover_palxiao_snapshots(
     end: dt.date,
     *,
     provider: PalxiaoHistoryProvider,
-) -> list[dict[str, str]]:
-    snapshots: list[dict[str, str]] = []
+) -> list[dict[str, Any]]:
+    snapshots: list[dict[str, Any]] = []
     for date_text in provider.discover_dates():
         try:
             date = dt.date.fromisoformat(date_text)
@@ -2116,9 +2215,81 @@ def discover_palxiao_snapshots(
                 "availabilityUrl": "",
                 "palxiaoDate": date.isoformat(),
                 "palxiaoObservedAt": date.isoformat(),
+                "targetDate": date.isoformat(),
+                "targetSlots": list(range(core.SLOT_COUNT)),
             }
         )
     return snapshots
+
+
+def import_reference_repository(
+    root: Path,
+    *,
+    start: dt.date,
+    end: dt.date,
+    commit: str,
+    force: bool,
+) -> set[dt.date]:
+    if not root.is_dir():
+        raise FileNotFoundError(f"reference repository not found: {root}")
+    resolved_commit = subprocess.run(
+        ["git", "-C", str(root), "rev-parse", "HEAD"],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    if resolved_commit != commit:
+        raise ValueError(
+            f"reference repository commit mismatch: expected {commit}, got {resolved_commit}"
+        )
+    core.DATA_DIR.mkdir(parents=True, exist_ok=True)
+    core.ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+    repository = ReferenceRepository(root, commit=commit, time_zone=core.TIMEZONE)
+    covered_dates: set[dt.date] = set()
+    for entry in repository.covered_entries(start, end):
+        dates = list(repository.iter_dates(entry, start, end))
+        if not dates:
+            continue
+        temp = Path(tempfile.mkdtemp(prefix=".mikufan039_reference_", dir=core.DATA_DIR))
+        try:
+            base_manifest = repository.build_manifest(entry, dates[0], temp)
+            for date in dates:
+                manifest = json.loads(json.dumps(base_manifest, ensure_ascii=False))
+                captured_at = dt.datetime.combine(
+                    date,
+                    dt.time(0, 0),
+                    tzinfo=ZoneInfo(core.TIMEZONE),
+                ).isoformat(timespec="seconds")
+                manifest["date"] = date.isoformat()
+                manifest["capturedAt"] = captured_at
+                manifest["lastObservedAt"] = captured_at
+                family_id = f"{date.isoformat()}_{entry.family_key}"
+                result = core.archive_capture(
+                    temp,
+                    manifest,
+                    moment=dt.datetime.fromisoformat(captured_at),
+                    force=force,
+                    update_current=False,
+                    record_observation=True,
+                    slots=manifest.get("slots"),
+                    family_id=family_id,
+                )
+                covered_dates.add(date)
+                print(
+                    json.dumps(
+                        {
+                            "referenceId": entry.reference_id,
+                            "date": date.isoformat(),
+                            "status": result["status"],
+                            "contentHash": result["contentHash"],
+                            "archive": str(result["archive"]),
+                        },
+                        ensure_ascii=False,
+                    )
+                )
+        finally:
+            shutil.rmtree(temp, ignore_errors=True)
+    return covered_dates
 
 
 def capture_snapshot(
@@ -2216,8 +2387,8 @@ def main() -> None:
     parser.add_argument("--to-date", default=today.isoformat())
     parser.add_argument(
         "--cadence",
-        choices=("monthly", "weekly", "daily"),
-        default="monthly",
+        choices=("monthly", "weekly", "daily", "3h"),
+        default="3h",
     )
     parser.add_argument(
         "--provider",
@@ -2242,6 +2413,14 @@ def main() -> None:
     parser.add_argument("--availability-api", default=AVAILABILITY_API)
     parser.add_argument("--cdx-api", default=CDX_API)
     parser.add_argument("--replay-base", default=REPLAY_BASE)
+    parser.add_argument(
+        "--reference-repo",
+        help="Local MikuFan039.github.io checkout used before Wayback fallback.",
+    )
+    parser.add_argument(
+        "--reference-commit",
+        default=MIKUFAN039_REFERENCE_COMMIT,
+    )
     parser.add_argument(
         "--header-api-max-delta-seconds",
         type=int,
@@ -2277,6 +2456,24 @@ def main() -> None:
             cache_path=core.DATA_DIR / "cache" / "providers" / "palxiao-index.json"
         )
 
+    reference_covered_dates: set[dt.date] = set()
+    if args.reference_repo:
+        try:
+            reference_covered_dates = import_reference_repository(
+                Path(args.reference_repo),
+                start=start,
+                end=end,
+                commit=args.reference_commit,
+                force=args.force,
+            )
+        except (
+            OSError,
+            ValueError,
+            json.JSONDecodeError,
+            subprocess.SubprocessError,
+        ) as exc:
+            parser.error(str(exc))
+
     if args.snapshot:
         try:
             snapshot_values = [
@@ -2289,6 +2486,12 @@ def main() -> None:
             {"timestamp": value, "original": ORIGINAL_PAGE, "availabilityUrl": ""}
             for value in snapshot_values
         ]
+    elif args.provider == "palxiao" and date_range_fully_covered(
+        start,
+        end,
+        reference_covered_dates,
+    ):
+        snapshots = []
     elif args.provider == "palxiao":
         snapshots = discover_palxiao_snapshots(
             start,
@@ -2301,8 +2504,13 @@ def main() -> None:
             end,
             cadence=args.cadence,
             api_url=args.availability_api,
+            excluded_dates=reference_covered_dates,
         )
-        if args.provider == "auto" and palxiao_provider:
+        if (
+            args.provider == "auto"
+            and palxiao_provider
+            and not date_range_fully_covered(start, end, reference_covered_dates)
+        ):
             try:
                 palxiao_snapshots = discover_palxiao_snapshots(
                     start,
@@ -2327,22 +2535,44 @@ def main() -> None:
             except Exception as exc:
                 print(f"Palxiao date discovery unavailable: {exc}")
 
+    if reference_covered_dates:
+        before_reference_filter = len(snapshots)
+        snapshots = [
+            snapshot
+            for snapshot in snapshots
+            if (
+                (
+                    dt.date.fromisoformat(snapshot_target_date(snapshot))
+                    if snapshot_target_date(snapshot)
+                    else snapshot_moment(snapshot["timestamp"]).date()
+                )
+                not in reference_covered_dates
+            )
+        ]
+        removed_reference = before_reference_filter - len(snapshots)
+        if removed_reference:
+            print(
+                f"Skipped {removed_reference} snapshots covered by the reference repository."
+            )
+
     if args.limit > 0:
         snapshots = snapshots[: args.limit]
     skipped_known = 0
     if not args.force:
-        known_timestamps = imported_wayback_timestamps()
+        known_slots = imported_wayback_slots()
         known_palxiao = imported_palxiao_dates()
-        skipped_known = sum(
-            snapshot["timestamp"] in known_timestamps
-            or snapshot.get("palxiaoDate") in known_palxiao
-            for snapshot in snapshots
-        )
+        def is_known(snapshot: dict[str, Any]) -> bool:
+            if snapshot.get("palxiaoDate") in known_palxiao:
+                return True
+            existing_slots = known_slots.get(snapshot["timestamp"], set())
+            target = set(snapshot_target_slots(snapshot))
+            return bool(existing_slots) and target.issubset(existing_slots)
+
+        skipped_known = sum(is_known(snapshot) for snapshot in snapshots)
         snapshots = [
             snapshot
             for snapshot in snapshots
-            if snapshot["timestamp"] not in known_timestamps
-            and snapshot.get("palxiaoDate") not in known_palxiao
+            if not is_known(snapshot)
         ]
         if skipped_known:
             print(f"Skipped {skipped_known} already imported Wayback snapshots.")
@@ -2353,6 +2583,17 @@ def main() -> None:
     if not snapshots:
         if skipped_known:
             print("All discovered Wayback snapshots were already imported.")
+            return
+        if reference_covered_dates:
+            if args.checkpoint_script:
+                run_checkpoint(
+                    args.checkpoint_script,
+                    processed=0,
+                    succeeded=0,
+                    changed=0,
+                    final=True,
+                )
+            print("Reference repository covered the requested range; no Wayback import needed.")
             return
         raise SystemExit("No Wayback snapshots were discovered in the requested range.")
 

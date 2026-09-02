@@ -14,23 +14,23 @@ from backend.providers.palxiao_history import PalxiaoHistoryProvider
 
 
 class WaybackImportTests(unittest.TestCase):
-    def test_backfill_range_rejects_dates_before_august_2019(self) -> None:
-        with self.assertRaisesRegex(ValueError, "2019-08-01"):
+    def test_backfill_range_rejects_dates_before_january_2019(self) -> None:
+        with self.assertRaisesRegex(ValueError, "2019-01-01"):
             wayback_import.validate_backfill_range(
-                dt.date(2019, 7, 31),
+                dt.date(2018, 12, 31),
                 dt.date(2020, 1, 1),
             )
         wayback_import.validate_backfill_range(
-            dt.date(2019, 8, 1),
+            dt.date(2019, 1, 1),
             dt.date(2020, 1, 1),
         )
 
-    def test_snapshot_rejects_dates_before_august_2019(self) -> None:
-        with self.assertRaisesRegex(ValueError, "2019-08-01"):
-            wayback_import.validate_snapshot_timestamp("20190731235959")
+    def test_snapshot_rejects_dates_before_january_2019(self) -> None:
+        with self.assertRaisesRegex(ValueError, "2019-01-01"):
+            wayback_import.validate_snapshot_timestamp("20181231235959")
         self.assertEqual(
-            wayback_import.validate_snapshot_timestamp("20190801000000"),
-            "20190801000000",
+            wayback_import.validate_snapshot_timestamp("20190101000000"),
+            "20190101000000",
         )
 
     def test_archive_requires_a_saved_primary_asset(self) -> None:
@@ -87,6 +87,85 @@ class WaybackImportTests(unittest.TestCase):
             targets,
             [dt.date(2019, 8, 1), dt.date(2019, 9, 1), dt.date(2019, 10, 1)],
         )
+
+    def test_three_hour_targets_generate_eight_local_slots_per_day(self) -> None:
+        targets = list(
+            wayback_import.target_slots(
+                dt.date(2019, 1, 1),
+                dt.date(2019, 1, 2),
+            )
+        )
+        self.assertEqual(len(targets), 16)
+        self.assertEqual([slot for _, slot in targets[:8]], list(range(8)))
+        self.assertEqual(targets[8], (dt.date(2019, 1, 2), 0))
+
+    def test_reference_coverage_can_cover_the_full_requested_range(self) -> None:
+        self.assertTrue(
+            wayback_import.date_range_fully_covered(
+                dt.date(2022, 3, 1),
+                dt.date(2022, 3, 3),
+                {
+                    dt.date(2022, 3, 1),
+                    dt.date(2022, 3, 2),
+                    dt.date(2022, 3, 3),
+                },
+            )
+        )
+        self.assertFalse(
+            wayback_import.date_range_fully_covered(
+                dt.date(2022, 3, 1),
+                dt.date(2022, 3, 3),
+                {dt.date(2022, 3, 1), dt.date(2022, 3, 3)},
+            )
+        )
+
+    def test_three_hour_availability_uses_utc_timestamp(self) -> None:
+        local_target = dt.datetime(
+            2019, 1, 1, 3, 0, tzinfo=dt.timezone(dt.timedelta(hours=8))
+        )
+        url = wayback_import.availability_url(local_target, "https://example.test/available")
+        self.assertIn("timestamp=20181231190000", url)
+
+    def test_discovery_merges_slots_that_hit_one_snapshot(self) -> None:
+        response = {
+            "archived_snapshots": {
+                "closest": {"available": True, "timestamp": "20190101010000"}
+            }
+        }
+        unavailable = {"archived_snapshots": {"closest": {"available": False}}}
+
+        def read_json(url: str) -> dict:
+            query = wayback_import.urllib.parse.parse_qs(
+                wayback_import.urllib.parse.urlsplit(url).query
+            )
+            timestamp = query["timestamp"][0]
+            return response if timestamp in {"20181231160000", "20181231190000"} else unavailable
+
+        with mock.patch("backend.wayback_import.read_json", side_effect=read_json):
+            snapshots = wayback_import.discover_snapshots(
+                dt.date(2019, 1, 1),
+                dt.date(2019, 1, 1),
+                cadence="3h",
+                api_url="https://example.test/available",
+            )
+        self.assertEqual(len(snapshots), 1)
+        self.assertEqual(snapshots[0]["targetSlot"], 0)
+        self.assertEqual(snapshots[0]["targetSlots"], [0, 1])
+
+    def test_reference_covered_dates_are_not_queried(self) -> None:
+        with mock.patch(
+            "backend.wayback_import.read_json",
+            side_effect=AssertionError("Wayback must not be queried"),
+        ) as read_json:
+            snapshots = wayback_import.discover_snapshots(
+                dt.date(2021, 6, 21),
+                dt.date(2021, 6, 21),
+                cadence="3h",
+                api_url="https://example.test/available",
+                excluded_dates={dt.date(2021, 6, 21)},
+            )
+        self.assertEqual(snapshots, [])
+        read_json.assert_not_called()
 
     def test_original_asset_is_rewritten_to_wayback_raw_capture(self) -> None:
         url = wayback_import.archived_asset_url(

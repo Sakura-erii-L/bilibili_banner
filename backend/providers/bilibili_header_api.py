@@ -135,6 +135,25 @@ def iter_layer_resources(split_layer: dict[str, Any]):
                 yield layer_index, resource_index, layer, resource, src
 
 
+def iter_extension_resources(extensions: dict[str, Any]):
+    """Yield nested extension src fields without changing the source shape."""
+    def walk(node: Any, path: tuple[str, ...]):
+        if isinstance(node, dict):
+            for key, value in node.items():
+                current_path = path + (str(key),)
+                if key == "src" and isinstance(value, str):
+                    src = absolute_asset_url(value)
+                    if src:
+                        yield current_path, src
+                else:
+                    yield from walk(value, current_path)
+        elif isinstance(node, list):
+            for index, value in enumerate(node):
+                yield from walk(value, path + (str(index),))
+
+    yield from walk(extensions, ())
+
+
 def parse_header_api(payload: dict[str, Any], endpoint: str) -> dict[str, Any]:
     data = payload.get("data") or {}
     split = parse_split_layer(data.get("split_layer"))
@@ -152,6 +171,16 @@ def parse_header_api(payload: dict[str, Any], endpoint: str) -> dict[str, Any]:
         for layer_index, resource_index, _layer, resource, src
         in iter_layer_resources(split)
     ]
+    extensions = copy.deepcopy(split.get("extensions") or {})
+    resources.extend(
+        {
+            "extensionPath": ".".join(path),
+            "src": src,
+            "normalizedIdentity": normalized_identity(src),
+            "tag": infer_tag(src),
+        }
+        for path, src in iter_extension_resources(extensions)
+    )
     return {
         "endpoint": endpoint,
         "raw": payload,
@@ -165,7 +194,7 @@ def parse_header_api(payload: dict[str, Any], endpoint: str) -> dict[str, Any]:
         "is_split_layer": is_split,
         "split_layer": split,
         "layers": copy.deepcopy(layers),
-        "extensions": copy.deepcopy(split.get("extensions") or {}),
+        "extensions": extensions,
         "resources": resources,
     }
 

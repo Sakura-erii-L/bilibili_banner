@@ -64,6 +64,80 @@ class HeaderApiProviderTests(unittest.TestCase):
         self.assertEqual(parsed["resources"][2]["src"], "https://i1.hdslb.com/bfs/banner/effect.webm")
         self.assertEqual(parsed["pic"], "https://i0.hdslb.com/bfs/banner/fallback.webp")
 
+    def test_extensions_time_preserves_candidates_and_discovers_nested_resources(self) -> None:
+        payload = self.sample_payload()
+        split = json.loads(payload["data"]["split_layer"])
+        split["extensions"] = {
+            "time": {
+                "0": [
+                    {"layers": [{"resources": [{"src": "https://i0.hdslb.com/time-a.webm"}]}]},
+                    {"layers": [{"resources": [{"src": "https://i0.hdslb.com/time-b.webm"}]}]},
+                ],
+                "57600": [{"layers": [{"resources": [{"src": "https://i0.hdslb.com/time-c.webm"}]}]}],
+            },
+            "unknown": {"src": "https://i0.hdslb.com/unknown.bin"},
+        }
+        payload["data"]["split_layer"] = json.dumps(split)
+        parsed = header_api.parse_header_api(payload, header_api.DEFAULT_ENDPOINTS[0])
+        self.assertEqual(len(parsed["extensions"]["time"]["0"]), 2)
+        extension_sources = {
+            item["src"] for item in parsed["resources"] if "extensionPath" in item
+        }
+        self.assertEqual(
+            extension_sources,
+            {
+                "https://i0.hdslb.com/time-a.webm",
+                "https://i0.hdslb.com/time-b.webm",
+                "https://i0.hdslb.com/time-c.webm",
+                "https://i0.hdslb.com/unknown.bin",
+            },
+        )
+
+    def test_api_capture_downloads_time_extension_resources_recursively(self) -> None:
+        payload = self.sample_payload()
+        split = json.loads(payload["data"]["split_layer"])
+        split["extensions"] = {
+            "time": {
+                "0": [{"layers": [{"resources": [{"src": "https://i0.hdslb.com/time.webm"}]}]}],
+            },
+        }
+        payload["data"]["split_layer"] = json.dumps(split)
+        api_data = header_api.parse_header_api(payload, header_api.DEFAULT_ENDPOINTS[0])
+        original = (capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR)
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            try:
+                capture.DATA_DIR = root
+                capture.ARCHIVE_DIR = root / "archive"
+                capture.CURRENT_DIR = root / "current"
+
+                def fake_download(src, folder, stem, **_kwargs):
+                    filename = stem + ".webm"
+                    (folder / filename).write_bytes(src.encode("utf-8"))
+                    return {
+                        "src": src,
+                        "requestedSrc": src,
+                        "normalizedIdentity": header_api.normalized_identity(src),
+                        "file": filename,
+                        "contentType": "video/webm",
+                        "tag": "video",
+                    }
+
+                with mock.patch("backend.capture._download_http_asset", side_effect=fake_download):
+                    result = capture.capture_header_api_payload(
+                        api_data,
+                        moment=dt.datetime(2026, 8, 31, 0, 0, tzinfo=dt.timezone(dt.timedelta(hours=8))),
+                        force=False,
+                        update_current=False,
+                    )
+                manifest = capture.read_manifest(Path(result["archive"]))
+                self.assertIsNotNone(manifest)
+                extension_resource = manifest["api"]["extensions"]["time"]["0"][0]["layers"][0]["resources"][0]
+                self.assertTrue(extension_resource["src"].startswith("extension_"))
+                self.assertTrue((Path(result["archive"]) / extension_resource["src"]).is_file())
+            finally:
+                capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR = original
+
     def test_api_capture_keeps_layers_video_and_fallback_separate(self) -> None:
         api_data = header_api.parse_header_api(
             self.sample_payload(),

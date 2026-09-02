@@ -1126,12 +1126,15 @@ def capture_header_api_payload(
     moment: dt.datetime,
     force: bool,
     update_current: bool,
-    record_observation: bool = False,
+    record_observation: bool = True,
     source_extra: dict[str, Any] | None = None,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
     verify_report: dict[str, Any] | None = None,
     before_request: Callable[[], None] | None = None,
+    slots: list[int] | None = None,
+    observation_date: dt.date | str | None = None,
+    family_id: str | None = None,
 ) -> dict[str, Any]:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1168,8 +1171,15 @@ def capture_header_api_payload(
             referer=referer,
             before_request=before_request,
         )
-        extensions = api_data.get("extensions") or {}
-        if extensions:
+        extensions, extension_assets, extension_missing = _build_extension_assets(
+            api_data,
+            temp,
+            asset_url_candidates=asset_url_candidates,
+            referer=referer,
+            before_request=before_request,
+        )
+        missing_assets.extend(extension_missing)
+        if extensions and not extension_assets:
             missing_assets.append(
                 "Header API extensions preserved but not replayed: "
                 + ", ".join(sorted(str(key) for key in extensions))
@@ -1231,6 +1241,7 @@ def capture_header_api_payload(
             "layers": layers,
             "interaction": interaction,
             "sourceFiles": source_files,
+            "auxiliaryAssets": extension_assets,
             "api": {
                 "endpoint": api_data.get("endpoint") or "",
                 "id": api_data.get("id"),
@@ -1248,6 +1259,12 @@ def capture_header_api_payload(
             "timeZone": TIMEZONE,
             "lastObservedAt": moment.isoformat(timespec="seconds"),
         }
+        if observation_date is not None:
+            manifest["date"] = (
+                observation_date.isoformat()
+                if isinstance(observation_date, dt.date)
+                else str(observation_date)
+            )
         if source_extra and isinstance(source_extra.get("provenance"), dict):
             manifest["provenance"] = copy.deepcopy(source_extra["provenance"])
         enrich_manifest_metadata(manifest, evidence, missing_assets=missing_assets)
@@ -1258,6 +1275,8 @@ def capture_header_api_payload(
             force=force,
             update_current=update_current,
             record_observation=record_observation,
+            slots=slots,
+            family_id=family_id,
         )
     finally:
         shutil.rmtree(temp, ignore_errors=True)
@@ -1915,6 +1934,9 @@ def calculate_manifest_hashes(folder: Path, manifest: dict[str, Any]) -> dict[st
             for key in ("id", "name", "isSplitLayer", "layerCount", "assetCount", "splitVersion")
             if key in api_summary
         }
+    extensions = manifest.get("extensions") or api_summary.get("extensions")
+    if extensions:
+        structure["extensionsHash"] = _json_hash(extensions)
     structure_hash = _json_hash(structure)
     unknown_interaction = bool(
         ((manifest.get("structureEvidence") or {}).get("signals") or {}).get("hasInteraction")
@@ -2139,6 +2161,151 @@ def observed_time_slot(moment: dt.datetime) -> int:
     return (minute // interval) * interval
 
 
+SLOT_MINUTES = 180
+SLOT_COUNT = 1440 // SLOT_MINUTES
+
+
+def slot_index(moment: dt.datetime) -> int:
+    """Return the canonical 3-hour slot index for a local datetime."""
+    minute = moment.hour * 60 + moment.minute
+    return min(SLOT_COUNT - 1, minute // SLOT_MINUTES)
+
+
+def normalize_slots(values: Any, *, legacy_minutes: bool = False) -> list[int]:
+    """Normalize canonical slot indexes and legacy minute-based slots."""
+    if not isinstance(values, list):
+        return []
+    normalized: set[int] = set()
+    for value in values:
+        try:
+            number = int(value)
+        except (TypeError, ValueError):
+            continue
+        if legacy_minutes or number >= SLOT_COUNT:
+            number //= SLOT_MINUTES
+        if 0 <= number < SLOT_COUNT:
+            normalized.add(number)
+    return sorted(normalized)
+
+
+def manifest_slots(manifest: dict[str, Any]) -> list[int]:
+    """Read the new slots field, falling back to legacy observedSlots."""
+    if isinstance(manifest.get("slots"), list):
+        return normalize_slots(manifest["slots"])
+    return normalize_slots(manifest.get("observedSlots"), legacy_minutes=True)
+
+
+def time_extension(manifest: dict[str, Any]) -> dict[str, Any] | None:
+    """Return the source-declared time extension, if present."""
+    candidates = [
+        manifest.get("extensions"),
+        manifest.get("api", {}).get("extensions")
+        if isinstance(manifest.get("api"), dict)
+        else None,
+    ]
+    for extensions in candidates:
+        if not isinstance(extensions, dict):
+            continue
+        value = extensions.get("time")
+        if isinstance(value, dict) and value:
+            return value
+    return None
+
+
+def _set_nested_value(root: Any, path: tuple[str, ...], value: Any) -> None:
+    current = root
+    for key in path[:-1]:
+        if isinstance(current, dict):
+            current = current.get(key)
+        elif isinstance(current, list) and key.isdigit():
+            index = int(key)
+            current = current[index] if index < len(current) else None
+        else:
+            return
+        if current is None:
+            return
+    if not path:
+        return
+    key = path[-1]
+    if isinstance(current, dict):
+        current[key] = value
+    elif isinstance(current, list) and key.isdigit():
+        index = int(key)
+        if index < len(current):
+            current[index] = value
+
+
+def _build_extension_assets(
+    api_data: dict[str, Any],
+    folder: Path,
+    *,
+    asset_url_candidates: Callable[[str], list[str]] | None = None,
+    referer: str = SITE,
+    before_request: Callable[[], None] | None = None,
+) -> tuple[dict[str, Any], list[dict[str, Any]], list[str]]:
+    """Save downloadable extension resources and return a local extension copy."""
+    extensions = copy.deepcopy(api_data.get("extensions") or {})
+    auxiliary: list[dict[str, Any]] = []
+    missing: list[str] = []
+    saved: dict[str, dict[str, Any]] = {}
+
+    for path, source in header_api.iter_extension_resources(extensions):
+        if not source.startswith(("http://", "https://", "//")):
+            missing.append(f"extension {'.'.join(path)} is not an absolute URL")
+            continue
+        identity = header_api.normalized_identity(source)
+        local = saved.get(identity)
+        if local is None:
+            stem = f"extension_{len(saved):03d}"
+            candidates = asset_url_candidates(source) if asset_url_candidates else [source]
+            last_error: Exception | None = None
+            for candidate in candidates:
+                try:
+                    local = _download_http_asset(
+                        candidate,
+                        folder,
+                        stem,
+                        referer=referer,
+                        before_request=before_request,
+                    )
+                    local["src"] = source
+                    saved[identity] = local
+                    break
+                except Exception as exc:
+                    last_error = exc
+            if local is None:
+                missing.append(f"extension {'.'.join(path)}: {last_error}")
+                continue
+
+        _set_nested_value(extensions, path, local["file"])
+        auxiliary.append(
+            {
+                "role": "extension",
+                "path": ".".join(path),
+                "src": source,
+                "file": local["file"],
+                "contentType": local.get("contentType", ""),
+                "assetType": local.get("tag", "other"),
+            }
+        )
+
+    return extensions, auxiliary, missing
+
+
+def time_family_fingerprint(manifest: dict[str, Any]) -> str | None:
+    """Fingerprint a complete source-declared time map, not one selected scene."""
+    extension = time_extension(manifest)
+    if extension is None:
+        return None
+    payload = json.dumps(
+        extension,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:24]
+
+
 def layout_fingerprint(manifest: dict[str, Any]) -> str:
     if manifest.get("mode") == "split" or "layered" in manifest_types(manifest):
         layout = {
@@ -2191,26 +2358,28 @@ def iter_archive_manifests() -> list[tuple[Path, dict[str, Any]]]:
 
 def derived_family_id(manifest: dict[str, Any]) -> str:
     date_text = str(manifest.get("date") or "unknown-date")
+    time_hash = time_family_fingerprint(manifest)
+    if time_hash:
+        return f"{date_text}_time_{time_hash[:12]}"
     layout_hash = str(manifest.get("layoutHash") or layout_fingerprint(manifest))
-    content_hash = str(manifest.get("contentHash") or "unknown")
-    return f"{date_text}_{layout_hash[:12]}_{content_hash[:8]}"
+    return f"{date_text}_{layout_hash[:12]}"
 
 
 def observation_from_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
     captured_at = str(manifest.get("capturedAt") or "")
-    observed_slots = [int(value) for value in manifest.get("observedSlots", [])]
-    if not observed_slots and captured_at:
+    slots = manifest_slots(manifest)
+    if not slots and captured_at:
         try:
-            observed_slots = [observed_time_slot(dt.datetime.fromisoformat(captured_at))]
+            slots = [slot_index(dt.datetime.fromisoformat(captured_at))]
         except Exception:
-            observed_slots = []
+            slots = []
     return {
         "capturedAt": captured_at,
         "lastObservedAt": str(manifest.get("lastObservedAt") or captured_at),
         "date": str(manifest.get("date") or captured_at[:10]),
         "season": str(manifest.get("season") or ""),
         "timeZone": str(manifest.get("timeZone") or TIMEZONE),
-        "observedSlots": sorted(set(observed_slots)),
+        "slots": slots,
         "familyId": str(manifest.get("familyId") or derived_family_id(manifest)),
         "source": manifest.get("source") or {},
     }
@@ -2219,7 +2388,15 @@ def observation_from_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
 def manifest_observations(manifest: dict[str, Any]) -> list[dict[str, Any]]:
     observations = manifest.get("observations")
     if isinstance(observations, list) and observations:
-        return [dict(item) for item in observations if isinstance(item, dict)]
+        normalized: list[dict[str, Any]] = []
+        for item in observations:
+            if not isinstance(item, dict):
+                continue
+            observation = dict(item)
+            observation["slots"] = manifest_slots(observation)
+            observation.pop("observedSlots", None)
+            normalized.append(observation)
+        return normalized
     return [observation_from_manifest(manifest)]
 
 
@@ -2239,13 +2416,26 @@ def observation_key(observation: dict[str, Any]) -> tuple[str, str, str]:
 
 
 def choose_family_id(manifest: dict[str, Any]) -> str:
+    explicit_family = str(manifest.get("familyId") or "")
+    if explicit_family:
+        return explicit_family
     layout_hash = str(manifest.get("layoutHash") or layout_fingerprint(manifest))
     date_text = str(manifest.get("date") or "")
+    time_hash = time_family_fingerprint(manifest)
     candidates: list[tuple[str, str]] = []
 
     for _, existing in iter_archive_manifests():
         existing_layout = str(existing.get("layoutHash") or layout_fingerprint(existing))
-        if existing_layout != layout_hash:
+        existing_time_hash = time_family_fingerprint(existing)
+        same_identity = (
+            time_hash is not None
+            and existing_time_hash == time_hash
+        ) or (
+            time_hash is None
+            and existing_time_hash is None
+            and existing_layout == layout_hash
+        )
+        if not same_identity:
             continue
         for observation in manifest_observations(existing):
             if observation.get("date") != date_text:
@@ -2286,18 +2476,22 @@ def merge_duplicate_metadata(
     *,
     moment: dt.datetime,
     force: bool,
-    record_observation: bool = False,
+    record_observation: bool = True,
+    slots: list[int] | None = None,
 ) -> bool:
     before = json.dumps(archived, ensure_ascii=False, sort_keys=True)
-    slot = observed_time_slot(moment)
-    slots = sorted({int(value) for value in archived.get("observedSlots", [])} | {slot})
-    archived["observedSlots"] = slots
+    observed = normalize_slots(slots) if slots is not None else []
+    if not observed:
+        observed = [slot_index(moment)]
+    archived_slots = sorted(set(manifest_slots(archived)) | set(observed))
+    archived["slots"] = archived_slots
+    archived.pop("observedSlots", None)
     archived["timeZone"] = str(archived.get("timeZone") or TIMEZONE)
     for field in (
         "type", "is_split_layer", "fallback_image", "preview_image",
         "completeness", "missing_assets", "structureEvidence", "assets", "hashes",
         "sourceFiles", "sourceEvidence", "auxiliaryAssets", "animationCss", "api",
-        "canonicalContentHash", "sourceFingerprint",
+        "canonicalContentHash", "sourceFingerprint", "reference", "referenceMode",
     ):
         if field in fresh and field not in archived:
             archived[field] = fresh[field]
@@ -2336,16 +2530,11 @@ def merge_duplicate_metadata(
             observation.get("familyId") == fresh_observation.get("familyId")
             and observation.get("date") == fresh_observation.get("date")
         )
-        if observation_key(observation) == fresh_key or (
-            not record_observation and same_family_day
-        ):
-            observation["observedSlots"] = sorted(
-                {
-                    int(value)
-                    for value in observation.get("observedSlots", [])
-                }
-                | {slot}
+        if same_family_day or observation_key(observation) == fresh_key:
+            observation["slots"] = sorted(
+                set(manifest_slots(observation)) | set(fresh_observation.get("slots", []))
             )
+            observation.pop("observedSlots", None)
             matched_observation = True
             break
     if record_observation and not matched_observation:
@@ -2463,8 +2652,17 @@ def archive_capture(
     moment: dt.datetime,
     force: bool = False,
     update_current: bool = True,
-    record_observation: bool = False,
+    record_observation: bool = True,
+    slots: list[int] | None = None,
+    observation_date: dt.date | str | None = None,
+    family_id: str | None = None,
 ) -> dict[str, Any]:
+    if observation_date is not None:
+        manifest["date"] = (
+            observation_date.isoformat()
+            if isinstance(observation_date, dt.date)
+            else str(observation_date)
+        )
     hashes = calculate_manifest_hashes(temp_dir, manifest)
     content_hash = hashes["contentHash"]
     manifest["version"] = manifest.get("version", 10.1)
@@ -2478,8 +2676,12 @@ def archive_capture(
         if path and path.exists():
             asset["sha256"] = sha256_file(path)
     manifest["layoutHash"] = layout_fingerprint(manifest)
-    manifest["familyId"] = choose_family_id(manifest)
-    manifest["observedSlots"] = [observed_time_slot(moment)]
+    manifest["familyId"] = str(family_id or choose_family_id(manifest))
+    capture_slots = normalize_slots(slots)
+    if not capture_slots:
+        capture_slots = [slot_index(moment)]
+    manifest["slots"] = capture_slots
+    manifest.pop("observedSlots", None)
     manifest["timeZone"] = str(manifest.get("timeZone") or TIMEZONE)
     manifest["lastObservedAt"] = str(
         manifest.get("lastObservedAt") or manifest["capturedAt"]
@@ -2508,6 +2710,7 @@ def archive_capture(
             moment=moment,
             force=force,
             record_observation=record_observation,
+            slots=capture_slots,
         )
         if changed:
             rebuild_index()
@@ -2543,9 +2746,7 @@ def rebuild_index() -> None:
                 content_hash = folder.name
 
         for observation in manifest_observations(item):
-            observed_slots = [
-                int(value) for value in observation.get("observedSlots", [])
-            ]
+            slots = manifest_slots(observation)
             captured_at = str(observation.get("capturedAt") or item["capturedAt"])
             family_id = str(
                 observation.get("familyId") or item.get("familyId")
@@ -2564,9 +2765,11 @@ def rebuild_index() -> None:
                 "layerCount": len(item.get("layers", [])),
                 "completeness": item.get("completeness", "unverified"),
                 "missing_assets": list(item.get("missing_assets") or []),
-                "observedSlots": sorted(set(observed_slots)),
+                "slots": sorted(set(slots)),
                 "manifest": f"./data/archive/{folder.name}/banner.json",
             }
+            if item.get("referenceMode"):
+                variant["referenceMode"] = item["referenceMode"]
 
             family = families.setdefault(
                 family_id,
@@ -2585,12 +2788,12 @@ def rebuild_index() -> None:
             existing_variant = family["variantsByHash"].get(content_hash)
             if existing_variant:
                 merged_slots = sorted(
-                    set(existing_variant["observedSlots"])
-                    | set(variant["observedSlots"])
+                    set(existing_variant["slots"])
+                    | set(variant["slots"])
                 )
                 if variant["lastObservedAt"] > existing_variant["lastObservedAt"]:
                     existing_variant.update(variant)
-                existing_variant["observedSlots"] = merged_slots
+                existing_variant["slots"] = merged_slots
             else:
                 family["variantsByHash"][content_hash] = variant
 
@@ -2891,7 +3094,7 @@ def _capture_dom_sampled(*, force: bool) -> int:
                 if result["status"] == "updated":
                     print(
                         "Updated existing Banner time/effect metadata: "
-                        f"slot={observed_time_slot(now)}, hash={content_hash}"
+                        f"slot={slot_index(now)}, hash={content_hash}"
                     )
                 elif result["status"] == "unchanged":
                     print(f"No visual, time-slot, or effect change: {content_hash}")
@@ -3026,6 +3229,7 @@ def capture(*, force: bool, verify_dom: bool = False) -> int:
         force=force,
         update_current=True,
         verify_report=verify_report,
+        record_observation=True,
     )
     content_hash = result["contentHash"]
     if result["status"] == "updated":

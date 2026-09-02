@@ -226,6 +226,12 @@ class TimedVariantIndexTests(unittest.TestCase):
         capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR = self.original_paths
         self.temp.cleanup()
 
+    def test_slot_index_and_legacy_observed_slots_are_normalized(self) -> None:
+        moment = capture.dt.datetime.fromisoformat("2026-08-31T09:17:00+08:00")
+        self.assertEqual(capture.slot_index(moment), 3)
+        self.assertEqual(capture.manifest_slots({"observedSlots": [0, 180, 360]}), [0, 1, 2])
+        self.assertEqual(capture.manifest_slots({"slots": [0, 2, 3]}), [0, 2, 3])
+
     def test_rebuild_index_groups_time_variants(self) -> None:
         family_id = "2026-08-31_layout_family"
         for index, (content_hash, slot) in enumerate((("hash-day", 360), ("hash-night", 1080))):
@@ -255,9 +261,10 @@ class TimedVariantIndexTests(unittest.TestCase):
         self.assertEqual(len(index["records"]), 1)
         self.assertEqual(index["records"][0]["variantCount"], 2)
         self.assertEqual(
-            [variant["observedSlots"] for variant in index["records"][0]["variants"]],
-            [[360], [1080]],
+            [variant["slots"] for variant in index["records"][0]["variants"]],
+            [[2], [6]],
         )
+        self.assertNotIn("observedSlots", index["records"][0]["variants"][0])
 
     def test_duplicate_asset_adds_slot_once_and_upgrades_effect(self) -> None:
         folder = capture.ARCHIVE_DIR / "existing"
@@ -302,7 +309,8 @@ class TimedVariantIndexTests(unittest.TestCase):
         )
         self.assertTrue(changed)
         merged = json.loads((folder / "banner.json").read_text(encoding="utf-8"))
-        self.assertEqual(merged["observedSlots"], [0, 180])
+        self.assertEqual(merged["slots"], [0, 1])
+        self.assertNotIn("observedSlots", merged)
         self.assertEqual(merged["interaction"]["model"], "bilibili-sampled-horizontal-v1")
         self.assertEqual(merged["layers"][0]["file"], "layer.webp")
 
@@ -365,6 +373,44 @@ class TimedVariantIndexTests(unittest.TestCase):
         self.assertTrue(
             all(record["contentHash"] == "same-physical-asset" for record in index["records"])
         )
+
+    def test_same_day_layout_merges_but_different_content_stays_as_variants(self) -> None:
+        first = self.temp_path_manifest("first", "layout-a", "content-a", 0)
+        second = self.temp_path_manifest("second", "layout-a", "content-b", 1)
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 1)
+        self.assertEqual(index["records"][0]["variantCount"], 2)
+        self.assertEqual(
+            sorted(variant["slots"] for variant in index["records"][0]["variants"]),
+            [[0], [1]],
+        )
+
+    def temp_path_manifest(
+        self,
+        name: str,
+        layout_hash: str,
+        content_hash: str,
+        slot: int,
+    ) -> Path:
+        folder = capture.ARCHIVE_DIR / name
+        folder.mkdir()
+        manifest = {
+            "version": 11.0,
+            "date": "2026-08-31",
+            "season": "summer",
+            "capturedAt": f"2026-08-31T{slot * 3:02d}:00:00+08:00",
+            "lastObservedAt": f"2026-08-31T{slot * 3:02d}:00:00+08:00",
+            "mode": "split",
+            "layers": [{"index": 0}],
+            "contentHash": content_hash,
+            "layoutHash": layout_hash,
+            "familyId": "2026-08-31_layout-a",
+            "slots": [slot],
+            "timeZone": "Asia/Shanghai",
+        }
+        (folder / "banner.json").write_text(json.dumps(manifest), encoding="utf-8")
+        return folder
 
 
 if __name__ == "__main__":
