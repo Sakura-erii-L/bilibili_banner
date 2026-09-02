@@ -1,0 +1,14 @@
+{
+  "code": 0,
+  "message": "0",
+  "ttl": 1,
+  "data": {
+    "name": "点击参与盛典",
+    "pic": "https://i0.hdslb.com/bfs/archive/9489289ca88bdc062c16cebaf247df5a6d99f6d4.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/d2ae00da253158fb57109d3ab7c6012d86c81b02.png",
+    "url": "https://www.bilibili.com/blackboard/topic/activity-ygXy0F1OGW.html??msource=webhead",
+    "is_split_layer": 0,
+    "split_layer": "{\"version\":\"1\",\"layers\":[]}",
+    "request_id": "1638361848"
+  }
+}

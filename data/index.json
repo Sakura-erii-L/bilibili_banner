@@ -1,7 +1,3427 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-08-31T23:27:07+08:00",
+  "generatedAt": "2026-09-02T08:10:21+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
-  "records": []
+  "records": [
+    {
+      "id": "2026-09-01_862cf6b60fd7_7b7f2cff",
+      "date": "2026-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2026",
+      "month": "09",
+      "yearMonth": "2026-09",
+      "capturedAt": "2026-09-01T20:33:26+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 26,
+      "completeness": "partial",
+      "missing_assets": [
+        "2 API layer(s) unavailable",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: The read operation timed out",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: IncompleteRead(15104 bytes read, 50448 more expected)"
+      ],
+      "contentHash": "7b7f2cff233dbd06c441c2f7",
+      "manifest": "./data/archive/2026-09-01_203326_7b7f2cff233dbd06c441c2f7/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "7b7f2cff233dbd06c441c2f7",
+          "canonicalContentHash": "06e688a9f0dd2c8d75e51c86",
+          "sourceFingerprint": "c6e4be3c9bf9bc2aa2719aac",
+          "capturedAt": "2026-09-01T20:33:26+08:00",
+          "lastObservedAt": "2026-09-01T20:33:26+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 26,
+          "completeness": "partial",
+          "missing_assets": [
+            "2 API layer(s) unavailable",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: The read operation timed out",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: IncompleteRead(15104 bytes read, 50448 more expected)"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2026-09-01_203326_7b7f2cff233dbd06c441c2f7/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-01_8d15a05ed0f2_8fab6330",
+      "date": "2026-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2026",
+      "month": "09",
+      "yearMonth": "2026-09",
+      "capturedAt": "2026-09-01T09:17:00+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 28,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "8fab633056ee11e6210c8af9",
+      "manifest": "./data/archive/2026-09-01_091700_8fab633056ee11e6210c8af9/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "8fab633056ee11e6210c8af9",
+          "canonicalContentHash": "b24b6936af405e15501f4aa5",
+          "sourceFingerprint": "0639633035901287c8f60fd9",
+          "capturedAt": "2026-09-01T09:17:00+08:00",
+          "lastObservedAt": "2026-09-01T09:17:00+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 28,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            540,
+            720
+          ],
+          "manifest": "./data/archive/2026-09-01_091700_8fab633056ee11e6210c8af9/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-09-01_9ef1c02649bf_e2071fa9",
+      "date": "2024-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "09",
+      "yearMonth": "2024-09",
+      "capturedAt": "2024-09-01T20:53:32+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 10,
+      "completeness": "partial",
+      "missing_assets": [
+        "11 API layer(s) unavailable",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_007: no resource saved",
+        "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_012: no resource saved",
+        "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_020: no resource saved",
+        "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "e2071fa929a4c5b6fd8028b2",
+      "manifest": "./data/archive/2024-09-01_205332_e2071fa929a4c5b6fd8028b2/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "e2071fa929a4c5b6fd8028b2",
+          "canonicalContentHash": "c36b8ac243f6fc7a5ed2977f",
+          "sourceFingerprint": "3be13f2dbaa66eaf1cee23a3",
+          "capturedAt": "2024-09-01T20:53:32+08:00",
+          "lastObservedAt": "2024-09-01T20:53:32+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 10,
+          "completeness": "partial",
+          "missing_assets": [
+            "11 API layer(s) unavailable",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_007: no resource saved",
+            "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_012: no resource saved",
+            "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_020: no resource saved",
+            "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-09-01_205332_e2071fa929a4c5b6fd8028b2/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-08-01_ceb966cad120_1b20f2b0",
+      "date": "2024-08-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "08",
+      "yearMonth": "2024-08",
+      "capturedAt": "2024-08-01T20:07:06+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 14,
+      "completeness": "partial",
+      "missing_assets": [
+        "7 API layer(s) unavailable",
+        "api_layer_005: no resource saved",
+        "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_006: no resource saved",
+        "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_019: no resource saved",
+        "api_layer_019_resource_000: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "1b20f2b07f710eb140bd6268",
+      "manifest": "./data/archive/2024-08-01_200706_1b20f2b07f710eb140bd6268/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "1b20f2b07f710eb140bd6268",
+          "canonicalContentHash": "c04f835fc4af713abeef1f7a",
+          "sourceFingerprint": "2c2569e2913b2a63ffd50a86",
+          "capturedAt": "2024-08-01T20:07:06+08:00",
+          "lastObservedAt": "2024-08-01T20:07:06+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 14,
+          "completeness": "partial",
+          "missing_assets": [
+            "7 API layer(s) unavailable",
+            "api_layer_005: no resource saved",
+            "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_006: no resource saved",
+            "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_019: no resource saved",
+            "api_layer_019_resource_000: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-08-01_200706_1b20f2b07f710eb140bd6268/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-07-01_3d5964596b90_d61786ef",
+      "date": "2024-07-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "07",
+      "yearMonth": "2024-07",
+      "capturedAt": "2024-07-01T20:23:35+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 11,
+      "completeness": "partial",
+      "missing_assets": [
+        "10 API layer(s) unavailable",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_005: no resource saved",
+        "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_013: no resource saved",
+        "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_014: no resource saved",
+        "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_020: no resource saved",
+        "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "d61786efb7ead55bb4403814",
+      "manifest": "./data/archive/2024-07-01_202335_d61786efb7ead55bb4403814/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "d61786efb7ead55bb4403814",
+          "canonicalContentHash": "a9d20fff33f54637137e199c",
+          "sourceFingerprint": "943d1bfc49067ab2b4af9907",
+          "capturedAt": "2024-07-01T20:23:35+08:00",
+          "lastObservedAt": "2024-07-01T20:23:35+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 11,
+          "completeness": "partial",
+          "missing_assets": [
+            "10 API layer(s) unavailable",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_005: no resource saved",
+            "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_013: no resource saved",
+            "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_014: no resource saved",
+            "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_020: no resource saved",
+            "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-07-01_202335_d61786efb7ead55bb4403814/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-06-26_96bfd5afe3b2_04fa7113",
+      "date": "2024-06-26",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "06",
+      "yearMonth": "2024-06",
+      "capturedAt": "2024-06-26T20:00:00+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 12,
+      "completeness": "partial",
+      "missing_assets": [
+        "9 API layer(s) unavailable",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_005: no resource saved",
+        "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_007: no resource saved",
+        "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "04fa711392ba60083209298d",
+      "manifest": "./data/archive/2024-06-26_200000_04fa711392ba60083209298d/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "04fa711392ba60083209298d",
+          "canonicalContentHash": "c3de44132cf4b5c4c459d5c9",
+          "sourceFingerprint": "08b3a166dcc9fa7edf9ced3f",
+          "capturedAt": "2024-06-26T20:00:00+08:00",
+          "lastObservedAt": "2024-06-26T20:00:00+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 12,
+          "completeness": "partial",
+          "missing_assets": [
+            "9 API layer(s) unavailable",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_005: no resource saved",
+            "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_007: no resource saved",
+            "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-06-26_200000_04fa711392ba60083209298d/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-06-06_d067fc58a4b1_34c05de6",
+      "date": "2024-06-06",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "06",
+      "yearMonth": "2024-06",
+      "capturedAt": "2024-06-06T20:00:00+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 10,
+      "completeness": "partial",
+      "missing_assets": [
+        "14 API layer(s) unavailable",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_014: no resource saved",
+        "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_020: no resource saved",
+        "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_021: no resource saved",
+        "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+        "video source detected but no original video asset was saved"
+      ],
+      "contentHash": "34c05de63a55a70cb3ef8046",
+      "manifest": "./data/archive/2024-06-06_200000_34c05de63a55a70cb3ef8046/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "34c05de63a55a70cb3ef8046",
+          "canonicalContentHash": "f0c58ad1e499a241a51de5ef",
+          "sourceFingerprint": "18a52d1d5bb62d62148de08b",
+          "capturedAt": "2024-06-06T20:00:00+08:00",
+          "lastObservedAt": "2024-06-06T20:00:00+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 10,
+          "completeness": "partial",
+          "missing_assets": [
+            "14 API layer(s) unavailable",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_014: no resource saved",
+            "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_020: no resource saved",
+            "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_021: no resource saved",
+            "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+            "video source detected but no original video asset was saved"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-06-06_200000_34c05de63a55a70cb3ef8046/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-06-01_0a6f021986f2_4efeac7c",
+      "date": "2024-06-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "06",
+      "yearMonth": "2024-06",
+      "capturedAt": "2024-06-01T20:02:08+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "partial",
+      "missing_assets": [
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "4efeac7c45a1584d85db8ad0",
+      "manifest": "./data/archive/2024-06-01_200208_4efeac7c45a1584d85db8ad0/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "4efeac7c45a1584d85db8ad0",
+          "canonicalContentHash": "b40434a642e0825582a2ddcd",
+          "sourceFingerprint": "a4ed6afa03f97441ffc53588",
+          "capturedAt": "2024-06-01T20:02:08+08:00",
+          "lastObservedAt": "2024-06-01T20:02:08+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "partial",
+          "missing_assets": [
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-06-01_200208_4efeac7c45a1584d85db8ad0/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-05-01_9ecaa500639f_c168b8f1",
+      "date": "2024-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "05",
+      "yearMonth": "2024-05",
+      "capturedAt": "2024-05-01T19:15:43+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 15,
+      "completeness": "partial",
+      "missing_assets": [
+        "10 API layer(s) unavailable",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_013: no resource saved",
+        "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_014: no resource saved",
+        "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_020: no resource saved",
+        "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_021: no resource saved",
+        "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_024: no resource saved",
+        "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "c168b8f142c7890ad9a6d86e",
+      "manifest": "./data/archive/2024-05-01_191543_c168b8f142c7890ad9a6d86e/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "c168b8f142c7890ad9a6d86e",
+          "canonicalContentHash": "707a93694a469bf321c9b679",
+          "sourceFingerprint": "8ad4b78560bfa929182c7758",
+          "capturedAt": "2024-05-01T19:15:43+08:00",
+          "lastObservedAt": "2024-05-01T19:15:43+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 15,
+          "completeness": "partial",
+          "missing_assets": [
+            "10 API layer(s) unavailable",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_013: no resource saved",
+            "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_014: no resource saved",
+            "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_020: no resource saved",
+            "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_021: no resource saved",
+            "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_024: no resource saved",
+            "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-05-01_191543_c168b8f142c7890ad9a6d86e/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-04-01_74e752e501e0_4c15e091",
+      "date": "2024-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "04",
+      "yearMonth": "2024-04",
+      "capturedAt": "2024-04-01T18:16:06+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 13,
+      "completeness": "partial",
+      "missing_assets": [
+        "12 API layer(s) unavailable",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_014: no resource saved",
+        "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_019: no resource saved",
+        "api_layer_019_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_020: no resource saved",
+        "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_024: no resource saved",
+        "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "4c15e0912056e9496f0fcc44",
+      "manifest": "./data/archive/2024-04-01_181606_4c15e0912056e9496f0fcc44/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "4c15e0912056e9496f0fcc44",
+          "canonicalContentHash": "1be0cd0d7a648580cec68ad4",
+          "sourceFingerprint": "cabc218f5f8afe94d2d2592e",
+          "capturedAt": "2024-04-01T18:16:06+08:00",
+          "lastObservedAt": "2024-04-01T18:16:06+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 13,
+          "completeness": "partial",
+          "missing_assets": [
+            "12 API layer(s) unavailable",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_014: no resource saved",
+            "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_019: no resource saved",
+            "api_layer_019_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_020: no resource saved",
+            "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_024: no resource saved",
+            "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-04-01_181606_4c15e0912056e9496f0fcc44/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-03-01_ea6877c55907_7d307ba1",
+      "date": "2024-03-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "03",
+      "yearMonth": "2024-03",
+      "capturedAt": "2024-03-01T19:30:02+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 13,
+      "completeness": "partial",
+      "missing_assets": [
+        "7 API layer(s) unavailable",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "7d307ba14ac5186c21e9fc71",
+      "manifest": "./data/archive/2024-03-01_193002_7d307ba14ac5186c21e9fc71/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "7d307ba14ac5186c21e9fc71",
+          "canonicalContentHash": "70fd550b47fbf1b920144f72",
+          "sourceFingerprint": "3438e30c40d05dab91f3618b",
+          "capturedAt": "2024-03-01T19:30:02+08:00",
+          "lastObservedAt": "2024-03-01T19:30:02+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 13,
+          "completeness": "partial",
+          "missing_assets": [
+            "7 API layer(s) unavailable",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-03-01_193002_7d307ba14ac5186c21e9fc71/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-02-01_cf0d76342096_9a3b728d",
+      "date": "2024-02-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "02",
+      "yearMonth": "2024-02",
+      "capturedAt": "2024-02-01T20:00:00+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 10,
+      "completeness": "partial",
+      "missing_assets": [
+        "10 API layer(s) unavailable",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_012: no resource saved",
+        "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "9a3b728d9bebd06407919dc2",
+      "manifest": "./data/archive/2024-02-01_200000_9a3b728d9bebd06407919dc2/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "9a3b728d9bebd06407919dc2",
+          "canonicalContentHash": "2afce05dd45e924e78882b6e",
+          "sourceFingerprint": "5533dab9b92cf782db929d24",
+          "capturedAt": "2024-02-01T20:00:00+08:00",
+          "lastObservedAt": "2024-02-01T20:00:00+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 10,
+          "completeness": "partial",
+          "missing_assets": [
+            "10 API layer(s) unavailable",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_012: no resource saved",
+            "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-02-01_200000_9a3b728d9bebd06407919dc2/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2024-01-01_3f4544a6cbd4_dfa5012e",
+      "date": "2024-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2024",
+      "month": "01",
+      "yearMonth": "2024-01",
+      "capturedAt": "2024-01-01T19:54:50+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "dfa5012e6aac200cc07521a8",
+      "manifest": "./data/archive/2024-01-01_195450_dfa5012e6aac200cc07521a8/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "dfa5012e6aac200cc07521a8",
+          "canonicalContentHash": "01abd26f2fac535411e14600",
+          "sourceFingerprint": "7e8147577a214668dba0ee28",
+          "capturedAt": "2024-01-01T19:54:50+08:00",
+          "lastObservedAt": "2024-01-01T19:54:50+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2024-01-01_195450_dfa5012e6aac200cc07521a8/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-12-12_28845e83843f_444e4e3d",
+      "date": "2023-12-12",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "12",
+      "yearMonth": "2023-12",
+      "capturedAt": "2023-12-12T20:00:00+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 13,
+      "completeness": "partial",
+      "missing_assets": [
+        "8 API layer(s) unavailable",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_005: no resource saved",
+        "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_006: no resource saved",
+        "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_012: no resource saved",
+        "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_013: no resource saved",
+        "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_020: no resource saved",
+        "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+        "video source detected but no original video asset was saved"
+      ],
+      "contentHash": "444e4e3d3bd0db0285cbb74c",
+      "manifest": "./data/archive/2023-12-12_200000_444e4e3d3bd0db0285cbb74c/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "444e4e3d3bd0db0285cbb74c",
+          "canonicalContentHash": "b9ec98ea69d410bfa5475ea0",
+          "sourceFingerprint": "883de74ca8aedabb51fe364f",
+          "capturedAt": "2023-12-12T20:00:00+08:00",
+          "lastObservedAt": "2023-12-12T20:00:00+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 13,
+          "completeness": "partial",
+          "missing_assets": [
+            "8 API layer(s) unavailable",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_005: no resource saved",
+            "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_006: no resource saved",
+            "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_012: no resource saved",
+            "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_013: no resource saved",
+            "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_020: no resource saved",
+            "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+            "video source detected but no original video asset was saved"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-12-12_200000_444e4e3d3bd0db0285cbb74c/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-12-01_9185cf77ef78_42a25ed7",
+      "date": "2023-12-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "12",
+      "yearMonth": "2023-12",
+      "capturedAt": "2023-12-01T19:46:48+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 13,
+      "completeness": "partial",
+      "missing_assets": [
+        "7 API layer(s) unavailable",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_007: no resource saved",
+        "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_013: no resource saved",
+        "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "42a25ed7a3aa9f7050761cb0",
+      "manifest": "./data/archive/2023-12-01_194648_42a25ed7a3aa9f7050761cb0/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "42a25ed7a3aa9f7050761cb0",
+          "canonicalContentHash": "fc6de0732591fe2e217d05c9",
+          "sourceFingerprint": "b2b76d86be8871852b06fdec",
+          "capturedAt": "2023-12-01T19:46:48+08:00",
+          "lastObservedAt": "2023-12-01T19:46:48+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 13,
+          "completeness": "partial",
+          "missing_assets": [
+            "7 API layer(s) unavailable",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_007: no resource saved",
+            "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_013: no resource saved",
+            "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-12-01_194648_42a25ed7a3aa9f7050761cb0/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-11-17_89a23cbc8ee9_5426c792",
+      "date": "2023-11-17",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "11",
+      "yearMonth": "2023-11",
+      "capturedAt": "2023-11-17T20:00:00+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 13,
+      "completeness": "partial",
+      "missing_assets": [
+        "7 API layer(s) unavailable",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_004: no resource saved",
+        "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_005: no resource saved",
+        "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_012: no resource saved",
+        "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "5426c792b7bf59d52dc6cf3d",
+      "manifest": "./data/archive/2023-11-17_200000_5426c792b7bf59d52dc6cf3d/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "5426c792b7bf59d52dc6cf3d",
+          "canonicalContentHash": "f77416b812bb60858600b485",
+          "sourceFingerprint": "995a4fb0eda5b605643ebe0a",
+          "capturedAt": "2023-11-17T20:00:00+08:00",
+          "lastObservedAt": "2023-11-17T20:00:00+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 13,
+          "completeness": "partial",
+          "missing_assets": [
+            "7 API layer(s) unavailable",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_004: no resource saved",
+            "api_layer_004_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_005: no resource saved",
+            "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_012: no resource saved",
+            "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-11-17_200000_5426c792b7bf59d52dc6cf3d/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-11-01_b4a46548e292_230a93dd",
+      "date": "2023-11-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "11",
+      "yearMonth": "2023-11",
+      "capturedAt": "2023-11-01T19:24:53+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 11,
+      "completeness": "partial",
+      "missing_assets": [
+        "6 API layer(s) unavailable",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_007: no resource saved",
+        "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "230a93dd81102f0898960012",
+      "manifest": "./data/archive/2023-11-01_192453_230a93dd81102f0898960012/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "230a93dd81102f0898960012",
+          "canonicalContentHash": "08a13b42ed55fe45e2524a46",
+          "sourceFingerprint": "16eb9cac6e1734895e233697",
+          "capturedAt": "2023-11-01T19:24:53+08:00",
+          "lastObservedAt": "2023-11-01T19:24:53+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 11,
+          "completeness": "partial",
+          "missing_assets": [
+            "6 API layer(s) unavailable",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_007: no resource saved",
+            "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-11-01_192453_230a93dd81102f0898960012/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-10-26_de81169da38f_f5b210f9",
+      "date": "2023-10-26",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "10",
+      "yearMonth": "2023-10",
+      "capturedAt": "2023-10-26T20:00:00+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 9,
+      "completeness": "partial",
+      "missing_assets": [
+        "8 API layer(s) unavailable",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_006: no resource saved",
+        "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_007: no resource saved",
+        "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_012: no resource saved",
+        "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_013: no resource saved",
+        "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "f5b210f9985c4e1c4a8eea06",
+      "manifest": "./data/archive/2023-10-26_200000_f5b210f9985c4e1c4a8eea06/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "f5b210f9985c4e1c4a8eea06",
+          "canonicalContentHash": "57f910b9b61a09b719eb8fea",
+          "sourceFingerprint": "2d070f5edb138e1ebded0247",
+          "capturedAt": "2023-10-26T20:00:00+08:00",
+          "lastObservedAt": "2023-10-26T20:00:00+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 9,
+          "completeness": "partial",
+          "missing_assets": [
+            "8 API layer(s) unavailable",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_006: no resource saved",
+            "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_007: no resource saved",
+            "api_layer_007_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_012: no resource saved",
+            "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_013: no resource saved",
+            "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-10-26_200000_f5b210f9985c4e1c4a8eea06/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-10-01_3a3d85c6c098_2d649552",
+      "date": "2023-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "10",
+      "yearMonth": "2023-10",
+      "capturedAt": "2023-10-01T19:09:39+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 8,
+      "completeness": "partial",
+      "missing_assets": [
+        "10 API layer(s) unavailable",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_014: no resource saved",
+        "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden",
+        "video source detected but no original video asset was saved"
+      ],
+      "contentHash": "2d64955293abc0d267eb8fe2",
+      "manifest": "./data/archive/2023-10-01_190939_2d64955293abc0d267eb8fe2/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "2d64955293abc0d267eb8fe2",
+          "canonicalContentHash": "48bfa9fa26b1a7c66caeef38",
+          "sourceFingerprint": "b4f788a9dac6471970a035c9",
+          "capturedAt": "2023-10-01T19:09:39+08:00",
+          "lastObservedAt": "2023-10-01T19:09:39+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 8,
+          "completeness": "partial",
+          "missing_assets": [
+            "10 API layer(s) unavailable",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_014: no resource saved",
+            "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden",
+            "video source detected but no original video asset was saved"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-10-01_190939_2d64955293abc0d267eb8fe2/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-07-01_207e4a0167a3_a0c11417",
+      "date": "2023-07-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "07",
+      "yearMonth": "2023-07",
+      "capturedAt": "2023-07-01T20:09:06+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 8,
+      "completeness": "partial",
+      "missing_assets": [
+        "7 API layer(s) unavailable",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_012: no resource saved",
+        "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_013: no resource saved",
+        "api_layer_013_resource_000: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "a0c114178b81a974b4f21890",
+      "manifest": "./data/archive/2023-07-01_200906_a0c114178b81a974b4f21890/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "a0c114178b81a974b4f21890",
+          "canonicalContentHash": "86804d5849c18b9958dfa81d",
+          "sourceFingerprint": "9101675e0bc7fa9a4e68089e",
+          "capturedAt": "2023-07-01T20:09:06+08:00",
+          "lastObservedAt": "2023-07-01T20:09:06+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 8,
+          "completeness": "partial",
+          "missing_assets": [
+            "7 API layer(s) unavailable",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_012: no resource saved",
+            "api_layer_012_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_013: no resource saved",
+            "api_layer_013_resource_000: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-07-01_200906_a0c114178b81a974b4f21890/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-05-01_b00def4701e7_cc588085",
+      "date": "2023-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "05",
+      "yearMonth": "2023-05",
+      "capturedAt": "2023-05-01T19:48:11+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 15,
+      "completeness": "partial",
+      "missing_assets": [
+        "12 API layer(s) unavailable",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_010: no resource saved",
+        "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_011: no resource saved",
+        "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_016: no resource saved",
+        "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_017: no resource saved",
+        "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_018: no resource saved",
+        "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_023: no resource saved",
+        "api_layer_023_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_024: no resource saved",
+        "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_026: no resource saved",
+        "api_layer_026_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "cc5880850fae16dea28a93a9",
+      "manifest": "./data/archive/2023-05-01_194811_cc5880850fae16dea28a93a9/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "cc5880850fae16dea28a93a9",
+          "canonicalContentHash": "137c99747c2797957df9d161",
+          "sourceFingerprint": "736d1f2ba34c42eaeb10be8f",
+          "capturedAt": "2023-05-01T19:48:11+08:00",
+          "lastObservedAt": "2023-05-01T19:48:11+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 15,
+          "completeness": "partial",
+          "missing_assets": [
+            "12 API layer(s) unavailable",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_010: no resource saved",
+            "api_layer_010_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_011: no resource saved",
+            "api_layer_011_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_016: no resource saved",
+            "api_layer_016_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_017: no resource saved",
+            "api_layer_017_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_018: no resource saved",
+            "api_layer_018_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_023: no resource saved",
+            "api_layer_023_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_024: no resource saved",
+            "api_layer_024_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_026: no resource saved",
+            "api_layer_026_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-05-01_194811_cc5880850fae16dea28a93a9/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-04-01_172dad11e93d_8f8b21dc",
+      "date": "2023-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "04",
+      "yearMonth": "2023-04",
+      "capturedAt": "2023-04-01T20:50:29+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 14,
+      "completeness": "partial",
+      "missing_assets": [
+        "11 API layer(s) unavailable",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_005: no resource saved",
+        "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_006: no resource saved",
+        "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_008: no resource saved",
+        "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_009: no resource saved",
+        "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_013: no resource saved",
+        "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_014: no resource saved",
+        "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_015: no resource saved",
+        "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_020: no resource saved",
+        "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_021: no resource saved",
+        "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "8f8b21dcefeff98d9473a36d",
+      "manifest": "./data/archive/2023-04-01_205029_8f8b21dcefeff98d9473a36d/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "8f8b21dcefeff98d9473a36d",
+          "canonicalContentHash": "5ef87f809c185940791d9cb6",
+          "sourceFingerprint": "402cc343ac4b893f3413fb1a",
+          "capturedAt": "2023-04-01T20:50:29+08:00",
+          "lastObservedAt": "2023-04-01T20:50:29+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 14,
+          "completeness": "partial",
+          "missing_assets": [
+            "11 API layer(s) unavailable",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_005: no resource saved",
+            "api_layer_005_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_006: no resource saved",
+            "api_layer_006_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_008: no resource saved",
+            "api_layer_008_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_009: no resource saved",
+            "api_layer_009_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_013: no resource saved",
+            "api_layer_013_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_014: no resource saved",
+            "api_layer_014_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_015: no resource saved",
+            "api_layer_015_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_020: no resource saved",
+            "api_layer_020_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_021: no resource saved",
+            "api_layer_021_resource_000: HTTP Error 403: Forbidden",
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-04-01_205029_8f8b21dcefeff98d9473a36d/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-03-01_0a6f021986f2_83501924",
+      "date": "2023-03-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "03",
+      "yearMonth": "2023-03",
+      "capturedAt": "2023-03-01T20:25:46+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "83501924a135f24c16a6c402",
+      "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "83501924a135f24c16a6c402",
+          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
+          "sourceFingerprint": "d56f738d0c7efcbefd958846",
+          "capturedAt": "2023-03-01T20:25:46+08:00",
+          "lastObservedAt": "2023-03-01T20:25:46+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-02-01_0a6f021986f2_83501924",
+      "date": "2023-02-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "02",
+      "yearMonth": "2023-02",
+      "capturedAt": "2023-02-01T21:14:48+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "83501924a135f24c16a6c402",
+      "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "83501924a135f24c16a6c402",
+          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
+          "sourceFingerprint": "d56f738d0c7efcbefd958846",
+          "capturedAt": "2023-02-01T21:14:48+08:00",
+          "lastObservedAt": "2023-02-01T21:14:48+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1260
+          ],
+          "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2023-01-01_0a6f021986f2_09c2f761",
+      "date": "2023-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2023",
+      "month": "01",
+      "yearMonth": "2023-01",
+      "capturedAt": "2023-01-01T20:07:38+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "partial",
+      "missing_assets": [
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "09c2f7616b2aa214ba9455bd",
+      "manifest": "./data/archive/2023-01-01_200738_09c2f7616b2aa214ba9455bd/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "09c2f7616b2aa214ba9455bd",
+          "canonicalContentHash": "c86b790ce4eb8eb726aa44b0",
+          "sourceFingerprint": "b67a1776429cf907dd38068e",
+          "capturedAt": "2023-01-01T20:07:38+08:00",
+          "lastObservedAt": "2023-01-01T20:07:38+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "partial",
+          "missing_assets": [
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2023-01-01_200738_09c2f7616b2aa214ba9455bd/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-12-01_3f4544a6cbd4_851e4699",
+      "date": "2022-12-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "12",
+      "yearMonth": "2022-12",
+      "capturedAt": "2022-12-01T20:02:44+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "851e4699f53b17cbda6c2228",
+      "manifest": "./data/archive/2022-12-01_200244_851e4699f53b17cbda6c2228/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "851e4699f53b17cbda6c2228",
+          "canonicalContentHash": "c14abae96502a827b4528ab4",
+          "sourceFingerprint": "8fda68b17b0db1aeac6cc9d9",
+          "capturedAt": "2022-12-01T20:02:44+08:00",
+          "lastObservedAt": "2022-12-01T20:02:44+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-12-01_200244_851e4699f53b17cbda6c2228/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-11-01_0a6f021986f2_83501924",
+      "date": "2022-11-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "11",
+      "yearMonth": "2022-11",
+      "capturedAt": "2022-11-01T19:21:10+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "83501924a135f24c16a6c402",
+      "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "83501924a135f24c16a6c402",
+          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
+          "sourceFingerprint": "d56f738d0c7efcbefd958846",
+          "capturedAt": "2022-11-01T19:21:10+08:00",
+          "lastObservedAt": "2022-11-01T19:21:10+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-10-01_0a6f021986f2_83501924",
+      "date": "2022-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "10",
+      "yearMonth": "2022-10",
+      "capturedAt": "2022-10-01T17:43:47+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "83501924a135f24c16a6c402",
+      "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "83501924a135f24c16a6c402",
+          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
+          "sourceFingerprint": "d56f738d0c7efcbefd958846",
+          "capturedAt": "2022-10-01T17:43:47+08:00",
+          "lastObservedAt": "2022-10-01T17:43:47+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            900
+          ],
+          "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-09-01_0a6f021986f2_95177380",
+      "date": "2022-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "09",
+      "yearMonth": "2022-09",
+      "capturedAt": "2022-09-01T19:32:08+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "partial",
+      "missing_assets": [
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "9517738064efffe6f8018250",
+      "manifest": "./data/archive/2022-07-01_195929_9517738064efffe6f8018250/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "9517738064efffe6f8018250",
+          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
+          "sourceFingerprint": "99a87af3aa84ce1be45f9915",
+          "capturedAt": "2022-09-01T19:32:08+08:00",
+          "lastObservedAt": "2022-09-01T19:32:08+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "partial",
+          "missing_assets": [
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-07-01_195929_9517738064efffe6f8018250/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-08-01_0a6f021986f2_83501924",
+      "date": "2022-08-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "08",
+      "yearMonth": "2022-08",
+      "capturedAt": "2022-08-01T19:17:56+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "83501924a135f24c16a6c402",
+      "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "83501924a135f24c16a6c402",
+          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
+          "sourceFingerprint": "d56f738d0c7efcbefd958846",
+          "capturedAt": "2022-08-01T19:17:56+08:00",
+          "lastObservedAt": "2022-08-01T19:17:56+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-07-01_0a6f021986f2_95177380",
+      "date": "2022-07-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "07",
+      "yearMonth": "2022-07",
+      "capturedAt": "2022-07-01T19:59:29+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "partial",
+      "missing_assets": [
+        "fallback pic: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "9517738064efffe6f8018250",
+      "manifest": "./data/archive/2022-07-01_195929_9517738064efffe6f8018250/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "9517738064efffe6f8018250",
+          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
+          "sourceFingerprint": "99a87af3aa84ce1be45f9915",
+          "capturedAt": "2022-07-01T19:59:29+08:00",
+          "lastObservedAt": "2022-07-01T19:59:29+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "partial",
+          "missing_assets": [
+            "fallback pic: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-07-01_195929_9517738064efffe6f8018250/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-06-01_0a6f021986f2_9719710a",
+      "date": "2022-06-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "06",
+      "yearMonth": "2022-06",
+      "capturedAt": "2022-06-01T19:43:44+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "9719710ae48ff99e0942fe23",
+      "manifest": "./data/archive/2022-06-01_194344_9719710ae48ff99e0942fe23/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "9719710ae48ff99e0942fe23",
+          "canonicalContentHash": "4989966f6e1076c3752aa78e",
+          "sourceFingerprint": "d5e14a69cb38a174b7030753",
+          "capturedAt": "2022-06-01T19:43:44+08:00",
+          "lastObservedAt": "2022-06-01T19:43:44+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-06-01_194344_9719710ae48ff99e0942fe23/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-05-01_0a6f021986f2_83501924",
+      "date": "2022-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "05",
+      "yearMonth": "2022-05",
+      "capturedAt": "2022-05-01T20:25:02+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "83501924a135f24c16a6c402",
+      "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "83501924a135f24c16a6c402",
+          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
+          "sourceFingerprint": "d56f738d0c7efcbefd958846",
+          "capturedAt": "2022-05-01T20:25:02+08:00",
+          "lastObservedAt": "2022-05-01T20:25:02+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-05-01_202502_83501924a135f24c16a6c402/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-04-01_3f4544a6cbd4_dfbf1b8f",
+      "date": "2022-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "04",
+      "yearMonth": "2022-04",
+      "capturedAt": "2022-04-01T20:09:44+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "dfbf1b8fcc6148764d0bd33f",
+      "manifest": "./data/archive/2022-04-01_200944_dfbf1b8fcc6148764d0bd33f/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "dfbf1b8fcc6148764d0bd33f",
+          "canonicalContentHash": "12bb434296af704e35b5d398",
+          "sourceFingerprint": "a877b2bbfc27325bb618a823",
+          "capturedAt": "2022-04-01T20:09:44+08:00",
+          "lastObservedAt": "2022-04-01T20:09:44+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-04-01_200944_dfbf1b8fcc6148764d0bd33f/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-03-01_0a6f021986f2_dd3b0161",
+      "date": "2022-03-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "03",
+      "yearMonth": "2022-03",
+      "capturedAt": "2022-03-01T19:50:41+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "partial",
+      "missing_assets": [
+        "Header API extensions preserved but not replayed: time"
+      ],
+      "contentHash": "dd3b01617c4dc7d252cfb963",
+      "manifest": "./data/archive/2022-03-01_195041_dd3b01617c4dc7d252cfb963/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "dd3b01617c4dc7d252cfb963",
+          "canonicalContentHash": "9e760ecbd1603382dd3bf8e8",
+          "sourceFingerprint": "97f8db06cea63499db9f3b5f",
+          "capturedAt": "2022-03-01T19:50:41+08:00",
+          "lastObservedAt": "2022-03-01T19:50:41+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "partial",
+          "missing_assets": [
+            "Header API extensions preserved but not replayed: time"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-03-01_195041_dd3b01617c4dc7d252cfb963/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-02-01_0a6f021986f2_9f1f1ba7",
+      "date": "2022-02-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "02",
+      "yearMonth": "2022-02",
+      "capturedAt": "2022-02-01T19:44:33+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "9f1f1ba7e9518acb1e03045c",
+      "manifest": "./data/archive/2022-02-01_194433_9f1f1ba7e9518acb1e03045c/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "9f1f1ba7e9518acb1e03045c",
+          "canonicalContentHash": "765eb579e4c3b319fdfb0c7e",
+          "sourceFingerprint": "da28ed5c901410b62759fd46",
+          "capturedAt": "2022-02-01T19:44:33+08:00",
+          "lastObservedAt": "2022-02-01T19:44:33+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-02-01_194433_9f1f1ba7e9518acb1e03045c/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2022-01-01_3f4544a6cbd4_7fa33633",
+      "date": "2022-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "01",
+      "yearMonth": "2022-01",
+      "capturedAt": "2022-01-01T20:13:48+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "7fa336339a055b4f76499a6b",
+      "manifest": "./data/archive/2022-01-01_201348_7fa336339a055b4f76499a6b/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "7fa336339a055b4f76499a6b",
+          "canonicalContentHash": "bbcf58c736e3ee4ef6f3add0",
+          "sourceFingerprint": "74702d184cce87d43b5041ad",
+          "capturedAt": "2022-01-01T20:13:48+08:00",
+          "lastObservedAt": "2022-01-01T20:13:48+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2022-01-01_201348_7fa336339a055b4f76499a6b/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-12-01_3f4544a6cbd4_75536da5",
+      "date": "2021-12-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "12",
+      "yearMonth": "2021-12",
+      "capturedAt": "2021-12-01T20:12:10+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "75536da560df8c83c2f430d9",
+      "manifest": "./data/archive/2021-12-01_201210_75536da560df8c83c2f430d9/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "75536da560df8c83c2f430d9",
+          "canonicalContentHash": "5b3da167e430e7029b8763d0",
+          "sourceFingerprint": "95dedbc89c08a09ccd292113",
+          "capturedAt": "2021-12-01T20:12:10+08:00",
+          "lastObservedAt": "2021-12-01T20:12:10+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-12-01_201210_75536da560df8c83c2f430d9/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-11-01_5fa976dad48a_839580a6",
+      "date": "2021-11-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "11",
+      "yearMonth": "2021-11",
+      "capturedAt": "2021-11-01T20:01:47+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 2,
+      "completeness": "partial",
+      "missing_assets": [
+        "Header API extensions preserved but not replayed: time"
+      ],
+      "contentHash": "839580a6eebef05a295a9c0f",
+      "manifest": "./data/archive/2021-10-01_195614_839580a6eebef05a295a9c0f/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "839580a6eebef05a295a9c0f",
+          "canonicalContentHash": "f6777554b7e839a7787899c8",
+          "sourceFingerprint": "e61eb2242fb58db8e0780f6b",
+          "capturedAt": "2021-11-01T20:01:47+08:00",
+          "lastObservedAt": "2021-11-01T20:01:47+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 2,
+          "completeness": "partial",
+          "missing_assets": [
+            "Header API extensions preserved but not replayed: time"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-10-01_195614_839580a6eebef05a295a9c0f/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-10-01_5fa976dad48a_839580a6",
+      "date": "2021-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "10",
+      "yearMonth": "2021-10",
+      "capturedAt": "2021-10-01T19:56:14+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 2,
+      "completeness": "partial",
+      "missing_assets": [
+        "Header API extensions preserved but not replayed: time"
+      ],
+      "contentHash": "839580a6eebef05a295a9c0f",
+      "manifest": "./data/archive/2021-10-01_195614_839580a6eebef05a295a9c0f/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "839580a6eebef05a295a9c0f",
+          "canonicalContentHash": "f6777554b7e839a7787899c8",
+          "sourceFingerprint": "e61eb2242fb58db8e0780f6b",
+          "capturedAt": "2021-10-01T19:56:14+08:00",
+          "lastObservedAt": "2021-10-01T19:56:14+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 2,
+          "completeness": "partial",
+          "missing_assets": [
+            "Header API extensions preserved but not replayed: time"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-10-01_195614_839580a6eebef05a295a9c0f/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-09-01_c67914dc19b6_54ae21ca",
+      "date": "2021-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "09",
+      "yearMonth": "2021-09",
+      "capturedAt": "2021-09-01T19:21:51+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "2 API layer(s) unavailable",
+        "Header API declared structured Banner evidence but no layer resource was recoverable",
+        "Header API extensions preserved but not replayed: time",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+        "video source detected but no original video asset was saved"
+      ],
+      "contentHash": "54ae21ca2cdf1501fe2c9174",
+      "manifest": "./data/archive/2021-09-01_192151_54ae21ca2cdf1501fe2c9174/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "54ae21ca2cdf1501fe2c9174",
+          "canonicalContentHash": "b82244ad379bd0aa308deaf1",
+          "sourceFingerprint": "c6f34db5560d788b9e0bef8d",
+          "capturedAt": "2021-09-01T19:21:51+08:00",
+          "lastObservedAt": "2021-09-01T19:21:51+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "2 API layer(s) unavailable",
+            "Header API declared structured Banner evidence but no layer resource was recoverable",
+            "Header API extensions preserved but not replayed: time",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: HTTP Error 403: Forbidden",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: HTTP Error 403: Forbidden",
+            "video source detected but no original video asset was saved"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-09-01_192151_54ae21ca2cdf1501fe2c9174/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-08-01_3f4544a6cbd4_7947bafa",
+      "date": "2021-08-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "08",
+      "yearMonth": "2021-08",
+      "capturedAt": "2021-08-01T20:29:27+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "7947bafa9b164dd40b8de878",
+      "manifest": "./data/archive/2021-06-01_213329_7947bafa9b164dd40b8de878/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "7947bafa9b164dd40b8de878",
+          "canonicalContentHash": "6d887fdaa6e9ede57842a906",
+          "sourceFingerprint": "a3b8db7322fca2c3830cbbb3",
+          "capturedAt": "2021-08-01T20:29:27+08:00",
+          "lastObservedAt": "2021-08-01T20:29:27+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-06-01_213329_7947bafa9b164dd40b8de878/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-07-01_3f4544a6cbd4_8a70ee1b",
+      "date": "2021-07-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "07",
+      "yearMonth": "2021-07",
+      "capturedAt": "2021-07-01T18:24:04+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "8a70ee1b7b223b800bba2f5a",
+      "manifest": "./data/archive/2021-07-01_182404_8a70ee1b7b223b800bba2f5a/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "8a70ee1b7b223b800bba2f5a",
+          "canonicalContentHash": "7ac57dcb08f88741bcdbb7f5",
+          "sourceFingerprint": "8c00d3487268dc6b25dffd84",
+          "capturedAt": "2021-07-01T18:24:04+08:00",
+          "lastObservedAt": "2021-07-01T18:24:04+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-07-01_182404_8a70ee1b7b223b800bba2f5a/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-06-01_3f4544a6cbd4_7947bafa",
+      "date": "2021-06-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "06",
+      "yearMonth": "2021-06",
+      "capturedAt": "2021-06-01T21:33:29+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "7947bafa9b164dd40b8de878",
+      "manifest": "./data/archive/2021-06-01_213329_7947bafa9b164dd40b8de878/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "7947bafa9b164dd40b8de878",
+          "canonicalContentHash": "6d887fdaa6e9ede57842a906",
+          "sourceFingerprint": "a3b8db7322fca2c3830cbbb3",
+          "capturedAt": "2021-06-01T21:33:29+08:00",
+          "lastObservedAt": "2021-06-01T21:33:29+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1260
+          ],
+          "manifest": "./data/archive/2021-06-01_213329_7947bafa9b164dd40b8de878/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-05-01_3f4544a6cbd4_918d8e30",
+      "date": "2021-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "05",
+      "yearMonth": "2021-05",
+      "capturedAt": "2021-05-01T19:26:40+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "918d8e30eaee6b83e7ef8979",
+      "manifest": "./data/archive/2021-04-01_210507_918d8e30eaee6b83e7ef8979/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "918d8e30eaee6b83e7ef8979",
+          "canonicalContentHash": "0752bad89f888585c2881597",
+          "sourceFingerprint": "56be87c534ec186a784e4ecb",
+          "capturedAt": "2021-05-01T19:26:40+08:00",
+          "lastObservedAt": "2021-05-01T19:26:40+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-04-01_210507_918d8e30eaee6b83e7ef8979/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-04-01_3f4544a6cbd4_918d8e30",
+      "date": "2021-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "04",
+      "yearMonth": "2021-04",
+      "capturedAt": "2021-04-01T21:05:07+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "918d8e30eaee6b83e7ef8979",
+      "manifest": "./data/archive/2021-04-01_210507_918d8e30eaee6b83e7ef8979/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "918d8e30eaee6b83e7ef8979",
+          "canonicalContentHash": "0752bad89f888585c2881597",
+          "sourceFingerprint": "56be87c534ec186a784e4ecb",
+          "capturedAt": "2021-04-01T21:05:07+08:00",
+          "lastObservedAt": "2021-04-01T21:05:07+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1260
+          ],
+          "manifest": "./data/archive/2021-04-01_210507_918d8e30eaee6b83e7ef8979/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-03-01_3f4544a6cbd4_6bac00bf",
+      "date": "2021-03-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "03",
+      "yearMonth": "2021-03",
+      "capturedAt": "2021-03-01T18:53:30+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "6bac00bf079fde15b0371343",
+      "manifest": "./data/archive/2021-03-01_185330_6bac00bf079fde15b0371343/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "6bac00bf079fde15b0371343",
+          "canonicalContentHash": "38f612c7ea7345bd63ed8b3f",
+          "sourceFingerprint": "0a5cc3e27b760d5eaffd6b38",
+          "capturedAt": "2021-03-01T18:53:30+08:00",
+          "lastObservedAt": "2021-03-01T18:53:30+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2021-03-01_185330_6bac00bf079fde15b0371343/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2021-01-01_3f4544a6cbd4_842260b5",
+      "date": "2021-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "01",
+      "yearMonth": "2021-01",
+      "capturedAt": "2021-01-01T21:22:50+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "842260b58173cb1dba3da30c",
+      "manifest": "./data/archive/2021-01-01_212250_842260b58173cb1dba3da30c/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "842260b58173cb1dba3da30c",
+          "canonicalContentHash": "20abeaffebe447de3a3e6ab1",
+          "sourceFingerprint": "c17d7a0a615329db2cac61c4",
+          "capturedAt": "2021-01-01T21:22:50+08:00",
+          "lastObservedAt": "2021-01-01T21:22:50+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1260
+          ],
+          "manifest": "./data/archive/2021-01-01_212250_842260b58173cb1dba3da30c/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-12-01_3f4544a6cbd4_882f6d80",
+      "date": "2020-12-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "12",
+      "yearMonth": "2020-12",
+      "capturedAt": "2020-12-01T19:54:50+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "auxiliary_000: https://web.archive.org/web/20201201115450id_/https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20201201115450id_/https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20201201115450id_/https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "882f6d8054dab8e58a32ff83",
+      "manifest": "./data/archive/2020-12-01_195450_882f6d8054dab8e58a32ff83/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "882f6d8054dab8e58a32ff83",
+          "canonicalContentHash": "36436112448c03ba6b598ecd",
+          "sourceFingerprint": "4902a7743fd21b55e3e406e2",
+          "capturedAt": "2020-12-01T19:54:50+08:00",
+          "lastObservedAt": "2020-12-01T19:54:50+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20201201115450id_/https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20201201115450id_/https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20201201115450id_/https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/58a99b9d31ca0f97fffeb1696f0ef0ffe96b258e.png: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-12-01_195450_882f6d8054dab8e58a32ff83/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-10-01_3f4544a6cbd4_272d37f2",
+      "date": "2020-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "10",
+      "yearMonth": "2020-10",
+      "capturedAt": "2020-10-01T20:21:00+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "272d37f257f06ac534d86888",
+      "manifest": "./data/archive/2020-10-01_202100_272d37f257f06ac534d86888/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "272d37f257f06ac534d86888",
+          "canonicalContentHash": "14a5af7b792deec38de0a026",
+          "sourceFingerprint": "ecb73d618ac6f097b7cf54bc",
+          "capturedAt": "2020-10-01T20:21:00+08:00",
+          "lastObservedAt": "2020-10-01T20:21:00+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-10-01_202100_272d37f257f06ac534d86888/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-09-01_3f4544a6cbd4_d5a97080",
+      "date": "2020-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "09",
+      "yearMonth": "2020-09",
+      "capturedAt": "2020-09-01T15:20:37+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "d5a97080b1d90d9abc40539e",
+      "manifest": "./data/archive/2020-08-01_205509_d5a97080b1d90d9abc40539e/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "d5a97080b1d90d9abc40539e",
+          "canonicalContentHash": "fd9f9b5ae5a7f173926f39f8",
+          "sourceFingerprint": "f944b2052782a0b7155128b1",
+          "capturedAt": "2020-09-01T15:20:37+08:00",
+          "lastObservedAt": "2020-09-01T15:20:37+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            900
+          ],
+          "manifest": "./data/archive/2020-08-01_205509_d5a97080b1d90d9abc40539e/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-08-01_3f4544a6cbd4_d5a97080",
+      "date": "2020-08-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "08",
+      "yearMonth": "2020-08",
+      "capturedAt": "2020-08-01T20:55:09+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "d5a97080b1d90d9abc40539e",
+      "manifest": "./data/archive/2020-08-01_205509_d5a97080b1d90d9abc40539e/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "d5a97080b1d90d9abc40539e",
+          "canonicalContentHash": "fd9f9b5ae5a7f173926f39f8",
+          "sourceFingerprint": "f944b2052782a0b7155128b1",
+          "capturedAt": "2020-08-01T20:55:09+08:00",
+          "lastObservedAt": "2020-08-01T20:55:09+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-08-01_205509_d5a97080b1d90d9abc40539e/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-07-01_3f4544a6cbd4_b7ba7549",
+      "date": "2020-07-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "07",
+      "yearMonth": "2020-07",
+      "capturedAt": "2020-07-01T20:26:26+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "b7ba7549bb4f5c09feec0210",
+      "manifest": "./data/archive/2020-07-01_202626_b7ba7549bb4f5c09feec0210/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "b7ba7549bb4f5c09feec0210",
+          "canonicalContentHash": "e2fd369c8413dc8a0552b09a",
+          "sourceFingerprint": "626d20a361cc35b5ee61ee03",
+          "capturedAt": "2020-07-01T20:26:26+08:00",
+          "lastObservedAt": "2020-07-01T20:26:26+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-07-01_202626_b7ba7549bb4f5c09feec0210/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-05-01_3f4544a6cbd4_31e27e69",
+      "date": "2020-05-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "05",
+      "yearMonth": "2020-05",
+      "capturedAt": "2020-05-01T19:32:44+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "31e27e69c9606d1a3fb2a20f",
+      "manifest": "./data/archive/2020-04-01_181300_31e27e69c9606d1a3fb2a20f/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "31e27e69c9606d1a3fb2a20f",
+          "canonicalContentHash": "da1be786e8b292cf8163f214",
+          "sourceFingerprint": "08664dcd89200916326ec7c5",
+          "capturedAt": "2020-05-01T19:32:44+08:00",
+          "lastObservedAt": "2020-05-01T19:32:44+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-04-01_181300_31e27e69c9606d1a3fb2a20f/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-04-01_3f4544a6cbd4_31e27e69",
+      "date": "2020-04-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "04",
+      "yearMonth": "2020-04",
+      "capturedAt": "2020-04-01T18:13:00+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "31e27e69c9606d1a3fb2a20f",
+      "manifest": "./data/archive/2020-04-01_181300_31e27e69c9606d1a3fb2a20f/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "31e27e69c9606d1a3fb2a20f",
+          "canonicalContentHash": "da1be786e8b292cf8163f214",
+          "sourceFingerprint": "08664dcd89200916326ec7c5",
+          "capturedAt": "2020-04-01T18:13:00+08:00",
+          "lastObservedAt": "2020-04-01T18:13:00+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-04-01_181300_31e27e69c9606d1a3fb2a20f/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-03-01_3f4544a6cbd4_3abe2b49",
+      "date": "2020-03-01",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "03",
+      "yearMonth": "2020-03",
+      "capturedAt": "2020-03-01T20:57:33+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "3abe2b4902c3c379630d0f5f",
+      "manifest": "./data/archive/2020-02-01_203410_3abe2b4902c3c379630d0f5f/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "3abe2b4902c3c379630d0f5f",
+          "canonicalContentHash": "304223c24b85e0c77d03d079",
+          "sourceFingerprint": "070bfea132aac8d97373d7ed",
+          "capturedAt": "2020-03-01T20:57:33+08:00",
+          "lastObservedAt": "2020-03-01T20:57:33+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-02-01_203410_3abe2b4902c3c379630d0f5f/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-02-01_3f4544a6cbd4_3abe2b49",
+      "date": "2020-02-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "02",
+      "yearMonth": "2020-02",
+      "capturedAt": "2020-02-01T20:34:10+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "3abe2b4902c3c379630d0f5f",
+      "manifest": "./data/archive/2020-02-01_203410_3abe2b4902c3c379630d0f5f/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "3abe2b4902c3c379630d0f5f",
+          "canonicalContentHash": "304223c24b85e0c77d03d079",
+          "sourceFingerprint": "070bfea132aac8d97373d7ed",
+          "capturedAt": "2020-02-01T20:34:10+08:00",
+          "lastObservedAt": "2020-02-01T20:34:10+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-02-01_203410_3abe2b4902c3c379630d0f5f/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2020-01-01_3f4544a6cbd4_57865abd",
+      "date": "2020-01-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2020",
+      "month": "01",
+      "yearMonth": "2020-01",
+      "capturedAt": "2020-01-01T18:48:18+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "57865abda2cede34cf98e3e9",
+      "manifest": "./data/archive/2020-01-01_184818_57865abda2cede34cf98e3e9/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "57865abda2cede34cf98e3e9",
+          "canonicalContentHash": "0348ba6cff87d363ee027771",
+          "sourceFingerprint": "306f88e0de915e521abb8c13",
+          "capturedAt": "2020-01-01T18:48:18+08:00",
+          "lastObservedAt": "2020-01-01T18:48:18+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2020-01-01_184818_57865abda2cede34cf98e3e9/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2019-11-01_3f4544a6cbd4_b03e8e41",
+      "date": "2019-11-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "11",
+      "yearMonth": "2019-11",
+      "capturedAt": "2019-11-01T19:15:46+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "auxiliary_000: https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "b03e8e414e447d70050f7b91",
+      "manifest": "./data/archive/2019-11-01_191546_b03e8e414e447d70050f7b91/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "b03e8e414e447d70050f7b91",
+          "canonicalContentHash": "3229d81f6cde719efe382467",
+          "sourceFingerprint": "69e8a39823d56dd360c73196",
+          "capturedAt": "2019-11-01T19:15:46+08:00",
+          "lastObservedAt": "2019-11-01T19:15:46+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20191101111546id_/https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/b3f60a4037cbe7a246b82d0ab28f40694a5a756c.png: HTTP Error 403: Forbidden"
+          ],
+          "observedSlots": [
+            1080
+          ],
+          "manifest": "./data/archive/2019-11-01_191546_b03e8e414e447d70050f7b91/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2019-10-01_3f4544a6cbd4_1fcf4caf",
+      "date": "2019-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "10",
+      "yearMonth": "2019-10",
+      "capturedAt": "2019-10-01T14:07:32+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "1fcf4caf73e522694147c030",
+      "manifest": "./data/archive/2019-10-01_140732_1fcf4caf73e522694147c030/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "1fcf4caf73e522694147c030",
+          "canonicalContentHash": "785be81c45a71395c0b0fe66",
+          "sourceFingerprint": "e7f720e4e886be239af98f23",
+          "capturedAt": "2019-10-01T14:07:32+08:00",
+          "lastObservedAt": "2019-10-01T14:07:32+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            720
+          ],
+          "manifest": "./data/archive/2019-10-01_140732_1fcf4caf73e522694147c030/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2019-09-02_3f4544a6cbd4_031e1fac",
+      "date": "2019-09-02",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "09",
+      "yearMonth": "2019-09",
+      "capturedAt": "2019-09-02T16:41:53+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "031e1fac08f36a3d0ce1b7ad",
+      "manifest": "./data/archive/2019-08-01_212528_031e1fac08f36a3d0ce1b7ad/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "031e1fac08f36a3d0ce1b7ad",
+          "canonicalContentHash": "e88bee5c2f953e0bfde7019b",
+          "sourceFingerprint": "006421e1cf8b42196f54dc96",
+          "capturedAt": "2019-09-02T16:41:53+08:00",
+          "lastObservedAt": "2019-09-02T16:41:53+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            900
+          ],
+          "manifest": "./data/archive/2019-08-01_212528_031e1fac08f36a3d0ce1b7ad/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2019-08-01_3f4544a6cbd4_031e1fac",
+      "date": "2019-08-01",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "08",
+      "yearMonth": "2019-08",
+      "capturedAt": "2019-08-01T21:25:28+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "031e1fac08f36a3d0ce1b7ad",
+      "manifest": "./data/archive/2019-08-01_212528_031e1fac08f36a3d0ce1b7ad/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "031e1fac08f36a3d0ce1b7ad",
+          "canonicalContentHash": "e88bee5c2f953e0bfde7019b",
+          "sourceFingerprint": "006421e1cf8b42196f54dc96",
+          "capturedAt": "2019-08-01T21:25:28+08:00",
+          "lastObservedAt": "2019-08-01T21:25:28+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "observedSlots": [
+            1260
+          ],
+          "manifest": "./data/archive/2019-08-01_212528_031e1fac08f36a3d0ce1b7ad/banner.json"
+        }
+      ]
+    }
+  ]
 }

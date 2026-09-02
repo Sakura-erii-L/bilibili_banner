@@ -1,0 +1,630 @@
+{
+  "version": 11.0,
+  "capturedAt": "2021-10-01T19:56:14+08:00",
+  "date": "2021-10-01",
+  "season": "autumn",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "captureMethod": "wayback-header-api",
+    "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "waybackTimestamp": "20211001115614",
+    "waybackReplay": "https://web.archive.org/web/20210930083905id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20211001120000",
+    "provider": "wayback-header-api",
+    "provenance": {
+      "primaryProvider": "wayback-header-api",
+      "supportingProviders": [],
+      "confidence": "high",
+      "agreement": {},
+      "conflicts": []
+    },
+    "homepageWaybackTimestamp": "20211001115614",
+    "headerApiWaybackTimestamp": "20210930083905",
+    "headerApiTimeDeltaSeconds": 98229,
+    "headerApiWaybackReplay": "https://web.archive.org/web/20210930083905id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20210924115614&to=20211008115614&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+    "discoveredResources": [
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "wayback-header-api",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/b60151347754f0089489d7d68271233960a8d52f.png",
+    "requestedSrc": "https://web.archive.org/web/20210930083905id_/https://i0.hdslb.com/bfs/archive/b60151347754f0089489d7d68271233960a8d52f.png",
+    "normalizedIdentity": "https://web.archive.org/web/20210930083905id_/https://i0.hdslb.com/bfs/archive/b60151347754f0089489d7d68271233960a8d52f.png",
+    "file": "static.png",
+    "contentType": "image/png",
+    "tag": "img",
+    "sourceKind": "header-api-pic",
+    "assetType": "image",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  "layers": [
+    {
+      "index": 0,
+      "apiIndex": 0,
+      "id": 6,
+      "name": "图层6",
+      "tag": "video",
+      "assetType": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+      "file": "api_layer_00_00_f3195837c5.mp4",
+      "contentType": "video/mp4",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+          "requestedSrc": "https://web.archive.org/web/20210930083905id_/https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+          "normalizedIdentity": "https://web.archive.org/web/20210930083905id_/https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+          "file": "api_layer_00_00_f3195837c5.mp4",
+          "contentType": "video/mp4",
+          "tag": "video",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.88
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            10,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.88
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            10,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 6,
+        "name": "图层6"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    },
+    {
+      "index": 1,
+      "apiIndex": 1,
+      "id": 8,
+      "name": "图层8",
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+      "file": "api_layer_01_00_8752fb91b9.png",
+      "contentType": "image/png",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+          "requestedSrc": "https://web.archive.org/web/20210930083905id_/https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+          "normalizedIdentity": "https://web.archive.org/web/20210930083905id_/https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+          "file": "api_layer_01_00_8752fb91b9.png",
+          "contentType": "image/png",
+          "tag": "img",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.87
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            20,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.87
+        },
+        "rotate": {},
+        "translate": {
+          "offset": [
+            20,
+            0
+          ]
+        },
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 8,
+        "name": "图层8"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 1,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "img"
+    }
+  ],
+  "interaction": {
+    "model": "bilibili-header-api-v1",
+    "positionAxis": "horizontal-normalized-from-entry",
+    "inputMode": "relative-from-pointer-enter",
+    "displacementFormula": "(clientX-enterX)/containerWidth",
+    "containerReferenceHeight": 155,
+    "returnDurationMs": 200,
+    "effects": [
+      "translate"
+    ]
+  },
+  "sourceFiles": {
+    "json": "source/api.json"
+  },
+  "api": {
+    "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "id": null,
+    "name": "",
+    "request_id": "1632991145",
+    "isSplitLayer": true,
+    "layerCount": 2,
+    "assetCount": 2,
+    "pic": "https://i0.hdslb.com/bfs/archive/b60151347754f0089489d7d68271233960a8d52f.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/9e5f278027ae7f1e1933b6e4002870361da6c20b.png",
+    "litpicAsset": {
+      "src": "https://i0.hdslb.com/bfs/archive/9e5f278027ae7f1e1933b6e4002870361da6c20b.png",
+      "requestedSrc": "https://web.archive.org/web/20210930083905id_/https://i0.hdslb.com/bfs/archive/9e5f278027ae7f1e1933b6e4002870361da6c20b.png",
+      "normalizedIdentity": "https://web.archive.org/web/20210930083905id_/https://i0.hdslb.com/bfs/archive/9e5f278027ae7f1e1933b6e4002870361da6c20b.png",
+      "file": "litpic.png",
+      "contentType": "image/png",
+      "tag": "img"
+    },
+    "splitVersion": "1",
+    "extensions": {
+      "time": {
+        "0": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 0,
+                "name": "图层0",
+                "resources": [
+                  {
+                    "src": "https://i0.hdslb.com/bfs/vc/b1208c03b700ad86b5580e13990b4cac5420448f.mp4",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.87
+                },
+                "translate": {
+                  "offset": [
+                    10,
+                    0
+                  ]
+                }
+              },
+              {
+                "id": 1,
+                "name": "图层1",
+                "resources": [
+                  {
+                    "src": "https://i0.hdslb.com/bfs/vc/5f18bd9e0b4fff738eaf6ebdc3c5c1477b5ea592.png",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.87
+                },
+                "translate": {
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "21600": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 6,
+                "name": "图层6",
+                "resources": [
+                  {
+                    "src": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.88
+                },
+                "translate": {
+                  "offset": [
+                    10,
+                    0
+                  ]
+                }
+              },
+              {
+                "id": 8,
+                "name": "图层8",
+                "resources": [
+                  {
+                    "src": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.87
+                },
+                "translate": {
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "68400": [
+          {
+            "version": "1",
+            "layers": [
+              {
+                "id": 0,
+                "name": "图层0",
+                "resources": [
+                  {
+                    "src": "https://i0.hdslb.com/bfs/vc/b1208c03b700ad86b5580e13990b4cac5420448f.mp4",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.87
+                },
+                "translate": {
+                  "offset": [
+                    10,
+                    0
+                  ]
+                }
+              },
+              {
+                "id": 1,
+                "name": "图层1",
+                "resources": [
+                  {
+                    "src": "https://i0.hdslb.com/bfs/vc/5f18bd9e0b4fff738eaf6ebdc3c5c1477b5ea592.png",
+                    "id": 0
+                  }
+                ],
+                "scale": {
+                  "initial": 0.87
+                },
+                "translate": {
+                  "offset": [
+                    20,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2021-11-01T20:01:47+08:00",
+  "type": [
+    "layered",
+    "video",
+    "interactive"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "static.png",
+  "preview_image": null,
+  "completeness": "partial",
+  "missing_assets": [
+    "Header API extensions preserved but not replayed: time"
+  ],
+  "structureEvidence": {
+    "root": {
+      "source": "bilibili-header-api",
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142"
+    },
+    "layerCount": 2,
+    "mediaCount": 2,
+    "visibleMediaCount": 2,
+    "media": [],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+        "initiatorType": "header-api"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": true,
+      "hasVideo": true,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": true,
+      "hasDynamicSource": true
+    },
+    "api": {
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+      "id": null,
+      "request_id": "1632991145",
+      "isSplitLayer": true,
+      "layerCount": 2,
+      "assetCount": 2,
+      "savedAssetCount": 2,
+      "effects": [
+        "translate"
+      ]
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/b60151347754f0089489d7d68271233960a8d52f.png",
+      "local_file": "static.png",
+      "content_type": "image/png",
+      "sha256": "b15053786a33507ed23d851bf72474827648f3db573ef72e487c9655b827a517"
+    },
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+      "local_file": "api_layer_00_00_f3195837c5.mp4",
+      "content_type": "video/mp4",
+      "sha256": "508833b651ba1bd80d5aba3fa3b0cac5ac8db9525a75cefc5f4291bf486ac5a8"
+    },
+    {
+      "role": "layer",
+      "index": 1,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+      "local_file": "api_layer_01_00_8752fb91b9.png",
+      "content_type": "image/png",
+      "sha256": "e1f3291ede7d7723b1f65851497e08268e7c392ff65962e71be2042544a01468"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "839580a6eebef05a295a9c0f",
+  "hashes": {
+    "resourceHash": "abb1a33575e976b99443b007",
+    "structureHash": "b057275c705d49e114999c56",
+    "interactionHash": "4be02fa46e4792da8a371f64",
+    "contentHash": "839580a6eebef05a295a9c0f",
+    "canonicalContentHash": "f6777554b7e839a7787899c8",
+    "sourceFingerprint": "e61eb2242fb58db8e0780f6b"
+  },
+  "canonicalContentHash": "f6777554b7e839a7787899c8",
+  "sourceFingerprint": "e61eb2242fb58db8e0780f6b",
+  "layoutHash": "5fa976dad48ad2dcdcecc0db",
+  "familyId": "2021-10-01_5fa976dad48a_839580a6",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2021-10-01T19:56:14+08:00",
+      "lastObservedAt": "2021-10-01T19:56:14+08:00",
+      "date": "2021-10-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2021-10-01_5fa976dad48a_839580a6",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20211001115614",
+        "waybackReplay": "https://web.archive.org/web/20210930083905id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20211001120000",
+        "provider": "wayback-header-api",
+        "provenance": {
+          "primaryProvider": "wayback-header-api",
+          "supportingProviders": [],
+          "confidence": "high",
+          "agreement": {},
+          "conflicts": []
+        },
+        "homepageWaybackTimestamp": "20211001115614",
+        "headerApiWaybackTimestamp": "20210930083905",
+        "headerApiTimeDeltaSeconds": 98229,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20210930083905id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20210924115614&to=20211008115614&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2021-11-01T20:01:47+08:00",
+      "lastObservedAt": "2021-11-01T20:01:47+08:00",
+      "date": "2021-11-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2021-11-01_5fa976dad48a_839580a6",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20211101120147",
+        "waybackReplay": "https://web.archive.org/web/20211102023217id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20211101120000",
+        "provider": "wayback-header-api",
+        "provenance": {
+          "primaryProvider": "wayback-header-api",
+          "supportingProviders": [],
+          "confidence": "high",
+          "agreement": {},
+          "conflicts": []
+        },
+        "homepageWaybackTimestamp": "20211101120147",
+        "headerApiWaybackTimestamp": "20211102023217",
+        "headerApiTimeDeltaSeconds": 52230,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20211102023217id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20211025120147&to=20211108120147&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/c859df1f4a77f06b5d388c10b7533efb89739dcf.mp4",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/839af78322450ea0eb6dbb1d19889d831862804f.png",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

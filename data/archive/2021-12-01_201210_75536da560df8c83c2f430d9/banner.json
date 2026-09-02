@@ -1,0 +1,203 @@
+{
+  "version": 11.0,
+  "capturedAt": "2021-12-01T20:12:10+08:00",
+  "date": "2021-12-01",
+  "season": "winter",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "captureMethod": "wayback-header-api",
+    "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "waybackTimestamp": "20211201121210",
+    "waybackReplay": "https://web.archive.org/web/20211201123048id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20211201120000",
+    "provider": "wayback-header-api",
+    "provenance": {
+      "primaryProvider": "wayback-header-api",
+      "supportingProviders": [],
+      "confidence": "high",
+      "agreement": {},
+      "conflicts": []
+    },
+    "homepageWaybackTimestamp": "20211201121210",
+    "headerApiWaybackTimestamp": "20211201123048",
+    "headerApiTimeDeltaSeconds": 1118,
+    "headerApiWaybackReplay": "https://web.archive.org/web/20211201123048id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20211124121210&to=20211208121210&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+    "discoveredResources": [],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "wayback-header-api",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "static",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/9489289ca88bdc062c16cebaf247df5a6d99f6d4.png",
+    "requestedSrc": "https://web.archive.org/web/20211201123048id_/https://i0.hdslb.com/bfs/archive/9489289ca88bdc062c16cebaf247df5a6d99f6d4.png",
+    "normalizedIdentity": "https://web.archive.org/web/20211201123048id_/https://i0.hdslb.com/bfs/archive/9489289ca88bdc062c16cebaf247df5a6d99f6d4.png",
+    "file": "static.png",
+    "contentType": "image/png",
+    "tag": "img",
+    "sourceKind": "header-api-pic",
+    "assetType": "image",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  "layers": [],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "horizontal-normalized-from-entry",
+    "inputMode": "relative-from-pointer-enter",
+    "displacementFormula": "(clientX-enterX)/containerWidth",
+    "containerReferenceHeight": 155,
+    "returnDurationMs": 200,
+    "effects": []
+  },
+  "sourceFiles": {
+    "json": "source/api.json"
+  },
+  "api": {
+    "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+    "id": null,
+    "name": "点击参与盛典",
+    "request_id": "1638361848",
+    "isSplitLayer": false,
+    "layerCount": 0,
+    "assetCount": 0,
+    "pic": "https://i0.hdslb.com/bfs/archive/9489289ca88bdc062c16cebaf247df5a6d99f6d4.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/d2ae00da253158fb57109d3ab7c6012d86c81b02.png",
+    "litpicAsset": {
+      "src": "https://i0.hdslb.com/bfs/archive/d2ae00da253158fb57109d3ab7c6012d86c81b02.png",
+      "requestedSrc": "https://web.archive.org/web/20211201123048id_/https://i0.hdslb.com/bfs/archive/d2ae00da253158fb57109d3ab7c6012d86c81b02.png",
+      "normalizedIdentity": "https://web.archive.org/web/20211201123048id_/https://i0.hdslb.com/bfs/archive/d2ae00da253158fb57109d3ab7c6012d86c81b02.png",
+      "file": "litpic.png",
+      "contentType": "image/png",
+      "tag": "img"
+    },
+    "splitVersion": "1",
+    "extensions": {}
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2021-12-01T20:12:10+08:00",
+  "type": [
+    "static"
+  ],
+  "is_split_layer": false,
+  "fallback_image": null,
+  "preview_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "bilibili-header-api",
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142"
+    },
+    "layerCount": 0,
+    "mediaCount": 0,
+    "visibleMediaCount": 0,
+    "media": [],
+    "resourceUrls": [],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "api": {
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+      "id": null,
+      "request_id": "1638361848",
+      "isSplitLayer": false,
+      "layerCount": 0,
+      "assetCount": 0,
+      "savedAssetCount": 0,
+      "effects": []
+    }
+  },
+  "assets": [
+    {
+      "role": "primary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/9489289ca88bdc062c16cebaf247df5a6d99f6d4.png",
+      "local_file": "static.png",
+      "content_type": "image/png",
+      "sha256": "8df5838208427a6372d423b207082d7e22f8e011c1420808f61d26e4de89ad7d"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "75536da560df8c83c2f430d9",
+  "hashes": {
+    "resourceHash": "e18a48b83d212f92dc0420e1",
+    "structureHash": "955eb9c17c507ca80f1185bc",
+    "interactionHash": "b2e542b0322f4bad46ea7f04",
+    "contentHash": "75536da560df8c83c2f430d9",
+    "canonicalContentHash": "5b3da167e430e7029b8763d0",
+    "sourceFingerprint": "95dedbc89c08a09ccd292113"
+  },
+  "canonicalContentHash": "5b3da167e430e7029b8763d0",
+  "sourceFingerprint": "95dedbc89c08a09ccd292113",
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2021-12-01_3f4544a6cbd4_75536da5",
+  "observedSlots": [
+    1080
+  ],
+  "observations": [
+    {
+      "capturedAt": "2021-12-01T20:12:10+08:00",
+      "lastObservedAt": "2021-12-01T20:12:10+08:00",
+      "date": "2021-12-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "observedSlots": [
+        1080
+      ],
+      "familyId": "2021-12-01_3f4544a6cbd4_75536da5",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "captureMethod": "wayback-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "waybackTimestamp": "20211201121210",
+        "waybackReplay": "https://web.archive.org/web/20211201123048id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20211201120000",
+        "provider": "wayback-header-api",
+        "provenance": {
+          "primaryProvider": "wayback-header-api",
+          "supportingProviders": [],
+          "confidence": "high",
+          "agreement": {},
+          "conflicts": []
+        },
+        "homepageWaybackTimestamp": "20211201121210",
+        "headerApiWaybackTimestamp": "20211201123048",
+        "headerApiTimeDeltaSeconds": 1118,
+        "headerApiWaybackReplay": "https://web.archive.org/web/20211201123048id_/https://api.bilibili.com/x/web-show/page/header?resource_id=142",
+        "headerApiCdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-show%2Fpage%2Fheader%3Fresource_id%3D142&from=20211124121210&to=20211208121210&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
