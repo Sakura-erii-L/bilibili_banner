@@ -544,10 +544,13 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
   frame.style.maxWidth = "100%";
   frame.style.minWidth = "0";
   let expanded = false;
-  const updateExpandedSize = () => {
+  const updateExpandedSize = heightOverride => {
     if (!expanded) return;
     const width = Math.max(shell.getBoundingClientRect().width, 1);
-    const height = Math.max(155, width / (16 / 3));
+    const measuredHeight = Number(heightOverride);
+    const height = Number.isFinite(measuredHeight) && measuredHeight > 0
+      ? measuredHeight
+      : Math.max(155, width / (16 / 3));
     shell.style.aspectRatio = "auto";
     shell.style.height = `${height}px`;
     shell.style.maxHeight = "none";
@@ -559,18 +562,24 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
       // The browser may temporarily expose no contentWindow while navigating srcdoc.
     }
   };
+  const collapseReferenceBanner = () => {
+    expanded = false;
+    shell.style.removeProperty("aspect-ratio");
+    shell.style.removeProperty("height");
+    shell.style.removeProperty("max-height");
+    frame.style.width = "100%";
+    frame.style.height = "100%";
+  };
   const onMessage = event => {
     if (event.source !== frame.contentWindow) return;
-    if (event.data?.type !== "bilibili-banner-expand") return;
-    expanded = Boolean(event.data.expanded);
+    const message = event.data;
+    if (message?.type !== "bilibili-banner-expand"
+      && message?.type !== "bilibili-banner-size") return;
+    expanded = Boolean(message.expanded);
     if (expanded) {
-      updateExpandedSize();
+      updateExpandedSize(message.height);
     } else {
-      shell.style.removeProperty("aspect-ratio");
-      shell.style.removeProperty("height");
-      shell.style.removeProperty("max-height");
-      frame.style.width = "100%";
-      frame.style.height = "100%";
+      collapseReferenceBanner();
     }
   };
   shell._referenceBannerMessageHandler = onMessage;
@@ -586,7 +595,7 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
     #bili-banner,.bili-banner,.summer-banner,.autumn-banner{box-sizing:border-box;width:100% !important;max-width:100% !important;min-width:0 !important}
   </style></head><body><div id="bili-banner"></div>
   <script src="${bundleUrl}"></script>
-  <script>const originalDispatchEvent=EventTarget.prototype.dispatchEvent;EventTarget.prototype.dispatchEvent=function(event){if(event?.type==="banner-expand")window.parent.postMessage({type:"bilibili-banner-expand",expanded:Boolean(event.detail)},"*");return originalDispatchEvent.call(this,event)};BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
+  <script>const originalDispatchEvent=EventTarget.prototype.dispatchEvent;EventTarget.prototype.dispatchEvent=function(event){if(event?.type==="banner-expand")window.parent.postMessage({type:"bilibili-banner-expand",expanded:Boolean(event.detail)},"*");return originalDispatchEvent.call(this,event)};const springGame=${JSON.stringify(Boolean(manifest.extensions?.springGame2022))};if(springGame){let observedBanner=null,lastExpanded=!1;const notifySpringSize=()=>{const banner=document.querySelector("#bili-banner > .bili-banner");if(!banner)return;if(banner!==observedBanner){observedBanner=banner;lastExpanded=!1;springObserver?.observe(banner)}const width=banner.clientWidth,height=banner.getBoundingClientRect().height,target=width/(16/3),expanded=width>0&&height>target*.75;if(expanded===lastExpanded)return;lastExpanded=expanded;window.parent.postMessage({type:"bilibili-banner-size",expanded,height},"*")};const springObserver=typeof ResizeObserver==="function"?new ResizeObserver(()=>requestAnimationFrame(notifySpringSize)):null;new MutationObserver(notifySpringSize).observe(document.documentElement,{attributes:!0,attributeFilter:["style"],childList:!0,subtree:!0});requestAnimationFrame(notifySpringSize)}BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
   </body></html>`;
   stage.appendChild(frame);
 }
