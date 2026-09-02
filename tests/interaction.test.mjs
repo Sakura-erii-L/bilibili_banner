@@ -71,6 +71,7 @@ assert.match(appSource, /event\?\.type===\"banner-expand\"/);
 assert.match(appSource, /min-width:0 !important/);
 assert.match(appSource, /springGame2022/);
 assert.match(appSource, /springCollapsedHeight/);
+assert.match(appSource, /querySelector\("\.bili-banner"\)/);
 assert.match(appSource, /setupSpringObservers/);
 assert.match(appSource, /frame\.addEventListener\("load", setupSpringObservers\)/);
 assert.match(appSource, /ResizeObserver/);

@@ -605,7 +605,7 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
     springClickHandler = () => window.setTimeout(syncSpringBannerSize, 0);
     springDocument.addEventListener("click", springClickHandler, true);
     springDocumentObserver = new MutationObserver(() => {
-      const nextBanner = springDocument.querySelector("#bili-banner > .bili-banner");
+      const nextBanner = springDocument.querySelector(".bili-banner");
       if (nextBanner !== springBanner) {
         springBanner = nextBanner;
         springCollapsedHeight = springBanner?.getBoundingClientRect().height ?? null;
@@ -618,7 +618,7 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
       childList: true,
       subtree: true,
     });
-    springBanner = springDocument.querySelector("#bili-banner > .bili-banner");
+    springBanner = springDocument.querySelector(".bili-banner");
     springCollapsedHeight = springBanner?.getBoundingClientRect().height ?? null;
     syncSpringBannerSize();
   };
