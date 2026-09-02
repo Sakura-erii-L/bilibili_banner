@@ -71,7 +71,7 @@ select, button {
 button { cursor: pointer; }
 
 main {
-  max-width: 1500px;
+  max-width: none;
   margin: 0 auto;
   padding: 22px 24px 60px;
 }
@@ -120,13 +120,14 @@ main {
 
 .banner {
   position: relative;
-  width: 100%;
+  width: calc(100% + 48px);
+  margin-left: -24px;
   aspect-ratio: 1650 / 155;
   height: auto;
   max-height: 240px;
   overflow: hidden;
   background: #e3e5e7;
-  border-radius: 9px;
+  border-radius: 0;
   isolation: isolate;
 }
 
@@ -212,6 +213,11 @@ main {
   }
 
   main { padding: 16px 12px 48px; }
+
+  .banner {
+    width: calc(100% + 24px);
+    margin-left: -12px;
+  }
 
   .entry-meta { display: none; }
 }
