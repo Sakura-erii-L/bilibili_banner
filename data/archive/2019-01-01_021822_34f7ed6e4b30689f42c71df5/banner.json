@@ -450,6 +450,7 @@
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "slots": [
+        1,
         3,
         4
       ],
