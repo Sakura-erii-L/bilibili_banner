@@ -63,6 +63,10 @@ CDX_API = os.environ.get(
     "WAYBACK_CDX_API",
     "https://web.archive.org/cdx/search/cdx",
 )
+CDX_DISCOVERY_CHUNK_DAYS = max(
+    1,
+    int(os.environ.get("WAYBACK_CDX_DISCOVERY_CHUNK_DAYS", "31")),
+)
 REQUEST_DELAY_SECONDS = float(os.environ.get("WAYBACK_REQUEST_DELAY", "1.0"))
 RETRY_BASE_SECONDS = float(os.environ.get("WAYBACK_RETRY_BASE_SECONDS", "1.0"))
 HEADER_API_MAX_DELTA_SECONDS = int(
@@ -306,28 +310,163 @@ def availability_url(target: dt.date | dt.datetime, api_url: str) -> str:
     return f"{api_url}?{query}"
 
 
+def cdx_discovery_url(
+    start: dt.date,
+    end: dt.date,
+    *,
+    cdx_api: str = CDX_API,
+) -> str:
+    timezone = ZoneInfo(core.TIMEZONE)
+    start_datetime = dt.datetime.combine(
+        start,
+        dt.time.min,
+        tzinfo=timezone,
+    ).astimezone(dt.timezone.utc)
+    end_datetime = dt.datetime.combine(
+        end,
+        dt.time(23, 59, 59),
+        tzinfo=timezone,
+    ).astimezone(dt.timezone.utc)
+    query = urllib.parse.urlencode(
+        [
+            ("url", ORIGINAL_PAGE),
+            ("from", start_datetime.strftime("%Y%m%d%H%M%S")),
+            ("to", end_datetime.strftime("%Y%m%d%H%M%S")),
+            ("output", "json"),
+            ("fl", "timestamp,original,statuscode,mimetype,digest"),
+            ("filter", "statuscode:200"),
+            ("matchType", "exact"),
+        ]
+    )
+    return f"{cdx_api.rstrip('?')}?{query}"
+
+
+def query_cdx_homepage_range(
+    start: dt.date,
+    end: dt.date,
+    *,
+    cdx_api: str = CDX_API,
+) -> list[dict[str, Any]]:
+    query_url = cdx_discovery_url(start, end, cdx_api=cdx_api)
+    rows = parse_cdx_rows(read_json(query_url))
+    candidates: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        timestamp = str(row.get("timestamp") or "")
+        if len(timestamp) != 14 or not timestamp.isdigit():
+            continue
+        if str(row.get("statuscode") or "200") != "200":
+            continue
+        if not _same_original_url(str(row.get("original") or ORIGINAL_PAGE), ORIGINAL_PAGE):
+            continue
+        try:
+            moment = snapshot_moment(timestamp)
+        except ValueError:
+            continue
+        if not start <= moment.date() <= end:
+            continue
+        candidates.setdefault(
+            timestamp,
+            {
+                "timestamp": timestamp,
+                "original": ORIGINAL_PAGE,
+                "statuscode": str(row.get("statuscode") or "200"),
+                "mimetype": str(row.get("mimetype") or ""),
+                "digest": str(row.get("digest") or ""),
+                "moment": moment,
+                "cdxUrl": query_url,
+            },
+        )
+    return sorted(candidates.values(), key=lambda item: item["timestamp"])
+
+
+def slot_center(local_date: dt.date, slot: int) -> dt.datetime:
+    return dt.datetime.combine(
+        local_date,
+        dt.time.min,
+        tzinfo=ZoneInfo(core.TIMEZONE),
+    ) + dt.timedelta(
+        minutes=slot * core.SLOT_MINUTES + core.SLOT_MINUTES // 2,
+    )
+
+
 def discover_snapshots(
     start: dt.date,
     end: dt.date,
     *,
     cadence: str,
     api_url: str,
+    cdx_api: str = CDX_API,
     excluded_dates: set[dt.date] | None = None,
 ) -> list[dict[str, Any]]:
     snapshots: dict[str, dict[str, Any]] = {}
     if cadence == "3h":
-        targets = (
-            (
-                local_date,
-                slot,
-                dt.datetime.combine(
-                    local_date,
-                    dt.time(hour=slot * 3),
-                    tzinfo=ZoneInfo(core.TIMEZONE),
-                ),
+        chunk_start = start
+        while chunk_start <= end:
+            chunk_end = min(
+                end,
+                chunk_start + dt.timedelta(days=CDX_DISCOVERY_CHUNK_DAYS - 1),
             )
-            for local_date, slot in target_slots(start, end)
-        )
+            active_dates = [
+                local_date
+                for local_date in target_dates(chunk_start, chunk_end, "daily")
+                if local_date not in (excluded_dates or set())
+            ]
+            if active_dates:
+                try:
+                    candidates = query_cdx_homepage_range(
+                        chunk_start,
+                        chunk_end,
+                        cdx_api=cdx_api,
+                    )
+                except Exception as exc:
+                    print(
+                        f"Wayback CDX discovery failed for "
+                        f"{chunk_start.isoformat()}..{chunk_end.isoformat()}: {exc}"
+                    )
+                    candidates = []
+                for local_date in active_dates:
+                    for slot in range(core.SLOT_COUNT):
+                        if not candidates:
+                            print(
+                                f"No snapshot near {local_date.isoformat()} "
+                                f"slot={slot}"
+                            )
+                            continue
+                        center = slot_center(local_date, slot)
+                        candidate = min(
+                            candidates,
+                            key=lambda item: abs(item["moment"] - center),
+                        )
+                        timestamp = str(candidate["timestamp"])
+                        captured_date = snapshot_moment(timestamp).date()
+                        if not start <= captured_date <= end:
+                            print(
+                                f"Skipped out-of-range snapshot {timestamp} "
+                                f"for target {local_date.isoformat()} slot={slot}"
+                            )
+                            continue
+                        snapshot = snapshots.setdefault(
+                            timestamp,
+                            {
+                                "timestamp": timestamp,
+                                "original": ORIGINAL_PAGE,
+                                "availabilityUrl": "",
+                                "cdxUrl": candidate["cdxUrl"],
+                                "targetDate": local_date.isoformat(),
+                                "targetSlot": slot,
+                                "targetSlots": [],
+                            },
+                        )
+                        snapshot.setdefault("targetSlots", []).append(slot)
+                        if snapshot["targetSlot"] == slot:
+                            print(
+                                f"Discovered {timestamp} near "
+                                f"{local_date.isoformat()} slot={slot}"
+                            )
+            chunk_start = chunk_end + dt.timedelta(days=1)
+        for snapshot in snapshots.values():
+            snapshot["targetSlots"] = sorted(set(snapshot.get("targetSlots") or []))
+        return [snapshots[key] for key in sorted(snapshots)]
     else:
         targets = (
             (target, None, None)
@@ -363,6 +502,7 @@ def discover_snapshots(
                 "timestamp": timestamp,
                 "original": ORIGINAL_PAGE,
                 "availabilityUrl": lookup_url,
+                "cdxUrl": "",
                 "targetDate": target.isoformat(),
                 "targetSlot": slot,
                 "targetSlots": [],
@@ -778,6 +918,7 @@ def capture_snapshot_api(
             "waybackTimestamp": timestamp,
             "waybackReplay": api_replay,
             "availabilityUrl": snapshot.get("availabilityUrl"),
+            "cdxUrl": snapshot.get("cdxUrl"),
             "provider": "wayback-header-api",
             "provenance": provenance,
             **api_match,
@@ -2074,6 +2215,7 @@ def capture_snapshot_http(
                 "homepageWaybackTimestamp": timestamp,
                 "waybackReplay": page_replay,
                 "availabilityUrl": snapshot.get("availabilityUrl"),
+                "cdxUrl": snapshot.get("cdxUrl"),
             },
             "provenance": {
                 "primaryProvider": "wayback-html",
@@ -2504,6 +2646,7 @@ def main() -> None:
             end,
             cadence=args.cadence,
             api_url=args.availability_api,
+            cdx_api=args.cdx_api,
             excluded_dates=reference_covered_dates,
         )
         if (

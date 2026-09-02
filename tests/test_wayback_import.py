@@ -126,31 +126,67 @@ class WaybackImportTests(unittest.TestCase):
         url = wayback_import.availability_url(local_target, "https://example.test/available")
         self.assertIn("timestamp=20181231190000", url)
 
-    def test_discovery_merges_slots_that_hit_one_snapshot(self) -> None:
-        response = {
-            "archived_snapshots": {
-                "closest": {"available": True, "timestamp": "20190101010000"}
+    def test_cdx_discovery_url_uses_local_day_bounds(self) -> None:
+        url = wayback_import.cdx_discovery_url(
+            dt.date(2019, 1, 1),
+            dt.date(2019, 1, 1),
+            cdx_api="https://example.test/cdx",
+        )
+        query = wayback_import.urllib.parse.parse_qs(
+            wayback_import.urllib.parse.urlsplit(url).query
+        )
+        self.assertEqual(query["from"], ["20181231160000"])
+        self.assertEqual(query["to"], ["20190101155959"])
+
+    def test_slot_center_uses_the_middle_of_each_three_hour_slot(self) -> None:
+        self.assertEqual(
+            wayback_import.slot_center(dt.date(2019, 1, 1), 0),
+            dt.datetime(
+                2019,
+                1,
+                1,
+                1,
+                30,
+                tzinfo=dt.timezone(dt.timedelta(hours=8)),
+            ),
+        )
+        self.assertEqual(
+            wayback_import.slot_center(dt.date(2019, 1, 1), 7).time(),
+            dt.time(22, 30),
+        )
+
+    def test_cdx_discovery_maps_slots_to_nearest_snapshot_center(self) -> None:
+        def candidate(timestamp: str) -> dict:
+            return {
+                "timestamp": timestamp,
+                "original": wayback_import.ORIGINAL_PAGE,
+                "moment": wayback_import.snapshot_moment(timestamp),
+                "cdxUrl": "https://example.test/cdx",
             }
-        }
-        unavailable = {"archived_snapshots": {"closest": {"available": False}}}
 
-        def read_json(url: str) -> dict:
-            query = wayback_import.urllib.parse.parse_qs(
-                wayback_import.urllib.parse.urlsplit(url).query
-            )
-            timestamp = query["timestamp"][0]
-            return response if timestamp in {"20181231160000", "20181231190000"} else unavailable
-
-        with mock.patch("backend.wayback_import.read_json", side_effect=read_json):
+        candidates = [
+            candidate("20181231180000"),  # local 2019-01-01 02:00
+            candidate("20190101020000"),  # local 2019-01-01 10:00
+            candidate("20190101100000"),  # local 2019-01-01 18:00
+            candidate("20190101150000"),  # local 2019-01-01 23:00
+        ]
+        with mock.patch(
+            "backend.wayback_import.query_cdx_homepage_range",
+            return_value=candidates,
+        ) as query:
             snapshots = wayback_import.discover_snapshots(
                 dt.date(2019, 1, 1),
                 dt.date(2019, 1, 1),
                 cadence="3h",
                 api_url="https://example.test/available",
             )
-        self.assertEqual(len(snapshots), 1)
+        self.assertEqual(query.call_count, 1)
+        self.assertEqual(len(snapshots), 4)
+        self.assertEqual(snapshots[0]["timestamp"], "20181231180000")
         self.assertEqual(snapshots[0]["targetSlot"], 0)
         self.assertEqual(snapshots[0]["targetSlots"], [0, 1])
+        self.assertEqual(snapshots[0]["availabilityUrl"], "")
+        self.assertEqual(snapshots[0]["cdxUrl"], "https://example.test/cdx")
 
     def test_reference_covered_dates_are_not_queried(self) -> None:
         with mock.patch(

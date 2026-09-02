@@ -102,7 +102,7 @@ jobs:
           BANNER_TIME_SLOT_MINUTES: "180"
           GH_TOKEN: ${{ github.token }}
           PYTHONUNBUFFERED: "1"
-          WAYBACK_CHECKPOINT_PAGES: "1"
+          WAYBACK_CHECKPOINT_PAGES: "0"
           WAYBACK_CHECKPOINT_PUSH: "1"
         run: |
           git config user.name "github-actions[bot]"
@@ -126,7 +126,7 @@ jobs:
             --to-date "$TO_DATE"
             --cadence "$CADENCE"
             --limit "$LIMIT"
-            --checkpoint-every 1
+            --checkpoint-every 100
             --checkpoint-script scripts/checkpoint_wayback.py
             --reference-repo "$REFERENCE_REPO"
             --reference-commit "45b760bfa52166727123d775925dea887ac7d71a"
