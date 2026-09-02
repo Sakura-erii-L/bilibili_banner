@@ -300,9 +300,17 @@ class ReferenceRepository:
         return entries
 
     def covered_entries(self, start: dt.date, end: dt.date) -> list[GalleryEntry]:
+        """Return reference entries with an explicit historical end date.
+
+        An open-ended gallery entry identifies the current Banner, but does not
+        prove that the same Banner was displayed throughout its past interval.
+        Those dates must be recovered from Wayback instead.
+        """
         result = []
         for entry in self.entries():
-            entry_end = entry.end_date or end
+            if entry.end_date is None:
+                continue
+            entry_end = entry.end_date
             if entry.start_date <= end and entry_end >= start:
                 result.append(entry)
         return result

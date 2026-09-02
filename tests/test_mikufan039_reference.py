@@ -76,6 +76,13 @@ class MikuFan039ReferenceTests(unittest.TestCase):
                         "endDate": "2022-03-02",
                         "group": "spring",
                     },
+                    {
+                        "id": "latest-open",
+                        "title": "当前 Banner",
+                        "startDate": "2022-01-01",
+                        "endDate": None,
+                        "group": "spring",
+                    },
                 ]
             elif category["id"] == "game":
                 rows = [{
@@ -135,6 +142,21 @@ class MikuFan039ReferenceTests(unittest.TestCase):
         self.assertEqual(split_layer["version"], "legacy-array")
         self.assertEqual(split_layer["layers"][0]["resources"][0]["src"], "bfs/one.png")
         self.assertEqual(split_layer["layers"][0]["initial"], {"blur": 4})
+
+    def test_open_ended_reference_entry_is_not_historical_coverage(self) -> None:
+        repository = ReferenceRepository(self.make_repository(), commit=DEFAULT_COMMIT)
+        covered = repository.covered_entries(
+            dt.date(2022, 1, 1),
+            dt.date(2022, 3, 2),
+        )
+        self.assertNotIn(
+            "latest-open",
+            {entry.reference_id for entry in covered},
+        )
+        self.assertIn(
+            "2022spring",
+            {entry.reference_id for entry in covered},
+        )
 
     def test_same_group_normal_and_interactive_entries_share_daily_record(self) -> None:
         root = self.make_repository()
