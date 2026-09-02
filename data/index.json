@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-02T19:44:57+08:00",
+  "generatedAt": "2026-09-02T19:48:24+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -1737,8 +1737,8 @@
       "month": "01",
       "yearMonth": "2019-01",
       "dateStart": "2019-01-10",
-      "dateEnd": "2019-01-10",
-      "capturedAt": "2019-01-11T04:59:14+08:00",
+      "dateEnd": "2019-01-11",
+      "capturedAt": "2019-01-11T07:55:27+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -1754,8 +1754,8 @@
           "contentHash": "de3210a1d2ee6da9a4bff260",
           "canonicalContentHash": "b6961339f809abeab78c3283",
           "sourceFingerprint": "d3d1bd6ffc7c5c82a4ffb649",
-          "capturedAt": "2019-01-11T04:59:14+08:00",
-          "lastObservedAt": "2019-01-11T04:59:14+08:00",
+          "capturedAt": "2019-01-11T07:55:27+08:00",
+          "lastObservedAt": "2019-01-11T07:55:27+08:00",
           "mode": "static",
           "type": [
             "static"
@@ -1766,6 +1766,10 @@
           "slots": [
             0,
             1,
+            2,
+            3,
+            4,
+            5,
             7
           ],
           "manifest": "./data/archive/2019-01-11_045914_de3210a1d2ee6da9a4bff260/banner.json"
