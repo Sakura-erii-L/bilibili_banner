@@ -218,7 +218,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-01-02T17:47:04+08:00",
+  "lastObservedAt": "2019-01-02T23:57:37+08:00",
   "type": [
     "static"
   ],
@@ -423,6 +423,41 @@
         "homepageWaybackTimestamp": "20190101162349",
         "waybackReplay": "https://web.archive.org/web/20190101162349/https://www.bilibili.com/",
         "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190101160000",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/403888a045a0549969b979040b88da6c294e7b0f.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.413834f599ef9d5bcef0a91fa504b36911b3ffcf.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-01-02T23:57:37+08:00",
+      "lastObservedAt": "2019-01-02T23:57:37+08:00",
+      "date": "2019-01-03",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0
+      ],
+      "familyId": "2019-01-03_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190102155737id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190102155737",
+        "homepageWaybackTimestamp": "20190102155737",
+        "waybackReplay": "https://web.archive.org/web/20190102155737id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190102160000",
         "discoveredResources": [
           {
             "name": "https://i0.hdslb.com/bfs/archive/403888a045a0549969b979040b88da6c294e7b0f.png",
