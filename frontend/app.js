@@ -532,6 +532,7 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
   if (shell._referenceBannerMessageHandler) {
     window.removeEventListener("message", shell._referenceBannerMessageHandler);
   }
+  shell._referenceBannerResizeObserver?.disconnect();
   const frame = document.createElement("iframe");
   frame.title = "参考 Banner 本地回放";
   frame.loading = "lazy";
@@ -541,31 +542,51 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
   frame.style.height = "100%";
   frame.style.border = "0";
   frame.style.maxWidth = "100%";
+  frame.style.minWidth = "0";
+  let expanded = false;
+  const updateExpandedSize = () => {
+    if (!expanded) return;
+    const width = Math.max(shell.getBoundingClientRect().width, 1);
+    const height = Math.max(155, width / (16 / 3));
+    shell.style.aspectRatio = "auto";
+    shell.style.height = `${height}px`;
+    shell.style.maxHeight = "none";
+    frame.style.width = `${width}px`;
+    frame.style.height = `${height}px`;
+    try {
+      frame.contentWindow?.dispatchEvent(new Event("resize"));
+    } catch (_error) {
+      // The browser may temporarily expose no contentWindow while navigating srcdoc.
+    }
+  };
   const onMessage = event => {
     if (event.source !== frame.contentWindow) return;
     if (event.data?.type !== "bilibili-banner-expand") return;
-    if (event.data.expanded) {
-      const width = Math.max(shell.clientWidth, 1);
-      const height = Math.max(155, width * 3 / 16);
-      shell.style.aspectRatio = "auto";
-      shell.style.height = `${height}px`;
-      shell.style.maxHeight = "none";
+    expanded = Boolean(event.data.expanded);
+    if (expanded) {
+      updateExpandedSize();
     } else {
       shell.style.removeProperty("aspect-ratio");
       shell.style.removeProperty("height");
       shell.style.removeProperty("max-height");
+      frame.style.width = "100%";
+      frame.style.height = "100%";
     }
   };
   shell._referenceBannerMessageHandler = onMessage;
   window.addEventListener("message", onMessage);
+  shell._referenceBannerResizeObserver = typeof ResizeObserver === "function"
+    ? new ResizeObserver(updateExpandedSize)
+    : null;
+  shell._referenceBannerResizeObserver?.observe(shell);
   const localManifestUrl = resolveAsset(manifestUrl, referenceManifest);
   const bundleUrl = new URL("./assets/mikufan-bilibanner.js", location.href).href;
   frame.srcdoc = `<!doctype html><html><head><meta charset="utf-8"><style>
-    html,body,#bili-banner{margin:0;width:100%;height:100%;overflow:hidden;background:transparent}
+    html,body,#bili-banner{margin:0;width:100%;height:100%;min-width:0 !important;overflow:hidden;background:transparent}
     #bili-banner,.bili-banner,.summer-banner,.autumn-banner{box-sizing:border-box;width:100% !important;max-width:100% !important;min-width:0 !important}
   </style></head><body><div id="bili-banner"></div>
   <script src="${bundleUrl}"></script>
-  <script>document.addEventListener("banner-expand",event=>window.parent.postMessage({type:"bilibili-banner-expand",expanded:Boolean(event.detail)},"*"),true);BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
+  <script>const originalDispatchEvent=EventTarget.prototype.dispatchEvent;EventTarget.prototype.dispatchEvent=function(event){if(event?.type==="banner-expand")window.parent.postMessage({type:"bilibili-banner-expand",expanded:Boolean(event.detail)},"*");return originalDispatchEvent.call(this,event)};BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
   </body></html>`;
   stage.appendChild(frame);
 }
