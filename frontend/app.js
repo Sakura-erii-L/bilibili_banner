@@ -36,6 +36,14 @@ function formatDate(iso) {
   return `${y}年${m}月${d}日`;
 }
 
+function formatDateRange(record) {
+  const start = record.dateStart || record.date;
+  const end = record.dateEnd || start;
+  return start === end
+    ? formatDate(start)
+    : `${formatDate(start)}～${formatDate(end)}`;
+}
+
 function resolveAsset(manifestUrl, file) {
   return new URL(file, new URL(manifestUrl, location.href)).href;
 }
@@ -525,13 +533,14 @@ function createReferenceBanner(shell, manifest, manifestUrl) {
   frame.title = "参考 Banner 本地回放";
   frame.loading = "lazy";
   frame.referrerPolicy = "no-referrer";
+  frame.style.display = "block";
   frame.style.width = "100%";
-  frame.style.height = "240px";
+  frame.style.height = "100%";
   frame.style.border = "0";
   const localManifestUrl = resolveAsset(manifestUrl, referenceManifest);
   const bundleUrl = new URL("./assets/mikufan-bilibanner.js", location.href).href;
   frame.srcdoc = `<!doctype html><html><head><meta charset="utf-8"><style>
-    html,body,#bili-banner{margin:0;width:100%;height:100%;overflow:hidden;background:#000}
+    html,body,#bili-banner{margin:0;width:100%;height:100%;overflow:hidden;background:transparent}
   </style></head><body><div id="bili-banner"></div>
   <script src="${bundleUrl}"></script>
   <script>BiliBanner.init(${JSON.stringify(localManifestUrl)});</script>
@@ -929,7 +938,7 @@ function createEntry(record) {
 
   const date = document.createElement("div");
   date.className = "entry-date";
-  date.textContent = formatDate(record.date);
+  date.textContent = formatDateRange(record);
   const slots = document.createElement("div");
   slots.className = "entry-slots";
   slots.textContent = `时段：${formatSlotRanges(variant?.slots || []) || "未观测"}`;
@@ -1020,11 +1029,22 @@ function render() {
   const season = seasonSelect.value;
 
   const records = indexData.records.filter(record => {
-    const recordYear = record.year || record.date.slice(0, 4);
-    const recordMonth = record.month || record.date.slice(5, 7);
+    const start = record.dateStart || record.date;
+    const end = record.dateEnd || start;
+    const startMonth = Number(start.slice(0, 4)) * 12 + Number(start.slice(5, 7)) - 1;
+    const endMonth = Number(end.slice(0, 4)) * 12 + Number(end.slice(5, 7)) - 1;
 
-    if (year && recordYear !== year) return false;
-    if (month && recordMonth !== month) return false;
+    if (year && (Number(year) < Number(start.slice(0, 4))
+      || Number(year) > Number(end.slice(0, 4)))) return false;
+    if (month) {
+      const monthNumber = Number(month);
+      const touchesMonth = Array.from(
+        { length: Math.max(0, endMonth - startMonth + 1) },
+        (_value, index) => startMonth + index,
+      ).some(value => (value % 12) + 1 === monthNumber
+        && (!year || Math.floor(value / 12) === Number(year)));
+      if (!touchesMonth) return false;
+    }
     if (season && record.season !== season) return false;
     return true;
   });

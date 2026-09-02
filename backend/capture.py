@@ -2456,6 +2456,118 @@ def choose_family_id(manifest: dict[str, Any]) -> str:
     return derived_family_id(manifest)
 
 
+def _index_variant_key(variant: dict[str, Any]) -> tuple[str, str, str]:
+    return (
+        str(variant.get("contentHash") or variant.get("manifest") or ""),
+        str(variant.get("referenceMode") or ""),
+        str(variant.get("mode") or ""),
+    )
+
+
+def _index_record_signature(record: dict[str, Any]) -> tuple[tuple[str, str, str], ...]:
+    return tuple(
+        sorted(
+            _index_variant_key(variant)
+            for variant in record.get("variants") or []
+            if isinstance(variant, dict)
+        )
+    )
+
+
+def _merge_index_variants(
+    left: list[dict[str, Any]],
+    right: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    merged: dict[tuple[str, str, str], dict[str, Any]] = {}
+    for variant in [*left, *right]:
+        if not isinstance(variant, dict):
+            continue
+        key = _index_variant_key(variant)
+        current = merged.get(key)
+        if current is None:
+            merged[key] = dict(variant)
+            continue
+        slots = sorted(
+            set(normalize_slots(current.get("slots")))
+            | set(normalize_slots(variant.get("slots")))
+        )
+        if str(variant.get("lastObservedAt") or "") > str(
+            current.get("lastObservedAt") or ""
+        ):
+            current.update(variant)
+        current["slots"] = slots
+    return sorted(
+        merged.values(),
+        key=lambda item: str(item.get("capturedAt") or ""),
+    )
+
+
+def _refresh_index_record_summary(record: dict[str, Any]) -> None:
+    variants = record.get("variants") or []
+    if not variants:
+        return
+    representative = max(
+        variants,
+        key=lambda item: str(item.get("lastObservedAt") or item.get("capturedAt") or ""),
+    )
+    record["capturedAt"] = max(
+        str(item.get("capturedAt") or "") for item in variants
+    )
+    record.update(
+        {
+            "mode": representative["mode"],
+            "type": representative.get("type", ["static"]),
+            "layerCount": representative["layerCount"],
+            "completeness": representative.get("completeness", "unverified"),
+            "missing_assets": representative.get("missing_assets", []),
+            "contentHash": representative["contentHash"],
+            "manifest": representative["manifest"],
+            "variantCount": len(variants),
+            "variants": variants,
+        }
+    )
+
+
+def _merge_consecutive_index_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    ordered = sorted(
+        records,
+        key=lambda item: (
+            str(item.get("dateStart") or item.get("date") or ""),
+            str(item.get("capturedAt") or ""),
+        ),
+    )
+    merged: list[dict[str, Any]] = []
+    for record in ordered:
+        start_text = str(record.get("dateStart") or record.get("date") or "")
+        end_text = str(record.get("dateEnd") or start_text)
+        try:
+            start = dt.date.fromisoformat(start_text)
+            end = dt.date.fromisoformat(end_text)
+        except ValueError:
+            merged.append(record)
+            continue
+        record["dateStart"] = start.isoformat()
+        record["dateEnd"] = end.isoformat()
+        previous = merged[-1] if merged else None
+        if previous and _index_record_signature(previous) == _index_record_signature(record):
+            try:
+                previous_end = dt.date.fromisoformat(
+                    str(previous.get("dateEnd") or previous.get("date") or "")
+                )
+            except ValueError:
+                previous_end = None
+            if previous_end is not None and start <= previous_end + dt.timedelta(days=1):
+                previous["dateEnd"] = max(previous_end, end).isoformat()
+                previous["variants"] = _merge_index_variants(
+                    previous.get("variants") or [],
+                    record.get("variants") or [],
+                )
+                _refresh_index_record_summary(previous)
+                continue
+        merged.append(record)
+    return merged
+
+
 def find_archive_by_hash(content_hash: str) -> tuple[Path, dict[str, Any]] | None:
     for folder, manifest in iter_archive_manifests():
         try:
@@ -2806,12 +2918,14 @@ def rebuild_index() -> None:
         representative = max(variants, key=lambda item: item["lastObservedAt"])
         date_text = family["date"]
         records.append(
-            {
-                **family,
-                "year": date_text[:4],
-                "month": date_text[5:7],
-                "yearMonth": date_text[:7],
-                "capturedAt": max(item["capturedAt"] for item in variants),
+                {
+                    **family,
+                    "year": date_text[:4],
+                    "month": date_text[5:7],
+                    "yearMonth": date_text[:7],
+                    "dateStart": date_text,
+                    "dateEnd": date_text,
+                    "capturedAt": max(item["capturedAt"] for item in variants),
                 "mode": representative["mode"],
                 "type": representative.get("type", ["static"]),
                 "layerCount": representative["layerCount"],
@@ -2824,7 +2938,14 @@ def rebuild_index() -> None:
             }
         )
 
-    records.sort(key=lambda item: item["capturedAt"], reverse=True)
+    records = _merge_consecutive_index_records(records)
+    records.sort(
+        key=lambda item: (
+            str(item.get("dateEnd") or item.get("date") or ""),
+            str(item.get("capturedAt") or ""),
+        ),
+        reverse=True,
+    )
 
     payload = {
         "version": MANIFEST_VERSION,

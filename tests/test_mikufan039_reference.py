@@ -158,12 +158,13 @@ class MikuFan039ReferenceTests(unittest.TestCase):
                     )
                 self.assertEqual(covered, {dt.date(2022, 3, 1), dt.date(2022, 3, 2)})
                 index = json.loads((data / "index.json").read_text(encoding="utf-8"))
-                self.assertEqual(len(index["records"]), 2)
-                self.assertTrue(all(record["variantCount"] == 2 for record in index["records"]))
+                self.assertEqual(len(index["records"]), 1)
+                self.assertEqual(index["records"][0]["dateStart"], "2022-03-01")
+                self.assertEqual(index["records"][0]["dateEnd"], "2022-03-02")
+                self.assertEqual(index["records"][0]["variantCount"], 2)
                 self.assertTrue(all(
                     variant.get("referenceMode") in {"normal", "interactive"}
-                    for record in index["records"]
-                    for variant in record["variants"]
+                    for variant in index["records"][0]["variants"]
                 ))
                 manifests = list(data.joinpath("archive").glob("*/banner.json"))
                 self.assertEqual(len(manifests), 2)

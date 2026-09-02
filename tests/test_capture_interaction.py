@@ -367,12 +367,54 @@ class TimedVariantIndexTests(unittest.TestCase):
         capture.rebuild_index()
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
         self.assertEqual(
-            [record["date"] for record in index["records"]],
-            ["2020-01-02", "2020-01-01"],
+            len(index["records"]),
+            1,
         )
+        self.assertEqual(index["records"][0]["dateStart"], "2020-01-01")
+        self.assertEqual(index["records"][0]["dateEnd"], "2020-01-02")
         self.assertTrue(
             all(record["contentHash"] == "same-physical-asset" for record in index["records"])
         )
+
+    def test_same_asset_on_nonconsecutive_dates_stays_separate(self) -> None:
+        folder = capture.ARCHIVE_DIR / "nonconsecutive"
+        folder.mkdir()
+        manifest = {
+            "version": 11.0,
+            "date": "2020-01-01",
+            "season": "winter",
+            "capturedAt": "2020-01-01T08:00:00+08:00",
+            "lastObservedAt": "2020-01-01T08:00:00+08:00",
+            "mode": "static",
+            "static": {"file": "static.webp"},
+            "layers": [],
+            "interaction": {"model": "none"},
+            "contentHash": "same-nonconsecutive-asset",
+            "familyId": "family-2020-01-01",
+            "slots": [2],
+            "timeZone": "Asia/Shanghai",
+            "observations": [
+                {
+                    "date": "2020-01-01",
+                    "capturedAt": "2020-01-01T08:00:00+08:00",
+                    "lastObservedAt": "2020-01-01T08:00:00+08:00",
+                    "familyId": "family-2020-01-01",
+                    "slots": [2],
+                },
+                {
+                    "date": "2020-01-03",
+                    "capturedAt": "2020-01-03T08:00:00+08:00",
+                    "lastObservedAt": "2020-01-03T08:00:00+08:00",
+                    "familyId": "family-2020-01-03",
+                    "slots": [2],
+                },
+            ],
+        }
+        (folder / "banner.json").write_text(json.dumps(manifest), encoding="utf-8")
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 2)
 
     def test_same_day_layout_merges_but_different_content_stays_as_variants(self) -> None:
         first = self.temp_path_manifest("first", "layout-a", "content-a", 0)
