@@ -412,5 +412,6 @@
         "scriptUrls": []
       }
     }
-  ]
+  ],
+  "interactionState": "nonInteractive"
 }
