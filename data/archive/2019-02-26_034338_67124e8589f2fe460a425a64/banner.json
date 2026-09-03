@@ -219,7 +219,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-04-15T10:56:48+08:00",
+  "lastObservedAt": "2019-04-17T15:18:26+08:00",
   "type": [
     "static"
   ],
@@ -1900,6 +1900,45 @@
         ],
         "stylesheetUrls": [
           "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.d9bce63f01ceaf744d443900b52337f65357d8ca.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-04-17T15:18:26+08:00",
+      "lastObservedAt": "2019-04-17T15:18:26+08:00",
+      "date": "2019-04-17",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "familyId": "2019-04-17_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190417071826id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190417071826",
+        "homepageWaybackTimestamp": "20190417071826",
+        "waybackReplay": "https://web.archive.org/web/20190417071826id_/https://www.bilibili.com/",
+        "availabilityUrl": "",
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190403160000&to=20190504155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.2f32e6bab6785d3d2b5f83589a21c2fa3c82f417.css"
         ],
         "scriptUrls": []
       }
