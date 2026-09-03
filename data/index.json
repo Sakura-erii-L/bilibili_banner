@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T15:35:40+08:00",
+  "generatedAt": "2026-09-03T15:37:32+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2430,14 +2430,14 @@
       ]
     },
     {
-      "id": "2019-02-20_3f4544a6cbd4",
-      "date": "2019-02-20",
-      "season": "winter",
+      "id": "2019-04-02_3f4544a6cbd4",
+      "date": "2019-04-02",
+      "season": "spring",
       "timeZone": "Asia/Shanghai",
       "year": "2019",
-      "month": "02",
-      "yearMonth": "2019-02",
-      "dateStart": "2019-02-20",
+      "month": "04",
+      "yearMonth": "2019-04",
+      "dateStart": "2019-04-02",
       "dateEnd": "2019-04-03",
       "capturedAt": "2019-04-03T16:24:04+08:00",
       "mode": "static",
@@ -2451,7 +2451,107 @@
       ],
       "contentHash": "343a309f8abc0d27b68a375f",
       "manifest": "./data/archive/2019-04-03_162404_343a309f8abc0d27b68a375f/banner.json",
-      "variantCount": 11,
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "343a309f8abc0d27b68a375f",
+          "canonicalContentHash": "b4c56059f58a864407727b9c",
+          "sourceFingerprint": "a7470790500ff366e05f402b",
+          "capturedAt": "2019-04-03T16:24:04+08:00",
+          "lastObservedAt": "2019-04-03T16:24:04+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20190403082404id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190403082404id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190403082404id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-04-03_162404_343a309f8abc0d27b68a375f/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2019-03-31_3f4544a6cbd4",
+      "date": "2019-03-31",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "03",
+      "yearMonth": "2019-03",
+      "dateStart": "2019-03-31",
+      "dateEnd": "2019-04-01",
+      "capturedAt": "2019-03-31T07:24:44+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "c1c4cb4d2dc3f540c721261e",
+      "manifest": "./data/archive/2019-03-31_061542_c1c4cb4d2dc3f540c721261e/banner.json",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "c1c4cb4d2dc3f540c721261e",
+          "canonicalContentHash": "9fd09b2a2ef6efc3e054e3be",
+          "sourceFingerprint": "95c9e11f3799bfd7ab8b683a",
+          "capturedAt": "2019-03-31T07:24:44+08:00",
+          "lastObservedAt": "2019-03-31T07:24:44+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-03-31_061542_c1c4cb4d2dc3f540c721261e/banner.json"
+        }
+      ]
+    },
+    {
+      "id": "2019-02-20_3f4544a6cbd4",
+      "date": "2019-02-20",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "02",
+      "yearMonth": "2019-02",
+      "dateStart": "2019-02-20",
+      "dateEnd": "2019-03-30",
+      "capturedAt": "2019-03-30T13:54:32+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "67124e8589f2fe460a425a64",
+      "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json",
+      "variantCount": 10,
       "variants": [
         {
           "contentHash": "045af182e0c14ff3e6b6c42b",
@@ -2694,33 +2794,6 @@
             7
           ],
           "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json"
-        },
-        {
-          "contentHash": "343a309f8abc0d27b68a375f",
-          "canonicalContentHash": "b4c56059f58a864407727b9c",
-          "sourceFingerprint": "a7470790500ff366e05f402b",
-          "capturedAt": "2019-04-03T16:24:04+08:00",
-          "lastObservedAt": "2019-04-03T16:24:04+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190403082404id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190403082404id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190403082404id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-04-03_162404_343a309f8abc0d27b68a375f/banner.json"
         }
       ]
     },
