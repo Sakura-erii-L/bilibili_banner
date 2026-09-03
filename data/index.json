@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T21:11:06+08:00",
+  "generatedAt": "2026-09-03T21:22:01+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2487,7 +2487,7 @@
       "month": "05",
       "yearMonth": "2019-05",
       "dateStart": "2019-05-12",
-      "dateEnd": "2019-05-12",
+      "dateEnd": "2019-05-14",
       "capturedAt": "2019-05-12T10:49:17+08:00",
       "mode": "static",
       "type": [
@@ -2539,6 +2539,11 @@
               "interactionState": "nonInteractive"
             },
             {
+              "contentHash": "c2b95a25e48251e4886e523a",
+              "manifest": "./data/archive/2019-05-14_045805_c2b95a25e48251e4886e523a/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
               "contentHash": "c961083f546d76f49c2c86dc",
               "manifest": "./data/archive/2019-05-12_142533_c961083f546d76f49c2c86dc/banner.json",
               "interactionState": "nonInteractive"
@@ -2547,6 +2552,7 @@
           "observedSlots": [
             0,
             1,
+            2,
             3,
             4,
             5,
