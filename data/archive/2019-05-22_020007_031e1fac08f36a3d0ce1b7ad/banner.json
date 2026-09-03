@@ -219,7 +219,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-05-23T07:04:46+08:00",
+  "lastObservedAt": "2019-05-23T17:00:28+08:00",
   "type": [
     "static"
   ],
@@ -396,7 +396,9 @@
     0,
     1,
     2,
-    3
+    3,
+    4,
+    5
   ],
   "observations": [
     {
@@ -445,7 +447,9 @@
       "season": "spring",
       "timeZone": "Asia/Shanghai",
       "slots": [
-        1
+        1,
+        4,
+        5
       ],
       "familyId": "2019-05-23_3f4544a6cbd4",
       "source": {
