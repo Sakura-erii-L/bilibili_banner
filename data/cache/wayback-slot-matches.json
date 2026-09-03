@@ -39780,6 +39780,56 @@
         "distanceSeconds": 44457,
         "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260902155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
       }
+    },
+    "2026-09-03": {
+      "0": {
+        "timestamp": "20260902020903",
+        "source": "cdx",
+        "distanceSeconds": 55257,
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260903155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
+      },
+      "1": {
+        "timestamp": "20260902020903",
+        "source": "cdx",
+        "distanceSeconds": 66057,
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260903155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
+      },
+      "2": {
+        "timestamp": "20260902020903",
+        "source": "cdx",
+        "distanceSeconds": 76857,
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260903155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
+      },
+      "3": {
+        "timestamp": "20260902020903",
+        "source": "cdx",
+        "distanceSeconds": 87657,
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260903155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
+      },
+      "4": {
+        "timestamp": "20260902020903",
+        "source": "cdx",
+        "distanceSeconds": 98457,
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260903155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
+      },
+      "5": {
+        "timestamp": "20260902020903",
+        "source": "cdx",
+        "distanceSeconds": 109257,
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260903155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
+      },
+      "6": {
+        "timestamp": "20260902020903",
+        "source": "cdx",
+        "distanceSeconds": 120057,
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260903155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
+      },
+      "7": {
+        "timestamp": "20260902020903",
+        "source": "cdx",
+        "distanceSeconds": 130857,
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20260821160000&to=20260903155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact"
+      }
     }
   }
 }
