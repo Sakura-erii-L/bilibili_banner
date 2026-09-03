@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T20:32:06+08:00",
+  "generatedAt": "2026-09-03T20:34:02+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2487,8 +2487,8 @@
       "month": "04",
       "yearMonth": "2019-04",
       "dateStart": "2019-04-20",
-      "dateEnd": "2019-05-08",
-      "capturedAt": "2019-05-08T06:15:07+08:00",
+      "dateEnd": "2019-05-09",
+      "capturedAt": "2019-05-09T05:52:58+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -2505,8 +2505,8 @@
           "contentHash": "67124e8589f2fe460a425a64",
           "canonicalContentHash": "b4c56059f58a864407727b9c",
           "sourceFingerprint": "4968140d3ed1f0abfecd58aa",
-          "capturedAt": "2019-05-08T06:15:07+08:00",
-          "lastObservedAt": "2019-05-08T06:15:07+08:00",
+          "capturedAt": "2019-05-09T05:52:58+08:00",
+          "lastObservedAt": "2019-05-09T05:52:58+08:00",
           "mode": "static",
           "type": [
             "static"
