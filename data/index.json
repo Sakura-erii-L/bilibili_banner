@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T23:29:12+08:00",
+  "generatedAt": "2026-09-03T23:34:35+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2479,6 +2479,75 @@
       ]
     },
     {
+      "id": "2019-06-05_3f4544a6cbd4_e0a2e4790ef3",
+      "date": "2019-06-05",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "06",
+      "yearMonth": "2019-06",
+      "dateStart": "2019-06-05",
+      "dateEnd": "2019-06-05",
+      "capturedAt": "2019-06-05T11:18:58+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "91a5c212c83d4e7ae075950d",
+      "manifest": "./data/archive/2019-06-05_111858_91a5c212c83d4e7ae075950d/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "91a5c212c83d4e7ae075950d",
+          "canonicalContentHash": "e0a2e4790ef305eceeca2b4f",
+          "sourceFingerprint": "d67faefbca5b358dcf5300c5",
+          "capturedAt": "2019-06-05T11:18:58+08:00",
+          "lastObservedAt": "2019-06-05T11:18:58+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-06-05_111858_91a5c212c83d4e7ae075950d/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "91a5c212c83d4e7ae075950d",
+              "manifest": "./data/archive/2019-06-05_111858_91a5c212c83d4e7ae075950d/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "slotFill": "same-day-forward-backward"
+        }
+      ]
+    },
+    {
       "id": "2019-05-21_3f4544a6cbd4_e88bee5c2f95",
       "date": "2019-05-21",
       "season": "spring",
@@ -2487,8 +2556,8 @@
       "month": "05",
       "yearMonth": "2019-05",
       "dateStart": "2019-05-21",
-      "dateEnd": "2019-06-02",
-      "capturedAt": "2019-06-01T23:51:14+08:00",
+      "dateEnd": "2019-06-03",
+      "capturedAt": "2019-06-03T04:54:09+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -2505,8 +2574,8 @@
           "contentHash": "031e1fac08f36a3d0ce1b7ad",
           "canonicalContentHash": "e88bee5c2f953e0bfde7019b",
           "sourceFingerprint": "e1bb490701b3248256f86840",
-          "capturedAt": "2019-06-01T23:51:14+08:00",
-          "lastObservedAt": "2019-06-01T23:51:14+08:00",
+          "capturedAt": "2019-06-03T04:54:09+08:00",
+          "lastObservedAt": "2019-06-03T04:54:09+08:00",
           "mode": "static",
           "type": [
             "static"
