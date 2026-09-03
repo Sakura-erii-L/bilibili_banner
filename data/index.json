@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T21:49:57+08:00",
+  "generatedAt": "2026-09-03T21:54:22+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2528,6 +2528,11 @@
           "interactionState": "nonInteractive",
           "visualMergeSafe": true,
           "mergedFrom": [
+            {
+              "contentHash": "0b39de4f471daa96cfb99bab",
+              "manifest": "./data/archive/2019-05-17_040425_0b39de4f471daa96cfb99bab/banner.json",
+              "interactionState": "nonInteractive"
+            },
             {
               "contentHash": "3b2a67875b4ff3a7bc0d3589",
               "manifest": "./data/archive/2019-05-12_171454_3b2a67875b4ff3a7bc0d3589/banner.json",
