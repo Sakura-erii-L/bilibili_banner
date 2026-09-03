@@ -138,6 +138,10 @@ main {
   font-size: 12px;
 }
 
+.entry-time-controls[hidden] {
+  display: none;
+}
+
 .entry-time-label {
   grid-row: 1 / span 2;
   white-space: nowrap;

@@ -78,6 +78,7 @@ assert.equal(
 );
 
 const appSource = readFileSync(new URL("../frontend/app.js", import.meta.url), "utf8");
+const styleSource = readFileSync(new URL("../frontend/style.css", import.meta.url), "utf8");
 const referenceBundle = readFileSync(new URL("../frontend/assets/mikufan-bilibanner.js", import.meta.url), "utf8");
 assert.match(appSource, /model === "bilibili-header-api-v1"/);
 assert.match(appSource, /model === "palxiao-reconstructed-v1"/);
@@ -100,6 +101,7 @@ assert.match(appSource, /entry-time-controls/);
 assert.match(appSource, /resetTimeSelections/);
 assert.match(appSource, /article\.dataset\.timeSelection = "0"/);
 assert.match(appSource, /"Asia\/Shanghai"/);
+assert.match(styleSource, /\.entry-time-controls\[hidden\]\s*\{\s*display:\s*none;/);
 assert.doesNotMatch(referenceBundle, /mikufan039\.github\.io/);
 assert.doesNotMatch(referenceBundle, /unpkg\.com\/detect-gpu/);
 
