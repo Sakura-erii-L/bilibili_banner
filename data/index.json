@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T20:49:41+08:00",
+  "generatedAt": "2026-09-03T20:49:46+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2488,36 +2488,32 @@
       "yearMonth": "2019-05",
       "dateStart": "2019-05-11",
       "dateEnd": "2019-05-11",
-      "capturedAt": "2019-05-11T20:51:51+08:00",
+      "capturedAt": "2019-05-11T16:22:20+08:00",
       "mode": "static",
       "type": [
         "static"
       ],
       "layerCount": 0,
-      "completeness": "partial",
-      "missing_assets": [
-        "auxiliary_000: https://web.archive.org/web/20190511125151id_/https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190511125151id_/https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190511125151id_/https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: HTTP Error 403: Forbidden"
-      ],
-      "contentHash": "ee2c781c018063e981e977b7",
-      "manifest": "./data/archive/2019-05-11_205151_ee2c781c018063e981e977b7/banner.json",
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "881f167865d8fd43b1a7846c",
+      "manifest": "./data/archive/2019-05-11_162220_881f167865d8fd43b1a7846c/banner.json",
       "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
-          "contentHash": "ee2c781c018063e981e977b7",
+          "contentHash": "881f167865d8fd43b1a7846c",
           "canonicalContentHash": "c6a48bd57ff33b3a0e95310b",
-          "sourceFingerprint": "10eb27cf977b5e27369cace5",
-          "capturedAt": "2019-05-11T20:51:51+08:00",
-          "lastObservedAt": "2019-05-11T20:51:51+08:00",
+          "sourceFingerprint": "7bb73ec5de3fe02fa4be4269",
+          "capturedAt": "2019-05-11T16:22:20+08:00",
+          "lastObservedAt": "2019-05-11T16:22:20+08:00",
           "mode": "static",
           "type": [
             "static"
           ],
           "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190511125151id_/https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190511125151id_/https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190511125151id_/https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/1aac694dc86a60fcadafbc9ffa26bf9f0b41fc28.png: HTTP Error 403: Forbidden"
-          ],
+          "completeness": "complete",
+          "missing_assets": [],
           "slots": [
             0,
             1,
@@ -2528,10 +2524,15 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-05-11_205151_ee2c781c018063e981e977b7/banner.json",
+          "manifest": "./data/archive/2019-05-11_162220_881f167865d8fd43b1a7846c/banner.json",
           "interactionState": "nonInteractive",
           "visualMergeSafe": true,
           "mergedFrom": [
+            {
+              "contentHash": "881f167865d8fd43b1a7846c",
+              "manifest": "./data/archive/2019-05-11_162220_881f167865d8fd43b1a7846c/banner.json",
+              "interactionState": "nonInteractive"
+            },
             {
               "contentHash": "ee2c781c018063e981e977b7",
               "manifest": "./data/archive/2019-05-11_205151_ee2c781c018063e981e977b7/banner.json",
@@ -2539,6 +2540,7 @@
             }
           ],
           "observedSlots": [
+            5,
             7
           ],
           "slotFill": "same-day-forward-backward"
