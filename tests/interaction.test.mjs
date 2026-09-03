@@ -100,6 +100,8 @@ assert.match(appSource, /show-time-controls/);
 assert.match(appSource, /entry-time-controls/);
 assert.match(appSource, /resetTimeSelections/);
 assert.match(appSource, /article\.dataset\.timeSelection = "0"/);
+assert.match(appSource, /article\.hidden = !showTimeControls && !variant/);
+assert.match(appSource, /当前时间槽没有已观测的 Banner/);
 assert.match(appSource, /"Asia\/Shanghai"/);
 assert.match(styleSource, /\.entry-time-controls\[hidden\]\s*\{\s*display:\s*none;/);
 assert.doesNotMatch(referenceBundle, /mikufan039\.github\.io/);

@@ -1088,6 +1088,9 @@ function updateEntrySelection(article, record) {
   const variant = selectedEntryVariant(record, article);
   const manifest = variant?.manifest || "";
   const slots = selectedEntrySlots(record, article, variant);
+  if (Number(article.dataset.timeSelection || 0) === 0) {
+    article.hidden = !showTimeControls && !variant;
+  }
   article.querySelector(".entry-slots").textContent =
     `时段：${formatSlotRanges(slots) || "未观测"}`;
   article.querySelector(".entry-meta").textContent = recordMeta(record, variant);
@@ -1156,6 +1159,7 @@ function createEntry(record) {
   const article = document.createElement("article");
   const variant = selectedVariant(record);
   article.className = "entry";
+  article.hidden = !showTimeControls && !variant;
   article.dataset.recordId = record.id;
   article.dataset.manifest = variant?.manifest || "";
   article.dataset.timeSelection = "0";
@@ -1200,6 +1204,7 @@ function refreshTimedVariants() {
       updateEntrySelection(article, record);
     }
   }
+  updateEmptyState();
 }
 
 function resetTimeSelections() {
@@ -1214,6 +1219,23 @@ function updateTimeControlsVisibility() {
   gallery.querySelectorAll(".entry-time-controls").forEach(controls => {
     controls.hidden = !showTimeControls;
   });
+}
+
+function updateEmptyState() {
+  const entries = gallery.querySelectorAll(".entry");
+  const visibleEntries = gallery.querySelectorAll(".entry:not([hidden])").length;
+  if (!entries.length) {
+    empty.textContent = "没有符合筛选条件的 Banner。";
+    empty.hidden = false;
+    return;
+  }
+  if (!showTimeControls && visibleEntries === 0) {
+    empty.textContent = "当前时间槽没有已观测的 Banner；打开顶部时间控制可查看全部时段。";
+    empty.hidden = false;
+    return;
+  }
+  empty.textContent = "没有符合筛选条件的 Banner。";
+  empty.hidden = true;
 }
 
 function setupObserver() {
@@ -1286,7 +1308,7 @@ function render() {
     gallery.appendChild(createEntry(record));
   }
 
-  empty.hidden = records.length !== 0;
+  updateEmptyState();
 
   summary.textContent =
     `共 ${records.length} 个唯一 Banner` +
@@ -1303,8 +1325,10 @@ seasonSelect.addEventListener("change", render);
 
 showTimeControlsToggle.addEventListener("change", () => {
   showTimeControls = showTimeControlsToggle.checked;
-  if (!showTimeControls) resetTimeSelections();
+  resetTimeSelections();
   updateTimeControlsVisibility();
+  updateEmptyState();
+  setupObserver();
 });
 
 resetButton.addEventListener("click", () => {
