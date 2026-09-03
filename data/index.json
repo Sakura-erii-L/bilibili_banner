@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T12:40:34+08:00",
+  "generatedAt": "2026-09-03T12:42:37+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -3059,7 +3059,7 @@
       "missing_assets": [],
       "contentHash": "34f7ed6e4b30689f42c71df5",
       "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
-      "variantCount": 2,
+      "variantCount": 3,
       "variants": [
         {
           "contentHash": "b4d0b49b3b94869cdb3e8be6",
@@ -3082,6 +3082,33 @@
             2
           ],
           "manifest": "./data/archive/2019-01-06_061132_b4d0b49b3b94869cdb3e8be6/banner.json"
+        },
+        {
+          "contentHash": "a11584c63bccb00a742c490a",
+          "canonicalContentHash": "10f04617ab6628168322cb1b",
+          "sourceFingerprint": "9a51598a616ee89fe875a689",
+          "capturedAt": "2019-01-08T14:01:51+08:00",
+          "lastObservedAt": "2019-01-08T14:01:51+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20190108060151id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190108060151id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190108060151id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-08_140151_a11584c63bccb00a742c490a/banner.json"
         },
         {
           "contentHash": "34f7ed6e4b30689f42c71df5",
