@@ -777,6 +777,9 @@
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "slots": [
+        0,
+        1,
+        2,
         5,
         6,
         7
