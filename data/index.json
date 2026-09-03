@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T20:17:23+08:00",
+  "generatedAt": "2026-09-03T20:25:21+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2475,6 +2475,71 @@
             6,
             7
           ]
+        }
+      ]
+    },
+    {
+      "id": "2019-05-07_3f4544a6cbd4_6b3308caf187",
+      "date": "2019-05-07",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "05",
+      "yearMonth": "2019-05",
+      "dateStart": "2019-05-07",
+      "dateEnd": "2019-05-07",
+      "capturedAt": "2019-05-07T08:17:31+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "fdbec2d19eb5f256693a82df",
+      "manifest": "./data/archive/2019-05-07_081731_fdbec2d19eb5f256693a82df/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "fdbec2d19eb5f256693a82df",
+          "canonicalContentHash": "6b3308caf1877817267e74a2",
+          "sourceFingerprint": "d8406b5fe772b6c279ed5c3c",
+          "capturedAt": "2019-05-07T08:17:31+08:00",
+          "lastObservedAt": "2019-05-07T08:17:31+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-05-07_081731_fdbec2d19eb5f256693a82df/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "fdbec2d19eb5f256693a82df",
+              "manifest": "./data/archive/2019-05-07_081731_fdbec2d19eb5f256693a82df/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2
+          ],
+          "slotFill": "same-day-forward-backward"
         }
       ]
     },
