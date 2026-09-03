@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T12:42:37+08:00",
+  "generatedAt": "2026-09-03T12:44:07+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -3040,6 +3040,75 @@
       ]
     },
     {
+      "id": "2019-01-10_3f4544a6cbd4",
+      "date": "2019-01-10",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "01",
+      "yearMonth": "2019-01",
+      "dateStart": "2019-01-10",
+      "dateEnd": "2019-01-14",
+      "capturedAt": "2019-01-14T05:50:16+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "34f7ed6e4b30689f42c71df5",
+      "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+      "variantCount": 2,
+      "variants": [
+        {
+          "contentHash": "de3210a1d2ee6da9a4bff260",
+          "canonicalContentHash": "b6961339f809abeab78c3283",
+          "sourceFingerprint": "d3d1bd6ffc7c5c82a4ffb649",
+          "capturedAt": "2019-01-11T04:59:14+08:00",
+          "lastObservedAt": "2019-01-11T04:59:14+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-11_045914_de3210a1d2ee6da9a4bff260/banner.json"
+        },
+        {
+          "contentHash": "34f7ed6e4b30689f42c71df5",
+          "canonicalContentHash": "10f04617ab6628168322cb1b",
+          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
+          "capturedAt": "2019-01-14T05:50:16+08:00",
+          "lastObservedAt": "2019-01-14T05:50:16+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
+        }
+      ]
+    },
+    {
       "id": "2019-01-07_3f4544a6cbd4",
       "date": "2019-01-07",
       "season": "winter",
@@ -3048,8 +3117,8 @@
       "month": "01",
       "yearMonth": "2019-01",
       "dateStart": "2019-01-07",
-      "dateEnd": "2019-01-14",
-      "capturedAt": "2019-01-14T05:50:16+08:00",
+      "dateEnd": "2019-01-09",
+      "capturedAt": "2019-01-10T08:24:09+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -3114,8 +3183,8 @@
           "contentHash": "34f7ed6e4b30689f42c71df5",
           "canonicalContentHash": "10f04617ab6628168322cb1b",
           "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
-          "capturedAt": "2019-01-14T05:50:16+08:00",
-          "lastObservedAt": "2019-01-14T05:50:16+08:00",
+          "capturedAt": "2019-01-10T08:24:09+08:00",
+          "lastObservedAt": "2019-01-10T08:24:09+08:00",
           "mode": "static",
           "type": [
             "static"
