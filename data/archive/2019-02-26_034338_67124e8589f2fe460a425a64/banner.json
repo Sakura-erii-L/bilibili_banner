@@ -1044,7 +1044,8 @@
         3,
         4,
         5,
-        6
+        6,
+        7
       ],
       "familyId": "2019-03-13_3f4544a6cbd4",
       "source": {
@@ -1080,6 +1081,8 @@
       "season": "spring",
       "timeZone": "Asia/Shanghai",
       "slots": [
+        0,
+        1,
         2,
         3,
         4,
