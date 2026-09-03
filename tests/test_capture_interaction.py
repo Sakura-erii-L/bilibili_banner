@@ -452,6 +452,38 @@ class TimedVariantIndexTests(unittest.TestCase):
         self.assertEqual(index["records"][0]["dateStart"], "2020-01-01")
         self.assertEqual(index["records"][0]["dateEnd"], "2020-01-03")
 
+    def test_same_canonical_asset_bridges_different_capture_hashes(self) -> None:
+        for index, date in enumerate(("2020-01-01", "2020-01-03")):
+            folder = capture.ARCHIVE_DIR / f"canonical-bridge-{index}"
+            folder.mkdir()
+            manifest = {
+                "version": 11.0,
+                "date": date,
+                "season": "winter",
+                "capturedAt": f"{date}T08:00:00+08:00",
+                "lastObservedAt": f"{date}T08:00:00+08:00",
+                "mode": "static",
+                "static": {"file": "static.webp"},
+                "layers": [],
+                "interaction": {"model": "none"},
+                "contentHash": f"capture-hash-{index}",
+                "canonicalContentHash": "same-visual-asset",
+                "familyId": f"family-{date}",
+                "slots": list(range(capture.SLOT_COUNT)),
+                "timeZone": "Asia/Shanghai",
+            }
+            (folder / "banner.json").write_text(
+                json.dumps(manifest),
+                encoding="utf-8",
+            )
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 1)
+        self.assertEqual(index["records"][0]["dateStart"], "2020-01-01")
+        self.assertEqual(index["records"][0]["dateEnd"], "2020-01-03")
+        self.assertEqual(index["records"][0]["variantCount"], 2)
+
     def test_incomplete_day_is_omitted_and_same_banner_bridges_it(self) -> None:
         for index, (date, slots) in enumerate(
             (

@@ -307,6 +307,20 @@ class WaybackImportTests(unittest.TestCase):
             ],
         )
 
+    def test_snapshot_observation_groups_keep_each_target_date(self) -> None:
+        snapshot = {
+            "timestamp": "20200102030405",
+            "targetMappings": [
+                {"date": "2020-01-01", "slot": 7},
+                {"date": "2020-01-02", "slot": 0},
+                {"date": "2020-01-02", "slot": 1},
+            ],
+        }
+        self.assertEqual(
+            wayback_import.snapshot_observation_groups(snapshot),
+            [("2020-01-01", [7]), ("2020-01-02", [0, 1])],
+        )
+
     def test_raw_page_replay_is_tried_before_normal_replay(self) -> None:
         snapshot = {
             "timestamp": "20200102030405",
@@ -601,6 +615,10 @@ class WaybackImportTests(unittest.TestCase):
         snapshot = {
             "timestamp": "20190102030405",
             "original": wayback_import.ORIGINAL_PAGE,
+            "targetMappings": [
+                {"date": "2019-01-02", "slot": 0},
+                {"date": "2019-01-03", "slot": 0},
+            ],
         }
 
         def fake_download(src, folder, stem, *, referer=""):
@@ -646,6 +664,10 @@ class WaybackImportTests(unittest.TestCase):
                 self.assertEqual(
                     manifest["source"]["homepageWaybackTimestamp"],
                     "20190102030405",
+                )
+                self.assertEqual(
+                    [(item["date"], item["slots"]) for item in manifest["observations"]],
+                    [("2019-01-02", [0]), ("2019-01-03", [0])],
                 )
             finally:
                 wayback_import.core.DATA_DIR, wayback_import.core.ARCHIVE_DIR, wayback_import.core.CURRENT_DIR = original

@@ -819,6 +819,18 @@ def snapshot_target_mappings(snapshot: dict[str, Any]) -> list[tuple[str, int]]:
             for slot in snapshot_target_slots(snapshot)]
 
 
+def snapshot_observation_groups(
+    snapshot: dict[str, Any],
+) -> list[tuple[str, list[int]]]:
+    grouped: dict[str, list[int]] = {}
+    for date_text, slot in snapshot_target_mappings(snapshot):
+        grouped.setdefault(date_text, []).append(slot)
+    return [
+        (date_text, sorted(set(slots)))
+        for date_text, slots in sorted(grouped.items())
+    ]
+
+
 def snapshot_target_date(snapshot: dict[str, Any]) -> str | None:
     value = str(snapshot.get("targetDate") or "")
     return value if re.fullmatch(r"\d{4}-\d{2}-\d{2}", value) else None
@@ -1204,6 +1216,11 @@ def capture_snapshot_api(
         ),
         referer=api_replay,
         before_request=wait_for_wayback_request,
+        observation_groups=(
+            snapshot_observation_groups(snapshot)
+            if isinstance(snapshot.get("targetMappings"), list)
+            else None
+        ),
     )
     return {
         "timestamp": timestamp,
@@ -2520,15 +2537,36 @@ def capture_snapshot_http(
             parsed["evidence"],
             missing_assets=missing_assets,
         )
-        result = core.archive_capture(
-            temp,
-            manifest,
-            moment=moment,
-            force=force,
-            update_current=False,
-            record_observation=True,
-            slots=snapshot_target_slots(snapshot),
-            observation_date=snapshot_target_date(snapshot),
+        observation_groups = (
+            snapshot_observation_groups(snapshot)
+            if isinstance(snapshot.get("targetMappings"), list)
+            else [(snapshot_target_date(snapshot), snapshot_target_slots(snapshot))]
+        )
+        capture_results = []
+        for group_date, group_slots in observation_groups:
+            manifest.pop("familyId", None)
+            capture_results.append(
+                core.archive_capture(
+                    temp,
+                    manifest,
+                    moment=moment,
+                    force=force,
+                    update_current=False,
+                    record_observation=True,
+                    slots=group_slots,
+                    observation_date=group_date,
+                )
+            )
+        if not capture_results:
+            raise ValueError("snapshot has no target observation groups")
+        result = dict(capture_results[-1])
+        statuses = {str(item.get("status") or "") for item in capture_results}
+        result["status"] = (
+            "created"
+            if "created" in statuses
+            else "updated"
+            if "updated" in statuses
+            else "unchanged"
         )
         return {
             "timestamp": timestamp,

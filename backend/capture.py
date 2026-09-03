@@ -1135,6 +1135,7 @@ def capture_header_api_payload(
     slots: list[int] | None = None,
     observation_date: dt.date | str | None = None,
     family_id: str | None = None,
+    observation_groups: list[tuple[dt.date | str | None, list[int]]] | None = None,
 ) -> dict[str, Any]:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1268,6 +1269,36 @@ def capture_header_api_payload(
         if source_extra and isinstance(source_extra.get("provenance"), dict):
             manifest["provenance"] = copy.deepcopy(source_extra["provenance"])
         enrich_manifest_metadata(manifest, evidence, missing_assets=missing_assets)
+        if observation_groups:
+            results = []
+            for group_date, group_slots in observation_groups:
+                if family_id is None:
+                    manifest.pop("familyId", None)
+                results.append(
+                    archive_capture(
+                        temp,
+                        manifest,
+                        moment=moment,
+                        force=force,
+                        update_current=update_current,
+                        record_observation=record_observation,
+                        slots=group_slots,
+                        observation_date=group_date,
+                        family_id=family_id,
+                    )
+                )
+            if not results:
+                raise ValueError("observation_groups must not be empty")
+            result = dict(results[-1])
+            statuses = {str(item.get("status") or "") for item in results}
+            result["status"] = (
+                "created"
+                if "created" in statuses
+                else "updated"
+                if "updated" in statuses
+                else "unchanged"
+            )
+            return result
         return archive_capture(
             temp,
             manifest,
@@ -2400,7 +2431,7 @@ def manifest_observations(manifest: dict[str, Any]) -> list[dict[str, Any]]:
     return [observation_from_manifest(manifest)]
 
 
-def observation_key(observation: dict[str, Any]) -> tuple[str, str, str]:
+def observation_key(observation: dict[str, Any]) -> tuple[str, str, str, str]:
     source = observation.get("source") or {}
     source_id = str(
         source.get("waybackTimestamp")
@@ -2409,6 +2440,7 @@ def observation_key(observation: dict[str, Any]) -> tuple[str, str, str]:
         or ""
     )
     return (
+        str(observation.get("date") or ""),
         str(observation.get("capturedAt") or ""),
         str(observation.get("familyId") or ""),
         source_id,
@@ -2464,10 +2496,20 @@ def _index_variant_key(variant: dict[str, Any]) -> tuple[str, str, str]:
     )
 
 
-def _index_record_signature(record: dict[str, Any]) -> tuple[tuple[str, str, str], ...]:
+def _index_variant_identity(variant: dict[str, Any]) -> tuple[str, str]:
+    canonical = str(variant.get("canonicalContentHash") or "")
+    if canonical:
+        return ("canonical", canonical)
+    return (
+        "content",
+        str(variant.get("contentHash") or variant.get("manifest") or ""),
+    )
+
+
+def _index_record_signature(record: dict[str, Any]) -> tuple[tuple[str, str], ...]:
     return tuple(
         sorted(
-            _index_variant_key(variant)
+            _index_variant_identity(variant)
             for variant in record.get("variants") or []
             if isinstance(variant, dict)
         )
