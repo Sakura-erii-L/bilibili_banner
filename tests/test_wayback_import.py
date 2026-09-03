@@ -91,6 +91,27 @@ class WaybackImportTests(unittest.TestCase):
             }
             self.assertFalse(wayback_import.archive_is_reusable(root, manifest))
 
+    def test_archive_with_missing_layer_structure_is_not_reusable(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "fallback.png").write_bytes(b"fallback")
+            manifest = {
+                "mode": "static",
+                "type": ["static"],
+                "static": {"file": "fallback.png"},
+                "layers": [],
+                "structureEvidence": {
+                    "layerCount": 2,
+                    "visibleMediaCount": 2,
+                    "signals": {"isSplitLayer": True},
+                },
+                "interaction": {"model": "none", "effects": []},
+                "completeness": "partial",
+                "missing_assets": [],
+                "assets": [{"role": "fallback_image", "local_file": "fallback.png"}],
+            }
+            self.assertFalse(wayback_import.archive_is_reusable(root, manifest))
+
     def test_archive_with_unconfirmed_interaction_is_not_reusable(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -111,6 +132,84 @@ class WaybackImportTests(unittest.TestCase):
                 "assets": [{"role": "primary", "local_file": "static.png"}],
             }
             self.assertFalse(wayback_import.archive_is_reusable(root, manifest))
+
+    def test_slot_status_cache_round_trips_terminal_statuses(self) -> None:
+        core = wayback_import.core
+        original_data_dir = core.DATA_DIR
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                core.DATA_DIR = Path(temp)
+                cache = wayback_import._empty_wayback_match_cache()
+                wayback_import._set_slot_status(
+                    cache["statuses"],
+                    dt.date(2019, 1, 21),
+                    2,
+                    status="filled",
+                    source="index",
+                    fill_direction="forward",
+                )
+                self.assertTrue(wayback_import.save_wayback_match_cache(cache))
+                loaded = wayback_import.load_wayback_match_cache()
+                self.assertEqual(
+                    loaded["statuses"]["2019-01-21"]["2"]["status"],
+                    "filled",
+                )
+                self.assertEqual(
+                    loaded["statuses"]["2019-01-21"]["2"]["fillDirection"],
+                    "forward",
+                )
+            finally:
+                core.DATA_DIR = original_data_dir
+
+    def test_index_fill_statuses_are_persisted_for_future_skip(self) -> None:
+        core = wayback_import.core
+        original = (core.DATA_DIR, core.ARCHIVE_DIR, core.CURRENT_DIR)
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                core.DATA_DIR = Path(temp)
+                core.ARCHIVE_DIR = core.DATA_DIR / "archive"
+                core.CURRENT_DIR = core.DATA_DIR / "current"
+                folder = core.ARCHIVE_DIR / "filled"
+                folder.mkdir(parents=True)
+                (folder / "static.png").write_bytes(b"primary")
+                manifest = {
+                    "version": 11.0,
+                    "date": "2019-01-21",
+                    "capturedAt": "2019-01-21T12:00:00+08:00",
+                    "lastObservedAt": "2019-01-21T12:00:00+08:00",
+                    "mode": "static",
+                    "type": ["static"],
+                    "static": {"file": "static.png"},
+                    "layers": [],
+                    "slots": [0, 3],
+                    "completeness": "partial",
+                    "missing_assets": ["auxiliary_000: optional logo unavailable"],
+                    "assets": [
+                        {"role": "primary", "local_file": "static.png"},
+                        {"role": "auxiliary", "local_file": "logo.png"},
+                    ],
+                    "interaction": {"model": "none", "effects": []},
+                    "familyId": "2019-01-21-family",
+                    "contentHash": "filled-content",
+                    "canonicalContentHash": "filled-visual",
+                }
+                (folder / "banner.json").write_text(
+                    json.dumps(manifest),
+                    encoding="utf-8",
+                )
+                core.rebuild_index()
+                cache = wayback_import._empty_wayback_match_cache()
+                self.assertTrue(wayback_import.sync_index_slot_statuses(cache))
+                statuses = cache["statuses"]["2019-01-21"]
+                self.assertEqual(
+                    sorted(statuses),
+                    [str(slot) for slot in range(core.SLOT_COUNT)],
+                )
+                self.assertTrue(
+                    all(entry["status"] == "filled" for entry in statuses.values())
+                )
+            finally:
+                core.DATA_DIR, core.ARCHIVE_DIR, core.CURRENT_DIR = original
 
     def test_checkpoint_script_receives_progress_environment(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
@@ -356,6 +455,52 @@ class WaybackImportTests(unittest.TestCase):
                 {"date": "2019-01-01", "slot": slot}
                 for slot in range(wayback_import.core.SLOT_COUNT)
             ],
+        )
+
+    def test_cdx_discovery_skips_resolved_targets_without_querying_cdx(self) -> None:
+        date = dt.date(2019, 1, 21)
+        skip_targets = {
+            (date, slot) for slot in range(wayback_import.core.SLOT_COUNT)
+        }
+        with mock.patch(
+            "backend.wayback_import.query_cdx_homepage_range",
+        ) as query:
+            snapshots = wayback_import.discover_snapshots(
+                date,
+                date,
+                cadence="3h",
+                api_url="https://example.test/available",
+                skip_targets=skip_targets,
+                status_cache={},
+            )
+        query.assert_not_called()
+        self.assertEqual(snapshots, [])
+
+    def test_cdx_discovery_records_unavailable_targets(self) -> None:
+        date = dt.date(2019, 1, 21)
+        statuses: dict[str, object] = {}
+        with mock.patch(
+            "backend.wayback_import.query_cdx_homepage_range",
+            return_value=[],
+        ) as query:
+            snapshots = wayback_import.discover_snapshots(
+                date,
+                date,
+                cadence="3h",
+                api_url="https://example.test/available",
+                status_cache=statuses,
+            )
+        query.assert_called_once()
+        self.assertEqual(snapshots, [])
+        self.assertEqual(
+            sorted(statuses[date.isoformat()]),
+            [str(slot) for slot in range(wayback_import.core.SLOT_COUNT)],
+        )
+        self.assertTrue(
+            all(
+                entry["status"] == "unavailable"
+                for entry in statuses[date.isoformat()].values()
+            )
         )
 
     def test_reference_covered_dates_are_not_queried(self) -> None:

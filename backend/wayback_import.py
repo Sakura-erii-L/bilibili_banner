@@ -80,6 +80,13 @@ HEADER_API_MAX_DELTA_SECONDS = int(
 MIN_BACKFILL_DATE = dt.date(2019, 1, 1)
 WAYBACK_MATCH_CACHE_VERSION = 1
 WAYBACK_MATCH_CACHE_NAME = "wayback-slot-matches.json"
+WAYBACK_TERMINAL_SLOT_STATUSES = {
+    "observed",
+    "filled",
+    "unavailable",
+    "discovery-failed",
+    "capture-failed",
+}
 
 BANNER_CLASS_NAMES = {
     "animated-banner",
@@ -235,6 +242,7 @@ def _empty_wayback_match_cache() -> dict[str, Any]:
         "slotMinutes": core.SLOT_MINUTES,
         "cadence": "3h",
         "matches": {},
+        "statuses": {},
     }
 
 
@@ -299,6 +307,40 @@ def load_wayback_match_cache() -> dict[str, Any]:
                 if field in value:
                     entry[field] = value[field]
             normalized["matches"].setdefault(str(date_text), {})[str(slot)] = entry
+    statuses = payload.get("statuses")
+    if isinstance(statuses, dict):
+        for date_text, slots in statuses.items():
+            try:
+                dt.date.fromisoformat(str(date_text))
+            except ValueError:
+                continue
+            if not isinstance(slots, dict):
+                continue
+            for slot_text, value in slots.items():
+                try:
+                    slot = int(slot_text)
+                except (TypeError, ValueError):
+                    continue
+                if (
+                    not 0 <= slot < core.SLOT_COUNT
+                    or not isinstance(value, dict)
+                    or str(value.get("status") or "")
+                    not in WAYBACK_TERMINAL_SLOT_STATUSES
+                ):
+                    continue
+                entry = {"status": str(value["status"])}
+                for field in (
+                    "source",
+                    "reason",
+                    "timestamp",
+                    "updatedAt",
+                    "fillDirection",
+                ):
+                    if field in value and value[field] not in (None, ""):
+                        entry[field] = value[field]
+                normalized["statuses"].setdefault(str(date_text), {})[
+                    str(slot)
+                ] = entry
     return normalized
 
 
@@ -307,6 +349,9 @@ def save_wayback_match_cache(cache: dict[str, Any]) -> bool:
     matches = cache.get("matches") if isinstance(cache, dict) else None
     if isinstance(matches, dict):
         payload["matches"] = matches
+    statuses = cache.get("statuses") if isinstance(cache, dict) else None
+    if isinstance(statuses, dict):
+        payload["statuses"] = statuses
     serialized = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
     path = _wayback_match_cache_path()
     try:
@@ -319,6 +364,152 @@ def save_wayback_match_cache(cache: dict[str, Any]) -> bool:
     temporary.write_text(serialized, encoding="utf-8")
     temporary.replace(path)
     return True
+
+
+def _status_timestamp() -> str:
+    return dt.datetime.now(ZoneInfo(core.TIMEZONE)).isoformat(timespec="seconds")
+
+
+def _set_slot_status(
+    statuses: dict[str, Any] | None,
+    local_date: dt.date,
+    slot: int,
+    *,
+    status: str,
+    source: str,
+    reason: str = "",
+    timestamp: str = "",
+    fill_direction: str = "",
+    updated_at: str | None = None,
+) -> None:
+    if statuses is None or status not in WAYBACK_TERMINAL_SLOT_STATUSES:
+        return
+    entry: dict[str, Any] = {
+        "status": status,
+        "source": source,
+        "updatedAt": updated_at or _status_timestamp(),
+    }
+    if reason:
+        entry["reason"] = reason
+    if timestamp:
+        entry["timestamp"] = timestamp
+    if fill_direction:
+        entry["fillDirection"] = fill_direction
+    statuses.setdefault(local_date.isoformat(), {})[str(slot)] = entry
+
+
+def _terminal_status_targets(statuses: dict[str, Any] | None) -> set[tuple[dt.date, int]]:
+    targets: set[tuple[dt.date, int]] = set()
+    if not isinstance(statuses, dict):
+        return targets
+    for date_text, slots in statuses.items():
+        try:
+            local_date = dt.date.fromisoformat(str(date_text))
+        except ValueError:
+            continue
+        if not isinstance(slots, dict):
+            continue
+        for slot_text, value in slots.items():
+            try:
+                slot = int(slot_text)
+            except (TypeError, ValueError):
+                continue
+            if (
+                0 <= slot < core.SLOT_COUNT
+                and isinstance(value, dict)
+                and value.get("status") in WAYBACK_TERMINAL_SLOT_STATUSES
+            ):
+                targets.add((local_date, slot))
+    return targets
+
+
+def _index_slot_statuses() -> dict[tuple[dt.date, int], dict[str, str]]:
+    index_path = core.DATA_DIR / "index.json"
+    try:
+        payload = json.loads(index_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    if not isinstance(payload, dict):
+        return {}
+
+    statuses: dict[tuple[dt.date, int], dict[str, str]] = {}
+    for record in payload.get("records") or []:
+        if not isinstance(record, dict):
+            continue
+        try:
+            start = dt.date.fromisoformat(
+                str(record.get("dateStart") or record.get("date") or "")
+            )
+            end = dt.date.fromisoformat(str(record.get("dateEnd") or start))
+        except ValueError:
+            continue
+        for variant in record.get("variants") or []:
+            if not isinstance(variant, dict):
+                continue
+            manifest_name = str(variant.get("manifest") or "")
+            folder_name = Path(manifest_name).parent.name
+            if not folder_name:
+                continue
+            folder = core.ARCHIVE_DIR / folder_name
+            manifest = core.read_manifest(folder)
+            if not manifest or not archive_is_reusable(folder, manifest):
+                continue
+            slots = core.normalize_slots(variant.get("slots"))
+            if not slots:
+                continue
+            status = "filled" if variant.get("slotFill") else "observed"
+            current = start
+            while current <= end:
+                for slot in slots:
+                    key = (current, slot)
+                    previous = statuses.get(key)
+                    if previous is None or previous["status"] != "filled":
+                        statuses[key] = {
+                            "status": status,
+                            "source": "index",
+                        }
+                current += dt.timedelta(days=1)
+    return statuses
+
+
+def sync_index_slot_statuses(cache: dict[str, Any]) -> bool:
+    if not isinstance(cache, dict):
+        return False
+    statuses = cache.setdefault("statuses", {})
+    if not isinstance(statuses, dict):
+        statuses = {}
+        cache["statuses"] = statuses
+    before = json.dumps(statuses, ensure_ascii=False, sort_keys=True)
+    for date_text in list(statuses):
+        slots = statuses.get(date_text)
+        if not isinstance(slots, dict):
+            continue
+        for slot_text in list(slots):
+            value = slots.get(slot_text)
+            if isinstance(value, dict) and value.get("source") == "index":
+                del slots[slot_text]
+        if not slots:
+            del statuses[date_text]
+
+    generated_at = ""
+    try:
+        payload = json.loads(
+            (core.DATA_DIR / "index.json").read_text(encoding="utf-8")
+        )
+        generated_at = str(payload.get("generatedAt") or "")
+    except (OSError, json.JSONDecodeError):
+        pass
+    for (local_date, slot), value in _index_slot_statuses().items():
+        _set_slot_status(
+            statuses,
+            local_date,
+            slot,
+            status=value["status"],
+            source="index",
+            updated_at=generated_at or None,
+        )
+    after = json.dumps(statuses, ensure_ascii=False, sort_keys=True)
+    return before != after
 
 
 def date_range_fully_covered(
@@ -543,9 +734,12 @@ def discover_snapshots(
     cdx_api: str = CDX_API,
     excluded_dates: set[dt.date] | None = None,
     match_cache: dict[str, Any] | None = None,
+    skip_targets: set[tuple[dt.date, int]] | None = None,
+    status_cache: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     snapshots: dict[str, dict[str, Any]] = {}
     cached_matches = match_cache if isinstance(match_cache, dict) else {}
+    skip_targets = skip_targets or set()
     if cadence == "3h":
         chunk_start = start
         while chunk_start <= end:
@@ -558,10 +752,16 @@ def discover_snapshots(
                 for local_date in target_dates(chunk_start, chunk_end, "daily")
                 if local_date not in (excluded_dates or set())
             ]
-            missing_targets = [
+            pending_targets = [
                 (local_date, slot)
                 for local_date in active_dates
                 for slot in range(core.SLOT_COUNT)
+                if (local_date, slot) not in skip_targets
+            ]
+            active_dates = sorted({local_date for local_date, _ in pending_targets})
+            missing_targets = [
+                (local_date, slot)
+                for local_date, slot in pending_targets
                 if _cached_match(
                     cached_matches,
                     local_date,
@@ -571,6 +771,7 @@ def discover_snapshots(
                 )
                 is None
             ]
+            discovery_failed = False
             if missing_targets:
                 try:
                     candidates = query_cdx_homepage_range(
@@ -579,6 +780,7 @@ def discover_snapshots(
                         cdx_api=cdx_api,
                     )
                 except Exception as exc:
+                    discovery_failed = True
                     print(
                         f"Wayback CDX discovery failed for "
                         f"{chunk_start.isoformat()}..{chunk_end.isoformat()}: {exc}"
@@ -589,6 +791,8 @@ def discover_snapshots(
             if active_dates:
                 for local_date in active_dates:
                     for slot in range(core.SLOT_COUNT):
+                        if (local_date, slot) in skip_targets:
+                            continue
                         cached = _cached_match(
                             cached_matches,
                             local_date,
@@ -602,6 +806,22 @@ def discover_snapshots(
                             cdx_url = str(cached.get("cdxUrl") or "")
                         else:
                             if not candidates:
+                                _set_slot_status(
+                                    status_cache,
+                                    local_date,
+                                    slot,
+                                    status=(
+                                        "discovery-failed"
+                                        if discovery_failed
+                                        else "unavailable"
+                                    ),
+                                    source="cdx",
+                                    reason=(
+                                        "CDX query failed"
+                                        if discovery_failed
+                                        else "no snapshot discovered near target slot"
+                                    ),
+                                )
                                 print(
                                     f"No snapshot near {local_date.isoformat()} "
                                     f"slot={slot}"
@@ -627,6 +847,15 @@ def discover_snapshots(
                             )
                         captured_date = snapshot_moment(timestamp).date()
                         if not start <= captured_date <= end:
+                            _set_slot_status(
+                                status_cache,
+                                local_date,
+                                slot,
+                                status="unavailable",
+                                source="cdx",
+                                reason="closest snapshot was outside requested range",
+                                timestamp=timestamp,
+                            )
                             print(
                                 f"Skipped out-of-range snapshot {timestamp} "
                                 f"for target {local_date.isoformat()} slot={slot}"
@@ -679,21 +908,51 @@ def discover_snapshots(
     for target, slot, target_datetime in targets:
         if target in (excluded_dates or set()):
             continue
+        if slot is not None and (target, slot) in skip_targets:
+            continue
         lookup = target_datetime or target
         try:
             lookup_url = availability_url(lookup, api_url)
             payload = read_json(lookup_url)
         except Exception as exc:
+            if slot is not None:
+                _set_slot_status(
+                    status_cache,
+                    target,
+                    slot,
+                    status="discovery-failed",
+                    source="availability",
+                    reason=str(exc),
+                )
             print(f"Wayback discovery failed near {target.isoformat()}: {exc}")
             continue
         closest = (payload.get("archived_snapshots") or {}).get("closest") or {}
         timestamp = str(closest.get("timestamp") or "")
         if not closest.get("available") or len(timestamp) != 14:
+            if slot is not None:
+                _set_slot_status(
+                    status_cache,
+                    target,
+                    slot,
+                    status="unavailable",
+                    source="availability",
+                    reason="no snapshot available near target",
+                )
             print(f"No snapshot near {target.isoformat()}")
             continue
 
         captured_date = snapshot_moment(timestamp).date()
         if not start <= captured_date <= end:
+            if slot is not None:
+                _set_slot_status(
+                    status_cache,
+                    target,
+                    slot,
+                    status="unavailable",
+                    source="availability",
+                    reason="closest snapshot was outside requested range",
+                    timestamp=timestamp,
+                )
             print(
                 f"Skipped out-of-range snapshot {timestamp} "
                 f"for target {target.isoformat()}"
@@ -744,6 +1003,16 @@ def _interaction_is_unconfirmed(manifest: dict[str, Any]) -> bool:
 def archive_is_reusable(folder: Path, manifest: dict[str, Any]) -> bool:
     # Keep the same primary-image/layer safety gate as the derived index.
     if not core._index_visual_merge_safe(manifest):
+        return False
+    evidence = manifest.get("structureEvidence") or {}
+    signals = evidence.get("signals") or {}
+    structure_expected = bool(
+        manifest.get("layers")
+        or int(evidence.get("layerCount") or 0) > 0
+        or int(evidence.get("visibleMediaCount") or 0) > 1
+        or signals.get("isSplitLayer")
+    )
+    if structure_expected and not manifest.get("layers"):
         return False
     missing = manifest.get("missing_assets") or []
     if any(not _missing_asset_is_optional(item) for item in missing):
@@ -3116,6 +3385,11 @@ def main() -> None:
 
     match_cache = load_wayback_match_cache() if args.cadence == "3h" else None
     if match_cache is not None:
+        if args.force:
+            match_cache["matches"] = {}
+        else:
+            core.rebuild_index()
+            sync_index_slot_statuses(match_cache)
         archive_matches = imported_wayback_matches(reusable_only=True)
         cached_matches = match_cache.setdefault("matches", {})
         for (date_text, slot), timestamps in archive_matches.items():
@@ -3127,6 +3401,20 @@ def main() -> None:
                     "timestamp": max(timestamps),
                     "source": "archive",
                 }
+
+    status_cache = (
+        match_cache.setdefault("statuses", {})
+        if match_cache is not None
+        else None
+    )
+    skip_targets = (
+        _terminal_status_targets(status_cache)
+        if not args.force
+        else set()
+    )
+    skipped_resolved = sum(
+        start <= local_date <= end for local_date, _ in skip_targets
+    )
 
     if args.snapshot:
         try:
@@ -3163,6 +3451,8 @@ def main() -> None:
             match_cache=(match_cache or {}).get("matches")
             if match_cache is not None
             else None,
+            skip_targets=skip_targets,
+            status_cache=status_cache,
         )
         if (
             args.provider == "auto"
@@ -3262,8 +3552,10 @@ def main() -> None:
                 final=False,
             )
     if not snapshots:
-        if skipped_known:
-            if args.checkpoint_script and match_cache_changed:
+        if skipped_known or skipped_resolved:
+            if match_cache is not None:
+                save_wayback_match_cache(match_cache)
+            if args.checkpoint_script and (match_cache_changed or skipped_resolved):
                 run_checkpoint(
                     args.checkpoint_script,
                     processed=0,
@@ -3271,7 +3563,10 @@ def main() -> None:
                     changed=1,
                     final=True,
                 )
-            print("All discovered Wayback snapshots were already imported.")
+            if skipped_known:
+                print("All discovered Wayback snapshots were already imported.")
+            else:
+                print("All target date slots were already resolved.")
             return
         if reference_covered_dates:
             if args.checkpoint_script and match_cache_changed:
@@ -3315,12 +3610,37 @@ def main() -> None:
                 "error": str(error),
             }
             failures.append(failure)
+            if status_cache is not None:
+                for date_text, slot in snapshot_target_mappings(snapshot):
+                    _set_slot_status(
+                        status_cache,
+                        dt.date.fromisoformat(date_text),
+                        slot,
+                        status="capture-failed",
+                        source="capture",
+                        reason=str(error),
+                        timestamp=snapshot["timestamp"],
+                    )
             print(json.dumps(failure, ensure_ascii=False))
             continue
 
         try:
             results.append(result)
             status = str(result.get("status") or "")
+            if status_cache is not None and status in {
+                "created",
+                "updated",
+                "unchanged",
+            }:
+                for date_text, slot in snapshot_target_mappings(snapshot):
+                    _set_slot_status(
+                        status_cache,
+                        dt.date.fromisoformat(date_text),
+                        slot,
+                        status="observed",
+                        source="capture",
+                        timestamp=snapshot["timestamp"],
+                    )
             if status == "unchanged":
                 unchanged_results += 1
                 continue
@@ -3334,6 +3654,17 @@ def main() -> None:
                 "error": str(exc),
             }
             failures.append(failure)
+            if status_cache is not None:
+                for date_text, slot in snapshot_target_mappings(snapshot):
+                    _set_slot_status(
+                        status_cache,
+                        dt.date.fromisoformat(date_text),
+                        slot,
+                        status="capture-failed",
+                        source="capture",
+                        reason=str(exc),
+                        timestamp=snapshot["timestamp"],
+                    )
             print(json.dumps(failure, ensure_ascii=False))
             continue
 
@@ -3342,6 +3673,9 @@ def main() -> None:
             and actions_since_checkpoint >= args.checkpoint_every
             and processed < len(snapshots)
         ):
+            if match_cache is not None:
+                sync_index_slot_statuses(match_cache)
+                save_wayback_match_cache(match_cache)
             run_checkpoint(
                 args.checkpoint_script,
                 processed=processed,
@@ -3352,6 +3686,9 @@ def main() -> None:
             actions_since_checkpoint = 0
             changed_since_checkpoint = 0
 
+    if match_cache is not None:
+        sync_index_slot_statuses(match_cache)
+        save_wayback_match_cache(match_cache)
     if args.checkpoint_script:
         run_checkpoint(
             args.checkpoint_script,
