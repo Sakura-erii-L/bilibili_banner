@@ -219,7 +219,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-02-05T15:05:16+08:00",
+  "lastObservedAt": "2019-02-07T15:23:26+08:00",
   "type": [
     "static"
   ],
@@ -499,7 +499,10 @@
         1,
         2,
         3,
-        4
+        4,
+        5,
+        6,
+        7
       ],
       "familyId": "2019-02-06_3f4544a6cbd4",
       "source": {
@@ -510,6 +513,87 @@
         "waybackTimestamp": "20190205070516",
         "homepageWaybackTimestamp": "20190205070516",
         "waybackReplay": "https://web.archive.org/web/20190205070516id_/https://www.bilibili.com/",
+        "availabilityUrl": "",
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190131160000&to=20190303155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/8750df57d5bd97603c14b55f500fc88051304576.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/406a488ceae0620f8a716a7189c3d81d9e9938d1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.a1717e355329e18a4a3162458dd2bb1c4727f6fe.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-02-07T15:23:26+08:00",
+      "lastObservedAt": "2019-02-07T15:23:26+08:00",
+      "date": "2019-02-07",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "familyId": "2019-02-07_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190207072326/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190207072326",
+        "homepageWaybackTimestamp": "20190207072326",
+        "waybackReplay": "https://web.archive.org/web/20190207072326/https://www.bilibili.com/",
+        "availabilityUrl": "",
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190131160000&to=20190303155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/8750df57d5bd97603c14b55f500fc88051304576.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/406a488ceae0620f8a716a7189c3d81d9e9938d1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.a1717e355329e18a4a3162458dd2bb1c4727f6fe.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-02-07T15:23:26+08:00",
+      "lastObservedAt": "2019-02-07T15:23:26+08:00",
+      "date": "2019-02-08",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2
+      ],
+      "familyId": "2019-02-08_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190207072326/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190207072326",
+        "homepageWaybackTimestamp": "20190207072326",
+        "waybackReplay": "https://web.archive.org/web/20190207072326/https://www.bilibili.com/",
         "availabilityUrl": "",
         "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190131160000&to=20190303155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
         "discoveredResources": [
