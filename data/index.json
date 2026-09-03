@@ -1,11 +1,78 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T15:49:23+08:00",
+  "generatedAt": "2026-09-03T15:56:02+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
     {
-      "id": "2026-01-09_2026-01-09_2026-04-23_winter",
+      "id": "2026-09-02_8d15a05ed0f2_b24b6936af40",
+      "date": "2026-09-02",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2026",
+      "month": "09",
+      "yearMonth": "2026-09",
+      "dateStart": "2026-09-02",
+      "dateEnd": "2026-09-03",
+      "capturedAt": "2026-09-03T05:47:32+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 28,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "8fab633056ee11e6210c8af9",
+      "manifest": "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "8fab633056ee11e6210c8af9",
+          "canonicalContentHash": "b24b6936af405e15501f4aa5",
+          "sourceFingerprint": "ad6aa3ceb40529f9d88da5a9",
+          "capturedAt": "2026-09-03T05:47:32+08:00",
+          "lastObservedAt": "2026-09-03T05:47:32+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 28,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json",
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "8fab633056ee11e6210c8af9",
+              "manifest": "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            1,
+            2,
+            6
+          ],
+          "slotFill": "same-day-forward-backward"
+        }
+      ]
+    },
+    {
+      "id": "2026-01-09_2026-01-09_2026-04-23_winter_287f5afcf7e7",
       "date": "2026-01-09",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -26,7 +93,8 @@
       "missing_assets": [],
       "contentHash": "c3a6aade69ec462a04ec4047",
       "manifest": "./data/archive/2026-01-09_000000_c3a6aade69ec462a04ec4047/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "c3a6aade69ec462a04ec4047",
@@ -54,23 +122,22 @@
             7
           ],
           "manifest": "./data/archive/2026-01-09_000000_c3a6aade69ec462a04ec4047/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "dc242e34ec747d71e3be8641",
-          "canonicalContentHash": "287f5afcf7e7a602a1e83082",
-          "sourceFingerprint": "0855d414adb0b224f2b44853",
-          "capturedAt": "2026-04-23T00:00:00+08:00",
-          "lastObservedAt": "2026-04-23T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "c3a6aade69ec462a04ec4047",
+              "manifest": "./data/archive/2026-01-09_000000_c3a6aade69ec462a04ec4047/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "dc242e34ec747d71e3be8641",
+              "manifest": "./data/archive/2026-01-09_000000_dc242e34ec747d71e3be8641/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 33,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -79,14 +146,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2026-01-09_000000_dc242e34ec747d71e3be8641/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2025-09-10_2025-09-10_2026-01-08_autumn",
+      "id": "2025-09-10_2025-09-10_2026-01-08_autumn_fc76be8d29c0",
       "date": "2025-09-10",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
@@ -107,7 +172,8 @@
       "missing_assets": [],
       "contentHash": "df96119cfcbed200e99b2df0",
       "manifest": "./data/archive/2025-09-10_000000_df96119cfcbed200e99b2df0/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "df96119cfcbed200e99b2df0",
@@ -135,23 +201,22 @@
             7
           ],
           "manifest": "./data/archive/2025-09-10_000000_df96119cfcbed200e99b2df0/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "78b0ac3a72267b0f7a00acd0",
-          "canonicalContentHash": "fc76be8d29c0c786e87f5f47",
-          "sourceFingerprint": "9cdd5a7b7b007e863bdea0bd",
-          "capturedAt": "2026-01-08T00:00:00+08:00",
-          "lastObservedAt": "2026-01-08T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "78b0ac3a72267b0f7a00acd0",
+              "manifest": "./data/archive/2025-09-10_000000_78b0ac3a72267b0f7a00acd0/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "df96119cfcbed200e99b2df0",
+              "manifest": "./data/archive/2025-09-10_000000_df96119cfcbed200e99b2df0/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 23,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -160,14 +225,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2025-09-10_000000_78b0ac3a72267b0f7a00acd0/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2025-06-16_2025-06-16_2025-09-09_summer",
+      "id": "2025-06-16_2025-06-16_2025-09-09_summer_b0342ab42dc9",
       "date": "2025-06-16",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -180,42 +243,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 27,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "d5b7f175b54a344331f94b1d",
-      "manifest": "./data/archive/2025-06-16_000000_d5b7f175b54a344331f94b1d/banner.json",
-      "variantCount": 2,
+      "contentHash": "e570b003d6b88942d0c83c22",
+      "manifest": "./data/archive/2025-06-16_000000_e570b003d6b88942d0c83c22/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "d5b7f175b54a344331f94b1d",
-          "canonicalContentHash": "b0342ab42dc9bf78be1c403a",
-          "sourceFingerprint": "8cba75f23ca3623d538f3d1a",
-          "capturedAt": "2025-09-09T00:00:00+08:00",
-          "lastObservedAt": "2025-09-09T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 27,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2025-06-16_000000_d5b7f175b54a344331f94b1d/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "e570b003d6b88942d0c83c22",
           "canonicalContentHash": "b0342ab42dc9bf78be1c403a",
@@ -242,12 +280,36 @@
             7
           ],
           "manifest": "./data/archive/2025-06-16_000000_e570b003d6b88942d0c83c22/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "d5b7f175b54a344331f94b1d",
+              "manifest": "./data/archive/2025-06-16_000000_d5b7f175b54a344331f94b1d/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "e570b003d6b88942d0c83c22",
+              "manifest": "./data/archive/2025-06-16_000000_e570b003d6b88942d0c83c22/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2025-03-31_2025-03-31_2025-06-15_spring",
+      "id": "2025-03-31_2025-03-31_2025-06-15_spring_6fa427234ed7",
       "date": "2025-03-31",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -268,7 +330,8 @@
       "missing_assets": [],
       "contentHash": "afe35139ef2014022134cb55",
       "manifest": "./data/archive/2025-03-31_000000_afe35139ef2014022134cb55/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "afe35139ef2014022134cb55",
@@ -296,23 +359,22 @@
             7
           ],
           "manifest": "./data/archive/2025-03-31_000000_afe35139ef2014022134cb55/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "a1ca49a1a7814fa132e5e929",
-          "canonicalContentHash": "6fa427234ed7986991432696",
-          "sourceFingerprint": "4ecda874ede1beda46ca534e",
-          "capturedAt": "2025-06-15T00:00:00+08:00",
-          "lastObservedAt": "2025-06-15T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "a1ca49a1a7814fa132e5e929",
+              "manifest": "./data/archive/2025-03-31_000000_a1ca49a1a7814fa132e5e929/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "afe35139ef2014022134cb55",
+              "manifest": "./data/archive/2025-03-31_000000_afe35139ef2014022134cb55/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 18,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -321,14 +383,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2025-03-31_000000_a1ca49a1a7814fa132e5e929/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2024-12-25_2024-12-25_2025-03-30_winter",
+      "id": "2024-12-25_2024-12-25_2025-03-30_winter_1b1de391879c",
       "date": "2024-12-25",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -348,7 +408,8 @@
       "missing_assets": [],
       "contentHash": "904985f824541198557a5e14",
       "manifest": "./data/archive/2024-12-25_000000_904985f824541198557a5e14/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "904985f824541198557a5e14",
@@ -375,22 +436,22 @@
             7
           ],
           "manifest": "./data/archive/2024-12-25_000000_904985f824541198557a5e14/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "344bb2749b7b8b507ea0254e",
-          "canonicalContentHash": "1b1de391879c19fa965bd6d9",
-          "sourceFingerprint": "9a058852291faca94a64ddc6",
-          "capturedAt": "2025-03-30T00:00:00+08:00",
-          "lastObservedAt": "2025-03-30T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "344bb2749b7b8b507ea0254e",
+              "manifest": "./data/archive/2024-12-25_000000_344bb2749b7b8b507ea0254e/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "904985f824541198557a5e14",
+              "manifest": "./data/archive/2024-12-25_000000_904985f824541198557a5e14/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 22,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -399,14 +460,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2024-12-25_000000_344bb2749b7b8b507ea0254e/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2024-09-26_2024-09-26_2024-12-24_autumn",
+      "id": "2024-09-26_2024-09-26_2024-12-24_autumn_55db129e3078",
       "date": "2024-09-26",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
@@ -419,42 +478,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 22,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "6614438a5031fd90d6bf3e3f",
-      "manifest": "./data/archive/2024-09-26_000000_6614438a5031fd90d6bf3e3f/banner.json",
-      "variantCount": 2,
+      "contentHash": "fcfc20ed8b21de9c0dd034e6",
+      "manifest": "./data/archive/2024-09-26_000000_fcfc20ed8b21de9c0dd034e6/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "6614438a5031fd90d6bf3e3f",
-          "canonicalContentHash": "55db129e30785bf8311f8c4b",
-          "sourceFingerprint": "ca49e27a9d95a08690cc17c5",
-          "capturedAt": "2024-12-24T00:00:00+08:00",
-          "lastObservedAt": "2024-12-24T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 22,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2024-09-26_000000_6614438a5031fd90d6bf3e3f/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "fcfc20ed8b21de9c0dd034e6",
           "canonicalContentHash": "55db129e30785bf8311f8c4b",
@@ -481,12 +515,36 @@
             7
           ],
           "manifest": "./data/archive/2024-09-26_000000_fcfc20ed8b21de9c0dd034e6/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "6614438a5031fd90d6bf3e3f",
+              "manifest": "./data/archive/2024-09-26_000000_6614438a5031fd90d6bf3e3f/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "fcfc20ed8b21de9c0dd034e6",
+              "manifest": "./data/archive/2024-09-26_000000_fcfc20ed8b21de9c0dd034e6/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2024-06-21_2024-06-21_2024-09-25_summer",
+      "id": "2024-06-21_2024-06-21_2024-09-25_summer_3a626a6dbda8",
       "date": "2024-06-21",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -499,42 +557,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 21,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "79f30c7202727029c346c0c2",
-      "manifest": "./data/archive/2024-06-21_000000_79f30c7202727029c346c0c2/banner.json",
-      "variantCount": 2,
+      "contentHash": "636bc66ec3e271ce0aed0da1",
+      "manifest": "./data/archive/2024-06-21_000000_636bc66ec3e271ce0aed0da1/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "79f30c7202727029c346c0c2",
-          "canonicalContentHash": "3a626a6dbda8dfd5aa59db19",
-          "sourceFingerprint": "689c88e130789a6f0e38c068",
-          "capturedAt": "2024-09-25T00:00:00+08:00",
-          "lastObservedAt": "2024-09-25T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 21,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2024-06-21_000000_79f30c7202727029c346c0c2/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "636bc66ec3e271ce0aed0da1",
           "canonicalContentHash": "3a626a6dbda8dfd5aa59db19",
@@ -561,12 +594,36 @@
             7
           ],
           "manifest": "./data/archive/2024-06-21_000000_636bc66ec3e271ce0aed0da1/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "636bc66ec3e271ce0aed0da1",
+              "manifest": "./data/archive/2024-06-21_000000_636bc66ec3e271ce0aed0da1/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "79f30c7202727029c346c0c2",
+              "manifest": "./data/archive/2024-06-21_000000_79f30c7202727029c346c0c2/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2024-05-06_2024-05-06_2024-06-20_spring",
+      "id": "2024-05-06_2024-05-06_2024-06-20_spring_84092eaf14dc",
       "date": "2024-05-06",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -587,7 +644,8 @@
       "missing_assets": [],
       "contentHash": "1b480d6b6fb1028ebe4d9bf8",
       "manifest": "./data/archive/2024-05-06_000000_1b480d6b6fb1028ebe4d9bf8/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "1b480d6b6fb1028ebe4d9bf8",
@@ -615,23 +673,22 @@
             7
           ],
           "manifest": "./data/archive/2024-05-06_000000_1b480d6b6fb1028ebe4d9bf8/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "2284a411a0e60efd740e531d",
-          "canonicalContentHash": "84092eaf14dcf24dc74afb7a",
-          "sourceFingerprint": "60ad0d949c83492b8f645347",
-          "capturedAt": "2024-06-20T00:00:00+08:00",
-          "lastObservedAt": "2024-06-20T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "1b480d6b6fb1028ebe4d9bf8",
+              "manifest": "./data/archive/2024-05-06_000000_1b480d6b6fb1028ebe4d9bf8/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "2284a411a0e60efd740e531d",
+              "manifest": "./data/archive/2024-05-06_000000_2284a411a0e60efd740e531d/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 24,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -640,14 +697,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2024-05-06_000000_2284a411a0e60efd740e531d/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2024-02-01_2024-02-01_2024-04-01_winter",
+      "id": "2024-02-01_2024-02-01_2024-04-01_winter_378b8bd27a0c",
       "date": "2024-02-01",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -660,42 +715,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 20,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "18e56ce4ff4b164573390513",
-      "manifest": "./data/archive/2024-02-01_000000_18e56ce4ff4b164573390513/banner.json",
-      "variantCount": 2,
+      "contentHash": "6f5b338661af73c9d071b88b",
+      "manifest": "./data/archive/2024-02-01_000000_6f5b338661af73c9d071b88b/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "18e56ce4ff4b164573390513",
-          "canonicalContentHash": "378b8bd27a0cd22a653f5116",
-          "sourceFingerprint": "310cc50b8b64e60c1160dd9d",
-          "capturedAt": "2024-04-01T00:00:00+08:00",
-          "lastObservedAt": "2024-04-01T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 20,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2024-02-01_000000_18e56ce4ff4b164573390513/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "6f5b338661af73c9d071b88b",
           "canonicalContentHash": "378b8bd27a0cd22a653f5116",
@@ -722,12 +752,36 @@
             7
           ],
           "manifest": "./data/archive/2024-02-01_000000_6f5b338661af73c9d071b88b/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "18e56ce4ff4b164573390513",
+              "manifest": "./data/archive/2024-02-01_000000_18e56ce4ff4b164573390513/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "6f5b338661af73c9d071b88b",
+              "manifest": "./data/archive/2024-02-01_000000_6f5b338661af73c9d071b88b/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2023-12-12_2023-12-12_2024-01-31_winter",
+      "id": "2023-12-12_2023-12-12_2024-01-31_winter_498798406b5d",
       "date": "2023-12-12",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -740,42 +794,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 21,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "51d873379acc679229fa365f",
-      "manifest": "./data/archive/2023-12-12_000000_51d873379acc679229fa365f/banner.json",
-      "variantCount": 2,
+      "contentHash": "aba7684724ff1bec4cf00b9a",
+      "manifest": "./data/archive/2023-12-12_000000_aba7684724ff1bec4cf00b9a/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "51d873379acc679229fa365f",
-          "canonicalContentHash": "498798406b5d58a4ecabda6b",
-          "sourceFingerprint": "25703b429cbe5bc05fa8edce",
-          "capturedAt": "2024-01-31T00:00:00+08:00",
-          "lastObservedAt": "2024-01-31T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 21,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2023-12-12_000000_51d873379acc679229fa365f/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "aba7684724ff1bec4cf00b9a",
           "canonicalContentHash": "498798406b5d58a4ecabda6b",
@@ -802,12 +831,36 @@
             7
           ],
           "manifest": "./data/archive/2023-12-12_000000_aba7684724ff1bec4cf00b9a/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "51d873379acc679229fa365f",
+              "manifest": "./data/archive/2023-12-12_000000_51d873379acc679229fa365f/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "aba7684724ff1bec4cf00b9a",
+              "manifest": "./data/archive/2023-12-12_000000_aba7684724ff1bec4cf00b9a/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2023-11-17_2023-11-17_2023-12-11_autumn",
+      "id": "2023-11-17_2023-11-17_2023-12-11_autumn_b7f7b8227dd1",
       "date": "2023-11-17",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
@@ -819,41 +872,17 @@
       "capturedAt": "2023-12-11T00:00:00+08:00",
       "mode": "split",
       "type": [
-        "layered"
+        "layered",
+        "interactive"
       ],
       "layerCount": 20,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "b8cc2eccba9d442cca2d1dce",
-      "manifest": "./data/archive/2023-11-17_000000_b8cc2eccba9d442cca2d1dce/banner.json",
-      "variantCount": 2,
+      "contentHash": "f1ba4953240c2827e6629536",
+      "manifest": "./data/archive/2023-11-17_000000_f1ba4953240c2827e6629536/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "b8cc2eccba9d442cca2d1dce",
-          "canonicalContentHash": "b7f7b8227dd158771b3c9d47",
-          "sourceFingerprint": "b94984b2061ea6fe5a4be135",
-          "capturedAt": "2023-12-11T00:00:00+08:00",
-          "lastObservedAt": "2023-12-11T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered"
-          ],
-          "layerCount": 20,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2023-11-17_000000_b8cc2eccba9d442cca2d1dce/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "f1ba4953240c2827e6629536",
           "canonicalContentHash": "b7f7b8227dd158771b3c9d47",
@@ -879,12 +908,36 @@
             7
           ],
           "manifest": "./data/archive/2023-11-17_000000_f1ba4953240c2827e6629536/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "b8cc2eccba9d442cca2d1dce",
+              "manifest": "./data/archive/2023-11-17_000000_b8cc2eccba9d442cca2d1dce/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "f1ba4953240c2827e6629536",
+              "manifest": "./data/archive/2023-11-17_000000_f1ba4953240c2827e6629536/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2023-10-26_2023-10-26_2023-11-16_autumn",
+      "id": "2023-10-26_2023-10-26_2023-11-16_autumn_e68d4741f74a",
       "date": "2023-10-26",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
@@ -896,41 +949,17 @@
       "capturedAt": "2023-11-16T00:00:00+08:00",
       "mode": "split",
       "type": [
-        "layered"
+        "layered",
+        "interactive"
       ],
       "layerCount": 17,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "b5360dfe7a605982ab6aac33",
-      "manifest": "./data/archive/2023-10-26_000000_b5360dfe7a605982ab6aac33/banner.json",
-      "variantCount": 2,
+      "contentHash": "b935959143aeec06f1eee14f",
+      "manifest": "./data/archive/2023-10-26_000000_b935959143aeec06f1eee14f/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "b5360dfe7a605982ab6aac33",
-          "canonicalContentHash": "e68d4741f74ac569788b3cdd",
-          "sourceFingerprint": "863da4ab8a3ac00274b802c5",
-          "capturedAt": "2023-11-16T00:00:00+08:00",
-          "lastObservedAt": "2023-11-16T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered"
-          ],
-          "layerCount": 17,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2023-10-26_000000_b5360dfe7a605982ab6aac33/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "b935959143aeec06f1eee14f",
           "canonicalContentHash": "e68d4741f74ac569788b3cdd",
@@ -956,12 +985,36 @@
             7
           ],
           "manifest": "./data/archive/2023-10-26_000000_b935959143aeec06f1eee14f/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "b5360dfe7a605982ab6aac33",
+              "manifest": "./data/archive/2023-10-26_000000_b5360dfe7a605982ab6aac33/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "b935959143aeec06f1eee14f",
+              "manifest": "./data/archive/2023-10-26_000000_b935959143aeec06f1eee14f/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2023-10-01_2023-10-01_2023-10-25_autumn",
+      "id": "2023-10-01_2023-10-01_2023-10-25_autumn_24490f836226",
       "date": "2023-10-01",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
@@ -974,42 +1027,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 18,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "aa9bc1d6ee6e39332602133d",
-      "manifest": "./data/archive/2023-10-01_000000_aa9bc1d6ee6e39332602133d/banner.json",
-      "variantCount": 2,
+      "contentHash": "0ccf136e3ace8d5d625b65ce",
+      "manifest": "./data/archive/2023-10-01_000000_0ccf136e3ace8d5d625b65ce/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "aa9bc1d6ee6e39332602133d",
-          "canonicalContentHash": "24490f836226f10bc2089042",
-          "sourceFingerprint": "f345fe2d755cf11609faec88",
-          "capturedAt": "2023-10-25T00:00:00+08:00",
-          "lastObservedAt": "2023-10-25T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 18,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2023-10-01_000000_aa9bc1d6ee6e39332602133d/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "0ccf136e3ace8d5d625b65ce",
           "canonicalContentHash": "24490f836226f10bc2089042",
@@ -1036,12 +1064,36 @@
             7
           ],
           "manifest": "./data/archive/2023-10-01_000000_0ccf136e3ace8d5d625b65ce/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "0ccf136e3ace8d5d625b65ce",
+              "manifest": "./data/archive/2023-10-01_000000_0ccf136e3ace8d5d625b65ce/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "aa9bc1d6ee6e39332602133d",
+              "manifest": "./data/archive/2023-10-01_000000_aa9bc1d6ee6e39332602133d/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2023-08-21_2023-08-21_2023-09-30_summer",
+      "id": "2023-08-21_2023-08-21_2023-09-30_summer_7fde8be7a83b",
       "date": "2023-08-21",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -1061,7 +1113,8 @@
       "missing_assets": [],
       "contentHash": "3c0635db9735e032dec42712",
       "manifest": "./data/archive/2023-08-21_000000_3c0635db9735e032dec42712/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "3c0635db9735e032dec42712",
@@ -1088,22 +1141,22 @@
             7
           ],
           "manifest": "./data/archive/2023-08-21_000000_3c0635db9735e032dec42712/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "cbe2218698eb3517708307d2",
-          "canonicalContentHash": "7fde8be7a83b824d2977f492",
-          "sourceFingerprint": "f948512087c901cb9b718191",
-          "capturedAt": "2023-09-30T00:00:00+08:00",
-          "lastObservedAt": "2023-09-30T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "3c0635db9735e032dec42712",
+              "manifest": "./data/archive/2023-08-21_000000_3c0635db9735e032dec42712/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "cbe2218698eb3517708307d2",
+              "manifest": "./data/archive/2023-08-21_000000_cbe2218698eb3517708307d2/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 15,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -1112,14 +1165,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2023-08-21_000000_cbe2218698eb3517708307d2/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2023-08-13_2023-08-13_2023-08-20_summer",
+      "id": "2023-08-13_2023-08-13_2023-08-20_summer_5bade4111bb6",
       "date": "2023-08-13",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -1139,7 +1190,8 @@
       "missing_assets": [],
       "contentHash": "7d22874e3f3f29739def061f",
       "manifest": "./data/archive/2023-08-13_000000_7d22874e3f3f29739def061f/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "7d22874e3f3f29739def061f",
@@ -1166,22 +1218,22 @@
             7
           ],
           "manifest": "./data/archive/2023-08-13_000000_7d22874e3f3f29739def061f/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "0d80eaf9fbb2373619d80337",
-          "canonicalContentHash": "5bade4111bb64b02d51608da",
-          "sourceFingerprint": "ee5d06042bb83669d82726c3",
-          "capturedAt": "2023-08-20T00:00:00+08:00",
-          "lastObservedAt": "2023-08-20T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "0d80eaf9fbb2373619d80337",
+              "manifest": "./data/archive/2023-08-13_000000_0d80eaf9fbb2373619d80337/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "7d22874e3f3f29739def061f",
+              "manifest": "./data/archive/2023-08-13_000000_7d22874e3f3f29739def061f/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 16,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -1190,14 +1242,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2023-08-13_000000_0d80eaf9fbb2373619d80337/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2023-07-18_2023-07-18_2023-08-12_summer",
+      "id": "2023-07-18_2023-07-18_2023-08-12_summer_46e08c6331a3",
       "date": "2023-07-18",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -1217,7 +1267,8 @@
       "missing_assets": [],
       "contentHash": "b09176dc1e1170899695d309",
       "manifest": "./data/archive/2023-07-18_000000_b09176dc1e1170899695d309/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "b09176dc1e1170899695d309",
@@ -1244,22 +1295,22 @@
             7
           ],
           "manifest": "./data/archive/2023-07-18_000000_b09176dc1e1170899695d309/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "109053a41f478d8c059e84a2",
-          "canonicalContentHash": "46e08c6331a3b5157ace346f",
-          "sourceFingerprint": "a2f682ad30fc696a43209a39",
-          "capturedAt": "2023-08-12T00:00:00+08:00",
-          "lastObservedAt": "2023-08-12T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "109053a41f478d8c059e84a2",
+              "manifest": "./data/archive/2023-07-18_000000_109053a41f478d8c059e84a2/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "b09176dc1e1170899695d309",
+              "manifest": "./data/archive/2023-07-18_000000_b09176dc1e1170899695d309/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 15,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -1268,14 +1319,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2023-07-18_000000_109053a41f478d8c059e84a2/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2023-06-12_2023-06-12_2023-07-17_summer",
+      "id": "2023-06-12_2023-06-12_2023-07-17_summer_d64768a049c1",
       "date": "2023-06-12",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -1296,7 +1345,8 @@
       "missing_assets": [],
       "contentHash": "6483f0dd7eabf2c834dfda44",
       "manifest": "./data/archive/2023-06-12_000000_6483f0dd7eabf2c834dfda44/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "6483f0dd7eabf2c834dfda44",
@@ -1324,23 +1374,22 @@
             7
           ],
           "manifest": "./data/archive/2023-06-12_000000_6483f0dd7eabf2c834dfda44/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "95415a67820fa6bc74d4a2be",
-          "canonicalContentHash": "d64768a049c13474d0220c18",
-          "sourceFingerprint": "5063d385486751ba22b937a7",
-          "capturedAt": "2023-07-17T00:00:00+08:00",
-          "lastObservedAt": "2023-07-17T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "6483f0dd7eabf2c834dfda44",
+              "manifest": "./data/archive/2023-06-12_000000_6483f0dd7eabf2c834dfda44/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "95415a67820fa6bc74d4a2be",
+              "manifest": "./data/archive/2023-06-12_000000_95415a67820fa6bc74d4a2be/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 21,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -1349,14 +1398,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2023-06-12_000000_95415a67820fa6bc74d4a2be/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2023-05-08_2023-05-08_2023-06-11_summer",
+      "id": "2023-05-08_2023-05-08_2023-06-11_summer_068ed683d098",
       "date": "2023-05-08",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -1369,42 +1416,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 23,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "ece7151956f30745eea09898",
-      "manifest": "./data/archive/2023-05-08_000000_ece7151956f30745eea09898/banner.json",
-      "variantCount": 2,
+      "contentHash": "12dcc311fcbeb671f4cc9f1e",
+      "manifest": "./data/archive/2023-05-08_000000_12dcc311fcbeb671f4cc9f1e/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "ece7151956f30745eea09898",
-          "canonicalContentHash": "068ed683d098ca62520af524",
-          "sourceFingerprint": "d7fb363d6b80dded0e19d568",
-          "capturedAt": "2023-06-11T00:00:00+08:00",
-          "lastObservedAt": "2023-06-11T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 23,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2023-05-08_000000_ece7151956f30745eea09898/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "12dcc311fcbeb671f4cc9f1e",
           "canonicalContentHash": "068ed683d098ca62520af524",
@@ -1431,12 +1453,36 @@
             7
           ],
           "manifest": "./data/archive/2023-05-08_000000_12dcc311fcbeb671f4cc9f1e/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "12dcc311fcbeb671f4cc9f1e",
+              "manifest": "./data/archive/2023-05-08_000000_12dcc311fcbeb671f4cc9f1e/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "ece7151956f30745eea09898",
+              "manifest": "./data/archive/2023-05-08_000000_ece7151956f30745eea09898/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2023-03-31_2023-03-31_2023-05-07_spring",
+      "id": "2023-03-31_2023-03-31_2023-05-07_spring_6cd9c5a0de97",
       "date": "2023-03-31",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -1449,42 +1495,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 27,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "1125761eb78991c24d882432",
-      "manifest": "./data/archive/2023-03-31_000000_1125761eb78991c24d882432/banner.json",
-      "variantCount": 2,
+      "contentHash": "507834ded8874c8df73fe302",
+      "manifest": "./data/archive/2023-03-31_000000_507834ded8874c8df73fe302/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "1125761eb78991c24d882432",
-          "canonicalContentHash": "6cd9c5a0de975eade255dd39",
-          "sourceFingerprint": "535892a932946d45bc215e0d",
-          "capturedAt": "2023-05-07T00:00:00+08:00",
-          "lastObservedAt": "2023-05-07T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 27,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2023-03-31_000000_1125761eb78991c24d882432/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "507834ded8874c8df73fe302",
           "canonicalContentHash": "6cd9c5a0de975eade255dd39",
@@ -1511,12 +1532,36 @@
             7
           ],
           "manifest": "./data/archive/2023-03-31_000000_507834ded8874c8df73fe302/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "1125761eb78991c24d882432",
+              "manifest": "./data/archive/2023-03-31_000000_1125761eb78991c24d882432/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "507834ded8874c8df73fe302",
+              "manifest": "./data/archive/2023-03-31_000000_507834ded8874c8df73fe302/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2023-03-20_2023-03-20_2023-03-30_spring",
+      "id": "2023-03-20_2023-03-20_2023-03-30_spring_668e60a5255d",
       "date": "2023-03-20",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -1529,42 +1574,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 25,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "0751f94de36d98afa7b5f34d",
-      "manifest": "./data/archive/2023-03-20_000000_0751f94de36d98afa7b5f34d/banner.json",
-      "variantCount": 2,
+      "contentHash": "2b79302a938c1e0e03ad3e2a",
+      "manifest": "./data/archive/2023-03-20_000000_2b79302a938c1e0e03ad3e2a/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "0751f94de36d98afa7b5f34d",
-          "canonicalContentHash": "668e60a5255dc3cad7d8eec4",
-          "sourceFingerprint": "7650f5c37fb63a193f371d4c",
-          "capturedAt": "2023-03-30T00:00:00+08:00",
-          "lastObservedAt": "2023-03-30T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 25,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2023-03-20_000000_0751f94de36d98afa7b5f34d/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "2b79302a938c1e0e03ad3e2a",
           "canonicalContentHash": "668e60a5255dc3cad7d8eec4",
@@ -1591,12 +1611,36 @@
             7
           ],
           "manifest": "./data/archive/2023-03-20_000000_2b79302a938c1e0e03ad3e2a/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "0751f94de36d98afa7b5f34d",
+              "manifest": "./data/archive/2023-03-20_000000_0751f94de36d98afa7b5f34d/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "2b79302a938c1e0e03ad3e2a",
+              "manifest": "./data/archive/2023-03-20_000000_2b79302a938c1e0e03ad3e2a/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2022-12-22_2022-12-22_2023-03-19_winter",
+      "id": "2022-12-22_2022-12-22_2023-03-19_winter_2577505b5d31",
       "date": "2022-12-22",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -1615,6 +1659,7 @@
       "missing_assets": [],
       "contentHash": "1a47bd8533df0561f2b5d0d6",
       "manifest": "./data/archive/2022-12-22_000000_1a47bd8533df0561f2b5d0d6/banner.json",
+      "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
@@ -1641,12 +1686,31 @@
             7
           ],
           "manifest": "./data/archive/2022-12-22_000000_1a47bd8533df0561f2b5d0d6/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "1a47bd8533df0561f2b5d0d6",
+              "manifest": "./data/archive/2022-12-22_000000_1a47bd8533df0561f2b5d0d6/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2022-09-23_2022-09-23_2022-12-21_autumn",
+      "id": "2022-09-23_2022-09-23_2022-12-21_autumn_c3500e4dc5d5",
       "date": "2022-09-23",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
@@ -1658,41 +1722,16 @@
       "capturedAt": "2022-12-21T00:00:00+08:00",
       "mode": "static",
       "type": [
-        "static"
+        "interactive"
       ],
       "layerCount": 0,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "028096ecb0d68bc4f3f951a6",
-      "manifest": "./data/archive/2022-09-23_000000_028096ecb0d68bc4f3f951a6/banner.json",
-      "variantCount": 2,
+      "contentHash": "64e6cb8b69ee3400fb601dd0",
+      "manifest": "./data/archive/2022-09-23_000000_64e6cb8b69ee3400fb601dd0/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "028096ecb0d68bc4f3f951a6",
-          "canonicalContentHash": "c3500e4dc5d5fc4a15f9ec71",
-          "sourceFingerprint": "0084cc600723f6a518dc65a3",
-          "capturedAt": "2022-12-21T00:00:00+08:00",
-          "lastObservedAt": "2022-12-21T00:00:00+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2022-09-23_000000_028096ecb0d68bc4f3f951a6/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "64e6cb8b69ee3400fb601dd0",
           "canonicalContentHash": "c3500e4dc5d5fc4a15f9ec71",
@@ -1717,12 +1756,36 @@
             7
           ],
           "manifest": "./data/archive/2022-09-23_000000_64e6cb8b69ee3400fb601dd0/banner.json",
-          "referenceMode": "interactive"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "interactive",
+          "mergedFrom": [
+            {
+              "contentHash": "028096ecb0d68bc4f3f951a6",
+              "manifest": "./data/archive/2022-09-23_000000_028096ecb0d68bc4f3f951a6/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "64e6cb8b69ee3400fb601dd0",
+              "manifest": "./data/archive/2022-09-23_000000_64e6cb8b69ee3400fb601dd0/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2022-06-21_2022-06-21_2022-09-22_summer",
+      "id": "2022-06-21_2022-06-21_2022-09-22_summer_b7df8565766b",
       "date": "2022-06-21",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -1741,7 +1804,8 @@
       "missing_assets": [],
       "contentHash": "cefaa97edf17a7dceb5dca52",
       "manifest": "./data/archive/2022-06-21_000000_cefaa97edf17a7dceb5dca52/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "cefaa97edf17a7dceb5dca52",
@@ -1767,22 +1831,22 @@
             7
           ],
           "manifest": "./data/archive/2022-06-21_000000_cefaa97edf17a7dceb5dca52/banner.json",
-          "referenceMode": "interactive"
-        },
-        {
-          "contentHash": "cdbbf83275bb5311852c8f9b",
-          "canonicalContentHash": "b7df8565766ba48788a5870f",
-          "sourceFingerprint": "cd9cb6e7f436dbd653277d9b",
-          "capturedAt": "2022-09-22T00:00:00+08:00",
-          "lastObservedAt": "2022-09-22T00:00:00+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "interactive",
+          "mergedFrom": [
+            {
+              "contentHash": "cdbbf83275bb5311852c8f9b",
+              "manifest": "./data/archive/2022-06-21_000000_cdbbf83275bb5311852c8f9b/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "cefaa97edf17a7dceb5dca52",
+              "manifest": "./data/archive/2022-06-21_000000_cefaa97edf17a7dceb5dca52/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -1791,14 +1855,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2022-06-21_000000_cdbbf83275bb5311852c8f9b/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2022-03-20_2022-03-20_2022-06-20_spring",
+      "id": "2022-03-20_2022-03-20_2022-06-20_spring_bf896d6a3fed",
       "date": "2022-03-20",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -1808,43 +1870,20 @@
       "dateStart": "2022-03-20",
       "dateEnd": "2022-06-20",
       "capturedAt": "2022-06-20T00:00:00+08:00",
-      "mode": "static",
+      "mode": "split",
       "type": [
+        "layered",
+        "video",
         "interactive"
       ],
-      "layerCount": 0,
+      "layerCount": 1,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "c6a4b38dc1edf804e81611ac",
-      "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
-      "variantCount": 3,
+      "contentHash": "21b11897a7e73afe53da6b39",
+      "manifest": "./data/archive/2022-03-20_000000_21b11897a7e73afe53da6b39/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "c6a4b38dc1edf804e81611ac",
-          "canonicalContentHash": "a358b4ed983a6ea7d26250aa",
-          "sourceFingerprint": "32f60b3e2a7fb2b2048923e1",
-          "capturedAt": "2022-06-20T00:00:00+08:00",
-          "lastObservedAt": "2022-06-20T00:00:00+08:00",
-          "mode": "static",
-          "type": [
-            "interactive"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
-          "referenceMode": "interactive"
-        },
         {
           "contentHash": "21b11897a7e73afe53da6b39",
           "canonicalContentHash": "bf896d6a3fed40217773ea4b",
@@ -1871,20 +1910,68 @@
             7
           ],
           "manifest": "./data/archive/2022-03-20_000000_21b11897a7e73afe53da6b39/banner.json",
-          "referenceMode": "normal"
-        },
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "21b11897a7e73afe53da6b39",
+              "manifest": "./data/archive/2022-03-20_000000_21b11897a7e73afe53da6b39/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "4030b6e79adef43c802edf2c",
+              "manifest": "./data/archive/2022-03-20_000000_4030b6e79adef43c802edf2c/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2022-03-20_2022-03-20_2022-06-20_spring_a358b4ed983a",
+      "date": "2022-03-20",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "03",
+      "yearMonth": "2022-03",
+      "dateStart": "2022-03-20",
+      "dateEnd": "2022-06-20",
+      "capturedAt": "2022-06-20T00:00:00+08:00",
+      "mode": "static",
+      "type": [
+        "interactive"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "c6a4b38dc1edf804e81611ac",
+      "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
+      "variants": [
         {
-          "contentHash": "4030b6e79adef43c802edf2c",
-          "canonicalContentHash": "bf896d6a3fed40217773ea4b",
-          "sourceFingerprint": "2310fd98871e16c78951ce0a",
+          "contentHash": "c6a4b38dc1edf804e81611ac",
+          "canonicalContentHash": "a358b4ed983a6ea7d26250aa",
+          "sourceFingerprint": "32f60b3e2a7fb2b2048923e1",
           "capturedAt": "2022-06-20T00:00:00+08:00",
           "lastObservedAt": "2022-06-20T00:00:00+08:00",
-          "mode": "split",
+          "mode": "static",
           "type": [
-            "layered",
-            "video"
+            "interactive"
           ],
-          "layerCount": 1,
+          "layerCount": 0,
           "completeness": "complete",
           "missing_assets": [],
           "slots": [
@@ -1897,13 +1984,32 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2022-03-20_000000_4030b6e79adef43c802edf2c/banner.json",
-          "referenceMode": "normal"
+          "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "interactive",
+          "mergedFrom": [
+            {
+              "contentHash": "c6a4b38dc1edf804e81611ac",
+              "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2021-12-21_2021-12-21_2022-03-19_winter",
+      "id": "2021-12-21_2021-12-21_2022-03-19_winter_9e760ecbd160",
       "date": "2021-12-21",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -1924,7 +2030,8 @@
       "missing_assets": [],
       "contentHash": "5e553fbbea978a768223f986",
       "manifest": "./data/archive/2021-12-21_000000_5e553fbbea978a768223f986/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "5e553fbbea978a768223f986",
@@ -1952,23 +2059,22 @@
             7
           ],
           "manifest": "./data/archive/2021-12-21_000000_5e553fbbea978a768223f986/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "a2f7464cef814346536fee1f",
-          "canonicalContentHash": "9e760ecbd1603382dd3bf8e8",
-          "sourceFingerprint": "21aa1405de3d5cb94de8610a",
-          "capturedAt": "2022-03-19T00:00:00+08:00",
-          "lastObservedAt": "2022-03-19T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "5e553fbbea978a768223f986",
+              "manifest": "./data/archive/2021-12-21_000000_5e553fbbea978a768223f986/banner.json",
+              "interactionState": "interactive"
+            },
+            {
+              "contentHash": "a2f7464cef814346536fee1f",
+              "manifest": "./data/archive/2021-12-21_000000_a2f7464cef814346536fee1f/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 1,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -1977,14 +2083,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2021-12-21_000000_a2f7464cef814346536fee1f/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2021-09-23_2021-09-23_2021-12-20_autumn",
+      "id": "2021-09-23_2021-09-23_2021-12-20_autumn_8ee8c0489be4",
       "date": "2021-09-23",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
@@ -2005,7 +2109,8 @@
       "missing_assets": [],
       "contentHash": "f2942495f69c784f8684c38c",
       "manifest": "./data/archive/2021-09-23_000000_f2942495f69c784f8684c38c/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "f2942495f69c784f8684c38c",
@@ -2033,23 +2138,22 @@
             7
           ],
           "manifest": "./data/archive/2021-09-23_000000_f2942495f69c784f8684c38c/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "c6fbcc4cf667ffa7d6a63b56",
-          "canonicalContentHash": "8ee8c0489be4a8f6328b6ce9",
-          "sourceFingerprint": "701d65b3bc121a8d5f6b9a0c",
-          "capturedAt": "2021-12-20T00:00:00+08:00",
-          "lastObservedAt": "2021-12-20T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "c6fbcc4cf667ffa7d6a63b56",
+              "manifest": "./data/archive/2021-09-23_000000_c6fbcc4cf667ffa7d6a63b56/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "f2942495f69c784f8684c38c",
+              "manifest": "./data/archive/2021-09-23_000000_f2942495f69c784f8684c38c/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 2,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -2058,14 +2162,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2021-09-23_000000_c6fbcc4cf667ffa7d6a63b56/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2021-06-21_2021-06-21_2021-09-22_summer",
+      "id": "2021-06-21_2021-06-21_2021-09-22_summer_8997c6f35b27",
       "date": "2021-06-21",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
@@ -2086,7 +2188,8 @@
       "missing_assets": [],
       "contentHash": "f0610311e04cc92ab8f659d8",
       "manifest": "./data/archive/2021-06-21_000000_f0610311e04cc92ab8f659d8/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "f0610311e04cc92ab8f659d8",
@@ -2114,23 +2217,22 @@
             7
           ],
           "manifest": "./data/archive/2021-06-21_000000_f0610311e04cc92ab8f659d8/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "2c4c87e282f6f6fb6f064a0a",
-          "canonicalContentHash": "8997c6f35b2709db1cd9f020",
-          "sourceFingerprint": "866247310b4a9679471e823b",
-          "capturedAt": "2021-09-22T00:00:00+08:00",
-          "lastObservedAt": "2021-09-22T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "2c4c87e282f6f6fb6f064a0a",
+              "manifest": "./data/archive/2021-06-21_000000_2c4c87e282f6f6fb6f064a0a/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "f0610311e04cc92ab8f659d8",
+              "manifest": "./data/archive/2021-06-21_000000_f0610311e04cc92ab8f659d8/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 1,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -2139,14 +2241,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2021-06-21_000000_2c4c87e282f6f6fb6f064a0a/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2021-03-20_2021-03-20_2021-06-20_spring",
+      "id": "2021-03-20_2021-03-20_2021-06-20_spring_612170ad481d",
       "date": "2021-03-20",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -2166,7 +2266,8 @@
       "missing_assets": [],
       "contentHash": "cf6bcf0386cb5c33090e822b",
       "manifest": "./data/archive/2021-03-20_000000_cf6bcf0386cb5c33090e822b/banner.json",
-      "variantCount": 2,
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "cf6bcf0386cb5c33090e822b",
@@ -2193,22 +2294,22 @@
             7
           ],
           "manifest": "./data/archive/2021-03-20_000000_cf6bcf0386cb5c33090e822b/banner.json",
-          "referenceMode": "normal"
-        },
-        {
-          "contentHash": "35f68ecdc663709ad3efc255",
-          "canonicalContentHash": "612170ad481d115402955bcc",
-          "sourceFingerprint": "4c4b45fb335a85c6067ec8ab",
-          "capturedAt": "2021-06-20T00:00:00+08:00",
-          "lastObservedAt": "2021-06-20T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "35f68ecdc663709ad3efc255",
+              "manifest": "./data/archive/2021-03-20_000000_35f68ecdc663709ad3efc255/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "cf6bcf0386cb5c33090e822b",
+              "manifest": "./data/archive/2021-03-20_000000_cf6bcf0386cb5c33090e822b/banner.json",
+              "interactionState": "interactive"
+            }
           ],
-          "layerCount": 15,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -2217,14 +2318,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2021-03-20_000000_35f68ecdc663709ad3efc255/banner.json",
-          "referenceMode": "normal"
+          ]
         }
       ]
     },
     {
-      "id": "2020-12-21_2020-12-21_2021-03-19_winter",
+      "id": "2020-12-21_2020-12-21_2021-03-19_winter_229e3b911459",
       "date": "2020-12-21",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -2237,42 +2336,17 @@
       "mode": "split",
       "type": [
         "layered",
-        "video"
+        "video",
+        "interactive"
       ],
       "layerCount": 8,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "591344d2aaa05ba2d2bf51b0",
-      "manifest": "./data/archive/2020-12-21_000000_591344d2aaa05ba2d2bf51b0/banner.json",
-      "variantCount": 2,
+      "contentHash": "7f4fa473f8910368f1f0fa19",
+      "manifest": "./data/archive/2020-12-21_000000_7f4fa473f8910368f1f0fa19/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "591344d2aaa05ba2d2bf51b0",
-          "canonicalContentHash": "229e3b9114598f9f3ea7d6a4",
-          "sourceFingerprint": "ee7c9b82498fee6012682f85",
-          "capturedAt": "2021-03-19T00:00:00+08:00",
-          "lastObservedAt": "2021-03-19T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 8,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2020-12-21_000000_591344d2aaa05ba2d2bf51b0/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "7f4fa473f8910368f1f0fa19",
           "canonicalContentHash": "229e3b9114598f9f3ea7d6a4",
@@ -2299,12 +2373,36 @@
             7
           ],
           "manifest": "./data/archive/2020-12-21_000000_7f4fa473f8910368f1f0fa19/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "591344d2aaa05ba2d2bf51b0",
+              "manifest": "./data/archive/2020-12-21_000000_591344d2aaa05ba2d2bf51b0/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "7f4fa473f8910368f1f0fa19",
+              "manifest": "./data/archive/2020-12-21_000000_7f4fa473f8910368f1f0fa19/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2020-09-22_2020-09-22_2020-12-20_autumn",
+      "id": "2020-09-22_2020-09-22_2020-12-20_autumn_1aa8ba74fcca",
       "date": "2020-09-22",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
@@ -2316,41 +2414,17 @@
       "capturedAt": "2020-12-20T00:00:00+08:00",
       "mode": "split",
       "type": [
-        "layered"
+        "layered",
+        "interactive"
       ],
       "layerCount": 6,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "5370cd24fae022345614bbed",
-      "manifest": "./data/archive/2020-09-22_000000_5370cd24fae022345614bbed/banner.json",
-      "variantCount": 2,
+      "contentHash": "545bbfa9fd340a6e80109f61",
+      "manifest": "./data/archive/2020-09-22_000000_545bbfa9fd340a6e80109f61/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "5370cd24fae022345614bbed",
-          "canonicalContentHash": "1aa8ba74fcca33fa57c4edb2",
-          "sourceFingerprint": "7f5ac0f83ea3f520ee06cd04",
-          "capturedAt": "2020-12-20T00:00:00+08:00",
-          "lastObservedAt": "2020-12-20T00:00:00+08:00",
-          "mode": "split",
-          "type": [
-            "layered"
-          ],
-          "layerCount": 6,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2020-09-22_000000_5370cd24fae022345614bbed/banner.json",
-          "referenceMode": "normal"
-        },
         {
           "contentHash": "545bbfa9fd340a6e80109f61",
           "canonicalContentHash": "1aa8ba74fcca33fa57c4edb2",
@@ -2376,21 +2450,45 @@
             7
           ],
           "manifest": "./data/archive/2020-09-22_000000_545bbfa9fd340a6e80109f61/banner.json",
-          "referenceMode": "normal"
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "normal",
+          "mergedFrom": [
+            {
+              "contentHash": "5370cd24fae022345614bbed",
+              "manifest": "./data/archive/2020-09-22_000000_5370cd24fae022345614bbed/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "545bbfa9fd340a6e80109f61",
+              "manifest": "./data/archive/2020-09-22_000000_545bbfa9fd340a6e80109f61/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2019-04-09_3f4544a6cbd4",
-      "date": "2019-04-09",
+      "id": "2019-04-08_3f4544a6cbd4_b4c56059f58a",
+      "date": "2019-04-08",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
       "year": "2019",
       "month": "04",
       "yearMonth": "2019-04",
-      "dateStart": "2019-04-09",
-      "dateEnd": "2019-04-10",
-      "capturedAt": "2019-04-10T15:15:53+08:00",
+      "dateStart": "2019-04-08",
+      "dateEnd": "2019-04-11",
+      "capturedAt": "2019-04-11T04:31:18+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -2400,14 +2498,15 @@
       "missing_assets": [],
       "contentHash": "67124e8589f2fe460a425a64",
       "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json",
+      "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
           "contentHash": "67124e8589f2fe460a425a64",
           "canonicalContentHash": "b4c56059f58a864407727b9c",
           "sourceFingerprint": "4968140d3ed1f0abfecd58aa",
-          "capturedAt": "2019-04-10T15:15:53+08:00",
-          "lastObservedAt": "2019-04-10T15:15:53+08:00",
+          "capturedAt": "2019-04-11T04:31:18+08:00",
+          "lastObservedAt": "2019-04-11T04:31:18+08:00",
           "mode": "static",
           "type": [
             "static"
@@ -2425,12 +2524,32 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json"
+          "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "67124e8589f2fe460a425a64",
+              "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "slotFill": "same-day-forward-backward"
         }
       ]
     },
     {
-      "id": "2019-04-04_3f4544a6cbd4",
+      "id": "2019-04-04_3f4544a6cbd4_6284eda2bdb7",
       "date": "2019-04-04",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -2438,8 +2557,8 @@
       "month": "04",
       "yearMonth": "2019-04",
       "dateStart": "2019-04-04",
-      "dateEnd": "2019-04-06",
-      "capturedAt": "2019-04-06T06:41:46+08:00",
+      "dateEnd": "2019-04-07",
+      "capturedAt": "2019-04-06T23:40:01+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -2449,14 +2568,15 @@
       "missing_assets": [],
       "contentHash": "dfffe4b9b5d1c44d6c26e582",
       "manifest": "./data/archive/2019-04-06_064146_dfffe4b9b5d1c44d6c26e582/banner.json",
+      "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
           "contentHash": "dfffe4b9b5d1c44d6c26e582",
           "canonicalContentHash": "6284eda2bdb7db243c170db4",
           "sourceFingerprint": "edbba41ba8627996bba96453",
-          "capturedAt": "2019-04-06T06:41:46+08:00",
-          "lastObservedAt": "2019-04-06T06:41:46+08:00",
+          "capturedAt": "2019-04-06T23:40:01+08:00",
+          "lastObservedAt": "2019-04-06T23:40:01+08:00",
           "mode": "static",
           "type": [
             "static"
@@ -2474,12 +2594,32 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-04-06_064146_dfffe4b9b5d1c44d6c26e582/banner.json"
+          "manifest": "./data/archive/2019-04-06_064146_dfffe4b9b5d1c44d6c26e582/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "dfffe4b9b5d1c44d6c26e582",
+              "manifest": "./data/archive/2019-04-06_064146_dfffe4b9b5d1c44d6c26e582/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "slotFill": "same-day-forward-backward"
         }
       ]
     },
     {
-      "id": "2019-04-02_3f4544a6cbd4",
+      "id": "2019-04-02_3f4544a6cbd4_b4c56059f58a",
       "date": "2019-04-02",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -2500,6 +2640,7 @@
       ],
       "contentHash": "343a309f8abc0d27b68a375f",
       "manifest": "./data/archive/2019-04-03_162404_343a309f8abc0d27b68a375f/banner.json",
+      "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
@@ -2527,12 +2668,31 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-04-03_162404_343a309f8abc0d27b68a375f/banner.json"
+          "manifest": "./data/archive/2019-04-03_162404_343a309f8abc0d27b68a375f/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "343a309f8abc0d27b68a375f",
+              "manifest": "./data/archive/2019-04-03_162404_343a309f8abc0d27b68a375f/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2019-03-31_3f4544a6cbd4",
+      "id": "2019-03-31_3f4544a6cbd4_9fd09b2a2ef6",
       "date": "2019-03-31",
       "season": "spring",
       "timeZone": "Asia/Shanghai",
@@ -2551,6 +2711,7 @@
       "missing_assets": [],
       "contentHash": "c1c4cb4d2dc3f540c721261e",
       "manifest": "./data/archive/2019-03-31_061542_c1c4cb4d2dc3f540c721261e/banner.json",
+      "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
@@ -2576,19 +2737,38 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-03-31_061542_c1c4cb4d2dc3f540c721261e/banner.json"
+          "manifest": "./data/archive/2019-03-31_061542_c1c4cb4d2dc3f540c721261e/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "c1c4cb4d2dc3f540c721261e",
+              "manifest": "./data/archive/2019-03-31_061542_c1c4cb4d2dc3f540c721261e/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2019-02-20_3f4544a6cbd4",
-      "date": "2019-02-20",
+      "id": "2019-02-25_3f4544a6cbd4_b4c56059f58a",
+      "date": "2019-02-25",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "year": "2019",
       "month": "02",
       "yearMonth": "2019-02",
-      "dateStart": "2019-02-20",
+      "dateStart": "2019-02-25",
       "dateEnd": "2019-03-30",
       "capturedAt": "2019-03-30T13:54:32+08:00",
       "mode": "static",
@@ -2600,225 +2780,9 @@
       "missing_assets": [],
       "contentHash": "67124e8589f2fe460a425a64",
       "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json",
-      "variantCount": 10,
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "045af182e0c14ff3e6b6c42b",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "c4c863edf77e318e4ebbfc73",
-          "capturedAt": "2019-02-21T04:53:23+08:00",
-          "lastObservedAt": "2019-02-21T04:53:23+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190220205323id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190220205323id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190220205323id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            7
-          ],
-          "manifest": "./data/archive/2019-02-21_045323_045af182e0c14ff3e6b6c42b/banner.json"
-        },
-        {
-          "contentHash": "34f7ed6e4b30689f42c71df5",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
-          "capturedAt": "2019-02-23T09:19:55+08:00",
-          "lastObservedAt": "2019-02-23T09:19:55+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
-        },
-        {
-          "contentHash": "84f6841fc923af5f71e8e001",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "1cf162d1dddc761c25283721",
-          "capturedAt": "2019-02-24T00:41:12+08:00",
-          "lastObservedAt": "2019-02-24T00:41:12+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190223164112id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190223164112id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190223164112id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-02-24_004112_84f6841fc923af5f71e8e001/banner.json"
-        },
-        {
-          "contentHash": "d035f6adbd92c6976d307ecc",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "c7da4ccbf1197078debfd7f7",
-          "capturedAt": "2019-02-25T00:16:15+08:00",
-          "lastObservedAt": "2019-02-25T00:16:15+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190224161615id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190224161615id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190224161615id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-02-25_001615_d035f6adbd92c6976d307ecc/banner.json"
-        },
-        {
-          "contentHash": "f0b6298007d60e4ca445ffcc",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "c7da4ccbf1197078debfd7f7",
-          "capturedAt": "2019-02-25T00:16:15+08:00",
-          "lastObservedAt": "2019-02-25T00:16:15+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190224161615id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190224161615id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190224161615id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-02-25_001615_f0b6298007d60e4ca445ffcc/banner.json"
-        },
-        {
-          "contentHash": "6dfa0c8b616930bb0d8bf225",
-          "canonicalContentHash": "b4c56059f58a864407727b9c",
-          "sourceFingerprint": "4968140d3ed1f0abfecd58aa",
-          "capturedAt": "2019-02-26T03:43:38+08:00",
-          "lastObservedAt": "2019-02-26T03:43:38+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190225194338id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190225194338id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190225194338id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-02-26_034338_6dfa0c8b616930bb0d8bf225/banner.json"
-        },
-        {
-          "contentHash": "c7ba59335121d7a656e5306f",
-          "canonicalContentHash": "b4c56059f58a864407727b9c",
-          "sourceFingerprint": "152fedfdb0504ac9ea01bb22",
-          "capturedAt": "2019-02-27T11:50:14+08:00",
-          "lastObservedAt": "2019-02-27T11:50:14+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190227035014id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190227035014id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190227035014id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            3,
-            4,
-            5,
-            6
-          ],
-          "manifest": "./data/archive/2019-02-27_115014_c7ba59335121d7a656e5306f/banner.json"
-        },
-        {
-          "contentHash": "76d984382eea6e49708e4550",
-          "canonicalContentHash": "b4c56059f58a864407727b9c",
-          "sourceFingerprint": "0292173cc0cec689dbc6aa99",
-          "capturedAt": "2019-03-04T00:06:27+08:00",
-          "lastObservedAt": "2019-03-04T00:06:27+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190303160627id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190303160627id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190303160627id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "manifest": "./data/archive/2019-03-04_000627_76d984382eea6e49708e4550/banner.json"
-        },
-        {
-          "contentHash": "21f8b8e9b0f510295df7d32f",
-          "canonicalContentHash": "b4c56059f58a864407727b9c",
-          "sourceFingerprint": "7f7337fce079453d2c32333f",
-          "capturedAt": "2019-03-29T12:36:34+08:00",
-          "lastObservedAt": "2019-03-29T12:36:34+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190329043634id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190329043634id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190329043634id_/https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            3,
-            4,
-            5,
-            6
-          ],
-          "manifest": "./data/archive/2019-03-29_123634_21f8b8e9b0f510295df7d32f/banner.json"
-        },
         {
           "contentHash": "67124e8589f2fe460a425a64",
           "canonicalContentHash": "b4c56059f58a864407727b9c",
@@ -2842,12 +2806,57 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json"
+          "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "21f8b8e9b0f510295df7d32f",
+              "manifest": "./data/archive/2019-03-29_123634_21f8b8e9b0f510295df7d32f/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "67124e8589f2fe460a425a64",
+              "manifest": "./data/archive/2019-02-26_034338_67124e8589f2fe460a425a64/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "6dfa0c8b616930bb0d8bf225",
+              "manifest": "./data/archive/2019-02-26_034338_6dfa0c8b616930bb0d8bf225/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "72442026e8dcf3c564b0915d",
+              "manifest": "./data/archive/2019-03-05_160712_72442026e8dcf3c564b0915d/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "76d984382eea6e49708e4550",
+              "manifest": "./data/archive/2019-03-04_000627_76d984382eea6e49708e4550/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "c7ba59335121d7a656e5306f",
+              "manifest": "./data/archive/2019-02-27_115014_c7ba59335121d7a656e5306f/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "slotFill": "same-day-forward-backward"
         }
       ]
     },
     {
-      "id": "2019-02-17_3f4544a6cbd4",
+      "id": "2019-02-17_3f4544a6cbd4_10f04617ab66",
       "date": "2019-02-17",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -2855,8 +2864,8 @@
       "month": "02",
       "yearMonth": "2019-02",
       "dateStart": "2019-02-17",
-      "dateEnd": "2019-02-17",
-      "capturedAt": "2019-02-17T03:38:11+08:00",
+      "dateEnd": "2019-02-25",
+      "capturedAt": "2019-02-23T09:19:55+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -2866,14 +2875,15 @@
       "missing_assets": [],
       "contentHash": "34f7ed6e4b30689f42c71df5",
       "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+      "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
           "contentHash": "34f7ed6e4b30689f42c71df5",
           "canonicalContentHash": "10f04617ab6628168322cb1b",
           "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
-          "capturedAt": "2019-02-17T03:38:11+08:00",
-          "lastObservedAt": "2019-02-17T03:38:11+08:00",
+          "capturedAt": "2019-02-23T09:19:55+08:00",
+          "lastObservedAt": "2019-02-23T09:19:55+08:00",
           "mode": "static",
           "type": [
             "static"
@@ -2891,12 +2901,57 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
+          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "045af182e0c14ff3e6b6c42b",
+              "manifest": "./data/archive/2019-02-21_045323_045af182e0c14ff3e6b6c42b/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "34f7ed6e4b30689f42c71df5",
+              "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "84f6841fc923af5f71e8e001",
+              "manifest": "./data/archive/2019-02-24_004112_84f6841fc923af5f71e8e001/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "be39042f619e197a01080aca",
+              "manifest": "./data/archive/2019-02-19_172440_be39042f619e197a01080aca/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "d035f6adbd92c6976d307ecc",
+              "manifest": "./data/archive/2019-02-25_001615_d035f6adbd92c6976d307ecc/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "f0b6298007d60e4ca445ffcc",
+              "manifest": "./data/archive/2019-02-25_001615_f0b6298007d60e4ca445ffcc/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "slotFill": "same-day-forward-backward"
         }
       ]
     },
     {
-      "id": "2019-02-16_3f4544a6cbd4",
+      "id": "2019-02-16_3f4544a6cbd4_86203e438271",
       "date": "2019-02-16",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -2915,6 +2970,7 @@
       "missing_assets": [],
       "contentHash": "9846df16652a661fc0b2482a",
       "manifest": "./data/archive/2019-02-16_024110_9846df16652a661fc0b2482a/banner.json",
+      "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
@@ -2940,12 +2996,31 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-02-16_024110_9846df16652a661fc0b2482a/banner.json"
+          "manifest": "./data/archive/2019-02-16_024110_9846df16652a661fc0b2482a/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "9846df16652a661fc0b2482a",
+              "manifest": "./data/archive/2019-02-16_024110_9846df16652a661fc0b2482a/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2019-02-15_3f4544a6cbd4",
+      "id": "2019-02-15_3f4544a6cbd4_a4b95e7ec349",
       "date": "2019-02-15",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -2964,49 +3039,9 @@
       "missing_assets": [],
       "contentHash": "845e29926fb0c6b3a9c6aa69",
       "manifest": "./data/archive/2019-02-15_235218_845e29926fb0c6b3a9c6aa69/banner.json",
-      "variantCount": 3,
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "3af5bf10f86ae8023b5b0be6",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "b10ed1c1eb0f0bd7778647e7",
-          "capturedAt": "2019-02-15T07:41:26+08:00",
-          "lastObservedAt": "2019-02-15T07:41:26+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2
-          ],
-          "manifest": "./data/archive/2019-02-15_074126_3af5bf10f86ae8023b5b0be6/banner.json"
-        },
-        {
-          "contentHash": "34f7ed6e4b30689f42c71df5",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
-          "capturedAt": "2019-02-15T08:33:52+08:00",
-          "lastObservedAt": "2019-02-15T08:33:52+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            3,
-            4
-          ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
-        },
         {
           "contentHash": "845e29926fb0c6b3a9c6aa69",
           "canonicalContentHash": "a4b95e7ec349cefc9acec8a7",
@@ -3025,12 +3060,26 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-02-15_235218_845e29926fb0c6b3a9c6aa69/banner.json"
+          "manifest": "./data/archive/2019-02-15_235218_845e29926fb0c6b3a9c6aa69/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "845e29926fb0c6b3a9c6aa69",
+              "manifest": "./data/archive/2019-02-15_235218_845e29926fb0c6b3a9c6aa69/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            5,
+            6,
+            7
+          ]
         }
       ]
     },
     {
-      "id": "2019-02-11_3f4544a6cbd4",
+      "id": "2019-02-11_3f4544a6cbd4_10f04617ab66",
       "date": "2019-02-11",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -3038,20 +3087,108 @@
       "month": "02",
       "yearMonth": "2019-02",
       "dateStart": "2019-02-11",
-      "dateEnd": "2019-02-14",
-      "capturedAt": "2019-02-15T07:41:26+08:00",
+      "dateEnd": "2019-02-15",
+      "capturedAt": "2019-02-15T08:33:52+08:00",
       "mode": "static",
       "type": [
         "static"
       ],
       "layerCount": 0,
-      "completeness": "partial",
-      "missing_assets": [
-        "auxiliary_000: https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "34f7ed6e4b30689f42c71df5",
+      "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "34f7ed6e4b30689f42c71df5",
+          "canonicalContentHash": "10f04617ab6628168322cb1b",
+          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
+          "capturedAt": "2019-02-15T08:33:52+08:00",
+          "lastObservedAt": "2019-02-15T08:33:52+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "217c8b7817f38c3e0520b188",
+              "manifest": "./data/archive/2019-02-13_205212_217c8b7817f38c3e0520b188/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "34f7ed6e4b30689f42c71df5",
+              "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "364790b89ab2830be4d63959",
+              "manifest": "./data/archive/2019-02-12_064655_364790b89ab2830be4d63959/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "3af5bf10f86ae8023b5b0be6",
+              "manifest": "./data/archive/2019-02-15_074126_3af5bf10f86ae8023b5b0be6/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "b3b5ebe2665c704aff25daa8",
+              "manifest": "./data/archive/2019-02-13_072506_b3b5ebe2665c704aff25daa8/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2019-02-11_3f4544a6cbd4_9339016fe1b6",
+      "date": "2019-02-11",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "02",
+      "yearMonth": "2019-02",
+      "dateStart": "2019-02-11",
+      "dateEnd": "2019-02-11",
+      "capturedAt": "2019-02-11T12:49:07+08:00",
+      "mode": "static",
+      "type": [
+        "static"
       ],
-      "contentHash": "3af5bf10f86ae8023b5b0be6",
-      "manifest": "./data/archive/2019-02-15_074126_3af5bf10f86ae8023b5b0be6/banner.json",
-      "variantCount": 6,
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "b16563d9951272d6c04db965",
+      "manifest": "./data/archive/2019-02-11_124907_b16563d9951272d6c04db965/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "b16563d9951272d6c04db965",
@@ -3075,122 +3212,30 @@
             5,
             6
           ],
-          "manifest": "./data/archive/2019-02-11_124907_b16563d9951272d6c04db965/banner.json"
-        },
-        {
-          "contentHash": "364790b89ab2830be4d63959",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "fc72b3549cbc4ce4c67cda35",
-          "capturedAt": "2019-02-12T06:46:55+08:00",
-          "lastObservedAt": "2019-02-12T06:46:55+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-02-11_124907_b16563d9951272d6c04db965/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "b16563d9951272d6c04db965",
+              "manifest": "./data/archive/2019-02-11_124907_b16563d9951272d6c04db965/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190211224655id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190211224655id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190211224655id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            7
-          ],
-          "manifest": "./data/archive/2019-02-12_064655_364790b89ab2830be4d63959/banner.json"
-        },
-        {
-          "contentHash": "b3b5ebe2665c704aff25daa8",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "293f4e1851fe7ed8fe6d9ad2",
-          "capturedAt": "2019-02-13T07:25:06+08:00",
-          "lastObservedAt": "2019-02-13T07:25:06+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190212232506id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190212232506id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190212232506id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            2
-          ],
-          "manifest": "./data/archive/2019-02-13_072506_b3b5ebe2665c704aff25daa8/banner.json"
-        },
-        {
-          "contentHash": "217c8b7817f38c3e0520b188",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "5c73cbf0394680d547ff4e47",
-          "capturedAt": "2019-02-13T20:52:12+08:00",
-          "lastObservedAt": "2019-02-13T20:52:12+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190213125212id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190213125212id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190213125212id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-02-13_205212_217c8b7817f38c3e0520b188/banner.json"
-        },
-        {
-          "contentHash": "34f7ed6e4b30689f42c71df5",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
-          "capturedAt": "2019-02-14T02:52:54+08:00",
-          "lastObservedAt": "2019-02-14T02:52:54+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
             3,
             4,
             5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
-        },
-        {
-          "contentHash": "3af5bf10f86ae8023b5b0be6",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "b10ed1c1eb0f0bd7778647e7",
-          "capturedAt": "2019-02-15T07:41:26+08:00",
-          "lastObservedAt": "2019-02-15T07:41:26+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190214234126id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-02-15_074126_3af5bf10f86ae8023b5b0be6/banner.json"
+            6
+          ]
         }
       ]
     },
     {
-      "id": "2019-02-10_3f4544a6cbd4",
+      "id": "2019-02-10_3f4544a6cbd4_989d2819b408",
       "date": "2019-02-10",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -3199,19 +3244,18 @@
       "yearMonth": "2019-02",
       "dateStart": "2019-02-10",
       "dateEnd": "2019-02-10",
-      "capturedAt": "2019-02-10T23:52:32+08:00",
+      "capturedAt": "2019-02-10T10:00:15+08:00",
       "mode": "static",
       "type": [
         "static"
       ],
       "layerCount": 0,
-      "completeness": "partial",
-      "missing_assets": [
-        "auxiliary_000: https://web.archive.org/web/20190210155232id_/https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190210155232id_/https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190210155232id_/https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: HTTP Error 403: Forbidden"
-      ],
-      "contentHash": "d3f6215d25d9748c3c194dfb",
-      "manifest": "./data/archive/2019-02-10_235232_d3f6215d25d9748c3c194dfb/banner.json",
-      "variantCount": 2,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "ef76a774f1d51d48e3fef056",
+      "manifest": "./data/archive/2019-02-10_100015_ef76a774f1d51d48e3fef056/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "ef76a774f1d51d48e3fef056",
@@ -3236,40 +3280,43 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-02-10_100015_ef76a774f1d51d48e3fef056/banner.json"
-        },
-        {
-          "contentHash": "d3f6215d25d9748c3c194dfb",
-          "canonicalContentHash": "989d2819b4088d36276fae19",
-          "sourceFingerprint": "437f57daefd3617e879e3292",
-          "capturedAt": "2019-02-10T23:52:32+08:00",
-          "lastObservedAt": "2019-02-10T23:52:32+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-02-10_100015_ef76a774f1d51d48e3fef056/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "d3f6215d25d9748c3c194dfb",
+              "manifest": "./data/archive/2019-02-10_235232_d3f6215d25d9748c3c194dfb/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "ef76a774f1d51d48e3fef056",
+              "manifest": "./data/archive/2019-02-10_100015_ef76a774f1d51d48e3fef056/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190210155232id_/https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190210155232id_/https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190210155232id_/https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/a94ccf029bf9634271073e9f619c9f4b40c64ed4.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2019-02-10_235232_d3f6215d25d9748c3c194dfb/banner.json"
+          ]
         }
       ]
     },
     {
-      "id": "2019-02-01_3f4544a6cbd4",
-      "date": "2019-02-01",
+      "id": "2019-02-04_3f4544a6cbd4_4a6dfd6a3a11",
+      "date": "2019-02-04",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "year": "2019",
       "month": "02",
       "yearMonth": "2019-02",
-      "dateStart": "2019-02-01",
+      "dateStart": "2019-02-04",
       "dateEnd": "2019-02-09",
       "capturedAt": "2019-02-09T05:27:24+08:00",
       "mode": "static",
@@ -3281,7 +3328,82 @@
       "missing_assets": [],
       "contentHash": "6f473493db17ae975da1616d",
       "manifest": "./data/archive/2019-02-05_150516_6f473493db17ae975da1616d/banner.json",
-      "variantCount": 3,
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "6f473493db17ae975da1616d",
+          "canonicalContentHash": "4a6dfd6a3a110d42ed1d97c6",
+          "sourceFingerprint": "d0eadb914e16face413480f8",
+          "capturedAt": "2019-02-09T05:27:24+08:00",
+          "lastObservedAt": "2019-02-09T05:27:24+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-02-05_150516_6f473493db17ae975da1616d/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "32a26538f176f7df3fcab4d3",
+              "manifest": "./data/archive/2019-02-09_052724_32a26538f176f7df3fcab4d3/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "6f473493db17ae975da1616d",
+              "manifest": "./data/archive/2019-02-05_150516_6f473493db17ae975da1616d/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2019-02-01_3f4544a6cbd4_a98968006f2c",
+      "date": "2019-02-01",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "02",
+      "yearMonth": "2019-02",
+      "dateStart": "2019-02-01",
+      "dateEnd": "2019-02-04",
+      "capturedAt": "2019-02-03T06:30:59+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "eab4a23d7f0d8e5c108e89b1",
+      "manifest": "./data/archive/2019-02-03_063059_eab4a23d7f0d8e5c108e89b1/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "eab4a23d7f0d8e5c108e89b1",
@@ -3306,22 +3428,17 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-02-03_063059_eab4a23d7f0d8e5c108e89b1/banner.json"
-        },
-        {
-          "contentHash": "6f473493db17ae975da1616d",
-          "canonicalContentHash": "4a6dfd6a3a110d42ed1d97c6",
-          "sourceFingerprint": "d0eadb914e16face413480f8",
-          "capturedAt": "2019-02-09T05:27:24+08:00",
-          "lastObservedAt": "2019-02-09T05:27:24+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-02-03_063059_eab4a23d7f0d8e5c108e89b1/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "eab4a23d7f0d8e5c108e89b1",
+              "manifest": "./data/archive/2019-02-03_063059_eab4a23d7f0d8e5c108e89b1/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -3330,47 +3447,19 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2019-02-05_150516_6f473493db17ae975da1616d/banner.json"
-        },
-        {
-          "contentHash": "32a26538f176f7df3fcab4d3",
-          "canonicalContentHash": "4a6dfd6a3a110d42ed1d97c6",
-          "sourceFingerprint": "8ec9cae2c1fa00ddc6b3920c",
-          "capturedAt": "2019-02-09T05:27:24+08:00",
-          "lastObservedAt": "2019-02-09T05:27:24+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190208212724id_/https://i0.hdslb.com/bfs/archive/406a488ceae0620f8a716a7189c3d81d9e9938d1.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/406a488ceae0620f8a716a7189c3d81d9e9938d1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190208212724id_/https://i0.hdslb.com/bfs/archive/406a488ceae0620f8a716a7189c3d81d9e9938d1.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/406a488ceae0620f8a716a7189c3d81d9e9938d1.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190208212724id_/https://i0.hdslb.com/bfs/archive/406a488ceae0620f8a716a7189c3d81d9e9938d1.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/406a488ceae0620f8a716a7189c3d81d9e9938d1.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-02-09_052724_32a26538f176f7df3fcab4d3/banner.json"
+          ]
         }
       ]
     },
     {
-      "id": "2019-01-31_3f4544a6cbd4",
-      "date": "2019-01-31",
+      "id": "2019-01-30_3f4544a6cbd4_fdf7ca3f0525",
+      "date": "2019-01-30",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "year": "2019",
       "month": "01",
       "yearMonth": "2019-01",
-      "dateStart": "2019-01-31",
+      "dateStart": "2019-01-30",
       "dateEnd": "2019-01-31",
       "capturedAt": "2019-01-30T23:38:08+08:00",
       "mode": "static",
@@ -3384,6 +3473,7 @@
       ],
       "contentHash": "2a37e12b15988ed595b3ef43",
       "manifest": "./data/archive/2019-01-30_233808_2a37e12b15988ed595b3ef43/banner.json",
+      "interactionState": "nonInteractive",
       "variantCount": 1,
       "variants": [
         {
@@ -3411,74 +3501,22 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-30_233808_2a37e12b15988ed595b3ef43/banner.json"
-        }
-      ]
-    },
-    {
-      "id": "2019-01-30_3f4544a6cbd4",
-      "date": "2019-01-30",
-      "season": "winter",
-      "timeZone": "Asia/Shanghai",
-      "year": "2019",
-      "month": "01",
-      "yearMonth": "2019-01",
-      "dateStart": "2019-01-30",
-      "dateEnd": "2019-01-30",
-      "capturedAt": "2019-01-30T23:38:08+08:00",
-      "mode": "static",
-      "type": [
-        "static"
-      ],
-      "layerCount": 0,
-      "completeness": "partial",
-      "missing_assets": [
-        "auxiliary_000: https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden"
-      ],
-      "contentHash": "2a37e12b15988ed595b3ef43",
-      "manifest": "./data/archive/2019-01-30_233808_2a37e12b15988ed595b3ef43/banner.json",
-      "variantCount": 2,
-      "variants": [
-        {
-          "contentHash": "2a37e12b15988ed595b3ef43",
-          "canonicalContentHash": "fdf7ca3f0525cf544168a1cd",
-          "sourceFingerprint": "d31257bf29c3d5c0442fbdba",
-          "capturedAt": "2019-01-30T23:38:08+08:00",
-          "lastObservedAt": "2019-01-30T23:38:08+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-01-30_233808_2a37e12b15988ed595b3ef43/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "2a37e12b15988ed595b3ef43",
+              "manifest": "./data/archive/2019-01-30_233808_2a37e12b15988ed595b3ef43/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "2c97bcafa5242a93ce97d318",
+              "manifest": "./data/archive/2019-01-30_233808_2c97bcafa5242a93ce97d318/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-30_233808_2a37e12b15988ed595b3ef43/banner.json"
-        },
-        {
-          "contentHash": "2c97bcafa5242a93ce97d318",
-          "canonicalContentHash": "fdf7ca3f0525cf544168a1cd",
-          "sourceFingerprint": "d31257bf29c3d5c0442fbdba",
-          "capturedAt": "2019-01-30T23:38:08+08:00",
-          "lastObservedAt": "2019-01-30T23:38:08+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190130153808id_/https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/1fd2a41ee943588049f5375127471e31402bab2b.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -3487,21 +3525,20 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2019-01-30_233808_2c97bcafa5242a93ce97d318/banner.json"
+          ]
         }
       ]
     },
     {
-      "id": "2019-01-27_3f4544a6cbd4",
-      "date": "2019-01-27",
+      "id": "2019-01-28_3f4544a6cbd4_fc4e0d378fed",
+      "date": "2019-01-28",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "year": "2019",
       "month": "01",
       "yearMonth": "2019-01",
-      "dateStart": "2019-01-27",
-      "dateEnd": "2019-01-28",
+      "dateStart": "2019-01-28",
+      "dateEnd": "2019-01-29",
       "capturedAt": "2019-01-29T10:41:39+08:00",
       "mode": "static",
       "type": [
@@ -3512,35 +3549,9 @@
       "missing_assets": [],
       "contentHash": "2148dc674cea70297dc8b81a",
       "manifest": "./data/archive/2019-01-29_104139_2148dc674cea70297dc8b81a/banner.json",
-      "variantCount": 2,
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "32cdbcecfb6ee23342991335",
-          "canonicalContentHash": "fee80e7cec4e477f7ecfc3c6",
-          "sourceFingerprint": "a93f3ac43c3ba2c2abecb010",
-          "capturedAt": "2019-01-27T09:36:45+08:00",
-          "lastObservedAt": "2019-01-27T09:36:45+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-27_093645_32cdbcecfb6ee23342991335/banner.json"
-        },
         {
           "contentHash": "2148dc674cea70297dc8b81a",
           "canonicalContentHash": "fc4e0d378fed2d24a6155552",
@@ -3555,18 +3566,41 @@
           "completeness": "complete",
           "missing_assets": [],
           "slots": [
+            0,
+            1,
+            2,
             3,
             4,
             5,
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-29_104139_2148dc674cea70297dc8b81a/banner.json"
+          "manifest": "./data/archive/2019-01-29_104139_2148dc674cea70297dc8b81a/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "2148dc674cea70297dc8b81a",
+              "manifest": "./data/archive/2019-01-29_104139_2148dc674cea70297dc8b81a/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "slotFill": "same-day-forward-backward"
         }
       ]
     },
     {
-      "id": "2019-01-26_3f4544a6cbd4",
+      "id": "2019-01-26_3f4544a6cbd4_fee80e7cec4e",
       "date": "2019-01-26",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -3574,7 +3608,7 @@
       "month": "01",
       "yearMonth": "2019-01",
       "dateStart": "2019-01-26",
-      "dateEnd": "2019-01-26",
+      "dateEnd": "2019-01-28",
       "capturedAt": "2019-01-27T09:36:45+08:00",
       "mode": "static",
       "type": [
@@ -3585,7 +3619,8 @@
       "missing_assets": [],
       "contentHash": "beb1cc3fd1845fb3d4483b8d",
       "manifest": "./data/archive/2019-01-27_093645_beb1cc3fd1845fb3d4483b8d/banner.json",
-      "variantCount": 2,
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "beb1cc3fd1845fb3d4483b8d",
@@ -3610,24 +3645,22 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-27_093645_beb1cc3fd1845fb3d4483b8d/banner.json"
-        },
-        {
-          "contentHash": "32cdbcecfb6ee23342991335",
-          "canonicalContentHash": "fee80e7cec4e477f7ecfc3c6",
-          "sourceFingerprint": "a93f3ac43c3ba2c2abecb010",
-          "capturedAt": "2019-01-27T09:36:45+08:00",
-          "lastObservedAt": "2019-01-27T09:36:45+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-01-27_093645_beb1cc3fd1845fb3d4483b8d/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "32cdbcecfb6ee23342991335",
+              "manifest": "./data/archive/2019-01-27_093645_32cdbcecfb6ee23342991335/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "beb1cc3fd1845fb3d4483b8d",
+              "manifest": "./data/archive/2019-01-27_093645_beb1cc3fd1845fb3d4483b8d/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -3636,134 +3669,33 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2019-01-27_093645_32cdbcecfb6ee23342991335/banner.json"
+          ]
         }
       ]
     },
     {
-      "id": "2019-01-17_3f4544a6cbd4",
-      "date": "2019-01-17",
+      "id": "2019-01-07_3f4544a6cbd4_10f04617ab66",
+      "date": "2019-01-07",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "year": "2019",
       "month": "01",
       "yearMonth": "2019-01",
-      "dateStart": "2019-01-17",
+      "dateStart": "2019-01-07",
       "dateEnd": "2019-01-24",
-      "capturedAt": "2019-01-24T12:59:20+08:00",
+      "capturedAt": "2019-01-23T22:46:47+08:00",
       "mode": "static",
       "type": [
         "static"
       ],
       "layerCount": 0,
-      "completeness": "partial",
-      "missing_assets": [
-        "auxiliary_000: https://web.archive.org/web/20190124045920id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190124045920id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190124045920id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-      ],
-      "contentHash": "5ab5b8f97ffc7f5d5c12051d",
-      "manifest": "./data/archive/2019-01-24_125920_5ab5b8f97ffc7f5d5c12051d/banner.json",
-      "variantCount": 6,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "34f7ed6e4b30689f42c71df5",
+      "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "b909369a86bdb63881c16c92",
-          "canonicalContentHash": "e586462a5c735244c4c7baff",
-          "sourceFingerprint": "f4822805e6a193bbda9fb578",
-          "capturedAt": "2019-01-17T04:59:02+08:00",
-          "lastObservedAt": "2019-01-17T04:59:02+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190116205902id_/https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190116205902id_/https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190116205902id_/https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "manifest": "./data/archive/2019-01-17_045902_b909369a86bdb63881c16c92/banner.json"
-        },
-        {
-          "contentHash": "ed7a037f752ae1b45b51f4f6",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "755eb62250751801d4fd245b",
-          "capturedAt": "2019-01-18T11:54:30+08:00",
-          "lastObservedAt": "2019-01-18T11:54:30+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190118035430id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190118035430id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190118035430id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            4,
-            5,
-            6
-          ],
-          "manifest": "./data/archive/2019-01-18_115430_ed7a037f752ae1b45b51f4f6/banner.json"
-        },
-        {
-          "contentHash": "40b11b1dc46a6ae35d341dbd",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "6835221533d400b6164a1050",
-          "capturedAt": "2019-01-20T00:12:34+08:00",
-          "lastObservedAt": "2019-01-20T00:12:34+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190119161234id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190119161234id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190119161234id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-20_001234_40b11b1dc46a6ae35d341dbd/banner.json"
-        },
-        {
-          "contentHash": "67c2dba644a9f482b753c023",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "64c373fbe0063645a08693e7",
-          "capturedAt": "2019-01-21T12:42:14+08:00",
-          "lastObservedAt": "2019-01-21T12:42:14+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190121044214id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190121044214id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190121044214id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-21_124214_67c2dba644a9f482b753c023/banner.json"
-        },
         {
           "contentHash": "34f7ed6e4b30689f42c71df5",
           "canonicalContentHash": "10f04617ab6628168322cb1b",
@@ -3787,24 +3719,47 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
-        },
-        {
-          "contentHash": "5ab5b8f97ffc7f5d5c12051d",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "7d802fdb3234ae620fcd474f",
-          "capturedAt": "2019-01-24T12:59:20+08:00",
-          "lastObservedAt": "2019-01-24T12:59:20+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "34f7ed6e4b30689f42c71df5",
+              "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "40b11b1dc46a6ae35d341dbd",
+              "manifest": "./data/archive/2019-01-20_001234_40b11b1dc46a6ae35d341dbd/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "583f3c8628fde3b34bdd5d11",
+              "manifest": "./data/archive/2019-01-13_001313_583f3c8628fde3b34bdd5d11/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "5ab5b8f97ffc7f5d5c12051d",
+              "manifest": "./data/archive/2019-01-24_125920_5ab5b8f97ffc7f5d5c12051d/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "67c2dba644a9f482b753c023",
+              "manifest": "./data/archive/2019-01-21_124214_67c2dba644a9f482b753c023/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "a11584c63bccb00a742c490a",
+              "manifest": "./data/archive/2019-01-08_140151_a11584c63bccb00a742c490a/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "ed7a037f752ae1b45b51f4f6",
+              "manifest": "./data/archive/2019-01-18_115430_ed7a037f752ae1b45b51f4f6/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190124045920id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190124045920id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190124045920id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
@@ -3814,12 +3769,12 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-24_125920_5ab5b8f97ffc7f5d5c12051d/banner.json"
+          "slotFill": "same-day-forward-backward"
         }
       ]
     },
     {
-      "id": "2019-01-16_3f4544a6cbd4",
+      "id": "2019-01-16_3f4544a6cbd4_e586462a5c73",
       "date": "2019-01-16",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -3827,7 +3782,7 @@
       "month": "01",
       "yearMonth": "2019-01",
       "dateStart": "2019-01-16",
-      "dateEnd": "2019-01-16",
+      "dateEnd": "2019-01-17",
       "capturedAt": "2019-01-17T04:59:02+08:00",
       "mode": "static",
       "type": [
@@ -3838,29 +3793,9 @@
       "missing_assets": [],
       "contentHash": "32831b79ac158f59190d7a13",
       "manifest": "./data/archive/2019-01-17_045902_32831b79ac158f59190d7a13/banner.json",
-      "variantCount": 3,
+      "interactionState": "nonInteractive",
+      "variantCount": 2,
       "variants": [
-        {
-          "contentHash": "34f7ed6e4b30689f42c71df5",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
-          "capturedAt": "2019-01-16T10:10:48+08:00",
-          "lastObservedAt": "2019-01-16T10:10:48+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            3,
-            4,
-            5,
-            6
-          ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
-        },
         {
           "contentHash": "32831b79ac158f59190d7a13",
           "canonicalContentHash": "e586462a5c735244c4c7baff",
@@ -3883,32 +3818,35 @@
             5,
             7
           ],
-          "manifest": "./data/archive/2019-01-17_045902_32831b79ac158f59190d7a13/banner.json"
-        },
-        {
-          "contentHash": "b909369a86bdb63881c16c92",
-          "canonicalContentHash": "e586462a5c735244c4c7baff",
-          "sourceFingerprint": "f4822805e6a193bbda9fb578",
-          "capturedAt": "2019-01-17T04:59:02+08:00",
-          "lastObservedAt": "2019-01-17T04:59:02+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-01-17_045902_32831b79ac158f59190d7a13/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "32831b79ac158f59190d7a13",
+              "manifest": "./data/archive/2019-01-17_045902_32831b79ac158f59190d7a13/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "b909369a86bdb63881c16c92",
+              "manifest": "./data/archive/2019-01-17_045902_b909369a86bdb63881c16c92/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190116205902id_/https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190116205902id_/https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190116205902id_/https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/61da7518ce21fc6752a3a22459be1e70928be32e.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
             7
-          ],
-          "manifest": "./data/archive/2019-01-17_045902_b909369a86bdb63881c16c92/banner.json"
+          ]
         }
       ]
     },
     {
-      "id": "2019-01-10_3f4544a6cbd4",
+      "id": "2019-01-10_3f4544a6cbd4_b6961339f809",
       "date": "2019-01-10",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -3916,8 +3854,8 @@
       "month": "01",
       "yearMonth": "2019-01",
       "dateStart": "2019-01-10",
-      "dateEnd": "2019-01-15",
-      "capturedAt": "2019-01-15T18:25:23+08:00",
+      "dateEnd": "2019-01-11",
+      "capturedAt": "2019-01-11T07:55:27+08:00",
       "mode": "static",
       "type": [
         "static"
@@ -3925,32 +3863,11 @@
       "layerCount": 0,
       "completeness": "complete",
       "missing_assets": [],
-      "contentHash": "34f7ed6e4b30689f42c71df5",
-      "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
-      "variantCount": 4,
+      "contentHash": "de3210a1d2ee6da9a4bff260",
+      "manifest": "./data/archive/2019-01-11_045914_de3210a1d2ee6da9a4bff260/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 2,
       "variants": [
-        {
-          "contentHash": "98e12b0ae7c2384c79d3b60e",
-          "canonicalContentHash": "b6961339f809abeab78c3283",
-          "sourceFingerprint": "d3d1bd6ffc7c5c82a4ffb649",
-          "capturedAt": "2019-01-11T04:59:14+08:00",
-          "lastObservedAt": "2019-01-11T04:59:14+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190110205914id_/https://i0.hdslb.com/bfs/archive/f893a32bdc895f6c8b3fccdda69822e72ac9ec17.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f893a32bdc895f6c8b3fccdda69822e72ac9ec17.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190110205914id_/https://i0.hdslb.com/bfs/archive/f893a32bdc895f6c8b3fccdda69822e72ac9ec17.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/f893a32bdc895f6c8b3fccdda69822e72ac9ec17.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190110205914id_/https://i0.hdslb.com/bfs/archive/f893a32bdc895f6c8b3fccdda69822e72ac9ec17.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/f893a32bdc895f6c8b3fccdda69822e72ac9ec17.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-11_045914_98e12b0ae7c2384c79d3b60e/banner.json"
-        },
         {
           "contentHash": "de3210a1d2ee6da9a4bff260",
           "canonicalContentHash": "b6961339f809abeab78c3283",
@@ -3973,163 +3890,43 @@
             5,
             7
           ],
-          "manifest": "./data/archive/2019-01-11_045914_de3210a1d2ee6da9a4bff260/banner.json"
-        },
-        {
-          "contentHash": "583f3c8628fde3b34bdd5d11",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "336cdff4cad02e6a9cc8e332",
-          "capturedAt": "2019-01-13T00:13:13+08:00",
-          "lastObservedAt": "2019-01-13T00:13:13+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-01-11_045914_de3210a1d2ee6da9a4bff260/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "98e12b0ae7c2384c79d3b60e",
+              "manifest": "./data/archive/2019-01-11_045914_98e12b0ae7c2384c79d3b60e/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "de3210a1d2ee6da9a4bff260",
+              "manifest": "./data/archive/2019-01-11_045914_de3210a1d2ee6da9a4bff260/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190112161313id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190112161313id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190112161313id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            7
-          ],
-          "manifest": "./data/archive/2019-01-13_001313_583f3c8628fde3b34bdd5d11/banner.json"
-        },
-        {
-          "contentHash": "34f7ed6e4b30689f42c71df5",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
-          "capturedAt": "2019-01-15T18:25:23+08:00",
-          "lastObservedAt": "2019-01-15T18:25:23+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
+          "observedSlots": [
             0,
             1,
             2,
             3,
             4,
             5,
-            6,
             7
-          ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
+          ]
         }
       ]
     },
     {
-      "id": "2019-01-07_3f4544a6cbd4",
-      "date": "2019-01-07",
+      "id": "2019-01-05_3f4544a6cbd4_938e98591090",
+      "date": "2019-01-05",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "year": "2019",
       "month": "01",
       "yearMonth": "2019-01",
-      "dateStart": "2019-01-07",
-      "dateEnd": "2019-01-09",
-      "capturedAt": "2019-01-10T08:24:09+08:00",
-      "mode": "static",
-      "type": [
-        "static"
-      ],
-      "layerCount": 0,
-      "completeness": "complete",
-      "missing_assets": [],
-      "contentHash": "34f7ed6e4b30689f42c71df5",
-      "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
-      "variantCount": 3,
-      "variants": [
-        {
-          "contentHash": "b4d0b49b3b94869cdb3e8be6",
-          "canonicalContentHash": "938e98591090d6a3bf31ec07",
-          "sourceFingerprint": "c1b5f0aa37a16c4210891ed5",
-          "capturedAt": "2019-01-06T06:11:32+08:00",
-          "lastObservedAt": "2019-01-06T06:11:32+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190105221132id_/https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190105221132id_/https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190105221132id_/https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2
-          ],
-          "manifest": "./data/archive/2019-01-06_061132_b4d0b49b3b94869cdb3e8be6/banner.json"
-        },
-        {
-          "contentHash": "a11584c63bccb00a742c490a",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "9a51598a616ee89fe875a689",
-          "capturedAt": "2019-01-08T14:01:51+08:00",
-          "lastObservedAt": "2019-01-08T14:01:51+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190108060151id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190108060151id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190108060151id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-08_140151_a11584c63bccb00a742c490a/banner.json"
-        },
-        {
-          "contentHash": "34f7ed6e4b30689f42c71df5",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
-          "capturedAt": "2019-01-10T08:24:09+08:00",
-          "lastObservedAt": "2019-01-10T08:24:09+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
-        }
-      ]
-    },
-    {
-      "id": "2019-01-04_3f4544a6cbd4",
-      "date": "2019-01-04",
-      "season": "winter",
-      "timeZone": "Asia/Shanghai",
-      "year": "2019",
-      "month": "01",
-      "yearMonth": "2019-01",
-      "dateStart": "2019-01-04",
-      "dateEnd": "2019-01-06",
+      "dateStart": "2019-01-05",
+      "dateEnd": "2019-01-07",
       "capturedAt": "2019-01-06T06:11:32+08:00",
       "mode": "static",
       "type": [
@@ -4140,55 +3937,9 @@
       "missing_assets": [],
       "contentHash": "9e9177ba7cb252ac73689da2",
       "manifest": "./data/archive/2019-01-05_231025_9e9177ba7cb252ac73689da2/banner.json",
-      "variantCount": 4,
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
-        {
-          "contentHash": "bd4433b0fdf4d2de41fd1675",
-          "canonicalContentHash": "990dc372396dc267b51699b0",
-          "sourceFingerprint": "cae10cc40800807a123dc34d",
-          "capturedAt": "2019-01-04T02:48:52+08:00",
-          "lastObservedAt": "2019-01-04T02:48:52+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190103184852id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            1,
-            2,
-            3
-          ],
-          "manifest": "./data/archive/2019-01-04_024852_bd4433b0fdf4d2de41fd1675/banner.json"
-        },
-        {
-          "contentHash": "10eccf3f27612ea9180ee66a",
-          "canonicalContentHash": "990dc372396dc267b51699b0",
-          "sourceFingerprint": "58589f0165ebd641b4733c95",
-          "capturedAt": "2019-01-05T11:42:29+08:00",
-          "lastObservedAt": "2019-01-05T11:42:29+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2019-01-02_002349_10eccf3f27612ea9180ee66a/banner.json"
-        },
         {
           "contentHash": "9e9177ba7cb252ac73689da2",
           "canonicalContentHash": "938e98591090d6a3bf31ec07",
@@ -4212,24 +3963,23 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-05_231025_9e9177ba7cb252ac73689da2/banner.json"
-        },
-        {
-          "contentHash": "b4d0b49b3b94869cdb3e8be6",
-          "canonicalContentHash": "938e98591090d6a3bf31ec07",
-          "sourceFingerprint": "c1b5f0aa37a16c4210891ed5",
-          "capturedAt": "2019-01-06T06:11:32+08:00",
-          "lastObservedAt": "2019-01-06T06:11:32+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-01-05_231025_9e9177ba7cb252ac73689da2/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "9e9177ba7cb252ac73689da2",
+              "manifest": "./data/archive/2019-01-05_231025_9e9177ba7cb252ac73689da2/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "b4d0b49b3b94869cdb3e8be6",
+              "manifest": "./data/archive/2019-01-06_061132_b4d0b49b3b94869cdb3e8be6/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190105221132id_/https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190105221132id_/https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190105221132id_/https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/72699a7c71c33be39681fca809fe2c77319fd73d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
+          "observedSlots": [
+            0,
             1,
             2,
             3,
@@ -4237,13 +3987,12 @@
             5,
             6,
             7
-          ],
-          "manifest": "./data/archive/2019-01-06_061132_b4d0b49b3b94869cdb3e8be6/banner.json"
+          ]
         }
       ]
     },
     {
-      "id": "2019-01-02_3f4544a6cbd4",
+      "id": "2019-01-02_3f4544a6cbd4_990dc372396d",
       "date": "2019-01-02",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -4251,27 +4000,26 @@
       "month": "01",
       "yearMonth": "2019-01",
       "dateStart": "2019-01-02",
-      "dateEnd": "2019-01-02",
-      "capturedAt": "2019-01-02T22:45:08+08:00",
+      "dateEnd": "2019-01-05",
+      "capturedAt": "2019-01-05T11:42:29+08:00",
       "mode": "static",
       "type": [
         "static"
       ],
       "layerCount": 0,
-      "completeness": "partial",
-      "missing_assets": [
-        "auxiliary_000: https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
-      ],
-      "contentHash": "a0dc3a7701a637a4fb1f6056",
-      "manifest": "./data/archive/2019-01-02_224508_a0dc3a7701a637a4fb1f6056/banner.json",
-      "variantCount": 5,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "10eccf3f27612ea9180ee66a",
+      "manifest": "./data/archive/2019-01-02_002349_10eccf3f27612ea9180ee66a/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "10eccf3f27612ea9180ee66a",
           "canonicalContentHash": "990dc372396dc267b51699b0",
           "sourceFingerprint": "58589f0165ebd641b4733c95",
-          "capturedAt": "2019-01-02T00:23:49+08:00",
-          "lastObservedAt": "2019-01-02T00:23:49+08:00",
+          "capturedAt": "2019-01-05T11:42:29+08:00",
+          "lastObservedAt": "2019-01-05T11:42:29+08:00",
           "mode": "static",
           "type": [
             "static"
@@ -4289,92 +4037,126 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-02_002349_10eccf3f27612ea9180ee66a/banner.json"
-        },
-        {
-          "contentHash": "d7b62ab4644e0816a9fafb97",
-          "canonicalContentHash": "990dc372396dc267b51699b0",
-          "sourceFingerprint": "cfde5b55a5d56574841333aa",
-          "capturedAt": "2019-01-02T01:16:25+08:00",
-          "lastObservedAt": "2019-01-02T01:16:25+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-01-02_002349_10eccf3f27612ea9180ee66a/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "10eccf3f27612ea9180ee66a",
+              "manifest": "./data/archive/2019-01-02_002349_10eccf3f27612ea9180ee66a/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "261709aa1ebbfca8d5ebc1ea",
+              "manifest": "./data/archive/2019-01-02_064152_261709aa1ebbfca8d5ebc1ea/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "7512c89a401eafae85b6f611",
+              "manifest": "./data/archive/2019-01-02_224508_7512c89a401eafae85b6f611/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "a0dc3a7701a637a4fb1f6056",
+              "manifest": "./data/archive/2019-01-02_224508_a0dc3a7701a637a4fb1f6056/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "bd4433b0fdf4d2de41fd1675",
+              "manifest": "./data/archive/2019-01-04_024852_bd4433b0fdf4d2de41fd1675/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "d7b62ab4644e0816a9fafb97",
+              "manifest": "./data/archive/2019-01-02_011625_d7b62ab4644e0816a9fafb97/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190101171625id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190101171625id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190101171625id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            1
-          ],
-          "manifest": "./data/archive/2019-01-02_011625_d7b62ab4644e0816a9fafb97/banner.json"
-        },
-        {
-          "contentHash": "261709aa1ebbfca8d5ebc1ea",
-          "canonicalContentHash": "990dc372396dc267b51699b0",
-          "sourceFingerprint": "442b4b4e1c60c3e31694a0cd",
-          "capturedAt": "2019-01-02T06:41:52+08:00",
-          "lastObservedAt": "2019-01-02T06:41:52+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190101224152id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190101224152id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190101224152id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            1
-          ],
-          "manifest": "./data/archive/2019-01-02_064152_261709aa1ebbfca8d5ebc1ea/banner.json"
-        },
-        {
-          "contentHash": "a0dc3a7701a637a4fb1f6056",
-          "canonicalContentHash": "990dc372396dc267b51699b0",
-          "sourceFingerprint": "49c18ea9144200959c698c9f",
-          "capturedAt": "2019-01-02T22:45:08+08:00",
-          "lastObservedAt": "2019-01-02T22:45:08+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
             7
-          ],
-          "manifest": "./data/archive/2019-01-02_224508_a0dc3a7701a637a4fb1f6056/banner.json"
-        },
-        {
-          "contentHash": "7512c89a401eafae85b6f611",
-          "canonicalContentHash": "990dc372396dc267b51699b0",
-          "sourceFingerprint": "49c18ea9144200959c698c9f",
-          "capturedAt": "2019-01-02T22:45:08+08:00",
-          "lastObservedAt": "2019-01-02T22:45:08+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190102144508id_/https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/e2538730233902be6ed61ff658beb467882ddb51.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            7
-          ],
-          "manifest": "./data/archive/2019-01-02_224508_7512c89a401eafae85b6f611/banner.json"
+          ]
         }
       ]
     },
     {
-      "id": "2019-01-01_3f4544a6cbd4",
+      "id": "2019-01-03_3f4544a6cbd4_10f04617ab66",
+      "date": "2019-01-03",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "01",
+      "yearMonth": "2019-01",
+      "dateStart": "2019-01-03",
+      "dateEnd": "2019-01-03",
+      "capturedAt": "2019-01-03T08:51:14+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "34f7ed6e4b30689f42c71df5",
+      "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "34f7ed6e4b30689f42c71df5",
+          "canonicalContentHash": "10f04617ab6628168322cb1b",
+          "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
+          "capturedAt": "2019-01-03T08:51:14+08:00",
+          "lastObservedAt": "2019-01-03T08:51:14+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "34f7ed6e4b30689f42c71df5",
+              "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "d246a86ce1f9a447d0a2e2df",
+              "manifest": "./data/archive/2019-01-03_063426_d246a86ce1f9a447d0a2e2df/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "slotFill": "same-day-forward-backward"
+        }
+      ]
+    },
+    {
+      "id": "2019-01-01_3f4544a6cbd4_10f04617ab66",
       "date": "2019-01-01",
       "season": "winter",
       "timeZone": "Asia/Shanghai",
@@ -4383,19 +4165,18 @@
       "yearMonth": "2019-01",
       "dateStart": "2019-01-01",
       "dateEnd": "2019-01-01",
-      "capturedAt": "2019-01-01T11:22:11+08:00",
+      "capturedAt": "2019-01-01T02:18:22+08:00",
       "mode": "static",
       "type": [
         "static"
       ],
       "layerCount": 0,
-      "completeness": "partial",
-      "missing_assets": [
-        "auxiliary_000: https://web.archive.org/web/20190101032211id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190101032211id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190101032211id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-      ],
-      "contentHash": "c544b16bace02f25290a0abf",
-      "manifest": "./data/archive/2019-01-01_112211_c544b16bace02f25290a0abf/banner.json",
-      "variantCount": 3,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "34f7ed6e4b30689f42c71df5",
+      "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
       "variants": [
         {
           "contentHash": "34f7ed6e4b30689f42c71df5",
@@ -4420,48 +4201,36 @@
             6,
             7
           ],
-          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
-        },
-        {
-          "contentHash": "5c10f91b8a64c85f6c4cde79",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "729445c6e45e8af17b3d2836",
-          "capturedAt": "2019-01-01T05:24:09+08:00",
-          "lastObservedAt": "2019-01-01T05:24:09+08:00",
-          "mode": "static",
-          "type": [
-            "static"
+          "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "34f7ed6e4b30689f42c71df5",
+              "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "5c10f91b8a64c85f6c4cde79",
+              "manifest": "./data/archive/2019-01-01_052409_5c10f91b8a64c85f6c4cde79/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "c544b16bace02f25290a0abf",
+              "manifest": "./data/archive/2019-01-01_112211_c544b16bace02f25290a0abf/banner.json",
+              "interactionState": "nonInteractive"
+            }
           ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20181231212409id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20181231212409id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20181231212409id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
-            2
-          ],
-          "manifest": "./data/archive/2019-01-01_052409_5c10f91b8a64c85f6c4cde79/banner.json"
-        },
-        {
-          "contentHash": "c544b16bace02f25290a0abf",
-          "canonicalContentHash": "10f04617ab6628168322cb1b",
-          "sourceFingerprint": "0b6c1fb90396ebd6b0a52a74",
-          "capturedAt": "2019-01-01T11:22:11+08:00",
-          "lastObservedAt": "2019-01-01T11:22:11+08:00",
-          "mode": "static",
-          "type": [
-            "static"
-          ],
-          "layerCount": 0,
-          "completeness": "partial",
-          "missing_assets": [
-            "auxiliary_000: https://web.archive.org/web/20190101032211id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190101032211id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190101032211id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error _ssl.c:993: The handshake operation timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
-          ],
-          "slots": [
+          "observedSlots": [
+            0,
+            1,
+            2,
             3,
-            4
-          ],
-          "manifest": "./data/archive/2019-01-01_112211_c544b16bace02f25290a0abf/banner.json"
+            4,
+            5,
+            6,
+            7
+          ]
         }
       ]
     }
