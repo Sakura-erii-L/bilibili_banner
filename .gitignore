@@ -6,6 +6,9 @@ venv/
 .browser-profile/
 _site/
 data/.capture_*/
+data/.wayback_http_*/
+data/.palxiao_history_*/
+data/.mikufan039_reference_*/
 data/.current_old/
 data/diagnostic.json
 .DS_Store

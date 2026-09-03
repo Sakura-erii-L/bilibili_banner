@@ -5,6 +5,7 @@ import {
   cubicBezierValue,
   cyclicMinuteDistance,
   formatSlotRanges,
+  formatVariantPeriods,
   sampleCurve,
   selectTimedVariant,
   slotIndexInTimeZone,
@@ -44,6 +45,10 @@ assert.equal(
 );
 assert.equal(formatSlotRanges([0, 1]), "00:00–06:00");
 assert.equal(formatSlotRanges([0, 2, 3]), "00:00–03:00、06:00–12:00");
+assert.equal(
+  formatVariantPeriods({ variants: [{ slots: [6, 7] }, { slots: [3] }] }),
+  "09:00~12:00，18:00~24:00",
+);
 
 const modes = {
   variants: [

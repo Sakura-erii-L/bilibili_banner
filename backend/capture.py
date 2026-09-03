@@ -11,6 +11,7 @@ import os
 import re
 import shutil
 import tempfile
+import threading
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -30,6 +31,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = Path(os.environ.get("BANNER_DATA_DIR", PROJECT_ROOT / "data")).resolve()
 ARCHIVE_DIR = DATA_DIR / "archive"
 CURRENT_DIR = DATA_DIR / "current"
+ARCHIVE_WRITE_LOCK = threading.RLock()
 
 SITE = os.environ.get("BANNER_SOURCE_URL", "https://www.bilibili.com/")
 TIMEZONE = os.environ.get("BANNER_TIMEZONE", "Asia/Shanghai")
@@ -2819,6 +2821,33 @@ def replace_current(temp_dir: Path) -> None:
 
 
 def archive_capture(
+    temp_dir: Path,
+    manifest: dict[str, Any],
+    *,
+    moment: dt.datetime,
+    force: bool = False,
+    update_current: bool = True,
+    record_observation: bool = True,
+    slots: list[int] | None = None,
+    observation_date: dt.date | str | None = None,
+    family_id: str | None = None,
+) -> dict[str, Any]:
+    """Serialize shared archive/index writes while allowing captures to download in parallel."""
+    with ARCHIVE_WRITE_LOCK:
+        return _archive_capture_unlocked(
+            temp_dir,
+            manifest,
+            moment=moment,
+            force=force,
+            update_current=update_current,
+            record_observation=record_observation,
+            slots=slots,
+            observation_date=observation_date,
+            family_id=family_id,
+        )
+
+
+def _archive_capture_unlocked(
     temp_dir: Path,
     manifest: dict[str, Any],
     *,

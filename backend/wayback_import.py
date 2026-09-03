@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import datetime as dt
 from dataclasses import dataclass, field
 import gzip
@@ -67,8 +68,12 @@ CDX_DISCOVERY_CHUNK_DAYS = max(
     1,
     int(os.environ.get("WAYBACK_CDX_DISCOVERY_CHUNK_DAYS", "31")),
 )
-REQUEST_DELAY_SECONDS = float(os.environ.get("WAYBACK_REQUEST_DELAY", "1.0"))
+REQUEST_DELAY_SECONDS = float(os.environ.get("WAYBACK_REQUEST_DELAY", "0.6"))
 RETRY_BASE_SECONDS = float(os.environ.get("WAYBACK_RETRY_BASE_SECONDS", "1.0"))
+DEFAULT_CAPTURE_WORKERS = max(
+    1,
+    int(os.environ.get("WAYBACK_WORKERS", "3")),
+)
 HEADER_API_MAX_DELTA_SECONDS = int(
     os.environ.get("WAYBACK_HEADER_API_MAX_DELTA_SECONDS", str(7 * 24 * 60 * 60))
 )
@@ -148,16 +153,17 @@ def run_checkpoint(
     if not script_path.is_file():
         raise RuntimeError(f"checkpoint script does not exist: {script_path}")
 
-    env = os.environ.copy()
-    env.update(
-        {
-            "WAYBACK_CHECKPOINT_PROCESSED": str(processed),
-            "WAYBACK_CHECKPOINT_SUCCEEDED": str(succeeded),
-            "WAYBACK_CHECKPOINT_CHANGED": str(changed),
-            "WAYBACK_CHECKPOINT_FINAL": "1" if final else "0",
-        }
-    )
-    subprocess.run([sys.executable, str(script_path)], check=True, env=env)
+    with core.ARCHIVE_WRITE_LOCK:
+        env = os.environ.copy()
+        env.update(
+            {
+                "WAYBACK_CHECKPOINT_PROCESSED": str(processed),
+                "WAYBACK_CHECKPOINT_SUCCEEDED": str(succeeded),
+                "WAYBACK_CHECKPOINT_CHANGED": str(changed),
+                "WAYBACK_CHECKPOINT_FINAL": "1" if final else "0",
+            }
+        )
+        subprocess.run([sys.executable, str(script_path)], check=True, env=env)
 
 
 def parse_date(value: str, *, end: bool = False) -> dt.date:
@@ -2849,6 +2855,85 @@ def capture_snapshot(
     return result
 
 
+def capture_snapshot_job(
+    snapshot: dict[str, Any],
+    *,
+    replay_base: str,
+    force: bool,
+    cdx_api: str,
+    max_header_api_delta_seconds: int,
+    verify_dom: bool,
+    provider: str,
+    palxiao_provider: PalxiaoHistoryProvider | None,
+) -> dict[str, Any]:
+    return capture_snapshot(
+        snapshot,
+        replay_base=replay_base,
+        force=force,
+        cdx_api=cdx_api,
+        max_header_api_delta_seconds=max_header_api_delta_seconds,
+        verify_dom=verify_dom,
+        provider=provider,
+        palxiao_provider=palxiao_provider,
+    )
+
+
+def iter_capture_results(
+    snapshots: list[dict[str, Any]],
+    *,
+    workers: int,
+    replay_base: str,
+    force: bool,
+    cdx_api: str,
+    max_header_api_delta_seconds: int,
+    verify_dom: bool,
+    provider: str,
+    palxiao_provider: PalxiaoHistoryProvider | None,
+) -> Iterable[tuple[dict[str, Any], dict[str, Any] | None, Exception | None]]:
+    """Capture snapshots concurrently, leaving shared writes serialized in core.archive_capture."""
+    if workers <= 1:
+        for snapshot in snapshots:
+            try:
+                yield snapshot, capture_snapshot_job(
+                    snapshot,
+                    replay_base=replay_base,
+                    force=force,
+                    cdx_api=cdx_api,
+                    max_header_api_delta_seconds=max_header_api_delta_seconds,
+                    verify_dom=verify_dom,
+                    provider=provider,
+                    palxiao_provider=palxiao_provider,
+                ), None
+            except Exception as exc:
+                yield snapshot, None, exc
+        return
+
+    with ThreadPoolExecutor(
+        max_workers=workers,
+        thread_name_prefix="wayback-capture",
+    ) as executor:
+        futures = {
+            executor.submit(
+                capture_snapshot_job,
+                snapshot,
+                replay_base=replay_base,
+                force=force,
+                cdx_api=cdx_api,
+                max_header_api_delta_seconds=max_header_api_delta_seconds,
+                verify_dom=verify_dom,
+                provider=provider,
+                palxiao_provider=palxiao_provider,
+            ): snapshot
+            for snapshot in snapshots
+        }
+        for future in as_completed(futures):
+            snapshot = futures[future]
+            try:
+                yield snapshot, future.result(), None
+            except Exception as exc:
+                yield snapshot, None, exc
+
+
 def main() -> None:
     today = dt.datetime.now(ZoneInfo(core.TIMEZONE)).date()
     parser = argparse.ArgumentParser(
@@ -2873,6 +2958,12 @@ def main() -> None:
     )
     parser.add_argument("--snapshot", action="append", default=[])
     parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=DEFAULT_CAPTURE_WORKERS,
+        help="Parallel network capture workers; shared archive/index writes remain serialized.",
+    )
     parser.add_argument(
         "--checkpoint-every",
         type=int,
@@ -2911,6 +3002,8 @@ def main() -> None:
 
     if args.checkpoint_every < 0:
         parser.error("--checkpoint-every must not be negative")
+    if args.workers < 1:
+        parser.error("--workers must be at least 1")
     if bool(args.checkpoint_every) != bool(args.checkpoint_script):
         parser.error(
             "--checkpoint-every and --checkpoint-script must be used together"
@@ -3125,23 +3218,38 @@ def main() -> None:
             return
         raise SystemExit("No Wayback snapshots were discovered in the requested range.")
 
+    workers = args.workers
+    if args.verify_dom and workers > 1:
+        print("--verify-dom requires serialized capture; forcing --workers=1")
+        workers = 1
+
     results: list[dict[str, Any]] = []
     failures: list[dict[str, str]] = []
     actions_since_checkpoint = 0
     changed_since_checkpoint = 0
     processed = 0
-    for processed, snapshot in enumerate(snapshots, start=1):
+    completed_results = iter_capture_results(
+        snapshots,
+        workers=workers,
+        replay_base=args.replay_base,
+        force=args.force,
+        cdx_api=args.cdx_api,
+        max_header_api_delta_seconds=args.header_api_max_delta_seconds,
+        verify_dom=args.verify_dom,
+        provider=args.provider,
+        palxiao_provider=palxiao_provider,
+    )
+    for processed, (snapshot, result, error) in enumerate(completed_results, start=1):
+        if error is not None:
+            failure = {
+                "timestamp": snapshot["timestamp"],
+                "error": str(error),
+            }
+            failures.append(failure)
+            print(json.dumps(failure, ensure_ascii=False))
+            continue
+
         try:
-            result = capture_snapshot(
-                snapshot,
-                replay_base=args.replay_base,
-                force=args.force,
-                cdx_api=args.cdx_api,
-                max_header_api_delta_seconds=args.header_api_max_delta_seconds,
-                verify_dom=args.verify_dom,
-                provider=args.provider,
-                palxiao_provider=palxiao_provider,
-            )
             results.append(result)
             print(json.dumps(result, ensure_ascii=False))
             actions_since_checkpoint += 1

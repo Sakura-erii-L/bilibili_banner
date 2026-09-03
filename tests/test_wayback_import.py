@@ -75,6 +75,44 @@ class WaybackImportTests(unittest.TestCase):
             self.assertEqual(env["WAYBACK_CHECKPOINT_CHANGED"], "10")
             self.assertEqual(env["WAYBACK_CHECKPOINT_FINAL"], "0")
 
+    def test_capture_results_can_run_in_parallel(self) -> None:
+        active = 0
+        max_active = 0
+        state_lock = wayback_import.threading.Lock()
+
+        def fake_capture(snapshot, **_kwargs):
+            nonlocal active, max_active
+            with state_lock:
+                active += 1
+                max_active = max(max_active, active)
+            wayback_import.time.sleep(0.02)
+            with state_lock:
+                active -= 1
+            return {"timestamp": snapshot["timestamp"], "status": "unchanged"}
+
+        snapshots = [{"timestamp": f"2020010100000{index}"} for index in range(3)]
+        with mock.patch(
+            "backend.wayback_import.capture_snapshot_job",
+            side_effect=fake_capture,
+        ):
+            results = list(
+                wayback_import.iter_capture_results(
+                    snapshots,
+                    workers=3,
+                    replay_base="replay",
+                    force=False,
+                    cdx_api="cdx",
+                    max_header_api_delta_seconds=1,
+                    verify_dom=False,
+                    provider="auto",
+                    palxiao_provider=None,
+                )
+            )
+
+        self.assertGreaterEqual(max_active, 2)
+        self.assertEqual(len(results), 3)
+        self.assertTrue(all(error is None for _, _, error in results))
+
     def test_monthly_targets_stay_in_range(self) -> None:
         targets = list(
             wayback_import.target_dates(
@@ -522,7 +560,7 @@ class WaybackImportTests(unittest.TestCase):
                 b"ok",
             )
         sleep.assert_called_once_with(wayback_import.RETRY_BASE_SECONDS)
-        self.assertGreaterEqual(wayback_import.REQUEST_DELAY_SECONDS, 1.0)
+        self.assertAlmostEqual(wayback_import.REQUEST_DELAY_SECONDS, 0.6)
 
     def test_real_split_layer_api_is_saved_as_layered_with_timestamp_metadata(self) -> None:
         endpoint = wayback_import.header_api.DEFAULT_ENDPOINTS[0]
@@ -1258,6 +1296,8 @@ class WaybackImportTests(unittest.TestCase):
         pages = Path(".github/workflows/pages.yml").read_text(encoding="utf-8")
         self.assertIn("group: bilibili-banner-pages", pages)
         self.assertIn("cancel-in-progress: false", pages)
+        self.assertIn('WAYBACK_REQUEST_DELAY: "0.6"', wayback)
+        self.assertIn('WAYBACK_WORKERS: "3"', wayback)
 
 
 if __name__ == "__main__":

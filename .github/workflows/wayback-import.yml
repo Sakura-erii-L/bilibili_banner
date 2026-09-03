@@ -110,6 +110,8 @@ jobs:
           PYTHONUNBUFFERED: "1"
           WAYBACK_CHECKPOINT_PAGES: "1"
           WAYBACK_CHECKPOINT_PUSH: "1"
+          WAYBACK_REQUEST_DELAY: "0.6"
+          WAYBACK_WORKERS: "3"
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

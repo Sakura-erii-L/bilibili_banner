@@ -1,5 +1,6 @@
 import {
   formatSlotRanges,
+  formatVariantPeriods,
   minutesInTimeZone,
   sampleCurve,
   selectTimedVariant,
@@ -1057,8 +1058,10 @@ function recordMeta(record, variant) {
   const typeText = typeLabels.length
     ? typeLabels.join(" · ")
     : (mode === "split" ? `${layerCount} 个图层` : "静态 Banner");
-  const variantText = Number(record.variantCount || record.variants?.length || 0) > 1
-    ? ` · ${record.variantCount || record.variants.length} 个时段变体`
+  const variantCount = Number(record.variantCount || record.variants?.length || 0);
+  const variantPeriods = formatVariantPeriods(record);
+  const variantText = variantCount > 1
+    ? ` · ${variantCount}个时段变体${variantPeriods ? `（${variantPeriods}）` : ""}`
     : "";
   return `${seasonNames[record.season] || ""} · `
     + typeText

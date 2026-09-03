@@ -96,6 +96,20 @@ export function formatSlotRanges(values) {
   return ranges.join("、");
 }
 
+export function formatVariantPeriods(record) {
+  const variants = Array.isArray(record?.variants) ? record.variants : [];
+  return variants
+    .map((variant, index) => ({
+      index,
+      firstSlot: variantSlots(variant)[0] ?? Number.POSITIVE_INFINITY,
+      text: formatSlotRanges(variantSlots(variant)).replace(/–/g, "~"),
+    }))
+    .filter(item => item.text)
+    .sort((left, right) => left.firstSlot - right.firstSlot || left.index - right.index)
+    .map(item => item.text)
+    .join("，");
+}
+
 export function cyclicMinuteDistance(a, b) {
   const distance = Math.abs(Number(a) - Number(b)) % 1440;
   return Math.min(distance, 1440 - distance);
