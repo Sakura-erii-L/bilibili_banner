@@ -586,6 +586,10 @@ class WaybackImportTests(unittest.TestCase):
                         {
                             "timestamp": "20200102030405",
                             "original": wayback_import.ORIGINAL_PAGE,
+                            "targetMappings": [
+                                {"date": "2020-01-02", "slot": 0},
+                                {"date": "2020-01-03", "slot": 1},
+                            ],
                         },
                         replay_base="https://web.archive.org/web",
                         force=False,
@@ -607,6 +611,10 @@ class WaybackImportTests(unittest.TestCase):
                 self.assertEqual(
                     manifest["source"]["headerApiTimeDeltaSeconds"],
                     60,
+                )
+                self.assertEqual(
+                    [(item["date"], item["slots"]) for item in manifest["observations"]],
+                    [("2020-01-02", [0]), ("2020-01-03", [1])],
                 )
             finally:
                 wayback_import.core.DATA_DIR, wayback_import.core.ARCHIVE_DIR, wayback_import.core.CURRENT_DIR = original
