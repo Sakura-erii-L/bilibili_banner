@@ -1021,6 +1021,7 @@
       "season": "summer",
       "timeZone": "Asia/Shanghai",
       "slots": [
+        0,
         2,
         3,
         4
