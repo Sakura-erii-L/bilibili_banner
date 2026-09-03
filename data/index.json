@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T10:47:08+08:00",
+  "generatedAt": "2026-09-03T10:51:26+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2682,7 +2682,12 @@
           "slots": [
             0,
             1,
-            2
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
           ],
           "manifest": "./data/archive/2019-02-05_150516_6f473493db17ae975da1616d/banner.json"
         },
