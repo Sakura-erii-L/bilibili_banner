@@ -2500,11 +2500,92 @@ def _index_variant_key(variant: dict[str, Any]) -> tuple[str, str, str]:
 
 def _index_variant_identity(variant: dict[str, Any]) -> tuple[str, str]:
     canonical = str(variant.get("canonicalContentHash") or "")
-    if canonical:
+    if canonical and variant.get("visualMergeSafe", True):
         return ("canonical", canonical)
     return (
         "content",
         str(variant.get("contentHash") or variant.get("manifest") or ""),
+    )
+
+
+def _index_interaction_state(manifest: dict[str, Any]) -> str:
+    explicit = str(manifest.get("interactionState") or "")
+    if explicit in {"interactive", "nonInteractive"}:
+        return explicit
+    if manifest.get("referenceMode") == "interactive":
+        return "interactive"
+    if "interactive" in manifest_types(manifest):
+        return "interactive"
+    effects = (manifest.get("interaction") or {}).get("effects")
+    if isinstance(effects, list) and effects:
+        return "interactive"
+    return "nonInteractive"
+
+
+def _index_visual_merge_safe(manifest: dict[str, Any]) -> bool:
+    missing = [str(item) for item in manifest.get("missing_assets") or []]
+    if any(
+        item.startswith(("layer_", "api_layer_", "static:"))
+        or item == "all structured Banner assets unavailable"
+        for item in missing
+    ):
+        return False
+
+    layers = manifest.get("layers") or []
+    if manifest.get("mode") == "split" or "layered" in manifest_types(manifest):
+        if not layers or not all(isinstance(layer, dict) for layer in layers):
+            return False
+        return all(
+            bool(layer.get("file"))
+            or any(
+                isinstance(resource, dict) and resource.get("file")
+                for resource in (layer.get("resources") or [])
+            )
+            for layer in layers
+        )
+
+    static = manifest.get("static") or {}
+    return bool(static.get("file"))
+
+
+def _index_completeness_rank(value: Any) -> int:
+    return {
+        "complete": 2,
+        "partial": 1,
+    }.get(str(value or ""), 0)
+
+
+def _index_variant_preference(variant: dict[str, Any]) -> tuple[int, int, str, str]:
+    return (
+        1 if variant.get("interactionState") == "interactive" else 0,
+        _index_completeness_rank(variant.get("completeness")),
+        str(variant.get("lastObservedAt") or ""),
+        str(variant.get("capturedAt") or ""),
+    )
+
+
+def _index_variant_sources(variant: dict[str, Any]) -> list[dict[str, Any]]:
+    sources = variant.get("mergedFrom")
+    if isinstance(sources, list) and sources:
+        return [dict(item) for item in sources if isinstance(item, dict)]
+    return [{
+        "contentHash": str(variant.get("contentHash") or ""),
+        "manifest": str(variant.get("manifest") or ""),
+        "interactionState": str(variant.get("interactionState") or ""),
+    }]
+
+
+def _merge_index_variant_sources(
+    left: dict[str, Any],
+    right: dict[str, Any],
+) -> list[dict[str, Any]]:
+    merged: dict[tuple[str, str], dict[str, Any]] = {}
+    for source in [*_index_variant_sources(left), *_index_variant_sources(right)]:
+        key = (str(source.get("contentHash") or ""), str(source.get("manifest") or ""))
+        merged[key] = source
+    return sorted(
+        merged.values(),
+        key=lambda item: (str(item.get("contentHash") or ""), str(item.get("manifest") or "")),
     )
 
 
@@ -2530,38 +2611,56 @@ def _merge_index_variants(
     left: list[dict[str, Any]],
     right: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
-    merged: dict[tuple[str, str, str], dict[str, Any]] = {}
+    merged: dict[tuple[str, str], dict[str, Any]] = {}
     for variant in [*left, *right]:
         if not isinstance(variant, dict):
             continue
-        key = _index_variant_key(variant)
+        key = _index_variant_identity(variant)
         current = merged.get(key)
         if current is None:
-            merged[key] = dict(variant)
+            current = dict(variant)
+            current["mergedFrom"] = _index_variant_sources(variant)
+            merged[key] = current
             continue
         slots = sorted(
             set(normalize_slots(current.get("slots")))
             | set(normalize_slots(variant.get("slots")))
         )
-        if str(variant.get("lastObservedAt") or "") > str(
-            current.get("lastObservedAt") or ""
-        ):
-            current.update(variant)
-        current["slots"] = slots
+        observed_slots = sorted(
+            set(normalize_slots(current.get("observedSlots")))
+            | set(normalize_slots(variant.get("observedSlots")))
+        )
+        preferred = max((current, variant), key=_index_variant_preference)
+        merged_variant = dict(preferred)
+        merged_variant["slots"] = slots
+        if observed_slots:
+            merged_variant["observedSlots"] = observed_slots
+        if current.get("slotFill") or variant.get("slotFill"):
+            merged_variant["slotFill"] = "same-day-forward-backward"
+        merged_variant["mergedFrom"] = _merge_index_variant_sources(current, variant)
+        merged[key] = merged_variant
     return sorted(
         merged.values(),
         key=lambda item: str(item.get("capturedAt") or ""),
     )
 
 
+def _index_slot_segment_count(slots: Any) -> int:
+    normalized = normalize_slots(slots)
+    if not normalized:
+        return 0
+    count = 1
+    for previous, current in zip(normalized, normalized[1:]):
+        if current != previous + 1:
+            count += 1
+    return count
+
+
 def _refresh_index_record_summary(record: dict[str, Any]) -> None:
     variants = record.get("variants") or []
     if not variants:
         return
-    representative = max(
-        variants,
-        key=lambda item: str(item.get("lastObservedAt") or item.get("capturedAt") or ""),
-    )
+    representative = max(variants, key=_index_variant_preference)
     record["capturedAt"] = max(
         str(item.get("capturedAt") or "") for item in variants
     )
@@ -2574,7 +2673,11 @@ def _refresh_index_record_summary(record: dict[str, Any]) -> None:
             "missing_assets": representative.get("missing_assets", []),
             "contentHash": representative["contentHash"],
             "manifest": representative["manifest"],
-            "variantCount": len(variants),
+            "interactionState": representative.get("interactionState", "nonInteractive"),
+            "variantCount": sum(
+                _index_slot_segment_count(item.get("slots"))
+                for item in variants
+            ),
             "variants": variants,
         }
     )
@@ -2605,17 +2708,18 @@ def _merge_consecutive_index_records(
             continue
         record["dateStart"] = start.isoformat()
         record["dateEnd"] = end.isoformat()
-        previous = merged[-1] if merged else None
-        previous_identities = (
-            _index_record_variant_identities(previous) if previous else set()
-        )
         record_identities = _index_record_variant_identities(record)
-        can_merge_variants = bool(previous_identities and record_identities) and (
-            _index_record_signature(previous) == _index_record_signature(record)
-            or previous_identities < record_identities
-            or record_identities < previous_identities
-        )
-        if previous and can_merge_variants:
+        merged_record = False
+        for candidate_index in range(len(merged) - 1, -1, -1):
+            previous = merged[candidate_index]
+            previous_identities = _index_record_variant_identities(previous)
+            can_merge_variants = bool(previous_identities and record_identities) and (
+                _index_record_signature(previous) == _index_record_signature(record)
+                or previous_identities < record_identities
+                or record_identities < previous_identities
+            )
+            if not can_merge_variants:
+                continue
             try:
                 previous_end = dt.date.fromisoformat(
                     str(previous.get("dateEnd") or previous.get("date") or "")
@@ -2640,7 +2744,10 @@ def _merge_consecutive_index_records(
                     record.get("variants") or [],
                 )
                 _refresh_index_record_summary(previous)
-                continue
+                merged_record = True
+                break
+        if merged_record:
+            continue
         merged.append(record)
     return merged
 
@@ -2681,6 +2788,7 @@ def merge_duplicate_metadata(
         "completeness", "missing_assets", "structureEvidence", "assets", "hashes",
         "sourceFiles", "sourceEvidence", "auxiliaryAssets", "animationCss", "api",
         "canonicalContentHash", "sourceFingerprint", "reference", "referenceMode",
+        "interactionState",
     ):
         if field in fresh and (
             field not in archived
@@ -2889,6 +2997,7 @@ def _archive_capture_unlocked(
     manifest["hashes"] = hashes
     manifest["canonicalContentHash"] = hashes["canonicalContentHash"]
     manifest["sourceFingerprint"] = hashes["sourceFingerprint"]
+    manifest["interactionState"] = _index_interaction_state(manifest)
     for asset in manifest.get("assets") or []:
         file = str(asset.get("local_file") or "")
         path = temp_dir / file if file else None
@@ -2966,7 +3075,12 @@ def rebuild_index() -> bool:
 
         for observation in manifest_observations(item):
             slots = manifest_slots(observation)
-            captured_at = str(observation.get("capturedAt") or item["capturedAt"])
+            if not slots:
+                continue
+            date_text = str(observation.get("date") or item.get("date") or "")
+            if not date_text:
+                continue
+            captured_at = str(observation.get("capturedAt") or item.get("capturedAt") or "")
             family_id = str(
                 observation.get("familyId") or item.get("familyId")
                 or derived_family_id(item)
@@ -2986,80 +3100,137 @@ def rebuild_index() -> bool:
                 "missing_assets": list(item.get("missing_assets") or []),
                 "slots": sorted(set(slots)),
                 "manifest": f"./data/archive/{folder.name}/banner.json",
+                "interactionState": _index_interaction_state(item),
+                "visualMergeSafe": _index_visual_merge_safe(item),
             }
             if item.get("referenceMode"):
                 variant["referenceMode"] = item["referenceMode"]
+            variant["mergedFrom"] = _index_variant_sources(variant)
 
             family = families.setdefault(
                 family_id,
                 {
                     "id": family_id,
-                    "date": str(observation.get("date") or item["date"]),
-                    "season": str(observation.get("season") or item["season"]),
+                    "season": str(observation.get("season") or item.get("season") or ""),
                     "timeZone": str(
                         observation.get("timeZone")
                         or item.get("timeZone")
                         or TIMEZONE
                     ),
-                    "variantsByHash": {},
+                    "visualGroups": {},
                 },
             )
-            existing_variant = family["variantsByHash"].get(content_hash)
-            if existing_variant:
-                merged_slots = sorted(
-                    set(existing_variant["slots"])
-                    | set(variant["slots"])
-                )
-                if variant["lastObservedAt"] > existing_variant["lastObservedAt"]:
-                    existing_variant.update(variant)
-                existing_variant["slots"] = merged_slots
+            visual_identity = _index_variant_identity(variant)
+            group = family["visualGroups"].get(visual_identity)
+            if group is None:
+                group = {
+                    "representative": variant,
+                    "slotsByDate": {},
+                }
+                family["visualGroups"][visual_identity] = group
             else:
-                family["variantsByHash"][content_hash] = variant
+                preferred = max(
+                    (group["representative"], variant),
+                    key=_index_variant_preference,
+                )
+                preferred = dict(preferred)
+                preferred["mergedFrom"] = _merge_index_variant_sources(
+                    group["representative"],
+                    variant,
+                )
+                group["representative"] = preferred
+            group["slotsByDate"].setdefault(date_text, set()).update(slots)
 
     records: list[dict[str, Any]] = []
     for family in families.values():
-        variants = sorted(
-            family.pop("variantsByHash").values(),
-            key=lambda item: item["capturedAt"],
-        )
-        representative = max(variants, key=lambda item: item["lastObservedAt"])
-        date_text = family["date"]
-        records.append(
-                {
-                    **family,
-                    "year": date_text[:4],
-                    "month": date_text[5:7],
-                    "yearMonth": date_text[:7],
-                    "dateStart": date_text,
-                    "dateEnd": date_text,
-                    "capturedAt": max(item["capturedAt"] for item in variants),
-                "mode": representative["mode"],
-                "type": representative.get("type", ["static"]),
-                "layerCount": representative["layerCount"],
-                "completeness": representative.get("completeness", "unverified"),
-                "missing_assets": representative.get("missing_assets", []),
-                "contentHash": representative["contentHash"],
-                "manifest": representative["manifest"],
-                "variantCount": len(variants),
-                "variants": variants,
+        visual_groups = family["visualGroups"]
+        dates = sorted(
+            {
+                date_text
+                for group in visual_groups.values()
+                for date_text, slots in group["slotsByDate"].items()
+                if slots
             }
         )
+        for date_text in dates:
+            raw_by_slot: dict[int, set[tuple[str, str]]] = {}
+            raw_slots_by_identity: dict[tuple[str, str], set[int]] = {}
+            for visual_identity, group in visual_groups.items():
+                raw_slots = set(group["slotsByDate"].get(date_text) or set())
+                if not raw_slots:
+                    continue
+                raw_slots_by_identity[visual_identity] = raw_slots
+                for slot in raw_slots:
+                    raw_by_slot.setdefault(slot, set()).add(visual_identity)
 
-    complete_slots = set(range(SLOT_COUNT))
+            assigned_by_slot: dict[int, set[tuple[str, str]]] = {}
+            previous: set[tuple[str, str]] = set()
+            for slot in range(SLOT_COUNT):
+                observed = raw_by_slot.get(slot)
+                if observed:
+                    previous = set(observed)
+                assigned_by_slot[slot] = set(observed or previous)
+
+            following: set[tuple[str, str]] = set()
+            for slot in range(SLOT_COUNT - 1, -1, -1):
+                if assigned_by_slot[slot]:
+                    following = set(assigned_by_slot[slot])
+                elif following:
+                    assigned_by_slot[slot] = set(following)
+
+            filled_slots_by_identity: dict[tuple[str, str], set[int]] = {
+                visual_identity: set()
+                for visual_identity in raw_slots_by_identity
+            }
+            for slot, identities in assigned_by_slot.items():
+                for visual_identity in identities:
+                    if visual_identity in filled_slots_by_identity:
+                        filled_slots_by_identity[visual_identity].add(slot)
+
+            for visual_identity, filled_slots in filled_slots_by_identity.items():
+                if not filled_slots:
+                    continue
+                group = visual_groups[visual_identity]
+                representative = dict(group["representative"])
+                observed_slots = sorted(raw_slots_by_identity[visual_identity])
+                representative["slots"] = sorted(filled_slots)
+                representative["observedSlots"] = observed_slots
+                if observed_slots != sorted(filled_slots):
+                    representative["slotFill"] = "same-day-forward-backward"
+                record_id = f"{family['id']}_{visual_identity[1][:12]}"
+                records.append(
+                    {
+                        "id": record_id,
+                        "date": date_text,
+                        "season": family["season"],
+                        "timeZone": family["timeZone"],
+                        "year": date_text[:4],
+                        "month": date_text[5:7],
+                        "yearMonth": date_text[:7],
+                        "dateStart": date_text,
+                        "dateEnd": date_text,
+                        "capturedAt": representative["capturedAt"],
+                        "mode": representative["mode"],
+                        "type": representative.get("type", ["static"]),
+                        "layerCount": representative["layerCount"],
+                        "completeness": representative.get("completeness", "unverified"),
+                        "missing_assets": representative.get("missing_assets", []),
+                        "contentHash": representative["contentHash"],
+                        "manifest": representative["manifest"],
+                        "interactionState": representative.get(
+                            "interactionState", "nonInteractive"
+                        ),
+                        "variantCount": _index_slot_segment_count(sorted(filled_slots)),
+                        "variants": [representative],
+                    }
+                )
+
     slots_by_date: dict[str, set[int]] = {}
     for record in records:
         date_text = str(record.get("dateStart") or record.get("date") or "")
-        slots_by_date.setdefault(date_text, set()).update(
-            slot
-            for variant in record.get("variants") or []
-            if isinstance(variant, dict)
-            for slot in normalize_slots(variant.get("slots"))
-        )
-    omitted_dates = {
-        date_text
-        for date_text, slots in slots_by_date.items()
-        if date_text and slots != complete_slots
-    }
+        if date_text:
+            slots_by_date.setdefault(date_text, set()).add(1)
+    omitted_dates: set[str] = set()
     observed_dates = []
     for date_text in slots_by_date:
         try:

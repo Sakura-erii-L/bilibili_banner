@@ -10,6 +10,7 @@ import {
   selectTimedVariant,
   slotIndexInTimeZone,
   signedCubicBezier,
+  timeSegments,
   wrapDynamicValue,
 } from "../frontend/interaction.js";
 
@@ -50,6 +51,17 @@ assert.equal(
   "09:00~12:00，18:00~24:00",
 );
 
+const segments = timeSegments({
+  variants: [{ manifest: "banner.json", slots: [0, 1, 4, 5] }],
+});
+assert.deepEqual(
+  segments.map(segment => [segment.label, segment.slots]),
+  [
+    ["00:00~06:00", [0, 1]],
+    ["12:00~18:00", [4, 5]],
+  ],
+);
+
 const modes = {
   variants: [
     { manifest: "normal.json", slots: [0], referenceMode: "normal", capturedAt: "1" },
@@ -62,7 +74,7 @@ assert.equal(
 );
 assert.equal(
   selectTimedVariant(modes, new Date("2026-08-31T16:00:00Z"), "Asia/Shanghai", { supportsInteractive: false }).manifest,
-  "normal.json",
+  "interactive.json",
 );
 
 const appSource = readFileSync(new URL("../frontend/app.js", import.meta.url), "utf8");
@@ -83,6 +95,11 @@ assert.match(appSource, /ResizeObserver/);
 assert.match(appSource, /frame\.style\.width = `\$\{width\}px`/);
 assert.match(appSource, /dispatchEvent\(new Event\("resize"\)\)/);
 assert.match(appSource, /article\.dataset\.manifest = variant\?\.manifest \|\| ""/);
+assert.match(appSource, /show-time-controls/);
+assert.match(appSource, /entry-time-controls/);
+assert.match(appSource, /resetTimeSelections/);
+assert.match(appSource, /article\.dataset\.timeSelection = "0"/);
+assert.match(appSource, /"Asia\/Shanghai"/);
 assert.doesNotMatch(referenceBundle, /mikufan039\.github\.io/);
 assert.doesNotMatch(referenceBundle, /unpkg\.com\/detect-gpu/);
 

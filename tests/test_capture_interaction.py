@@ -260,13 +260,18 @@ class TimedVariantIndexTests(unittest.TestCase):
         self.assertTrue(capture.rebuild_index())
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
         self.assertEqual(index["version"], 11.0)
-        self.assertEqual(len(index["records"]), 1)
-        self.assertEqual(index["records"][0]["variantCount"], 2)
+        self.assertEqual(len(index["records"]), 2)
         self.assertEqual(
-            [variant["slots"] for variant in index["records"][0]["variants"]],
-            [[0, 1, 2, 3], [4, 5, 6, 7]],
+            sorted(
+                (record["contentHash"], record["variants"][0]["slots"])
+                for record in index["records"]
+            ),
+            [("hash-day", [0, 1, 2, 3]), ("hash-night", [4, 5, 6, 7])],
         )
-        self.assertNotIn("observedSlots", index["records"][0]["variants"][0])
+        self.assertEqual(
+            [record["variantCount"] for record in index["records"]],
+            [1, 1],
+        )
         self.assertFalse(capture.rebuild_index())
 
     def test_duplicate_asset_adds_slot_once_and_upgrades_effect(self) -> None:
@@ -410,7 +415,7 @@ class TimedVariantIndexTests(unittest.TestCase):
             all(record["contentHash"] == "same-physical-asset" for record in index["records"])
         )
 
-    def test_subset_banner_set_merges_into_adjacent_date_range(self) -> None:
+    def test_subset_different_visual_banners_stay_as_separate_records(self) -> None:
         manifests = (
             ("subset-day-one-a", "2020-01-01", "family-2020-01-01", "banner-a", list(range(8))),
             ("subset-day-two-a", "2020-01-02", "family-2020-01-02", "banner-a", list(range(4))),
@@ -440,13 +445,16 @@ class TimedVariantIndexTests(unittest.TestCase):
 
         capture.rebuild_index()
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(index["records"]), 1)
-        record = index["records"][0]
-        self.assertEqual(record["dateStart"], "2020-01-01")
-        self.assertEqual(record["dateEnd"], "2020-01-02")
+        self.assertEqual(len(index["records"]), 2)
         self.assertEqual(
-            {variant["contentHash"] for variant in record["variants"]},
-            {"banner-a", "banner-b"},
+            sorted(
+                (record["contentHash"], record["dateStart"], record["dateEnd"])
+                for record in index["records"]
+            ),
+            [
+                ("banner-a", "2020-01-01", "2020-01-02"),
+                ("banner-b", "2020-01-02", "2020-01-02"),
+            ],
         )
 
     def test_different_banner_sets_do_not_merge_across_dates(self) -> None:
@@ -550,7 +558,11 @@ class TimedVariantIndexTests(unittest.TestCase):
         self.assertEqual(len(index["records"]), 1)
         self.assertEqual(index["records"][0]["dateStart"], "2020-01-01")
         self.assertEqual(index["records"][0]["dateEnd"], "2020-01-03")
-        self.assertEqual(index["records"][0]["variantCount"], 2)
+        self.assertEqual(index["records"][0]["variantCount"], 1)
+        self.assertEqual(
+            len(index["records"][0]["variants"][0]["mergedFrom"]),
+            2,
+        )
 
     def test_incomplete_day_is_omitted_and_same_banner_bridges_it(self) -> None:
         for index, (date, slots) in enumerate(
@@ -589,7 +601,7 @@ class TimedVariantIndexTests(unittest.TestCase):
         self.assertEqual(index["records"][0]["dateEnd"], "2020-01-03")
         self.assertEqual(index["records"][0]["variants"][0]["slots"], list(range(8)))
 
-    def test_same_day_layout_merges_but_different_content_stays_as_variants(self) -> None:
+    def test_same_day_different_visual_content_stays_as_records(self) -> None:
         first = self.temp_path_manifest(
             "first", "layout-a", "content-a", list(range(4))
         )
@@ -598,11 +610,96 @@ class TimedVariantIndexTests(unittest.TestCase):
         )
         capture.rebuild_index()
         index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(index["records"]), 1)
-        self.assertEqual(index["records"][0]["variantCount"], 2)
+        self.assertEqual(len(index["records"]), 2)
         self.assertEqual(
-            sorted(variant["slots"] for variant in index["records"][0]["variants"]),
-            [[0, 1, 2, 3], [4, 5, 6, 7]],
+            sorted(
+                (record["contentHash"], record["variants"][0]["slots"])
+                for record in index["records"]
+            ),
+            [("content-a", [0, 1, 2, 3]), ("content-b", [4, 5, 6, 7])],
+        )
+
+    def test_same_day_fills_each_visual_banner_independently(self) -> None:
+        for name, content_hash, slots in (
+            ("first", "content-a", [0, 4]),
+            ("second", "content-b", [2]),
+        ):
+            self.temp_path_manifest(name, "layout-a", content_hash, slots)
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 2)
+        records = {
+            record["contentHash"]: record["variants"][0]
+            for record in index["records"]
+        }
+        self.assertEqual(records["content-a"]["slots"], [0, 1, 4, 5, 6, 7])
+        self.assertEqual(records["content-b"]["slots"], [2, 3])
+
+    def test_same_visual_prefers_interactive_representative(self) -> None:
+        first = self.temp_path_manifest(
+            "non-interactive", "layout-a", "content-a", [0]
+        )
+        second = self.temp_path_manifest(
+            "interactive", "layout-a", "content-b", [1]
+        )
+        for folder, interaction_state, types in (
+            (first, "nonInteractive", ["static"]),
+            (second, "interactive", ["static"]),
+        ):
+            path = folder / "banner.json"
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            manifest["mode"] = "static"
+            manifest["layers"] = []
+            manifest["static"] = {"file": "content.png"}
+            manifest["canonicalContentHash"] = "same-visual"
+            manifest["interactionState"] = interaction_state
+            manifest["type"] = types
+            path.write_text(json.dumps(manifest), encoding="utf-8")
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 1)
+        record = index["records"][0]
+        self.assertEqual(record["contentHash"], "content-b")
+        self.assertEqual(record["interactionState"], "interactive")
+        self.assertEqual(record["variants"][0]["slots"], list(range(8)))
+        self.assertEqual(len(record["variants"][0]["mergedFrom"]), 2)
+
+    def test_missing_primary_asset_blocks_visual_merge(self) -> None:
+        first = self.temp_path_manifest(
+            "missing-primary", "layout-a", "content-a", [0]
+        )
+        second = self.temp_path_manifest(
+            "complete-primary", "layout-a", "content-b", [0]
+        )
+        for folder, static_file, missing in (
+            (first, None, ["static: primary asset unavailable"]),
+            (second, "content.png", []),
+        ):
+            path = folder / "banner.json"
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            manifest["mode"] = "static"
+            manifest["layers"] = []
+            manifest["static"] = {"file": static_file} if static_file else {}
+            manifest["missing_assets"] = missing
+            manifest["canonicalContentHash"] = "same-visual"
+            path.write_text(json.dumps(manifest), encoding="utf-8")
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 2)
+
+    def test_different_visual_banners_overlap_without_replacement(self) -> None:
+        for name, content_hash in (("first", "content-a"), ("second", "content-b")):
+            self.temp_path_manifest(name, "layout-a", content_hash, [2])
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 2)
+        self.assertEqual(
+            sorted(record["variants"][0]["slots"] for record in index["records"]),
+            [list(range(8)), list(range(8))],
         )
 
     def temp_path_manifest(

@@ -165,7 +165,7 @@ class MikuFan039ReferenceTests(unittest.TestCase):
             {entry.reference_id for entry in covered},
         )
 
-    def test_same_group_normal_and_interactive_entries_share_daily_record(self) -> None:
+    def test_different_visual_reference_entries_are_separate_records(self) -> None:
         root = self.make_repository()
         original = (capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR)
         with tempfile.TemporaryDirectory() as data_dir:
@@ -187,13 +187,16 @@ class MikuFan039ReferenceTests(unittest.TestCase):
                     )
                 self.assertEqual(covered, {dt.date(2022, 3, 1), dt.date(2022, 3, 2)})
                 index = json.loads((data / "index.json").read_text(encoding="utf-8"))
-                self.assertEqual(len(index["records"]), 1)
-                self.assertEqual(index["records"][0]["dateStart"], "2022-03-01")
-                self.assertEqual(index["records"][0]["dateEnd"], "2022-03-02")
-                self.assertEqual(index["records"][0]["variantCount"], 2)
+                self.assertEqual(len(index["records"]), 2)
                 self.assertEqual(
-                    {variant.get("referenceMode") for variant in index["records"][0]["variants"]},
-                    {"normal", "interactive"},
+                    sorted(
+                        (record["dateStart"], record["dateEnd"], record["variantCount"])
+                        for record in index["records"]
+                    ),
+                    [
+                        ("2022-03-01", "2022-03-02", 1),
+                        ("2022-03-01", "2022-03-02", 1),
+                    ],
                 )
                 manifests = list(data.joinpath("archive").glob("*/banner.json"))
                 self.assertEqual(len(manifests), 2)

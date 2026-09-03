@@ -5,6 +5,7 @@ import {
   sampleCurve,
   selectTimedVariant,
   signedCubicBezier,
+  timeSegments,
   wrapDynamicValue,
 } from "./interaction.js";
 
@@ -13,11 +14,13 @@ const yearSelect = document.getElementById("year");
 const monthSelect = document.getElementById("month");
 const seasonSelect = document.getElementById("season");
 const resetButton = document.getElementById("reset");
+const showTimeControlsToggle = document.getElementById("show-time-controls");
 const summary = document.getElementById("summary");
 const empty = document.getElementById("empty");
 
 let indexData = null;
 let observer = null;
+let showTimeControls = false;
 
 const seasonNames = {
   spring: "春",
@@ -47,23 +50,6 @@ function formatDateRange(record) {
 
 function resolveAsset(manifestUrl, file) {
   return new URL(file, new URL(manifestUrl, location.href)).href;
-}
-
-function supportsReferenceInteractive() {
-  try {
-    const canvas = document.createElement("canvas");
-    const hasWebgl2 = Boolean(canvas.getContext("webgl2"));
-    const hasPixelated = typeof CSS === "undefined"
-      || typeof CSS.supports !== "function"
-      || CSS.supports("image-rendering", "pixelated");
-    const hasShadowDom = typeof document.createElement("div").attachShadow === "function";
-    const enoughMemory = !navigator.deviceMemory || navigator.deviceMemory >= 4;
-    const connection = navigator.connection;
-    const usableNetwork = !connection || !["slow-2g", "2g"].includes(connection.effectiveType);
-    return hasWebgl2 && hasPixelated && hasShadowDom && enoughMemory && usableNetwork;
-  } catch (_error) {
-    return false;
-  }
 }
 
 function timeExtension(manifest) {
@@ -1036,9 +1022,25 @@ function selectedVariant(record) {
   return selectTimedVariant(
     record,
     new Date(),
-    record.timeZone || indexData?.timeZone || "Asia/Shanghai",
-    { supportsInteractive: supportsReferenceInteractive() },
+    "Asia/Shanghai",
   );
+}
+
+function selectedEntryVariant(record, article) {
+  const selection = Number(article.dataset.timeSelection || 0);
+  if (selection > 0) {
+    const segment = timeSegments(record)[selection - 1];
+    if (segment?.variant) return segment.variant;
+  }
+  return selectedVariant(record);
+}
+
+function selectedEntrySlots(record, article, variant) {
+  const selection = Number(article.dataset.timeSelection || 0);
+  if (selection > 0) {
+    return timeSegments(record)[selection - 1]?.slots || variant?.slots || [];
+  }
+  return variant?.slots || [];
 }
 
 function recordMeta(record, variant) {
@@ -1058,7 +1060,7 @@ function recordMeta(record, variant) {
   const typeText = typeLabels.length
     ? typeLabels.join(" · ")
     : (mode === "split" ? `${layerCount} 个图层` : "静态 Banner");
-  const variantCount = Number(record.variantCount || record.variants?.length || 0);
+  const variantCount = timeSegments(record).length;
   const variantPeriods = formatVariantPeriods(record);
   const variantText = variantCount > 1
     ? ` · ${variantCount}个时段变体${variantPeriods ? `（${variantPeriods}）` : ""}`
@@ -1069,12 +1071,94 @@ function recordMeta(record, variant) {
     + variantText;
 }
 
+function updateTimeControlVisual(article) {
+  const controls = article.querySelector(".entry-time-controls");
+  if (!controls) return;
+  const selection = Number(article.dataset.timeSelection || 0);
+  const range = controls.querySelector("input[type=range]");
+  if (range) range.value = String(selection);
+  controls.querySelectorAll("[data-time-selection]").forEach(button => {
+    const active = Number(button.dataset.timeSelection) === selection;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function updateEntrySelection(article, record) {
+  const variant = selectedEntryVariant(record, article);
+  const manifest = variant?.manifest || "";
+  const slots = selectedEntrySlots(record, article, variant);
+  article.querySelector(".entry-slots").textContent =
+    `时段：${formatSlotRanges(slots) || "未观测"}`;
+  article.querySelector(".entry-meta").textContent = recordMeta(record, variant);
+  updateTimeControlVisual(article);
+
+  if (manifest === article.dataset.manifest) return;
+  article.dataset.manifest = manifest;
+  article.dataset.loaded = "0";
+  article.querySelector(".stage").innerHTML = '<div class="loading">切换时段素材……</div>';
+
+  const bounds = article.getBoundingClientRect();
+  if (bounds.bottom >= -900 && bounds.top <= window.innerHeight + 900) {
+    loadEntry(article);
+  } else {
+    observer?.observe(article);
+  }
+}
+
+function createTimeControls(record, article) {
+  const segments = timeSegments(record);
+  if (segments.length < 2) return null;
+
+  const controls = document.createElement("div");
+  controls.className = "entry-time-controls";
+  controls.hidden = !showTimeControls;
+
+  const label = document.createElement("span");
+  label.className = "entry-time-label";
+  label.textContent = "时间控制";
+
+  const range = document.createElement("input");
+  range.type = "range";
+  range.min = "0";
+  range.max = String(segments.length);
+  range.step = "1";
+  range.value = "0";
+  range.setAttribute("aria-label", "Banner 时间控制");
+  range.addEventListener("input", () => {
+    article.dataset.timeSelection = range.value;
+    const recordById = indexData?.records?.find(item => item.id === article.dataset.recordId);
+    if (recordById) updateEntrySelection(article, recordById);
+  });
+
+  const points = document.createElement("div");
+  points.className = "entry-time-points";
+  const pointLabels = ["实时", ...segments.map(segment => segment.label)];
+  pointLabels.forEach((text, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "entry-time-point";
+    button.dataset.timeSelection = String(index);
+    button.textContent = text;
+    button.setAttribute("aria-label", `选择${text}`);
+    button.addEventListener("click", () => {
+      article.dataset.timeSelection = String(index);
+      updateEntrySelection(article, record);
+    });
+    points.appendChild(button);
+  });
+
+  controls.append(label, range, points);
+  return controls;
+}
+
 function createEntry(record) {
   const article = document.createElement("article");
   const variant = selectedVariant(record);
   article.className = "entry";
   article.dataset.recordId = record.id;
   article.dataset.manifest = variant?.manifest || "";
+  article.dataset.timeSelection = "0";
   const head = document.createElement("div");
   head.className = "entry-head";
 
@@ -1095,7 +1179,13 @@ function createEntry(record) {
   banner.innerHTML = '<div class="stage"><div class="loading">载入中……</div></div>';
 
   head.append(date, meta);
-  article.append(head, banner);
+  article.append(head);
+  const controls = createTimeControls(record, article);
+  if (controls) {
+    article.appendChild(controls);
+    updateTimeControlVisual(article);
+  }
+  article.appendChild(banner);
   return article;
 }
 
@@ -1106,24 +1196,24 @@ function refreshTimedVariants() {
   for (const article of gallery.querySelectorAll(".entry")) {
     const record = recordsById.get(article.dataset.recordId);
     if (!record) continue;
-    const variant = selectedVariant(record);
-    const manifest = variant?.manifest || "";
-    if (!manifest || manifest === article.dataset.manifest) continue;
-
-    article.dataset.manifest = manifest;
-    article.dataset.loaded = "0";
-    article.querySelector(".entry-meta").textContent = recordMeta(record, variant);
-    article.querySelector(".entry-slots").textContent =
-      `时段：${formatSlotRanges(variant?.slots || []) || "未观测"}`;
-    article.querySelector(".stage").innerHTML = '<div class="loading">切换时段素材……</div>';
-
-    const bounds = article.getBoundingClientRect();
-    if (bounds.bottom >= -900 && bounds.top <= window.innerHeight + 900) {
-      loadEntry(article);
-    } else {
-      observer?.observe(article);
+    if (Number(article.dataset.timeSelection || 0) === 0) {
+      updateEntrySelection(article, record);
     }
   }
+}
+
+function resetTimeSelections() {
+  for (const article of gallery.querySelectorAll(".entry")) {
+    article.dataset.timeSelection = "0";
+    const record = indexData?.records?.find(item => item.id === article.dataset.recordId);
+    if (record) updateEntrySelection(article, record);
+  }
+}
+
+function updateTimeControlsVisibility() {
+  gallery.querySelectorAll(".entry-time-controls").forEach(controls => {
+    controls.hidden = !showTimeControls;
+  });
 }
 
 function setupObserver() {
@@ -1210,6 +1300,12 @@ function render() {
 yearSelect.addEventListener("change", render);
 monthSelect.addEventListener("change", render);
 seasonSelect.addEventListener("change", render);
+
+showTimeControlsToggle.addEventListener("change", () => {
+  showTimeControls = showTimeControlsToggle.checked;
+  if (!showTimeControls) resetTimeSelections();
+  updateTimeControlsVisibility();
+});
 
 resetButton.addEventListener("click", () => {
   yearSelect.value = "";

@@ -58,6 +58,15 @@ body { min-height: 100vh; }
   font-size: 13px;
 }
 
+.control-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.control-toggle input {
+  accent-color: #00aeec;
+}
+
 select, button {
   height: 34px;
   border: 1px solid #d9dde1;
@@ -116,6 +125,50 @@ main {
 .entry-meta {
   color: #9499a0;
   font-size: 12px;
+}
+
+.entry-time-controls {
+  display: grid;
+  grid-template-columns: auto minmax(160px, 360px);
+  align-items: center;
+  gap: 4px 12px;
+  width: min(100%, 620px);
+  margin: 7px 0 10px;
+  color: #61666d;
+  font-size: 12px;
+}
+
+.entry-time-label {
+  grid-row: 1 / span 2;
+  white-space: nowrap;
+}
+
+.entry-time-controls input[type="range"] {
+  width: 100%;
+  accent-color: #00aeec;
+}
+
+.entry-time-points {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  min-width: 0;
+}
+
+.entry-time-point {
+  height: auto;
+  padding: 2px 4px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #9499a0;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.entry-time-point.active {
+  background: #e5f7ff;
+  color: #00aeec;
 }
 
 .banner {

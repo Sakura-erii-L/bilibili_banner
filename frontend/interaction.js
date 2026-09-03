@@ -97,17 +97,49 @@ export function formatSlotRanges(values) {
 }
 
 export function formatVariantPeriods(record) {
-  const variants = Array.isArray(record?.variants) ? record.variants : [];
-  return variants
-    .map((variant, index) => ({
-      index,
-      firstSlot: variantSlots(variant)[0] ?? Number.POSITIVE_INFINITY,
-      text: formatSlotRanges(variantSlots(variant)).replace(/–/g, "~"),
-    }))
-    .filter(item => item.text)
-    .sort((left, right) => left.firstSlot - right.firstSlot || left.index - right.index)
-    .map(item => item.text)
+  return timeSegments(record)
+    .map(segment => segment.label)
     .join("，");
+}
+
+export function timeSegments(record) {
+  const variants = Array.isArray(record?.variants) ? record.variants : [];
+  const segments = [];
+  variants.forEach((variant, variantIndex) => {
+    const slots = variantSlots(variant);
+    let start = null;
+    let end = null;
+    const append = () => {
+      if (start === null || end === null) return;
+      const segmentSlots = [];
+      for (let slot = start; slot <= end; slot += 1) segmentSlots.push(slot);
+      segments.push({
+        id: `${variantIndex}-${start}-${end}`,
+        index: segments.length,
+        variant,
+        slots: segmentSlots,
+        firstSlot: start,
+        label: formatSlotRanges(segmentSlots).replace(/–/g, "~"),
+      });
+    };
+    for (const slot of slots) {
+      if (start === null) {
+        start = slot;
+        end = slot;
+      } else if (slot === end + 1) {
+        end = slot;
+      } else {
+        append();
+        start = slot;
+        end = slot;
+      }
+    }
+    append();
+  });
+  return segments
+    .filter(segment => segment.label)
+    .sort((left, right) => left.firstSlot - right.firstSlot || left.index - right.index)
+    .map((segment, index) => ({ ...segment, index }));
 }
 
 export function cyclicMinuteDistance(a, b) {
@@ -119,7 +151,7 @@ export function selectTimedVariant(
   record,
   date = new Date(),
   timeZone = "Asia/Shanghai",
-  options = {},
+  _options = {},
 ) {
   const variants = Array.isArray(record?.variants) ? record.variants : [];
   if (!variants.length) return null;
@@ -127,18 +159,16 @@ export function selectTimedVariant(
   const matching = variants.filter(variant => variantSlots(variant).includes(currentSlot));
   if (!matching.length) return null;
 
-  const supportsInteractive = options.supportsInteractive === true;
-  const preferred = supportsInteractive
-    ? matching.filter(variant => variant.referenceMode === "interactive")
-    : matching.filter(variant => variant.referenceMode !== "interactive");
-  if (!supportsInteractive && !preferred.length
-      && matching.some(variant => variant.referenceMode === "interactive")) {
-    return null;
-  }
-  const candidates = preferred.length ? preferred : matching;
-  return candidates.sort((left, right) =>
-    String(right.capturedAt || "").localeCompare(String(left.capturedAt || ""))
-  )[0];
+  return matching.sort((left, right) => {
+    const leftInteractive = left.interactionState === "interactive"
+      || left.referenceMode === "interactive"
+      || (Array.isArray(left.type) && left.type.includes("interactive"));
+    const rightInteractive = right.interactionState === "interactive"
+      || right.referenceMode === "interactive"
+      || (Array.isArray(right.type) && right.type.includes("interactive"));
+    if (leftInteractive !== rightInteractive) return rightInteractive - leftInteractive;
+    return String(right.capturedAt || "").localeCompare(String(left.capturedAt || ""));
+  })[0];
 }
 
 function cubicBezierCoordinate(t, p1, p2) {
