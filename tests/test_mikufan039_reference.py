@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import io
 import json
 import tempfile
 import unittest
@@ -212,6 +213,45 @@ class MikuFan039ReferenceTests(unittest.TestCase):
                                 '"skipGpuCheck":true'
                             ) >= 0
                         )
+            finally:
+                capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR = original
+
+    def test_reference_import_skips_existing_commit_observations(self) -> None:
+        root = self.make_repository()
+        original = (capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR)
+        with tempfile.TemporaryDirectory() as data_dir:
+            data = Path(data_dir)
+            capture.DATA_DIR = data
+            capture.ARCHIVE_DIR = data / "archive"
+            capture.CURRENT_DIR = data / "current"
+            try:
+                with mock.patch(
+                    "backend.wayback_import.subprocess.run",
+                    return_value=mock.Mock(stdout=DEFAULT_COMMIT),
+                ):
+                    first = wayback_import.import_reference_repository(
+                        root,
+                        start=dt.date(2022, 3, 1),
+                        end=dt.date(2022, 3, 2),
+                        commit=DEFAULT_COMMIT,
+                        force=False,
+                    )
+                    with mock.patch(
+                        "backend.wayback_import.core.archive_capture"
+                    ) as archive_capture, mock.patch(
+                        "sys.stdout", new_callable=io.StringIO
+                    ) as output:
+                        second = wayback_import.import_reference_repository(
+                            root,
+                            start=dt.date(2022, 3, 1),
+                            end=dt.date(2022, 3, 2),
+                            commit=DEFAULT_COMMIT,
+                            force=False,
+                        )
+                self.assertEqual(second, first)
+                archive_capture.assert_not_called()
+                self.assertIn("already imported reference observations", output.getvalue())
+                self.assertNotIn('"status": "unchanged"', output.getvalue())
             finally:
                 capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR = original
 

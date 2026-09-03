@@ -2518,6 +2518,14 @@ def _index_record_signature(record: dict[str, Any]) -> tuple[tuple[str, str], ..
     )
 
 
+def _index_record_variant_identities(record: dict[str, Any]) -> set[tuple[str, str]]:
+    return {
+        _index_variant_identity(variant)
+        for variant in record.get("variants") or []
+        if isinstance(variant, dict)
+    }
+
+
 def _merge_index_variants(
     left: list[dict[str, Any]],
     right: list[dict[str, Any]],
@@ -2598,7 +2606,16 @@ def _merge_consecutive_index_records(
         record["dateStart"] = start.isoformat()
         record["dateEnd"] = end.isoformat()
         previous = merged[-1] if merged else None
-        if previous and _index_record_signature(previous) == _index_record_signature(record):
+        previous_identities = (
+            _index_record_variant_identities(previous) if previous else set()
+        )
+        record_identities = _index_record_variant_identities(record)
+        can_merge_variants = bool(previous_identities and record_identities) and (
+            _index_record_signature(previous) == _index_record_signature(record)
+            or previous_identities < record_identities
+            or record_identities < previous_identities
+        )
+        if previous and can_merge_variants:
             try:
                 previous_end = dt.date.fromisoformat(
                     str(previous.get("dateEnd") or previous.get("date") or "")

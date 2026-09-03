@@ -2682,6 +2682,32 @@ def discover_palxiao_snapshots(
     return snapshots
 
 
+def imported_reference_observations(
+    reference_commit: str,
+) -> set[tuple[str, dt.date]]:
+    imported: set[tuple[str, dt.date]] = set()
+    for _, manifest in core.iter_archive_manifests():
+        manifest_source = manifest.get("source")
+        fallback_source = manifest_source if isinstance(manifest_source, dict) else {}
+        for observation in core.manifest_observations(manifest):
+            observation_source = observation.get("source")
+            source = dict(fallback_source)
+            if isinstance(observation_source, dict):
+                source.update(observation_source)
+            if str(source.get("referenceCommit") or "") != reference_commit:
+                continue
+            reference_id = str(source.get("referenceId") or "")
+            if not reference_id:
+                continue
+            date_text = str(observation.get("date") or "")
+            try:
+                date = dt.date.fromisoformat(date_text)
+            except ValueError:
+                continue
+            imported.add((reference_id, date))
+    return imported
+
+
 def import_reference_repository(
     root: Path,
     *,
@@ -2706,8 +2732,21 @@ def import_reference_repository(
     core.ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     repository = ReferenceRepository(root, commit=commit, time_zone=core.TIMEZONE)
     covered_dates: set[dt.date] = set()
+    imported = (
+        imported_reference_observations(commit)
+        if not force
+        else set()
+    )
+    skipped_existing = 0
+    skipped_unchanged = 0
     for entry in repository.covered_entries(start, end):
-        dates = list(repository.iter_dates(entry, start, end))
+        dates = []
+        for date in repository.iter_dates(entry, start, end):
+            covered_dates.add(date)
+            if (entry.reference_id, date) in imported:
+                skipped_existing += 1
+                continue
+            dates.append(date)
         if not dates:
             continue
         temp = Path(tempfile.mkdtemp(prefix=".mikufan039_reference_", dir=core.DATA_DIR))
@@ -2734,7 +2773,9 @@ def import_reference_repository(
                     slots=manifest.get("slots"),
                     family_id=family_id,
                 )
-                covered_dates.add(date)
+                if result["status"] == "unchanged":
+                    skipped_unchanged += 1
+                    continue
                 print(
                     json.dumps(
                         {
@@ -2749,6 +2790,10 @@ def import_reference_repository(
                 )
         finally:
             shutil.rmtree(temp, ignore_errors=True)
+    if skipped_existing:
+        print(f"Skipped {skipped_existing} already imported reference observations.")
+    if skipped_unchanged:
+        print(f"Skipped {skipped_unchanged} unchanged reference observations.")
     return covered_dates
 
 
@@ -3225,6 +3270,7 @@ def main() -> None:
 
     results: list[dict[str, Any]] = []
     failures: list[dict[str, str]] = []
+    unchanged_results = 0
     actions_since_checkpoint = 0
     changed_since_checkpoint = 0
     processed = 0
@@ -3251,9 +3297,13 @@ def main() -> None:
 
         try:
             results.append(result)
+            status = str(result.get("status") or "")
+            if status == "unchanged":
+                unchanged_results += 1
+                continue
             print(json.dumps(result, ensure_ascii=False))
             actions_since_checkpoint += 1
-            if result["status"] in {"created", "updated"}:
+            if status in {"created", "updated"}:
                 changed_since_checkpoint += 1
         except Exception as exc:
             failure = {
@@ -3297,6 +3347,8 @@ def main() -> None:
         "failed": len(failures),
         "failures": failures,
     }
+    if unchanged_results:
+        print(f"Skipped {unchanged_results} unchanged Wayback captures.")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     if not results:
         raise SystemExit(1)

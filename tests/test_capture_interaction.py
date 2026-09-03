@@ -410,6 +410,74 @@ class TimedVariantIndexTests(unittest.TestCase):
             all(record["contentHash"] == "same-physical-asset" for record in index["records"])
         )
 
+    def test_subset_banner_set_merges_into_adjacent_date_range(self) -> None:
+        manifests = (
+            ("subset-day-one-a", "2020-01-01", "family-2020-01-01", "banner-a", list(range(8))),
+            ("subset-day-two-a", "2020-01-02", "family-2020-01-02", "banner-a", list(range(4))),
+            ("subset-day-two-b", "2020-01-02", "family-2020-01-02", "banner-b", list(range(4, 8))),
+        )
+        for folder_name, date, family_id, content_hash, slots in manifests:
+            folder = capture.ARCHIVE_DIR / folder_name
+            folder.mkdir()
+            manifest = {
+                "version": 11.0,
+                "date": date,
+                "season": "winter",
+                "capturedAt": f"{date}T08:00:00+08:00",
+                "lastObservedAt": f"{date}T08:00:00+08:00",
+                "mode": "static",
+                "static": {"file": f"{content_hash}.png"},
+                "layers": [],
+                "contentHash": content_hash,
+                "familyId": family_id,
+                "slots": slots,
+                "timeZone": "Asia/Shanghai",
+            }
+            (folder / "banner.json").write_text(
+                json.dumps(manifest),
+                encoding="utf-8",
+            )
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 1)
+        record = index["records"][0]
+        self.assertEqual(record["dateStart"], "2020-01-01")
+        self.assertEqual(record["dateEnd"], "2020-01-02")
+        self.assertEqual(
+            {variant["contentHash"] for variant in record["variants"]},
+            {"banner-a", "banner-b"},
+        )
+
+    def test_different_banner_sets_do_not_merge_across_dates(self) -> None:
+        for index, (date, content_hash) in enumerate(
+            (("2020-01-01", "banner-a"), ("2020-01-02", "banner-b"))
+        ):
+            folder = capture.ARCHIVE_DIR / f"different-set-{index}"
+            folder.mkdir()
+            manifest = {
+                "version": 11.0,
+                "date": date,
+                "season": "winter",
+                "capturedAt": f"{date}T08:00:00+08:00",
+                "lastObservedAt": f"{date}T08:00:00+08:00",
+                "mode": "static",
+                "static": {"file": f"{content_hash}.png"},
+                "layers": [],
+                "contentHash": content_hash,
+                "familyId": f"family-{date}",
+                "slots": list(range(8)),
+                "timeZone": "Asia/Shanghai",
+            }
+            (folder / "banner.json").write_text(
+                json.dumps(manifest),
+                encoding="utf-8",
+            )
+
+        capture.rebuild_index()
+        index = json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(index["records"]), 2)
+
     def test_same_asset_bridges_a_completely_missing_date(self) -> None:
         folder = capture.ARCHIVE_DIR / "nonconsecutive"
         folder.mkdir()
