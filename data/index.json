@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T13:01:19+08:00",
+  "generatedAt": "2026-09-03T13:02:21+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2959,7 +2959,7 @@
       ],
       "contentHash": "5ab5b8f97ffc7f5d5c12051d",
       "manifest": "./data/archive/2019-01-24_125920_5ab5b8f97ffc7f5d5c12051d/banner.json",
-      "variantCount": 5,
+      "variantCount": 6,
       "variants": [
         {
           "contentHash": "b909369a86bdb63881c16c92",
@@ -3034,6 +3034,31 @@
             7
           ],
           "manifest": "./data/archive/2019-01-20_001234_40b11b1dc46a6ae35d341dbd/banner.json"
+        },
+        {
+          "contentHash": "67c2dba644a9f482b753c023",
+          "canonicalContentHash": "10f04617ab6628168322cb1b",
+          "sourceFingerprint": "64c373fbe0063645a08693e7",
+          "capturedAt": "2019-01-21T12:42:14+08:00",
+          "lastObservedAt": "2019-01-21T12:42:14+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20190121044214id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190121044214id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190121044214id_/https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/08f98bb10251bb89461c0f3d50c864327b1ac05d.png: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-21_124214_67c2dba644a9f482b753c023/banner.json"
         },
         {
           "contentHash": "34f7ed6e4b30689f42c71df5",
