@@ -392,6 +392,8 @@
   "layoutHash": "3f4544a6cbd458b81c5e471b",
   "familyId": "2019-02-11_3f4544a6cbd4",
   "slots": [
+    0,
+    1,
     2,
     3,
     4,
@@ -406,6 +408,8 @@
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "slots": [
+        0,
+        1,
         2,
         3,
         4,
