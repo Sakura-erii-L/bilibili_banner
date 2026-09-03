@@ -724,15 +724,38 @@ def discover_snapshots(
     return [snapshots[key] for key in sorted(snapshots)]
 
 
+def _missing_asset_is_optional(value: Any) -> bool:
+    text = str(value or "").strip().lower()
+    return text.startswith("auxiliary_") or text.startswith("video poster preview")
+
+
+def _interaction_is_unconfirmed(manifest: dict[str, Any]) -> bool:
+    interaction = manifest.get("interaction") or {}
+    effects = interaction.get("effects")
+    signals = (manifest.get("structureEvidence") or {}).get("signals") or {}
+    has_interaction = bool(signals.get("hasInteraction")) or bool(
+        manifest.get("interactionState") == "interactive"
+    ) or "interactive" in core.manifest_types(manifest) or bool(effects)
+    return has_interaction and (
+        not isinstance(effects, list) or not effects
+    )
+
+
 def archive_is_reusable(folder: Path, manifest: dict[str, Any]) -> bool:
-    if manifest.get("completeness") == "partial":
+    # Keep the same primary-image/layer safety gate as the derived index.
+    if not core._index_visual_merge_safe(manifest):
         return False
-    if manifest.get("missing_assets"):
+    missing = manifest.get("missing_assets") or []
+    if any(not _missing_asset_is_optional(item) for item in missing):
+        return False
+    if _interaction_is_unconfirmed(manifest):
         return False
     assets = manifest.get("assets")
     if isinstance(assets, list):
         for asset in assets:
             if not isinstance(asset, dict):
+                continue
+            if str(asset.get("role") or "").lower() == "auxiliary":
                 continue
             local_file = str(asset.get("local_file") or "")
             if local_file and not (folder / local_file).is_file():

@@ -54,6 +54,64 @@ class WaybackImportTests(unittest.TestCase):
                 )
             )
 
+    def test_archive_with_only_auxiliary_missing_is_reusable(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "static.png").write_bytes(b"primary")
+            manifest = {
+                "mode": "static",
+                "type": ["static"],
+                "static": {"file": "static.png"},
+                "layers": [],
+                "interaction": {"model": "none", "effects": []},
+                "structureEvidence": {"root": {"tag": "img"}, "signals": {}},
+                "completeness": "partial",
+                "missing_assets": ["auxiliary_000: optional logo unavailable"],
+                "assets": [
+                    {"role": "primary", "local_file": "static.png"},
+                    {"role": "auxiliary", "local_file": "logo.png"},
+                ],
+            }
+            self.assertTrue(wayback_import.archive_is_reusable(root, manifest))
+
+    def test_archive_with_missing_required_asset_is_not_reusable(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "static.png").write_bytes(b"primary")
+            manifest = {
+                "mode": "static",
+                "type": ["static"],
+                "static": {"file": "static.png"},
+                "layers": [],
+                "interaction": {"model": "none", "effects": []},
+                "structureEvidence": {"root": {"tag": "img"}, "signals": {}},
+                "completeness": "partial",
+                "missing_assets": ["static: primary asset unavailable"],
+                "assets": [{"role": "primary", "local_file": "static.png"}],
+            }
+            self.assertFalse(wayback_import.archive_is_reusable(root, manifest))
+
+    def test_archive_with_unconfirmed_interaction_is_not_reusable(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "static.png").write_bytes(b"primary")
+            manifest = {
+                "mode": "static",
+                "type": ["static", "interactive"],
+                "static": {"file": "static.png"},
+                "layers": [],
+                "interaction": {"model": "none", "effects": []},
+                "interactionState": "interactive",
+                "structureEvidence": {
+                    "root": {"tag": "img"},
+                    "signals": {"hasInteraction": True},
+                },
+                "completeness": "complete",
+                "missing_assets": [],
+                "assets": [{"role": "primary", "local_file": "static.png"}],
+            }
+            self.assertFalse(wayback_import.archive_is_reusable(root, manifest))
+
     def test_checkpoint_script_receives_progress_environment(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             script = Path(temp) / "checkpoint.py"
