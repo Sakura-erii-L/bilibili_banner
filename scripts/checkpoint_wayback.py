@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import subprocess
+import sys
 
 
 def run(command: list[str], *, check: bool = True) -> subprocess.CompletedProcess[str]:
@@ -33,6 +34,7 @@ def main() -> None:
     changed = os.environ.get("WAYBACK_CHECKPOINT_CHANGED", "0")
     final = os.environ.get("WAYBACK_CHECKPOINT_FINAL") == "1"
 
+    run([sys.executable, "backend/capture.py", "--rebuild-index"])
     run(["git", "add", "--", "data"])
     if not has_staged_data_changes():
         print("Wayback checkpoint: no data changes to commit.", flush=True)

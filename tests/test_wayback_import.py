@@ -1296,6 +1296,12 @@ class WaybackImportTests(unittest.TestCase):
         pages = Path(".github/workflows/pages.yml").read_text(encoding="utf-8")
         self.assertIn("group: bilibili-banner-pages", pages)
         self.assertIn("cancel-in-progress: false", pages)
+        self.assertIn("python backend/capture.py --rebuild-index", pages)
+        daily = Path(".github/workflows/daily-update.yml").read_text(encoding="utf-8")
+        self.assertIn("python backend/capture.py --rebuild-index", daily)
+        checkpoint = Path("scripts/checkpoint_wayback.py").read_text(encoding="utf-8")
+        self.assertIn("backend/capture.py", checkpoint)
+        self.assertIn("--rebuild-index", checkpoint)
         self.assertIn('WAYBACK_REQUEST_DELAY: "0.6"', wayback)
         self.assertIn('WAYBACK_WORKERS: "3"', wayback)
 
