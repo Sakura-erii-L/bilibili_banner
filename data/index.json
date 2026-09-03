@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-03T13:02:46+08:00",
+  "generatedAt": "2026-09-03T13:10:19+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2889,6 +2889,79 @@
       ]
     },
     {
+      "id": "2019-01-27_3f4544a6cbd4",
+      "date": "2019-01-27",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "01",
+      "yearMonth": "2019-01",
+      "dateStart": "2019-01-27",
+      "dateEnd": "2019-01-28",
+      "capturedAt": "2019-01-29T10:41:39+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "2148dc674cea70297dc8b81a",
+      "manifest": "./data/archive/2019-01-29_104139_2148dc674cea70297dc8b81a/banner.json",
+      "variantCount": 2,
+      "variants": [
+        {
+          "contentHash": "32cdbcecfb6ee23342991335",
+          "canonicalContentHash": "fee80e7cec4e477f7ecfc3c6",
+          "sourceFingerprint": "a93f3ac43c3ba2c2abecb010",
+          "capturedAt": "2019-01-27T09:36:45+08:00",
+          "lastObservedAt": "2019-01-27T09:36:45+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-27_093645_32cdbcecfb6ee23342991335/banner.json"
+        },
+        {
+          "contentHash": "2148dc674cea70297dc8b81a",
+          "canonicalContentHash": "fc4e0d378fed2d24a6155552",
+          "sourceFingerprint": "1676aa79b095310f68c90dad",
+          "capturedAt": "2019-01-29T10:41:39+08:00",
+          "lastObservedAt": "2019-01-29T10:41:39+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-29_104139_2148dc674cea70297dc8b81a/banner.json"
+        }
+      ]
+    },
+    {
       "id": "2019-01-26_3f4544a6cbd4",
       "date": "2019-01-26",
       "season": "winter",
@@ -2908,7 +2981,7 @@
       "missing_assets": [],
       "contentHash": "beb1cc3fd1845fb3d4483b8d",
       "manifest": "./data/archive/2019-01-27_093645_beb1cc3fd1845fb3d4483b8d/banner.json",
-      "variantCount": 1,
+      "variantCount": 2,
       "variants": [
         {
           "contentHash": "beb1cc3fd1845fb3d4483b8d",
@@ -2934,6 +3007,33 @@
             7
           ],
           "manifest": "./data/archive/2019-01-27_093645_beb1cc3fd1845fb3d4483b8d/banner.json"
+        },
+        {
+          "contentHash": "32cdbcecfb6ee23342991335",
+          "canonicalContentHash": "fee80e7cec4e477f7ecfc3c6",
+          "sourceFingerprint": "a93f3ac43c3ba2c2abecb010",
+          "capturedAt": "2019-01-27T09:36:45+08:00",
+          "lastObservedAt": "2019-01-27T09:36:45+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190127013645id_/https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: <urlopen error timed out>; https://i0.hdslb.com/bfs/archive/86ebed2e57b7b0e31f4868d842f728462b9833b7.png: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-01-27_093645_32cdbcecfb6ee23342991335/banner.json"
         }
       ]
     },
