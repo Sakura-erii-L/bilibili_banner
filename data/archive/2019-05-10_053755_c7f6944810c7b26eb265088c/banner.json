@@ -1,0 +1,485 @@
+{
+  "version": 11.0,
+  "capturedAt": "2019-05-10T05:37:55+08:00",
+  "date": "2019-05-09",
+  "season": "spring",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://web.archive.org/web/20190509213755id_/https://www.bilibili.com/",
+    "captureMethod": "wayback-http-html-css",
+    "provider": "wayback-html",
+    "waybackTimestamp": "20190509213755",
+    "homepageWaybackTimestamp": "20190509213755",
+    "waybackReplay": "https://web.archive.org/web/20190509213755id_/https://www.bilibili.com/",
+    "availabilityUrl": "",
+    "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190504160000&to=20190604155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+    "discoveredResources": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+        "initiatorType": "html-style"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "initiatorType": "html-style"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.cf23ce5f8ee42543b7ace6018adfb7cbae031573.css"
+    ],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "wayback-html",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {},
+  "mode": "static",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+    "requestedSrc": "https://web.archive.org/web/20190509213755id_/https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+    "normalizedIdentity": "https://web.archive.org/web/20190509213755id_/https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+    "file": "static.png",
+    "contentType": "image/png",
+    "tag": "img",
+    "assetType": "image"
+  },
+  "preview_image": null,
+  "layers": [],
+  "auxiliaryAssets": [
+    {
+      "src": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+      "requestedSrc": "https://web.archive.org/web/20190509213755id_/https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+      "normalizedIdentity": "https://web.archive.org/web/20190509213755id_/https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+      "file": "auxiliary_00.png",
+      "contentType": "image/png",
+      "tag": "img",
+      "assetType": "image",
+      "role": "auxiliary",
+      "origin": {
+        "nodeTag": "a",
+        "nodeId": "",
+        "nodeClass": "head-logo",
+        "selector": "",
+        "depthFromRoot": 2,
+        "pseudoElement": ""
+      },
+      "score": 0,
+      "reasons": [
+        "inline background-image",
+        "auxiliary UI-like node"
+      ]
+    }
+  ],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "observed",
+    "effects": []
+  },
+  "sourceFiles": {
+    "page": "source/page.html",
+    "stylesheet00": "source/stylesheet_00.css"
+  },
+  "sourceEvidence": {
+    "root": {
+      "source": "wayback-http-html-css",
+      "tag": "div",
+      "id": "banner_link",
+      "className": "head-banner report-wrap-module report-scroll-module",
+      "score": 180,
+      "reasons": [
+        "exact id #banner_link",
+        "class .head-banner"
+      ]
+    },
+    "layerCount": 0,
+    "mediaCount": 2,
+    "visibleMediaCount": 1,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+        "sourceKind": "html-style"
+      },
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "sourceKind": "html-style"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+        "initiatorType": "html-style"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "initiatorType": "html-style"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.cf23ce5f8ee42543b7ace6018adfb7cbae031573.css"
+    ],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "selectedRoot": {
+      "tag": "div",
+      "id": "banner_link",
+      "className": "head-banner report-wrap-module report-scroll-module",
+      "score": 180,
+      "reasons": [
+        "exact id #banner_link",
+        "class .head-banner"
+      ]
+    },
+    "roots": [
+      {
+        "tag": "div",
+        "id": "banner_link",
+        "className": "head-banner report-wrap-module report-scroll-module",
+        "score": 300,
+        "rootScore": 180,
+        "resourceScore": 120,
+        "reasons": [
+          "exact id #banner_link",
+          "class .head-banner"
+        ],
+        "candidateCount": 2
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "className": "banner-link",
+        "score": 125,
+        "rootScore": 125,
+        "resourceScore": 0,
+        "reasons": [
+          "class .banner-link"
+        ],
+        "candidateCount": 0
+      }
+    ],
+    "primary": {
+      "src": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+      "tag": "img",
+      "sourceKind": "html-style",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+      "role": "primary",
+      "origin": {
+        "nodeTag": "div",
+        "nodeId": "banner_link",
+        "nodeClass": "head-banner report-wrap-module report-scroll-module",
+        "selector": "",
+        "depthFromRoot": 0,
+        "pseudoElement": ""
+      },
+      "score": 120,
+      "reasons": [
+        "inline background-image"
+      ]
+    },
+    "auxiliaryAssets": [
+      {
+        "src": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "tag": "img",
+        "sourceKind": "html-style",
+        "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "role": "auxiliary",
+        "origin": {
+          "nodeTag": "a",
+          "nodeId": "",
+          "nodeClass": "head-logo",
+          "selector": "",
+          "depthFromRoot": 2,
+          "pseudoElement": ""
+        },
+        "score": 0,
+        "reasons": [
+          "inline background-image",
+          "auxiliary UI-like node"
+        ]
+      }
+    ],
+    "strongLayerEvidence": false
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2019-05-10T05:37:55+08:00",
+  "type": [
+    "static"
+  ],
+  "is_split_layer": false,
+  "fallback_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "wayback-http-html-css",
+      "tag": "div",
+      "id": "banner_link",
+      "className": "head-banner report-wrap-module report-scroll-module",
+      "score": 180,
+      "reasons": [
+        "exact id #banner_link",
+        "class .head-banner"
+      ]
+    },
+    "layerCount": 0,
+    "mediaCount": 2,
+    "visibleMediaCount": 1,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+        "sourceKind": "html-style"
+      },
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "sourceKind": "html-style"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+        "initiatorType": "html-style"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "initiatorType": "html-style"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.cf23ce5f8ee42543b7ace6018adfb7cbae031573.css"
+    ],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "selectedRoot": {
+      "tag": "div",
+      "id": "banner_link",
+      "className": "head-banner report-wrap-module report-scroll-module",
+      "score": 180,
+      "reasons": [
+        "exact id #banner_link",
+        "class .head-banner"
+      ]
+    },
+    "roots": [
+      {
+        "tag": "div",
+        "id": "banner_link",
+        "className": "head-banner report-wrap-module report-scroll-module",
+        "score": 300,
+        "rootScore": 180,
+        "resourceScore": 120,
+        "reasons": [
+          "exact id #banner_link",
+          "class .head-banner"
+        ],
+        "candidateCount": 2
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "className": "banner-link",
+        "score": 125,
+        "rootScore": 125,
+        "resourceScore": 0,
+        "reasons": [
+          "class .banner-link"
+        ],
+        "candidateCount": 0
+      }
+    ],
+    "primary": {
+      "src": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+      "tag": "img",
+      "sourceKind": "html-style",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+      "role": "primary",
+      "origin": {
+        "nodeTag": "div",
+        "nodeId": "banner_link",
+        "nodeClass": "head-banner report-wrap-module report-scroll-module",
+        "selector": "",
+        "depthFromRoot": 0,
+        "pseudoElement": ""
+      },
+      "score": 120,
+      "reasons": [
+        "inline background-image"
+      ]
+    },
+    "auxiliaryAssets": [
+      {
+        "src": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "tag": "img",
+        "sourceKind": "html-style",
+        "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+        "role": "auxiliary",
+        "origin": {
+          "nodeTag": "a",
+          "nodeId": "",
+          "nodeClass": "head-logo",
+          "selector": "",
+          "depthFromRoot": 2,
+          "pseudoElement": ""
+        },
+        "score": 0,
+        "reasons": [
+          "inline background-image",
+          "auxiliary UI-like node"
+        ]
+      }
+    ],
+    "strongLayerEvidence": false
+  },
+  "assets": [
+    {
+      "role": "primary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+      "local_file": "static.png",
+      "content_type": "image/png",
+      "sha256": "5b02325794f7d05763e6569e2a3c566dc92471990ab6cd841f9428ba8be2e56b"
+    },
+    {
+      "role": "auxiliary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+      "local_file": "auxiliary_00.png",
+      "content_type": "image/png",
+      "sha256": "d387ef61dfb744d2161d9e2ed82b51816e7f303819a6bb5574e9cd928177c2e4"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "c7f6944810c7b26eb265088c",
+  "hashes": {
+    "resourceHash": "ef347b8a5056f3a75bcf662a",
+    "structureHash": "cbe0fe19d14d9249f36d6ad8",
+    "interactionHash": "6c68677a1adc299d5af3bb4d",
+    "contentHash": "c7f6944810c7b26eb265088c",
+    "canonicalContentHash": "d4e264492687b3f67aabf178",
+    "sourceFingerprint": "6b97dd7c12a1a79d944a49e9"
+  },
+  "canonicalContentHash": "d4e264492687b3f67aabf178",
+  "sourceFingerprint": "6b97dd7c12a1a79d944a49e9",
+  "interactionState": "nonInteractive",
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2019-05-09_3f4544a6cbd4",
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "observations": [
+    {
+      "capturedAt": "2019-05-10T05:37:55+08:00",
+      "lastObservedAt": "2019-05-10T05:37:55+08:00",
+      "date": "2019-05-09",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        6,
+        7
+      ],
+      "familyId": "2019-05-09_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190509213755id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190509213755",
+        "homepageWaybackTimestamp": "20190509213755",
+        "waybackReplay": "https://web.archive.org/web/20190509213755id_/https://www.bilibili.com/",
+        "availabilityUrl": "",
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190504160000&to=20190604155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.cf23ce5f8ee42543b7ace6018adfb7cbae031573.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-05-10T05:37:55+08:00",
+      "lastObservedAt": "2019-05-10T05:37:55+08:00",
+      "date": "2019-05-10",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "familyId": "2019-05-10_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190509213755id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190509213755",
+        "homepageWaybackTimestamp": "20190509213755",
+        "waybackReplay": "https://web.archive.org/web/20190509213755id_/https://www.bilibili.com/",
+        "availabilityUrl": "",
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190504160000&to=20190604155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/33e6d2482b9eb67362d2be4e9311503c23a510dd.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/32ef25b2eb50cc103f02a18927c3a306a257e455.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.cf23ce5f8ee42543b7ace6018adfb7cbae031573.css"
+        ],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
