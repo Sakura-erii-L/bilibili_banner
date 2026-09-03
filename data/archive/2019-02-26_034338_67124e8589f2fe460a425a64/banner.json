@@ -219,7 +219,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-04-11T04:31:18+08:00",
+  "lastObservedAt": "2019-04-11T17:50:13+08:00",
   "type": [
     "static"
   ],
@@ -1757,7 +1757,9 @@
         0,
         1,
         2,
-        3
+        3,
+        4,
+        5
       ],
       "familyId": "2019-04-11_3f4544a6cbd4",
       "source": {
