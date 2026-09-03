@@ -449,5 +449,6 @@
         "scriptUrls": []
       }
     }
-  ]
+  ],
+  "interactionState": "nonInteractive"
 }
