@@ -860,7 +860,8 @@
       "timeZone": "Asia/Shanghai",
       "slots": [
         2,
-        3
+        3,
+        7
       ],
       "familyId": "2019-01-18_3f4544a6cbd4",
       "source": {
@@ -896,6 +897,8 @@
       "season": "winter",
       "timeZone": "Asia/Shanghai",
       "slots": [
+        0,
+        1,
         2,
         3,
         4
