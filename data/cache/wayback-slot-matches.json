@@ -40008,21 +40008,6 @@
       }
     },
     "2019-07-01": {
-      "0": {
-        "status": "filled",
-        "source": "index",
-        "updatedAt": "2026-09-04T13:55:17+08:00"
-      },
-      "1": {
-        "status": "filled",
-        "source": "index",
-        "updatedAt": "2026-09-04T13:55:17+08:00"
-      },
-      "2": {
-        "status": "filled",
-        "source": "index",
-        "updatedAt": "2026-09-04T13:55:17+08:00"
-      },
       "3": {
         "status": "filled",
         "source": "index",
@@ -40039,6 +40024,21 @@
         "updatedAt": "2026-09-04T13:55:17+08:00"
       },
       "6": {
+        "status": "filled",
+        "source": "index",
+        "updatedAt": "2026-09-04T13:55:17+08:00"
+      },
+      "0": {
+        "status": "filled",
+        "source": "index",
+        "updatedAt": "2026-09-04T13:55:17+08:00"
+      },
+      "1": {
+        "status": "filled",
+        "source": "index",
+        "updatedAt": "2026-09-04T13:55:17+08:00"
+      },
+      "2": {
         "status": "filled",
         "source": "index",
         "updatedAt": "2026-09-04T13:55:17+08:00"

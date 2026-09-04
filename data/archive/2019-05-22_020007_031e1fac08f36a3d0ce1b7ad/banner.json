@@ -219,7 +219,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-07-01T08:04:04+08:00",
+  "lastObservedAt": "2019-07-01T20:10:53+08:00",
   "type": [
     "static"
   ],
@@ -1435,7 +1435,8 @@
       "season": "summer",
       "timeZone": "Asia/Shanghai",
       "slots": [
-        2
+        2,
+        6
       ],
       "familyId": "2019-07-01_3f4544a6cbd4",
       "source": {
