@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-04T16:36:10+08:00",
+  "generatedAt": "2026-09-04T16:42:11+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2480,6 +2480,75 @@
       ]
     },
     {
+      "id": "2019-07-22_3f4544a6cbd4_e88bee5c2f95",
+      "date": "2019-07-22",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2019",
+      "month": "07",
+      "yearMonth": "2019-07",
+      "dateStart": "2019-07-22",
+      "dateEnd": "2019-07-23",
+      "capturedAt": "2019-07-23T05:16:25+08:00",
+      "mode": "static",
+      "type": [
+        "static"
+      ],
+      "layerCount": 0,
+      "completeness": "partial",
+      "missing_assets": [
+        "auxiliary_000: https://web.archive.org/web/20190722211625id_/https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190722211625id_/https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190722211625id_/https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "2bf3f555b583f38cbb8a906a",
+      "manifest": "./data/archive/2019-07-23_051625_2bf3f555b583f38cbb8a906a/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "2bf3f555b583f38cbb8a906a",
+          "canonicalContentHash": "e88bee5c2f953e0bfde7019b",
+          "sourceFingerprint": "b9dacb394471f1da54a62b30",
+          "capturedAt": "2019-07-23T05:16:25+08:00",
+          "lastObservedAt": "2019-07-23T05:16:25+08:00",
+          "mode": "static",
+          "type": [
+            "static"
+          ],
+          "layerCount": 0,
+          "completeness": "partial",
+          "missing_assets": [
+            "auxiliary_000: https://web.archive.org/web/20190722211625id_/https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190722211625id_/https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: HTTP Error 403: Forbidden; https://web.archive.org/web/20190722211625id_/https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: <urlopen error [Errno 111] Connection refused>; https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2019-07-23_051625_2bf3f555b583f38cbb8a906a/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "2bf3f555b583f38cbb8a906a",
+              "manifest": "./data/archive/2019-07-23_051625_2bf3f555b583f38cbb8a906a/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            7
+          ],
+          "slotFill": "same-day-forward-backward"
+        }
+      ]
+    },
+    {
       "id": "2019-07-22_3f4544a6cbd4_fe68c55f69b0",
       "date": "2019-07-22",
       "season": "summer",
@@ -2522,8 +2591,7 @@
             3,
             4,
             5,
-            6,
-            7
+            6
           ],
           "manifest": "./data/archive/2019-07-22_131647_269880d7ae51708ee9a39630/banner.json",
           "interactionState": "nonInteractive",
