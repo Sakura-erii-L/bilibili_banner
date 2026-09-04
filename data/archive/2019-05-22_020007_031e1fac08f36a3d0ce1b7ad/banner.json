@@ -219,7 +219,7 @@
     "strongLayerEvidence": false
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2019-06-16T06:02:16+08:00",
+  "lastObservedAt": "2019-06-17T07:44:58+08:00",
   "type": [
     "static"
   ],
@@ -1190,6 +1190,42 @@
         "waybackTimestamp": "20190615172811",
         "homepageWaybackTimestamp": "20190615172811",
         "waybackReplay": "https://web.archive.org/web/20190615172811id_/https://www.bilibili.com/",
+        "availabilityUrl": "",
+        "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190604160000&to=20190705155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/3329c9f0abfb925ae30441f24d924ad3c19775df.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/6592e92861e6248205af17702d06ea3f97d81de6.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.77c9355c7257fb8a725038c6c6727f157275bbff.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-06-17T07:44:58+08:00",
+      "lastObservedAt": "2019-06-17T07:44:58+08:00",
+      "date": "2019-06-17",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        2
+      ],
+      "familyId": "2019-06-17_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190616234458id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190616234458",
+        "homepageWaybackTimestamp": "20190616234458",
+        "waybackReplay": "https://web.archive.org/web/20190616234458id_/https://www.bilibili.com/",
         "availabilityUrl": "",
         "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190604160000&to=20190705155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
         "discoveredResources": [
