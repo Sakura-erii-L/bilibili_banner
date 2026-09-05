@@ -2840,7 +2840,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2026-09-05T19:15:12+08:00",
+  "lastObservedAt": "2026-09-06T00:02:23+08:00",
   "type": [
     "layered",
     "interactive"
@@ -3729,6 +3729,139 @@
         6
       ],
       "familyId": "2026-09-05_8d15a05ed0f2",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+        "captureMethod": "bilibili-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/060aabb9f1510f85d35291bb325cef439c515c7a.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/587d666b2e242d3c8bac6a3132401f48949c0623.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/d37a459df931a19029766a401696bf2049eb68b3.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/b437c98006d42b8bba029c155db2c8b669a8af4f.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/caf1c3b096a61a230d7a783bd7e08f42745b6706.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/b487ee14524c59cb805b9a954d226f36e7e9c803.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/757614ea36fb1544cb790c44da51b714451364f0.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/014a91614c869b05abdc6ef062b9f7c4333cd1af.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/c418010c5a5851be61609f126f4d15e96fa63776.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/24aa834d42d13922b066c20c140bac8ceb33dc3f.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/6e73660a07b754d5437e68e01195dee6a04cf4a8.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/e2172b4e09446930eba81328a220a62ad00ab307.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/19091569ac9b766687fca327d1d2f7312518edc1.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/e57c56053b84eac7822b14791e6a569f5837f17a.png",
+            "initiatorType": "header-api"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-09-06T00:02:23+08:00",
+      "lastObservedAt": "2026-09-06T00:02:23+08:00",
+      "date": "2026-09-06",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0
+      ],
+      "familyId": "2026-09-06_8d15a05ed0f2",
       "source": {
         "page": "https://www.bilibili.com/",
         "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
