@@ -548,6 +548,50 @@ class WaybackImportTests(unittest.TestCase):
             ],
         )
 
+    def test_same_day_asset_candidates_query_only_the_target_day(self) -> None:
+        src = "https://i0.hdslb.com/bfs/banner/example.webp"
+        payload = {
+            "captures": [
+                {
+                    "timestamp": "20210727113000",
+                    "original": src,
+                    "statuscode": "200",
+                },
+                {
+                    "timestamp": "20210727100000",
+                    "original": src,
+                    "statuscode": "403",
+                },
+                {
+                    "timestamp": "20210728000000",
+                    "original": src,
+                    "statuscode": "200",
+                },
+            ]
+        }
+        with mock.patch(
+            "backend.wayback_import.read_json",
+            return_value=payload,
+        ) as read_json:
+            candidates = wayback_import.same_day_archived_asset_candidates(
+                "20210727103704",
+                src,
+                "https://web.archive.org/web",
+                cdx_api="https://example.test/cdx",
+            )
+
+        self.assertEqual(
+            candidates,
+            [
+                "https://web.archive.org/web/20210727113000id_/"
+                "https://i0.hdslb.com/bfs/banner/example.webp",
+                src,
+            ],
+        )
+        query_url = read_json.call_args.args[0]
+        self.assertIn("from=20210727000000", query_url)
+        self.assertIn("to=20210727235959", query_url)
+
     def test_snapshot_observation_groups_keep_each_target_date(self) -> None:
         snapshot = {
             "timestamp": "20200102030405",

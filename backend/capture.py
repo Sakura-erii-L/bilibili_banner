@@ -944,6 +944,7 @@ def _build_api_layers(
     folder: Path,
     *,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
+    asset_url_retry_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
     before_request: Callable[[], None] | None = None,
 ) -> tuple[list[dict[str, Any]], list[str]]:
@@ -970,30 +971,40 @@ def _build_api_layers(
                     f"api_layer_{layer_index:03d}_resource_{resource_index:03d}: source missing"
                 )
                 continue
-            candidates = asset_url_candidates(original_src) if asset_url_candidates else [original_src]
             downloaded: dict[str, Any] | None = None
             last_error: Exception | None = None
-            for candidate in candidates:
-                identity = header_api.normalized_identity(candidate)
-                if identity in saved:
-                    downloaded = dict(saved[identity])
-                    downloaded["src"] = original_src
-                    downloaded["requestedSrc"] = candidate
-                    break
-                try:
-                    digest = hashlib.sha1(candidate.encode("utf-8")).hexdigest()[:10]
-                    downloaded = _download_http_asset(
-                        candidate,
-                        folder,
-                        f"api_layer_{layer_index:02d}_{resource_index:02d}_{digest}",
-                        referer=referer,
-                        before_request=before_request,
-                    )
-                    saved[identity] = dict(downloaded)
-                    downloaded["src"] = original_src
-                    break
-                except Exception as exc:
-                    last_error = exc
+
+            def try_candidates(candidates: Iterable[str]) -> None:
+                nonlocal downloaded, last_error
+                for candidate in candidates:
+                    identity = header_api.normalized_identity(candidate)
+                    if identity in saved:
+                        downloaded = dict(saved[identity])
+                        downloaded["src"] = original_src
+                        downloaded["requestedSrc"] = candidate
+                        return
+                    try:
+                        digest = hashlib.sha1(candidate.encode("utf-8")).hexdigest()[:10]
+                        downloaded = _download_http_asset(
+                            candidate,
+                            folder,
+                            f"api_layer_{layer_index:02d}_{resource_index:02d}_{digest}",
+                            referer=referer,
+                            before_request=before_request,
+                        )
+                        saved[identity] = dict(downloaded)
+                        downloaded["src"] = original_src
+                        return
+                    except Exception as exc:
+                        last_error = exc
+
+            try_candidates(
+                asset_url_candidates(original_src)
+                if asset_url_candidates
+                else [original_src]
+            )
+            if not downloaded and asset_url_retry_candidates:
+                try_candidates(asset_url_retry_candidates(original_src))
             if not downloaded:
                 missing.append(
                     f"api_layer_{layer_index:03d}_resource_{resource_index:03d}: {last_error}"
@@ -1064,6 +1075,7 @@ def _capture_fallback_asset(
     folder: Path,
     *,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
+    asset_url_retry_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
     before_request: Callable[[], None] | None = None,
 ) -> tuple[dict[str, Any] | None, list[str]]:
@@ -1091,6 +1103,26 @@ def _capture_fallback_asset(
             return item, []
         except Exception as exc:
             last_error = exc
+    if asset_url_retry_candidates:
+        for candidate in asset_url_retry_candidates(src):
+            try:
+                item = _download_http_asset(
+                    candidate,
+                    folder,
+                    "static",
+                    referer=referer,
+                    before_request=before_request,
+                )
+                item["src"] = src
+                item["sourceKind"] = "header-api-pic"
+                item["assetType"] = media_type(item["tag"], candidate, item["contentType"])
+                item["naturalWidth"] = 0
+                item["naturalHeight"] = 0
+                item["objectFit"] = "cover"
+                item["objectPosition"] = "50% 50%"
+                return item, []
+            except Exception as exc:
+                last_error = exc
     return None, [f"fallback pic: {last_error}"]
 
 
@@ -1099,6 +1131,7 @@ def _save_litpic(
     folder: Path,
     *,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
+    asset_url_retry_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
     before_request: Callable[[], None] | None = None,
 ) -> dict[str, Any] | None:
@@ -1119,6 +1152,20 @@ def _save_litpic(
             return item
         except Exception:
             continue
+    if asset_url_retry_candidates:
+        for candidate in asset_url_retry_candidates(src):
+            try:
+                item = _download_http_asset(
+                    candidate,
+                    folder,
+                    "litpic",
+                    referer=referer,
+                    before_request=before_request,
+                )
+                item["src"] = src
+                return item
+            except Exception:
+                continue
     return None
 
 
@@ -1131,6 +1178,7 @@ def capture_header_api_payload(
     record_observation: bool = True,
     source_extra: dict[str, Any] | None = None,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
+    asset_url_retry_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
     verify_report: dict[str, Any] | None = None,
     before_request: Callable[[], None] | None = None,
@@ -1156,6 +1204,7 @@ def capture_header_api_payload(
             api_data,
             temp,
             asset_url_candidates=asset_url_candidates,
+            asset_url_retry_candidates=asset_url_retry_candidates,
             referer=referer,
             before_request=before_request,
         )
@@ -1163,6 +1212,7 @@ def capture_header_api_payload(
             api_data,
             temp,
             asset_url_candidates=asset_url_candidates,
+            asset_url_retry_candidates=asset_url_retry_candidates,
             referer=referer,
             before_request=before_request,
         )
@@ -1171,6 +1221,7 @@ def capture_header_api_payload(
             api_data,
             temp,
             asset_url_candidates=asset_url_candidates,
+            asset_url_retry_candidates=asset_url_retry_candidates,
             referer=referer,
             before_request=before_request,
         )
@@ -1178,6 +1229,7 @@ def capture_header_api_payload(
             api_data,
             temp,
             asset_url_candidates=asset_url_candidates,
+            asset_url_retry_candidates=asset_url_retry_candidates,
             referer=referer,
             before_request=before_request,
         )
@@ -2273,6 +2325,7 @@ def _build_extension_assets(
     folder: Path,
     *,
     asset_url_candidates: Callable[[str], list[str]] | None = None,
+    asset_url_retry_candidates: Callable[[str], list[str]] | None = None,
     referer: str = SITE,
     before_request: Callable[[], None] | None = None,
 ) -> tuple[dict[str, Any], list[dict[str, Any]], list[str]]:
@@ -2306,6 +2359,21 @@ def _build_extension_assets(
                     break
                 except Exception as exc:
                     last_error = exc
+            if local is None and asset_url_retry_candidates:
+                for candidate in asset_url_retry_candidates(source):
+                    try:
+                        local = _download_http_asset(
+                            candidate,
+                            folder,
+                            stem,
+                            referer=referer,
+                            before_request=before_request,
+                        )
+                        local["src"] = source
+                        saved[identity] = local
+                        break
+                    except Exception as exc:
+                        last_error = exc
             if local is None:
                 missing.append(f"extension {'.'.join(path)}: {last_error}")
                 continue

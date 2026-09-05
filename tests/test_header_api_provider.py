@@ -135,8 +135,59 @@ class HeaderApiProviderTests(unittest.TestCase):
                 extension_resource = manifest["api"]["extensions"]["time"]["0"][0]["layers"][0]["resources"][0]
                 self.assertTrue(extension_resource["src"].startswith("extension_"))
                 self.assertTrue((Path(result["archive"]) / extension_resource["src"]).is_file())
+                self.assertEqual(audit(root)["issues"], [])
             finally:
                 capture.DATA_DIR, capture.ARCHIVE_DIR, capture.CURRENT_DIR = original
+
+    def test_api_layer_retries_same_day_candidates_after_primary_failure(self) -> None:
+        api_data = {
+            "layers": [{
+                "resources": [{"src": "https://i0.hdslb.com/bfs/banner/frame.webm"}],
+            }],
+        }
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp)
+            attempts: list[str] = []
+
+            def fake_download(src, target_folder, stem, **_kwargs):
+                attempts.append(src)
+                if src.endswith("/primary.webm"):
+                    raise OSError("primary replay failed")
+                filename = stem + ".webm"
+                (target_folder / filename).write_bytes(b"video")
+                return {
+                    "src": src,
+                    "requestedSrc": src,
+                    "normalizedIdentity": header_api.normalized_identity(src),
+                    "file": filename,
+                    "contentType": "video/webm",
+                    "tag": "video",
+                }
+
+            with mock.patch(
+                "backend.capture._download_http_asset",
+                side_effect=fake_download,
+            ):
+                layers, missing = capture._build_api_layers(
+                    api_data,
+                    folder,
+                    asset_url_candidates=lambda _src: [
+                        "https://web.archive.org/primary.webm"
+                    ],
+                    asset_url_retry_candidates=lambda _src: [
+                        "https://web.archive.org/same-day.webm"
+                    ],
+                )
+
+        self.assertEqual(
+            attempts,
+            [
+                "https://web.archive.org/primary.webm",
+                "https://web.archive.org/same-day.webm",
+            ],
+        )
+        self.assertEqual(len(layers), 1)
+        self.assertEqual(missing, [])
 
     def test_api_capture_keeps_layers_video_and_fallback_separate(self) -> None:
         api_data = header_api.parse_header_api(

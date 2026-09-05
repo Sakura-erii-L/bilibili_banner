@@ -1198,11 +1198,17 @@ def original_url_from_replay(src: str) -> str:
     return urllib.parse.unquote(match.group(1)) if match else src
 
 
-def archived_asset_candidates(timestamp: str, src: str, replay_base: str) -> list[str]:
+def archived_asset_candidates(
+    timestamp: str,
+    src: str,
+    replay_base: str,
+    *,
+    include_original: bool = True,
+) -> list[str]:
     original = original_url_from_replay(src)
     candidates = [archived_asset_url(timestamp, original, replay_base)]
     host = (urllib.parse.urlparse(original).hostname or "").lower()
-    if host.endswith((".hdslb.com", ".bilibili.com", ".bilivideo.com")):
+    if include_original and host.endswith((".hdslb.com", ".bilibili.com", ".bilivideo.com")):
         candidates.append(original)
     return list(dict.fromkeys(candidates))
 
@@ -1257,6 +1263,28 @@ def cdx_query_url(
     return f"{cdx_api.rstrip('?')}?{query}"
 
 
+def cdx_same_day_query_url(
+    endpoint: str,
+    timestamp: str,
+    *,
+    cdx_api: str = CDX_API,
+) -> str:
+    captured = dt.datetime.strptime(timestamp, "%Y%m%d%H%M%S")
+    day = captured.strftime("%Y%m%d")
+    query = urllib.parse.urlencode(
+        [
+            ("url", endpoint),
+            ("from", f"{day}000000"),
+            ("to", f"{day}235959"),
+            ("output", "json"),
+            ("fl", "timestamp,original,statuscode,mimetype,digest"),
+            ("filter", "statuscode:200"),
+            ("matchType", "exact"),
+        ]
+    )
+    return f"{cdx_api.rstrip('?')}?{query}"
+
+
 def parse_cdx_rows(payload: Any) -> list[dict[str, str]]:
     if isinstance(payload, dict):
         payload = payload.get("captures") or payload.get("rows") or []
@@ -1285,6 +1313,76 @@ def parse_cdx_rows(payload: Any) -> list[dict[str, str]]:
         for row in payload
         if isinstance(row, dict)
     ]
+
+
+def query_same_day_cdx_snapshots(
+    endpoint: str,
+    timestamp: str,
+    *,
+    cdx_api: str = CDX_API,
+) -> list[dict[str, Any]]:
+    query_url = cdx_same_day_query_url(endpoint, timestamp, cdx_api=cdx_api)
+    rows = parse_cdx_rows(read_json(query_url))
+    target_seconds = _timestamp_seconds(timestamp)
+    target_day = timestamp[:8]
+    candidates: list[dict[str, Any]] = []
+    for row in rows:
+        row_timestamp = str(row.get("timestamp") or "")
+        if len(row_timestamp) != 14 or not row_timestamp.isdigit():
+            continue
+        if row_timestamp[:8] != target_day:
+            continue
+        if str(row.get("statuscode") or "200") != "200":
+            continue
+        if not _same_original_url(str(row.get("original") or endpoint), endpoint):
+            continue
+        try:
+            delta = abs(_timestamp_seconds(row_timestamp) - target_seconds)
+        except ValueError:
+            continue
+        candidates.append(
+            {
+                "timestamp": row_timestamp,
+                "original": endpoint,
+                "statuscode": str(row.get("statuscode") or "200"),
+                "mimetype": str(row.get("mimetype") or ""),
+                "digest": str(row.get("digest") or ""),
+                "deltaSeconds": delta,
+                "cdxUrl": query_url,
+            }
+        )
+    return sorted(
+        candidates,
+        key=lambda item: (int(item["deltaSeconds"]), str(item["timestamp"])),
+    )
+
+
+def same_day_archived_asset_candidates(
+    timestamp: str,
+    src: str,
+    replay_base: str,
+    *,
+    cdx_api: str = CDX_API,
+) -> list[str]:
+    original = original_url_from_replay(src)
+    candidates: list[str] = []
+    try:
+        same_day = query_same_day_cdx_snapshots(
+            original,
+            timestamp,
+            cdx_api=cdx_api,
+        )
+    except Exception as exc:
+        print(f"Same-day asset CDX query failed for {original}: {exc}")
+        same_day = []
+    candidates.extend(
+        archived_asset_url(str(item["timestamp"]), original, replay_base)
+        for item in same_day
+    )
+    host = (urllib.parse.urlparse(original).hostname or "").lower()
+    if host.endswith((".hdslb.com", ".bilibili.com", ".bilivideo.com")):
+        candidates.append(original)
+    return list(dict.fromkeys(candidates))
 
 
 def _same_original_url(left: str, right: str) -> bool:
@@ -1489,6 +1587,19 @@ def capture_snapshot_api(
         provenance.update(provenance_extra)
     if palxiao_result:
         provenance = compare_api_with_palxiao(api_data, palxiao_result)
+    same_day_asset_cache: dict[str, list[str]] = {}
+
+    def same_day_retry_candidates(src: str) -> list[str]:
+        original = original_url_from_replay(src)
+        if original not in same_day_asset_cache:
+            same_day_asset_cache[original] = same_day_archived_asset_candidates(
+                timestamp,
+                original,
+                replay_base,
+                cdx_api=cdx_api,
+            )
+        return same_day_asset_cache[original]
+
     result = core.capture_header_api_payload(
         api_data,
         moment=moment,
@@ -1511,7 +1622,9 @@ def capture_snapshot_api(
             str(api_match["headerApiWaybackTimestamp"]),
             src,
             replay_base,
+            include_original=False,
         ),
+        asset_url_retry_candidates=same_day_retry_candidates,
         referer=api_replay,
         before_request=wait_for_wayback_request,
         observation_groups=(

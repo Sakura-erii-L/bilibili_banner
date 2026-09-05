@@ -92,6 +92,18 @@ def audit(data_dir: Path) -> dict[str, object]:
                 and layer.get("file")
             ):
                 saved_video = True
+        for auxiliary in manifest.get("auxiliaryAssets") or []:
+            if not isinstance(auxiliary, dict):
+                continue
+            file = str(auxiliary.get("file") or auxiliary.get("local_file") or "")
+            if file and (folder / file).is_file():
+                saved_api_assets += 1
+                if (
+                    auxiliary.get("tag") == "video"
+                    or str(auxiliary.get("contentType") or "").lower().startswith("video/")
+                    or str(file).lower().endswith((".webm", ".mp4", ".m3u8"))
+                ):
+                    saved_video = True
         if (
             ((manifest.get("static") or {}).get("assetType") == "video"
              or (manifest.get("static") or {}).get("tag") == "video")
