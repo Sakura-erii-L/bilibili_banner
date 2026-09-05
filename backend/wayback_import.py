@@ -77,7 +77,7 @@ DEFAULT_CAPTURE_WORKERS = max(
 HEADER_API_MAX_DELTA_SECONDS = int(
     os.environ.get("WAYBACK_HEADER_API_MAX_DELTA_SECONDS", str(7 * 24 * 60 * 60))
 )
-MIN_BACKFILL_DATE = dt.date(2019, 1, 1)
+MIN_BACKFILL_DATE = dt.date(2018, 6, 1)
 WAYBACK_MATCH_CACHE_VERSION = 1
 WAYBACK_MATCH_CACHE_NAME = "wayback-slot-matches.json"
 WAYBACK_TERMINAL_SLOT_STATUSES = {
@@ -1056,6 +1056,20 @@ def imported_wayback_matches(
             for slot in core.manifest_slots(observation):
                 matches.setdefault((date_text, slot), set()).add(timestamp)
     return matches
+
+
+def imported_archive_dates(*, reusable_only: bool = False) -> set[dt.date]:
+    dates: set[dt.date] = set()
+    for folder, manifest in core.iter_archive_manifests():
+        if reusable_only and not archive_is_reusable(folder, manifest):
+            continue
+        for observation in core.manifest_observations(manifest):
+            date_text = str(observation.get("date") or "")
+            try:
+                dates.add(dt.date.fromisoformat(date_text))
+            except ValueError:
+                continue
+    return dates
 
 
 def imported_wayback_slots(
@@ -3496,6 +3510,16 @@ def main() -> None:
         args.checkpoint_script,
     )
 
+    archive_covered_dates = (
+        imported_archive_dates(reusable_only=True)
+        if args.cadence == "daily" and not args.force
+        else set()
+    )
+    excluded_dates = set(reference_covered_dates)
+    excluded_dates.update(archive_covered_dates)
+    requested_dates = set(target_dates(start, end, args.cadence))
+    skipped_covered_dates = len(requested_dates & excluded_dates)
+
     match_cache = load_wayback_match_cache() if args.cadence == "3h" else None
     if match_cache is not None:
         if args.force:
@@ -3560,7 +3584,7 @@ def main() -> None:
             cadence=args.cadence,
             api_url=args.availability_api,
             cdx_api=args.cdx_api,
-            excluded_dates=reference_covered_dates,
+            excluded_dates=excluded_dates,
             match_cache=(match_cache or {}).get("matches")
             if match_cache is not None
             else None,
@@ -3600,7 +3624,7 @@ def main() -> None:
     if match_cache is not None:
         match_cache_changed = save_wayback_match_cache(match_cache)
 
-    if reference_covered_dates:
+    if excluded_dates:
         before_reference_filter = len(snapshots)
         snapshots = [
             snapshot
@@ -3611,13 +3635,13 @@ def main() -> None:
                     if snapshot_target_date(snapshot)
                     else snapshot_moment(snapshot["timestamp"]).date()
                 )
-                not in reference_covered_dates
+                not in excluded_dates
             )
         ]
-        removed_reference = before_reference_filter - len(snapshots)
-        if removed_reference:
+        removed_excluded = before_reference_filter - len(snapshots)
+        if removed_excluded:
             print(
-                f"Skipped {removed_reference} snapshots covered by the reference repository."
+                f"Skipped {removed_excluded} snapshots covered by existing archives or reference data."
             )
 
     if args.limit > 0:
@@ -3665,7 +3689,8 @@ def main() -> None:
                 final=False,
             )
     if not snapshots:
-        if skipped_known or skipped_resolved:
+        all_dates_excluded = bool(requested_dates) and skipped_covered_dates == len(requested_dates)
+        if skipped_known or skipped_resolved or all_dates_excluded:
             if match_cache is not None:
                 save_wayback_match_cache(match_cache)
             if args.checkpoint_script and (match_cache_changed or skipped_resolved):
@@ -3678,6 +3703,8 @@ def main() -> None:
                 )
             if skipped_known:
                 print("All discovered Wayback snapshots were already imported.")
+            elif all_dates_excluded:
+                print("All target daily dates were already covered by existing archives or reference data.")
             else:
                 print("All target date slots were already resolved.")
             return

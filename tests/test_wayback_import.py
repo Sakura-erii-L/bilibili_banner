@@ -14,23 +14,23 @@ from backend.providers.palxiao_history import PalxiaoHistoryProvider
 
 
 class WaybackImportTests(unittest.TestCase):
-    def test_backfill_range_rejects_dates_before_january_2019(self) -> None:
-        with self.assertRaisesRegex(ValueError, "2019-01-01"):
+    def test_backfill_range_rejects_dates_before_june_2018(self) -> None:
+        with self.assertRaisesRegex(ValueError, "2018-06-01"):
             wayback_import.validate_backfill_range(
-                dt.date(2018, 12, 31),
+                dt.date(2018, 5, 31),
                 dt.date(2020, 1, 1),
             )
         wayback_import.validate_backfill_range(
-            dt.date(2019, 1, 1),
+            dt.date(2018, 6, 1),
             dt.date(2020, 1, 1),
         )
 
-    def test_snapshot_rejects_dates_before_january_2019(self) -> None:
-        with self.assertRaisesRegex(ValueError, "2019-01-01"):
-            wayback_import.validate_snapshot_timestamp("20181231235959")
+    def test_snapshot_rejects_dates_before_june_2018(self) -> None:
+        with self.assertRaisesRegex(ValueError, "2018-06-01"):
+            wayback_import.validate_snapshot_timestamp("20180531235959")
         self.assertEqual(
-            wayback_import.validate_snapshot_timestamp("20190101000000"),
-            "20190101000000",
+            wayback_import.validate_snapshot_timestamp("20180601000000"),
+            "20180601000000",
         )
 
     def test_archive_requires_a_saved_primary_asset(self) -> None:
@@ -207,6 +207,43 @@ class WaybackImportTests(unittest.TestCase):
                 )
                 self.assertTrue(
                     all(entry["status"] == "filled" for entry in statuses.values())
+                )
+            finally:
+                core.DATA_DIR, core.ARCHIVE_DIR, core.CURRENT_DIR = original
+
+    def test_imported_archive_dates_include_reusable_observations(self) -> None:
+        core = wayback_import.core
+        original = (core.DATA_DIR, core.ARCHIVE_DIR, core.CURRENT_DIR)
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                core.DATA_DIR = Path(temp)
+                core.ARCHIVE_DIR = core.DATA_DIR / "archive"
+                core.CURRENT_DIR = core.DATA_DIR / "current"
+                folder = core.ARCHIVE_DIR / "covered"
+                folder.mkdir(parents=True)
+                (folder / "static.png").write_bytes(b"primary")
+                manifest = {
+                    "version": 11.0,
+                    "date": "2018-06-01",
+                    "capturedAt": "2018-06-01T12:00:00+08:00",
+                    "mode": "static",
+                    "type": ["static"],
+                    "static": {"file": "static.png"},
+                    "layers": [],
+                    "slots": [0],
+                    "completeness": "partial",
+                    "missing_assets": ["auxiliary_000: optional logo unavailable"],
+                    "assets": [{"role": "primary", "local_file": "static.png"}],
+                    "interaction": {"model": "none", "effects": []},
+                    "contentHash": "covered-content",
+                }
+                (folder / "banner.json").write_text(
+                    json.dumps(manifest),
+                    encoding="utf-8",
+                )
+                self.assertEqual(
+                    wayback_import.imported_archive_dates(reusable_only=True),
+                    {dt.date(2018, 6, 1)},
                 )
             finally:
                 core.DATA_DIR, core.ARCHIVE_DIR, core.CURRENT_DIR = original
