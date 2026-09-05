@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-05T00:51:17+08:00",
+  "generatedAt": "2026-09-05T11:03:14+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -2243,6 +2243,83 @@
             6,
             7
           ]
+        }
+      ]
+    },
+    {
+      "id": "2021-07-27_time_91cf8ac00015_9ac6e756f3f2",
+      "date": "2021-07-27",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "year": "2021",
+      "month": "07",
+      "yearMonth": "2021-07",
+      "dateStart": "2021-07-27",
+      "dateEnd": "2021-07-27",
+      "capturedAt": "2021-07-27T18:37:04+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video",
+        "interactive"
+      ],
+      "layerCount": 1,
+      "completeness": "partial",
+      "missing_assets": [
+        "extension time.21600.2.layers.0.resources.0.src: HTTP Error 403: Forbidden",
+        "extension time.57600.0.layers.0.resources.0.src: HTTP Error 403: Forbidden",
+        "extension time.57600.1.layers.0.resources.0.src: HTTP Error 403: Forbidden",
+        "extension time.57600.2.layers.0.resources.0.src: HTTP Error 403: Forbidden"
+      ],
+      "contentHash": "be63afa5ec46d073a9f1824b",
+      "manifest": "./data/archive/2021-07-27_183704_be63afa5ec46d073a9f1824b/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "be63afa5ec46d073a9f1824b",
+          "canonicalContentHash": "9ac6e756f3f2578b1fbba8dd",
+          "sourceFingerprint": "e4fedc82ca5895fdebf47dd7",
+          "capturedAt": "2021-07-27T18:37:04+08:00",
+          "lastObservedAt": "2021-07-27T18:37:04+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video",
+            "interactive"
+          ],
+          "layerCount": 1,
+          "completeness": "partial",
+          "missing_assets": [
+            "extension time.21600.2.layers.0.resources.0.src: HTTP Error 403: Forbidden",
+            "extension time.57600.0.layers.0.resources.0.src: HTTP Error 403: Forbidden",
+            "extension time.57600.1.layers.0.resources.0.src: HTTP Error 403: Forbidden",
+            "extension time.57600.2.layers.0.resources.0.src: HTTP Error 403: Forbidden"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2021-07-27_183704_be63afa5ec46d073a9f1824b/banner.json",
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "be63afa5ec46d073a9f1824b",
+              "manifest": "./data/archive/2021-07-27_183704_be63afa5ec46d073a9f1824b/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            6
+          ],
+          "slotFill": "same-day-forward-backward"
         }
       ]
     },
