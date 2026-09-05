@@ -46,6 +46,11 @@ on:
         required: true
         type: boolean
         default: false
+      use_reference:
+        description: "Use MikuFan039 reference repository before Wayback recovery"
+        required: true
+        type: boolean
+        default: true
       clear_archive:
         description: "Clear existing historical archives before importing"
         required: true
@@ -86,6 +91,7 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Checkout MikuFan039 reference repository
+        if: inputs.use_reference == true
         env:
           REFERENCE_COMMIT: "45b760bfa52166727123d775925dea887ac7d71a"
           REFERENCE_REPO: "${{ runner.temp }}/MikuFan039.github.io"
@@ -122,6 +128,7 @@ jobs:
           PROVIDER="${{ inputs.provider }}"
           FORCE="${{ inputs.force }}"
           VERIFY_DOM="${{ inputs.verify_dom }}"
+          USE_REFERENCE="${{ inputs.use_reference }}"
           REFERENCE_REPO="${{ runner.temp }}/MikuFan039.github.io"
           [[ -n "$FROM_DATE" ]] || FROM_DATE="2019-01-01"
           [[ -n "$TO_DATE" ]] || TO_DATE="$(date +%F)"
@@ -136,9 +143,13 @@ jobs:
             --limit "$LIMIT"
             --checkpoint-every 1
             --checkpoint-script scripts/checkpoint_wayback.py
-            --reference-repo "$REFERENCE_REPO"
-            --reference-commit "45b760bfa52166727123d775925dea887ac7d71a"
           )
+          if [[ "$USE_REFERENCE" == "true" ]]; then
+            ARGS+=(
+              --reference-repo "$REFERENCE_REPO"
+              --reference-commit "45b760bfa52166727123d775925dea887ac7d71a"
+            )
+          fi
           [[ "$FORCE" == "true" ]] && ARGS+=(--force)
           [[ "$VERIFY_DOM" == "true" ]] && ARGS+=(--verify-dom)
           python backend/history_import.py "${ARGS[@]}"
