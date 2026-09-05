@@ -1,0 +1,432 @@
+{
+  "version": 11.0,
+  "capturedAt": "2020-01-09T17:30:53+08:00",
+  "date": "2020-01-09",
+  "season": "winter",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://web.archive.org/web/20200109093053id_/https://www.bilibili.com/",
+    "captureMethod": "wayback-http-html-css",
+    "provider": "wayback-html",
+    "waybackTimestamp": "20200109093053",
+    "homepageWaybackTimestamp": "20200109093053",
+    "waybackReplay": "https://web.archive.org/web/20200109093053id_/https://www.bilibili.com/",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20200109120000",
+    "cdxUrl": "",
+    "discoveredResources": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+        "initiatorType": "html-style"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "initiatorType": "html-img"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.1.e32da1de9a73953b01100f51118ce275105720f8.css",
+      "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.0.e32da1de9a73953b01100f51118ce275105720f8.css"
+    ],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "wayback-html",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {},
+  "mode": "static",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+    "requestedSrc": "https://web.archive.org/web/20200109093053id_/https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+    "normalizedIdentity": "https://web.archive.org/web/20200109093053id_/https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+    "file": "static.png",
+    "contentType": "image/png",
+    "tag": "img",
+    "assetType": "image"
+  },
+  "preview_image": null,
+  "layers": [],
+  "auxiliaryAssets": [
+    {
+      "src": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+      "requestedSrc": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+      "file": "auxiliary_00.png",
+      "contentType": "image/png",
+      "tag": "img",
+      "assetType": "image",
+      "role": "auxiliary",
+      "origin": {
+        "nodeTag": "img",
+        "nodeId": "",
+        "nodeClass": "logo-img",
+        "selector": "",
+        "depthFromRoot": 3,
+        "pseudoElement": ""
+      },
+      "score": 55,
+      "reasons": [
+        "img inside selected root"
+      ]
+    }
+  ],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "observed",
+    "effects": []
+  },
+  "sourceFiles": {
+    "page": "source/page.html",
+    "stylesheet00": "source/stylesheet_00.css",
+    "stylesheet01": "source/stylesheet_01.css"
+  },
+  "sourceEvidence": {
+    "root": {
+      "source": "wayback-http-html-css",
+      "tag": "div",
+      "id": "",
+      "className": "bili-banner",
+      "score": 140,
+      "reasons": [
+        "class .bili-banner"
+      ]
+    },
+    "layerCount": 0,
+    "mediaCount": 2,
+    "visibleMediaCount": 1,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+        "sourceKind": "html-style"
+      },
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "sourceKind": "html-img"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+        "initiatorType": "html-style"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "initiatorType": "html-img"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.1.e32da1de9a73953b01100f51118ce275105720f8.css",
+      "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.0.e32da1de9a73953b01100f51118ce275105720f8.css"
+    ],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "selectedRoot": {
+      "tag": "div",
+      "id": "",
+      "className": "bili-banner",
+      "score": 140,
+      "reasons": [
+        "class .bili-banner"
+      ]
+    },
+    "roots": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "bili-banner",
+        "score": 260,
+        "rootScore": 140,
+        "resourceScore": 120,
+        "reasons": [
+          "class .bili-banner"
+        ],
+        "candidateCount": 2
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "className": "banner-link",
+        "score": 125,
+        "rootScore": 125,
+        "resourceScore": 0,
+        "reasons": [
+          "class .banner-link"
+        ],
+        "candidateCount": 0
+      }
+    ],
+    "primary": {
+      "src": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+      "tag": "img",
+      "sourceKind": "html-style",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+      "role": "primary",
+      "origin": {
+        "nodeTag": "div",
+        "nodeId": "",
+        "nodeClass": "bili-banner",
+        "selector": "",
+        "depthFromRoot": 0,
+        "pseudoElement": ""
+      },
+      "score": 120,
+      "reasons": [
+        "inline background-image"
+      ]
+    },
+    "auxiliaryAssets": [
+      {
+        "src": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "tag": "img",
+        "sourceKind": "html-img",
+        "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "role": "auxiliary",
+        "origin": {
+          "nodeTag": "img",
+          "nodeId": "",
+          "nodeClass": "logo-img",
+          "selector": "",
+          "depthFromRoot": 3,
+          "pseudoElement": ""
+        },
+        "score": 55,
+        "reasons": [
+          "img inside selected root"
+        ]
+      }
+    ],
+    "strongLayerEvidence": false
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2020-01-09T17:30:53+08:00",
+  "type": [
+    "static"
+  ],
+  "is_split_layer": false,
+  "fallback_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "wayback-http-html-css",
+      "tag": "div",
+      "id": "",
+      "className": "bili-banner",
+      "score": 140,
+      "reasons": [
+        "class .bili-banner"
+      ]
+    },
+    "layerCount": 0,
+    "mediaCount": 2,
+    "visibleMediaCount": 1,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+        "sourceKind": "html-style"
+      },
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "sourceKind": "html-img"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+        "initiatorType": "html-style"
+      },
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "initiatorType": "html-img"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.1.e32da1de9a73953b01100f51118ce275105720f8.css",
+      "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.0.e32da1de9a73953b01100f51118ce275105720f8.css"
+    ],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "selectedRoot": {
+      "tag": "div",
+      "id": "",
+      "className": "bili-banner",
+      "score": 140,
+      "reasons": [
+        "class .bili-banner"
+      ]
+    },
+    "roots": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "bili-banner",
+        "score": 260,
+        "rootScore": 140,
+        "resourceScore": 120,
+        "reasons": [
+          "class .bili-banner"
+        ],
+        "candidateCount": 2
+      },
+      {
+        "tag": "a",
+        "id": "",
+        "className": "banner-link",
+        "score": 125,
+        "rootScore": 125,
+        "resourceScore": 0,
+        "reasons": [
+          "class .banner-link"
+        ],
+        "candidateCount": 0
+      }
+    ],
+    "primary": {
+      "src": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+      "tag": "img",
+      "sourceKind": "html-style",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+      "role": "primary",
+      "origin": {
+        "nodeTag": "div",
+        "nodeId": "",
+        "nodeClass": "bili-banner",
+        "selector": "",
+        "depthFromRoot": 0,
+        "pseudoElement": ""
+      },
+      "score": 120,
+      "reasons": [
+        "inline background-image"
+      ]
+    },
+    "auxiliaryAssets": [
+      {
+        "src": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "tag": "img",
+        "sourceKind": "html-img",
+        "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+        "role": "auxiliary",
+        "origin": {
+          "nodeTag": "img",
+          "nodeId": "",
+          "nodeClass": "logo-img",
+          "selector": "",
+          "depthFromRoot": 3,
+          "pseudoElement": ""
+        },
+        "score": 55,
+        "reasons": [
+          "img inside selected root"
+        ]
+      }
+    ],
+    "strongLayerEvidence": false
+  },
+  "assets": [
+    {
+      "role": "primary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+      "local_file": "static.png",
+      "content_type": "image/png",
+      "sha256": "61f012182bac4d8d6fc1492a6b7bfa5b138e55eef2d68c1e170ad22b0e965469"
+    },
+    {
+      "role": "auxiliary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+      "local_file": "auxiliary_00.png",
+      "content_type": "image/png",
+      "sha256": "41a1849c53c0d3ec96965b5bc483f4e689cf2c4540967c386272295b2f4ee3ef"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "f94d2b700f86ce816a0457d8",
+  "hashes": {
+    "resourceHash": "e8ccc660122d38fb8e16af30",
+    "structureHash": "cbe0fe19d14d9249f36d6ad8",
+    "interactionHash": "6c68677a1adc299d5af3bb4d",
+    "contentHash": "f94d2b700f86ce816a0457d8",
+    "canonicalContentHash": "ca15ac41011436fb94a6bf31",
+    "sourceFingerprint": "a1f265d0a015faf2daca4ae1"
+  },
+  "canonicalContentHash": "ca15ac41011436fb94a6bf31",
+  "sourceFingerprint": "a1f265d0a015faf2daca4ae1",
+  "interactionState": "nonInteractive",
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2020-01-09_3f4544a6cbd4",
+  "slots": [
+    5
+  ],
+  "observations": [
+    {
+      "capturedAt": "2020-01-09T17:30:53+08:00",
+      "lastObservedAt": "2020-01-09T17:30:53+08:00",
+      "date": "2020-01-09",
+      "season": "winter",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2020-01-09_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20200109093053id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20200109093053",
+        "homepageWaybackTimestamp": "20200109093053",
+        "waybackReplay": "https://web.archive.org/web/20200109093053id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20200109120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/c6affb77ee9c07fd36f4f99168fea4fd5ed46e54.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/05ec20038e1c0896e44e1a9dc769660a6a5a4a78.png",
+            "initiatorType": "html-img"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.1.e32da1de9a73953b01100f51118ce275105720f8.css",
+          "https://s1.hdslb.com/bfs/static/jinkela/international-home/css/international-home.0.e32da1de9a73953b01100f51118ce275105720f8.css"
+        ],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

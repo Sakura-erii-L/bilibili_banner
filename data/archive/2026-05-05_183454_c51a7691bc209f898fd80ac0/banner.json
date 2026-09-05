@@ -1,0 +1,726 @@
+{
+  "version": 11.0,
+  "capturedAt": "2026-05-05T18:34:54+08:00",
+  "date": "2026-05-05",
+  "season": "spring",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://web.archive.org/web/20260505103454id_/https://www.bilibili.com/",
+    "captureMethod": "wayback-http-html-css",
+    "provider": "wayback-html",
+    "waybackTimestamp": "20260505103454",
+    "homepageWaybackTimestamp": "20260505103454",
+    "waybackReplay": "https://web.archive.org/web/20260505103454id_/https://www.bilibili.com/",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260505120000",
+    "cdxUrl": "",
+    "discoveredResources": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "initiatorType": "html-picture"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+    ],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "wayback-html",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {},
+  "mode": "static",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+    "requestedSrc": "https://web.archive.org/web/20260505103454id_/https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+    "normalizedIdentity": "https://web.archive.org/web/20260505103454id_/https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png",
+    "file": "static.avif",
+    "contentType": "image/webp",
+    "tag": "img",
+    "assetType": "image"
+  },
+  "preview_image": null,
+  "layers": [],
+  "auxiliaryAssets": [],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "observed",
+    "effects": []
+  },
+  "sourceFiles": {
+    "page": "source/page.html",
+    "stylesheet00": "source/stylesheet_00.css"
+  },
+  "sourceEvidence": {
+    "root": {
+      "source": "wayback-http-html-css",
+      "tag": "div",
+      "id": "",
+      "className": "bili-header__banner",
+      "score": 165,
+      "reasons": [
+        "class .bili-header__banner"
+      ]
+    },
+    "layerCount": 0,
+    "mediaCount": 1,
+    "visibleMediaCount": 1,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "sourceKind": "html-picture"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "initiatorType": "html-picture"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+    ],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "selectedRoot": {
+      "tag": "div",
+      "id": "",
+      "className": "bili-header__banner",
+      "score": 165,
+      "reasons": [
+        "class .bili-header__banner"
+      ]
+    },
+    "roots": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "bili-header__banner",
+        "score": 245,
+        "rootScore": 165,
+        "resourceScore": 80,
+        "reasons": [
+          "class .bili-header__banner"
+        ],
+        "candidateCount": 1
+      }
+    ],
+    "primary": {
+      "src": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+      "tag": "img",
+      "sourceKind": "html-picture",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png",
+      "role": "primary",
+      "origin": {
+        "nodeTag": "picture",
+        "nodeId": "bili-header-banner-img",
+        "nodeClass": "v-img banner-img",
+        "selector": "",
+        "depthFromRoot": 1,
+        "pseudoElement": ""
+      },
+      "score": 80,
+      "reasons": [
+        "picture source"
+      ]
+    },
+    "auxiliaryAssets": [],
+    "strongLayerEvidence": false
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2026-08-18T19:35:36+08:00",
+  "type": [
+    "static"
+  ],
+  "is_split_layer": false,
+  "fallback_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "wayback-http-html-css",
+      "tag": "div",
+      "id": "",
+      "className": "bili-header__banner",
+      "score": 165,
+      "reasons": [
+        "class .bili-header__banner"
+      ]
+    },
+    "layerCount": 0,
+    "mediaCount": 1,
+    "visibleMediaCount": 1,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "sourceKind": "html-picture"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "initiatorType": "html-picture"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+    ],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "selectedRoot": {
+      "tag": "div",
+      "id": "",
+      "className": "bili-header__banner",
+      "score": 165,
+      "reasons": [
+        "class .bili-header__banner"
+      ]
+    },
+    "roots": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "bili-header__banner",
+        "score": 245,
+        "rootScore": 165,
+        "resourceScore": 80,
+        "reasons": [
+          "class .bili-header__banner"
+        ],
+        "candidateCount": 1
+      }
+    ],
+    "primary": {
+      "src": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+      "tag": "img",
+      "sourceKind": "html-picture",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png",
+      "role": "primary",
+      "origin": {
+        "nodeTag": "picture",
+        "nodeId": "bili-header-banner-img",
+        "nodeClass": "v-img banner-img",
+        "selector": "",
+        "depthFromRoot": 1,
+        "pseudoElement": ""
+      },
+      "score": 80,
+      "reasons": [
+        "picture source"
+      ]
+    },
+    "auxiliaryAssets": [],
+    "strongLayerEvidence": false
+  },
+  "assets": [
+    {
+      "role": "primary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+      "local_file": "static.avif",
+      "content_type": "image/webp",
+      "sha256": "4543998ee8f71cdba03fc22ad50a55924b61ae58a017d2d9a88d8ca9d06c643a"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "c51a7691bc209f898fd80ac0",
+  "hashes": {
+    "resourceHash": "23a4fb9f7a49bc952f9bd567",
+    "structureHash": "cbe0fe19d14d9249f36d6ad8",
+    "interactionHash": "6c68677a1adc299d5af3bb4d",
+    "contentHash": "c51a7691bc209f898fd80ac0",
+    "canonicalContentHash": "d3571316a7869d2ba74af621",
+    "sourceFingerprint": "a6b3a2955abad9725136b7bf"
+  },
+  "canonicalContentHash": "d3571316a7869d2ba74af621",
+  "sourceFingerprint": "a6b3a2955abad9725136b7bf",
+  "interactionState": "nonInteractive",
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2026-05-05_3f4544a6cbd4",
+  "slots": [
+    1,
+    3,
+    5,
+    6,
+    7
+  ],
+  "observations": [
+    {
+      "capturedAt": "2026-05-05T18:34:54+08:00",
+      "lastObservedAt": "2026-05-05T18:34:54+08:00",
+      "date": "2026-05-05",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        6
+      ],
+      "familyId": "2026-05-05_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260505103454id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260505103454",
+        "homepageWaybackTimestamp": "20260505103454",
+        "waybackReplay": "https://web.archive.org/web/20260505103454id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260505120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-05-09T03:41:49+08:00",
+      "lastObservedAt": "2026-05-09T03:41:49+08:00",
+      "date": "2026-05-08",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        1
+      ],
+      "familyId": "2026-05-08_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260508194149id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260508194149",
+        "homepageWaybackTimestamp": "20260508194149",
+        "waybackReplay": "https://web.archive.org/web/20260508194149id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260508120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-05-09T20:54:21+08:00",
+      "lastObservedAt": "2026-05-09T20:54:21+08:00",
+      "date": "2026-05-09",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        6
+      ],
+      "familyId": "2026-05-09_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260509125421id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260509125421",
+        "homepageWaybackTimestamp": "20260509125421",
+        "waybackReplay": "https://web.archive.org/web/20260509125421id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260509120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-05-14T16:43:07+08:00",
+      "lastObservedAt": "2026-05-14T16:43:07+08:00",
+      "date": "2026-05-14",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2026-05-14_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260514084307id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260514084307",
+        "homepageWaybackTimestamp": "20260514084307",
+        "waybackReplay": "https://web.archive.org/web/20260514084307id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260514120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-05-15T21:32:33+08:00",
+      "lastObservedAt": "2026-05-15T21:32:33+08:00",
+      "date": "2026-05-15",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        7
+      ],
+      "familyId": "2026-05-15_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260515133233id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260515133233",
+        "homepageWaybackTimestamp": "20260515133233",
+        "waybackReplay": "https://web.archive.org/web/20260515133233id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260515120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-05-18T16:53:56+08:00",
+      "lastObservedAt": "2026-05-18T16:53:56+08:00",
+      "date": "2026-05-18",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2026-05-18_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260518085356id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260518085356",
+        "homepageWaybackTimestamp": "20260518085356",
+        "waybackReplay": "https://web.archive.org/web/20260518085356id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260518120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-05-20T17:05:04+08:00",
+      "lastObservedAt": "2026-05-20T17:05:04+08:00",
+      "date": "2026-05-20",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2026-05-20_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260520090504id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260520090504",
+        "homepageWaybackTimestamp": "20260520090504",
+        "waybackReplay": "https://web.archive.org/web/20260520090504id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260520120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-05-25T19:15:06+08:00",
+      "lastObservedAt": "2026-05-25T19:15:06+08:00",
+      "date": "2026-05-25",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        6
+      ],
+      "familyId": "2026-05-25_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260525111506id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260525111506",
+        "homepageWaybackTimestamp": "20260525111506",
+        "waybackReplay": "https://web.archive.org/web/20260525111506id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260525120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-05-29T18:27:48+08:00",
+      "lastObservedAt": "2026-05-29T18:27:48+08:00",
+      "date": "2026-05-29",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        6
+      ],
+      "familyId": "2026-05-29_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260529102748id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260529102748",
+        "homepageWaybackTimestamp": "20260529102748",
+        "waybackReplay": "https://web.archive.org/web/20260529102748id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260529120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-9941ce24.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-06-09T20:02:35+08:00",
+      "lastObservedAt": "2026-06-09T20:02:35+08:00",
+      "date": "2026-06-09",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        6
+      ],
+      "familyId": "2026-06-09_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260609120235id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260609120235",
+        "homepageWaybackTimestamp": "20260609120235",
+        "waybackReplay": "https://web.archive.org/web/20260609120235id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260609120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-93d0b521.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-07-11T16:28:19+08:00",
+      "lastObservedAt": "2026-07-11T16:28:19+08:00",
+      "date": "2026-07-11",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2026-07-11_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260711082819id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260711082819",
+        "homepageWaybackTimestamp": "20260711082819",
+        "waybackReplay": "https://web.archive.org/web/20260711082819id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260711120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-7527bc63.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-07-31T15:39:45+08:00",
+      "lastObservedAt": "2026-07-31T15:39:45+08:00",
+      "date": "2026-07-31",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2026-07-31_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260731073945id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260731073945",
+        "homepageWaybackTimestamp": "20260731073945",
+        "waybackReplay": "https://web.archive.org/web/20260731073945id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260731120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-f14e9360.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-08-10T11:46:50+08:00",
+      "lastObservedAt": "2026-08-10T11:46:50+08:00",
+      "date": "2026-08-10",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        3
+      ],
+      "familyId": "2026-08-10_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260810034650id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260810034650",
+        "homepageWaybackTimestamp": "20260810034650",
+        "waybackReplay": "https://web.archive.org/web/20260810034650id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260810120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-c5e37698.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-08-18T19:35:36+08:00",
+      "lastObservedAt": "2026-08-18T19:35:36+08:00",
+      "date": "2026-08-18",
+      "season": "summer",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        6
+      ],
+      "familyId": "2026-08-18_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260818113536id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260818113536",
+        "homepageWaybackTimestamp": "20260818113536",
+        "waybackReplay": "https://web.archive.org/web/20260818113536id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260818120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-c5e37698.css"
+        ],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

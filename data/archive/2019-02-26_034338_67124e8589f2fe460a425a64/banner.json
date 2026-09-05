@@ -1035,6 +1035,42 @@
       }
     },
     {
+      "capturedAt": "2019-03-13T04:00:02+08:00",
+      "lastObservedAt": "2019-03-13T04:00:02+08:00",
+      "date": "2019-03-12",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        1
+      ],
+      "familyId": "2019-03-12_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190312200002id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190312200002",
+        "homepageWaybackTimestamp": "20190312200002",
+        "waybackReplay": "https://web.archive.org/web/20190312200002id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190312120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.4dde3b234789f73d4da93dae9653b8ddd94aabc6.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
       "capturedAt": "2019-03-13T12:31:00+08:00",
       "lastObservedAt": "2019-03-13T12:31:00+08:00",
       "date": "2019-03-13",
@@ -1099,6 +1135,78 @@
         "waybackReplay": "https://web.archive.org/web/20190313222043id_/https://www.bilibili.com/",
         "availabilityUrl": "",
         "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190303160000&to=20190403155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.4dde3b234789f73d4da93dae9653b8ddd94aabc6.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-03-16T16:48:08+08:00",
+      "lastObservedAt": "2019-03-16T16:48:08+08:00",
+      "date": "2019-03-16",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2019-03-16_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190316084808id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190316084808",
+        "homepageWaybackTimestamp": "20190316084808",
+        "waybackReplay": "https://web.archive.org/web/20190316084808id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190316120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.4dde3b234789f73d4da93dae9653b8ddd94aabc6.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-03-18T07:56:58+08:00",
+      "lastObservedAt": "2019-03-18T07:56:58+08:00",
+      "date": "2019-03-18",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        2
+      ],
+      "familyId": "2019-03-18_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190317235658id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190317235658",
+        "homepageWaybackTimestamp": "20190317235658",
+        "waybackReplay": "https://web.archive.org/web/20190317235658id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190318120000",
+        "cdxUrl": "",
         "discoveredResources": [
           {
             "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
@@ -2327,6 +2435,78 @@
       }
     },
     {
+      "capturedAt": "2019-05-02T16:04:39+08:00",
+      "lastObservedAt": "2019-05-02T16:04:39+08:00",
+      "date": "2019-05-02",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2019-05-02_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190502080439id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190502080439",
+        "homepageWaybackTimestamp": "20190502080439",
+        "waybackReplay": "https://web.archive.org/web/20190502080439id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190502120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.25954376adf81c1b739143f8f85c95e990e4f3c0.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-05-04T21:46:56+08:00",
+      "lastObservedAt": "2019-05-04T21:46:56+08:00",
+      "date": "2019-05-04",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        7
+      ],
+      "familyId": "2019-05-04_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190504134656id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190504134656",
+        "homepageWaybackTimestamp": "20190504134656",
+        "waybackReplay": "https://web.archive.org/web/20190504134656id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190504120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.25954376adf81c1b739143f8f85c95e990e4f3c0.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
       "capturedAt": "2019-05-05T04:20:07+08:00",
       "lastObservedAt": "2019-05-05T04:20:07+08:00",
       "date": "2019-05-05",
@@ -2563,6 +2743,42 @@
       }
     },
     {
+      "capturedAt": "2019-05-14T04:21:25+08:00",
+      "lastObservedAt": "2019-05-14T04:21:25+08:00",
+      "date": "2019-05-13",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        1
+      ],
+      "familyId": "2019-05-13_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190513202125id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190513202125",
+        "homepageWaybackTimestamp": "20190513202125",
+        "waybackReplay": "https://web.archive.org/web/20190513202125id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190513120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.99719b6deb6e61849b10d4a28928f3f3c5a7151b.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
       "capturedAt": "2019-05-16T04:02:37+08:00",
       "lastObservedAt": "2019-05-16T04:02:37+08:00",
       "date": "2019-05-15",
@@ -2665,6 +2881,42 @@
         "waybackReplay": "https://web.archive.org/web/20190517195544id_/https://www.bilibili.com/",
         "availabilityUrl": "",
         "cdxUrl": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.bilibili.com%2F&from=20190504160000&to=20190604155959&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&matchType=exact",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",
+            "initiatorType": "html-style"
+          },
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/f612c0b3c80c42aa2f00de067f4c11f0ef873ac1.png",
+            "initiatorType": "html-style"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/jinkela/home/css/home.0.99719b6deb6e61849b10d4a28928f3f3c5a7151b.css"
+        ],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2019-05-19T21:47:39+08:00",
+      "lastObservedAt": "2019-05-19T21:47:39+08:00",
+      "date": "2019-05-19",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        7
+      ],
+      "familyId": "2019-05-19_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20190519134739id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20190519134739",
+        "homepageWaybackTimestamp": "20190519134739",
+        "waybackReplay": "https://web.archive.org/web/20190519134739id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20190519120000",
+        "cdxUrl": "",
         "discoveredResources": [
           {
             "name": "https://i0.hdslb.com/bfs/archive/24e031e495699e234526586deb80c65d337cbe4d.png",

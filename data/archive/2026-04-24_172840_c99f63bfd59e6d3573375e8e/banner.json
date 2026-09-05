@@ -1,0 +1,306 @@
+{
+  "version": 11.0,
+  "capturedAt": "2026-04-24T17:28:40+08:00",
+  "date": "2026-04-24",
+  "season": "spring",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://web.archive.org/web/20260424092840id_/https://www.bilibili.com/",
+    "captureMethod": "wayback-http-html-css",
+    "provider": "wayback-html",
+    "waybackTimestamp": "20260424092840",
+    "homepageWaybackTimestamp": "20260424092840",
+    "waybackReplay": "https://web.archive.org/web/20260424092840id_/https://www.bilibili.com/",
+    "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260424120000",
+    "cdxUrl": "",
+    "discoveredResources": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "initiatorType": "html-picture"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+    ],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "wayback-html",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {},
+  "mode": "static",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+    "requestedSrc": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+    "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png",
+    "file": "static.avif",
+    "contentType": "image/avif",
+    "tag": "img",
+    "assetType": "image"
+  },
+  "preview_image": null,
+  "layers": [],
+  "auxiliaryAssets": [],
+  "interaction": {
+    "model": "none",
+    "positionAxis": "observed",
+    "effects": []
+  },
+  "sourceFiles": {
+    "page": "source/page.html",
+    "stylesheet00": "source/stylesheet_00.css"
+  },
+  "sourceEvidence": {
+    "root": {
+      "source": "wayback-http-html-css",
+      "tag": "div",
+      "id": "",
+      "className": "bili-header__banner",
+      "score": 165,
+      "reasons": [
+        "class .bili-header__banner"
+      ]
+    },
+    "layerCount": 0,
+    "mediaCount": 1,
+    "visibleMediaCount": 1,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "sourceKind": "html-picture"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "initiatorType": "html-picture"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+    ],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "selectedRoot": {
+      "tag": "div",
+      "id": "",
+      "className": "bili-header__banner",
+      "score": 165,
+      "reasons": [
+        "class .bili-header__banner"
+      ]
+    },
+    "roots": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "bili-header__banner",
+        "score": 245,
+        "rootScore": 165,
+        "resourceScore": 80,
+        "reasons": [
+          "class .bili-header__banner"
+        ],
+        "candidateCount": 1
+      }
+    ],
+    "primary": {
+      "src": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+      "tag": "img",
+      "sourceKind": "html-picture",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png",
+      "role": "primary",
+      "origin": {
+        "nodeTag": "picture",
+        "nodeId": "bili-header-banner-img",
+        "nodeClass": "v-img banner-img",
+        "selector": "",
+        "depthFromRoot": 1,
+        "pseudoElement": ""
+      },
+      "score": 80,
+      "reasons": [
+        "picture source"
+      ]
+    },
+    "auxiliaryAssets": [],
+    "strongLayerEvidence": false
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2026-04-24T17:28:40+08:00",
+  "type": [
+    "static"
+  ],
+  "is_split_layer": false,
+  "fallback_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "wayback-http-html-css",
+      "tag": "div",
+      "id": "",
+      "className": "bili-header__banner",
+      "score": 165,
+      "reasons": [
+        "class .bili-header__banner"
+      ]
+    },
+    "layerCount": 0,
+    "mediaCount": 1,
+    "visibleMediaCount": 1,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "sourceKind": "html-picture"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+        "initiatorType": "html-picture"
+      }
+    ],
+    "stylesheetUrls": [
+      "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+    ],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": false
+    },
+    "selectedRoot": {
+      "tag": "div",
+      "id": "",
+      "className": "bili-header__banner",
+      "score": 165,
+      "reasons": [
+        "class .bili-header__banner"
+      ]
+    },
+    "roots": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "bili-header__banner",
+        "score": 245,
+        "rootScore": 165,
+        "resourceScore": 80,
+        "reasons": [
+          "class .bili-header__banner"
+        ],
+        "candidateCount": 1
+      }
+    ],
+    "primary": {
+      "src": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+      "tag": "img",
+      "sourceKind": "html-picture",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png",
+      "role": "primary",
+      "origin": {
+        "nodeTag": "picture",
+        "nodeId": "bili-header-banner-img",
+        "nodeClass": "v-img banner-img",
+        "selector": "",
+        "depthFromRoot": 1,
+        "pseudoElement": ""
+      },
+      "score": 80,
+      "reasons": [
+        "picture source"
+      ]
+    },
+    "auxiliaryAssets": [],
+    "strongLayerEvidence": false
+  },
+  "assets": [
+    {
+      "role": "primary",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+      "local_file": "static.avif",
+      "content_type": "image/avif",
+      "sha256": "42d5c8866d9512383adf71846b2d5051f1949e265fce4da83ae7ee0a783b722d"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "c99f63bfd59e6d3573375e8e",
+  "hashes": {
+    "resourceHash": "9f0b131c97f000960b7aab9a",
+    "structureHash": "cbe0fe19d14d9249f36d6ad8",
+    "interactionHash": "6c68677a1adc299d5af3bb4d",
+    "contentHash": "c99f63bfd59e6d3573375e8e",
+    "canonicalContentHash": "dd3c538b27aac4ac3f153882",
+    "sourceFingerprint": "1e3475b7d6912fdf42de82fe"
+  },
+  "canonicalContentHash": "dd3c538b27aac4ac3f153882",
+  "sourceFingerprint": "1e3475b7d6912fdf42de82fe",
+  "interactionState": "nonInteractive",
+  "layoutHash": "3f4544a6cbd458b81c5e471b",
+  "familyId": "2026-04-24_3f4544a6cbd4",
+  "slots": [
+    5
+  ],
+  "observations": [
+    {
+      "capturedAt": "2026-04-24T17:28:40+08:00",
+      "lastObservedAt": "2026-04-24T17:28:40+08:00",
+      "date": "2026-04-24",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        5
+      ],
+      "familyId": "2026-04-24_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://web.archive.org/web/20260424092840id_/https://www.bilibili.com/",
+        "captureMethod": "wayback-http-html-css",
+        "provider": "wayback-html",
+        "waybackTimestamp": "20260424092840",
+        "homepageWaybackTimestamp": "20260424092840",
+        "waybackReplay": "https://web.archive.org/web/20260424092840id_/https://www.bilibili.com/",
+        "availabilityUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.bilibili.com%2F&timestamp=20260424120000",
+        "cdxUrl": "",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/archive/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png@3840w_360h_1c.avif?mirror_report_banner=1",
+            "initiatorType": "html-picture"
+          }
+        ],
+        "stylesheetUrls": [
+          "https://s1.hdslb.com/bfs/static/shanks/laputa-home/assets/index-3c8c71be.css"
+        ],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

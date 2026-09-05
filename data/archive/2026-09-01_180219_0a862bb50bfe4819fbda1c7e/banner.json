@@ -1,0 +1,3370 @@
+{
+  "version": 11.0,
+  "capturedAt": "2026-09-01T18:02:19+08:00",
+  "date": "2026-09-01",
+  "season": "autumn",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/data.json",
+    "captureMethod": "palxiao-history",
+    "provider": "palxiao-bilibili-banner",
+    "palxiaoDate": "2026-09-01",
+    "observedAt": "2026-09-01",
+    "dateSemantics": "observedAt-only; effectiveFrom is not inferred",
+    "parameterSource": "palxiao data.json fields when present; a/g/f/deg are reproducer parameters and unknown fields remain in sourceLayer",
+    "palxiaoDataUrl": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/data.json",
+    "requestedTimestamp": "20260901100219",
+    "structureSemantics": "palxiao layer list; not official Bilibili split_layer",
+    "discoveredResources": [
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "palxiao-bilibili-banner",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": null,
+  "layers": [
+    {
+      "index": 0,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+      "file": "palxiao_layer_00.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png",
+          "file": "palxiao_layer_00.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 1,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+      "file": "palxiao_layer_01.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png",
+          "file": "palxiao_layer_01.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 1,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 2,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+      "file": "palxiao_layer_02.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png",
+          "file": "palxiao_layer_02.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 2,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 3,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          2.2
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+        "a": 0.00133333
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          2.2
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+        "a": 0.00133333
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+      "file": "palxiao_layer_03.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png",
+          "file": "palxiao_layer_03.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        2.2
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 3,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0.00133333
+    },
+    {
+      "index": 4,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1.32
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1.32
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+      "file": "palxiao_layer_04.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png",
+          "file": "palxiao_layer_04.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.32
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 4,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 5,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+        "a": 0.00266667
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+        "a": 0.00266667
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+      "file": "palxiao_layer_05.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png",
+          "file": "palxiao_layer_05.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 5,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0.00266667
+    },
+    {
+      "index": 6,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+        "a": -0.0008
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+        "a": -0.0008
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+      "file": "palxiao_layer_06.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png",
+          "file": "palxiao_layer_06.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 6,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.0008
+    },
+    {
+      "index": 7,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+      "file": "palxiao_layer_07.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png",
+          "file": "palxiao_layer_07.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 7,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 8,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+        "a": -0.00533333
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+        "a": -0.00533333
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+      "file": "palxiao_layer_08.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png",
+          "file": "palxiao_layer_08.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 8,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.00533333
+    },
+    {
+      "index": 9,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+        "a": -0.008
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+        "a": -0.008
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+      "file": "palxiao_layer_09.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png",
+          "file": "palxiao_layer_09.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 9,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.008
+    },
+    {
+      "index": 10,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          2.2
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+        "a": 0.00266667
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          2.2
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+        "a": 0.00266667
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+      "file": "palxiao_layer_10.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png",
+          "file": "palxiao_layer_10.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        2.2
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 10,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0.00266667
+    },
+    {
+      "index": 11,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          -44,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+        "a": -0.002666699999999999
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          -44,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+        "a": -0.002666699999999999
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+      "file": "palxiao_layer_11.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png",
+          "file": "palxiao_layer_11.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        -44.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 11,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.002666699999999999
+    },
+    {
+      "index": 12,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          26.4,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+        "a": 0.0026667000000000023
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          26.4,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+        "a": 0.0026667000000000023
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+      "file": "palxiao_layer_12.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png",
+          "file": "palxiao_layer_12.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        26.4,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 12,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0.0026667000000000023
+    },
+    {
+      "index": 13,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+      "file": "palxiao_layer_13.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png",
+          "file": "palxiao_layer_13.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 13,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 14,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+      "file": "palxiao_layer_14.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png",
+          "file": "palxiao_layer_14.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 14,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 15,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          8.2
+        ],
+        "width": 1574,
+        "height": 148,
+        "src": "./assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+        "a": -0.0049697
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          8.2
+        ],
+        "width": 1574,
+        "height": 148,
+        "src": "./assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+        "a": -0.0049697
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+      "file": "palxiao_layer_15.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png",
+          "file": "palxiao_layer_15.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1574,
+      "height": 148,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        8.2
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 15,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.0049697
+    },
+    {
+      "index": 16,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          4.4,
+          2.2
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+        "a": 0.00213333
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          4.4,
+          2.2
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+        "a": 0.00213333
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+      "file": "palxiao_layer_16.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png",
+          "file": "palxiao_layer_16.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        4.4,
+        2.2
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 16,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0.00213333
+    },
+    {
+      "index": 17,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+        "a": -0.00533333
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+        "a": -0.00533333
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+      "file": "palxiao_layer_17.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png",
+          "file": "palxiao_layer_17.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 17,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.00533333
+    },
+    {
+      "index": 18,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+        "a": -0.012
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+        "a": -0.012
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+      "file": "palxiao_layer_18.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png",
+          "file": "palxiao_layer_18.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 18,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.012
+    },
+    {
+      "index": 19,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+      "file": "palxiao_layer_19.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png",
+          "file": "palxiao_layer_19.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 19,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 20,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+        "a": 0.00266667
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+        "a": 0.00266667
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+      "file": "palxiao_layer_20.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png",
+          "file": "palxiao_layer_20.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 20,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0.00266667
+    },
+    {
+      "index": 21,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+      "file": "palxiao_layer_21.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png",
+          "file": "palxiao_layer_21.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 21,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 22,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+        "a": 0.004
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+        "a": 0.004
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+      "file": "palxiao_layer_22.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png",
+          "file": "palxiao_layer_22.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 22,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0.004
+    },
+    {
+      "index": 23,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+        "a": 0
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+        "a": 0
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+      "file": "palxiao_layer_23.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png",
+          "file": "palxiao_layer_23.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 23,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0
+    },
+    {
+      "index": 24,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+        "a": -0.004
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+        "a": -0.004
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+      "file": "palxiao_layer_24.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png",
+          "file": "palxiao_layer_24.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 24,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.004
+    },
+    {
+      "index": 25,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+        "a": -0.004
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+        "a": -0.004
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+      "file": "palxiao_layer_25.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png",
+          "file": "palxiao_layer_25.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 25,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.004
+    },
+    {
+      "index": 26,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+        "a": 0.016
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+        "a": 0.016
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+      "file": "palxiao_layer_26.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png",
+          "file": "palxiao_layer_26.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 26,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": 0.016
+    },
+    {
+      "index": 27,
+      "sourceProvider": "palxiao-bilibili-banner",
+      "sourceLayer": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+        "a": -0.026666699999999998
+      },
+      "palxiao": {
+        "tagName": "img",
+        "opacity": [
+          "1",
+          "1"
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "width": 1690,
+        "height": 158,
+        "src": "./assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+        "a": -0.026666699999999998
+      },
+      "tag": "img",
+      "assetType": "image",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+      "file": "palxiao_layer_27.webp",
+      "contentType": "image/webp",
+      "resources": [
+        {
+          "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+          "requestedSrc": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+          "normalizedIdentity": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png",
+          "file": "palxiao_layer_27.webp",
+          "contentType": "image/webp",
+          "tag": "img",
+          "sourceSrc": "./assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+          "sourceProvider": "palxiao-bilibili-banner",
+          "assetType": "image",
+          "resourceIndex": 0
+        }
+      ],
+      "width": 1690,
+      "height": 158,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "opacity": [
+        1.0,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 27,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "captureTargetTag": "img",
+      "a": -0.026666699999999998
+    }
+  ],
+  "auxiliaryAssets": [],
+  "interaction": {
+    "model": "palxiao-reconstructed-v1",
+    "positionAxis": "horizontal-pixel",
+    "inputMode": "relative-from-pointer-enter",
+    "effects": [
+      "translateX",
+      "translateY",
+      "scale",
+      "rotate",
+      "opacity"
+    ],
+    "parameterSource": "palxiao-reproducer; not Bilibili Header API"
+  },
+  "sourceFiles": {
+    "json": "source/palxiao-data.json",
+    "palxiaoData": "source/palxiao-data.json"
+  },
+  "sourceEvidence": {
+    "repository": "palxiao/bilibili-banner",
+    "date": "2026-09-01",
+    "dateMeaning": "observedAt: palxiao recorded/fetched this Banner on this date; effectiveFrom is unknown",
+    "dataUrl": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/data.json",
+    "index": {
+      "fetchedAt": "2026-09-05T06:27:18+00:00",
+      "commitSha": "6063150074f1f65728ef7bea8a6376fd4ed6c011",
+      "dates": [
+        "2023-10-01",
+        "2023-10-26",
+        "2023-11-17",
+        "2023-12-12",
+        "2024-02-01",
+        "2024-06-06",
+        "2024-06-26",
+        "2024-09-26",
+        "2024-12-26",
+        "2025-04-05",
+        "2025-06-15",
+        "2025-09-10",
+        "2026-01-09",
+        "2026-04-27",
+        "2026-09-01"
+      ],
+      "repository": "palxiao/bilibili-banner"
+    },
+    "rawLayerCount": 28
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2026-09-01T18:02:19+08:00",
+  "type": [
+    "layered",
+    "interactive"
+  ],
+  "is_split_layer": true,
+  "fallback_image": null,
+  "preview_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "palxiao-bilibili-banner",
+      "url": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/data.json",
+      "date": "2026-09-01"
+    },
+    "layerCount": 28,
+    "visibleMediaCount": 28,
+    "mediaCount": 28,
+    "media": [
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      },
+      {
+        "tag": "img",
+        "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+        "sourceKind": "palxiao-data.json"
+      }
+    ],
+    "resourceUrls": [
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      },
+      {
+        "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+        "initiatorType": "palxiao-data.json"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": false,
+      "isStructuredLayered": true,
+      "hasVideo": false,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": true,
+      "hasDynamicSource": false
+    },
+    "provider": "palxiao-bilibili-banner"
+  },
+  "assets": [
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+      "local_file": "palxiao_layer_00.webp",
+      "content_type": "image/webp",
+      "sha256": "6276fb7cad72bcf4544a9287ff5bdbe43c1b1ff2d54a23199fe1ba200a6581b3"
+    },
+    {
+      "role": "layer",
+      "index": 1,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+      "local_file": "palxiao_layer_01.webp",
+      "content_type": "image/webp",
+      "sha256": "4a828160df312038c7f3bbecbd2b3193f517a0de876dc71b0c868af393ff4f51"
+    },
+    {
+      "role": "layer",
+      "index": 2,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+      "local_file": "palxiao_layer_02.webp",
+      "content_type": "image/webp",
+      "sha256": "3a0d76846d3974c1e9608a0107ccae488c27809328623c4563daaa2202e5a6d6"
+    },
+    {
+      "role": "layer",
+      "index": 3,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+      "local_file": "palxiao_layer_03.webp",
+      "content_type": "image/webp",
+      "sha256": "61c9467fabc67aed5438d43ae3e0e76d0867f93691071f5ff9a53393f86e0cc8"
+    },
+    {
+      "role": "layer",
+      "index": 4,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+      "local_file": "palxiao_layer_04.webp",
+      "content_type": "image/webp",
+      "sha256": "022420eb66c591f3acb71c4d1d7e7e0b23e6b75209d6ba6f924fd2bacf467c51"
+    },
+    {
+      "role": "layer",
+      "index": 5,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+      "local_file": "palxiao_layer_05.webp",
+      "content_type": "image/webp",
+      "sha256": "348cd7addc153cc0fdad90a990c52a0d460464888f74f0f1c549884a14aa5f5f"
+    },
+    {
+      "role": "layer",
+      "index": 6,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+      "local_file": "palxiao_layer_06.webp",
+      "content_type": "image/webp",
+      "sha256": "4d059c63cc9fc75f1dd10fb52f0b75e7941074c0b5f590d03ca0e646d42dd9c9"
+    },
+    {
+      "role": "layer",
+      "index": 7,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+      "local_file": "palxiao_layer_07.webp",
+      "content_type": "image/webp",
+      "sha256": "0dbc95518c527005634a3d8a3eaa54650d98e989b9259f5fc642224b47efbd11"
+    },
+    {
+      "role": "layer",
+      "index": 8,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+      "local_file": "palxiao_layer_08.webp",
+      "content_type": "image/webp",
+      "sha256": "60d32d733b5b0f52cd540ffee3e9f5358c5e981ebb2b2f7e24b0ef524798d916"
+    },
+    {
+      "role": "layer",
+      "index": 9,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+      "local_file": "palxiao_layer_09.webp",
+      "content_type": "image/webp",
+      "sha256": "d13bf2a627c3a4b6257e850c931a12f4ae110324edb9ccb7b8c1a056309f0d84"
+    },
+    {
+      "role": "layer",
+      "index": 10,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+      "local_file": "palxiao_layer_10.webp",
+      "content_type": "image/webp",
+      "sha256": "065c6125cfcfab5bcba47a9607a6ff2636427aeeef5bb75c1510beb2e8cf76cd"
+    },
+    {
+      "role": "layer",
+      "index": 11,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+      "local_file": "palxiao_layer_11.webp",
+      "content_type": "image/webp",
+      "sha256": "7a25856ae9e4982b1e93bd8259072987474b891f81c9e7ec5cf4e5c7702dc7e4"
+    },
+    {
+      "role": "layer",
+      "index": 12,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+      "local_file": "palxiao_layer_12.webp",
+      "content_type": "image/webp",
+      "sha256": "d08f8f363d3868e373ca10c56d55e45163315e9109c606c9789a18ae423313fd"
+    },
+    {
+      "role": "layer",
+      "index": 13,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+      "local_file": "palxiao_layer_13.webp",
+      "content_type": "image/webp",
+      "sha256": "2180a4ef902b2d3ddd0bb4e0dfa8fac3d71b78dacd6256a585c1c89a1b4c3be5"
+    },
+    {
+      "role": "layer",
+      "index": 14,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+      "local_file": "palxiao_layer_14.webp",
+      "content_type": "image/webp",
+      "sha256": "1526c6d04816500d209500393a89814c0ca205cb17ab96949bf288ad50a5a338"
+    },
+    {
+      "role": "layer",
+      "index": 15,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+      "local_file": "palxiao_layer_15.webp",
+      "content_type": "image/webp",
+      "sha256": "a80305cfd2b697700f295cae4bf3a5989f1dbe07356fe5800eca1a6e0d32d464"
+    },
+    {
+      "role": "layer",
+      "index": 16,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+      "local_file": "palxiao_layer_16.webp",
+      "content_type": "image/webp",
+      "sha256": "e155d0d176070aa7d66ccfa2376b320578a339573a59a804b4086024e131ed8d"
+    },
+    {
+      "role": "layer",
+      "index": 17,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+      "local_file": "palxiao_layer_17.webp",
+      "content_type": "image/webp",
+      "sha256": "344dd0f498625d266cf670c61c7d2bfba99fcbe9a026d91e9eaf725b56ab697d"
+    },
+    {
+      "role": "layer",
+      "index": 18,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+      "local_file": "palxiao_layer_18.webp",
+      "content_type": "image/webp",
+      "sha256": "98bae07de5f07c83d0c3ce6691cf9e6e2b6143e1438bc7a9af30f11acfb7740b"
+    },
+    {
+      "role": "layer",
+      "index": 19,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+      "local_file": "palxiao_layer_19.webp",
+      "content_type": "image/webp",
+      "sha256": "d173e2edfbf277ca8b918330d3fa50760e470f817b49916483f78b5ff45452dd"
+    },
+    {
+      "role": "layer",
+      "index": 20,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+      "local_file": "palxiao_layer_20.webp",
+      "content_type": "image/webp",
+      "sha256": "6d36a792deada59fbc42e675197a3b6187b3743481d246e0960adcd0ee3086af"
+    },
+    {
+      "role": "layer",
+      "index": 21,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+      "local_file": "palxiao_layer_21.webp",
+      "content_type": "image/webp",
+      "sha256": "01943a6c84df857a355cb9061e480a38e5c13e7d4a7b35f0849373d3b552b028"
+    },
+    {
+      "role": "layer",
+      "index": 22,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+      "local_file": "palxiao_layer_22.webp",
+      "content_type": "image/webp",
+      "sha256": "d2fbe3342d8b1bf294efe10a2f90b37f05a3fa2f5e96bf0d78778135b2fef4f5"
+    },
+    {
+      "role": "layer",
+      "index": 23,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+      "local_file": "palxiao_layer_23.webp",
+      "content_type": "image/webp",
+      "sha256": "aa7bad4d2ec9d62ac1765dacf71227135d0fe365d31f160223a555dea901fa9a"
+    },
+    {
+      "role": "layer",
+      "index": 24,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+      "local_file": "palxiao_layer_24.webp",
+      "content_type": "image/webp",
+      "sha256": "122f9350501b667d49c00ab131a490b01ea251897ffd1474c83712a3715715f2"
+    },
+    {
+      "role": "layer",
+      "index": 25,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+      "local_file": "palxiao_layer_25.webp",
+      "content_type": "image/webp",
+      "sha256": "d18f8367d560a9b3c6e4d48e1aca1441744a02c64ff3aa24440c932e2ae98cd3"
+    },
+    {
+      "role": "layer",
+      "index": 26,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+      "local_file": "palxiao_layer_26.webp",
+      "content_type": "image/webp",
+      "sha256": "d328eb235b7356a3e75c63d191773d0ee47a867c7d4569e37d2136a507d51aa5"
+    },
+    {
+      "role": "layer",
+      "index": 27,
+      "resourceIndex": 0,
+      "type": "img",
+      "src": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+      "local_file": "palxiao_layer_27.webp",
+      "content_type": "image/webp",
+      "sha256": "057100fc3d2c5c6a2eb3853df1f4cb72f24ee74caa0e4bc552d1946d0fdf99f7"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "0a862bb50bfe4819fbda1c7e",
+  "hashes": {
+    "resourceHash": "274c855c898258e573c5f270",
+    "structureHash": "2a6043136c6f932043cc8379",
+    "interactionHash": "7e60cce4ce348122ccbf1368",
+    "contentHash": "0a862bb50bfe4819fbda1c7e",
+    "canonicalContentHash": "8b364e2efe50d47a906bc40e",
+    "sourceFingerprint": "b9271b9ce269dbd33406f4c3"
+  },
+  "canonicalContentHash": "8b364e2efe50d47a906bc40e",
+  "sourceFingerprint": "b9271b9ce269dbd33406f4c3",
+  "interactionState": "interactive",
+  "layoutHash": "7c287696dc745cfa42947aaa",
+  "familyId": "2026-09-01_7c287696dc74",
+  "slots": [
+    6
+  ],
+  "observations": [
+    {
+      "capturedAt": "2026-09-01T18:02:19+08:00",
+      "lastObservedAt": "2026-09-01T18:02:19+08:00",
+      "date": "2026-09-01",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        6
+      ],
+      "familyId": "2026-09-01_7c287696dc74",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/data.json",
+        "captureMethod": "palxiao-history",
+        "provider": "palxiao-bilibili-banner",
+        "palxiaoDate": "2026-09-01",
+        "observedAt": "2026-09-01",
+        "dateSemantics": "observedAt-only; effectiveFrom is not inferred",
+        "parameterSource": "palxiao data.json fields when present; a/g/f/deg are reproducer parameters and unknown fields remain in sourceLayer",
+        "palxiaoDataUrl": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/data.json",
+        "requestedTimestamp": "20260901100219",
+        "structureSemantics": "palxiao layer list; not official Bilibili split_layer",
+        "discoveredResources": [
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/060aabb9f1510f85d35291bb325cef439c515c7a.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/587d666b2e242d3c8bac6a3132401f48949c0623.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/d37a459df931a19029766a401696bf2049eb68b3.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b437c98006d42b8bba029c155db2c8b669a8af4f.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/caf1c3b096a61a230d7a783bd7e08f42745b6706.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/b487ee14524c59cb805b9a954d226f36e7e9c803.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/757614ea36fb1544cb790c44da51b714451364f0.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/014a91614c869b05abdc6ef062b9f7c4333cd1af.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c418010c5a5851be61609f126f4d15e96fa63776.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/24aa834d42d13922b066c20c140bac8ceb33dc3f.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/6e73660a07b754d5437e68e01195dee6a04cf4a8.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e2172b4e09446930eba81328a220a62ad00ab307.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/19091569ac9b766687fca327d1d2f7312518edc1.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/e57c56053b84eac7822b14791e6a569f5837f17a.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          },
+          {
+            "name": "https://raw.githubusercontent.com/palxiao/bilibili-banner/main/assets/2026-09-01/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png@1c.webp",
+            "initiatorType": "palxiao-data.json"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}
