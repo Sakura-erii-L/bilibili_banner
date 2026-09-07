@@ -2840,7 +2840,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2026-09-07T14:04:03+08:00",
+  "lastObservedAt": "2026-09-07T21:29:24+08:00",
   "type": [
     "layered",
     "interactive"
@@ -3309,7 +3309,8 @@
     1,
     2,
     4,
-    6
+    6,
+    7
   ],
   "observations": [
     {
@@ -3999,7 +4000,8 @@
         0,
         1,
         2,
-        4
+        4,
+        7
       ],
       "familyId": "2026-09-07_8d15a05ed0f2",
       "source": {
