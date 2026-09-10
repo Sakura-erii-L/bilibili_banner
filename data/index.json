@@ -1,9 +1,86 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-11T01:11:10+08:00",
+  "generatedAt": "2026-09-11T05:39:13+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2026-09-11_5116a63c6941_0c43ee964edd",
+      "date": "2026-09-11",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2026",
+      "month": "09",
+      "yearMonth": "2026-09",
+      "dateStart": "2026-09-11",
+      "dateEnd": "2026-09-11",
+      "capturedAt": "2026-09-11T05:36:04+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 26,
+      "completeness": "partial",
+      "missing_assets": [
+        "2 API layer(s) unavailable",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: <urlopen error timed out>",
+        "api_layer_001: no resource saved",
+        "api_layer_001_resource_000: <urlopen error timed out>"
+      ],
+      "contentHash": "0c43ee964edd3fa9507f8eed",
+      "manifest": "./data/archive/2026-09-11_053604_0c43ee964edd3fa9507f8eed/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "0c43ee964edd3fa9507f8eed",
+          "canonicalContentHash": "4ecc64370bbf6d2d34c1dde5",
+          "sourceFingerprint": "1a3d7b985294e87e4f3e914f",
+          "capturedAt": "2026-09-11T05:36:04+08:00",
+          "lastObservedAt": "2026-09-11T05:36:04+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 26,
+          "completeness": "partial",
+          "missing_assets": [
+            "2 API layer(s) unavailable",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: <urlopen error timed out>",
+            "api_layer_001: no resource saved",
+            "api_layer_001_resource_000: <urlopen error timed out>"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2026-09-11_053604_0c43ee964edd3fa9507f8eed/banner.json",
+          "interactionState": "interactive",
+          "visualMergeSafe": false,
+          "mergedFrom": [
+            {
+              "contentHash": "0c43ee964edd3fa9507f8eed",
+              "manifest": "./data/archive/2026-09-11_053604_0c43ee964edd3fa9507f8eed/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            1
+          ],
+          "slotFill": "same-day-forward-backward"
+        }
+      ]
+    },
     {
       "id": "2026-09-02_8d15a05ed0f2_b24b6936af40",
       "date": "2026-09-02",
