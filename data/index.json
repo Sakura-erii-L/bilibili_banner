@@ -1,9 +1,90 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-11T05:39:13+08:00",
+  "generatedAt": "2026-09-11T20:16:04+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2026-09-11_1e800dbda919_26148baf46d5",
+      "date": "2026-09-11",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2026",
+      "month": "09",
+      "yearMonth": "2026-09",
+      "dateStart": "2026-09-11",
+      "dateEnd": "2026-09-11",
+      "capturedAt": "2026-09-11T20:11:27+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "interactive"
+      ],
+      "layerCount": 25,
+      "completeness": "partial",
+      "missing_assets": [
+        "3 API layer(s) unavailable",
+        "api_layer_000: no resource saved",
+        "api_layer_000_resource_000: <urlopen error timed out>",
+        "api_layer_002: no resource saved",
+        "api_layer_002_resource_000: <urlopen error timed out>",
+        "api_layer_003: no resource saved",
+        "api_layer_003_resource_000: <urlopen error timed out>"
+      ],
+      "contentHash": "26148baf46d57175ea40b3ad",
+      "manifest": "./data/archive/2026-09-11_201127_26148baf46d57175ea40b3ad/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "26148baf46d57175ea40b3ad",
+          "canonicalContentHash": "dc8f98f34eef39628b18181e",
+          "sourceFingerprint": "6e26799a6be1ddd706c0f018",
+          "capturedAt": "2026-09-11T20:11:27+08:00",
+          "lastObservedAt": "2026-09-11T20:11:27+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "interactive"
+          ],
+          "layerCount": 25,
+          "completeness": "partial",
+          "missing_assets": [
+            "3 API layer(s) unavailable",
+            "api_layer_000: no resource saved",
+            "api_layer_000_resource_000: <urlopen error timed out>",
+            "api_layer_002: no resource saved",
+            "api_layer_002_resource_000: <urlopen error timed out>",
+            "api_layer_003: no resource saved",
+            "api_layer_003_resource_000: <urlopen error timed out>"
+          ],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2026-09-11_201127_26148baf46d57175ea40b3ad/banner.json",
+          "interactionState": "interactive",
+          "visualMergeSafe": false,
+          "mergedFrom": [
+            {
+              "contentHash": "26148baf46d57175ea40b3ad",
+              "manifest": "./data/archive/2026-09-11_201127_26148baf46d57175ea40b3ad/banner.json",
+              "interactionState": "interactive"
+            }
+          ],
+          "observedSlots": [
+            6
+          ],
+          "slotFill": "same-day-forward-backward"
+        }
+      ]
+    },
     {
       "id": "2026-09-11_5116a63c6941_0c43ee964edd",
       "date": "2026-09-11",
