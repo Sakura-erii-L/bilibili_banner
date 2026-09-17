@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-17T14:07:23+08:00",
+  "generatedAt": "2026-09-17T20:34:41+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -65,7 +65,8 @@
           "observedSlots": [
             0,
             2,
-            4
+            4,
+            6
           ],
           "slotFill": "same-day-forward-backward"
         }
