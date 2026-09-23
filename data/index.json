@@ -1,9 +1,74 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-09-23T20:44:22+08:00",
+  "generatedAt": "2026-09-24T01:50:58+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2026-09-24_0a6f021986f2_0b1b550e45b7",
+      "date": "2026-09-24",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2026",
+      "month": "09",
+      "yearMonth": "2026-09",
+      "dateStart": "2026-09-24",
+      "dateEnd": "2026-09-24",
+      "capturedAt": "2026-09-24T01:50:55+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "9158b584ae810217b0b1a489",
+      "manifest": "./data/archive/2026-09-24_015055_9158b584ae810217b0b1a489/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "9158b584ae810217b0b1a489",
+          "canonicalContentHash": "0b1b550e45b72a4427336e18",
+          "sourceFingerprint": "98464ee5a7b99470ac3dac93",
+          "capturedAt": "2026-09-24T01:50:55+08:00",
+          "lastObservedAt": "2026-09-24T01:50:55+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2026-09-24_015055_9158b584ae810217b0b1a489/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "9158b584ae810217b0b1a489",
+              "manifest": "./data/archive/2026-09-24_015055_9158b584ae810217b0b1a489/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0
+          ],
+          "slotFill": "same-day-forward-backward"
+        }
+      ]
+    },
     {
       "id": "2026-09-18_8d15a05ed0f2_b24b6936af40",
       "date": "2026-09-18",
