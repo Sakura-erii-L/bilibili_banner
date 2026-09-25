@@ -159,7 +159,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2026-09-25T14:09:01+08:00",
+  "lastObservedAt": "2026-09-25T20:44:32+08:00",
   "type": [
     "layered",
     "video"
@@ -287,7 +287,8 @@
       "slots": [
         0,
         2,
-        4
+        4,
+        6
       ],
       "familyId": "2026-09-25_0a6f021986f2",
       "source": {
