@@ -2840,7 +2840,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2026-10-09T03:16:02+08:00",
+  "lastObservedAt": "2026-10-09T07:44:52+08:00",
   "type": [
     "layered",
     "interactive"
@@ -7537,7 +7537,8 @@
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
       "slots": [
-        1
+        1,
+        2
       ],
       "familyId": "2026-10-09_8d15a05ed0f2",
       "source": {
