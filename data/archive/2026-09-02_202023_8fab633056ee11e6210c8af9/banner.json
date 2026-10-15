@@ -2840,7 +2840,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2026-10-15T13:52:33+08:00",
+  "lastObservedAt": "2026-10-15T20:38:09+08:00",
   "type": [
     "layered",
     "interactive"
@@ -8352,7 +8352,8 @@
       "slots": [
         0,
         2,
-        4
+        4,
+        6
       ],
       "familyId": "2026-10-15_8d15a05ed0f2",
       "source": {
