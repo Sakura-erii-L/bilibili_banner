@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-10-20T05:01:54+08:00",
+  "generatedAt": "2026-10-20T13:59:29+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -6365,76 +6365,6 @@
       ]
     },
     {
-      "id": "2022-03-20_2022-03-20_2022-06-20_spring_a358b4ed983a",
-      "date": "2022-03-20",
-      "season": "spring",
-      "timeZone": "Asia/Shanghai",
-      "year": "2022",
-      "month": "03",
-      "yearMonth": "2022-03",
-      "dateStart": "2022-03-20",
-      "dateEnd": "2022-06-20",
-      "capturedAt": "2022-06-20T00:00:00+08:00",
-      "mode": "static",
-      "type": [
-        "interactive"
-      ],
-      "layerCount": 0,
-      "completeness": "complete",
-      "missing_assets": [],
-      "contentHash": "c6a4b38dc1edf804e81611ac",
-      "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
-      "interactionState": "interactive",
-      "variantCount": 1,
-      "variants": [
-        {
-          "contentHash": "c6a4b38dc1edf804e81611ac",
-          "canonicalContentHash": "a358b4ed983a6ea7d26250aa",
-          "sourceFingerprint": "32f60b3e2a7fb2b2048923e1",
-          "capturedAt": "2022-06-20T00:00:00+08:00",
-          "lastObservedAt": "2022-06-20T00:00:00+08:00",
-          "mode": "static",
-          "type": [
-            "interactive"
-          ],
-          "layerCount": 0,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
-          "interactionState": "interactive",
-          "visualMergeSafe": true,
-          "referenceMode": "interactive",
-          "mergedFrom": [
-            {
-              "contentHash": "c6a4b38dc1edf804e81611ac",
-              "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
-              "interactionState": "interactive"
-            }
-          ],
-          "observedSlots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ]
-        }
-      ]
-    },
-    {
       "id": "2022-03-20_2022-03-20_2022-06-20_spring_bf896d6a3fed",
       "date": "2022-03-20",
       "season": "spring",
@@ -6498,6 +6428,76 @@
               "contentHash": "4030b6e79adef43c802edf2c",
               "manifest": "./data/archive/2022-03-20_000000_4030b6e79adef43c802edf2c/banner.json",
               "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2022-03-20_2022-03-20_2022-06-20_spring_a358b4ed983a",
+      "date": "2022-03-20",
+      "season": "spring",
+      "timeZone": "Asia/Shanghai",
+      "year": "2022",
+      "month": "03",
+      "yearMonth": "2022-03",
+      "dateStart": "2022-03-20",
+      "dateEnd": "2022-06-20",
+      "capturedAt": "2022-06-20T00:00:00+08:00",
+      "mode": "static",
+      "type": [
+        "interactive"
+      ],
+      "layerCount": 0,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "c6a4b38dc1edf804e81611ac",
+      "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+      "interactionState": "interactive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "c6a4b38dc1edf804e81611ac",
+          "canonicalContentHash": "a358b4ed983a6ea7d26250aa",
+          "sourceFingerprint": "32f60b3e2a7fb2b2048923e1",
+          "capturedAt": "2022-06-20T00:00:00+08:00",
+          "lastObservedAt": "2022-06-20T00:00:00+08:00",
+          "mode": "static",
+          "type": [
+            "interactive"
+          ],
+          "layerCount": 0,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+          "interactionState": "interactive",
+          "visualMergeSafe": true,
+          "referenceMode": "interactive",
+          "mergedFrom": [
+            {
+              "contentHash": "c6a4b38dc1edf804e81611ac",
+              "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+              "interactionState": "interactive"
             }
           ],
           "observedSlots": [
@@ -6751,7 +6751,7 @@
       ]
     },
     {
-      "id": "2021-07-27_time_ee4d79119277_9ac6e756f3f2",
+      "id": "2021-07-27_time_91cf8ac00015_9ac6e756f3f2",
       "date": "2021-07-27",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
