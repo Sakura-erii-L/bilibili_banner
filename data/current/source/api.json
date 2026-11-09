@@ -3,15 +3,15 @@
   "message": "OK",
   "ttl": 1,
   "data": {
-    "id": 731,
-    "style": 2,
+    "id": 371,
+    "style": 0,
     "rid": 0,
-    "name": "战斗开启，来为你喜欢的作品投票吧~(｡ゝ∀・)b",
-    "litpic": "http://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
-    "pic": "http://i0.hdslb.com/bfs/archive/9f87af054aba62a3698fa59667b222f031088225.png",
-    "url": "https://www.bilibili.com/blackboard/era/yellowVSgreen11th.html",
-    "is_split_layer": 1,
-    "split_layer": "{\"version\":\"1\",\"layers\":[{\"id\":0,\"name\":\"图层0\",\"resources\":[{\"src\":\"https://i0.hdslb.com/bfs/vc/b8c545e61091a949fa75e53b32a306da3566556a.webm\",\"id\":0}],\"scale\":{\"initial\":0.6459}}]}",
-    "request_id": "1790185855"
+    "name": "",
+    "litpic": "http://i0.hdslb.com/bfs/archive/db28ea2ab5bd306a382ff4310ca2bf7c9d2e3db3.png",
+    "pic": "http://i0.hdslb.com/bfs/archive/1537436ff4618d35a13b0f78631f48423f0a5cf7.png",
+    "url": "",
+    "is_split_layer": 0,
+    "split_layer": "{\"version\":\"1\",\"layers\":[]}",
+    "request_id": "1794228431"
   }
 }
