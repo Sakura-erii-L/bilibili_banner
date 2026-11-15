@@ -1,9 +1,80 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-11-16T01:03:32+08:00",
+  "generatedAt": "2026-11-16T07:22:26+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
+    {
+      "id": "2026-11-15_0a6f021986f2_fb349f92e4be",
+      "date": "2026-11-15",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "year": "2026",
+      "month": "11",
+      "yearMonth": "2026-11",
+      "dateStart": "2026-11-15",
+      "dateEnd": "2026-11-16",
+      "capturedAt": "2026-11-16T07:22:23+08:00",
+      "mode": "split",
+      "type": [
+        "layered",
+        "video"
+      ],
+      "layerCount": 1,
+      "completeness": "complete",
+      "missing_assets": [],
+      "contentHash": "23c01c6c086e7a4b2ed690f9",
+      "manifest": "./data/archive/2026-11-16_072223_23c01c6c086e7a4b2ed690f9/banner.json",
+      "interactionState": "nonInteractive",
+      "variantCount": 1,
+      "variants": [
+        {
+          "contentHash": "23c01c6c086e7a4b2ed690f9",
+          "canonicalContentHash": "fb349f92e4be3a1cb2ae98bb",
+          "sourceFingerprint": "5d59f5170c0f4e887d4be201",
+          "capturedAt": "2026-11-16T07:22:23+08:00",
+          "lastObservedAt": "2026-11-16T07:22:23+08:00",
+          "mode": "split",
+          "type": [
+            "layered",
+            "video"
+          ],
+          "layerCount": 1,
+          "completeness": "complete",
+          "missing_assets": [],
+          "slots": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manifest": "./data/archive/2026-11-16_072223_23c01c6c086e7a4b2ed690f9/banner.json",
+          "interactionState": "nonInteractive",
+          "visualMergeSafe": true,
+          "mergedFrom": [
+            {
+              "contentHash": "23c01c6c086e7a4b2ed690f9",
+              "manifest": "./data/archive/2026-11-16_072223_23c01c6c086e7a4b2ed690f9/banner.json",
+              "interactionState": "nonInteractive"
+            },
+            {
+              "contentHash": "82f549cecc779b05d294da30",
+              "manifest": "./data/archive/2026-11-15_154845_82f549cecc779b05d294da30/banner.json",
+              "interactionState": "nonInteractive"
+            }
+          ],
+          "observedSlots": [
+            2,
+            5
+          ],
+          "slotFill": "same-day-forward-backward"
+        }
+      ]
+    },
     {
       "id": "2026-11-09_3f4544a6cbd4_1286d7a0c6d1",
       "date": "2026-11-09",
@@ -67,71 +138,6 @@
             3,
             5,
             6
-          ],
-          "slotFill": "same-day-forward-backward"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-15_0a6f021986f2_fb349f92e4be",
-      "date": "2026-11-15",
-      "season": "autumn",
-      "timeZone": "Asia/Shanghai",
-      "year": "2026",
-      "month": "11",
-      "yearMonth": "2026-11",
-      "dateStart": "2026-11-15",
-      "dateEnd": "2026-11-15",
-      "capturedAt": "2026-11-15T15:48:45+08:00",
-      "mode": "split",
-      "type": [
-        "layered",
-        "video"
-      ],
-      "layerCount": 1,
-      "completeness": "complete",
-      "missing_assets": [],
-      "contentHash": "82f549cecc779b05d294da30",
-      "manifest": "./data/archive/2026-11-15_154845_82f549cecc779b05d294da30/banner.json",
-      "interactionState": "nonInteractive",
-      "variantCount": 1,
-      "variants": [
-        {
-          "contentHash": "82f549cecc779b05d294da30",
-          "canonicalContentHash": "fb349f92e4be3a1cb2ae98bb",
-          "sourceFingerprint": "7ef1bb32ae7b97c0e9a7cab8",
-          "capturedAt": "2026-11-15T15:48:45+08:00",
-          "lastObservedAt": "2026-11-15T15:48:45+08:00",
-          "mode": "split",
-          "type": [
-            "layered",
-            "video"
-          ],
-          "layerCount": 1,
-          "completeness": "complete",
-          "missing_assets": [],
-          "slots": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "manifest": "./data/archive/2026-11-15_154845_82f549cecc779b05d294da30/banner.json",
-          "interactionState": "nonInteractive",
-          "visualMergeSafe": true,
-          "mergedFrom": [
-            {
-              "contentHash": "82f549cecc779b05d294da30",
-              "manifest": "./data/archive/2026-11-15_154845_82f549cecc779b05d294da30/banner.json",
-              "interactionState": "nonInteractive"
-            }
-          ],
-          "observedSlots": [
-            5
           ],
           "slotFill": "same-day-forward-backward"
         }

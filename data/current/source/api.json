@@ -3,7 +3,7 @@
   "message": "OK",
   "ttl": 1,
   "data": {
-    "id": 806,
+    "id": 808,
     "style": 2,
     "rid": 0,
     "name": "恭喜BLG获得英雄联盟S16总冠军！",
@@ -12,6 +12,6 @@
     "url": "https://www.bilibili.com/video/BV15es76gEgL",
     "is_split_layer": 1,
     "split_layer": "{\"version\":\"1\",\"layers\":[{\"id\":0,\"name\":\"图层0\",\"resources\":[{\"src\":\"https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm\",\"id\":0}],\"scale\":{\"initial\":0.65}}]}",
-    "request_id": "1794728925"
+    "request_id": "1794784944"
   }
 }
