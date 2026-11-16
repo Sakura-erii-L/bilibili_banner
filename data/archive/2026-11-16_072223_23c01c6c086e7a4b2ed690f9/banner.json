@@ -159,7 +159,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2026-11-16T07:22:23+08:00",
+  "lastObservedAt": "2026-11-16T15:56:48+08:00",
   "type": [
     "layered",
     "video"
@@ -244,7 +244,8 @@
   "layoutHash": "0a6f021986f268f3acef21c9",
   "familyId": "2026-11-16_0a6f021986f2",
   "slots": [
-    2
+    2,
+    5
   ],
   "observations": [
     {
@@ -254,7 +255,8 @@
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
       "slots": [
-        2
+        2,
+        5
       ],
       "familyId": "2026-11-16_0a6f021986f2",
       "source": {
