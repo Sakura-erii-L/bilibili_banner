@@ -7,11 +7,11 @@
     "style": 2,
     "rid": 0,
     "name": "恭喜BLG获得英雄联盟S16总冠军！",
-    "litpic": "http://i0.hdslb.com/bfs/archive/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png",
+    "litpic": "http://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
     "pic": "http://i0.hdslb.com/bfs/archive/7228f3254b74a9e875dc5210d1e3d5b0a60961fc.png",
     "url": "https://www.bilibili.com/video/BV15es76gEgL",
     "is_split_layer": 1,
-    "split_layer": "{\"version\":\"1\",\"layers\":[{\"id\":0,\"name\":\"图层0\",\"resources\":[{\"src\":\"https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm\",\"id\":0}],\"scale\":{\"initial\":0.65}}]}",
-    "request_id": "1794784944"
+    "split_layer": "{\"version\":\"1\",\"layers\":[{\"resources\":[{\"src\":\"https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm\",\"id\":0}],\"scale\":{\"initial\":0.65},\"rotate\":{},\"translate\":{},\"blur\":{},\"opacity\":{\"wrap\":\"clamp\"},\"id\":0,\"name\":\"图层0\"}]}",
+    "request_id": "1794934268"
   }
 }

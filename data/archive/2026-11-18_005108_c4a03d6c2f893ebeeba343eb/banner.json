@@ -1,0 +1,284 @@
+{
+  "version": 11.0,
+  "capturedAt": "2026-11-18T00:51:08+08:00",
+  "date": "2026-11-18",
+  "season": "autumn",
+  "source": {
+    "page": "https://www.bilibili.com/",
+    "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+    "captureMethod": "bilibili-header-api",
+    "headerApi": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+    "discoveredResources": [
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": []
+  },
+  "provenance": {
+    "primaryProvider": "bilibili-header-api",
+    "supportingProviders": [],
+    "confidence": "high",
+    "agreement": {},
+    "conflicts": []
+  },
+  "viewport": {
+    "width": 1650,
+    "height": 800
+  },
+  "banner": {
+    "referenceHeight": 155
+  },
+  "mode": "split",
+  "static": {
+    "src": "https://i0.hdslb.com/bfs/archive/7228f3254b74a9e875dc5210d1e3d5b0a60961fc.png",
+    "requestedSrc": "https://i0.hdslb.com/bfs/archive/7228f3254b74a9e875dc5210d1e3d5b0a60961fc.png",
+    "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/7228f3254b74a9e875dc5210d1e3d5b0a60961fc.png",
+    "file": "static.png",
+    "contentType": "image/png",
+    "tag": "img",
+    "sourceKind": "header-api-pic",
+    "assetType": "image",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  "layers": [
+    {
+      "index": 0,
+      "apiIndex": 0,
+      "id": 0,
+      "name": "图层0",
+      "tag": "video",
+      "assetType": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+      "file": "api_layer_00_00_e63a03516c.webm",
+      "contentType": "video/webm",
+      "resources": [
+        {
+          "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+          "requestedSrc": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+          "normalizedIdentity": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+          "file": "api_layer_00_00_e63a03516c.webm",
+          "contentType": "video/webm",
+          "tag": "video",
+          "resourceIndex": 0,
+          "id": 0,
+          "duration": null,
+          "apiResource": {
+            "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+            "id": 0
+          }
+        }
+      ],
+      "apiConfig": {
+        "scale": {
+          "initial": 0.65
+        },
+        "rotate": {},
+        "translate": {},
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        }
+      },
+      "apiLayer": {
+        "resources": [
+          {
+            "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+            "id": 0
+          }
+        ],
+        "scale": {
+          "initial": 0.65
+        },
+        "rotate": {},
+        "translate": {},
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 0,
+        "name": "图层0"
+      },
+      "width": 0,
+      "height": 0,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "transformOrigin": "50% 50%",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "opacity": [
+        1,
+        1.0
+      ],
+      "position": {},
+      "zIndex": 0,
+      "animation": {},
+      "animationTarget": "media",
+      "motion": null,
+      "a": 0,
+      "captureTargetTag": "video"
+    }
+  ],
+  "interaction": {
+    "model": "bilibili-header-api-v1",
+    "positionAxis": "horizontal-normalized-from-entry",
+    "inputMode": "relative-from-pointer-enter",
+    "displacementFormula": "(clientX-enterX)/containerWidth",
+    "containerReferenceHeight": 155,
+    "returnDurationMs": 200,
+    "effects": []
+  },
+  "sourceFiles": {
+    "json": "source/api.json"
+  },
+  "auxiliaryAssets": [],
+  "api": {
+    "endpoint": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+    "id": 808,
+    "name": "恭喜BLG获得英雄联盟S16总冠军！",
+    "request_id": "1794934268",
+    "isSplitLayer": true,
+    "layerCount": 1,
+    "assetCount": 1,
+    "pic": "https://i0.hdslb.com/bfs/archive/7228f3254b74a9e875dc5210d1e3d5b0a60961fc.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
+    "litpicAsset": {
+      "src": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
+      "requestedSrc": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
+      "file": "litpic.png",
+      "contentType": "image/png",
+      "tag": "img"
+    },
+    "splitVersion": "1",
+    "extensions": {}
+  },
+  "timeZone": "Asia/Shanghai",
+  "lastObservedAt": "2026-11-18T00:51:08+08:00",
+  "type": [
+    "layered",
+    "video"
+  ],
+  "is_split_layer": true,
+  "fallback_image": "static.png",
+  "preview_image": null,
+  "completeness": "complete",
+  "missing_assets": [],
+  "structureEvidence": {
+    "root": {
+      "source": "bilibili-header-api",
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142"
+    },
+    "layerCount": 1,
+    "mediaCount": 1,
+    "visibleMediaCount": 1,
+    "media": [],
+    "resourceUrls": [
+      {
+        "name": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+        "initiatorType": "header-api"
+      }
+    ],
+    "stylesheetUrls": [],
+    "scriptUrls": [],
+    "animationCss": "",
+    "signals": {
+      "isSplitLayer": true,
+      "hasVideo": true,
+      "hasCanvas": false,
+      "hasSvg": false,
+      "hasSvgAnimation": false,
+      "hasCssAnimation": false,
+      "hasInteraction": false,
+      "hasDynamicSource": true
+    },
+    "api": {
+      "endpoint": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+      "id": 808,
+      "request_id": "1794934268",
+      "isSplitLayer": true,
+      "layerCount": 1,
+      "assetCount": 1,
+      "savedAssetCount": 1,
+      "effects": []
+    }
+  },
+  "assets": [
+    {
+      "role": "fallback_image",
+      "type": "image",
+      "src": "https://i0.hdslb.com/bfs/archive/7228f3254b74a9e875dc5210d1e3d5b0a60961fc.png",
+      "local_file": "static.png",
+      "content_type": "image/png",
+      "sha256": "a87a4f4f1180c27e8c31e9ff3946bc5c5cc8b6c1681c1565b9b28d053a53583b"
+    },
+    {
+      "role": "layer",
+      "index": 0,
+      "resourceIndex": 0,
+      "type": "video",
+      "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+      "local_file": "api_layer_00_00_e63a03516c.webm",
+      "content_type": "video/webm",
+      "sha256": "cc64ce21970a95da99e5c32615e5e470fb8e85b8d35fd74c54e1e873835162e2"
+    }
+  ],
+  "animationCss": "",
+  "contentHash": "c4a03d6c2f893ebeeba343eb",
+  "hashes": {
+    "resourceHash": "3190ff25cc665993f5d4456f",
+    "structureHash": "fffdb776b79e1d0551b69e81",
+    "interactionHash": "8b3897df6a36251cb63272ad",
+    "contentHash": "c4a03d6c2f893ebeeba343eb",
+    "canonicalContentHash": "0d62dc32a22c8484acb7d290",
+    "sourceFingerprint": "c35326bb753db101c5e2463b"
+  },
+  "canonicalContentHash": "0d62dc32a22c8484acb7d290",
+  "sourceFingerprint": "c35326bb753db101c5e2463b",
+  "interactionState": "nonInteractive",
+  "layoutHash": "0a6f021986f268f3acef21c9",
+  "familyId": "2026-11-18_0a6f021986f2",
+  "slots": [
+    0
+  ],
+  "observations": [
+    {
+      "capturedAt": "2026-11-18T00:51:08+08:00",
+      "lastObservedAt": "2026-11-18T00:51:08+08:00",
+      "date": "2026-11-18",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        0
+      ],
+      "familyId": "2026-11-18_0a6f021986f2",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+        "captureMethod": "bilibili-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+        "discoveredResources": [
+          {
+            "name": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+            "initiatorType": "header-api"
+          }
+        ],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    }
+  ]
+}

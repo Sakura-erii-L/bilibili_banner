@@ -1,7 +1,7 @@
 {
   "version": 11.0,
-  "capturedAt": "2026-11-16T07:22:23+08:00",
-  "date": "2026-11-16",
+  "capturedAt": "2026-11-18T00:51:08+08:00",
+  "date": "2026-11-18",
   "season": "autumn",
   "source": {
     "page": "https://www.bilibili.com/",
@@ -10,7 +10,7 @@
     "headerApi": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
     "discoveredResources": [
       {
-        "name": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
+        "name": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
         "initiatorType": "header-api"
       }
     ],
@@ -54,22 +54,22 @@
       "name": "图层0",
       "tag": "video",
       "assetType": "video",
-      "src": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
-      "file": "api_layer_00_00_09a704cdb2.webm",
+      "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+      "file": "api_layer_00_00_e63a03516c.webm",
       "contentType": "video/webm",
       "resources": [
         {
-          "src": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
-          "requestedSrc": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
-          "normalizedIdentity": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
-          "file": "api_layer_00_00_09a704cdb2.webm",
+          "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+          "requestedSrc": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+          "normalizedIdentity": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+          "file": "api_layer_00_00_e63a03516c.webm",
           "contentType": "video/webm",
           "tag": "video",
           "resourceIndex": 0,
           "id": 0,
           "duration": null,
           "apiResource": {
-            "src": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
+            "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
             "id": 0
           }
         }
@@ -81,20 +81,28 @@
         "rotate": {},
         "translate": {},
         "blur": {},
-        "opacity": {}
+        "opacity": {
+          "wrap": "clamp"
+        }
       },
       "apiLayer": {
-        "id": 0,
-        "name": "图层0",
         "resources": [
           {
-            "src": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
+            "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
             "id": 0
           }
         ],
         "scale": {
           "initial": 0.65
-        }
+        },
+        "rotate": {},
+        "translate": {},
+        "blur": {},
+        "opacity": {
+          "wrap": "clamp"
+        },
+        "id": 0,
+        "name": "图层0"
       },
       "width": 0,
       "height": 0,
@@ -141,16 +149,16 @@
     "endpoint": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
     "id": 808,
     "name": "恭喜BLG获得英雄联盟S16总冠军！",
-    "request_id": "1794784944",
+    "request_id": "1794934268",
     "isSplitLayer": true,
     "layerCount": 1,
     "assetCount": 1,
     "pic": "https://i0.hdslb.com/bfs/archive/7228f3254b74a9e875dc5210d1e3d5b0a60961fc.png",
-    "litpic": "https://i0.hdslb.com/bfs/archive/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png",
+    "litpic": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
     "litpicAsset": {
-      "src": "https://i0.hdslb.com/bfs/archive/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png",
-      "requestedSrc": "https://i0.hdslb.com/bfs/archive/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png",
-      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png",
+      "src": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
+      "requestedSrc": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
+      "normalizedIdentity": "https://i0.hdslb.com/bfs/archive/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png",
       "file": "litpic.png",
       "contentType": "image/png",
       "tag": "img"
@@ -159,7 +167,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2026-11-17T12:27:35+08:00",
+  "lastObservedAt": "2026-11-18T00:51:08+08:00",
   "type": [
     "layered",
     "video"
@@ -180,7 +188,7 @@
     "media": [],
     "resourceUrls": [
       {
-        "name": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
+        "name": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
         "initiatorType": "header-api"
       }
     ],
@@ -200,7 +208,7 @@
     "api": {
       "endpoint": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
       "id": 808,
-      "request_id": "1794784944",
+      "request_id": "1794934268",
       "isSplitLayer": true,
       "layerCount": 1,
       "assetCount": 1,
@@ -222,45 +230,41 @@
       "index": 0,
       "resourceIndex": 0,
       "type": "video",
-      "src": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
-      "local_file": "api_layer_00_00_09a704cdb2.webm",
+      "src": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
+      "local_file": "api_layer_00_00_e63a03516c.webm",
       "content_type": "video/webm",
-      "sha256": "c4c8052c8ea29483e3216e859899bf66a834fe32778fbc9ce6425603037f19a3"
+      "sha256": "cc64ce21970a95da99e5c32615e5e470fb8e85b8d35fd74c54e1e873835162e2"
     }
   ],
   "animationCss": "",
-  "contentHash": "23c01c6c086e7a4b2ed690f9",
+  "contentHash": "c4a03d6c2f893ebeeba343eb",
   "hashes": {
-    "resourceHash": "f8ec66efc533026388dbc2ed",
-    "structureHash": "716244a182bc30f1e44bd8f6",
-    "interactionHash": "bac825d65308fabe8b471436",
-    "contentHash": "23c01c6c086e7a4b2ed690f9",
-    "canonicalContentHash": "fb349f92e4be3a1cb2ae98bb",
-    "sourceFingerprint": "5d59f5170c0f4e887d4be201"
+    "resourceHash": "3190ff25cc665993f5d4456f",
+    "structureHash": "fffdb776b79e1d0551b69e81",
+    "interactionHash": "8b3897df6a36251cb63272ad",
+    "contentHash": "c4a03d6c2f893ebeeba343eb",
+    "canonicalContentHash": "0d62dc32a22c8484acb7d290",
+    "sourceFingerprint": "c35326bb753db101c5e2463b"
   },
-  "canonicalContentHash": "fb349f92e4be3a1cb2ae98bb",
-  "sourceFingerprint": "5d59f5170c0f4e887d4be201",
+  "canonicalContentHash": "0d62dc32a22c8484acb7d290",
+  "sourceFingerprint": "c35326bb753db101c5e2463b",
   "interactionState": "nonInteractive",
   "layoutHash": "0a6f021986f268f3acef21c9",
-  "familyId": "2026-11-16_0a6f021986f2",
+  "familyId": "2026-11-18_0a6f021986f2",
   "slots": [
-    1,
-    2,
-    4,
-    5
+    0
   ],
   "observations": [
     {
-      "capturedAt": "2026-11-16T07:22:23+08:00",
-      "lastObservedAt": "2026-11-16T07:22:23+08:00",
-      "date": "2026-11-16",
+      "capturedAt": "2026-11-18T00:51:08+08:00",
+      "lastObservedAt": "2026-11-18T00:51:08+08:00",
+      "date": "2026-11-18",
       "season": "autumn",
       "timeZone": "Asia/Shanghai",
       "slots": [
-        2,
-        5
+        0
       ],
-      "familyId": "2026-11-16_0a6f021986f2",
+      "familyId": "2026-11-18_0a6f021986f2",
       "source": {
         "page": "https://www.bilibili.com/",
         "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
@@ -268,33 +272,7 @@
         "headerApi": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
         "discoveredResources": [
           {
-            "name": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
-            "initiatorType": "header-api"
-          }
-        ],
-        "stylesheetUrls": [],
-        "scriptUrls": []
-      }
-    },
-    {
-      "capturedAt": "2026-11-17T04:24:07+08:00",
-      "lastObservedAt": "2026-11-17T04:24:07+08:00",
-      "date": "2026-11-17",
-      "season": "autumn",
-      "timeZone": "Asia/Shanghai",
-      "slots": [
-        1,
-        4
-      ],
-      "familyId": "2026-11-17_0a6f021986f2",
-      "source": {
-        "page": "https://www.bilibili.com/",
-        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
-        "captureMethod": "bilibili-header-api",
-        "headerApi": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
-        "discoveredResources": [
-          {
-            "name": "https://i0.hdslb.com/bfs/vc/420bb03dc2c150d6fbb7006b949f186f5faae86a.webm",
+            "name": "https://i0.hdslb.com/bfs/vc/4668927f96f7781c21e11120229a82d327dd5758.webm",
             "initiatorType": "header-api"
           }
         ],
