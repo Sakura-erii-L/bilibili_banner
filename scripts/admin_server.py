@@ -37,7 +37,8 @@ def git_output(*args: str) -> str:
         text=True,
         encoding="utf-8",
     )
-    return result.stdout.strip()
+    # Porcelain status uses leading spaces as status columns; preserve them.
+    return result.stdout.rstrip()
 
 
 def preexisting_data_changes() -> str:
