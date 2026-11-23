@@ -1,0 +1,1183 @@
+{
+  "version": 1,
+  "merges": [
+    {
+      "id": "admin-c9a4fe4bdeca9127933f",
+      "sources": [
+        {
+          "id": "2026-11-18_0a6f021986f2_0d62dc32a22c",
+          "dateStart": "2026-11-18",
+          "dateEnd": "2026-11-18",
+          "manifests": [
+            "./data/archive/2026-11-18_005108_c4a03d6c2f893ebeeba343eb/banner.json"
+          ]
+        },
+        {
+          "id": "2026-11-15_0a6f021986f2_fb349f92e4be",
+          "dateStart": "2026-11-15",
+          "dateEnd": "2026-11-17",
+          "manifests": [
+            "./data/archive/2026-11-16_072223_23c01c6c086e7a4b2ed690f9/banner.json"
+          ]
+        }
+      ],
+      "primaryManifests": [
+        "./data/archive/2026-11-16_072223_23c01c6c086e7a4b2ed690f9/banner.json"
+      ],
+      "cleanupManifests": [],
+      "cleanedManifests": [
+        "./data/archive/2026-11-15_154845_82f549cecc779b05d294da30/banner.json",
+        "./data/archive/2026-11-18_005108_c4a03d6c2f893ebeeba343eb/banner.json"
+      ],
+      "record": {
+        "id": "admin-c9a4fe4bdeca9127933f",
+        "date": "2026-11-15",
+        "season": "autumn",
+        "timeZone": "Asia/Shanghai",
+        "year": "2026",
+        "month": "11",
+        "yearMonth": "2026-11",
+        "dateStart": "2026-11-15",
+        "dateEnd": "2026-11-18",
+        "capturedAt": "2026-11-17T04:24:07+08:00",
+        "mode": "split",
+        "type": [
+          "layered",
+          "video"
+        ],
+        "layerCount": 1,
+        "completeness": "complete",
+        "missing_assets": [],
+        "contentHash": "23c01c6c086e7a4b2ed690f9",
+        "manifest": "./data/archive/2026-11-16_072223_23c01c6c086e7a4b2ed690f9/banner.json",
+        "interactionState": "nonInteractive",
+        "variantCount": 1,
+        "variants": [
+          {
+            "contentHash": "23c01c6c086e7a4b2ed690f9",
+            "canonicalContentHash": "fb349f92e4be3a1cb2ae98bb",
+            "sourceFingerprint": "5d59f5170c0f4e887d4be201",
+            "capturedAt": "2026-11-17T04:24:07+08:00",
+            "lastObservedAt": "2026-11-17T04:24:07+08:00",
+            "mode": "split",
+            "type": [
+              "layered",
+              "video"
+            ],
+            "layerCount": 1,
+            "completeness": "complete",
+            "missing_assets": [],
+            "slots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "manifest": "./data/archive/2026-11-16_072223_23c01c6c086e7a4b2ed690f9/banner.json",
+            "interactionState": "nonInteractive",
+            "visualMergeSafe": true,
+            "mergedFrom": [
+              {
+                "contentHash": "23c01c6c086e7a4b2ed690f9",
+                "manifest": "./data/archive/2026-11-16_072223_23c01c6c086e7a4b2ed690f9/banner.json",
+                "interactionState": "nonInteractive"
+              },
+              {
+                "contentHash": "82f549cecc779b05d294da30",
+                "manifest": "./data/archive/2026-11-15_154845_82f549cecc779b05d294da30/banner.json",
+                "interactionState": "nonInteractive"
+              }
+            ],
+            "observedSlots": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "slotFill": "same-day-forward-backward"
+          }
+        ],
+        "adminMergeId": "admin-c9a4fe4bdeca9127933f",
+        "adminMergedFrom": [
+          "43a9134f2251931eeadc663e",
+          "7a72107ad5785aaa04bb16c4"
+        ]
+      }
+    },
+    {
+      "id": "admin-6e9e1de6191b672013bb",
+      "sources": [
+        {
+          "id": "2026-09-29_8d15a05ed0f2_b24b6936af40",
+          "dateStart": "2026-09-29",
+          "dateEnd": "2026-11-09",
+          "manifests": [
+            "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json"
+          ]
+        },
+        {
+          "id": "2026-09-18_8d15a05ed0f2_b24b6936af40",
+          "dateStart": "2026-09-18",
+          "dateEnd": "2026-09-23",
+          "manifests": [
+            "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json"
+          ]
+        },
+        {
+          "id": "2026-09-02_8d15a05ed0f2_b24b6936af40",
+          "dateStart": "2026-09-02",
+          "dateEnd": "2026-09-16",
+          "manifests": [
+            "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json"
+          ]
+        },
+        {
+          "id": "2026-09-11_1e800dbda919_26148baf46d5",
+          "dateStart": "2026-09-11",
+          "dateEnd": "2026-09-11",
+          "manifests": [
+            "./data/archive/2026-09-11_201127_26148baf46d57175ea40b3ad/banner.json"
+          ]
+        },
+        {
+          "id": "2026-09-11_5116a63c6941_0c43ee964edd",
+          "dateStart": "2026-09-11",
+          "dateEnd": "2026-09-11",
+          "manifests": [
+            "./data/archive/2026-09-11_053604_0c43ee964edd3fa9507f8eed/banner.json"
+          ]
+        },
+        {
+          "id": "2026-09-01_7c287696dc74_8b364e2efe50",
+          "dateStart": "2026-09-01",
+          "dateEnd": "2026-09-01",
+          "manifests": [
+            "./data/archive/2026-09-01_180219_0a862bb50bfe4819fbda1c7e/banner.json"
+          ]
+        },
+        {
+          "id": "2026-08-24_3f4544a6cbd4_d1a785a0577f",
+          "dateStart": "2026-08-24",
+          "dateEnd": "2026-08-30",
+          "manifests": [
+            "./data/archive/2026-08-19_211754_cfdacd3c33e18f88833e2ed8/banner.json"
+          ]
+        },
+        {
+          "id": "2026-08-23_3f4544a6cbd4_43c4d6c64a6c",
+          "dateStart": "2026-08-23",
+          "dateEnd": "2026-08-23",
+          "manifests": [
+            "./data/archive/2026-08-21_192530_8dfd0ea215786b73584cb4b3/banner.json"
+          ]
+        },
+        {
+          "id": "2026-08-21_3f4544a6cbd4_43c4d6c64a6c",
+          "dateStart": "2026-08-21",
+          "dateEnd": "2026-08-21",
+          "manifests": [
+            "./data/archive/2026-08-21_192530_8dfd0ea215786b73584cb4b3/banner.json"
+          ]
+        },
+        {
+          "id": "2026-08-19_3f4544a6cbd4_d1a785a0577f",
+          "dateStart": "2026-08-19",
+          "dateEnd": "2026-08-20",
+          "manifests": [
+            "./data/archive/2026-08-19_211754_cfdacd3c33e18f88833e2ed8/banner.json"
+          ]
+        }
+      ],
+      "primaryManifests": [
+        "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json"
+      ],
+      "cleanupManifests": [],
+      "cleanedManifests": [
+        "./data/archive/2026-08-19_211754_cfdacd3c33e18f88833e2ed8/banner.json",
+        "./data/archive/2026-08-21_192530_8dfd0ea215786b73584cb4b3/banner.json",
+        "./data/archive/2026-09-01_180219_0a862bb50bfe4819fbda1c7e/banner.json",
+        "./data/archive/2026-09-11_053604_0c43ee964edd3fa9507f8eed/banner.json",
+        "./data/archive/2026-09-11_201127_26148baf46d57175ea40b3ad/banner.json"
+      ],
+      "record": {
+        "id": "admin-6e9e1de6191b672013bb",
+        "date": "2026-08-19",
+        "season": "autumn",
+        "timeZone": "Asia/Shanghai",
+        "year": "2026",
+        "month": "08",
+        "yearMonth": "2026-08",
+        "dateStart": "2026-08-19",
+        "dateEnd": "2026-11-09",
+        "capturedAt": "2026-11-09T04:26:36+08:00",
+        "mode": "split",
+        "type": [
+          "layered",
+          "interactive"
+        ],
+        "layerCount": 28,
+        "completeness": "complete",
+        "missing_assets": [],
+        "contentHash": "8fab633056ee11e6210c8af9",
+        "manifest": "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json",
+        "interactionState": "interactive",
+        "variantCount": 1,
+        "variants": [
+          {
+            "contentHash": "8fab633056ee11e6210c8af9",
+            "canonicalContentHash": "b24b6936af405e15501f4aa5",
+            "sourceFingerprint": "ad6aa3ceb40529f9d88da5a9",
+            "capturedAt": "2026-11-09T04:26:36+08:00",
+            "lastObservedAt": "2026-11-09T04:26:36+08:00",
+            "mode": "split",
+            "type": [
+              "layered",
+              "interactive"
+            ],
+            "layerCount": 28,
+            "completeness": "complete",
+            "missing_assets": [],
+            "slots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "manifest": "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json",
+            "interactionState": "interactive",
+            "visualMergeSafe": true,
+            "mergedFrom": [
+              {
+                "contentHash": "8fab633056ee11e6210c8af9",
+                "manifest": "./data/archive/2026-09-02_202023_8fab633056ee11e6210c8af9/banner.json",
+                "interactionState": "interactive"
+              }
+            ],
+            "observedSlots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "slotFill": "same-day-forward-backward"
+          }
+        ],
+        "adminMergeId": "admin-6e9e1de6191b672013bb",
+        "adminMergedFrom": [
+          "0cd5c97d72a9d1825dcba591",
+          "3102d10f1be4ff3d4d3536ee",
+          "ab726220445c370eb901383b",
+          "b60ee50be0b9367aae5745a4",
+          "bc19ab2637aad45ee8b59311",
+          "cbcc9cab6a0393a061de2ddf",
+          "d0bb39103fc58bcfce96ddea",
+          "fe7b2cf0f94564ac4ceca2fc",
+          "fe916bc2be65d54d0d3cefc7",
+          "ff8c4c162f2305190fef797b"
+        ]
+      }
+    },
+    {
+      "id": "admin-7bf9e16ebd10d3520988",
+      "sources": [
+        {
+          "id": "2026-08-18_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-08-18",
+          "dateEnd": "2026-08-18",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-08-11_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-08-11",
+          "dateEnd": "2026-08-17",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-08-10_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-08-10",
+          "dateEnd": "2026-08-10",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-08-01_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-08-01",
+          "dateEnd": "2026-08-09",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-07-31_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-07-31",
+          "dateEnd": "2026-07-31",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-07-30_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-07-30",
+          "dateEnd": "2026-07-30",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-07-24_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-07-24",
+          "dateEnd": "2026-07-28",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-07-12_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-07-12",
+          "dateEnd": "2026-07-22",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-07-11_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-07-11",
+          "dateEnd": "2026-07-11",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-06-30_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-06-30",
+          "dateEnd": "2026-07-10",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-06-15_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-06-15",
+          "dateEnd": "2026-06-21",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-06-10_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-06-10",
+          "dateEnd": "2026-06-12",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-06-09_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-06-09",
+          "dateEnd": "2026-06-09",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-06-03_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-06-03",
+          "dateEnd": "2026-06-08",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-30_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-05-30",
+          "dateEnd": "2026-06-01",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-29_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-05-29",
+          "dateEnd": "2026-05-29",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-27_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-05-27",
+          "dateEnd": "2026-05-28",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-08_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-05-08",
+          "dateEnd": "2026-05-09",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-10_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-05-10",
+          "dateEnd": "2026-05-13",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-14_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-05-14",
+          "dateEnd": "2026-05-18",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-19_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-05-19",
+          "dateEnd": "2026-05-19",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-20_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-05-20",
+          "dateEnd": "2026-05-20",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-21_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-05-21",
+          "dateEnd": "2026-05-24",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-25_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-05-25",
+          "dateEnd": "2026-05-25",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-06_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-05-06",
+          "dateEnd": "2026-05-06",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-05-05_3f4544a6cbd4_d3571316a786",
+          "dateStart": "2026-05-05",
+          "dateEnd": "2026-05-05",
+          "manifests": [
+            "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+          ]
+        },
+        {
+          "id": "2026-04-28_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-04-28",
+          "dateEnd": "2026-05-04",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        },
+        {
+          "id": "2026-04-27_dc7c24b83dd1_4df96071d0c7",
+          "dateStart": "2026-04-27",
+          "dateEnd": "2026-04-27",
+          "manifests": [
+            "./data/archive/2026-04-27_172207_c5cf0516eeecba334da1f1d7/banner.json"
+          ]
+        },
+        {
+          "id": "2026-04-26_3f4544a6cbd4_b76e59aa23f0",
+          "dateStart": "2026-04-26",
+          "dateEnd": "2026-04-26",
+          "manifests": [
+            "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json"
+          ]
+        }
+      ],
+      "primaryManifests": [
+        "./data/archive/2026-04-27_172207_c5cf0516eeecba334da1f1d7/banner.json"
+      ],
+      "cleanupManifests": [],
+      "cleanedManifests": [
+        "./data/archive/2026-04-26_105456_865f897251e9da9de3c98039/banner.json",
+        "./data/archive/2026-05-05_183454_c51a7691bc209f898fd80ac0/banner.json"
+      ],
+      "record": {
+        "id": "admin-7bf9e16ebd10d3520988",
+        "date": "2026-04-26",
+        "season": "spring",
+        "timeZone": "Asia/Shanghai",
+        "year": "2026",
+        "month": "04",
+        "yearMonth": "2026-04",
+        "dateStart": "2026-04-26",
+        "dateEnd": "2026-08-18",
+        "capturedAt": "2026-04-27T17:22:07+08:00",
+        "mode": "split",
+        "type": [
+          "layered",
+          "interactive"
+        ],
+        "layerCount": 32,
+        "completeness": "complete",
+        "missing_assets": [],
+        "contentHash": "c5cf0516eeecba334da1f1d7",
+        "manifest": "./data/archive/2026-04-27_172207_c5cf0516eeecba334da1f1d7/banner.json",
+        "interactionState": "interactive",
+        "variantCount": 1,
+        "variants": [
+          {
+            "contentHash": "c5cf0516eeecba334da1f1d7",
+            "canonicalContentHash": "4df96071d0c7ae00e008354e",
+            "sourceFingerprint": "f036d6adb12f39f594481429",
+            "capturedAt": "2026-04-27T17:22:07+08:00",
+            "lastObservedAt": "2026-04-27T17:22:07+08:00",
+            "mode": "split",
+            "type": [
+              "layered",
+              "interactive"
+            ],
+            "layerCount": 32,
+            "completeness": "complete",
+            "missing_assets": [],
+            "slots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "manifest": "./data/archive/2026-04-27_172207_c5cf0516eeecba334da1f1d7/banner.json",
+            "interactionState": "interactive",
+            "visualMergeSafe": true,
+            "mergedFrom": [
+              {
+                "contentHash": "c5cf0516eeecba334da1f1d7",
+                "manifest": "./data/archive/2026-04-27_172207_c5cf0516eeecba334da1f1d7/banner.json",
+                "interactionState": "interactive"
+              }
+            ],
+            "observedSlots": [
+              5
+            ],
+            "slotFill": "same-day-forward-backward"
+          }
+        ],
+        "adminMergeId": "admin-7bf9e16ebd10d3520988",
+        "adminMergedFrom": [
+          "0fe7f3c82a7ea8577d28c885",
+          "16f8fc33f1a926826d73db7b",
+          "1f077e59f0b806114bee4cac",
+          "26ed277d4d1f09b918b53b0c",
+          "28a56726cbb7c4ed38ae0b26",
+          "3ee3a6a9af354af9e806e056",
+          "423c8cee981573a6f8ce3cf2",
+          "51e0ad89ab2eb1e53160931c",
+          "54cf8b994ae7d7f0d715b54c",
+          "5aad8eaef7d94a72a18d8eb4",
+          "5c337bf7bcf9ecdab0280c7c",
+          "630e4e3ccadd552045cbcdaa",
+          "665f5665154e09a45ba5a48b",
+          "70b1e464a9916aa0bc9484fa",
+          "78a2ae3310b329ac740aadd5",
+          "86a953bfc626ea5b4f6d6a7f",
+          "899f083b744abece02389d02",
+          "978bd9177baf6a8657e25c3b",
+          "9adc6bb893e893998d0a69d0",
+          "9bf384a47860583a829f3962",
+          "a3b30448054d00e3041268c4",
+          "b1463f30aff2a79c3ec4bfe1",
+          "b6546ff77a60803f5242a8b5",
+          "c0a5057ad250b8ee339dbe9c",
+          "c0cc5aef8c4a04fd2992d5b3",
+          "c41e768db44f2942b03021b7",
+          "d63c8966e66bbb4d6a3e880d",
+          "ed2f569b045a5584a295b5ed",
+          "f1ab6c1bb9a00731277f10ad"
+        ]
+      }
+    },
+    {
+      "id": "admin-a8ad351debea42ef47e2",
+      "sources": [
+        {
+          "id": "2026-04-24_3f4544a6cbd4_dd3c538b27aa",
+          "dateStart": "2026-04-24",
+          "dateEnd": "2026-04-24",
+          "manifests": [
+            "./data/archive/2026-04-24_172840_c99f63bfd59e6d3573375e8e/banner.json"
+          ]
+        },
+        {
+          "id": "2026-01-09_2026-01-09_2026-04-23_winter_287f5afcf7e7",
+          "dateStart": "2026-01-09",
+          "dateEnd": "2026-04-23",
+          "manifests": [
+            "./data/archive/2026-01-09_000000_c3a6aade69ec462a04ec4047/banner.json"
+          ]
+        }
+      ],
+      "primaryManifests": [
+        "./data/archive/2026-01-09_000000_c3a6aade69ec462a04ec4047/banner.json"
+      ],
+      "cleanupManifests": [],
+      "cleanedManifests": [
+        "./data/archive/2026-01-09_000000_dc242e34ec747d71e3be8641/banner.json",
+        "./data/archive/2026-04-24_172840_c99f63bfd59e6d3573375e8e/banner.json"
+      ],
+      "record": {
+        "id": "admin-a8ad351debea42ef47e2",
+        "date": "2026-01-09",
+        "season": "winter",
+        "timeZone": "Asia/Shanghai",
+        "year": "2026",
+        "month": "01",
+        "yearMonth": "2026-01",
+        "dateStart": "2026-01-09",
+        "dateEnd": "2026-04-24",
+        "capturedAt": "2026-04-23T00:00:00+08:00",
+        "mode": "split",
+        "type": [
+          "layered",
+          "video",
+          "interactive"
+        ],
+        "layerCount": 33,
+        "completeness": "complete",
+        "missing_assets": [],
+        "contentHash": "c3a6aade69ec462a04ec4047",
+        "manifest": "./data/archive/2026-01-09_000000_c3a6aade69ec462a04ec4047/banner.json",
+        "interactionState": "interactive",
+        "variantCount": 1,
+        "variants": [
+          {
+            "contentHash": "c3a6aade69ec462a04ec4047",
+            "canonicalContentHash": "287f5afcf7e7a602a1e83082",
+            "sourceFingerprint": "3d625c5a1fa9f38f329f8d21",
+            "capturedAt": "2026-04-23T00:00:00+08:00",
+            "lastObservedAt": "2026-04-23T00:00:00+08:00",
+            "mode": "split",
+            "type": [
+              "layered",
+              "video",
+              "interactive"
+            ],
+            "layerCount": 33,
+            "completeness": "complete",
+            "missing_assets": [],
+            "slots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "manifest": "./data/archive/2026-01-09_000000_c3a6aade69ec462a04ec4047/banner.json",
+            "interactionState": "interactive",
+            "visualMergeSafe": true,
+            "referenceMode": "normal",
+            "mergedFrom": [
+              {
+                "contentHash": "c3a6aade69ec462a04ec4047",
+                "manifest": "./data/archive/2026-01-09_000000_c3a6aade69ec462a04ec4047/banner.json",
+                "interactionState": "interactive"
+              },
+              {
+                "contentHash": "dc242e34ec747d71e3be8641",
+                "manifest": "./data/archive/2026-01-09_000000_dc242e34ec747d71e3be8641/banner.json",
+                "interactionState": "nonInteractive"
+              }
+            ],
+            "observedSlots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        ],
+        "adminMergeId": "admin-a8ad351debea42ef47e2",
+        "adminMergedFrom": [
+          "b255225b4516c0e605dcac74",
+          "cc8d4b61f1af1bdab18534a1"
+        ]
+      }
+    },
+    {
+      "id": "admin-76c86cef1dfef71538b2",
+      "sources": [
+        {
+          "id": "2024-04-02_eec8cbe7fa9d_18112fd8a321",
+          "dateStart": "2024-04-02",
+          "dateEnd": "2024-04-13",
+          "manifests": [
+            "./data/archive/2024-04-02_202702_26f1a90d5a349dfe92e8cd5c/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-14_d037ff1d1b18_39d1ccc1fa12",
+          "dateStart": "2024-04-14",
+          "dateEnd": "2024-04-14",
+          "manifests": [
+            "./data/archive/2024-04-14_200919_39d1ccc1fa121bedfa0f7bc1/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-15_1083acb0ec17_9dd71d0e729b",
+          "dateStart": "2024-04-15",
+          "dateEnd": "2024-04-15",
+          "manifests": [
+            "./data/archive/2024-04-15_202532_9dd71d0e729b6002a1271c41/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-16_fb7de2f5aeef_ad73c46f9790",
+          "dateStart": "2024-04-16",
+          "dateEnd": "2024-04-16",
+          "manifests": [
+            "./data/archive/2024-04-16_200520_ad73c46f97906b8888c86c0d/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-17_65b038962ba7_ec1829177bd1",
+          "dateStart": "2024-04-17",
+          "dateEnd": "2024-04-17",
+          "manifests": [
+            "./data/archive/2024-04-17_202300_ec1829177bd11ecc39888e03/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-18_7ca7f0ea2ea2_c70b058ed7ec",
+          "dateStart": "2024-04-18",
+          "dateEnd": "2024-04-18",
+          "manifests": [
+            "./data/archive/2024-04-18_200043_c70b058ed7ecb0236afc4961/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-19_eec8cbe7fa9d_18112fd8a321",
+          "dateStart": "2024-04-19",
+          "dateEnd": "2024-04-21",
+          "manifests": [
+            "./data/archive/2024-04-02_202702_26f1a90d5a349dfe92e8cd5c/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-22_501bfe016f20_c711eb9cbebd",
+          "dateStart": "2024-04-22",
+          "dateEnd": "2024-04-22",
+          "manifests": [
+            "./data/archive/2024-04-22_194649_c711eb9cbebd9edfd6a70b67/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-23_1483888b86f5_e3c903da2303",
+          "dateStart": "2024-04-23",
+          "dateEnd": "2024-04-23",
+          "manifests": [
+            "./data/archive/2024-04-23_194910_e3c903da230378b62c064559/banner.json"
+          ]
+        },
+        {
+          "id": "2024-04-24_eec8cbe7fa9d_18112fd8a321",
+          "dateStart": "2024-04-24",
+          "dateEnd": "2024-05-01",
+          "manifests": [
+            "./data/archive/2024-04-02_202702_26f1a90d5a349dfe92e8cd5c/banner.json"
+          ]
+        },
+        {
+          "id": "2024-05-02_61f71a591bf3_7bfa733bdb64",
+          "dateStart": "2024-05-02",
+          "dateEnd": "2024-05-02",
+          "manifests": [
+            "./data/archive/2024-05-02_194735_7bfa733bdb64e38359e274ca/banner.json"
+          ]
+        },
+        {
+          "id": "2024-05-03_cc6037dd599d_8ee78f7e40ef",
+          "dateStart": "2024-05-03",
+          "dateEnd": "2024-05-03",
+          "manifests": [
+            "./data/archive/2024-05-03_194603_8ee78f7e40efa0f1fc21ea28/banner.json"
+          ]
+        },
+        {
+          "id": "2024-05-04_1d99fdc187fd_579360735e53",
+          "dateStart": "2024-05-04",
+          "dateEnd": "2024-05-04",
+          "manifests": [
+            "./data/archive/2024-05-04_200753_579360735e538acf75283155/banner.json"
+          ]
+        },
+        {
+          "id": "2024-05-05_b3c50b598f54_b491aea4c8b2",
+          "dateStart": "2024-05-05",
+          "dateEnd": "2024-05-05",
+          "manifests": [
+            "./data/archive/2024-05-05_202218_b491aea4c8b20834e332644e/banner.json"
+          ]
+        }
+      ],
+      "primaryManifests": [
+        "./data/archive/2024-05-05_202218_b491aea4c8b20834e332644e/banner.json"
+      ],
+      "cleanupManifests": [],
+      "cleanedManifests": [
+        "./data/archive/2024-04-02_202702_26f1a90d5a349dfe92e8cd5c/banner.json",
+        "./data/archive/2024-04-14_200919_39d1ccc1fa121bedfa0f7bc1/banner.json",
+        "./data/archive/2024-04-15_202532_9dd71d0e729b6002a1271c41/banner.json",
+        "./data/archive/2024-04-16_200520_ad73c46f97906b8888c86c0d/banner.json",
+        "./data/archive/2024-04-17_202300_ec1829177bd11ecc39888e03/banner.json",
+        "./data/archive/2024-04-18_200043_c70b058ed7ecb0236afc4961/banner.json",
+        "./data/archive/2024-04-22_194649_c711eb9cbebd9edfd6a70b67/banner.json",
+        "./data/archive/2024-04-23_194910_e3c903da230378b62c064559/banner.json",
+        "./data/archive/2024-05-02_194735_7bfa733bdb64e38359e274ca/banner.json",
+        "./data/archive/2024-05-03_194603_8ee78f7e40efa0f1fc21ea28/banner.json",
+        "./data/archive/2024-05-04_200753_579360735e538acf75283155/banner.json"
+      ],
+      "record": {
+        "id": "admin-76c86cef1dfef71538b2",
+        "date": "2024-04-02",
+        "season": "spring",
+        "timeZone": "Asia/Shanghai",
+        "year": "2024",
+        "month": "04",
+        "yearMonth": "2024-04",
+        "dateStart": "2024-04-02",
+        "dateEnd": "2024-05-05",
+        "capturedAt": "2024-05-05T20:22:18+08:00",
+        "mode": "split",
+        "type": [
+          "layered",
+          "video",
+          "interactive"
+        ],
+        "layerCount": 24,
+        "completeness": "partial",
+        "missing_assets": [
+          "1 API layer(s) unavailable",
+          "api_layer_002: no resource saved",
+          "api_layer_002_resource_000: HTTP Error 403: Forbidden"
+        ],
+        "contentHash": "b491aea4c8b20834e332644e",
+        "manifest": "./data/archive/2024-05-05_202218_b491aea4c8b20834e332644e/banner.json",
+        "interactionState": "interactive",
+        "variantCount": 1,
+        "variants": [
+          {
+            "contentHash": "b491aea4c8b20834e332644e",
+            "canonicalContentHash": "fe11efe7306c55071bb61c59",
+            "sourceFingerprint": "34d2b97d7cdcc66b2f818cbf",
+            "capturedAt": "2024-05-05T20:22:18+08:00",
+            "lastObservedAt": "2024-05-05T20:22:18+08:00",
+            "mode": "split",
+            "type": [
+              "layered",
+              "video",
+              "interactive"
+            ],
+            "layerCount": 24,
+            "completeness": "partial",
+            "missing_assets": [
+              "1 API layer(s) unavailable",
+              "api_layer_002: no resource saved",
+              "api_layer_002_resource_000: HTTP Error 403: Forbidden"
+            ],
+            "slots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "manifest": "./data/archive/2024-05-05_202218_b491aea4c8b20834e332644e/banner.json",
+            "interactionState": "interactive",
+            "visualMergeSafe": false,
+            "mergedFrom": [
+              {
+                "contentHash": "b491aea4c8b20834e332644e",
+                "manifest": "./data/archive/2024-05-05_202218_b491aea4c8b20834e332644e/banner.json",
+                "interactionState": "interactive"
+              }
+            ],
+            "observedSlots": [
+              6
+            ],
+            "slotFill": "same-day-forward-backward"
+          }
+        ],
+        "adminMergeId": "admin-76c86cef1dfef71538b2",
+        "adminMergedFrom": [
+          "333e6dcf296c244b8236f689",
+          "473db76e4b11183e3fa9d647",
+          "4d57df81843947ec3864c627",
+          "674f67dc9738dc793c0e9aff",
+          "9c2e854e490d9f7db89a2272",
+          "9dcf5e74ebe22390d6dbf4c4",
+          "ae13e194751bf34f3e9aa3b5",
+          "c070ede4a4255ed51027914d",
+          "caef28c54a801adc2eae8de1",
+          "ccfb6cc585e6947e73e12869",
+          "f43b16defc331b3242fc486b",
+          "f5dc2ac13707f4954605a458",
+          "f658aba8fd2ef37d9eabeb01",
+          "f6c523a98906f9cccc3e1df4"
+        ]
+      }
+    },
+    {
+      "id": "admin-e8a26b9f43a55684c450",
+      "sources": [
+        {
+          "id": "2019-01-01_3f4544a6cbd4_10f04617ab66",
+          "dateStart": "2019-01-01",
+          "dateEnd": "2019-01-01",
+          "manifests": [
+            "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
+          ]
+        },
+        {
+          "id": "2019-01-03_3f4544a6cbd4_10f04617ab66",
+          "dateStart": "2019-01-03",
+          "dateEnd": "2019-01-03",
+          "manifests": [
+            "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
+          ]
+        }
+      ],
+      "primaryManifests": [
+        "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json"
+      ],
+      "cleanupManifests": [],
+      "cleanedManifests": [
+        "./data/archive/2019-01-01_052409_5c10f91b8a64c85f6c4cde79/banner.json",
+        "./data/archive/2019-01-01_112211_c544b16bace02f25290a0abf/banner.json",
+        "./data/archive/2019-01-03_063426_d246a86ce1f9a447d0a2e2df/banner.json"
+      ],
+      "record": {
+        "id": "admin-e8a26b9f43a55684c450",
+        "date": "2019-01-01",
+        "season": "winter",
+        "timeZone": "Asia/Shanghai",
+        "year": "2019",
+        "month": "01",
+        "yearMonth": "2019-01",
+        "dateStart": "2019-01-01",
+        "dateEnd": "2019-01-03",
+        "capturedAt": "2019-01-03T08:51:14+08:00",
+        "mode": "static",
+        "type": [
+          "static"
+        ],
+        "layerCount": 0,
+        "completeness": "complete",
+        "missing_assets": [],
+        "contentHash": "34f7ed6e4b30689f42c71df5",
+        "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+        "interactionState": "nonInteractive",
+        "variantCount": 1,
+        "variants": [
+          {
+            "contentHash": "34f7ed6e4b30689f42c71df5",
+            "canonicalContentHash": "10f04617ab6628168322cb1b",
+            "sourceFingerprint": "39e85a11b33eeabbc3d22f0d",
+            "capturedAt": "2019-01-03T08:51:14+08:00",
+            "lastObservedAt": "2019-01-03T08:51:14+08:00",
+            "mode": "static",
+            "type": [
+              "static"
+            ],
+            "layerCount": 0,
+            "completeness": "complete",
+            "missing_assets": [],
+            "slots": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+            "interactionState": "nonInteractive",
+            "visualMergeSafe": true,
+            "mergedFrom": [
+              {
+                "contentHash": "34f7ed6e4b30689f42c71df5",
+                "manifest": "./data/archive/2019-01-01_021822_34f7ed6e4b30689f42c71df5/banner.json",
+                "interactionState": "nonInteractive"
+              },
+              {
+                "contentHash": "d246a86ce1f9a447d0a2e2df",
+                "manifest": "./data/archive/2019-01-03_063426_d246a86ce1f9a447d0a2e2df/banner.json",
+                "interactionState": "nonInteractive"
+              }
+            ],
+            "observedSlots": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "slotFill": "same-day-forward-backward"
+          }
+        ],
+        "adminMergeId": "admin-e8a26b9f43a55684c450",
+        "adminMergedFrom": [
+          "1e5b3adbffc922a30c6fc588",
+          "7fbd0290aa54c35d628c2a9c"
+        ]
+      }
+    },
+    {
+      "id": "admin-1feafa86c69718f27da1",
+      "sources": [
+        {
+          "id": "2022-03-20_2022-03-20_2022-06-20_spring_bf896d6a3fed",
+          "dateStart": "2022-03-20",
+          "dateEnd": "2022-06-20",
+          "manifests": [
+            "./data/archive/2022-03-20_000000_21b11897a7e73afe53da6b39/banner.json"
+          ]
+        },
+        {
+          "id": "2022-03-20_2022-03-20_2022-06-20_spring_a358b4ed983a",
+          "dateStart": "2022-03-20",
+          "dateEnd": "2022-06-20",
+          "manifests": [
+            "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json"
+          ]
+        }
+      ],
+      "primaryManifests": [
+        "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json"
+      ],
+      "cleanupManifests": [
+        "./data/archive/2022-03-20_000000_21b11897a7e73afe53da6b39/banner.json",
+        "./data/archive/2022-03-20_000000_4030b6e79adef43c802edf2c/banner.json"
+      ],
+      "cleanedManifests": [],
+      "record": {
+        "id": "admin-1feafa86c69718f27da1",
+        "date": "2022-03-20",
+        "season": "spring",
+        "timeZone": "Asia/Shanghai",
+        "year": "2022",
+        "month": "03",
+        "yearMonth": "2022-03",
+        "dateStart": "2022-03-20",
+        "dateEnd": "2022-06-20",
+        "capturedAt": "2022-06-20T00:00:00+08:00",
+        "mode": "static",
+        "type": [
+          "interactive"
+        ],
+        "layerCount": 0,
+        "completeness": "complete",
+        "missing_assets": [],
+        "contentHash": "c6a4b38dc1edf804e81611ac",
+        "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+        "interactionState": "interactive",
+        "variantCount": 1,
+        "variants": [
+          {
+            "contentHash": "c6a4b38dc1edf804e81611ac",
+            "canonicalContentHash": "a358b4ed983a6ea7d26250aa",
+            "sourceFingerprint": "32f60b3e2a7fb2b2048923e1",
+            "capturedAt": "2022-06-20T00:00:00+08:00",
+            "lastObservedAt": "2022-06-20T00:00:00+08:00",
+            "mode": "static",
+            "type": [
+              "interactive"
+            ],
+            "layerCount": 0,
+            "completeness": "complete",
+            "missing_assets": [],
+            "slots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+            "interactionState": "interactive",
+            "visualMergeSafe": true,
+            "referenceMode": "interactive",
+            "mergedFrom": [
+              {
+                "contentHash": "c6a4b38dc1edf804e81611ac",
+                "manifest": "./data/archive/2022-03-20_000000_c6a4b38dc1edf804e81611ac/banner.json",
+                "interactionState": "interactive"
+              }
+            ],
+            "observedSlots": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        ],
+        "adminMergeId": "admin-1feafa86c69718f27da1",
+        "adminMergedFrom": [
+          "411d01e7d053f17ec92d6380",
+          "97e413dc4fba6aac38e2442c"
+        ]
+      }
+    }
+  ]
+}
