@@ -24,6 +24,7 @@ function createPanel() {
       <span class="local-admin-status" role="status" aria-live="polite">正在读取归档……</span>
     </div>
     <div class="local-admin-actions">
+      <button type="button" data-action="sync">更新本地镜像</button>
       <label class="local-admin-primary">
         <span>合并主体</span>
         <select aria-label="选择合并主体" disabled>
@@ -34,7 +35,7 @@ function createPanel() {
       <button type="button" data-action="cleanup" disabled>清理非主体原始档案（0）</button>
       <button type="button" data-action="publish" disabled>同步到 Pages</button>
     </div>
-    <p class="local-admin-help">勾选多个 Banner 后合并。所选主体的素材用于合并结果，日期范围合并；主体档案保留。清理按钮只删除当前结果未使用的非主体归档，手动触发，不设时间限制。</p>
+    <p class="local-admin-help">先更新本地镜像，再勾选多个 Banner 并指定主体。合并结果使用主体素材并合并日期；管理和预览只改本地文件。确认后点击“同步到 Pages”才会提交并推送。</p>
   `;
   document.querySelector("main").prepend(panel);
   return panel;
@@ -57,6 +58,7 @@ async function start() {
   if (!gallery) return;
   const panel = createPanel();
   const status = panel.querySelector(".local-admin-status");
+  const syncButton = panel.querySelector('[data-action="sync"]');
   const primarySelect = panel.querySelector("select");
   const mergeButton = panel.querySelector('[data-action="merge"]');
   const cleanupButton = panel.querySelector('[data-action="cleanup"]');
@@ -68,6 +70,10 @@ async function start() {
   if (!stateResponse.ok) throw new Error(`读取管理状态失败：HTTP ${stateResponse.status}`);
   const state = await stateResponse.json();
   const records = index.records || [];
+  const mirrorDate = state.mirrorGeneratedAt
+    ? new Date(state.mirrorGeneratedAt).toLocaleString()
+    : "未知";
+  const mirrorSummary = `本地镜像 ${state.recordCount} 条 · ${mirrorDate}`;
   if (gallery.dataset.ready !== "1") {
     await Promise.race([
       new Promise(resolve => window.addEventListener("bilibili-banner-index-loaded", resolve, { once: true })),
@@ -184,18 +190,41 @@ async function start() {
     }
   });
 
-  const publishUnavailable = state.publisherError || state.branch !== "main";
+  syncButton.disabled = Boolean(state.mirrorSyncError) || state.branch !== "main";
+  syncButton.title = state.mirrorSyncError || "从 origin/main 抓取 Pages 源数据，并保留本地合并与清理规则；不会推送。";
+  syncButton.addEventListener("click", async () => {
+    if (!window.confirm("从 Pages 对应的 origin/main 抓取最新归档并更新本地镜像。本地合并规则和清理记录会保留；此操作只更新本地，不会推送。继续吗？")) return;
+    syncButton.disabled = true;
+    status.textContent = "正在抓取 Pages 数据并更新本地镜像……";
+    try {
+      const result = await requestJson("/__admin/api/sync");
+      status.textContent = result.message;
+      window.location.reload();
+    } catch (error) {
+      status.textContent = error.message;
+      syncButton.disabled = Boolean(state.mirrorSyncError) || state.branch !== "main";
+    }
+  });
+
+  const hasPublishableManagement = state.managedWorktreeChanges || state.pendingManagedCommits > 0;
+  const publishUnavailable = state.publisherError || state.branch !== "main" || !hasPublishableManagement;
   if (publishUnavailable) {
     publishButton.disabled = true;
     status.textContent = state.publisherError
       ? `暂不能同步：${state.publisherError}`
-      : `当前分支为 ${state.branch || "未知"}；需切换到 main 才能发布。`;
+      : state.branch !== "main"
+        ? `当前分支为 ${state.branch || "未知"}；需切换到 main 才能发布。`
+        : `${mirrorSummary} · 先完成本地管理；发布时会一并推送 ${state.aheadCommits} 个尚未推送的本地提交。`;
   } else {
     publishButton.disabled = false;
-    status.textContent = `当前分支 main · ${state.mergeCount} 条本地合并规则`;
+    status.textContent = `${mirrorSummary} · ${state.mergeCount} 条本地合并规则 · 将一并推送 ${state.aheadCommits} 个尚未推送的本地提交`;
   }
   publishButton.addEventListener("click", async () => {
-    if (!window.confirm("将只提交 Banner 管理产生的数据改动，并推送 main 触发 GitHub Pages 更新。继续吗？")) return;
+    const pending = state.aheadSubjects || [];
+    const pendingSummary = pending.length
+      ? `\n\n本次还会推送 ${pending.length} 个尚未推送的本地提交：\n${pending.join("\n")}`
+      : "";
+    if (!window.confirm(`将提交 Banner 管理产生的数据并推送 main，触发 GitHub Pages 更新。${pendingSummary}\n\n确认后才会推送。继续吗？`)) return;
     publishButton.disabled = true;
     status.textContent = "正在提交并推送到 GitHub……";
     try {

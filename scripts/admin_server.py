@@ -78,6 +78,35 @@ def read_index() -> dict:
     return json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
 
 
+def _status_path(line: str) -> str:
+    return line[3:].strip().strip('"').replace("\\", "/")
+
+
+def _merge_override_sets(base: dict, local: dict) -> dict:
+    merged = dict(base)
+    merged.update(local)
+    by_id: dict[str, dict] = {}
+    for item in base.get("merges") or []:
+        if isinstance(item, dict):
+            by_id[str(item.get("id") or json.dumps(item, sort_keys=True))] = item
+    for item in local.get("merges") or []:
+        if isinstance(item, dict):
+            by_id[str(item.get("id") or json.dumps(item, sort_keys=True))] = item
+    merged["version"] = 1
+    merged["merges"] = list(by_id.values())
+    return merged
+
+
+def _restore_cleaned_manifests(overrides: dict) -> None:
+    for merge in overrides.get("merges") or []:
+        if not isinstance(merge, dict):
+            continue
+        for manifest in merge.get("cleanedManifests") or []:
+            folder = _archive_folder_for_manifest(str(manifest))
+            if folder.exists():
+                shutil.rmtree(folder)
+
+
 def _archive_folder_for_manifest(manifest: str) -> Path:
     normalized = manifest.replace("\\", "/")
     parts = [part for part in normalized.split("/") if part not in ("", ".")]
@@ -126,30 +155,76 @@ def cleanup_archives() -> list[str]:
 class AdminApplication:
     def __init__(self) -> None:
         self.startup_data_changes = preexisting_data_changes()
-        capture.rebuild_index()
 
     def state(self) -> dict:
         index = read_index()
         overrides = capture.load_admin_overrides()
         branch = ""
         git_error = ""
+        ahead_commits = 0
+        ahead_subjects: list[str] = []
+        pending_managed_commits = 0
         try:
             branch = git_output("branch", "--show-current")
             git_output("remote", "get-url", "origin")
+            ahead_commits = int(git_output("rev-list", "--count", "origin/main..HEAD"))
+            ahead_subjects = [
+                line for line in git_output("log", "--format=%h %s", "origin/main..HEAD").splitlines()
+                if line
+            ]
+            pending_managed_commits = int(
+                git_output("rev-list", "--count", "origin/main..HEAD", "--", "data")
+            )
         except (OSError, subprocess.CalledProcessError) as error:
             git_error = str(error)
         data_root_error = ""
         if capture.DATA_DIR.resolve() != (ROOT / "data").resolve():
             data_root_error = "当前 BANNER_DATA_DIR 不在项目 data/ 内，无法通过 Pages 工作流同步。"
+        try:
+            managed_worktree_changes = bool(
+                git_output(
+                    "status",
+                    "--porcelain",
+                    "--untracked-files=all",
+                    "--",
+                    *MANAGED_PATHS,
+                )
+            )
+            status_lines = git_output(
+                "status", "--porcelain", "--untracked-files=all"
+            ).splitlines()
+            non_data_changes = [
+                line for line in status_lines if not _status_path(line).startswith("data/")
+            ]
+            mirror_sync_error = preexisting_data_changes()
+            if non_data_changes:
+                mirror_sync_error = "工作区有非管理数据改动；请先处理后再更新镜像。"
+            elif git_output("diff", "--cached", "--name-only"):
+                mirror_sync_error = "暂存区有改动；请先提交或取消暂存后再更新镜像。"
+        except (OSError, subprocess.CalledProcessError) as error:
+            managed_worktree_changes = False
+            mirror_sync_error = str(error)
         return {
             "recordKeys": [
                 capture.admin_record_key(record)
                 for record in index.get("records") or []
             ],
+            "recordCount": len(index.get("records") or []),
+            "mirrorGeneratedAt": index.get("generatedAt", ""),
             "cleanupManifests": capture.admin_cleanup_candidates(index, overrides),
             "mergeCount": len(overrides.get("merges") or []),
             "branch": branch,
-            "publisherError": self.startup_data_changes or data_root_error or git_error,
+            "aheadCommits": ahead_commits,
+            "aheadSubjects": ahead_subjects,
+            "pendingManagedCommits": pending_managed_commits,
+            "managedWorktreeChanges": managed_worktree_changes,
+            "mirrorSyncError": mirror_sync_error,
+            "publisherError": (
+                self.startup_data_changes
+                or data_root_error
+                or git_error
+                or mirror_sync_error
+            ),
         }
 
     def merge(self, payload: dict) -> None:
@@ -162,6 +237,109 @@ class AdminApplication:
         capture.save_admin_overrides(overrides)
         capture.rebuild_index()
 
+    def sync_from_pages(self) -> dict:
+        if capture.DATA_DIR.resolve() != (ROOT / "data").resolve():
+            raise RuntimeError("当前 BANNER_DATA_DIR 不在项目 data/ 内，无法从 Pages 同步。")
+        branch = git_output("branch", "--show-current")
+        if branch != "main":
+            raise RuntimeError(f"当前分支是 {branch or '未知'}；只能在 main 分支更新 Pages 镜像。")
+        git_output("remote", "get-url", "origin")
+        if git_output("diff", "--cached", "--name-only"):
+            raise RuntimeError("暂存区有改动；请先提交或取消暂存后再更新镜像。")
+        status_lines = git_output(
+            "status", "--porcelain", "--untracked-files=all"
+        ).splitlines()
+        non_data_changes = [
+            line for line in status_lines if not _status_path(line).startswith("data/")
+        ]
+        if non_data_changes:
+            raise RuntimeError("工作区有非管理数据改动；请先处理后再更新镜像。")
+        unexpected_data = preexisting_data_changes()
+        if unexpected_data:
+            raise RuntimeError(
+                "检测到不属于 Banner 管理的 data/ 改动；为保护本地文件，已取消更新：\n"
+                + unexpected_data
+            )
+
+        overrides_path = capture.admin_overrides_path()
+        local_overrides_exist = overrides_path.exists()
+        local_overrides = capture.load_admin_overrides()
+
+        fetch = subprocess.run(
+            ["git", "fetch", "origin"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
+        if fetch.returncode != 0:
+            details = (fetch.stderr or fetch.stdout or "git fetch 失败").strip()
+            raise RuntimeError(f"无法抓取 Pages 源数据：{details}")
+
+        # The index is derived from archives. Keep local merge rules, restore
+        # only derived/source data, then regenerate against the fetched mirror.
+        subprocess.run(
+            ["git", "restore", "--worktree", "--source=HEAD", "--", "data/index.json", "data/archive"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
+        if git_output("ls-files", "--", "data/admin-overrides.json"):
+            subprocess.run(
+                ["git", "restore", "--worktree", "--source=HEAD", "--", "data/admin-overrides.json"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+        else:
+            overrides_path.unlink(missing_ok=True)
+
+        rebase = subprocess.run(
+            ["git", "rebase", "origin/main"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
+        if rebase.returncode != 0:
+            subprocess.run(
+                ["git", "rebase", "--abort"],
+                cwd=ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+            details = (rebase.stderr or rebase.stdout or "与最新 Pages 源数据同步失败").strip()
+            base_overrides = capture.load_admin_overrides()
+            restored_overrides = _merge_override_sets(base_overrides, local_overrides)
+            if local_overrides_exist or capture.admin_overrides_path().exists():
+                capture.save_admin_overrides(restored_overrides)
+            _restore_cleaned_manifests(restored_overrides)
+            capture.rebuild_index()
+            raise RuntimeError(f"本地提交与 Pages 更新发生冲突，已还原同步前状态：{details}")
+
+        base_overrides = capture.load_admin_overrides()
+        merged_overrides = _merge_override_sets(base_overrides, local_overrides)
+        if local_overrides_exist or capture.admin_overrides_path().exists():
+            capture.save_admin_overrides(merged_overrides)
+        _restore_cleaned_manifests(merged_overrides)
+        capture.rebuild_index()
+        index = read_index()
+        return {
+            "status": "mirrored",
+            "message": (
+                f"已抓取最新 Pages 源数据并更新本地镜像：索引包含 "
+                f"{len(index.get('records') or [])} 条 Banner。没有推送。"
+            ),
+        }
+
     def publish(self) -> dict:
         if capture.DATA_DIR.resolve() != (ROOT / "data").resolve():
             raise RuntimeError("当前 BANNER_DATA_DIR 不在项目 data/ 内，无法通过 Pages 工作流同步。")
@@ -173,15 +351,26 @@ class AdminApplication:
         if branch != "main":
             raise RuntimeError(f"当前分支是 {branch or '未知'}；只有 main 分支会触发 Pages 部署。")
         git_output("remote", "get-url", "origin")
-        try:
-            ahead = int(git_output("rev-list", "--count", "origin/main..HEAD"))
-        except (OSError, ValueError, subprocess.CalledProcessError) as error:
-            raise RuntimeError(f"无法检查 origin/main；请先更新远端跟踪分支。{error}") from error
-        if ahead:
-            raise RuntimeError("本地 main 已有未推送提交；请先单独处理这些提交，再同步 Banner 管理改动。")
         if git_output("diff", "--cached", "--name-only"):
             raise RuntimeError("暂存区已有其他改动；请先提交或取消暂存后再同步。")
-
+        self.sync_from_pages()
+        try:
+            subprocess.run(
+                ["git", "merge-base", "--is-ancestor", "origin/main", "HEAD"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+            ahead = int(git_output("rev-list", "--count", "origin/main..HEAD"))
+            pending_managed_commits = int(
+                git_output("rev-list", "--count", "origin/main..HEAD", "--", "data")
+            )
+        except (OSError, ValueError, subprocess.CalledProcessError) as error:
+            raise RuntimeError(
+                f"本地提交尚未基于最新 origin/main；请先点击“更新本地镜像”。{error}"
+            ) from error
         overrides = capture.load_admin_overrides()
         targets = ["data/index.json"]
         if capture.admin_overrides_path().exists():
@@ -214,17 +403,18 @@ class AdminApplication:
             raise RuntimeError(
                 "同步范围中检测到非管理器文件，已取消暂存：" + ", ".join(unexpected)
             )
-        if not staged_paths:
+        if staged_paths:
+            subprocess.run(
+                ["git", "commit", "-m", "Manage archived Bilibili banners"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+        elif not ahead or not pending_managed_commits:
             return {"status": "unchanged", "message": "没有需要同步的管理改动。"}
 
-        subprocess.run(
-            ["git", "commit", "-m", "Manage archived Bilibili banners"],
-            cwd=ROOT,
-            check=True,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-        )
         try:
             subprocess.run(
                 ["git", "push", "origin", "main"],
@@ -241,7 +431,7 @@ class AdminApplication:
             ) from error
         return {
             "status": "pushed",
-            "message": "已提交并推送到 main；GitHub Actions 将重新构建并发布 Pages。",
+            "message": "已提交管理改动并推送到 main；GitHub Actions 将重新构建并发布 Pages。",
         }
 
 
@@ -337,6 +527,8 @@ def make_handler(application: AdminApplication, port: int):
                     if route == "/__admin/api/merge":
                         application.merge(payload)
                         response = {"message": "合并已保存，可在本地预览。"}
+                    elif route == "/__admin/api/sync":
+                        response = application.sync_from_pages()
                     elif route == "/__admin/api/cleanup":
                         removed = cleanup_archives()
                         response = {
