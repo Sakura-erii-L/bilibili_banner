@@ -1,0 +1,120 @@
+.local-admin-panel {
+  display: grid;
+  gap: 12px;
+  margin: 0 auto 20px;
+  padding: 16px 18px;
+  border: 1px solid #b9e8f8;
+  border-radius: 12px;
+  background: #f1fbff;
+  box-shadow: 0 3px 14px rgba(0, 174, 236, .08);
+}
+
+.local-admin-heading,
+.local-admin-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.local-admin-heading > div {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.local-admin-heading strong {
+  color: #146983;
+  font-size: 15px;
+}
+
+.local-admin-heading span,
+.local-admin-help,
+.local-admin-status {
+  color: #607983;
+  font-size: 12px;
+}
+
+.local-admin-status {
+  overflow-wrap: anywhere;
+}
+
+.local-admin-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #607983;
+  font-size: 12px;
+}
+
+.local-admin-primary select {
+  min-width: 230px;
+  max-width: min(430px, 70vw);
+}
+
+.local-admin-actions button {
+  border-color: #a7d8e9;
+  color: #146983;
+}
+
+.local-admin-actions button[data-action="merge"],
+.local-admin-actions button[data-action="publish"] {
+  background: #00aeec;
+  border-color: #00aeec;
+  color: #fff;
+}
+
+.local-admin-actions button:disabled,
+.local-admin-primary select:disabled {
+  cursor: not-allowed;
+  opacity: .48;
+}
+
+.local-admin-help {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.local-admin-entry-select {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 5px;
+  margin-right: auto;
+  color: #607983;
+  font-size: 11px;
+  font-weight: 400;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.local-admin-entry-select input {
+  accent-color: #00aeec;
+}
+
+@media (max-width: 760px) {
+  .local-admin-panel { padding: 13px; }
+
+  .local-admin-actions {
+    align-items: stretch;
+  }
+
+  .local-admin-actions button,
+  .local-admin-primary {
+    width: 100%;
+  }
+
+  .local-admin-primary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .local-admin-primary select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .local-admin-entry-select { margin-right: 0; }
+}

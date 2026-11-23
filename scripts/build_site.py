@@ -28,6 +28,8 @@ def build(output: Path) -> None:
         ignore=shutil.ignore_patterns(
             "preview.png",
             "diagnostic.json",
+            "admin-overrides.json",
+            "admin-overrides.json.tmp",
             ".capture_*",
             ".current_old",
         ),

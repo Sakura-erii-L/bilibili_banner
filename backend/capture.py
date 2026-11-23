@@ -2820,6 +2820,290 @@ def _merge_consecutive_index_records(
     return merged
 
 
+def admin_record_key(record: dict[str, Any]) -> str:
+    variants = []
+    for variant in record.get("variants") or []:
+        if not isinstance(variant, dict):
+            continue
+        variants.append(
+            {
+                "contentHash": str(variant.get("contentHash") or ""),
+                "manifest": str(variant.get("manifest") or ""),
+                "slots": normalize_slots(variant.get("slots")),
+            }
+        )
+    payload = {
+        "id": str(record.get("id") or ""),
+        "dateStart": str(record.get("dateStart") or record.get("date") or ""),
+        "dateEnd": str(record.get("dateEnd") or record.get("date") or ""),
+        "variants": sorted(
+            variants,
+            key=lambda item: (item["manifest"], item["contentHash"], item["slots"]),
+        ),
+    }
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()[:24]
+
+
+def admin_record_manifests(
+    record: dict[str, Any],
+    *,
+    include_merged_sources: bool = True,
+) -> set[str]:
+    manifests: set[str] = set()
+    direct = record.get("manifest")
+    if direct:
+        manifests.add(str(direct))
+    for variant in record.get("variants") or []:
+        if not isinstance(variant, dict):
+            continue
+        direct = variant.get("manifest")
+        if direct:
+            manifests.add(str(direct))
+        if include_merged_sources:
+            for source in variant.get("mergedFrom") or []:
+                if isinstance(source, dict) and source.get("manifest"):
+                    manifests.add(str(source["manifest"]))
+    return manifests
+
+
+def admin_overrides_path() -> Path:
+    return DATA_DIR / "admin-overrides.json"
+
+
+def load_admin_overrides() -> dict[str, Any]:
+    path = admin_overrides_path()
+    if not path.exists():
+        return {"version": 1, "merges": []}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict) or not isinstance(payload.get("merges"), list):
+        raise ValueError(f"Invalid Banner admin overrides file: {path}")
+    return payload
+
+
+def save_admin_overrides(payload: dict[str, Any]) -> None:
+    path = admin_overrides_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    temporary.replace(path)
+
+
+def _admin_record_selector(record: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": str(record.get("id") or ""),
+        "dateStart": str(record.get("dateStart") or record.get("date") or ""),
+        "dateEnd": str(record.get("dateEnd") or record.get("date") or ""),
+        "manifests": sorted(admin_record_manifests(record, include_merged_sources=False)),
+    }
+
+
+def create_admin_merge(
+    index_payload: dict[str, Any],
+    selected_keys: list[str],
+    primary_key: str,
+) -> dict[str, Any]:
+    records = index_payload.get("records") or []
+    keyed_records = {admin_record_key(record): record for record in records}
+    keys = list(dict.fromkeys(str(key) for key in selected_keys))
+    if len(keys) < 2:
+        raise ValueError("至少选择两个 Banner 才能合并。")
+    if primary_key not in keys:
+        raise ValueError("主体必须是已选择的 Banner。")
+    if any(key not in keyed_records for key in keys):
+        raise ValueError("所选 Banner 已变化，请刷新页面后重试。")
+
+    selected = [keyed_records[key] for key in keys]
+    primary = keyed_records[primary_key]
+    overrides = load_admin_overrides()
+    previous_by_id = {
+        str(item.get("id")): item
+        for item in overrides.get("merges") or []
+        if isinstance(item, dict)
+    }
+
+    source_selectors: list[dict[str, Any]] = []
+    cleanup_manifests: set[str] = set()
+    cleaned_manifests: set[str] = set()
+    removed_override_ids: set[str] = set()
+    for record in selected:
+        merge_id = str(record.get("adminMergeId") or "")
+        previous = previous_by_id.get(merge_id)
+        if previous:
+            removed_override_ids.add(merge_id)
+            source_selectors.extend(
+                dict(selector)
+                for selector in previous.get("sources") or []
+                if isinstance(selector, dict)
+            )
+            cleanup_manifests.update(
+                str(item) for item in previous.get("cleanupManifests") or []
+            )
+            cleaned_manifests.update(
+                str(item) for item in previous.get("cleanedManifests") or []
+            )
+        else:
+            source_selectors.append(_admin_record_selector(record))
+        cleanup_manifests.update(admin_record_manifests(record))
+
+    primary_merge = previous_by_id.get(str(primary.get("adminMergeId") or ""))
+    primary_manifests = {
+        str(item)
+        for item in (
+            primary_merge.get("primaryManifests")
+            if primary_merge
+            else admin_record_manifests(primary, include_merged_sources=False)
+        )
+        if item
+    }
+    cleanup_manifests.difference_update(primary_manifests)
+    cleanup_manifests.difference_update(cleaned_manifests)
+
+    merged_record = copy.deepcopy(primary)
+    starts = [
+        str(record.get("dateStart") or record.get("date") or "")
+        for record in selected
+    ]
+    ends = [
+        str(record.get("dateEnd") or record.get("date") or "")
+        for record in selected
+    ]
+    date_start = min(value for value in starts if value)
+    date_end = max(value for value in ends if value)
+    merged_record_id = "admin-" + hashlib.sha256(
+        (primary_key + "|" + "|".join(sorted(keys))).encode("utf-8")
+    ).hexdigest()[:20]
+    merged_record.update(
+        {
+            "id": merged_record_id,
+            "date": date_start,
+            "dateStart": date_start,
+            "dateEnd": date_end,
+            "year": date_start[:4],
+            "month": date_start[5:7],
+            "yearMonth": date_start[:7],
+            "adminMergeId": merged_record_id,
+            "adminMergedFrom": sorted(keys),
+        }
+    )
+
+    merge = {
+        "id": merged_record_id,
+        "sources": source_selectors,
+        "primaryManifests": sorted(primary_manifests),
+        "cleanupManifests": sorted(cleanup_manifests),
+        "cleanedManifests": sorted(cleaned_manifests),
+        "record": merged_record,
+    }
+    overrides["version"] = 1
+    overrides["merges"] = [
+        item
+        for item in overrides.get("merges") or []
+        if isinstance(item, dict) and str(item.get("id")) not in removed_override_ids
+    ] + [merge]
+    return overrides
+
+
+def _admin_selector_matches(
+    record: dict[str, Any],
+    selector: dict[str, Any],
+) -> bool:
+    id_matches = str(record.get("id") or "") == str(selector.get("id") or "")
+    selected_manifests = {
+        str(item) for item in selector.get("manifests") or [] if item
+    }
+    manifest_matches = False
+    if selected_manifests:
+        available_manifests = admin_record_manifests(record)
+        manifest_matches = bool(selected_manifests.intersection(available_manifests))
+    if not id_matches and not manifest_matches:
+        return False
+    if selected_manifests and not manifest_matches:
+        return False
+    record_start = str(record.get("dateStart") or record.get("date") or "")
+    record_end = str(record.get("dateEnd") or record.get("date") or record_start)
+    selector_start = str(selector.get("dateStart") or "")
+    selector_end = str(selector.get("dateEnd") or selector_start)
+    if not all((record_start, record_end, selector_start, selector_end)):
+        return False
+    return record_start <= selector_end and selector_start <= record_end
+
+
+def apply_admin_merges(
+    records: list[dict[str, Any]],
+    overrides: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
+    overrides = overrides if overrides is not None else load_admin_overrides()
+    result = [copy.deepcopy(record) for record in records]
+    for merge in overrides.get("merges") or []:
+        if not isinstance(merge, dict) or not isinstance(merge.get("record"), dict):
+            continue
+        selectors = [
+            selector
+            for selector in merge.get("sources") or []
+            if isinstance(selector, dict)
+        ]
+        matched = [
+            record
+            for record in result
+            if any(_admin_selector_matches(record, selector) for selector in selectors)
+        ]
+        result = [record for record in result if record not in matched]
+
+        merged = copy.deepcopy(merge["record"])
+        date_starts = [
+            str(record.get("dateStart") or record.get("date") or "")
+            for record in [merged, *matched]
+        ]
+        date_ends = [
+            str(record.get("dateEnd") or record.get("date") or "")
+            for record in [merged, *matched]
+        ]
+        valid_starts = [value for value in date_starts if value]
+        valid_ends = [value for value in date_ends if value]
+        if valid_starts and valid_ends:
+            date_start = min(valid_starts)
+            date_end = max(valid_ends)
+            merged.update(
+                {
+                    "date": date_start,
+                    "dateStart": date_start,
+                    "dateEnd": date_end,
+                    "year": date_start[:4],
+                    "month": date_start[5:7],
+                    "yearMonth": date_start[:7],
+                }
+            )
+        result.append(merged)
+    return result
+
+
+def admin_cleanup_candidates(
+    index_payload: dict[str, Any],
+    overrides: dict[str, Any] | None = None,
+) -> list[str]:
+    overrides = overrides if overrides is not None else load_admin_overrides()
+    candidates: set[str] = set()
+    protected: set[str] = set()
+    for merge in overrides.get("merges") or []:
+        if not isinstance(merge, dict):
+            continue
+        candidates.update(str(item) for item in merge.get("cleanupManifests") or [])
+        candidates.difference_update(
+            str(item) for item in merge.get("cleanedManifests") or []
+        )
+        protected.update(str(item) for item in merge.get("primaryManifests") or [])
+    for record in index_payload.get("records") or []:
+        protected.update(
+            admin_record_manifests(record, include_merged_sources=False)
+        )
+    candidates.difference_update(protected)
+    return sorted(candidates)
+
+
 def find_archive_by_hash(content_hash: str) -> tuple[Path, dict[str, Any]] | None:
     for folder, manifest in iter_archive_manifests():
         try:
@@ -3323,6 +3607,7 @@ def rebuild_index() -> bool:
         records,
         omitted_dates=omitted_dates,
     )
+    records = apply_admin_merges(records)
     records.sort(
         key=lambda item: (
             str(item.get("dateEnd") or item.get("date") or ""),

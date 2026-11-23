@@ -49,6 +49,20 @@ python scripts\serve.py
 
 然后打开 <http://127.0.0.1:8765>。
 
+## 本地 Banner 管理
+
+在项目根目录运行：
+
+```powershell
+python scripts\admin_server.py
+```
+
+脚本会在 `http://127.0.0.1:8787` 启动仅监听本机的管理镜像，并尝试打开浏览器。无需管理员密码。页面中可勾选多个 Banner、指定主体并合并日期；主体素材用于合并结果，合并规则保存在 `data/admin-overrides.json`，索引重建时会继续应用。
+
+清理按钮始终显示，手动清理被合并后不再使用的非主体原始归档，不设时间限制。清理后主体归档和当前展示所需的素材会保留；Git 提交历史仍包含已从当前目录清理的旧文件。
+
+本地预览确认后，点击“同步到 Pages”会只暂存 Banner 管理产生的数据文件、提交并推送 `main`，现有 Pages 工作流会重建索引并发布。需要本地 Git 配置好 `origin`、推送权限和提交者身份；如果 `data/archive/` 有不属于管理器清理操作的未提交修改，管理器会禁用同步，避免夹带它们。这个管理入口和接口不会被静态站点构建复制到 GitHub Pages。
+
 Windows 也可以直接运行：
 
 ```text
@@ -75,6 +89,7 @@ python scripts/build_site.py               # 构建到 _site/
 python scripts/build_site.py --output PATH # 构建到指定目录
 python scripts/serve.py --port 8765        # 服务 _site/
 python scripts/serve.py --directory PATH   # 服务指定静态目录
+python scripts/admin_server.py             # 本地管理镜像、合并和同步 Pages
 ```
 
 `--force` 不会绕过结构化 `contentHash` 去重。资源相同但结构或交互不同属于不同版本，不会被强制合并。
@@ -100,10 +115,13 @@ python scripts/serve.py --directory PATH   # 服务指定静态目录
 │  ├─ current/                      # 最近一次被接受的唯一内容工作副本
 │  ├─ archive/                      # 唯一历史 Banner 的完整归档
 │  ├─ index.json                    # 前端历史入口
+│  ├─ admin-overrides.json          # 本地手动合并规则，构建时重建索引
 │  └─ diagnostic.json               # 失败诊断；默认被忽略
 ├─ scripts/
 │  ├─ build_site.py                 # frontend + data → _site
 │  ├─ serve.py                      # 本地静态 HTTP 服务
+│  ├─ admin_server.py               # 仅本机的 Banner 管理镜像与 Git 同步
+│  ├─ admin/                         # 本地管理界面资源，不发布到 Pages
 │  ├─ update_and_preview_windows.cmd
 │  └─ update_linux.sh
 ├─ .github/workflows/
@@ -194,7 +212,7 @@ GitHub Runner 的出口 IP、地理位置、Cookie 和 A/B 分流可能导致它
 - v11 renderer 支持 Header API 的 scale/rotate/translate/blur/opacity、offsetCurve、多帧资源和视频；API 外的 WebGL、特殊脚本/扩展仍可能只能留下证据并标记 partial。旧 DOM sampled archive 继续按原 matrix 曲线回放。
 - `contentHash` 继续由 `resourceHash + structureHash + interactionHash` 组合并保持旧归档兼容；新增 `canonicalContentHash` 只比较规范化资源 bytes/结构，`sourceFingerprint` 保留 provider 与 interaction model 差异。
 - 自动 `familyId` 依据“同一日期 + 相同布局结构”归并时段变体；若网站在同一天把结构完全相同的 Banner 更换为无关主题，可能需要人工拆分 family。
-- 前端是纯静态页面，没有后台 API、用户登录、数据库或在线回源逻辑。
+- GitHub Pages 保持只读静态展示，没有在线管理 API、用户登录或数据库；管理操作只由本机回环地址提供。
 - 历史素材会持续增加 Git 仓库和 Pages 体积；程序不会自动删除旧归档。
 - Wayback 并不保证每个快照都保存完整子资源或可执行脚本，因此 `2019-08-01` 至今只能导入“归档中仍可恢复”的 Banner，不代表逐日无缺口。
 - 当前历史发现以 Wayback Availability/CDX 为主，并支持 palxiao/bilibili-banner 的精确日期 structured provider；palxiao 的字段不是官方 `split_layer`，缺失参数不补造，未知字段保存在原始 source layer。Common Crawl、archive.today、Memento 和其它 GitHub 项目尚未实现统一自动导入 provider。

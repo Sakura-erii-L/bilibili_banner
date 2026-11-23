@@ -274,6 +274,53 @@ class TimedVariantIndexTests(unittest.TestCase):
         )
         self.assertFalse(capture.rebuild_index())
 
+    def test_admin_merge_keeps_primary_resources_and_only_cleans_secondary(self) -> None:
+        primary_manifest = "./data/archive/primary/banner.json"
+        secondary_manifest = "./data/archive/secondary/banner.json"
+        primary = {
+            "id": "primary-record",
+            "date": "2026-08-30",
+            "dateStart": "2026-08-30",
+            "dateEnd": "2026-08-30",
+            "season": "summer",
+            "manifest": primary_manifest,
+            "variants": [{
+                "contentHash": "primary-hash",
+                "manifest": primary_manifest,
+                "slots": [0, 1],
+            }],
+        }
+        secondary = {
+            "id": "secondary-record",
+            "date": "2026-08-31",
+            "dateStart": "2026-08-31",
+            "dateEnd": "2026-08-31",
+            "season": "summer",
+            "manifest": secondary_manifest,
+            "variants": [{
+                "contentHash": "secondary-hash",
+                "manifest": secondary_manifest,
+                "slots": [2, 3],
+            }],
+        }
+        index = {"records": [primary, secondary]}
+        primary_key = capture.admin_record_key(primary)
+        overrides = capture.create_admin_merge(
+            index,
+            [primary_key, capture.admin_record_key(secondary)],
+            primary_key,
+        )
+
+        merged = capture.apply_admin_merges([primary, secondary], overrides)
+        self.assertEqual(len(merged), 1)
+        self.assertEqual(merged[0]["dateStart"], "2026-08-30")
+        self.assertEqual(merged[0]["dateEnd"], "2026-08-31")
+        self.assertEqual(merged[0]["variants"], primary["variants"])
+        self.assertEqual(
+            capture.admin_cleanup_candidates({"records": merged}, overrides),
+            [secondary_manifest],
+        )
+
     def test_duplicate_asset_adds_slot_once_and_upgrades_effect(self) -> None:
         folder = capture.ARCHIVE_DIR / "existing"
         folder.mkdir()

@@ -1155,12 +1155,13 @@ function createTimeControls(record, article) {
   return controls;
 }
 
-function createEntry(record) {
+function createEntry(record, recordIndex) {
   const article = document.createElement("article");
   const variant = selectedVariant(record);
   article.className = "entry";
   article.hidden = !showTimeControls && !variant;
   article.dataset.recordId = record.id;
+  article.dataset.adminRecordIndex = String(recordIndex);
   article.dataset.manifest = variant?.manifest || "";
   article.dataset.timeSelection = "0";
   const head = document.createElement("div");
@@ -1257,7 +1258,14 @@ function setupObserver() {
 }
 
 function populateFilters(records) {
-  const years = [...new Set(records.map(x => x.year || x.date.slice(0, 4)))].sort().reverse();
+  const yearSet = new Set();
+  for (const record of records) {
+    const startYear = Number((record.dateStart || record.date || "").slice(0, 4));
+    const endYear = Number((record.dateEnd || record.date || "").slice(0, 4));
+    if (!Number.isFinite(startYear) || !Number.isFinite(endYear)) continue;
+    for (let year = startYear; year <= endYear; year++) yearSet.add(String(year));
+  }
+  const years = [...yearSet].sort().reverse();
 
   yearSelect.innerHTML = '<option value="">全部</option>';
   for (const year of years) {
@@ -1282,30 +1290,32 @@ function render() {
   const month = monthSelect.value;
   const season = seasonSelect.value;
 
-  const records = indexData.records.filter(record => {
-    const start = record.dateStart || record.date;
-    const end = record.dateEnd || start;
-    const startMonth = Number(start.slice(0, 4)) * 12 + Number(start.slice(5, 7)) - 1;
-    const endMonth = Number(end.slice(0, 4)) * 12 + Number(end.slice(5, 7)) - 1;
+  const records = indexData.records
+    .map((record, index) => ({ record, index }))
+    .filter(({ record }) => {
+      const start = record.dateStart || record.date;
+      const end = record.dateEnd || start;
+      const startMonth = Number(start.slice(0, 4)) * 12 + Number(start.slice(5, 7)) - 1;
+      const endMonth = Number(end.slice(0, 4)) * 12 + Number(end.slice(5, 7)) - 1;
 
-    if (year && (Number(year) < Number(start.slice(0, 4))
-      || Number(year) > Number(end.slice(0, 4)))) return false;
-    if (month) {
-      const monthNumber = Number(month);
-      const touchesMonth = Array.from(
-        { length: Math.max(0, endMonth - startMonth + 1) },
-        (_value, index) => startMonth + index,
-      ).some(value => (value % 12) + 1 === monthNumber
-        && (!year || Math.floor(value / 12) === Number(year)));
-      if (!touchesMonth) return false;
-    }
-    if (season && record.season !== season) return false;
-    return true;
-  });
+      if (year && (Number(year) < Number(start.slice(0, 4))
+        || Number(year) > Number(end.slice(0, 4)))) return false;
+      if (month) {
+        const monthNumber = Number(month);
+        const touchesMonth = Array.from(
+          { length: Math.max(0, endMonth - startMonth + 1) },
+          (_value, index) => startMonth + index,
+        ).some(value => (value % 12) + 1 === monthNumber
+          && (!year || Math.floor(value / 12) === Number(year)));
+        if (!touchesMonth) return false;
+      }
+      if (season && record.season !== season) return false;
+      return true;
+    });
 
   gallery.innerHTML = "";
-  for (const record of records) {
-    gallery.appendChild(createEntry(record));
+  for (const { record, index } of records) {
+    gallery.appendChild(createEntry(record, index));
   }
 
   updateEmptyState();
@@ -1348,6 +1358,8 @@ try {
   indexData = await response.json();
   populateFilters(indexData.records || []);
   render();
+  gallery.dataset.ready = "1";
+  window.dispatchEvent(new Event("bilibili-banner-index-loaded"));
   window.setInterval(refreshTimedVariants, 60_000);
 } catch (error) {
   summary.innerHTML = `<span class="error">${error.message}</span>`;
