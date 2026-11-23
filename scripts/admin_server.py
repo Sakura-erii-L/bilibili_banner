@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import mimetypes
 import shutil
@@ -20,6 +21,7 @@ from backend import capture  # noqa: E402
 
 
 ADMIN_ASSETS = ROOT / "scripts" / "admin"
+ADMIN_UNDO_PATH = ROOT / ".admin-undo.json"
 ADMIN_LOCK = threading.RLock()
 MANAGED_PATHS = (
     "data/index.json",
@@ -62,8 +64,15 @@ def preexisting_data_changes() -> str:
             f"data/archive/{_archive_folder_for_manifest(str(manifest)).name}/"
             for merge in overrides.get("merges") or []
             if isinstance(merge, dict)
-            for manifest in merge.get("cleanedManifests") or []
+            for manifest in (
+                list(merge.get("cleanedManifests") or [])
+                + list(merge.get("cleanupManifests") or [])
+            )
         }
+        allowed_archive_prefixes.update(
+            f"data/archive/{_archive_folder_for_manifest(str(manifest)).name}/"
+            for manifest in load_undo_history().get("pendingRestoredManifests") or []
+        )
     except Exception as error:
         return str(error)
     unexpected = []
@@ -77,6 +86,27 @@ def preexisting_data_changes() -> str:
 
 def read_index() -> dict:
     return json.loads((capture.DATA_DIR / "index.json").read_text(encoding="utf-8"))
+
+
+def load_undo_history() -> dict:
+    if not ADMIN_UNDO_PATH.exists():
+        return {
+            "version": 1,
+            "operationSnapshots": [],
+            "legacyUndoConsumed": False,
+            "pendingRestoredManifests": [],
+        }
+    history = json.loads(ADMIN_UNDO_PATH.read_text(encoding="utf-8"))
+    if not isinstance(history, dict) or not isinstance(history.get("operationSnapshots"), list):
+        raise ValueError(f"Invalid local undo history file: {ADMIN_UNDO_PATH}")
+    history.setdefault("pendingRestoredManifests", [])
+    return history
+
+
+def save_undo_history(history: dict) -> None:
+    temporary = ADMIN_UNDO_PATH.with_suffix(".json.tmp")
+    temporary.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(ADMIN_UNDO_PATH)
 
 
 def _status_path(line: str) -> str:
@@ -120,6 +150,76 @@ def _archive_folder_for_manifest(manifest: str) -> Path:
     return folder
 
 
+def _restore_archive_folder(manifest: str) -> None:
+    folder = _archive_folder_for_manifest(manifest)
+    relative_folder = folder.relative_to(ROOT).as_posix()
+    manifest_path = f"{relative_folder}/banner.json"
+    revisions = ["HEAD"]
+    revisions.extend(
+        item
+        for item in git_output(
+            "log", "--all", "--format=%H", "--", manifest_path
+        ).splitlines()
+        if item != "HEAD"
+    )
+    for revision in revisions:
+        exists = subprocess.run(
+            ["git", "cat-file", "-e", f"{revision}:{manifest_path}"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+        )
+        if exists.returncode != 0:
+            continue
+        subprocess.run(
+            ["git", "restore", "--worktree", f"--source={revision}", "--", relative_folder],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+        )
+        return
+    raise RuntimeError(f"Git 历史中找不到原始归档：{manifest}")
+
+
+def _restore_cleanup_candidates(overrides: dict) -> list[str]:
+    restored: list[str] = []
+    for merge in overrides.get("merges") or []:
+        if not isinstance(merge, dict):
+            continue
+        for manifest in merge.get("cleanupManifests") or []:
+            folder = _archive_folder_for_manifest(str(manifest))
+            if not (folder / "banner.json").exists():
+                _restore_archive_folder(str(manifest))
+                restored.append(str(manifest))
+    return restored
+
+
+def _cleaned_manifests(overrides: dict) -> set[str]:
+    return {
+        str(manifest)
+        for merge in overrides.get("merges") or []
+        if isinstance(merge, dict)
+        for manifest in merge.get("cleanedManifests") or []
+    }
+
+
+def _preserve_cleanup_state(target: dict, current: dict) -> dict:
+    current_cleaned = _cleaned_manifests(current)
+    for merge in target.get("merges") or []:
+        if not isinstance(merge, dict):
+            continue
+        candidates = {
+            str(manifest)
+            for manifest in (
+                list(merge.get("cleanupManifests") or [])
+                + list(merge.get("cleanedManifests") or [])
+            )
+        }
+        merge["cleanedManifests"] = sorted(candidates & current_cleaned)
+        merge["cleanupManifests"] = sorted(candidates - current_cleaned)
+    return target
+
+
 def cleanup_archives() -> list[str]:
     overrides = capture.load_admin_overrides()
     index = read_index()
@@ -128,6 +228,15 @@ def cleanup_archives() -> list[str]:
         manifest: _archive_folder_for_manifest(manifest)
         for manifest in manifests
     }
+    if manifests:
+        history = load_undo_history()
+        history.setdefault("legacyUndoConsumed", False)
+        history.setdefault("operationSnapshots", []).append(
+            {"action": "cleanup", "overrides": copy.deepcopy(overrides)}
+        )
+        history["operationSnapshots"] = history["operationSnapshots"][-20:]
+        save_undo_history(history)
+
     removed: list[str] = []
     for manifest in manifests:
         folder = folders[manifest]
@@ -160,6 +269,7 @@ class AdminApplication:
     def state(self) -> dict:
         index = read_index()
         overrides = capture.load_admin_overrides()
+        undo_history = load_undo_history()
         branch = ""
         git_error = ""
         ahead_commits = 0
@@ -214,6 +324,16 @@ class AdminApplication:
             "mirrorGeneratedAt": index.get("generatedAt", ""),
             "cleanupManifests": capture.admin_cleanup_candidates(index, overrides),
             "mergeCount": len(overrides.get("merges") or []),
+            "undoAvailable": bool(undo_history.get("operationSnapshots")) or (
+                not undo_history.get("legacyUndoConsumed")
+                and bool(overrides.get("merges"))
+            ),
+            "undoHasSnapshot": bool(undo_history.get("operationSnapshots")),
+            "undoAction": (
+                (undo_history["operationSnapshots"][-1].get("action") or "merge")
+                if undo_history.get("operationSnapshots")
+                else "merge"
+            ),
             "branch": branch,
             "aheadCommits": ahead_commits,
             "aheadSubjects": ahead_subjects,
@@ -230,13 +350,81 @@ class AdminApplication:
 
     def merge(self, payload: dict) -> None:
         index = read_index()
+        previous_overrides = capture.load_admin_overrides()
         overrides = capture.create_admin_merge(
             index,
             [str(item) for item in payload.get("selectedKeys") or []],
             str(payload.get("primaryKey") or ""),
         )
-        capture.save_admin_overrides(overrides)
+        history = load_undo_history()
+        history.setdefault("legacyUndoConsumed", False)
+        history.setdefault("operationSnapshots", []).append(
+            {"action": "merge", "overrides": previous_overrides}
+        )
+        history["operationSnapshots"] = history["operationSnapshots"][-20:]
+        try:
+            capture.save_admin_overrides(overrides)
+            capture.rebuild_index()
+            save_undo_history(history)
+        except Exception:
+            capture.save_admin_overrides(previous_overrides)
+            capture.rebuild_index()
+            raise
+
+    def undo_last_operation(self) -> dict:
+        if git_output("branch", "--show-current") != "main":
+            raise RuntimeError("只能在 main 分支撤销本地管理操作。")
+        if git_output("diff", "--cached", "--name-only"):
+            raise RuntimeError("暂存区有改动；请先提交或取消暂存后再撤销。")
+        status_lines = git_output(
+            "status", "--porcelain", "--untracked-files=all"
+        ).splitlines()
+        if any(not _status_path(line).startswith("data/") for line in status_lines):
+            raise RuntimeError("工作区有非管理数据改动；请先处理后再撤销。")
+        unexpected_data = preexisting_data_changes()
+        if unexpected_data:
+            raise RuntimeError(
+                "检测到不属于 Banner 管理的 data/ 改动；为保护本地文件，已取消撤销：\n"
+                + unexpected_data
+            )
+
+        current = capture.load_admin_overrides()
+        history = load_undo_history()
+        snapshots = history.get("operationSnapshots") or []
+        action = "merge"
+        if snapshots:
+            snapshot = snapshots.pop()
+            target = snapshot.get("overrides") if isinstance(snapshot, dict) else None
+            action = str(snapshot.get("action") or "merge") if isinstance(snapshot, dict) else "merge"
+            if not isinstance(target, dict):
+                raise ValueError("本地撤销记录损坏，无法还原合并规则。")
+        else:
+            merges = list(current.get("merges") or [])
+            if not merges or history.get("legacyUndoConsumed"):
+                raise ValueError("没有可撤销的合并记录。")
+            target = copy.deepcopy(current)
+            target["merges"] = merges[:-1]
+            history["legacyUndoConsumed"] = True
+
+        if action == "merge":
+            target = _preserve_cleanup_state(target, current)
+        restore_manifests = _cleaned_manifests(current) - _cleaned_manifests(target)
+        for manifest in sorted(restore_manifests):
+            _restore_archive_folder(manifest)
+        restored = set(restore_manifests)
+        restored.update(_restore_cleanup_candidates(target))
+        capture.save_admin_overrides(target)
         capture.rebuild_index()
+        history["operationSnapshots"] = snapshots
+        pending_restored = set(history.get("pendingRestoredManifests") or [])
+        pending_restored.update(restored)
+        pending_restored.difference_update(_cleaned_manifests(target))
+        history["pendingRestoredManifests"] = sorted(pending_restored)
+        save_undo_history(history)
+        action_label = "合并" if action == "merge" else "清理"
+        return {
+            "message": f"已撤销最近一次 Banner {action_label}；索引只在本地更新，尚未推送。"
+        }
 
     def sync_from_pages(self) -> dict:
         if capture.DATA_DIR.resolve() != (ROOT / "data").resolve():
@@ -265,6 +453,8 @@ class AdminApplication:
         overrides_path = capture.admin_overrides_path()
         local_overrides_exist = overrides_path.exists()
         local_overrides = capture.load_admin_overrides()
+        local_undo_history = load_undo_history()
+        pending_restored = set(local_undo_history.get("pendingRestoredManifests") or [])
 
         fetch = subprocess.run(
             ["git", "fetch", "origin"],
@@ -277,6 +467,12 @@ class AdminApplication:
         if fetch.returncode != 0:
             details = (fetch.stderr or fetch.stdout or "git fetch 失败").strip()
             raise RuntimeError(f"无法抓取 Pages 源数据：{details}")
+
+        for manifest in pending_restored:
+            folder = _archive_folder_for_manifest(manifest)
+            relative_folder = folder.relative_to(ROOT).as_posix()
+            if not git_output("ls-files", "--", relative_folder) and folder.exists():
+                shutil.rmtree(folder)
 
         # The index is derived from archives. Keep local merge rules, restore
         # only derived/source data, then regenerate against the fetched mirror.
@@ -322,7 +518,14 @@ class AdminApplication:
             restored_overrides = _merge_override_sets(base_overrides, local_overrides)
             if local_overrides_exist or capture.admin_overrides_path().exists():
                 capture.save_admin_overrides(restored_overrides)
+            restored = set(pending_restored)
+            for manifest in pending_restored:
+                _restore_archive_folder(manifest)
+            restored.update(_restore_cleanup_candidates(restored_overrides))
             _restore_cleaned_manifests(restored_overrides)
+            restored.difference_update(_cleaned_manifests(restored_overrides))
+            local_undo_history["pendingRestoredManifests"] = sorted(restored)
+            save_undo_history(local_undo_history)
             capture.rebuild_index()
             raise RuntimeError(f"本地提交与 Pages 更新发生冲突，已还原同步前状态：{details}")
 
@@ -330,7 +533,14 @@ class AdminApplication:
         merged_overrides = _merge_override_sets(base_overrides, local_overrides)
         if local_overrides_exist or capture.admin_overrides_path().exists():
             capture.save_admin_overrides(merged_overrides)
+        restored = set(pending_restored)
+        for manifest in pending_restored:
+            _restore_archive_folder(manifest)
+        restored.update(_restore_cleanup_candidates(merged_overrides))
         _restore_cleaned_manifests(merged_overrides)
+        restored.difference_update(_cleaned_manifests(merged_overrides))
+        local_undo_history["pendingRestoredManifests"] = sorted(restored)
+        save_undo_history(local_undo_history)
         capture.rebuild_index()
         index = read_index()
         return {
@@ -373,25 +583,31 @@ class AdminApplication:
                 f"本地提交尚未基于最新 origin/main；请先点击“更新本地镜像”。{error}"
             ) from error
         overrides = capture.load_admin_overrides()
+        undo_history = load_undo_history()
         targets = ["data/index.json"]
-        if capture.admin_overrides_path().exists():
+        if capture.admin_overrides_path().exists() or git_output(
+            "ls-files", "--", "data/admin-overrides.json"
+        ):
             targets.append("data/admin-overrides.json")
-        cleaned_folders = {
-            _archive_folder_for_manifest(str(manifest)).name
-            for merge in overrides.get("merges") or []
-            if isinstance(merge, dict)
-            for manifest in merge.get("cleanedManifests") or []
-            if git_output(
-                "ls-files", "--", f"data/archive/{_archive_folder_for_manifest(str(manifest)).name}"
-            )
-        }
-        targets.extend(f"data/archive/{folder}" for folder in sorted(cleaned_folders))
+        managed_manifests = list(undo_history.get("pendingRestoredManifests") or [])
+        for merge in overrides.get("merges") or []:
+            if isinstance(merge, dict):
+                managed_manifests.extend(merge.get("cleanedManifests") or [])
+                managed_manifests.extend(merge.get("cleanupManifests") or [])
+        managed_archive_folders: set[str] = set()
+        for manifest in managed_manifests:
+            folder = _archive_folder_for_manifest(str(manifest))
+            if folder.exists() or git_output(
+                "ls-files", "--", folder.relative_to(ROOT).as_posix()
+            ):
+                managed_archive_folders.add(folder.name)
+        targets.extend(f"data/archive/{folder}" for folder in sorted(managed_archive_folders))
         arguments = ["git", "add", "-A", "--", *targets]
         subprocess.run(arguments, cwd=ROOT, check=True)
 
         staged_paths = git_output("diff", "--cached", "--name-only").splitlines()
         allowed_prefixes = ("data/index.json", "data/admin-overrides.json") + tuple(
-            f"data/archive/{folder}/" for folder in cleaned_folders
+            f"data/archive/{folder}/" for folder in managed_archive_folders
         )
         unexpected = [
             path
@@ -430,6 +646,8 @@ class AdminApplication:
             raise RuntimeError(
                 "本地提交已创建，但推送失败；修复 Git 连接后运行 git push origin main。\n" + details
             ) from error
+        undo_history["pendingRestoredManifests"] = []
+        save_undo_history(undo_history)
         return {
             "status": "pushed",
             "message": "已提交管理改动并推送到 main；GitHub Actions 将重新构建并发布 Pages。",
@@ -528,6 +746,8 @@ def make_handler(application: AdminApplication, port: int):
                     if route == "/__admin/api/merge":
                         application.merge(payload)
                         response = {"message": "合并已保存，可在本地预览。"}
+                    elif route == "/__admin/api/undo":
+                        response = application.undo_last_operation()
                     elif route == "/__admin/api/sync":
                         response = application.sync_from_pages()
                     elif route == "/__admin/api/cleanup":

@@ -3,6 +3,7 @@ __pycache__/
 .venv/
 venv/
 .runtime/
+/.admin-undo.json*
 .browser-profile/
 _site/
 data/.capture_*/

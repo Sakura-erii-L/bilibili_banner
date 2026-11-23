@@ -32,10 +32,11 @@ function createPanel() {
         </select>
       </label>
       <button type="button" data-action="merge" disabled>合并所选 Banner（0）</button>
+      <button type="button" data-action="undo" disabled>撤销上一步</button>
       <button type="button" data-action="cleanup" disabled>清理非主体原始档案（0）</button>
       <button type="button" data-action="publish" disabled>同步到 Pages</button>
     </div>
-    <p class="local-admin-help">先更新本地镜像，再勾选多个 Banner 并指定主体。合并结果使用主体素材并合并日期；管理和预览只改本地文件。确认后点击“同步到 Pages”才会提交并推送。</p>
+    <p class="local-admin-help">先更新本地镜像，再勾选多个 Banner 并指定主体。合并结果使用主体素材并合并日期；可撤销最近一步合并或清理。管理和预览只改本地文件，确认后点击“同步到 Pages”才会提交并推送。</p>
   `;
   document.querySelector("main").prepend(panel);
   return panel;
@@ -61,6 +62,7 @@ async function start() {
   const syncButton = panel.querySelector('[data-action="sync"]');
   const primarySelect = panel.querySelector("select");
   const mergeButton = panel.querySelector('[data-action="merge"]');
+  const undoButton = panel.querySelector('[data-action="undo"]');
   const cleanupButton = panel.querySelector('[data-action="cleanup"]');
   const publishButton = panel.querySelector('[data-action="publish"]');
   const [index, stateResponse] = await Promise.all([
@@ -166,6 +168,30 @@ async function start() {
     } catch (error) {
       status.textContent = error.message;
       mergeButton.disabled = false;
+    }
+  });
+
+  const undoActionLabel = state.undoAction === "cleanup" ? "清理" : "合并";
+  undoButton.disabled = !state.undoAvailable;
+  undoButton.textContent = state.undoAvailable ? `撤销上一步（${undoActionLabel}）` : "撤销上一步";
+  undoButton.title = state.undoHasSnapshot
+    ? `恢复最近一次${undoActionLabel}前的本地状态`
+    : "现有合并没有操作前快照；将移除规则列表末尾的一条合并";
+  undoButton.addEventListener("click", async () => {
+    if (!state.undoAvailable) return;
+    const details = state.undoHasSnapshot
+      ? `将撤销最近一次${undoActionLabel}，并保留此操作之前的合并规则。`
+      : "现有合并没有操作前快照，将移除规则列表末尾的一条合并；其他合并规则会保留。";
+    if (!window.confirm(`${details}\n\n如需要，原始档案会从本地 Git 历史恢复。此操作只改本地，不会推送。继续吗？`)) return;
+    undoButton.disabled = true;
+    status.textContent = `正在撤销最近一次${undoActionLabel}……`;
+    try {
+      const result = await requestJson("/__admin/api/undo");
+      status.textContent = result.message;
+      window.location.reload();
+    } catch (error) {
+      status.textContent = error.message;
+      undoButton.disabled = !state.undoAvailable;
     }
   });
 
