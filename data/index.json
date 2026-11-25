@@ -1,6 +1,6 @@
 {
   "version": 11.0,
-  "generatedAt": "2026-11-25T08:38:36+08:00",
+  "generatedAt": "2026-11-25T17:48:03+08:00",
   "timeZone": "Asia/Shanghai",
   "timeSlotMinutes": 180,
   "records": [
@@ -64,6 +64,7 @@
             1,
             2,
             3,
+            5,
             6,
             7
           ],
@@ -3368,7 +3369,7 @@
       ]
     },
     {
-      "id": "2021-07-27_time_ee4d79119277_9ac6e756f3f2",
+      "id": "2021-07-27_time_b41d28c67000_9ac6e756f3f2",
       "date": "2021-07-27",
       "season": "summer",
       "timeZone": "Asia/Shanghai",
