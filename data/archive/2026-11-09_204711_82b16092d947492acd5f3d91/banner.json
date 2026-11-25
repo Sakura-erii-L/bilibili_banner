@@ -77,7 +77,7 @@
     "extensions": {}
   },
   "timeZone": "Asia/Shanghai",
-  "lastObservedAt": "2026-11-25T17:48:01+08:00",
+  "lastObservedAt": "2026-11-26T03:53:57+08:00",
   "type": [
     "static"
   ],
@@ -467,6 +467,26 @@
         5
       ],
       "familyId": "2026-11-25_3f4544a6cbd4",
+      "source": {
+        "page": "https://www.bilibili.com/",
+        "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+        "captureMethod": "bilibili-header-api",
+        "headerApi": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
+        "discoveredResources": [],
+        "stylesheetUrls": [],
+        "scriptUrls": []
+      }
+    },
+    {
+      "capturedAt": "2026-11-26T03:53:57+08:00",
+      "lastObservedAt": "2026-11-26T03:53:57+08:00",
+      "date": "2026-11-26",
+      "season": "autumn",
+      "timeZone": "Asia/Shanghai",
+      "slots": [
+        1
+      ],
+      "familyId": "2026-11-26_3f4544a6cbd4",
       "source": {
         "page": "https://www.bilibili.com/",
         "resolvedUrl": "https://api.bilibili.com/x/web-show/page/header/v2?resource_id=142",
